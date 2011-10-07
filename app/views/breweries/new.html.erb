@@ -4,6 +4,6 @@
   <%= form_for @brewery, html: { class: "form-stacked" } do |f| %>
     <label>Name: <%= f.text_field :name, autofocus: true, class: 'span8' %></label>
     <label>Website: <%= f.text_field :url, class: 'span8' %></label>
-    <%= f.submit "Add it!", class: 'btn primary' %>
+    <%= f.submit "Add it!", id: 'add_brewery', class: 'btn primary' %>
   <% end %>
 </div>

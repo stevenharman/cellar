@@ -19,7 +19,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
 #  gem 'heroku'
-#  gem 'capybara'
+  gem 'capybara'
 #  gem 'simplecov'
 end
 

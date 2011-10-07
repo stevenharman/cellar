@@ -8,5 +8,7 @@ describe Brewery do
   end
 
   it { should validate_presence_of(:name) }
+  it { should allow_mass_assignment_of(:name) }
+  it { should allow_mass_assignment_of(:url) }
 
 end

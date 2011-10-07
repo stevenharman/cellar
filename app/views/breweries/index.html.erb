@@ -1,5 +1,9 @@
 <ul>
   <% for brewery in @breweries %>
-    <li class="brewery">brewery.name</li>
+    <li class="brewery"><%= brewery.name %></li>
   <% end %>
 </ul>
+
+<p>
+  Don't see the brewery you were looking for? <%= link_to 'Add it now', new_brewery_path %>.
+</p>
