@@ -10,7 +10,7 @@ class BreweriesController < ApplicationController
 
   def create
     if @brewery = Brewery.create(params[:brewery])
-      redirect_to(brewery_path(@brewery))
+      redirect_to(brewery_path(@brewery), notice: "Thanks for adding #{@brewery.name}!")
     elsif
       render :new
     end
