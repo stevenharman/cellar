@@ -34,6 +34,7 @@
         <p class="flash alert-message error"><%= alert %></p>
       <% end %>
     </div>
+    <%= render "shared/topbar" %>
     <%= yield %>
   </div>
   <%= javascript_include_tag "application" %>
