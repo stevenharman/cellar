@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'rails', '3.1.0'
 gem 'jquery-rails'
+gem 'thin'
 
 group :assets do
   gem 'less-rails-bootstrap'
@@ -18,8 +19,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.6'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
-#  gem 'heroku'
+  gem 'heroku'
   gem 'capybara'
+  gem 'foreman'
 #  gem 'simplecov'
 end
 
