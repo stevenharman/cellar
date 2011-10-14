@@ -1,3 +1,14 @@
 <h2><%= @brewery.name %></h2>
 
 <p>Visit them at <%= link_to @brewery.url, @brewery.url, title: @brewery.name %>.</p>
+
+<h3>Beers</h3>
+<ul class="brews unstyled">
+  <% for brew in @brewery.brews %>
+    <li class="brew"><%= link_to brew.name, brew %></li>
+  <% end %>
+</ul>
+
+<p>
+  Don't see the beer you were looking for? <%= link_to 'Add it now', new_brew_path, class: 'btn' %>
+</p>
