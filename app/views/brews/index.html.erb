@@ -1,0 +1,10 @@
+<ul>
+  <% for brew in @brews %>
+    <li class="brew"><%= link_to brew.name, brew %>, by <%= link_to brew.brewery.name, brew.brewery %></li>
+  <% end %>
+</ul>
+
+<p>
+  Don't see the brew you were looking for? <%= link_to 'Add it now', new_brew_path, class: 'btn' %>
+</p>
+

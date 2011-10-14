@@ -1,5 +1,9 @@
 class BrewsController < ApplicationController
 
+  def index
+    @brews = Brew.all
+  end
+
   def new
     @brew = Brew.new
   end
