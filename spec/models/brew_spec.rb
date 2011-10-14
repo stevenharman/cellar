@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Brew do
 
   it { should belong_to(:brewery) }
+  it { should have_many(:beers) }
 
   it 'validates uniqueness of name' do
     Factory.create(:brew)
