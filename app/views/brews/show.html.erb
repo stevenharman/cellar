@@ -1,0 +1,8 @@
+<h2><%= @brew.name %></h2>
+
+<dl class='brew-details'>
+  <dt>by</dt><dd><%= link_to @brew.brewery.name, @brew.brewery, title: @brew.brewery.name %></dd>
+  <dt>Series: </dt><dd><%= @brew.series %></dd>
+  <dt>ABV: </dt><dd><%= @brew.abv %></dd>
+</dl>
+
