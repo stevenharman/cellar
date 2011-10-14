@@ -1,0 +1,12 @@
+<ul>
+  <% for beer in @beers %>
+    <li class="beer"><%= link_to beer.brew.name, beer %>,
+      by <%= link_to beer.brew.brewery.name, beer.brew.brewery %> : [<%= beer.inventory %>]
+    </li>
+  <% end %>
+</ul>
+
+<p>
+  Missing a beer? <%= link_to 'Cellar it!', new_beer_path, class: 'btn' %>
+</p>
+
