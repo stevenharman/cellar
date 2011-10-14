@@ -5,9 +5,12 @@ class BrewsController < ApplicationController
   end
 
   def create
-    brewery = Brewery.find(params[:brew][:brewery_id])
-    @brew = brewery.brews.create(params[:brew])
-    if @brew.valid?
+    brewery = Brewery.find_by_id(params[:brew][:brewery_id])
+    @brew = Brew.new(params[:brew]) do |b|
+      b.brewery = brewery
+    end
+
+    if @brew.save
       redirect_to(brew_path(@brew), notice: "Thanks for adding #{@brew.name}!")
     elsif
       flash.now[:alert] = "Oops! #{@brew.errors.full_messages.join(", ")}"
