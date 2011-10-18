@@ -9,4 +9,6 @@
   <dt class="span2">Description: </dt><dd><%= @beer.description %></dd>
 </dl>
 
-
+<p>
+  <%= link_to 'Edit', edit_beer_path(@beer), class: 'btn', id: 'edit_beer' %>
+</p>

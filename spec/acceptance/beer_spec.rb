@@ -18,5 +18,16 @@ feature 'Beers!' do
 
     page.should have_content "#{@brew.name} has been cellared!"
   end
+
+  scenario "Increasing inventory of a beer in the cellar" do
+    beer = Factory.create(:beer, inventory: 2)
+
+    visit beer_path(beer)
+    click_on 'edit_beer'
+    fill_in 'beer_inventory', with: 4
+    click_on 'update_beer'
+
+    beer.reload.inventory.should == 4
+  end
 end
 

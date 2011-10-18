@@ -4,12 +4,7 @@
   <%= form_for @beer, html: { class: "form-stacked" } do |f| %>
     <label>Name: <%= f.collection_select :brew_id, @brews, :id, :name,
                                             {include_blank: true}, autofocus: true %></label>
-    <label>Batch/Year: <%= f.text_field :batch, class: 'span8' %></label>
-    <label>Born on date: <%= f.text_field :born_on, class: 'span8' %></label>
-    <label>Best by date: <%= f.text_field :best_by, class: 'span8' %></label>
-    <label>Desciption: <%= f.text_area :description, class: 'span8' %></label>
-    <label>Inventory: <%= f.number_field :inventory, class: 'span2', min: 0 %></label>
-
+    <%= render partial: 'fields', locals: { fb: f } %>
     <%= f.submit "Cellar it!", id: 'add_beer', class: 'btn primary' %>
   <% end %>
 </div>
