@@ -11,7 +11,7 @@ describe Beer do
 
   it { should allow_mass_assignment_of(:inventory) }
   it { should allow_mass_assignment_of(:batch) }
-  it { should allow_mass_assignment_of(:born_on_date) }
-  it { should allow_mass_assignment_of(:best_by_date) }
+  it { should allow_mass_assignment_of(:born_on) }
+  it { should allow_mass_assignment_of(:best_by) }
   it { should allow_mass_assignment_of(:description) }
 end
