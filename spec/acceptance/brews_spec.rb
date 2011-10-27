@@ -12,6 +12,7 @@ feature 'Brews!' do
     fill_in 'brew_name', with: "Banana Split Chocolate Stout"
     fill_in 'brew_series', with: "Special Series"
     fill_in 'brew_abv', with: "8.5"
+    fill_in 'brew_description', with: "A wonderful banana aroma, and smooth chocolate finish."
     click_on 'add_brew'
 
     page.should have_content "Banana Split Chocolate Stout"
