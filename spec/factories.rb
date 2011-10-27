@@ -15,7 +15,5 @@ FactoryGirl.define do
     batch "2011B"
     born_on { rand(6).months.ago }
     best_by { (30..90).to_a.shuffle.first.days.from_now }
-    inventory { (2..6).to_a.shuffle.first }
-    description "ZOMG, it tastes just like Christmas!"
   end
 end

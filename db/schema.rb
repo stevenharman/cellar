@@ -11,14 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111014145629) do
+ActiveRecord::Schema.define(:version => 20111027010400) do
 
   create_table "beers", :force => true do |t|
     t.string   "batch"
     t.date     "born_on"
     t.date     "best_by"
-    t.integer  "inventory",   :default => 0, :null => false
-    t.text     "description"
     t.integer  "brew_id"
     t.datetime "created_at"
     t.datetime "updated_at"
