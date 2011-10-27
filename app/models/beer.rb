@@ -3,5 +3,5 @@ class Beer < ActiveRecord::Base
 
   validates :brew, presence: true
 
-  attr_accessible :batch, :born_on, :best_by
+  attr_accessible :batch, :bottled_on, :best_by
 end

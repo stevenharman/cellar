@@ -14,7 +14,7 @@ FactoryGirl.define do
   factory :beer do
     brew
     batch "2011B"
-    born_on { rand(6).months.ago }
+    bottled_on { rand(6).months.ago }
     best_by { (30..90).to_a.shuffle.first.days.from_now }
   end
 end

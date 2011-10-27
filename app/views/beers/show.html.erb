@@ -3,7 +3,7 @@
 <dl class='beer-details'>
   <dt class="span2">By</dt><dd><%= link_to @beer.brew.brewery.name, @beer.brew.brewery, title: @beer.brew.brewery.name %></dd>
   <dt class="span2">Batch: </dt><dd><%= @beer.batch %></dd>
-  <dt class="span2">Born on: </dt><dd><%= @beer.born_on %>&nbsp;</dd>
+  <dt class="span2">Bottled on: </dt><dd><%= @beer.bottled_on %>&nbsp;</dd>
   <dt class="span2">Best by: </dt><dd><%= @beer.best_by %></dd>
 </dl>
 
