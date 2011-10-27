@@ -4,6 +4,10 @@ class BrewsController < ApplicationController
     @brews = Brew.all
   end
 
+  def show
+    @brew = Brew.find(params[:id])
+  end
+
   def new
     @brew = Brew.new
   end
@@ -22,8 +26,19 @@ class BrewsController < ApplicationController
     end
   end
 
-  def show
+  def edit
     @brew = Brew.find(params[:id])
+  end
+
+  def update
+    @brew = Brew.find(params[:id])
+
+    if @brew.update_attributes(params[:brew])
+      redirect_to brew_path @brew
+    else
+      flash.now[:alert] = "Oops! #{@brew.errors.full_messages.join(", ")}"
+      render :edit
+    end
   end
 
 end

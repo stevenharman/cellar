@@ -4,6 +4,8 @@
   <dt class="span2">By</dt><dd><%= link_to @brew.brewery.name, @brew.brewery, title: @brew.brewery.name %></dd>
   <dt class="span2">Series: </dt><dd><%= @brew.series %>&nbsp;</dd>
   <dt class="span2">ABV: </dt><dd><%= @brew.abv %></dd>
+  <dt class="span2">Description: </dt><dd class="description"><%= @brew.description %></dd>
 </dl>
 
+<p><%= link_to "Edit", edit_brew_path(@brew), class: 'btn', id: 'edit_brew' %></p>
 <p>Have a few of these beers? <%= link_to "Cellar them!", new_beer_path, class: 'btn' %></p>

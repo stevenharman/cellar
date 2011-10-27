@@ -17,4 +17,15 @@ feature 'Brews!' do
 
     page.should have_content "Banana Split Chocolate Stout"
   end
+
+  scenario "Change a brew" do
+    brew = Factory.create(:brew)
+
+    visit brew_path(brew)
+    click_on 'edit_brew'
+    fill_in 'brew_description', with: "Hazy, cloudy orange/amber body with a massive creamy colored head."
+    click_on 'save_brew'
+
+    page.should have_content "Hazy, cloudy orange/amber body with a massive creamy colored head."
+  end
 end
