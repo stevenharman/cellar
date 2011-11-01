@@ -12,6 +12,10 @@ describe Brew do
 
   it { should validate_presence_of(:name) }
   it { should allow_mass_assignment_of(:name) }
+
   it { should allow_mass_assignment_of(:abv) }
+  it { should validate_numericality_of(:abv) }
+  it { should allow_value(nil).for(:abv) }
+
   it { should allow_mass_assignment_of(:description) }
 end
