@@ -17,5 +17,9 @@ describe Brew do
   it { should validate_numericality_of(:abv) }
   it { should allow_value(nil).for(:abv) }
 
+  it { should allow_mass_assignment_of(:ibu) }
+  it { should validate_numericality_of(:ibu) }
+  it { should allow_value(nil).for(:ibu) }
+
   it { should allow_mass_assignment_of(:description) }
 end
