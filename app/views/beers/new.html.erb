@@ -5,6 +5,9 @@
     <label>Name: <%= f.collection_select :brew_id, @brews, :id, :name,
                                             {include_blank: true}, autofocus: true %></label>
     <%= render partial: 'fields', locals: { fb: f } %>
+
+    <label>Count: <%= text_field_tag :count, @beer_count, class: 'span2' %></label>
+
     <%= f.submit "Cellar it!", id: 'add_beer', class: 'btn primary' %>
   <% end %>
 </div>
