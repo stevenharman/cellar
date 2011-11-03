@@ -15,13 +15,14 @@ group :production do
 end
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'foreman'
+  gem 'heroku'
   gem 'rspec-rails', '~> 2.6'
   gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
-  gem 'heroku'
-  gem 'capybara'
-  gem 'foreman'
+  gem 'sqlite3'
 #  gem 'simplecov'
 end
 
