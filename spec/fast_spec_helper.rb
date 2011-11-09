@@ -7,10 +7,6 @@
 #
 require 'rspec'
 
-RSpec.configure do |config|
-  config.mock_with :rspec
-end
-
 # Load required files from the app
 #
 #   app_require 'app/model/profile'
@@ -25,5 +21,5 @@ end
 #   support_require 'database_cleaner'
 #
 def support_require(file)
-  require "support/#{file}"
+  require_relative "../spec_no_rails/support/#{file}"
 end
