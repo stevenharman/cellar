@@ -1,0 +1,3 @@
+class BeerOrderReceipt
+
+end
