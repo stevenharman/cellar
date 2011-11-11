@@ -7,14 +7,23 @@ class AddsBeerToCellar
 
   def fulfill
     new_beers = make_beers(@beer_order.beers)
+    ensure_all_valid(new_beers)
     BeerOrderReceipt.new(new_beers, @brew)
   end
 
   private
 
   def make_beers(beers)
-    beers.each do |beer_stuff|
+    beers.collect do |beer_stuff|
       Beer.create(beer_stuff) { |b| b.brew = @brew }
     end
+  end
+
+  def ensure_all_valid(beers)
+    cancel!(beers) unless beers.all?(&:valid?)
+  end
+
+  def cancel!(beers)
+    beers.map { |b| b.delete }
   end
 end
