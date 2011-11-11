@@ -8,4 +8,6 @@ class Brew < ActiveRecord::Base
   validates :ibu, numericality: { allow_nil: true, only_integer: true }
 
   attr_accessible :name, :abv, :description, :ibu
+
+  scope :with_beers, includes(:beers).joins(:beers)
 end

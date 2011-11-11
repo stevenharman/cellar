@@ -8,4 +8,5 @@ describe Beer do
   it { should allow_mass_assignment_of(:batch) }
   it { should allow_mass_assignment_of(:bottled_on) }
   it { should allow_mass_assignment_of(:best_by) }
+
 end
