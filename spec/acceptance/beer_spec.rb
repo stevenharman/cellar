@@ -15,7 +15,6 @@ feature 'Beers!' do
     fill_in 'count', with: 4
     click_on 'add_beer'
 
-    page.should have_content "#{@brew.name} has been cellared!"
     Beer.all.size.should == 4
   end
 

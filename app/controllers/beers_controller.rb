@@ -15,23 +15,18 @@ class BeersController < ApplicationController
   end
 
   def create
-    @beer_count = params[:count].to_i
-    brew = Brew.find_by_id(params[:beer][:brew_id])
+    order = BeerOrder.new(params[:count].to_i, params[:beer])
+    adds_beers = AddsBeerToCellar.new(order)
+    receipt = adds_beers.fulfill
 
-    new_beers = (0...@beer_count).collect do |i|
-      Beer.create(params[:beer]) do |b|
-        b.brew = brew
-      end
-    end
-
-    if new_beers.all?(&:valid?)
-      redirect_to(beers_path, notice: "#{brew.name} has been cellared!")
+    if receipt.success?
+      redirect_to(beers_path, notice: "#{order.count} cellared!")
     elsif
-      @beer = new_beers.find(&:invalid?)
+      @beer = receipt.example_beer
+      @beer_count = order.count
       @brews = Brew.all
-      flash.now[:alert] = "Oops! #{@beer.errors.full_messages.join(", ")}"
 
-      new_beers.map { |b| b.delete }
+      flash.now[:alert] = "Oops! #{@beer.errors.full_messages.join(", ")}"
       render :new
     end
   end
