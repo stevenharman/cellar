@@ -1,7 +1,7 @@
 class BeersController < ApplicationController
 
   def index
-    @beers = Beer.all
+    @beers = Beer.includes(:brew).order('brews.name')
   end
 
   def show
