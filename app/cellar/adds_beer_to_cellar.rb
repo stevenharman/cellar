@@ -15,6 +15,7 @@ class AddsBeerToCellar
 
   def make_beers(beers)
     beers.collect do |beer_stuff|
+      # Hard to test. Maybe Beer.create_with(beer_stuff, brew) is better?
       Beer.create(beer_stuff) { |b| b.brew = @brew }
     end
   end

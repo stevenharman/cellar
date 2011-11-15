@@ -1,16 +1,13 @@
 require 'fast_spec_helper'
-support_require 'database'
-app_require 'app/models/brew'
-app_require 'app/models/beer'
 app_require 'app/cellar/beer_order_receipt'
 app_require 'app/cellar/adds_beer_to_cellar'
 
 describe AddsBeerToCellar do
   let(:beer_order) { double("BeerOrder") }
   let(:adds_beer) { AddsBeerToCellar.new(beer_order) }
+  let(:brew) { double("Brew") }
 
   describe "fulfilling an order for 1 beer" do
-    let(:brew) { double("Brew") }
     let(:good_beer) { stub(:valid? => true) }
 
     before do
@@ -28,12 +25,6 @@ describe AddsBeerToCellar do
     it "returns a receipt for the order" do
       receipt = adds_beer.fulfill
       receipt.should be_a(BeerOrderReceipt)
-    end
-
-    it "makes the beer the specified brew" do
-      Beer.unstub(:create)
-      Beer.any_instance.should_receive(:brew=).with(brew)
-      adds_beer.fulfill
     end
 
     describe "that is invalid" do
@@ -55,6 +46,7 @@ describe AddsBeerToCellar do
       beer_order.stub(beers: Array.new(4, stub))
       beer_order.stub(brew_id: 123)
       Beer.stub(:create).and_return(double("Beer").as_null_object)
+      Brew.stub(:find_by_id).and_return(brew)
     end
 
     it "creates the beer" do
@@ -62,5 +54,9 @@ describe AddsBeerToCellar do
       adds_beer.fulfill
     end
   end
+
+  protected
+  class Brew; end unless defined? Brew
+  class Beer; end unless defined? Beer
 
 end
