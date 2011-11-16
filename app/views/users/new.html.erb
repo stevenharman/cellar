@@ -1,0 +1,20 @@
+<h1>Sign up for the Brewdega Cellar.</h1>
+
+<%= form_for @user, html: { class: "form-stacked" } do |f| %>
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <label>Username <%= f.text_field :username %></label>
+  <label>Email <%= f.text_field :email %></label>
+  <label>Password <%= f.password_field :password %></label>
+
+  <%= f.submit id: 'sign_up', class: 'btn primary' %>
+<% end %>
