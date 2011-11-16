@@ -1,0 +1,6 @@
+<%= form_tag sessions_path, class: "form-stacked" do %>
+  <label>Username <%= text_field_tag :username, params[:username] %></label>
+  <label>Password <%= password_field_tag :password, params[:password] %></label>
+  <label><%= check_box_tag :remember_me, 1, params[:remember_me] %>Remember me</label>
+  <%= submit_tag "Sign in", id: 'sign_in', class: 'btn primar' %>
+<% end %>
