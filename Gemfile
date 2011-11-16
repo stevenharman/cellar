@@ -3,6 +3,7 @@ source :rubygems
 gem 'rails', '3.1.1'
 gem 'jquery-rails'
 gem 'thin'
+gem 'sorcery'
 
 group :assets do
   gem 'less-rails-bootstrap'
