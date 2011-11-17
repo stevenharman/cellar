@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-  authenticates_with_sorcery!
+  has_many(:beers)
 
+  authenticates_with_sorcery!
   attr_accessible :email, :username, :password
 
   validates :email, presence: true

@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe User do
+  it { should have_many(:beers) }
+
   it { should validate_presence_of(:username) }
   it { should allow_mass_assignment_of(:username) }
   it 'validates uniqueness of username' do
