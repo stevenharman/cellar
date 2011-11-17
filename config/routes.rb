@@ -1,4 +1,4 @@
-Cellar::Application.routes.draw do
+BrewdegaCellar::Application.routes.draw do
 
   get "sign_up" => "users#new", as: "sign_up"
   get "sign_in" => "sessions#new", as: "sign_in"

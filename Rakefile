@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Cellar::Application.load_tasks
+BrewdegaCellar::Application.load_tasks
