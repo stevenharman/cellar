@@ -4,3 +4,7 @@
   <label><%= check_box_tag :remember_me, 1, params[:remember_me] %>Remember me</label>
   <%= submit_tag "Sign in", id: 'sign_in', class: 'btn primar' %>
 <% end %>
+
+<p>
+  Don't have an account? <%= link_to "Sign up", sign_up_path %> for one now!
+</p>
