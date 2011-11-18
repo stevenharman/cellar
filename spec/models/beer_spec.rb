@@ -11,4 +11,14 @@ describe Beer do
   it { should allow_mass_assignment_of(:bottled_on) }
   it { should allow_mass_assignment_of(:best_by) }
 
+  describe "Making a beer" do
+    let(:brew) { Factory.create(:brew) }
+    let(:beer_stuff) { Factory.attributes_for(:beer) }
+
+    it "makes a beer of the given brew" do
+      beer = Beer.make(beer_stuff, brew)
+      beer.brew.should == brew
+    end
+  end
+
 end
