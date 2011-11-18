@@ -1,4 +1,5 @@
 class BeersController < ApplicationController
+  before_filter :require_login, except: [:index, :show]
 
   def index
     @beers = Beer.includes(:brew).order('brews.name')
@@ -15,9 +16,9 @@ class BeersController < ApplicationController
   end
 
   def create
+    cellar = Cellar.new(current_user)
     order = BeerOrder.new(params[:count].to_i, params[:beer])
-    adds_beers = AddsBeerToCellar.new(order)
-    receipt = adds_beers.fulfill
+    receipt = cellar.stock_beer(order)
 
     if receipt.success?
       redirect_to(beers_path, notice: "#{order.count} cellared!")

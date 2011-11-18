@@ -1,13 +1,14 @@
 require 'spec_helper'
 
 feature 'Beers!' do
+  include CapybaraHelpers
 
   background do
     @brew = Factory.create(:brew)
+    sign_in_new_user
   end
 
   scenario "Adding a beers to the cellar" do
-    pending("Need to account for Users now owning Beers")
     visit new_beer_path
     select(@brew.name, from: 'Name')
     fill_in 'beer_batch', with: "B432"
