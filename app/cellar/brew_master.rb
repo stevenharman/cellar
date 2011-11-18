@@ -1,0 +1,2 @@
+class BrewMaster
+end
