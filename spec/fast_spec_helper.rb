@@ -5,7 +5,7 @@
 #
 #     rspec -Ifast_specs spec_no_rails/models/my_model
 #
-require 'rspec'
+#require 'rspec'
 
 # Load required files from the app
 #
