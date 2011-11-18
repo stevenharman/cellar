@@ -1,5 +1,4 @@
 require 'spec_helper'
-require_relative 'capybara_helpers'
 
 feature 'Signing in and out' do
   include CapybaraHelpers
