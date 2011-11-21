@@ -12,7 +12,7 @@
     </div>
   <% end %>
 
-  <label>Username <%= f.text_field :username %></label>
+  <label>Username <%= f.text_field :username, autofocus: true %></label>
   <label>Email <%= f.text_field :email %></label>
   <label>Password <%= f.password_field :password %></label>
 
@@ -20,5 +20,5 @@
 <% end %>
 
 <p>
-  Already have an account? <%= link_to "Sign in", sign_up_path %> now!
+  Already have an account? <%= link_to "Sign in", sign_in_path %> now!
 </p>

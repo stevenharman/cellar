@@ -2,6 +2,13 @@
   <div class="topbar-inner">
     <div class="container">
       <h3><%= link_to "Cellar", root_path %></h3>
+      <nav class="nav account-links">
+        <% if logged_in? %>
+          <%= current_user.username %> | <%= link_to "Sign out", sign_out_path %>
+        <% else %>
+          <%= link_to "Sign in", sign_in_path %> or <%= link_to "Sign up", sign_up_path %>
+        <% end %>
+      </nav>
     </div>
   </div>
 </div>
