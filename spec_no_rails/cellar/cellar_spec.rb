@@ -1,18 +1,17 @@
 require 'fast_spec_helper'
 app_require 'app/cellar/cellar'
-app_require 'app/cellar/beer_order_receipt'
-app_require 'app/cellar/brew_master'
 
 describe Cellar do
   let(:bob) { double("User") }
+  let(:brew_master) { double("BrewMaster") }
   let(:fetches_brews) { double("FetchesBrews") }
-  let(:cellar) { Cellar.new(bob, fetches_brews) }
+  let(:cellar) { Cellar.new(bob, brew_master, fetches_brews) }
 
   describe 'Socking a Cellar' do
     let(:order) { double("BeerOrder") }
     let(:new_beers) { [] }
     before do
-      BrewMaster.stub(:process).and_return(new_beers)
+      brew_master.stub(:process).and_return(new_beers)
     end
 
     context 'with an order for beer' do
