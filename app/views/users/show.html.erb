@@ -1,8 +1,18 @@
 <article class="cellar">
   <article class="owner">
-    <h2 class="owner-name"><%= @user.username %></h2>
+    <h2 class="owner-name"><%= @cellar.user.username %></h2>
     <dl class="owner-details">
-      <dt>Email: </dt><dd><%= @user.email %></dd>
+      <dt>Email: </dt><dd><%= @cellar.user.email %></dd>
     </dl>
+  </article>
+
+  <article class="brews">
+    <ul>
+      <% for brew in @cellar.stocked_brews %>
+        <li class="brew"><%= link_to brew.brewery.name, brew.brewery %>,
+          <%= link_to brew.name, brew %> [<%= brew.beers.size -%>]
+        </li>
+      <% end %>
+    </ul>
   </article>
 </article>

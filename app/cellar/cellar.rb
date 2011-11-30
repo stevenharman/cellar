@@ -1,6 +1,7 @@
 require_relative 'beer_order_receipt'
 
 class Cellar
+  attr_reader :user
 
   def initialize(user, brew_master=BrewMaster, fetches_brews=Brew)
     @user = user
@@ -16,14 +17,14 @@ class Cellar
   end
 
   def stocked_brews
-    @fetches_brews.from_cellar(@user)
+    @fetches_brews.from_cellar(user)
   end
 
   private
 
   def add_to_cellar(beers)
     beers.collect do |beer|
-      beer.user = @user
+      beer.user = user
       beer.save
       beer
     end

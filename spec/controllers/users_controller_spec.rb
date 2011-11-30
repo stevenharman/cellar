@@ -7,12 +7,12 @@ describe UsersController do
 
     it "find the user if he exists" do
       get :show, :username => 'bob'
-      assigns(:user).username.should == 'bob'
+      assigns(:cellar).user.username.should == 'bob'
     end
 
     it "is case insensitive" do
       get :show, :username => "BoB"
-      assigns(:user).username.should == 'bob'
+      assigns(:cellar).user.username.should == 'bob'
     end
 
     it "404's if the user does not exist" do
