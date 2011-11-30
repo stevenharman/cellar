@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe UsersController do
+  include Sorcery::TestHelpers::Rails
 
   describe 'GET /:username' do
     let(:bob) { Factory.create(:user, username: 'bob') }
@@ -15,6 +16,17 @@ describe UsersController do
       expect { get :show, :username => 'girl-whos-not-there' }
         .to raise_error(ActiveRecord::RecordNotFound)
     end
+  end
+
+  describe 'POST /users' do
+    let(:bob_stuff) { Factory.attributes_for(:user, username: 'bob') }
+    before { post :create, user: bob_stuff }
+
+    it 'signs the new user in' do
+      @controller.should be_logged_in
+    end
+
+    it { response.should redirect_to(root_path) }
   end
 
 end

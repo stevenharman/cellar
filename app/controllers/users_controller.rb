@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
+      auto_login(@user)
       redirect_to root_path, notice: "#{@user.username}, welcome to the Cellar!"
     else
       render :new
