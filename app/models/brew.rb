@@ -9,5 +9,10 @@ class Brew < ActiveRecord::Base
 
   attr_accessible :name, :abv, :description, :ibu
 
+  default_scope includes(:brewery)
   scope :with_beers, includes(:beers).joins(:beers)
+
+  def self.from_cellar(user)
+    with_beers.where('beers.user_id' => user)
+  end
 end
