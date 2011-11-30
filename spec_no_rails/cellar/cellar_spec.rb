@@ -4,17 +4,18 @@ app_require 'app/cellar/beer_order_receipt'
 app_require 'app/cellar/brew_master'
 
 describe Cellar do
+  let(:bob) { double("User") }
+  let(:fetches_brews) { double("FetchesBrews") }
+  let(:cellar) { Cellar.new(bob, fetches_brews) }
 
   describe 'Socking a Cellar' do
-    let(:bob) { double("User") }
-    let(:cellar) { Cellar.new(bob) }
     let(:order) { double("BeerOrder") }
     let(:new_beers) { [] }
     before do
       BrewMaster.stub(:process).and_return(new_beers)
     end
 
-    describe 'with an order for beer' do
+    context 'with an order for beer' do
       let(:beer) { double("Beer").as_null_object }
       let(:new_beers) { [beer] }
 
@@ -28,7 +29,7 @@ describe Cellar do
         cellar.stock_beer(order)
       end
 
-      describe "and the beer is invalid" do
+      context "and the beer is invalid" do
         before { beer.stub(:valid?).and_return(false) }
 
         it "doesn't add the beer to the cellar" do
@@ -41,6 +42,14 @@ describe Cellar do
 
     it 'returns an order receipt' do
       cellar.stock_beer(order).should be_a(BeerOrderReceipt)
+    end
+  end
+
+  describe '#stocked_brews' do
+    it "gets currently stocked brews from the user's cellar" do
+      stocked_brews = [double('Brew 1'), double('Brew 2')]
+      fetches_brews.should_receive(:from_cellar).with(bob).and_return(stocked_brews)
+      cellar.stocked_brews.should == stocked_brews
     end
   end
 

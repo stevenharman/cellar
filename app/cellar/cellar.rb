@@ -1,7 +1,8 @@
 class Cellar
 
-  def initialize(user)
+  def initialize(user, fetches_brews=Brew)
     @user = user
+    @fetches_brews = fetches_brews
   end
 
   def stock_beer(order)
@@ -9,6 +10,10 @@ class Cellar
     cellared_beers = add_to_cellar(new_beers)
     ensure_successfully_cellared(cellared_beers)
     BeerOrderReceipt.new(cellared_beers)
+  end
+
+  def stocked_brews
+    @fetches_brews.from_cellar(@user)
   end
 
   private
