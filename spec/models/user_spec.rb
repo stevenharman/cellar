@@ -24,7 +24,7 @@ describe User do
 
   describe ".for_username!" do
     context 'with user whom exists' do
-      let(:bob) { Factory.create(:user, username: 'bob') }
+      let(:bob) { Factory.create(:bob) }
       before { bob }
 
       it 'finds him' do

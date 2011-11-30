@@ -4,7 +4,7 @@ describe UsersController do
   include Sorcery::TestHelpers::Rails
 
   describe 'GET /:username' do
-    let(:bob) { Factory.create(:user, username: 'bob') }
+    let(:bob) { Factory.create(:bob) }
     before { bob }
 
     it "find the user if he exists" do
@@ -19,7 +19,7 @@ describe UsersController do
   end
 
   describe 'POST /users' do
-    let(:bob_stuff) { Factory.attributes_for(:user, username: 'bob') }
+    let(:bob_stuff) { Factory.attributes_for(:bob) }
     before { post :create, user: bob_stuff }
 
     it 'signs the new user in' do
