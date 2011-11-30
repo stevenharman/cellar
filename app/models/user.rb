@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
     username
   end
 
+  def self.for_username!(username)
+    find_by_username!(username.downcase)
+  end
+
 end

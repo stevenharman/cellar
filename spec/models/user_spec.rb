@@ -21,4 +21,19 @@ describe User do
 
     it { bob.should be_valid }
   end
+
+  describe ".for_username!" do
+    context 'with user whom exists' do
+      let(:bob) { Factory.create(:user, username: 'bob') }
+      before { bob }
+
+      it 'finds him' do
+        User.for_username!('bob').should == bob
+      end
+
+      it 'finds him with differently cased username' do
+        User.for_username!('BoB').should == bob
+      end
+    end
+  end
 end
