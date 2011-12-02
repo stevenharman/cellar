@@ -5,7 +5,7 @@ feature 'Beers!' do
 
   background do
     @brew = Factory.create(:brew)
-    sign_in_new_user
+    @bob = sign_in_new_user
   end
 
   scenario "Adding a beers to the cellar" do
@@ -18,6 +18,7 @@ feature 'Beers!' do
     click_on 'add_beer'
 
     Beer.all.size.should == 4
+    current_path.should == user_cellar_path(@bob)
   end
 
   scenario "Attempting to add bad beers doesn't add them to the cellar" do
@@ -29,6 +30,7 @@ feature 'Beers!' do
     click_on 'add_beer'
 
     Beer.all.size.should == 0
+    current_path.should == beers_path
   end
 
 end

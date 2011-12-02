@@ -1,6 +1,6 @@
 <ul>
   <% for beer in @beers %>
-    <li class="beer"><%= link_to beer.brew.name, beer %>,
+    <li class="beer"><%= link_to beer.brew.name, [beer.user, beer] %>,
       by <%= link_to beer.brew.brewery.name, beer.brew.brewery %>
     </li>
   <% end %>

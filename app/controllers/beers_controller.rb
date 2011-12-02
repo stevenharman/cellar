@@ -21,7 +21,7 @@ class BeersController < ApplicationController
     receipt = cellar.stock_beer(order)
 
     if receipt.success?
-      redirect_to(beers_path, notice: "#{order.count} cellared!")
+      redirect_to(user_cellar_path(current_user), notice: "#{order.count} cellared!")
     elsif
       @beer = receipt.example_beer
       @beer_count = order.count
@@ -40,7 +40,7 @@ class BeersController < ApplicationController
     @beer = Beer.find(params[:id])
 
     if @beer.update_attributes(params[:beer])
-      redirect_to beer_path @beer
+      redirect_to [@beer.user, @beer]
     else
       flash.now[:alert] = "Oops! #{@beer.errors.full_messages.join(", ")}"
       render :edit
