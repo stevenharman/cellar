@@ -6,9 +6,6 @@ class BeersController < ApplicationController
     @beers = Beer.includes(:brew).order('brews.name')
   end
 
-  def show
-  end
-
   def new
     @beer = Beer.new
     @beer_count = 1
@@ -32,6 +29,9 @@ class BeersController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def edit
   end
 
@@ -48,7 +48,8 @@ class BeersController < ApplicationController
 
   def load_beer
     cellar_keeper = User.for_username!(params[:user_id])
-    @beer = cellar_keeper.beers.find(params[:id])
+    cellar = Cellar.new(cellar_keeper)
+    @beer = cellar.find_beer(params[:id])
 
     raise ActiveRecord::RecordNotFound unless @beer.user == current_user
   end

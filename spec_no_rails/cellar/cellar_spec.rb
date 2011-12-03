@@ -52,4 +52,15 @@ describe Cellar do
     end
   end
 
+  describe "#find_beer" do
+    context "when the keeper has the beer in his cellar" do
+      let(:bobs_beer) { stub(id: 42) }
+
+      it "fetches the beer" do
+        bob.stub(:find_beer).with(42).and_return(bobs_beer)
+        cellar.find_beer(42).should == bobs_beer
+      end
+    end
+  end
+
 end

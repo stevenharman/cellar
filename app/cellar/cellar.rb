@@ -20,6 +20,10 @@ class Cellar
     @fetches_brews.from_cellar(keeper)
   end
 
+  def find_beer(id)
+    keeper.find_beer(id)
+  end
+
   private
 
   def add_to_cellar(beers)

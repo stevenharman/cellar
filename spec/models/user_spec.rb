@@ -37,9 +37,23 @@ describe User do
     end
 
     context 'with user who does not exist' do
-      it do
-        expect { User.find_by_username!('bob') }.to raise_error
+      it { expect { User.find_by_username!('bob') }.to raise_error(ActiveRecord::RecordNotFound) }
+    end
+  end
+
+  describe "#find_beer" do
+    let(:bob) { FactoryGirl.create(:bob) }
+
+    context "when the beer is in the user's cellar" do
+      let(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
+
+      it "fetches the beer" do
+        bob.find_beer(bobs_beer.id).should == bobs_beer
       end
+    end
+
+    context "when the beer is not in the user's cellar" do
+      it { expect { bob.find_beer(999) }.to raise_error(ActiveRecord::RecordNotFound) }
     end
   end
 end
