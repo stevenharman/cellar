@@ -35,5 +35,11 @@ describe User do
         User.for_username!('BoB').should == bob
       end
     end
+
+    context 'with user who does not exist' do
+      it do
+        expect { User.find_by_username!('bob') }.to raise_error
+      end
+    end
   end
 end
