@@ -7,6 +7,10 @@ class Beer < ActiveRecord::Base
 
   attr_accessible :batch, :bottled_on, :best_by
 
+  def owned_by?(other_user)
+    self.user == other_user
+  end
+
   def self.make(attributes, brew)
     self.new(attributes) do |beer|
       beer.brew = brew
