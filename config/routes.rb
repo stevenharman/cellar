@@ -14,7 +14,7 @@ BrewdegaCellar::Application.routes.draw do
   resources :brews
   resources :beers, only: [:index, :new, :create]
 
-  get "/:username" => "users#show", as: :user_cellar
+  get "/:username" => "users#show", as: :cellar
 
   root :to => "home#index"
 end

@@ -18,7 +18,7 @@ class BeersController < ApplicationController
     receipt = cellar.stock_beer(order)
 
     if receipt.success?
-      redirect_to(user_cellar_path(current_user), notice: "#{order.count} cellared!")
+      redirect_to(cellar_path(current_user), notice: "#{order.count} cellared!")
     elsif
       @beer = receipt.example_beer
       @beer_count = order.count

@@ -18,7 +18,7 @@ feature 'Beers!' do
     click_on 'add_beer'
 
     Beer.all.size.should == 4
-    current_path.should == user_cellar_path(@bob)
+    current_path.should == cellar_path(@bob)
   end
 
   scenario "Attempting to add bad beers doesn't add them to the cellar" do

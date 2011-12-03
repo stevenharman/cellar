@@ -9,7 +9,7 @@ feature "Viewing a user's cellar" do
   end
 
   scenario "show a summary of each brew in the cellar" do
-    visit user_cellar_path(bob)
+    visit cellar_path(bob)
     page.should have_text "Christmas Ale [3]"
   end
 end
