@@ -16,7 +16,7 @@ group :production do
 end
 
 group :development, :test do
-  gem 'capybara'
+  gem 'capybara', git: 'https://github.com/jnicklas/capybara.git'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'foreman'
