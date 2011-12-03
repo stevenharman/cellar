@@ -8,7 +8,7 @@ describe 'Routes for Beer' do
   it { get("/beers/42").should_not be_routable  }
 
   it "shows an individual beer from in a user's cellar" do
-    get("/bob/beers/42").should route_to({
+    get("/bob/beer/42").should route_to({
       user_id: 'bob',
       controller: 'beers',
       action: 'show',
@@ -17,7 +17,7 @@ describe 'Routes for Beer' do
   end
 
   it "edits an individual beer from in a user's cellar" do
-    get("/bob/beers/42/edit").should route_to({
+    get("/bob/beer/42/edit").should route_to({
       user_id: 'bob',
       controller: 'beers',
       action: 'edit',
@@ -26,7 +26,7 @@ describe 'Routes for Beer' do
   end
 
   it "updates an individual beer from in a user's cellar" do
-    put("/bob/beers/42").should route_to({
+    put("/bob/beer/42").should route_to({
       user_id: 'bob',
       controller: 'beers',
       action: 'update',

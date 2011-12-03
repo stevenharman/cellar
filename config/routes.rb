@@ -6,7 +6,7 @@ BrewdegaCellar::Application.routes.draw do
 
   resources :users, only: [:create]
   resources :users, path: '', only: [] do
-    resources :beers, only: [:show, :edit, :update]
+    resources :beers, path: 'beer', only: [:show, :edit, :update]
   end
   resources :sessions, only: [:create]
 
