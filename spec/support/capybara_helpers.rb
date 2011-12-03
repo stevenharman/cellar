@@ -7,8 +7,8 @@ module CapybaraHelpers
     click_on 'sign_in'
   end
 
-  def sign_in_new_user
-    user = Factory.create(:user)
+  def sign_in_new_user(user_profile=:user)
+    user = Factory.create(user_profile)
     user.password = Factory.attributes_for(:user)[:password]
     sign_in(user.username, user.password)
     user

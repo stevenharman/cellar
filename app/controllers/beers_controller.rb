@@ -1,12 +1,12 @@
 class BeersController < ApplicationController
-  before_filter :require_login, except: [:index, :show]
+  before_filter :require_login, except: [:index]
+  before_filter :load_beer, only: [:show, :edit, :update]
 
   def index
     @beers = Beer.includes(:brew).order('brews.name')
   end
 
   def show
-    @beer = Beer.find(params[:id])
   end
 
   def new
@@ -33,18 +33,24 @@ class BeersController < ApplicationController
   end
 
   def edit
-    @beer = Beer.find(params[:id])
   end
 
   def update
-    @beer = Beer.find(params[:id])
-
     if @beer.update_attributes(params[:beer])
       redirect_to [@beer.user, @beer]
     else
       flash.now[:alert] = "Oops! #{@beer.errors.full_messages.join(", ")}"
       render :edit
     end
+  end
+
+  private
+
+  def load_beer
+    cellar_keeper = User.for_username!(params[:user_id])
+    @beer = cellar_keeper.beers.find(params[:id])
+
+    raise ActiveRecord::RecordNotFound unless @beer.user == current_user
   end
 
 end

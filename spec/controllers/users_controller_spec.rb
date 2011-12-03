@@ -13,8 +13,8 @@ describe UsersController do
     end
 
     it "404's if the user does not exist" do
-      expect { get :show, :username => 'girl-whos-not-there' }
-        .to raise_error(ActiveRecord::RecordNotFound)
+      get :show, :username => 'girl-whos-not-there'
+      response.should be_missing
     end
   end
 
