@@ -14,9 +14,4 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    user = User.for_username!(params[:username].downcase)
-    @cellar = Cellar.new(user)
-  end
-
 end
