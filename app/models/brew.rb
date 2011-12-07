@@ -12,7 +12,8 @@ class Brew < ActiveRecord::Base
   default_scope includes(:brewery)
   scope :with_beers, includes(:beers).joins(:beers)
 
-  def self.from_cellar(user)
-    with_beers.where('beers.user_id' => user)
+  def self.from_cellar(keeper)
+    where('beers.user_id' => keeper).with_beers
   end
+
 end
