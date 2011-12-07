@@ -43,15 +43,16 @@ describe Brew do
   describe ".from_cellar" do
     let(:bob) { Factory.create(:user) }
     let(:bobs_brew_1) { Factory.create(:beer, user: bob).brew }
-    let(:other_brew_2) { Factory.create(:beer).brew }
-    let(:bobs_brew_3) { Factory.create(:beer, user: bob).brew }
+    let(:other_brew) { Factory.create(:beer).brew }
+    let(:bobs_brew_2) { Factory.create(:beer, user: bob).brew }
 
     it "includes brews from the user's cellar" do
-      Brew.from_cellar(bob).should include(bobs_brew_1, bobs_brew_3)
+      Brew.from_cellar(bob).should include(bobs_brew_1, bobs_brew_2)
     end
 
     it "excludes brews in other cellars" do
-      Brew.from_cellar(bob).should_not include(other_brew_2)
+      Brew.from_cellar(bob).should_not include(other_brew)
     end
   end
+
 end
