@@ -54,7 +54,7 @@ describe Cellar do
 
   describe "#find_beer" do
     context "when the keeper has the beer in his cellar" do
-      let(:bobs_beer) { stub(id: 42) }
+      let(:bobs_beer) { double("Beer") }
 
       it "fetches the beer" do
         bob.stub(:find_beer).with(42).and_return(bobs_beer)
