@@ -50,7 +50,7 @@ class BeersController < ApplicationController
     cellar = load_cellar
     @beer = cellar.find_beer(params[:id])
 
-    raise ActiveRecord::RecordNotFound unless @beer.owned_by?(current_user)
+    fail ActiveRecord::RecordNotFound unless @beer.owned_by?(current_user)
   end
 
 end
