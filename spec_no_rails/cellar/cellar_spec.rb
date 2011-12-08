@@ -73,4 +73,11 @@ describe Cellar do
     end
   end
 
+  describe "#kept_by?" do
+    let(:alice) { double("User - Alice") }
+
+    specify { cellar.should be_kept_by(bob) }
+    specify { cellar.should_not be_kept_by(alice) }
+  end
+
 end

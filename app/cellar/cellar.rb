@@ -28,6 +28,10 @@ class Cellar
     keeper.fetch_beers_for_brew(brew)
   end
 
+  def kept_by?(other_user)
+    keeper == other_user
+  end
+
   private
 
   def add_to_cellar(beers)
