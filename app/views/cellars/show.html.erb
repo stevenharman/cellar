@@ -11,6 +11,7 @@
       <% for brew in @cellar.stocked_brews %>
         <li class="brew"><%= link_to brew.brewery.name, brew.brewery %>,
           <%= link_to brew.name, brew %> [<%= brew.beers.size -%>]
+          <%= link_to "Details", user_brew_path(@cellar.keeper, brew), class: "btn" %>
         </li>
       <% end %>
     </ul>

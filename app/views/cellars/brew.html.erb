@@ -1,0 +1,33 @@
+<h2><%= @brew.name %></h2>
+
+<dl class='brew-details'>
+  <dt class="span2">By</dt><dd><%= link_to @brew.brewery.name, @brew.brewery, title: @brew.brewery.name %></dd>
+  <dt class="span2">Series: </dt><dd><%= @brew.series %>&nbsp;</dd>
+  <dt class="span2">ABV: </dt><dd><%= @brew.abv %></dd>
+  <dt class="span2">IBU: </dt><dd><%= @brew.ibu %></dd>
+  <dt class="span2">Description: </dt><dd class="description"><%= @brew.description %></dd>
+</dl>
+
+<fieldset class="beers-stocked">
+  <legend>In your cellar</legend>
+  <table class="beers zebra-striped">
+    <thead>
+      <tr>
+        <th>Batch</th>
+        <th>Bottled on</th>
+        <th>Best by</th>
+        <th>Cellared on</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for beer in @beers %>
+        <tr class="beer">
+          <td><%= beer.batch %></td>
+          <td><%= beer.bottled_on %></td>
+          <td><%= beer.best_by %></td>
+          <td><%= beer.created_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</fieldset>
