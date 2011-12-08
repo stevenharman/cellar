@@ -24,6 +24,10 @@ class Cellar
     keeper.find_beer(id)
   end
 
+  def fetch_beers_for_brew(brew)
+    keeper.fetch_beers_for_brew(brew)
+  end
+
   private
 
   def add_to_cellar(beers)

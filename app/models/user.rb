@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many(:beers)
+  has_many :beers
 
   authenticates_with_sorcery!
   attr_accessible :email, :username, :password
@@ -14,6 +14,10 @@ class User < ActiveRecord::Base
 
   def find_beer(id)
     beers.find(id)
+  end
+
+  def fetch_beers_for_brew(brew)
+    beers.where(brew_id: brew)
   end
 
   def to_param

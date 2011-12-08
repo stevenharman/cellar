@@ -41,19 +41,52 @@ describe User do
     end
   end
 
-  describe "#find_beer" do
+  describe "finding beers" do
     let(:bob) { FactoryGirl.create(:bob) }
 
-    context "when the beer is in the user's cellar" do
-      let(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
+    describe "#find_beer" do
+      context "when the beer is in the user's cellar" do
+        let(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
 
-      it "fetches the beer" do
-        bob.find_beer(bobs_beer.id).should == bobs_beer
+        it "fetches the beer" do
+          bob.find_beer(bobs_beer.id).should == bobs_beer
+        end
+      end
+
+      context "when the beer is not in the user's cellar" do
+        it { expect { bob.find_beer(999) }.to raise_error(ActiveRecord::RecordNotFound) }
       end
     end
 
-    context "when the beer is not in the user's cellar" do
-      it { expect { bob.find_beer(999) }.to raise_error(ActiveRecord::RecordNotFound) }
+    describe "#fetch_beers_for_brew" do
+      let(:alice) { FactoryGirl.create(:alice) }
+      let(:backwoods) { FactoryGirl.create(:brew) }
+      let(:bobs_beers) { FactoryGirl.create_list(:beer, 2, brew: backwoods, user: bob) }
+      let(:alices_beer) { FactoryGirl.create(:beer, brew: backwoods, user: alice)}
+      let(:bobs_other_beer) { FactoryGirl.create(:beer, user: bob) }
+      before do
+        bobs_beers
+        alices_beer
+        bobs_other_beer
+      end
+
+      it "includes Bob's Backwoods Bastards" do
+        beers = bob.fetch_beers_for_brew(backwoods)
+        beers.should have(2).beers
+        beers.should =~ bobs_beers
+      end
+
+      it "excludes Bob's other beers" do
+        bob.fetch_beers_for_brew(backwoods).should_not include(bobs_other_beer)
+      end
+
+      it "excludes Alice's beers" do
+        bob.fetch_beers_for_brew(backwoods).should_not include(alices_beer)
+      end
+
+      it "can search using the brew id" do
+        bob.fetch_beers_for_brew(backwoods.id).should have(2).beers
+      end
     end
   end
 end

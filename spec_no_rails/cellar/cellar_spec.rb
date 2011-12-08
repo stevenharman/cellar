@@ -63,4 +63,14 @@ describe Cellar do
     end
   end
 
+  describe "#fetch_beers_for_brew" do
+    let(:brew) { double("Brew") }
+    let(:bobs_beers) { double("Bob's Beers") }
+
+    it "gets the beers from the keeper" do
+      bob.stub(:fetch_beers_for_brew).with(brew).and_return(bobs_beers)
+      cellar.fetch_beers_for_brew(brew).should == bobs_beers
+    end
+  end
+
 end
