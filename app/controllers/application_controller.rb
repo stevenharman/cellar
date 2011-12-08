@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def load_cellar
+    keeper = User.for_username!(params[:user_id] || params[:username])
+    Cellar.new(keeper)
+  end
+
   def not_authenticated
     redirect_to sign_in_path, :alert => "Please sign in first."
   end

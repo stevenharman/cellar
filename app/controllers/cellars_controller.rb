@@ -2,13 +2,11 @@ class CellarsController < ApplicationController
   before_filter :require_login, except: [:show]
 
   def show
-    cellar_keeper = User.for_username!(params[:username])
-    @cellar = Cellar.new(cellar_keeper)
+    @cellar = load_cellar
   end
 
   def brew
-    cellar_keeper = User.for_username!(params[:user_id])
-    cellar = Cellar.new(cellar_keeper)
+    cellar = load_cellar
 
     raise ActiveRecord::RecordNotFound unless cellar.keeper == current_user
 

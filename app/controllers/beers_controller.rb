@@ -47,8 +47,7 @@ class BeersController < ApplicationController
   private
 
   def load_beer
-    cellar_keeper = User.for_username!(params[:user_id])
-    cellar = Cellar.new(cellar_keeper)
+    cellar = load_cellar
     @beer = cellar.find_beer(params[:id])
 
     raise ActiveRecord::RecordNotFound unless @beer.owned_by?(current_user)
