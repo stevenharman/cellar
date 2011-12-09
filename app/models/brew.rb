@@ -9,7 +9,7 @@ class Brew < ActiveRecord::Base
 
   attr_accessible :name, :abv, :description, :ibu
 
-  default_scope includes(:brewery)
+  default_scope includes(:brewery) # consider joining here too?
   scope :with_beers, includes(:beers).joins(:beers)
 
   def self.from_cellar(keeper)

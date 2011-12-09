@@ -4,12 +4,35 @@ feature "Viewing a user's cellar" do
   let(:bob) { Factory.create(:user) }
 
   background do
-    christmas_ale = FactoryGirl.create(:brew, name: "Christmas Ale" )
+    christmas_ale = FactoryGirl.create(:brew, name: "Christmas Ale")
+    drunk_brew = FactoryGirl.create(:brew, name: "Drunk Brew")
+    traded_brew = FactoryGirl.create(:brew, name: "Traded Brew")
+    skunked_brew = FactoryGirl.create(:brew, name: "Skunked Brew")
     FactoryGirl.create_list(:beer, 3, brew: christmas_ale, user: bob)
+    FactoryGirl.create(:beer, :drunk, brew: christmas_ale, user:bob)
+
+    FactoryGirl.create(:beer, :drunk, brew: drunk_brew, user:bob)
+    FactoryGirl.create(:beer, :traded, brew: traded_brew, user:bob)
+    FactoryGirl.create(:beer, :skunked, brew: skunked_brew, user:bob)
   end
 
-  scenario "show a summary of each brew in the cellar" do
+  scenario "only show a summary of brews in the cellar" do
     visit cellar_path(bob)
-    page.should have_text "Christmas Ale [3]"
+    find('.cellar').should have_text("Christmas Ale [3]")
+  end
+
+  scenario "do not include brews with only drunk beers" do
+    visit cellar_path(bob)
+    find('.cellar').should_not have_text("Drunk Brew")
+  end
+
+  scenario "do not include brews with only traded beers" do
+    visit cellar_path(bob)
+    find('.cellar').should_not have_text("Traded Brew")
+  end
+
+  scenario "do not include brews with only skunked beers" do
+    visit cellar_path(bob)
+    find('.cellar').should_not have_text("Skunked Brew")
   end
 end
