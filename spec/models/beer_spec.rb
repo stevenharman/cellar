@@ -48,4 +48,34 @@ describe Beer do
     end
   end
 
+  describe "scopes" do
+    before do
+      FactoryGirl.create(:beer)
+      FactoryGirl.create(:beer, :drunk)
+      FactoryGirl.create(:beer, :traded)
+      FactoryGirl.create(:beer, :skunked)
+    end
+
+    it ".stocked only returns stocked beers" do
+      beers = Beer.stocked.all
+      beers.should have(1).beer
+    end
+
+    it ".drunk only returns drunk beers" do
+      beers = Beer.drunk.all
+      beers.should have(1).beer
+    end
+
+    it ".traded only returns traded beers" do
+      beers = Beer.traded.all
+      beers.should have(1).beer
+    end
+
+    it ".skunked only returns skunked beers" do
+      beers = Beer.skunked.all
+      beers.should have(1).beer
+    end
+
+  end
+
 end
