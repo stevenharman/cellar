@@ -11,6 +11,16 @@ describe Beer do
   it { should allow_mass_assignment_of(:bottled_on) }
   it { should allow_mass_assignment_of(:best_by) }
 
+  [:stocked, :drunk, :traded, :skunked].each do |status|
+    it { should allow_value(status).for(:status) }
+  end
+
+  it { should_not allow_value(nil).for(:status) }
+
+  it "defaults to stocked" do
+    Beer.new.status.should == :stocked
+  end
+
   describe "Making a beer" do
     let(:brew) { Factory.create(:brew) }
     let(:beer_stuff) { Factory.attributes_for(:beer) }
@@ -36,7 +46,6 @@ describe Beer do
 
       specify { beer.should_not be_owned_by(bob) }
     end
-
   end
 
 end
