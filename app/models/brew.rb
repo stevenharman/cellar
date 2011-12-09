@@ -13,7 +13,7 @@ class Brew < ActiveRecord::Base
   scope :with_beers, includes(:beers).joins(:beers)
 
   def self.from_cellar(keeper)
-    where('beers.user_id' => keeper).with_beers
+    with_beers.where('beers.status' => :stocked).where('beers.user_id' => keeper)
   end
 
 end
