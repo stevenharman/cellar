@@ -36,3 +36,17 @@ feature "Viewing a user's cellar" do
     find('.cellar').should_not have_text("Skunked Brew")
   end
 end
+
+feature "Drink a beer from the Cellar" do
+  include CapybaraHelpers
+  let(:bob) { sign_in_new_user(:bob) }
+  let(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
+
+  scenario "after drinking, the beer is no longer in the Cellar" do
+    visit user_brew_path(bob, bobs_beer.brew)
+    page.should have_css('.beers-stocked .beer')
+    click_on "Drink"
+    page.should_not have_css('.beers-stocked .beer')
+  end
+
+end

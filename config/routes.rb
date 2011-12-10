@@ -7,7 +7,10 @@ BrewdegaCellar::Application.routes.draw do
   resources :users, only: [:create]
   resources :users, path: '', only: [] do
     get "brew/:id" => "cellars#brew", as: :brew
-    resources :beers, path: 'beer', only: [:show, :edit, :update]
+
+    resources :beers, path: 'beer', only: [:show, :edit, :update] do
+      put :drink, on: :member
+    end
   end
   resources :sessions, only: [:create]
 

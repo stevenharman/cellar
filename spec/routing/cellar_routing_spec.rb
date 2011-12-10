@@ -13,5 +13,14 @@ describe 'Routes for Cellars' do
     })
   end
 
+  it "can drink a beer from a user's cellar" do
+    put("/bob/beer/99/drink"). should route_to({
+      user_id: 'bob',
+      controller: 'beers',
+      action: 'drink',
+      id: '99'
+    })
+  end
+
 end
 

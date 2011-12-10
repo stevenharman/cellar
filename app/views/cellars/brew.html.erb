@@ -10,7 +10,7 @@
 
 <fieldset class="beers-stocked">
   <legend>In your cellar</legend>
-  <table class="beers zebra-striped">
+  <table class="zebra-striped">
     <thead>
       <tr>
         <th>Batch</th>
@@ -26,6 +26,11 @@
           <td><%= beer.bottled_on %></td>
           <td><%= beer.best_by %></td>
           <td><%= beer.created_at %></td>
+          <td>
+            <%= form_tag drink_user_beer_path(beer.user, beer), method: :put do %>
+              <%= submit_tag "Drink", class: "btn primary" %>
+            <% end %>
+          </td>
         </tr>
       <% end %>
       <% if @beers.empty? %>

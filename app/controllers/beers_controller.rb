@@ -1,6 +1,6 @@
 class BeersController < ApplicationController
   before_filter :require_login, except: [:index]
-  before_filter :load_beer, only: [:show, :edit, :update]
+  before_filter :load_beer, only: [:show, :edit, :update, :drink]
 
   def index
     @beers = Beer.includes(:brew).order('brews.name')
@@ -44,11 +44,16 @@ class BeersController < ApplicationController
     end
   end
 
+  def drink
+    @beer.drink!
+    redirect_to user_brew_path(@cellar.keeper, @beer.brew)
+  end
+
   private
 
   def load_beer
-    cellar = load_cellar
-    @beer = cellar.find_beer(params[:id])
+    @cellar = load_cellar
+    @beer = @cellar.find_beer(params[:id])
 
     fail ActiveRecord::RecordNotFound unless @beer.owned_by?(current_user)
   end
