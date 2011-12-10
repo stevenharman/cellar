@@ -8,8 +8,8 @@ module CapybaraHelpers
   end
 
   def sign_in_new_user(user_profile=:user)
-    user = Factory.create(user_profile)
-    user.password = Factory.attributes_for(:user)[:password]
+    user = FactoryGirl.create(user_profile)
+    user.password = FactoryGirl.attributes_for(user_profile)[:password]
     sign_in(user.username, user.password)
     user
   end
