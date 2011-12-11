@@ -78,4 +78,49 @@ describe Beer do
 
   end
 
+  describe "#from_cellar" do
+    let(:bob) { FactoryGirl.create(:bob) }
+    let(:alice) { FactoryGirl.create(:alice) }
+    let(:backwoods) { FactoryGirl.create(:brew) }
+    let(:bobs_backwoods) { FactoryGirl.create_list(:beer, 2, brew: backwoods, user: bob) }
+    let(:alices_beer) { FactoryGirl.create(:beer, brew: backwoods, user: alice)}
+    let(:bobs_other_beer) { FactoryGirl.create(:beer, user: bob) }
+    let(:drunk_beer) { FactoryGirl.create(:beer, :drunk, user: bob)}
+    before do
+      bobs_backwoods
+      alices_beer
+      bobs_other_beer
+      drunk_beer
+    end
+
+    it "includes Bob's beers" do
+      Beer.from_cellar(bob).should =~ bobs_backwoods + Array(bobs_other_beer)
+    end
+
+    it "excludes Bob's unstocked beers" do
+      Beer.from_cellar(bob).should_not include(drunk_beer)
+    end
+
+    it "excludes Alice's beers" do
+      Beer.from_cellar(bob).should_not include(alices_beer)
+    end
+
+    context "for a specific brew" do
+      it "includes Bob's Backwoods Bastards" do
+        beers = Beer.from_cellar(bob, brew: backwoods)
+        beers.should have(2).beers
+        beers.should =~ bobs_backwoods
+      end
+
+      it "excludes Bob's other beers" do
+        Beer.from_cellar(bob, brew: backwoods).should_not include(bobs_other_beer)
+      end
+
+      it "can search using the brew id" do
+        Beer.from_cellar(bob, brew: backwoods.id).should have(2).beers
+      end
+    end
+
+  end
+
 end

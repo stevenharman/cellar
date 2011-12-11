@@ -16,10 +16,6 @@ class User < ActiveRecord::Base
     beers.find(id)
   end
 
-  def fetch_beers_for_brew(brew, status=:stocked)
-    beers.where(brew_id: brew).where(status: status)
-  end
-
   def to_param
     username
   end
