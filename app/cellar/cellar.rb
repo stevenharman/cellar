@@ -3,9 +3,9 @@ require_relative 'beer_order_receipt'
 class Cellar
   attr_reader :keeper
 
-  def initialize(user, brew_master=BrewMaster, fetch_brews=Brew)
+  def initialize(user, brew_master=BrewMaster, barback=Barback.new)
     @keeper = user
-    @fetch_brews = fetch_brews
+    @barback = barback
     @brew_master = brew_master
   end
 
@@ -17,7 +17,7 @@ class Cellar
   end
 
   def stocked_brews
-    @fetch_brews.from_cellar(keeper)
+    @barback.brews_from_cellar(keeper)
   end
 
   def find_beer(id)
