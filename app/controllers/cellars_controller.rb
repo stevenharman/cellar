@@ -11,7 +11,7 @@ class CellarsController < ApplicationController
     fail ActiveRecord::RecordNotFound unless cellar.kept_by?(current_user)
 
     @brew = Brew.find(params[:id])
-    @beers = cellar.fetch_beers_for_brew(@brew)
+    @beers = cellar.beers_for(@brew)
   end
 
 end

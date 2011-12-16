@@ -24,7 +24,7 @@ class Cellar
     keeper.find_beer(id)
   end
 
-  def fetch_beers_for_brew(brew)
+  def beers_for(brew)
     @barback.beers_from_cellar_for_brew(keeper, brew)
   end
 
