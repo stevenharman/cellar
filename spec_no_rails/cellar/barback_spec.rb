@@ -16,7 +16,7 @@ describe Barback do
     end
   end
 
-  describe "#beers_for_brew_from_cellar" do
+  describe "#beers_from_cellar_for_brew" do
     let(:brew) { double("Brew") }
     let(:beers) { double("Beers from the Cellar") }
 
