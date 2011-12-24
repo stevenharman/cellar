@@ -36,11 +36,8 @@ class Beer < ActiveRecord::Base
     end
   end
 
-  def self.from_cellar(keeper, options={})
-    brew = options.fetch(:brew) { false }
-
-    beers = stocked.where(user_id: keeper)
-    beers = beers.where(brew_id: brew) if brew
-    beers
+  def self.by_brew(brew)
+    where('beers.brew_id = ?', brew)
   end
+
 end

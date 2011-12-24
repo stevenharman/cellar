@@ -25,7 +25,7 @@ class Cellar
   end
 
   def beers_for(brew)
-    @barback.beers_from_cellar_for_brew(keeper, brew)
+    keeper.stocked_beers(brew)
   end
 
   def kept_by?(other_user)

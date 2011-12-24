@@ -68,7 +68,7 @@ describe Cellar do
     let(:bobs_beers) { double("Bob's Beers") }
 
     it "gets the beers from the keeper" do
-      barback.stub(:beers_from_cellar_for_brew).with(bob, brew).and_return(bobs_beers)
+      bob.stub(:stocked_beers).with(brew).and_return(bobs_beers)
       cellar.beers_for(brew).should == bobs_beers
     end
   end

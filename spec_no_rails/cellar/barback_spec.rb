@@ -3,8 +3,7 @@ app_require 'app/cellar/barback'
 
 describe Barback do
   let(:fetch_brews) { double("Brew") }
-  let(:fetch_beers) { double("Beer") }
-  let(:barback) { Barback.new(fetch_brews, fetch_beers) }
+  let(:barback) { Barback.new(fetch_brews) }
   let(:bob) { double("Keeper") }
 
   describe "#brews_from_cellar" do
@@ -16,13 +15,4 @@ describe Barback do
     end
   end
 
-  describe "#beers_from_cellar_for_brew" do
-    let(:brew) { double("Brew") }
-    let(:beers) { double("Beers from the Cellar") }
-
-    it "fetches beers from the keeper's cellar, for a specific brew" do
-      fetch_beers.stub(:from_cellar).with(bob, {brew: brew}).and_return(beers)
-      barback.beers_from_cellar_for_brew(bob, brew).should == beers
-    end
-  end
 end

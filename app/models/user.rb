@@ -20,4 +20,8 @@ class User < ActiveRecord::Base
     username
   end
 
+  def stocked_beers(brew)
+    beers.stocked.by_brew(brew)
+  end
+
 end

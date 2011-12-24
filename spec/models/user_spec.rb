@@ -58,5 +58,28 @@ describe User do
       end
     end
 
+    describe "#stocked_beers" do
+      let(:backwoods) { FactoryGirl.create(:brew) }
+      let(:bobs_backwoods) { FactoryGirl.create_list(:beer, 2, brew: backwoods, user: bob) }
+      let(:drunk_beer) { FactoryGirl.create(:beer, :drunk, brew: backwoods, user: bob) }
+      let(:other_beer) { FactoryGirl.create(:beer, user: bob) }
+      before do
+        backwoods
+        other_beer
+        drunk_beer
+      end
+
+      it "includes Bob's Backwoods" do
+        bob.stocked_beers(backwoods) =~ bobs_backwoods
+      end
+
+      it "excludes Bob's other stocked brews" do
+        bob.stocked_beers(backwoods).should_not include(other_beer)
+      end
+
+      it "excludes Bob's unstocked Backwoods" do
+        bob.stocked_beers(backwoods).should_not include(drunk_beer)
+      end
+    end
   end
 end
