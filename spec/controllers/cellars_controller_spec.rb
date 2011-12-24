@@ -6,7 +6,7 @@ describe CellarsController do
   describe 'GET /:username' do
 
     context "When the users exists" do
-      let(:bob) { Factory.create(:bob) }
+      let(:bob) { double("User") }
       before { bob }
 
       it "load his cellar" do
