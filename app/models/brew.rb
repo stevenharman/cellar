@@ -9,11 +9,11 @@ class Brew < ActiveRecord::Base
 
   attr_accessible :name, :abv, :description, :ibu
 
-  default_scope includes(:brewery) # consider joining here too?
+  default_scope includes(:brewery) # bad idea... remove this.
   scope :with_beers, includes(:beers).joins(:beers)
 
   def self.from_cellar(keeper)
-    with_beers.where('beers.status' => :stocked).where('beers.user_id' => keeper)
+    with_beers.where('beers.user_id' => keeper).merge(Beer.stocked)
   end
 
 end
