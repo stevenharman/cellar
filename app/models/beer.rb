@@ -13,7 +13,7 @@ class Beer < ActiveRecord::Base
   scope :traded, where(status: :traded)
   scope :skunked, where(status: :skunked)
 
-  def owned_by?(other_user)
+  def cellared_by?(other_user)
     self.user == other_user
   end
 

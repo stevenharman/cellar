@@ -31,20 +31,20 @@ describe Beer do
     end
   end
 
-  describe "#owned_by?" do
+  describe "#cellared_by?" do
     let(:bob) { User.new }
     let(:beer) { Beer.new }
 
     context 'when Bob owns the beer' do
       before { beer.user = bob }
 
-      specify { beer.should be_owned_by(bob) }
+      specify { beer.should be_cellared_by(bob) }
     end
 
     context 'when Alice owns the beer' do
       before { beer.user = User.new }
 
-      specify { beer.should_not be_owned_by(bob) }
+      specify { beer.should_not be_cellared_by(bob) }
     end
   end
 
