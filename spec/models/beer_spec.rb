@@ -101,6 +101,18 @@ describe Beer do
         Beer.by_brew(backwoods.id).should have(2).beers
       end
     end
+
+    describe ".cellared_by" do
+      let(:bob) { FactoryGirl.create(:bob) }
+      before do
+        FactoryGirl.create(:beer)
+        @bobs_beers = FactoryGirl.create_list(:beer, 2, user: bob)
+      end
+
+      it "includes only Bob's beers" do
+        Beer.cellared_by(bob).should =~ @bobs_beers
+      end
+    end
   end
 
 

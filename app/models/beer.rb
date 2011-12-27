@@ -40,4 +40,8 @@ class Beer < ActiveRecord::Base
     where('beers.brew_id = ?', brew)
   end
 
+  def self.cellared_by(keeper)
+    where('beers.user_id = ?', keeper)
+  end
+
 end
