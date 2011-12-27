@@ -37,7 +37,7 @@
         <tr class="no-beer">
           <td colspan="4">
             You don't have any <%= @brew.name %> in you cellar.
-            <%= link_to "Stock one now!", new_beer_path %>
+            <%= link_to "Stock one now!", new_beer_path(brew: @brew) %>
           </td>
         </tr>
     <% end %>
