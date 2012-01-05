@@ -9,6 +9,13 @@ development:
   pool: 5
   timeout: 5000
 
+#export:
+#  adapter: mysql
+#  username: openbeer_db_dev
+#  password: 7OJeS4cFsKRz+nkE)y
+#  database: openbeer_db
+#  host: localhost
+
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
