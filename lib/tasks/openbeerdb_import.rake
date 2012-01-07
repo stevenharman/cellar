@@ -32,7 +32,7 @@ namespace :openbeerdb do
       require 'csv'
 
       import_csv('beers') do |line|
-        brew = Brew.new(name: line[:name], abv: line[:abv].to_f, ibu: line[:ibu].to_i, description: line[:descript])
+        brew = Brew.new(name: line[:name], abv: line[:abv].to_f.round(2), ibu: line[:ibu].to_i, description: line[:descript])
         brew.brewery_id = @brewery_map[line[:brewery_id]]
         puts "#{line[:id]} - #{brew.name} :: #{brew.errors.full_messages.join(", ")}. brewery_id: #{brew.brewery_id}" unless brew.save
       end
