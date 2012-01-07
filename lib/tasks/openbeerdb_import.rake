@@ -17,12 +17,14 @@ namespace :openbeerdb do
   task :import  => ['import:breweries', 'import:brews']
 
   namespace :import do
+    @brewery_map = {}
     task :breweries => [:environment] do
       require 'csv'
 
       import_csv('breweries') do |line|
         brewery = Brewery.new(name: line[:name], url: line[:website])
         puts "#{line[:id]} = #{brewery.name} :: #{brewery.errors.full_messages.join(", ")}" unless brewery.save
+        @brewery_map[line[:id]] = brewery.id
       end
     end
 
@@ -31,8 +33,8 @@ namespace :openbeerdb do
 
       import_csv('beers') do |line|
         brew = Brew.new(name: line[:name], abv: line[:abv].to_f, ibu: line[:ibu].to_i, description: line[:descript])
-        brew.brewery_id = line[:brewery_id]
-        puts "#{line[:id]} - #{brew.name} :: #{brew.errors.full_messages.join(", ")}. brewery_id: #{line[:brewery_id]}" unless brew.save
+        brew.brewery_id = @brewery_map[line[:brewery_id]]
+        puts "#{line[:id]} - #{brew.name} :: #{brew.errors.full_messages.join(", ")}. brewery_id: #{brew.brewery_id}" unless brew.save
       end
     end
   end
