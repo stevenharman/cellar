@@ -4,15 +4,12 @@ gem 'rails', '3.1.3'
 gem 'jquery-rails'
 gem 'thin'
 gem 'sorcery'
+gem 'pg'
 
 group :assets do
   gem 'less-rails-bootstrap'
   gem 'coffee-rails', "~> 3.1.1"
   gem 'uglifier'
-end
-
-group :production do
-  gem 'pg'
 end
 
 group :development, :test do
