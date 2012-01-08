@@ -9,10 +9,17 @@ class Brew < ActiveRecord::Base
 
   attr_accessible :name, :abv, :description, :ibu
 
+  include PgSearch
+  multisearchable against: [:searchable_name]
+
   scope :with_beers, includes(:beers).joins(:beers)
 
   def self.from_cellar(keeper)
     with_beers.merge(Beer.stocked.cellared_by(keeper))
+  end
+
+  def searchable_name
+    "#{brewery.name} #{name}"
   end
 
 end

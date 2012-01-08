@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'thin'
 gem 'sorcery'
 gem 'pg'
+gem 'pg_search'
 
 group :assets do
   gem 'less-rails-bootstrap'
