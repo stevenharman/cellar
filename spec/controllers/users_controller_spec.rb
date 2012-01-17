@@ -4,7 +4,7 @@ describe UsersController do
   include Sorcery::TestHelpers::Rails
 
   describe 'POST /users' do
-    let(:bob_stuff) { Factory.attributes_for(:bob) }
+    let(:bob_stuff) { { username: 'bob', email: 'bob@example.com', password: 'password' } }
     before { post :create, user: bob_stuff }
 
     it 'signs the new user in' do

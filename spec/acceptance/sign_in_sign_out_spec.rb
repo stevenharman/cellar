@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'Signing in and out' do
   include CapybaraHelpers
 
-  let(:user_stuffs) { Factory.attributes_for(:user) }
+  let(:user_stuffs) { { username: 'bob', email: 'bob@example.com', password: 'password' } }
   before { User.create(user_stuffs) }
 
   scenario 'Signing in with valid credentials' do
