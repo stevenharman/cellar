@@ -10,6 +10,14 @@ GIT
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
 
+GIT
+  remote: https://github.com/thoughtbot/factory_girl.git
+  revision: 7f8da3b447d1cee89848fce52ddf0a32c66de10a
+  branch: fix-inline-traits
+  specs:
+    factory_girl (2.4.1)
+      activesupport
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -64,10 +72,8 @@ GEM
     eventmachine (0.12.10)
     execjs (1.2.9)
       multi_json (~> 1.0)
-    factory_girl (2.3.2)
-      activesupport
-    factory_girl_rails (1.4.0)
-      factory_girl (~> 2.3.0)
+    factory_girl_rails (1.5.0)
+      factory_girl (~> 2.4.0)
       railties (>= 3.0.0)
     faraday (0.6.1)
       addressable (~> 2.2.4)
@@ -213,6 +219,7 @@ DEPENDENCIES
   capybara!
   coffee-rails (~> 3.1.1)
   database_cleaner
+  factory_girl!
   factory_girl_rails
   foreman
   heroku
