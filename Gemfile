@@ -16,7 +16,6 @@ end
 group :development, :test do
   gem 'capybara', git: 'https://github.com/jnicklas/capybara.git'
   gem 'database_cleaner'
-  gem 'factory_girl', git: 'https://github.com/thoughtbot/factory_girl.git', branch: 'fix-inline-traits'
   gem 'factory_girl_rails'
   gem 'foreman'
   gem 'heroku'
