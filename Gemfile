@@ -22,7 +22,6 @@ group :development, :test do
   gem 'heroku'
   gem 'rspec-rails', '~> 2.6'
   gem 'shoulda-matchers'
-  gem 'sqlite3'
   gem 'pry'
 #  gem 'simplecov'
 end
