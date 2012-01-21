@@ -21,6 +21,9 @@ describe Brew do
   it { should validate_numericality_of(:ibu) }
   it { should allow_value(nil).for(:ibu) }
 
+  it { should allow_mass_assignment_of(:series) }
+  it { should allow_value(nil).for(:series) }
+
   it { should allow_mass_assignment_of(:description) }
 
   describe "scope .with_beers" do
