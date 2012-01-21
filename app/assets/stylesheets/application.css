@@ -1,5 +1,3 @@
 /*
-* Pull in full boostrap, for now. Eventually, only the parts we want.
-*= require twitter/bootstrap
 *= require cellar
 */

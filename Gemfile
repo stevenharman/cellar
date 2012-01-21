@@ -8,7 +8,7 @@ gem 'pg'
 gem 'pg_search'
 
 group :assets do
-  gem 'less-rails-bootstrap'
+  gem 'bootstrap-sass', '~> 1.4.4'
   gem 'coffee-rails', "~> 3.1.1"
   gem 'uglifier'
 end
