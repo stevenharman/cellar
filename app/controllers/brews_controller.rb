@@ -15,9 +15,7 @@ class BrewsController < ApplicationController
 
   def create
     brewery = Brewery.find_by_id(params[:brew][:brewery_id])
-    @brew = Brew.new(params[:brew]) do |b|
-      b.brewery = brewery
-    end
+    @brew = brewery.brews.build(params[:brew].except(:brewery_id))
 
     if @brew.save
       redirect_to(brew_path(@brew), notice: "Thanks for adding #{@brew.name}!")

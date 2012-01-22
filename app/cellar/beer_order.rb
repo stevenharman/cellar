@@ -5,7 +5,7 @@ class BeerOrder
 
   def initialize(count, beer_stuffs)
     @count = count
-    @brew_id = beer_stuffs[:brew_id]
+    @brew_id = beer_stuffs.delete(:brew_id)
     @beers = Array.new(count, beer_stuffs)
   end
 end
