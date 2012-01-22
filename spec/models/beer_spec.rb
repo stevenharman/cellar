@@ -24,7 +24,7 @@ describe Beer do
 
   describe "Making a beer" do
     let(:brew) { Factory.create(:brew) }
-    let(:beer_stuff) { FactoryGirl.build(:beer).attributes }
+    let(:beer_stuff) { FactoryGirl.attributes_for(:beer) }
 
     it "makes a beer of the given brew" do
       beer = Beer.make(beer_stuff, brew)

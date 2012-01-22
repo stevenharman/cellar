@@ -1,16 +1,17 @@
 source :rubygems
 
-gem 'rails', '3.1.3'
+gem 'rails', '3.2.0'
 gem 'jquery-rails'
 gem 'thin'
 gem 'sorcery'
 gem 'pg'
-gem 'pg_search'
+gem 'pg_search', git: 'git://github.com/stevenharman/pg_search.git', branch: 'rails-3-2-deprications'
+gem 'with_model', git: 'git://github.com/stevenharman/with_model.git', branch: 'rails-3-2-deprecations', group: :test
 
 group :assets do
   gem 'bootstrap-sass', '~> 1.4.4'
-  gem 'coffee-rails', "~> 3.1.1"
-  gem 'uglifier'
+  gem 'coffee-rails', "~> 3.2.1"
+  gem 'uglifier', ">= 1.0.3"
 end
 
 group :development, :test do
