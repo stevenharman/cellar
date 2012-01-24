@@ -1,5 +1,4 @@
-require 'fast_spec_helper'
-app_require 'app/cellar/barback'
+require 'barback'
 
 describe Barback do
   let(:fetch_brews) { double("Brew") }

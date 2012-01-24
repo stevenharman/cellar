@@ -1,5 +1,4 @@
-require 'fast_spec_helper'
-app_require 'app/cellar/brew_master'
+require 'brew_master'
 
 describe BrewMaster do
 

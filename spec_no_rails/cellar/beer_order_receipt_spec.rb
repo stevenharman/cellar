@@ -1,5 +1,4 @@
-require 'fast_spec_helper'
-app_require 'app/cellar/beer_order_receipt'
+require 'beer_order_receipt'
 
 describe BeerOrderReceipt do
   let(:receipt) { BeerOrderReceipt.new(beers) }

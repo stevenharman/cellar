@@ -1,5 +1,4 @@
-require 'fast_spec_helper'
-app_require 'app/cellar/cellar'
+require 'cellar'
 
 describe Cellar do
   let(:bob) { double("User") }

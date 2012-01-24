@@ -1,5 +1,4 @@
-require 'fast_spec_helper'
-app_require 'app/cellar/beer_order'
+require 'beer_order'
 
 describe BeerOrder do
   describe "an order for 3 beers" do
