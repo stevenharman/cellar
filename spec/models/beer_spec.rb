@@ -89,12 +89,8 @@ describe Beer do
 
     describe ".by_brew" do
       let(:backwoods) { FactoryGirl.create(:brew) }
-      let(:bobs_backwoods) { FactoryGirl.create_list(:beer, 2, brew: backwoods) }
-      let(:other_beer) { FactoryGirl.create(:beer) }
-      before do
-        other_beer
-        bobs_backwoods
-      end
+      let!(:bobs_backwoods) { FactoryGirl.create_list(:beer, 2, brew: backwoods) }
+      let!(:other_beer) { FactoryGirl.create(:beer) }
 
       it "includes only Backwoods Bastards" do
         beers = Beer.by_brew(backwoods)
