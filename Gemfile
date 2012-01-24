@@ -19,10 +19,10 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'foreman'
   gem 'heroku'
+  gem 'pry'
   gem 'rspec-rails', '~> 2.6'
   gem 'shoulda-matchers'
-  gem 'pry'
-#  gem 'simplecov'
+  gem 'simplecov', :require => false, :group => :test
 end
 
 # To use debugger
