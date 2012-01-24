@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'database_cleaner'
 
 describe Beer do
   it { should belong_to(:brew) }
@@ -50,11 +51,19 @@ describe Beer do
 
   describe "scopes" do
     describe "for status" do
-      before do
-        FactoryGirl.create(:beer)
-        FactoryGirl.create(:beer, :drunk)
-        FactoryGirl.create(:beer, :traded)
-        FactoryGirl.create(:beer, :skunked)
+      before(:all) do
+        DatabaseCleaner.strategy = :truncation
+        DatabaseCleaner.start
+
+        brew = FactoryGirl.create(:brew)
+        FactoryGirl.create(:beer, brew: brew)
+        FactoryGirl.create(:beer, :drunk, brew: brew)
+        FactoryGirl.create(:beer, :traded, brew: brew)
+        FactoryGirl.create(:beer, :skunked, brew: brew)
+      end
+
+      after(:all) do
+        DatabaseCleaner.clean
       end
 
       it ".stocked only returns stocked beers" do
