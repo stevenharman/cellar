@@ -89,21 +89,28 @@ describe Beer do
 
     describe ".by_brew" do
       let(:backwoods) { FactoryGirl.create(:brew) }
-      let!(:bobs_backwoods) { FactoryGirl.create_list(:beer, 2, brew: backwoods) }
-      let!(:other_beer) { FactoryGirl.create(:beer) }
+
+      before(:all) do
+        DatabaseCleaner.strategy = :truncation
+        DatabaseCleaner.start
+        @bobs_backwoods = FactoryGirl.create_list(:beer, 2, brew: backwoods)
+        @other_beer = FactoryGirl.create(:beer)
+      end
+
+      after(:all) { DatabaseCleaner.clean }
 
       it "includes only Backwoods Bastards" do
         beers = Beer.by_brew(backwoods)
         beers.should have(2).beers
-        beers.should =~ bobs_backwoods
+        beers.should =~ @bobs_backwoods
       end
 
       it "excludes other beers" do
-        Beer.by_brew(backwoods).should_not include(other_beer)
+        Beer.by_brew(backwoods).should_not include(@other_beer)
       end
 
       it "can search using the brew id" do
-        Beer.by_brew(backwoods.id).should have(2).beers
+        Beer.by_brew(backwoods.id).should =~ @bobs_backwoods
       end
     end
 
