@@ -3,8 +3,6 @@ development:
   encoding: unicode
   database: cellar_development
   pool: 5
-  username: brewdega_cellar_dev
-  password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -29,16 +27,12 @@ test:
   encoding: unicode
   database: cellar_test
   pool: 5
-  username: brewdega_cellar_dev
-  password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: myapp_production
+  database: cellar_production
   pool: 5
-  username: myapp
-  password:development:
 
 #export:
 #  adapter: mysql
