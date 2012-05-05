@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'rails', '3.2.0'
+gem 'rails', '3.2.3'
 gem 'jquery-rails'
 gem 'thin'
 gem 'sorcery'
@@ -10,7 +10,7 @@ gem 'with_model', git: 'git://github.com/stevenharman/with_model.git', branch: '
 
 group :assets do
   gem 'bootstrap-sass', '~> 1.4.4'
-  gem 'coffee-rails', "~> 3.2.1"
+  gem 'coffee-rails', "~> 3.2.2"
   gem 'uglifier', ">= 1.0.3"
 end
 
