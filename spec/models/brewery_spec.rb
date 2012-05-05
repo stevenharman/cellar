@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Brewery do
 
   it 'validates uniqueness of name' do
-    Factory.create(:brewery)
+    FactoryGirl.create(:brewery)
     Brewery.new.should validate_uniqueness_of(:name)
   end
 

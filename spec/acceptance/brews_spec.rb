@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'Brews!' do
 
   background do
-    @brewery = Factory.create(:brewery)
+    @brewery = FactoryGirl.create(:brewery)
   end
 
   scenario "Adding a new brew" do
@@ -20,7 +20,7 @@ feature 'Brews!' do
   end
 
   scenario "Change a brew" do
-    brew = Factory.create(:brew)
+    brew = FactoryGirl.create(:brew)
 
     visit brew_path(brew)
     click_on 'edit_brew'

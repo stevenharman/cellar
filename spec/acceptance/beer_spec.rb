@@ -4,7 +4,7 @@ feature 'Beers!' do
   include CapybaraHelpers
 
   background do
-    @brew = Factory.create(:brew)
+    @brew = FactoryGirl.create(:brew)
     @bob = sign_in_new_user
   end
 

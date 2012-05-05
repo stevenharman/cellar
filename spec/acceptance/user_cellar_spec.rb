@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature "Viewing a user's cellar" do
-  let(:bob) { Factory.create(:user) }
+  let(:bob) { FactoryGirl.create(:user) }
 
   background do
     christmas_ale = FactoryGirl.create(:brew, name: "Christmas Ale")

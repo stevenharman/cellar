@@ -6,7 +6,7 @@ describe User do
   it { should validate_presence_of(:username) }
   it { should allow_mass_assignment_of(:username) }
   it 'validates uniqueness of username' do
-    Factory(:user)
+    FactoryGirl.create(:user)
     User.new.should validate_uniqueness_of(:username)
   end
 
@@ -17,14 +17,14 @@ describe User do
   it { should allow_mass_assignment_of(:password) }
 
   describe "creating a user" do
-    let(:bob) { Factory(:user) }
+    let(:bob) { FactoryGirl.create(:user) }
 
     it { bob.should be_valid }
   end
 
   describe ".for_username!" do
     context 'with user whom exists' do
-      let(:bob) { Factory.create(:bob) }
+      let(:bob) { FactoryGirl.create(:bob) }
       before { bob }
 
       it 'finds him' do
