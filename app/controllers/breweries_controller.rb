@@ -12,7 +12,7 @@ class BreweriesController < ApplicationController
     @brewery = Brewery.create(params[:brewery])
     if @brewery.valid?
       redirect_to(brewery_path(@brewery), notice: "Thanks for adding #{@brewery.name}!")
-    elsif
+    else
       flash.now[:alert] = "Oops! #{@brewery.errors.full_messages.join(", ")}"
       render :new
     end
