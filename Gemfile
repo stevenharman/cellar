@@ -3,10 +3,10 @@ source :rubygems
 gem 'rails', '3.2.3'
 gem 'jquery-rails'
 gem 'thin'
-gem 'sorcery'
+gem 'sorcery', git: 'https://github.com/NoamB/sorcery.git'
 gem 'pg'
-gem 'pg_search', git: 'git://github.com/stevenharman/pg_search.git', branch: 'rails-3-2-deprications'
-gem 'with_model', git: 'git://github.com/stevenharman/with_model.git', branch: 'rails-3-2-deprecations', group: :test
+gem 'pg_search'
+gem 'with_model', group: :test
 
 group :assets do
   gem 'bootstrap-sass', '~> 1.4.4'
