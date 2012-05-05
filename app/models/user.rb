@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :beers
+  has_many :brews, through: :beers
 
   authenticates_with_sorcery!
   attr_accessible :email, :username, :password
@@ -18,6 +19,10 @@ class User < ActiveRecord::Base
 
   def to_param
     username
+  end
+
+  def stocked_brews
+    brews.with_beers.merge(Beer.stocked)
   end
 
   def stocked_beers(brew)

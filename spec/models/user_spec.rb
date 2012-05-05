@@ -82,4 +82,34 @@ describe User do
       end
     end
   end
+
+  describe "#stocked_brews" do
+    let(:bob) { FactoryGirl.create(:user) }
+    let(:cellared_brews) { bob.stocked_brews }
+
+    before(:all) do
+      DatabaseCleaner.strategy = :truncation
+      DatabaseCleaner.start
+
+      @bobs_brew_1 = FactoryGirl.create(:beer, user: bob).brew
+      second_brew_1_beer = FactoryGirl.create(:beer, brew: @bobs_brew_1, user: bob)
+      @other_brew = FactoryGirl.create(:beer).brew
+      @bobs_brew_2 = FactoryGirl.create(:beer, user: bob).brew
+      @bobs_skunked_brew = FactoryGirl.create(:beer, :skunked, user:bob).brew
+    end
+
+    after(:all) { DatabaseCleaner.clean }
+
+    it "includes brews from the user's cellar" do
+      cellared_brews.should =~ [@bobs_brew_1, @bobs_brew_2]
+    end
+
+    it "excludes brews in other cellars" do
+      cellared_brews.should_not include(@other_brew)
+    end
+
+    it "excludes brews that don't have stocked beers" do
+      cellared_brews.should_not include(@bobs_skunked_brew)
+    end
+  end
 end

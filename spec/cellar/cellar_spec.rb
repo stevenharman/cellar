@@ -3,8 +3,7 @@ require 'cellar'
 describe Cellar do
   let(:bob) { double("User") }
   let(:brew_master) { double("BrewMaster") }
-  let(:barback) { double("Barback") }
-  let(:cellar) { Cellar.new(bob, brew_master, barback) }
+  let(:cellar) { Cellar.new(bob, brew_master) }
 
   describe 'Socking a Cellar' do
     let(:order) { double("BeerOrder") }
@@ -46,7 +45,7 @@ describe Cellar do
   describe '#stocked_brews' do
     it "gets currently stocked brews from the user's cellar" do
       stocked_brews = [double('Brew 1'), double('Brew 2')]
-      barback.should_receive(:brews_from_cellar).with(bob).and_return(stocked_brews)
+      bob.stub(:stocked_brews) { stocked_brews }
       cellar.stocked_brews.should == stocked_brews
     end
   end

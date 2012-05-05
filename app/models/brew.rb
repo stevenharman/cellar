@@ -14,10 +14,6 @@ class Brew < ActiveRecord::Base
 
   scope :with_beers, includes(:beers).joins(:beers)
 
-  def self.from_cellar(keeper)
-    with_beers.merge(Beer.stocked.cellared_by(keeper))
-  end
-
   def searchable_name
     "#{brewery.name} #{name}"
   end
