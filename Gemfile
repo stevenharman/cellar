@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'thin'
 gem 'sorcery', git: 'https://github.com/NoamB/sorcery.git'
 gem 'slim'
+gem 'simple_form'
 gem 'pg'
 gem 'pg_search'
 
