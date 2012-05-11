@@ -3,11 +3,12 @@ source :rubygems
 gem 'rails', '3.2.3'
 gem 'jquery-rails'
 gem 'thin'
-gem 'sorcery'
-gem 'slim'
-gem 'simple_form'
+gem 'kaminari'
 gem 'pg'
 gem 'pg_search'
+gem 'simple_form'
+gem 'slim'
+gem 'sorcery'
 
 gem 'with_model', group: :test
 
