@@ -4,8 +4,10 @@ gem 'rails', '3.2.3'
 gem 'jquery-rails'
 gem 'thin'
 gem 'sorcery', git: 'https://github.com/NoamB/sorcery.git'
+gem 'slim'
 gem 'pg'
 gem 'pg_search'
+
 gem 'with_model', group: :test
 
 group :assets do
