@@ -26,12 +26,18 @@
 
 <body>
   <div class="container">
-    <div class="flash-box">
+    <div class="alert-box">
       <% if notice %>
-        <p class="flash alert-message info"><%= notice %></p>
+        <div class="alert alert-info">
+          <button class="close" data-dismiss="alert">×</button>
+          <%= notice %>
+        </div>
       <% end %>
       <% if alert %>
-        <p class="flash alert-message error"><%= alert %></p>
+        <div class="alert alert-error">
+          <button class="close" data-dismiss="alert">×</button>
+          <%= alert %>
+        </div>
       <% end %>
     </div>
     <%= render "shared/topbar" %>

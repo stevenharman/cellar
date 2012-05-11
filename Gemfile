@@ -9,7 +9,8 @@ gem 'pg_search'
 gem 'with_model', group: :test
 
 group :assets do
-  gem 'bootstrap-sass', '~> 1.4.4'
+  gem 'sass-rails', '~> 3.1'
+  gem 'bootstrap-sass', '~> 2.0.2'
   gem 'coffee-rails', "~> 3.2.2"
   gem 'uglifier', ">= 1.0.3"
 end

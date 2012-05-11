@@ -1,22 +1,17 @@
 /* Pull in full boostrap, for now. Eventually, only the parts we want. */
 @import "bootstrap";
+@import "bootstrap-responsive";
+
+/* Can be removed when we upgrade to bootstrap-sass 2.0.3 */
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
 
 body {
-  padding: 50px 0 0;
+  padding: 40px 0 0;
 }
 
-.form-stacked {
-  label {
-    input { display: block; }
-  }
-}
-
-.description {
-  white-space: pre-line;
-}
-
-.account-links {
-  float: right;
-
-  a { display: inline-block;}
-}
