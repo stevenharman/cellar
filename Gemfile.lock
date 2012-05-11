@@ -1,13 +1,4 @@
 GIT
-  remote: https://github.com/NoamB/sorcery.git
-  revision: 94091728e9dc6d4709b48b23fec4ab7ad0a473d5
-  specs:
-    sorcery (0.7.11)
-      bcrypt-ruby (~> 3.0.0)
-      oauth (~> 0.4.4)
-      oauth2 (~> 0.5.1)
-
-GIT
   remote: https://github.com/jnicklas/capybara.git
   revision: 644853c6e4be9f510331bc649a544e2569f5326f
   specs:
@@ -185,6 +176,10 @@ GEM
       temple (~> 0.3.4)
       tilt (~> 1.3.2)
     slop (2.4.4)
+    sorcery (0.7.12)
+      bcrypt-ruby (~> 3.0.0)
+      oauth (~> 0.4.4)
+      oauth2 (~> 0.5.1)
     sprockets (2.1.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -231,7 +226,7 @@ DEPENDENCIES
   simple_form
   simplecov
   slim
-  sorcery!
+  sorcery
   thin
   uglifier (>= 1.0.3)
   with_model

@@ -3,7 +3,7 @@ source :rubygems
 gem 'rails', '3.2.3'
 gem 'jquery-rails'
 gem 'thin'
-gem 'sorcery', git: 'https://github.com/NoamB/sorcery.git'
+gem 'sorcery'
 gem 'slim'
 gem 'simple_form'
 gem 'pg'
