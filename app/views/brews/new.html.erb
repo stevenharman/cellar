@@ -1,7 +1,7 @@
 <div>
   <h1>Add a brew</h1>
 
-  <%= form_for @brew, html: { class: "form-stacked" } do |f| %>
+  <%= form_for @brew do |f| %>
     <label>Brewery: <%= f.collection_select :brewery_id, Brewery.all, :id, :name,
                                             {include_blank: true}, autofocus: true %></label>
     <label>Name: <%= f.text_field :name, class: 'span8' %></label>

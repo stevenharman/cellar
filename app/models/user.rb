@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
   has_many :brews, through: :beers
 
   authenticates_with_sorcery!
-  attr_accessible :email, :username, :password
+  attr_accessor :remember_me
+  attr_accessible :email, :username, :password, :remember_me
 
   validates :email, presence: true
   validates :username, uniqueness: true, presence: true

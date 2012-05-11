@@ -2,7 +2,7 @@
   <h1><%= @brew.name %></h1>
   <h5>By <%= link_to @brew.brewery.name, @brew.brewery %></h5>
 
-  <%= form_for @brew, html: { class: "form-stacked" } do |f| %>
+  <%= form_for @brew do |f| %>
     <label>Name: <%= f.text_field :name, class: 'span8' %></label>
     <label>Series: <%= f.text_field :series, class: 'span8' %></label>
     <label>ABV: <%= f.text_field :abv, class: 'span2' %></label>

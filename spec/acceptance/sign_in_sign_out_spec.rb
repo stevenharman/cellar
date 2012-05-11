@@ -8,9 +8,9 @@ feature 'Signing in and out' do
 
   scenario 'Signing in with valid credentials' do
     visit sign_in_path
-    fill_in 'username', with: user_stuffs[:username]
-    fill_in 'password', with: user_stuffs[:password]
-    click_on 'sign_in'
+    fill_in 'user_username', with: user_stuffs[:username]
+    fill_in 'user_password', with: user_stuffs[:password]
+    click_button 'Sign in'
 
     page.should have_content "Welcome back to the Cellar"
     current_path.should == root_path

@@ -1,7 +1,7 @@
 <div>
   <h1>Add a brewery</h1>
 
-  <%= form_for @brewery, html: { class: "form-stacked" } do |f| %>
+  <%= form_for @brewery do |f| %>
     <label>Name: <%= f.text_field :name, autofocus: true, class: 'span8' %></label>
     <label>Website: <%= f.text_field :url, class: 'span8' %></label>
     <%= f.submit "Add it!", id: 'add_brewery', class: 'btn btn-primary' %>

@@ -1,7 +1,7 @@
 <div>
   <h1>Add a beer to your cellar</h1>
 
-  <%= form_for @beer, html: { class: "form-stacked" } do |f| %>
+  <%= form_for @beer do |f| %>
     <label>Name: <%= f.collection_select :brew_id, @brews, :id, :name,
                                             {include_blank: true}, autofocus: true %></label>
     <%= render partial: 'fields', locals: { fb: f } %>

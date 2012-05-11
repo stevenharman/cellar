@@ -1,6 +1,7 @@
-= form_tag sessions_path, class: 'form-stacked' do
-  label Username #{text_field_tag :username, params[:username], autofocus: true}
-  label Password #{password_field_tag :password, params[:password]}
-  label #{check_box_tag :remember_me, 1, params[:remember_me]} Remember me
-  = submit_tag 'Sign in', id: 'sign_in', class: 'btn btn-primary'
+= simple_form_for @user, url: sessions_path do |f|
+  = f.input :username, input_html: { autofocus: true }
+  = f.input :password
+  = f.input :remember_me, as: :boolean, label: false, \
+    inline_label: 'Yes, remember me'
+  = f.button :submit, 'Sign in'
 p Don't have an account? #{link_to 'Sign up', sign_up_path} for one now!
