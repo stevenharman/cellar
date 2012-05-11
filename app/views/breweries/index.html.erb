@@ -3,6 +3,7 @@
     <li class="brewery"><%= link_to brewery.name, brewery %></li>
   <% end %>
 </ul>
+<%= paginate @breweries %>
 
 <p>
   Don't see the brewery you were looking for? <%= link_to 'Add it now', new_brewery_path, class: 'btn' %>

@@ -6,4 +6,6 @@ class Brewery < ActiveRecord::Base
 
   include PgSearch
   multisearchable against: [:name]
+
+  paginates_per 25
 end
