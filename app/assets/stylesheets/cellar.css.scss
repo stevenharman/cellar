@@ -1,6 +1,4 @@
-body {
-  padding: 50px 0 0;
-}
+@import "variables";
 
 /* Pull in full boostrap, for now. Eventually, only the parts we want. */
 @import "bootstrap";
@@ -15,4 +13,20 @@ button.close {
   -webkit-appearance: none;
 }
 
+body {
+  background-image: url(image_path('bg-bottles.png'));
+  background-attachment: fixed;
+}
 
+@media (min-width: 980px) {
+  .navbar-inner {
+    height: $navbarHeight;
+    background: transparent url(image_path('awning.png')) repeat-x;
+    @include box-shadow(none);
+  }
+}
+
+.page-container {
+  background: $bodyBackground;
+  padding-top: $navbarHeight + 10px;
+}
