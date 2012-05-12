@@ -24,9 +24,12 @@ body {
     background: transparent url(image_path('awning.png')) repeat-x;
     @include box-shadow(none);
   }
+
+  .page-container {
+    padding-top: $navbarHeight + 10px;
+  }
 }
 
 .page-container {
   background: $bodyBackground;
-  padding-top: $navbarHeight + 10px;
 }
