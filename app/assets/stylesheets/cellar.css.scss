@@ -4,15 +4,6 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
-/* Can be removed when we upgrade to bootstrap-sass 2.0.3 */
-button.close {
-  padding: 0;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  -webkit-appearance: none;
-}
-
 body {
   background-image: url(image_path('bg-bottles.png'));
   background-attachment: fixed;
