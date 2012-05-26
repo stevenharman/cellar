@@ -1,0 +1,10 @@
+header.page-header
+  nav.row
+    = link_to(root_path, title: 'Cellar', class: 'home span6') do
+      = image_tag('cellar-full-logo.png', alt: 'Brewdega Cellar: Stock up. Drink up.')
+    ul.secondary-nav.span4.offset2
+      - if logged_in?
+        li= link_to('My Cellar', cellar_path(current_user))
+      li= link_to('Blog', 'http://blog.brewdega.com', \
+                    title: 'Get updates, news, and banter at the Brewdega blog.')
+      li= link_to('Contact us', '#', title: 'Get in touch with the Brewdega crew.')

@@ -24,3 +24,19 @@ body {
 .page-container {
   background: $bodyBackground;
 }
+
+.page-header {
+  .secondary-nav {
+    li {
+      display: inline-block;
+      margin-left: $gridGutterWidth;
+      text-transform: uppercase;
+    }
+
+    a {
+      $linkColor: $brown;
+      color: $linkColor;
+      &:hover { color: darken($linkColor, 15%); }
+    }
+  }
+}
