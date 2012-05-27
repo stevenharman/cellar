@@ -1,10 +1,16 @@
 header.page-header
-  nav.row
-    = link_to(root_path, title: 'Cellar', class: 'home span6') do
+  .row
+    h1.span6= link_to(root_path, title: 'Cellar', class: 'home') do
       = image_tag('cellar-full-logo.png', alt: 'Brewdega Cellar: Stock up. Drink up.')
-    ul.secondary-nav.span4.offset2
+    ul.secondary-nav.span6
       - if logged_in?
         li= link_to('My Cellar', cellar_path(current_user))
       li= link_to('Blog', 'http://blog.brewdega.com', \
                     title: 'Get updates, news, and banter at the Brewdega blog.')
       li= link_to('Contact us', '#', title: 'Get in touch with the Brewdega crew.')
+  .row
+    .search.span8
+      = simple_form_for(:search, html: { class: 'form-inline' }) do |f|
+        = f.input :search, placeholder: 'Find a beer...', label: false
+    .brows.span4
+      span Browse

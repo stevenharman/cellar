@@ -26,16 +26,33 @@ body {
 }
 
 .page-header {
+  $pageHeaderHeight: 80px;
+
+  border-bottom: none;
+  margin-top: 0;
+
+  .home {
+    display: inline-block;
+    line-height: $pageHeaderHeight;
+  }
+
   .secondary-nav {
+    margin-bottom: 0;
+    text-align: right;
+
     li {
       display: inline-block;
-      margin-left: $gridGutterWidth;
+      line-height: $pageHeaderHeight;
+      margin: auto $gridGutterWidth;
       text-transform: uppercase;
     }
 
     a {
       $linkColor: $brown;
+
       color: $linkColor;
+      font-size: 1.1em;
+      font-weight: bolder;
       &:hover { color: darken($linkColor, 15%); }
     }
   }
