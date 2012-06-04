@@ -1,24 +1,18 @@
 .navbar.navbar-fixed-top
   .navbar-inner
     .container
-      / .btn-navbar is used as the toggle for collapsed navbar content
-      a.btn.btn-navbar[data-toggle="collapse" data-target=".nav-collapse"]
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
+      = link_to(root_path, class: 'brand') do
+        span Brewdega
 
-      = link_to('Cellar', root_path, class: 'brand')
-
-      .nav-collapse
-        ul.nav.pull-right
-          - if logged_in?
-            li.dropdown
-              = link_to('#', class: "dropdown-toggle", data: { toggle: 'dropdown' }) do
-                = current_user.username
-                b.caret
-              ul.dropdown-menu
-                li= link_to('My cellar', cellar_path(current_user))
-                li= link_to('Sign out', sign_out_path)
-          - else
-            li= link_to('Sign in', sign_in_path)
-            li= link_to('Sign up', sign_up_path)
+      ul.nav
+        - if logged_in?
+          li.current-user-links.dropdown
+            = link_to(cellar_path(current_user), class: "dropdown-toggle", data: { toggle: 'dropdown', target: '.current-user-links' }) do
+              = current_user.username
+              b.caret
+            ul.dropdown-menu
+              li= link_to('My cellar', cellar_path(current_user))
+              li= link_to('Sign out', sign_out_path)
+        - else
+          li= link_to('Sign in', sign_in_path)
+          li= link_to('Sign up', sign_up_path)
