@@ -45,7 +45,7 @@ feature "Drink a beer from the Cellar" do
   scenario "after drinking, the beer is no longer in the Cellar" do
     visit user_brew_path(bob, bobs_beer.brew)
     page.should have_css('.beers-stocked .beer')
-    click_on "Drink"
+    click_button "Drink"
     page.should_not have_css('.beers-stocked .beer')
   end
 
