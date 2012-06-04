@@ -1,5 +1,5 @@
 header.page-header
-  .row
+  .row-fluid
     h1.span6= link_to(root_path, title: 'Cellar', class: 'home') do
       = image_tag('cellar-full-logo.png', alt: 'Brewdega Cellar: Stock up. Drink up.')
     ul.secondary-nav.span6
@@ -8,9 +8,15 @@ header.page-header
       li= link_to('Blog', 'http://blog.brewdega.com', \
                     title: 'Get updates, news, and banter at the Brewdega blog.')
       li= link_to('Contact us', '#', title: 'Get in touch with the Brewdega crew.')
-  .row
-    .search.span8
-      = simple_form_for(:search, html: { class: 'form-inline' }) do |f|
-        = f.input :search, placeholder: 'Find a beer...', label: false
-    .brows.span4
-      span Browse
+  .row-fluid
+    = simple_form_for(:search, method: :get, html: { class: 'search form-search span9' }) do |f|
+      = f.search_field :query, placeholder: 'Find a beer...', class: 'query'
+      /= f.button :submit, 'Search', class: 'search-button btn-primary btn-large'
+    .browse.dropdown.span3
+      = link_to '/browse', class: 'dropdown-toggle', data: { toggle: 'dropdown', target: '.browse' } do
+        ' Browse
+        span.caret
+      ul.dropdown-menu
+        li= link_to 'Breweries', breweries_path
+        li= link_to 'Beers', brews_path
+        li= link_to 'Cellars', '/cellars'

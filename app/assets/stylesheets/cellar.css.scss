@@ -17,7 +17,7 @@ body {
   }
 
   .page-container {
-    padding-top: $navbarHeight + 10px;
+    padding: ($navbarHeight + 10px) $gridGutterWidth 0;
   }
 }
 
@@ -37,7 +37,6 @@ body {
   }
 
   .secondary-nav {
-    margin-bottom: 0;
     text-align: right;
 
     li {
@@ -54,6 +53,35 @@ body {
       font-size: 1.1em;
       font-weight: bolder;
       &:hover { color: darken($linkColor, 15%); }
+    }
+  }
+
+  .search {
+    .query {
+      font-size: 1.5em;
+      height: auto;
+      line-height: 1.5em;
+      width: 100%;
+    }
+
+    .search-button {
+      text-transform: uppercase;
+    }
+  }
+
+  .browse {
+    background-color: $brown;
+    padding: 1px 0;
+
+    & > a {
+      color: $lightBrown;
+      display: block;
+      font-size: 1.5em;
+      line-height: 1em;
+      padding: 0.5em;
+      text-transform: uppercase;
+
+      .caret { float: right; }
     }
   }
 }

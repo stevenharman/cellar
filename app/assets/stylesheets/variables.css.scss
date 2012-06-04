@@ -1,5 +1,6 @@
 $brewdega-orange: #F2664F;
 $brown: #754D2E;
+$lightBrown: desaturate(lighten($brown, 35%), 15%);
 
 $navbarHeight: 86px;
 $navbarBackground: $brewdega-orange;
