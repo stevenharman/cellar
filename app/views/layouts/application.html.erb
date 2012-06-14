@@ -43,7 +43,10 @@
         <% end %>
       </div>
       <%= render "shared/header" %>
-      <%= yield %>
+      <div class="page-content">
+        <%= yield %>
+      </div>
+      <%= render "shared/footer" %>
     </div>
   </div>
   <%= javascript_include_tag "application" %>

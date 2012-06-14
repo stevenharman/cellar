@@ -1,0 +1,38 @@
+.splash {
+  background-color: $brewdega-orange;
+
+  .call-to-action {
+    background-color: $brown;
+    list-style: none;
+    margin: 0;
+    text-transform: uppercase;
+    min-height: 20em;
+
+    a {
+      color: $white;
+      display: block;
+      padding: 0.5em 0 0.25em;
+
+      &:hover {
+        text-decoration: none;
+        color: darken($white, 15%);
+      }
+    }
+    small {
+      color: $lightBrown;
+      display: block;
+      font-size: 0.6em;
+      line-height: 1em;
+    }
+
+    li {
+      border-bottom: 1px dashed $lightBrown;
+      margin: 0 1em;
+      &:last-child { border-bottom: none; }
+    }
+  }
+  .carousel {
+    background-color: transparent;
+    text-transform: uppercase;
+  }
+}

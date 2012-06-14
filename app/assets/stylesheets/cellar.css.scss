@@ -9,37 +9,12 @@ body {
   background-attachment: fixed;
 }
 
-.navbar {
-  .navbar-inner {
-    height: $navbarHeight;
-    background: transparent url(image_path('awning.png')) repeat-x;
-    @include box-shadow(none);
-  }
-
-  .brand {
-    float: right;
-    background: url(image_path('brewdega-logo-small.png')) no-repeat 50% 25%;
-    width: 132px;
-
-    span { visibility: hidden; }
-  }
-
-  .current-user-links {
-    .gravatar { margin-right: 1em; }
-
-    & > a {
-      padding-bottom: 5px !important;
-
-      .caret {
-        vertical-align: middle;
-        margin-left: 0.5em;
-        margin-top: -2px;
-      }
-    }
-  }
-}
+@import "navbar";
+@import "splash";
+@import "footer";
 
 .page-container {
+  background: $bodyBackground;
   padding: 0 $gridGutterWidth 0;
 }
 
@@ -49,15 +24,13 @@ body {
   }
 }
 
-.page-container {
-  background: $bodyBackground;
-}
-
 .page-header {
   $pageHeaderHeight: 80px;
 
   border-bottom: none;
+  margin-bottom: 0;
   margin-top: 0;
+  padding-bottom: 0;
 
   .home {
     display: inline-block;
@@ -114,3 +87,4 @@ body {
     }
   }
 }
+

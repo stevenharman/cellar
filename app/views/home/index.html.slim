@@ -1,7 +1,16 @@
-h2 Welcome to the Cellar! Have a brew.
-
-p Browse our list of #{link_to('breweries', breweries_path)}.
-
-p Or check out our full list of #{link_to('brews', brews_path)}.
-
-p View all of the beer #{link_to('in the cellar', beers_path)}.
+section.splash.row-fluid
+  ul.call-to-action.span3
+    li
+      h2= link_to(sign_up_path, title: 'Sign up') do
+        small Get started
+        ' Sign up now
+    li
+      h2= link_to('/#') do
+        small Have a look
+        ' Explore cellars
+    li
+      h2= link_to('/#') do
+        small Know your brews
+        ' Search beers
+  div.carousel.hero-unit.span9
+    h1 Yay beer!

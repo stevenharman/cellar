@@ -1,0 +1,30 @@
+.navbar {
+  .navbar-inner {
+    height: $navbarHeight;
+    background: transparent url(image_path('awning.png')) repeat-x;
+    @include box-shadow(none);
+  }
+
+  .brand {
+    float: right;
+    background: url(image_path('brewdega-logo-small.png')) no-repeat 50% 10px;
+    width: 132px;
+
+    span { visibility: hidden; }
+  }
+
+  .current-user-links {
+    .gravatar { margin-right: 1em; }
+
+    & > a {
+      padding-top: 15px !important;
+      padding-bottom: 5px !important;
+
+      .caret {
+        vertical-align: middle;
+        margin-left: 0.5em;
+        margin-top: -2px;
+      }
+    }
+  }
+}
