@@ -8,6 +8,7 @@
         - if logged_in?
           li.current-user-links.dropdown
             = link_to(cellar_path(current_user), class: "dropdown-toggle", data: { toggle: 'dropdown', target: '.current-user-links' }) do
+              = current_user.gravatar
               = current_user.username
               b.caret
             ul.dropdown-menu

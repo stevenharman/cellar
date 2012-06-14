@@ -16,14 +16,26 @@ body {
     @include box-shadow(none);
   }
 
-  .btn-navbar { float: left; }
-
   .brand {
     float: right;
     background: url(image_path('brewdega-logo-small.png')) no-repeat 50% 25%;
     width: 132px;
 
     span { visibility: hidden; }
+  }
+
+  .current-user-links {
+    .gravatar { margin-right: 1em; }
+
+    & > a {
+      padding-bottom: 5px !important;
+
+      .caret {
+        vertical-align: middle;
+        margin-left: 0.5em;
+        margin-top: -2px;
+      }
+    }
   }
 }
 
