@@ -1,4 +1,8 @@
-@import "variables";
+/*
+*= require_self
+*/
+
+@import "base/variables";
 
 /* Pull in full boostrap, for now. Eventually, only the parts we want. */
 @import "bootstrap";
@@ -9,9 +13,9 @@ body {
   background-attachment: fixed;
 }
 
-@import "navbar";
+@import "shared/navbar";
+@import "shared/footer";
 @import "splash";
-@import "footer";
 
 .page-container {
   background: $bodyBackground;
@@ -87,4 +91,5 @@ body {
     }
   }
 }
+
 
