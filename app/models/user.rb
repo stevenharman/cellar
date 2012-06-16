@@ -30,4 +30,11 @@ class User < ActiveRecord::Base
     beers.stocked.by_brew(brew)
   end
 
+  # Public: Delegate to other's #model if it is a Draper decorator
+  #
+  # other - A User or UserDecorator
+  def ==(other)
+    super(other.respond_to?(:model) ? other.model : other)
+  end
+
 end
