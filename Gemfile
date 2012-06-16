@@ -28,6 +28,7 @@ group :development, :test do
   gem 'foreman'
   gem 'heroku'
   gem 'pry'
+  gem 'pry-remote'
   gem 'rspec-rails', '~> 2.6'
   gem 'shoulda-matchers'
   gem 'simplecov', :require => false, :group => :test
