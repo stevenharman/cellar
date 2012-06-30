@@ -1,5 +1,5 @@
 class BeersController < ApplicationController
-  before_filter :require_login, except: [:index]
+  before_filter :authenticate_user!, except: [:index]
   before_filter :load_beer, only: [:show, :edit, :update, :drink]
 
   def index

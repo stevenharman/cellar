@@ -10,7 +10,7 @@ gem 'pg'
 gem 'pg_search'
 gem 'simple_form'
 gem 'slim'
-gem 'sorcery'
+gem 'devise', '~> 2.1'
 
 gem 'with_model', group: :test
 

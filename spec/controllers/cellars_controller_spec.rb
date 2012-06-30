@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe CellarsController do
-  include Sorcery::TestHelpers::Rails
 
   describe 'GET /:username' do
 
@@ -35,7 +34,7 @@ describe CellarsController do
     end
 
     context "and Bob signed in" do
-      before { login_user bob }
+      before { sign_in bob }
 
       # ~/bob/brew/bobs_brew -> 200
       specify "he can see his brew" do
@@ -66,7 +65,7 @@ describe CellarsController do
     context 'and Bob is not signed in' do
       specify 'he cannot see his brew' do
         get :brew, user_id: bob, id: bobs_brew
-        response.should redirect_to sign_in_path
+        response.should redirect_to new_user_session_path
       end
     end
   end

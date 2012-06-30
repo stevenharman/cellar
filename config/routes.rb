@@ -1,9 +1,13 @@
 BrewdegaCellar::Application.routes.draw do
 
-  get "sign_up" => "users#new", as: "sign_up"
-  get "sign_in" => "sessions#new", as: "sign_in"
-  get "sign_out" => "sessions#destroy", as: "sign_out"
+  devise_for :user, skip: :all
+  as :user do
+    get 'sign_in' => 'sessions#new', as: :new_user_session
+    post 'sign_in' => 'sessions#create', as: :user_session
+    delete 'sign_out' => 'sessions#destroy', as: :destroy_user_session
+  end
 
+  get 'sign_up' => 'users#new'
   resources :users, only: [:create]
   resources :users, path: '', only: [] do
     get "brew/:id" => "cellars#brew", as: :brew
@@ -12,7 +16,6 @@ BrewdegaCellar::Application.routes.draw do
       put :drink, on: :member
     end
   end
-  resources :sessions, only: [:create]
 
   resources :breweries
   resources :brews

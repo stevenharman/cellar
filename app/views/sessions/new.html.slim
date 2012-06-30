@@ -1,4 +1,4 @@
-= simple_form_for @user, url: sessions_path do |f|
+= simple_form_for @user, url: new_user_session_path do |f|
   = f.input :username, input_html: { autofocus: true }
   = f.input :password
   = f.input :remember_me, as: :boolean, label: false, \

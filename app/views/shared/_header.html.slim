@@ -3,7 +3,7 @@ header.page-header
     h1.span6= link_to(root_path, title: 'Cellar', class: 'home') do
       = image_tag('cellar-full-logo.png', alt: 'Brewdega Cellar: Stock up. Drink up.')
     ul.secondary-nav.span6
-      - if logged_in?
+      - if user_signed_in?
         li= link_to('My Cellar', cellar_path(current_user))
       li= link_to('Blog', 'http://blog.brewdega.com', \
                     title: 'Get updates, news, and banter at the Brewdega blog.')

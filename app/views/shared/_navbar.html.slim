@@ -5,7 +5,7 @@
         span Brewdega
 
       ul.nav
-        - if logged_in?
+        - if user_signed_in?
           li.current-user-links.dropdown
             = link_to(cellar_path(current_user), class: "dropdown-toggle", data: { toggle: 'dropdown', target: '.current-user-links' }) do
               = current_user.gravatar
@@ -13,7 +13,7 @@
               b.caret
             ul.dropdown-menu
               li= link_to('My cellar', cellar_path(current_user))
-              li= link_to('Sign out', sign_out_path)
+              li= link_to('Sign out', destroy_user_session_path, method: :delete)
         - else
-          li= link_to('Sign in', sign_in_path)
+          li= link_to('Sign in', new_user_session_path)
           li= link_to('Sign up', sign_up_path)

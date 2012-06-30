@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def not_authenticated
-    redirect_to sign_in_path, :alert => "Please sign in first."
+    redirect_to new_user_session_path, :alert => "Please sign in first."
   end
 
   private

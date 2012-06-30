@@ -4,9 +4,14 @@
 
 You'll need the following dependencies installed:
 
-- PostgreSQL (for [light-weight searching][texticle]): `brew install
-  postgress`. Check this if you need a hand getting [PostgreSQL installed on OS
-  X][postgres-setup].
+- PostgreSQL (for [light-weight searching][texticle])
+    1. `brew install postgres` (Pay attention to instructions for
+        starting/stopping PostgreSQL)
+    1. `brew doctor` (This may tell you to fix your `PATH`, so do that.)
+    1. If you've already installed the `pg` gem: `gem uninstall pg` (we do this
+       to ensure we've built against the right version of PostgreSQL)
+    1. Install the `pg` gem: `bundle install`
+    1. `bundle exec rake db:create db:schema:load`
 
 
 ### CSS Structure

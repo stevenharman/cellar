@@ -1,14 +1,18 @@
 class User < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :validatable, :lockable, :timeoutable and
+  # :omniauthable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable,
+    :trackable#, :confirmable
+
+  attr_accessible :email, :username, :password, :remember_me
   has_many :beers
   has_many :brews, through: :beers
 
-  authenticates_with_sorcery!
-  attr_accessor :remember_me
-  attr_accessible :email, :username, :password, :remember_me
-
-  validates :email, presence: true
+  validates :email, uniqueness: true, presence: true
   validates :username, uniqueness: true, presence: true
-  validates :password, presence: { on: :create }
+  validates :password, presence: { on: :create },
+                       length: { in: 6...128, if: 'password.present?' }
 
   def self.for_username!(username)
     find_by_username!(username.downcase)

@@ -1,5 +1,5 @@
 class CellarsController < ApplicationController
-  before_filter :require_login, except: [:show]
+  before_filter :authenticate_user!, except: [:show]
 
   def show
     @cellar = load_cellar

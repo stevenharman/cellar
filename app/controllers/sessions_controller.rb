@@ -1,29 +1,18 @@
 class SessionsController < ApplicationController
+  before_filter :allow_params_authentication!, :only => :create
 
   def new
-    @user = User.new
+    @user = User.new(params[:user])
   end
 
   def create
-    user = login(user_params[:username], user_params[:password], user_params[:remember_me])
-    if user
-      redirect_back_or_to root_url, notice: "Welcome back to the Cellar"
-    else
-      @user = User.new(user_params)
-      flash.now.alert = "Username or password was invalid"
-      render :new
-    end
+    user = authenticate_user!(:recall => 'sessions#new')
+    sign_in user
+    redirect_to root_url, notice: 'Welcome back to the Cellar'
   end
 
   def destroy
-    logout
-    redirect_to root_path, notice: "You have been signed out."
+    sign_out
+    redirect_to root_path, notice: 'You have been signed out.'
   end
-
-  private
-
-  def user_params
-    @user_params ||= params[:user]
-  end
-
 end

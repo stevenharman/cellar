@@ -12,6 +12,10 @@ describe User do
 
   it { should validate_presence_of(:email) }
   it { should allow_mass_assignment_of(:email) }
+  it 'validates uniqueness of email' do
+    FactoryGirl.create(:user)
+    User.new.should validate_uniqueness_of(:email)
+  end
 
   it { should validate_presence_of(:password) }
   it { should allow_mass_assignment_of(:password) }
@@ -37,7 +41,7 @@ describe User do
     end
 
     context 'with user who does not exist' do
-      it { expect { User.find_by_username!('bob') }.to raise_error(ActiveRecord::RecordNotFound) }
+      it { expect { User.for_username!('bob') }.to raise_error(ActiveRecord::RecordNotFound) }
     end
   end
 
