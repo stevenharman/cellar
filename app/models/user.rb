@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   has_many :beers
   has_many :brews, through: :beers
 
-  validates :email, uniqueness: true, presence: true
+  validates :email, uniqueness: true, presence: true, email: true
   validates :username, uniqueness: true, presence: true
   validates :password, presence: { on: :create },
                        length: { in: 6...128, if: 'password.present?' }
