@@ -1,5 +1,24 @@
 footer {
-  background-color: $brown;
-  margin-top: $gridGutterWidth;
+  /*background-color: $brown;*/
+  background-color: #574944;
+  /*margin-top: $gridGutterWidth;*/
   min-height: 10em;
+  padding: 20px 30px 10px 20px;
+  
+  ul {
+	  list-style: none;
+	  margin-left: 0px;
+  }
+  
+  li {
+      color: white;
+      font-size: 11px;
+      border-bottom: 1px dotted #968883;
+      padding: 6px 0 6px 0;
+    }
+  p.small {
+	  font-size: 11px;
+	  line-height: 14px;
+	  color: white;
+  }
 }

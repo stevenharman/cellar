@@ -1,11 +1,32 @@
-<ul>
+<h2>Browse Beer</h2>
+
+<!--<ul>
   <% for brew in @brews %>
     <li class="brew"><%= link_to brew.name, brew %>, by <%= link_to brew.brewery.name, brew.brewery %></li>
   <% end %>
-</ul>
+</ul>-->
+
+<fieldset class="beers-stocked">
+  <legend>Beers</legend>
+  <table class="table table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Brew</th>
+        <th>Brewery</th>
+        <th>Cellar It</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for brew in @brews %>
+        <tr class="beer">
+          <td><%= link_to brew.name, brew %></td>
+          <td><%= link_to brew.brewery.name, brew.brewery %></td>
+          <td>
+             <%= link_to 'Cellar it!', new_beer_path, class: 'btn' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</fieldset>
 <%= paginate @brews %>
-
-<p>
-  Don't see the brew you were looking for? <%= link_to 'Add it now', new_brew_path, class: 'btn' %>
-</p>
-

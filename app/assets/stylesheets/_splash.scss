@@ -21,8 +21,14 @@
     small {
       color: $lightBrown;
       display: block;
-      font-size: 0.6em;
+      font-size: 12px;
       line-height: 1em;
+      font-family: $smallFontFamily;
+    }
+    
+    h2 {
+	    font-family: $largeFontFamily;
+	    font-size: 32px;
     }
 
     li {

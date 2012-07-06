@@ -1,4 +1,5 @@
 <h2><%= @brew.name %></h2>
+<h5>By <%= link_to @brew.brewery.name, @brew.brewery %></h5>
 
 <dl class='brew-details'>
   <dt class="span2">By</dt><dd><%= link_to @brew.brewery.name, @brew.brewery, title: @brew.brewery.name %></dd>

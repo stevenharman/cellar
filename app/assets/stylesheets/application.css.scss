@@ -13,6 +13,70 @@ body {
   background-attachment: fixed;
 }
 
+h1 {
+	font-family: $largeFontFamily;
+	font-size: 32px;
+	text-transform: uppercase;
+	color: $brewdega-orange;
+	font-style: normal;
+	font-weight:normal;
+}
+
+h2 {
+	font-family: $largeFontFamily;
+	font-size: 32px;
+	text-transform: uppercase;
+	color: $brewdega-orange;
+	font-style: normal;
+	font-weight:normal;
+}
+
+h3 {
+	font-family: $smallFontFamily;
+	font-size: 16px;
+	color: $brown;
+	font-style: normal;
+	font-weight:normal;
+}
+
+
+h4 {
+	font-family: $largeFontFamily;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: $brewdega-orange;
+	font-style: normal;
+	font-weight:normal;
+}
+
+h5 {
+	font-size: 18px;
+	color: $brown;
+	font-style: normal;
+	font-weight:normal;
+	
+	a {
+      $linkColor: $brown;
+      color: $linkColor;
+      text-decoration: none;
+      &:hover { color: darken($linkColor, 15%);text-decoration: none; }
+    }
+
+}
+
+.small {
+	font-size: 11px;
+	line-height: 12px;
+	color: $brown;
+}
+
+.brew-details {
+	font-size: 11px;
+	line-height: 14px;
+	color: $brown;
+}
+
+
 @import "shared/navbar";
 @import "shared/footer";
 @import "splash";
@@ -25,7 +89,38 @@ body {
 @media (min-width: 980px) {
   .page-container {
     padding-top: ($navbarHeight + 10px);
+    padding-bottom: 20px;
   }
+}
+.table {
+	background-color: $beige;
+}
+
+.table th {
+	font-family: $smallFontFamily;
+	color: #754D2E;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.table td {
+	border: 0px;
+}
+
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th {
+  	background-color: #f5f2e6;
+}
+
+legend {
+	font-family: $smallFontFamily;
+	color: #754D2E;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	text-transform: capitalize;
+	border: 0px;
 }
 
 .page-header {
@@ -49,6 +144,7 @@ body {
       line-height: $pageHeaderHeight;
       margin-left: $gridGutterWidth;
       text-transform: uppercase;
+      font-family: $smallFontFamily;
     }
 
     a {
@@ -57,6 +153,8 @@ body {
       color: $linkColor;
       font-size: 1.1em;
       font-weight: bolder;
+      letter-spacing: 2px;
+      text-decoration: none;
       &:hover { color: darken($linkColor, 15%); }
     }
   }
@@ -64,7 +162,8 @@ body {
   .search {
     .query {
       font-size: 1.5em;
-      height: auto;
+      /*height: auto;*/
+      height: 53px;
       line-height: 1.5em;
       width: 100%;
       @include box-sizing(border-box);
@@ -78,17 +177,35 @@ body {
   .browse {
     background-color: $brown;
     padding: 1px 0;
+    height: 53px;
 
     & > a {
       color: $lightBrown;
       display: block;
-      font-size: 1.5em;
+      font-family: $largeFontFamily;
+      /*font-size: 1.5em;*/
+      font-size: 30px;
       line-height: 1em;
-      padding: 0.5em;
+      padding:.4em;
+      /*padding: 0.5em;*/
       text-transform: uppercase;
 
-      .caret { float: right; }
+      .caret { float: right; border-top: 4px solid white; margin-top: 10px;}
     }
+    
+	.dropdown-menu {
+		background-color: $brown;
+		
+		a {
+	      $linkColor: $yellow;
+	
+	      color: $linkColor;
+	      font-size: 1.1em;
+	      font-weight: bolder;
+	      text-decoration: none;
+	      &:hover { color: darken($linkColor, 15%); }
+	    }
+	}
   }
 }
 

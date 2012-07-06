@@ -1,7 +1,23 @@
 footer
   .row-fluid
     .logo.span3
+    	= image_tag('footer_logo.gif', alt: 'Cellar: Stock up. Drink up.')
     .twitter-feed.span3
+    	h4= link_to('Twitter Feed', title: 'Twitter')
+        ul
+              li Post 1
+              li Post 2
     .recent-posts.span3
+    	h4= link_to('Recent Posts', title: 'Blog')
+        ul
+              li Post 1
+              li Post 2
     .newsletter.span3
-
+    	h4= link_to('Sign Up For Our Newsletter', title: 'Newsletter')
+        p.small Sign up if you'd like to receive Brewdega and Cellar updates
+        = simple_form_for(:search, method: :get, html: { class: 'search' }) do |f|
+        	= f.search_field :query, placeholder: 'Enter your email...', class: 'query'
+        	= f.button :submit, 'Subscribe', class: 'search-button btn-primary'
+    .clearfix
+    br
+    p.small Privacy | Legal | 2012 Brewdega, LLC

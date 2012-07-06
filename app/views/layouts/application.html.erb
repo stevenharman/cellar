@@ -17,6 +17,9 @@
   <!-- Place favicon.ico & apple-touch-icon.png in the root of our domain and delete these references -->
   <!-- <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+  
+  <script type="text/javascript" src="http://use.typekit.com/xaz3dui.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   <title>Brewdega Cellar</title>
 
@@ -46,8 +49,8 @@
       <div class="page-content">
         <%= yield %>
       </div>
-      <%= render "shared/footer" %>
     </div>
+    <%= render "shared/footer" %>
   </div>
   <%= javascript_include_tag "application" %>
   <% if Rails.env.production? %>

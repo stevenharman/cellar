@@ -1,8 +1,30 @@
-<ul>
+<!--<ul>
   <% for brewery in @breweries %>
     <li class="brewery"><%= link_to brewery.name, brewery %></li>
   <% end %>
-</ul>
+</ul>-->
+
+<fieldset class="beers-stocked">
+  <legend>Beers</legend>
+  <table class="table table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Brewery</th>
+        <th>Cellar It</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for brewery in @breweries %>
+        <tr class="beer">
+          <td><%= link_to brewery.name, brewery %></td>
+          <td>
+             <%= link_to 'Cellar it!', new_beer_path, class: 'btn' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</fieldset>
 <%= paginate @breweries %>
 
 <p>
