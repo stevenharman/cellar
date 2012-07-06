@@ -1,8 +1,6 @@
 require 'spec_helper'
 
 feature 'Beers!' do
-  include CapybaraHelpers
-
   background do
     @brew = FactoryGirl.create(:brew)
     @bob = sign_in_new_user

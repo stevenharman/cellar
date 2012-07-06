@@ -38,7 +38,6 @@ feature "Viewing a user's cellar" do
 end
 
 feature "Drink a beer from the Cellar" do
-  include CapybaraHelpers
   let(:bob) { sign_in_new_user(:bob) }
   let(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
 

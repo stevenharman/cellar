@@ -1,4 +1,4 @@
-module CapybaraHelpers
+module AcceptanceTestHelpers
 
   def sign_in(username, password)
     visit new_user_session_path

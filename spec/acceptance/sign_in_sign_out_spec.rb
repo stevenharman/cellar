@@ -1,8 +1,6 @@
 require 'spec_helper'
 
 feature 'Signing in and out' do
-  include CapybaraHelpers
-
   let(:username) { 'bob' }
   let(:email) { 'bob@example.com' }
   let(:password) { 'password' }
