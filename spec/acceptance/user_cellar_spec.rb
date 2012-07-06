@@ -18,7 +18,7 @@ feature "Viewing a user's cellar" do
 
   scenario "only show a summary of brews in the cellar" do
     visit cellar_path(bob)
-    find('.cellar').should have_text("Christmas Ale [3]")
+    find('.cellar').should have_text("Christmas Ale 3")
   end
 
   scenario "do not include brews with only drunk beers" do
