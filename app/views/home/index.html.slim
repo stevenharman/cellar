@@ -12,5 +12,12 @@ section.splash.row-fluid
       h2= link_to('/#') do
         small Know your brews
         ' Search beers
-  div.carousel.hero-unit.span9
-    h1 Yay beer!
+  div#myCarousel.carousel.slide.span9
+    /h1 Yay beer!
+    .carousel-inner
+    	.item
+    		= image_tag('cellar-full-logo.png', alt: 'slide1')
+    		.carousel-caption
+    			h4 First Thumbnail label
+    			p 
+    				|	Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.

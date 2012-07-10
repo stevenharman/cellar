@@ -1,13 +1,19 @@
 <h2><%= @brew.name %></h2>
 <h5>By <%= link_to @brew.brewery.name, @brew.brewery %></h5>
-
-<dl class='brew-details'>
-  <dt class="span2">By</dt><dd><%= link_to @brew.brewery.name, @brew.brewery, title: @brew.brewery.name %></dd>
-  <dt class="span2">Series: </dt><dd><%= @brew.series %>&nbsp;</dd>
-  <dt class="span2">ABV: </dt><dd><%= @brew.abv %></dd>
-  <dt class="span2">IBU: </dt><dd><%= @brew.ibu %></dd>
-  <dt class="span2">Description: </dt><dd class="description"><%= @brew.description %></dd>
-</dl>
-
-<p><%= link_to "Edit", edit_brew_path(@brew), class: 'btn', id: 'edit_brew' %></p>
-<p>Have a few of these beers? <%= link_to "Cellar them!", new_beer_path(brew: @brew), class: 'btn' %></p>
+</br>
+<div class="row">
+	<div class="span3">
+		<a href="#"><img src="http://placehold.it/212x212" alt="Beer Label" class="beerlabel"></a>
+	</div>
+	<div class="span6">
+		<dl class='brew-details'>
+		  <dt class="span2">Series: </dt><dd><%= @brew.series %>&nbsp;</dd>
+		  <dt class="span2">ABV: </dt><dd><%= @brew.abv %></dd>
+		  <dt class="span2">IBU: </dt><dd><%= @brew.ibu %></dd>
+		  <dt class="span2">Description: </dt><dd class="description"><%= @brew.description %></dd>
+		</dl>
+		</br>
+		<p><%= link_to "Edit", edit_brew_path(@brew), class: 'btn', id: 'edit_brew' %></p>
+	</div>
+</div>
+<p>Have a few of these beers? <%= link_to "Cellar them!", new_beer_path(brew: @brew), class: 'btn btn-primary' %></p>

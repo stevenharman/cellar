@@ -1,26 +1,20 @@
-<article class="cellar">
-  <article class="owner">
-  	<h2>My Cellar</h2>
-    <h3 class="owner-name"><%= @cellar.keeper.username %></h3>
-    <dl class="owner-details">
-      <dt>Email: </dt><dd><%= @cellar.keeper.email %></dd>
-    </dl>
-    <button class="btn btn-small btn-primary">Add a Beer</button>
-    <button class="btn btn-small btn-primary">Share</button>
-  </article>
-
-  <!--<article class="brews">
-    <ul>
-      <% for brew in @cellar.stocked_brews %>
-        <li class="brew"><%= link_to brew.brewery.name, brew.brewery %>,
-          <%= link_to brew.name, brew %> [<%= brew.beers.size -%>]
-          <%= link_to "Details", user_brew_path(@cellar.keeper, brew), class: "btn" %>
-        </li>
-      <% end %>
-    </ul>
-  </article>-->
+  <div class="row-fluid">
+  	<div class="span6">
+	  	<h2>My Cellar</h2>
+	    <h3 class="owner-name"><%= @cellar.keeper.username %></h3>
+	    <dl class="owner-details">
+			<dt>Email: </dt><dd><%= @cellar.keeper.email %></dd>
+		</dl>
+  	</div>
+    <div class="span6">
+	    <button class="btn btn-small btn-primary">Add a Beer</button>
+	    <button class="btn btn-small btn-primary">Share</button>
+    </div>
+  </div>
+ 
   
-  <article class="brews">
+  <!--<article class="brews">-->
+  <div class="row-fluid">
     <fieldset class="beers-stocked">
 	  <legend>Cellared Beers</legend>
 	  <table class="table table-striped table-condensed">
@@ -40,12 +34,12 @@
 	          <td style="text-align: center;"><%= brew.beers.size -%></td>
 	          <td></td>
 	          <td>
-	             <%= link_to "Details", user_brew_path(@cellar.keeper, brew), class: "btn" %>
+	             <%= link_to "Details", user_brew_path(@cellar.keeper, brew), class: "btn btn-primary" %>
 	          </td>
 	        </tr>
 	      <% end %>
 	    </tbody>
 	  </table>
 	</fieldset>
-  </article>
-</article>
+  </div>
+  <!--</article>-->
