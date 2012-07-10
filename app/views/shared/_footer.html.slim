@@ -1,7 +1,7 @@
 footer
   .row-fluid
     .logo.span3
-    	= image_tag('footer_logo.gif', alt: 'Cellar: Stock up. Drink up.')
+      = image_tag('footer_logo.gif', alt: 'Cellar: Stock up. Drink up.')
     .twitter-feed.span3
     	h4= link_to('Twitter Feed', title: 'Twitter')
         ul
@@ -19,5 +19,4 @@ footer
         	= f.search_field :query, placeholder: 'Enter your email...', class: 'query'
         	= f.button :submit, 'Subscribe', class: 'search-button btn-primary'
     .clearfix
-    br
     p.small Privacy | Legal | 2012 Brewdega, LLC

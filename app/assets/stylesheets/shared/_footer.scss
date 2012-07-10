@@ -1,7 +1,5 @@
 footer {
-  /*background-color: $brown;*/
-  background-color: #574944;
-  /*margin-top: $gridGutterWidth;*/
+  background-color: $mutedBrown;
   min-height: 10em;
   padding: 20px 30px 10px 20px;
   
@@ -17,8 +15,8 @@ footer {
       padding: 6px 0 6px 0;
     }
   p.small {
-	  font-size: 11px;
-	  line-height: 14px;
-	  color: white;
+    color: white;
+    font-size: 11px;
+    line-height: 14px;
   }
 }
