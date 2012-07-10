@@ -162,10 +162,16 @@ legend {
   .search {
     .query {
       font-size: 1.5em;
+      font-size: 1.8em;
       /*height: auto;*/
       height: 53px;
       line-height: 1.5em;
       width: 100%;
+      padding-left: 60px;
+      background-image: url(image_path('searchiconline_large.png'));
+      background-repeat: no-repeat;
+      background-position: center;
+      background-position-x: 15px;
       @include box-sizing(border-box);
     }
 
