@@ -13,11 +13,21 @@ section.splash.row-fluid
         small Know your brews
         ' Search beers
   div#myCarousel.carousel.slide.span9
-    /h1 Yay beer!
     .carousel-inner
-    	.item
-    		= image_tag('cellar-full-logo.png', alt: 'slide1')
+    	.active.item
+    		= image_tag('slide1.jpg', alt: 'slide1')
     		.carousel-caption
     			h4 First Thumbnail label
     			p 
-    				|	Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+    				|	Cras justo odio, dapibus ac facilisis in, egestas.
+    	.item
+    		= image_tag('slide2.jpg', alt: 'slide2')
+    		.carousel-caption
+    			h4 First Thumbnail label
+    			p 
+    				|	Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+    a.carousel-control.left href="#myCarousel" data-slide="prev" &lsaquo;
+    a.carousel-control.right href="#myCarousel" data-slide="next" &rsaquo;
+
+    javascript:
+      $('.carousel').carousel();
