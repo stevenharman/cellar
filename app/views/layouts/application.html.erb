@@ -27,7 +27,7 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body id="<%= "#{controller_name}_#{action_name}" %>">
+<body id="<%= "#{controller_name} #{controller_name}-#{action_name}" %>">
   <div class="container">
     <%= render "shared/navbar" %>
     <div class="page-container">
