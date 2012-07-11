@@ -1,8 +1,3 @@
-<!--<ul>
-  <% for brewery in @breweries %>
-    <li class="brewery"><%= link_to brewery.name, brewery %></li>
-  <% end %>
-</ul>-->
 <h2>Browse Breweries</h2>
 
 <fieldset class="beers-stocked">
@@ -21,7 +16,7 @@
           <td><%= link_to brewery.name, brewery %></td>
           <td>NA</td>
           <td>
-             <%= link_to 'View List', new_beer_path, class: 'btn' %>
+            <%= link_to 'View List', new_beer_path, class: 'btn' %>
           </td>
         </tr>
       <% end %>

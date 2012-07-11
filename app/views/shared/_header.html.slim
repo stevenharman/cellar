@@ -12,7 +12,7 @@ header.page-header
     = simple_form_for(:search, method: :get, html: { class: 'search form-search span9' }) do |f|
       = f.search_field :query, placeholder: 'Find a beer...', class: 'query'
       /= f.button :submit, 'Search', class: 'search-button btn-primary btn-large'
-      
+
     .browse.dropdown.span3
       = link_to '/browse', class: 'dropdown-toggle', data: { toggle: 'dropdown', target: '.browse' } do
         ' Browse

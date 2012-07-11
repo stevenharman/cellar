@@ -1,76 +1,75 @@
 <h2><%= @brew.name %></h2>
 
 <div class="row">
-	<div class="span6">
-		<h5><%= link_to @brew.brewery.name, @brew.brewery, title: @brew.brewery.name %></h5>
-	</div>
-	<div class="span4">
-		<dl class='brew-details'>
-		  <!--<dt class="span2">By</dt><dd><%= link_to @brew.brewery.name, @brew.brewery, title: @brew.brewery.name %></dd>-->
-		  <dt class="span2">Style: </dt><dd><%= @brew.series %>&nbsp;</dd>
-		  <dt class="span2">ABV: </dt><dd><%= @brew.abv %>%</dd>
-		  <dt class="span2">IBU: </dt><dd><%= @brew.ibu %></dd>
-		  <!--<dt class="span2">Availability: </dt><dd><%= @brew.series %>&nbsp;</dd>
-		  <dt class="span2">Serving: </dt><dd><%= @brew.abv %>%</dd>
-		  <dt class="span2">SRM: </dt><dd><%= @brew.ibu %></dd>-->
-		  <!--<dt class="span2">Description: </dt><dd class="description"><%= @brew.description %></dd>-->
-		</dl>
-	</div>
+  <div class="span6">
+    <h5><%= link_to @brew.brewery.name, @brew.brewery, title: @brew.brewery.name %></h5>
+  </div>
+  <div class="span4">
+    <dl class='brew-details'>
+      <dt class="span2">Style: </dt><dd><%= @brew.series %>&nbsp;</dd>
+      <dt class="span2">ABV: </dt><dd><%= @brew.abv %>%</dd>
+      <dt class="span2">IBU: </dt><dd><%= @brew.ibu %></dd>
+      <!--<dt class="span2">Availability: </dt><dd><%= @brew.series %>&nbsp;</dd>
+      <dt class="span2">Serving: </dt><dd><%= @brew.abv %>%</dd>
+      <dt class="span2">SRM: </dt><dd><%= @brew.ibu %></dd>-->
+      <!--<dt class="span2">Description: </dt><dd class="description"><%= @brew.description %></dd>-->
+    </dl>
+  </div>
 </div>
 
 <div class="row-fluid">
-	<div class="span3">
-		<!--<ul class="thumbnails">
-			  <li>
-			    <a href="#" class="thumbnail">
-			      <img src="http://placehold.it/212x262" alt="Beer Label">
-			    </a>
-			  </li>
-		</ul>-->
-		<a href="#"><img src="http://placehold.it/212x212" alt="Beer Label" class="beerlabel"></a>
-		<p class="small"><b>Description:</b></br> <%= @brew.description %></p>
-	</div>
-	
-	<div class="span9">
-		<fieldset class="beers-stocked">
-		  <legend>In your cellar</legend>
-		  <table class="table table-striped">
-		    <thead>
-		      <tr>
-		      	<th>Edit</th>
-		        <th>Batch</th>
-		        <th>Bottled on</th>
-		        <th>Best by</th>
-		        <th>Cellared on</th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		      <% for beer in @beers %>
-		        <tr class="beer">
-			      <td>icon</td>	        
-		          <td><%= beer.batch %></td>
-		          <td><%= beer.bottled_on %></td>
-		          <td><%= beer.best_by %></td>
-		          <td><%= beer.created_at %></td>
-		          <td>
-		            <%= form_tag drink_user_beer_path(beer.user, beer), method: :put do %>
-		              <%= submit_tag "Drink", class: "btn btn-primary" %>
-		            <% end %>
-		          </td>
-		        </tr>
-		      <% end %>
-		      <% if @beers.empty? %>
-		        <tr class="no-beer">
-		          <td colspan="4">
-		            You don't have any <%= @brew.name %> in you cellar.
-		            <%= link_to "Stock one now!", new_beer_path(brew: @brew) %>
-		          </td>
-		        </tr>
-		    <% end %>
-		    </tbody>
-		  </table>
-		</fieldset>
-	</div>
+  <div class="span3">
+    <!--<ul class="thumbnails">
+      <li>
+        <a href="#" class="thumbnail">
+          <img src="http://placehold.it/212x262" alt="Beer Label">
+        </a>
+      </li>
+    </ul>-->
+    <a href="#"><img src="http://placehold.it/212x212" alt="Beer Label" class="beerlabel"></a>
+    <p class="small"><b>Description:</b></br> <%= @brew.description %></p>
+  </div>
+
+  <div class="span9">
+    <fieldset class="beers-stocked">
+      <legend>In your cellar</legend>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Edit</th>
+            <th>Batch</th>
+            <th>Bottled on</th>
+            <th>Best by</th>
+            <th>Cellared on</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for beer in @beers %>
+            <tr class="beer">
+              <td>icon</td>
+              <td><%= beer.batch %></td>
+              <td><%= beer.bottled_on %></td>
+              <td><%= beer.best_by %></td>
+              <td><%= beer.created_at %></td>
+              <td>
+                <%= form_tag drink_user_beer_path(beer.user, beer), method: :put do %>
+                  <%= submit_tag "Drink", class: "btn btn-primary" %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+          <% if @beers.empty? %>
+            <tr class="no-beer">
+              <td colspan="4">
+                You don't have any <%= @brew.name %> in you cellar.
+                <%= link_to "Stock one now!", new_beer_path(brew: @brew) %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </fieldset>
+  </div>
 </div>
 
 <div class="clearfix"></div>
