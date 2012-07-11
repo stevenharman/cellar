@@ -8,29 +8,39 @@ describe 'Routes for Beer' do
   it { get("/beers/42").should_not be_routable  }
 
   it "shows an individual beer from in a user's cellar" do
-    get("/bob/beer/42").should route_to({
+    get("/bob/beers/42").should route_to({
       user_id: 'bob',
-      controller: 'beers',
+      controller: 'cellared_beers',
       action: 'show',
       id: '42'
     })
   end
 
   it "edits an individual beer from in a user's cellar" do
-    get("/bob/beer/42/edit").should route_to({
+    get("/bob/beers/42/edit").should route_to({
       user_id: 'bob',
-      controller: 'beers',
+      controller: 'cellared_beers',
       action: 'edit',
       id: '42'
     })
   end
 
   it "updates an individual beer from in a user's cellar" do
-    put("/bob/beer/42").should route_to({
+    put("/bob/beers/42").should route_to({
       user_id: 'bob',
-      controller: 'beers',
+      controller: 'cellared_beers',
       action: 'update',
       id: '42'
     })
   end
+
+  it "can drink a beer from a user's cellar" do
+    put("/bob/beers/99/drink"). should route_to({
+      user_id: 'bob',
+      controller: 'cellared_beers',
+      action: 'drink',
+      id: '99'
+    })
+  end
+
 end

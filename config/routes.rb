@@ -10,9 +10,9 @@ BrewdegaCellar::Application.routes.draw do
   get 'sign_up' => 'users#new'
   resources :users, only: [:create]
   resources :users, path: '', only: [] do
-    get "brew/:id" => "cellars#brew", as: :brew
+    get "brews/:id" => "cellared_brews#show", as: :cellared_brew
 
-    resources :beers, path: 'beer', only: [:show, :edit, :update] do
+    resources :cellared_beers, path: 'beers', only: [:show, :edit, :update] do
       put :drink, on: :member
     end
   end

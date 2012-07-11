@@ -52,7 +52,7 @@
               <td><%= beer.best_by %></td>
               <td><%= beer.created_at %></td>
               <td>
-                <%= form_tag drink_user_beer_path(beer.user, beer), method: :put do %>
+                <%= form_tag drink_user_cellared_beer_path(beer.user, beer), method: :put do %>
                   <%= submit_tag "Drink", class: "btn btn-primary" %>
                 <% end %>
               </td>
