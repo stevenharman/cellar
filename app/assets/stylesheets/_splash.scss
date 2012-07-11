@@ -39,6 +39,18 @@
   }
   .carousel {
     background-color: transparent;
+    line-height: 1;
+    position: relative;
     text-transform: uppercase;
+
+    .item {
+      overflow: hidden;
+    }
+
+    .carousel-inner {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
   }
 }
