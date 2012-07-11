@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CellaredBrewsController do
+describe CellarBrewsController do
 
   describe "When viewing a Brew" do
     let(:bob) { FactoryGirl.create(:bob) }

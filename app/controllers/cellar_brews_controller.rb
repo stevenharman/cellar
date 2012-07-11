@@ -1,4 +1,4 @@
-class CellaredBrewsController < ApplicationController
+class CellarBrewsController < ApplicationController
   before_filter :authenticate_user!
 
   def show

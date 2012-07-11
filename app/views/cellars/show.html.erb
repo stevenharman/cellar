@@ -32,7 +32,7 @@
             <td style="text-align: center;"><%= brew.beers.size -%></td>
             <td></td>
             <td>
-              <%= link_to "Details", user_cellared_brew_path(@cellar.keeper, brew), class: "btn btn-primary" %>
+              <%= link_to "Details", user_cellar_brew_path(@cellar.keeper, brew), class: "btn btn-primary" %>
             </td>
           </tr>
         <% end %>
