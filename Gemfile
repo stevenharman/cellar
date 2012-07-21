@@ -4,13 +4,14 @@ ruby '1.9.3'
 gem 'rails', '3.2.6'
 gem 'jquery-rails'
 gem 'thin'
+gem 'brewery_db', git: 'https://github.com/tylerhunt/brewery_db.git'
+gem 'devise', '~> 2.1'
 gem 'draper'
 gem 'kaminari'
 gem 'pg'
 gem 'pg_search'
 gem 'simple_form'
 gem 'slim'
-gem 'devise', '~> 2.1'
 
 
 group :assets do
