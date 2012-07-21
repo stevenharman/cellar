@@ -4,11 +4,11 @@ class Beer < ActiveRecord::Base
 
   validates :brew, presence: true
   validates :user, presence: true
-  validates :status, inclusion: [:stocked, :drunk, :traded, :skunked]
+  validates :status, inclusion: [:cellared, :drunk, :traded, :skunked]
 
   attr_accessible :batch, :bottled_on, :best_by
 
-  scope :stocked, where(status: :stocked)
+  scope :cellared, where(status: :cellared)
   scope :drunk, where(status: :drunk)
   scope :traded, where(status: :traded)
   scope :skunked, where(status: :skunked)

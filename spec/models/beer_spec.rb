@@ -11,14 +11,14 @@ describe Beer do
   it { should allow_mass_assignment_of(:bottled_on) }
   it { should allow_mass_assignment_of(:best_by) }
 
-  [:stocked, :drunk, :traded, :skunked].each do |status|
+  [:cellared, :drunk, :traded, :skunked].each do |status|
     it { should allow_value(status).for(:status) }
   end
 
   it { should_not allow_value(nil).for(:status) }
 
-  it "defaults to stocked" do
-    Beer.new.status.should == :stocked
+  it "defaults to cellared" do
+    Beer.new.status.should == :cellared
   end
 
   describe "Making a beer" do
@@ -58,8 +58,8 @@ describe Beer do
         FactoryGirl.create(:beer, :skunked, brew: brew)
       end
 
-      it ".stocked only returns stocked beers" do
-        beers = Beer.stocked.all
+      it ".cellared only returns cellared beers" do
+        beers = Beer.cellared.all
         beers.should have(1).beer
       end
 

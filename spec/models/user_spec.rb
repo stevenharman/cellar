@@ -77,7 +77,7 @@ describe User do
         bob.stocked_beers(backwoods) =~ bobs_backwoods
       end
 
-      it "excludes Bob's other stocked brews" do
+      it "excludes Bob's other cellared brews" do
         bob.stocked_beers(backwoods).should_not include(other_beer)
       end
 

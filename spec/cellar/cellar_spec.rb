@@ -43,7 +43,7 @@ describe Cellar do
   end
 
   describe '#stocked_brews' do
-    it "gets currently stocked brews from the user's cellar" do
+    it "gets currently cellared brews from the user's cellar" do
       stocked_brews = [double('Brew 1'), double('Brew 2')]
       bob.stub(:stocked_brews) { stocked_brews }
       cellar.stocked_brews.should == stocked_brews

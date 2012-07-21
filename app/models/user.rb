@@ -27,11 +27,11 @@ class User < ActiveRecord::Base
   end
 
   def stocked_brews
-    brews.with_beers.merge(Beer.stocked)
+    brews.with_beers.merge(Beer.cellared)
   end
 
   def stocked_beers(brew)
-    beers.stocked.by_brew(brew)
+    beers.cellared.by_brew(brew)
   end
 
   # Public: Delegate to other's #model if it is a Draper decorator
