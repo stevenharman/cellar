@@ -22,7 +22,7 @@ namespace :openbeerdb do
       require 'csv'
 
       import_csv('breweries') do |line|
-        brewery = Brewery.new(name: line[:name], url: line[:website])
+        brewery = Brewery.new(name: line[:name], website: line[:website])
         puts "#{line[:id]} = #{brewery.name} :: #{brewery.errors.full_messages.join(", ")}" unless brewery.save
         @brewery_map[line[:id]] = brewery.id
       end
