@@ -9,7 +9,7 @@ class Brew < ActiveRecord::Base
   validates :ibu, numericality: { allow_nil: true, only_integer: true }
   validates :brewery_db_id, uniqueness: true, presence: true
 
-  attr_accessible :abv, :description, :ibu, :name, :series
+  attr_accessible :abv, :description, :ibu, :name
 
   include PgSearch
   multisearchable against: [:searchable_name]

@@ -10,7 +10,6 @@ feature 'Brews!' do
     visit new_brew_path
     select(@brewery.name, from: 'Brewery')
     fill_in 'brew_name', with: "Banana Split Chocolate Stout"
-    fill_in 'brew_series', with: "Special Series"
     fill_in 'brew_abv', with: "8.5"
     fill_in 'brew_ibu', with: "55"
     fill_in 'brew_description', with: "A wonderful banana aroma, and smooth chocolate finish."
