@@ -6,6 +6,7 @@ class Brew < ActiveRecord::Base
   validates :brewery, presence: true
   validates :abv, numericality: { allow_nil: true }
   validates :ibu, numericality: { allow_nil: true, only_integer: true }
+  validates :brewery_db_id, uniqueness: true, presence: true
 
   attr_accessible :abv, :description, :ibu, :name, :series
 

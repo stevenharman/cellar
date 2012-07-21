@@ -14,6 +14,7 @@ feature 'Brews!' do
     fill_in 'brew_abv', with: "8.5"
     fill_in 'brew_ibu', with: "55"
     fill_in 'brew_description', with: "A wonderful banana aroma, and smooth chocolate finish."
+    pending('Will be removing "Add Brew" UI until BreweryDB integration is done.')
     click_on 'add_brew'
 
     page.should have_content "Banana Split Chocolate Stout"
