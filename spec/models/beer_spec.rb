@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'database_cleaner'
 
 describe Beer do
   it { should belong_to(:brew) }
@@ -51,19 +50,12 @@ describe Beer do
 
   describe "scopes" do
     describe "for status" do
-      before(:all) do
-        DatabaseCleaner.strategy = :truncation
-        DatabaseCleaner.start
-
+      before do
         brew = FactoryGirl.create(:brew)
         FactoryGirl.create(:beer, brew: brew)
         FactoryGirl.create(:beer, :drunk, brew: brew)
         FactoryGirl.create(:beer, :traded, brew: brew)
         FactoryGirl.create(:beer, :skunked, brew: brew)
-      end
-
-      after(:all) do
-        DatabaseCleaner.clean
       end
 
       it ".stocked only returns stocked beers" do
@@ -89,43 +81,29 @@ describe Beer do
 
     describe ".by_brew" do
       let(:backwoods) { FactoryGirl.create(:brew) }
-
-      before(:all) do
-        DatabaseCleaner.strategy = :truncation
-        DatabaseCleaner.start
-        @bobs_backwoods = FactoryGirl.create_list(:beer, 2, brew: backwoods)
-        @other_beer = FactoryGirl.create(:beer)
-      end
-
-      after(:all) { DatabaseCleaner.clean }
+      let!(:bobs_backwoods) { FactoryGirl.create_list(:beer, 2, brew: backwoods) }
+      let!(:other_beer) { FactoryGirl.create(:beer) }
 
       it "includes only Backwoods Bastards" do
         beers = Beer.by_brew(backwoods)
         beers.should have(2).beers
-        beers.should =~ @bobs_backwoods
-      end
-
-      it "excludes other beers" do
-        Beer.by_brew(backwoods).should_not include(@other_beer)
+        beers.should =~ bobs_backwoods
       end
 
       it "can search using the brew id" do
-        Beer.by_brew(backwoods.id).should =~ @bobs_backwoods
+        Beer.by_brew(backwoods.id).should =~ bobs_backwoods
       end
     end
 
     describe ".cellared_by" do
       let(:bob) { FactoryGirl.create(:bob) }
-      before do
-        FactoryGirl.create(:beer)
-        @bobs_beers = FactoryGirl.create_list(:beer, 2, user: bob)
-      end
+      let!(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
+      let!(:other_beer) { FactoryGirl.create(:beer) }
 
       it "includes only Bob's beers" do
-        Beer.cellared_by(bob).should =~ @bobs_beers
+        Beer.cellared_by(bob).should =~ [bobs_beer]
       end
     end
   end
-
 
 end

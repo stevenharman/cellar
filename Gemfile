@@ -12,7 +12,6 @@ gem 'simple_form'
 gem 'slim'
 gem 'devise', '~> 2.1'
 
-gem 'with_model', group: :test
 
 group :assets do
   gem 'sass-rails', '~> 3.1'
@@ -21,19 +20,21 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :development, :test do
-  gem 'capybara', git: 'https://github.com/jnicklas/capybara.git'
+group :test do
+  gem 'capybara'
+  gem 'capybara-webkit'
   gem 'database_cleaner'
+  gem 'with_model'
+  gem 'shoulda-matchers'
+  gem 'simplecov', :require => false
+end
+
+group :development, :test do
   gem 'factory_girl_rails'
   gem 'foreman'
   gem 'heroku'
   gem 'pry'
   gem 'pry-remote'
   gem 'rspec-rails', '~> 2.6'
-  gem 'shoulda-matchers'
-  gem 'simplecov', :require => false, :group => :test
 end
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
 

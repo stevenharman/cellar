@@ -18,22 +18,22 @@ feature "Viewing a user's cellar" do
 
   scenario "only show a summary of brews in the cellar" do
     visit cellar_path(bob)
-    find('.cellar').should have_text("Christmas Ale 3")
+    find('.cellar').should have_content("Christmas Ale 3")
   end
 
   scenario "do not include brews with only drunk beers" do
     visit cellar_path(bob)
-    find('.cellar').should_not have_text("Drunk Brew")
+    find('.cellar').should_not have_content("Drunk Brew")
   end
 
   scenario "do not include brews with only traded beers" do
     visit cellar_path(bob)
-    find('.cellar').should_not have_text("Traded Brew")
+    find('.cellar').should_not have_content("Traded Brew")
   end
 
   scenario "do not include brews with only skunked beers" do
     visit cellar_path(bob)
-    find('.cellar').should_not have_text("Skunked Brew")
+    find('.cellar').should_not have_content("Skunked Brew")
   end
 end
 
