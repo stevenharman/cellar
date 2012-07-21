@@ -33,8 +33,9 @@ end
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'foreman'
+  gem 'forgery'
   gem 'heroku'
-  gem 'pry'
+  gem 'pry-rails'
   gem 'pry-remote'
   gem 'rspec-rails', '~> 2.6'
 end
