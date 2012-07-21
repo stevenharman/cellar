@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120721191318) do
+ActiveRecord::Schema.define(:version => 20120721204041) do
 
   create_table "beers", :force => true do |t|
     t.string   "batch"
@@ -46,11 +46,23 @@ ActiveRecord::Schema.define(:version => 20120721191318) do
     t.text     "description"
     t.integer  "ibu"
     t.string   "brewery_db_id",                               :null => false
+    t.integer  "style_id"
   end
 
   add_index "brews", ["brewery_db_id"], :name => "index_brews_on_brewery_db_id", :unique => true
   add_index "brews", ["brewery_id", "name"], :name => "index_brews_on_brewery_id_and_name", :unique => true
   add_index "brews", ["brewery_id"], :name => "index_brews_on_brewery_id"
+  add_index "brews", ["style_id"], :name => "index_brews_on_style_id"
+
+  create_table "categories", :force => true do |t|
+    t.string   "name",          :null => false
+    t.integer  "brewery_db_id", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "categories", ["brewery_db_id"], :name => "index_categories_on_brewery_db_id", :unique => true
+  add_index "categories", ["name"], :name => "index_categories_on_name", :unique => true
 
   create_table "pg_search_documents", :force => true do |t|
     t.text     "content"
@@ -59,6 +71,18 @@ ActiveRecord::Schema.define(:version => 20120721191318) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "styles", :force => true do |t|
+    t.string   "name",          :null => false
+    t.integer  "brewery_db_id", :null => false
+    t.integer  "category_id",   :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "styles", ["brewery_db_id"], :name => "index_styles_on_brewery_db_id", :unique => true
+  add_index "styles", ["category_id"], :name => "index_styles_on_category_id"
+  add_index "styles", ["name"], :name => "index_styles_on_name", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "username",                               :null => false
