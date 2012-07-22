@@ -4,8 +4,8 @@ class Brewery < ActiveRecord::Base
   validates :name, uniqueness: true, presence: true
   validates :brewery_db_id, uniqueness: true, presence: true
 
-  attr_accessible :name, :description, :established, :organic, :website
-  store :images, accessors: [ :icon, :medium_image, :large_image ]
+  attr_accessible :description, :established, :name, :organic, :website
+  store :images, accessors: [:icon, :medium_image, :large_image]
 
   include PgSearch
   multisearchable against: [:name]
