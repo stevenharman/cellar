@@ -28,6 +28,8 @@ group :test do
   gem 'with_model'
   gem 'shoulda-matchers'
   gem 'simplecov', :require => false
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development, :test do

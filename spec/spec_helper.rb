@@ -6,6 +6,7 @@ SimpleCov.start 'rails' if ENV["COVERAGE"]
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'capybara/rspec'
+require_relative 'vcr_spec_helper'
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
