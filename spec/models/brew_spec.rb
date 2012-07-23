@@ -5,11 +5,6 @@ describe Brew do
   it { should belong_to(:brewery) }
   it { should have_many(:beers) }
 
-  it 'validates uniqueness of name' do
-    FactoryGirl.create(:brew)
-    Brewery.new.should validate_uniqueness_of(:name)
-  end
-
   it { should validate_presence_of(:name) }
   it { should allow_mass_assignment_of(:name) }
 

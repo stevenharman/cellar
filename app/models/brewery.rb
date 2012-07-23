@@ -1,7 +1,7 @@
 class Brewery < ActiveRecord::Base
   has_many :brews
 
-  validates :name, uniqueness: true, presence: true
+  validates :name, presence: true
   validates :brewery_db_id, uniqueness: true, presence: true
 
   attr_accessible :description, :established, :name, :organic, :website
