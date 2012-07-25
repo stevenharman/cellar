@@ -72,7 +72,7 @@ h5 {
 }
 
 .brew-details {
-  font-size: 11px;
+  /* font-size: 11px; */
   line-height: 14px;
   color: $brown;
 }
@@ -81,9 +81,15 @@ h5 {
   margin-bottom: 20px;
 }
 
+.span6tweak {
+  width: 400px;
+}
+
 @import "shared/navbar";
 @import "shared/footer";
 @import "splash";
+@import "beers";
+@import "base/defaults";
 
 .page-container {
   background: $bodyBackground;
@@ -97,14 +103,46 @@ h5 {
   }
 }
 
+@media (max-width: 480px) {
+  .splash {
+    .call-to-action h2 {
+      font-size: 28px;
+    }
+  }
+  .browse {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .splash {
+    .call-to-action h2 {
+      font-size: 28px;
+    }
+  }
+  .browse {
+    margin-bottom: 10px;
+  }
+}
+
 label {
   display: block;
-  width: 60px;
+  width: 120px;
   margin-bottom: 5px;
+  font-family: $smallFontFamily;
+  color: $brewdega-orange;
+  font-size: 10px;;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .table {
   background-color: $beige;
+  min-height: 200px;
+/*
+  height: auto !important;
+  height: 200px;
+*/
 
   th, td {
     padding: 8px;
@@ -125,7 +163,7 @@ label {
     a {
       text-decoration: none;
       &:hover {
-        color: darken($brewdega-orange, 15%);
+        /* color: darken($brewdega-orange, 15%); */
         text-decoration: none;
       }
     }
@@ -154,10 +192,50 @@ legend {
 
 dt {
   font-family: $smallFontFamily;
-  color: #646464;
+  color: $brewdega-orange;
   font-size: 10px;;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+dd {margin-left: 0px;}
+
+.dashboard {
+  background-color: #fec846;
+   -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+/*
+  min-height: 30px;
+  height: auto;
+*/
+}
+
+.widget{
+  background-color: #fec846;
+   -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  padding: 6px 15px 6px 15px;
+  font-size: .85em;
+/*
+  min-height: 30px;
+  height: auto;
+*/
+    h3 {
+      font-size: 1.4em;
+    }
+    
+      ul {
+    list-style: none;
+    margin-left: 0px;
+    li {
+      border-bottom: 1px dotted #968883;
+      color: $brown;
+      font-size: 11px;
+      padding: 6px 0 6px 0;
+    }
+  }
 }
 
 .page-header {
