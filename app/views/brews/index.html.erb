@@ -1,57 +1,13 @@
-<h2>Browse Beers</h2>
-<h3>FILTER BY:</h3>
-<div class="row-fluid" id="sortbeers">
-  <div class="span3">
-  	<!--Cuisine -->
-  	<form name="monthly" method="get" action="">	
-  	<select name="menu1" onchange="MM_jumpMenu('parent',this,0)">
-  	<option value="#" selected="selected">By Alphabet</option>
-  	<option value="#">- - -</option>
-  	</select>
-  	</form>     
-      
-  </div><!--END row_03_col_01-->
-  
-  <div class="span3">
-  
-    <!--Location (Tags) -->
-    <form name="monthly" method="get" action="">	
-    <select name="menu1" onchange="MM_jumpMenu('parent',this,0)">
-    <option value="#" selected="selected">By Region</option>
-    <option value="#">- - -</option>
-    </select>
-    </form>
-  
-  </div><!--END row_03_col_02-->
-  
-  <div class="span3">
-  
-    <!--Monthly -->
-    <form name="monthly" method="get" action="">	
-    <select name="menu1" onchange="MM_jumpMenu('parent',this,0)">
-    <option value="#" selected="selected">By Something</option>
-    <option value="#">- - -</option>
-    </select>
-    </form>
-  
-  </div><!--END row_03_col_03-->
-    
-</div>
+<h2>Browse Beer</h2>
 
-
-<<<<<<< HEAD
 <fieldset class="beers-cellared">
   <legend>Beers</legend>
-=======
-<fieldset class="beers-stocked">
-  <legend></legend>
->>>>>>> Base Brews and Brewery Sort Bar
   <table class="table table-striped table-condensed">
     <thead>
       <tr>
         <th>Brew</th>
         <th>Brewery</th>
-        <th></th>
+        <th>Cellar It</th>
       </tr>
     </thead>
     <tbody>
@@ -60,7 +16,7 @@
           <td><%= link_to brew.name, brew %></td>
           <td><%= link_to brew.brewery.name, brew.brewery %></td>
           <td>
-            <%= link_to 'Cellar it!', new_beer_path, class: 'btn btn-primary' %>
+            <%= link_to 'Cellar it!', new_beer_path, class: 'btn' %>
           </td>
         </tr>
       <% end %>
