@@ -17,12 +17,14 @@ namespace :openbeerdb do
   task :import  => ['import:breweries', 'import:brews']
 
   namespace :import do
+    require 'securerandom'
     @brewery_map = {}
     task :breweries => [:environment] do
       require 'csv'
 
       import_csv('breweries') do |line|
         brewery = Brewery.new(name: line[:name], website: line[:website])
+        brewery.brewery_db_id = SecureRandom.hex(3)
         puts "#{line[:id]} = #{brewery.name} :: #{brewery.errors.full_messages.join(", ")}" unless brewery.save
         @brewery_map[line[:id]] = brewery.id
       end
@@ -34,6 +36,7 @@ namespace :openbeerdb do
       import_csv('beers') do |line|
         brew = Brew.new(name: line[:name], abv: line[:abv].to_f.round(2), ibu: line[:ibu].to_i, description: line[:descript])
         brew.brewery_id = @brewery_map[line[:brewery_id]]
+        brew.brewery_db_id = SecureRandom.hex(3)
         puts "#{line[:id]} - #{brew.name} :: #{brew.errors.full_messages.join(", ")}. brewery_id: #{brew.brewery_id}" unless brew.save
       end
     end
