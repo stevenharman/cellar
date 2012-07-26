@@ -1,9 +1,57 @@
-/*
-.mincellar {
-  min-height: 300px; height: auto;
+body {
+  background-image: image-url('bg-bottles.png');
+  background-attachment: fixed;
 }
-*/
 
-.rightflow {
-  text-align: right;
+h1 {
+  font-family: $largeFontFamily;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: $brewdega-orange;
+  font-style: normal;
+  font-weight:normal;
 }
+
+h2 {
+  font-family: $largeFontFamily;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: $brewdega-orange;
+  font-style: normal;
+  font-weight:normal;
+}
+
+h3 {
+  font-family: $smallFontFamily;
+  font-size: 1.3em;
+  color: $brown;
+  font-style: normal;
+  font-weight:normal;
+}
+
+h4 {
+  font-family: $largeFontFamily;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: $brewdega-orange;
+  font-style: normal;
+  font-weight:normal;
+}
+
+h5 {
+  font-size: 1.5em;
+  color: $brown;
+  font-style: normal;
+  font-weight:normal;
+
+  a {
+    $linkColor: $brown;
+    color: $linkColor;
+    text-decoration: none;
+    &:hover {
+      color: darken($linkColor, 15%);
+      text-decoration: none;
+    }
+  }
+}
+

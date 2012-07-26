@@ -1,0 +1,92 @@
+.page-header {
+  $pageHeaderHeight: 80px;
+
+  border-bottom: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+
+  .home {
+    display: inline-block;
+    line-height: $pageHeaderHeight;
+  }
+
+  .secondary-nav {
+    text-align: right;
+
+    li {
+      display: inline-block;
+      line-height: $pageHeaderHeight;
+      margin-left: $gridGutterWidth;
+      text-transform: uppercase;
+      font-family: $smallFontFamily;
+    }
+
+    a {
+      $linkColor: $brown;
+
+      color: $linkColor;
+      font-size: 1.1em;
+      font-weight: bolder;
+      letter-spacing: 2px;
+      text-decoration: none;
+      &:hover { color: darken($linkColor, 15%); }
+    }
+  }
+
+  .search {
+    .query {
+      font-size: 1.8em;
+      height: 53px;
+      line-height: 1.5em;
+      width: 100%;
+      padding-left: 60px;
+      background-image: image-url('searchiconline_large.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-position-x: 15px;
+      @include box-sizing(border-box);
+    }
+
+    .search-button {
+      text-transform: uppercase;
+    }
+  }
+
+  .browse {
+    background-color: $brown;
+    padding: 1px 0;
+    height: 53px;
+
+    & > a {
+      color: $lightBrown;
+      display: block;
+      font-family: $largeFontFamily;
+      font-size: 30px;
+      line-height: 1em;
+      padding:.4em;
+      text-transform: uppercase;
+
+      .caret {
+        border-top: 4px solid white;
+        float: right;
+        margin-top: 10px;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: $brown;
+
+      a {
+        $linkColor: $yellow;
+
+        color: $linkColor;
+        font-size: 1.1em;
+        font-weight: bolder;
+        text-decoration: none;
+        &:hover { color: darken($linkColor, 15%); }
+      }
+    }
+  }
+}
+

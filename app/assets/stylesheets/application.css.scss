@@ -8,62 +8,12 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
-body {
-  background-image: image-url('bg-bottles.png');
-  background-attachment: fixed;
-}
+@import "base/defaults";
+@import "shared/awning";
+@import "shared/page-header";
+@import "shared/footer";
+@import "splash";
 
-h1 {
-  font-family: $largeFontFamily;
-  font-size: 2.5em;
-  text-transform: uppercase;
-  color: $brewdega-orange;
-  font-style: normal;
-  font-weight:normal;
-}
-
-h2 {
-  font-family: $largeFontFamily;
-  font-size: 2.5em;
-  text-transform: uppercase;
-  color: $brewdega-orange;
-  font-style: normal;
-  font-weight:normal;
-}
-
-h3 {
-  font-family: $smallFontFamily;
-  font-size: 1.3em;
-  color: $brown;
-  font-style: normal;
-  font-weight:normal;
-}
-
-h4 {
-  font-family: $largeFontFamily;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  color: $brewdega-orange;
-  font-style: normal;
-  font-weight:normal;
-}
-
-h5 {
-  font-size: 1.5em;
-  color: $brown;
-  font-style: normal;
-  font-weight:normal;
-
-  a {
-    $linkColor: $brown;
-    color: $linkColor;
-    text-decoration: none;
-    &:hover {
-      color: darken($linkColor, 15%);
-      text-decoration: none;
-    }
-  }
-}
 
 .small {
   font-size: 11px;
@@ -72,7 +22,6 @@ h5 {
 }
 
 .brew-details {
-  /* font-size: 11px; */
   line-height: 1em;
   color: $brown;
 }
@@ -80,14 +29,6 @@ h5 {
 .beerlabel {
   margin-bottom: 20px;
 }
-
-.span6tweak {
-  width: 400px;
-}
-
-@import "shared/awning";
-@import "shared/footer";
-@import "splash";
 
 .page-container {
   background: $bodyBackground;
@@ -144,10 +85,6 @@ label {
 .table {
   background-color: $beige;
   min-height: 200px;
-/*
-  height: auto !important;
-  height: 200px;
-*/
 
   th, td {
     padding: 8px;
@@ -203,35 +140,24 @@ dt {
   letter-spacing: 1px;
 }
 
-dd {margin-left: 0px;}
+dd { margin-left: 0px; }
 
 .dashboard {
+  @include border-radius(3px);
   background-color: #fec846;
-   -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-/*
-  min-height: 30px;
-  height: auto;
-*/
 }
 
 .widget{
+  @include border-radius(3px);
   background-color: #fec846;
-   -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  font-size: 0.85em;
   padding: 6px 15px 6px 15px;
-  font-size: .85em;
-/*
-  min-height: 30px;
-  height: auto;
-*/
-    h3 {
-      font-size: 1.4em;
-    }
-    
-    ul {
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  ul {
     list-style: none;
     margin-left: 0px;
     li {
@@ -243,95 +169,4 @@ dd {margin-left: 0px;}
   }
 }
 
-.page-header {
-  $pageHeaderHeight: 80px;
-
-  border-bottom: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-
-  .home {
-    display: inline-block;
-    line-height: $pageHeaderHeight;
-  }
-
-  .secondary-nav {
-    text-align: right;
-
-    li {
-      display: inline-block;
-      line-height: $pageHeaderHeight;
-      margin-left: $gridGutterWidth;
-      text-transform: uppercase;
-      font-family: $smallFontFamily;
-    }
-
-    a {
-      $linkColor: $brown;
-
-      color: $linkColor;
-      font-size: 1.1em;
-      font-weight: bolder;
-      letter-spacing: 2px;
-      text-decoration: none;
-      &:hover { color: darken($linkColor, 15%); }
-    }
-  }
-
-  .search {
-    .query {
-      font-size: 1.8em;
-      height: 53px;
-      line-height: 1.5em;
-      width: 100%;
-      padding-left: 60px;
-      background-image: image-url('searchiconline_large.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-position-x: 15px;
-      @include box-sizing(border-box);
-    }
-
-    .search-button {
-      text-transform: uppercase;
-    }
-  }
-
-  .browse {
-    background-color: $brown;
-    padding: 1px 0;
-    height: 53px;
-
-    & > a {
-      color: $lightBrown;
-      display: block;
-      font-family: $largeFontFamily;
-      font-size: 30px;
-      line-height: 1em;
-      padding:.4em;
-      text-transform: uppercase;
-
-      .caret {
-        border-top: 4px solid white;
-        float: right;
-        margin-top: 10px;
-      }
-    }
-
-    .dropdown-menu {
-      background-color: $brown;
-
-      a {
-        $linkColor: $yellow;
-
-        color: $linkColor;
-        font-size: 1.1em;
-        font-weight: bolder;
-        text-decoration: none;
-        &:hover { color: darken($linkColor, 15%); }
-      }
-    }
-  }
-}
 
