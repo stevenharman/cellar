@@ -1,13 +1,14 @@
 header.page-header
   .row-fluid
-    h1.span6= link_to(root_path, title: 'Cellar', class: 'home') do
+    .span6#logo= link_to(root_path, title: 'Cellar', class: 'home') do
       = image_tag('cellar-full-logo.png', alt: 'Brewdega Cellar: Stock up. Drink up.')
-    ul.secondary-nav.span6
-      - if user_signed_in?
-        li= link_to('My Cellar', cellar_path(current_user))
-      li= link_to('Blog', 'http://blog.brewdega.com', \
-                    title: 'Get updates, news, and banter at the Brewdega blog.')
-      li= link_to('Contact us', '#', title: 'Get in touch with the Brewdega crew.')
+    .span6#leftnav
+      ul.secondary-nav
+        - if user_signed_in?
+          li= link_to('My Cellar', cellar_path(current_user))
+        li= link_to('Blog', 'http://blog.brewdega.com', \
+                      title: 'Get updates, news, and banter at the Brewdega blog.')
+        li= link_to('Contact us', '#', title: 'Get in touch with the Brewdega crew.')
   .row-fluid
     = simple_form_for(:search, method: :get, html: { class: 'search form-search span9' }) do |f|
       = f.search_field :query, placeholder: 'Find a beer...', class: 'query'

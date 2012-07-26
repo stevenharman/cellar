@@ -15,7 +15,7 @@ body {
 
 h1 {
   font-family: $largeFontFamily;
-  font-size: 32px;
+  font-size: 2.5em;
   text-transform: uppercase;
   color: $brewdega-orange;
   font-style: normal;
@@ -24,7 +24,7 @@ h1 {
 
 h2 {
   font-family: $largeFontFamily;
-  font-size: 32px;
+  font-size: 2.5em;
   text-transform: uppercase;
   color: $brewdega-orange;
   font-style: normal;
@@ -33,7 +33,7 @@ h2 {
 
 h3 {
   font-family: $smallFontFamily;
-  font-size: 16px;
+  font-size: 1.3em;
   color: $brown;
   font-style: normal;
   font-weight:normal;
@@ -41,7 +41,7 @@ h3 {
 
 h4 {
   font-family: $largeFontFamily;
-  font-size: 18px;
+  font-size: 1.5em;
   text-transform: uppercase;
   color: $brewdega-orange;
   font-style: normal;
@@ -49,7 +49,7 @@ h4 {
 }
 
 h5 {
-  font-size: 18px;
+  font-size: 1.5em;
   color: $brown;
   font-style: normal;
   font-weight:normal;
@@ -73,7 +73,7 @@ h5 {
 
 .brew-details {
   /* font-size: 11px; */
-  line-height: 14px;
+  line-height: 1em;
   color: $brown;
 }
 
@@ -104,7 +104,7 @@ h5 {
 @media (max-width: 480px) {
   .splash {
     .call-to-action h2 {
-      font-size: 28px;
+      font-size: 2.1em;
     }
   }
   .browse {
@@ -115,11 +115,18 @@ h5 {
 @media (max-width: 767px) {
   .splash {
     .call-to-action h2 {
-      font-size: 28px;
+      font-size: 1.8em;
     }
   }
   .browse {
     margin-bottom: 10px;
+  }
+  #logo {
+    text-align: center;
+    margin-top: 20px;
+  }
+  #leftnav .secondary-nav {
+    text-align: center;
   }
 }
 
@@ -181,7 +188,7 @@ table .beer form {
 legend {
   font-family: $smallFontFamily;
   color: #754D2E;
-  font-size: 16px;
+  font-size: 1.2em;
   font-style: normal;
   font-weight: 700;
   text-transform: capitalize;
@@ -191,7 +198,7 @@ legend {
 dt {
   font-family: $smallFontFamily;
   color: $brewdega-orange;
-  font-size: 10px;;
+  font-size: .8em;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -224,7 +231,7 @@ dd {margin-left: 0px;}
       font-size: 1.4em;
     }
     
-      ul {
+    ul {
     list-style: none;
     margin-left: 0px;
     li {
