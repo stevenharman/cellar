@@ -1,8 +1,8 @@
 header.page-header
   .row-fluid
-    .span6#logo= link_to(root_path, title: 'Cellar', class: 'home') do
+    #logo.span6= link_to(root_path, title: 'Cellar', class: 'home') do
       = image_tag('cellar-full-logo.png', alt: 'Brewdega Cellar: Stock up. Drink up.')
-    .span6#leftnav
+    #leftnav.span6
       ul.secondary-nav
         - if user_signed_in?
           li= link_to('My Cellar', cellar_path(current_user))
@@ -12,7 +12,6 @@ header.page-header
   .row-fluid
     = simple_form_for(:search, method: :get, html: { class: 'search form-search span9' }) do |f|
       = f.search_field :query, placeholder: 'Find a beer...', class: 'query'
-      /= f.button :submit, 'Search', class: 'search-button btn-primary btn-large'
 
     .browse.dropdown.span3
       = link_to '/browse', class: 'dropdown-toggle', data: { toggle: 'dropdown', target: '.browse' } do
