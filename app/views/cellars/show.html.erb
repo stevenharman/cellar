@@ -3,11 +3,13 @@
     <div class="span6">
       <h2>My Cellar</h2>
       <h3 class="owner-name"><%= @cellar.keeper.username %></h3>
+<!--
       <dl class="owner-details">
         <dt>Email: </dt><dd><%= @cellar.keeper.email %></dd>
       </dl>
+-->
     </div>
-    <div class="span6">
+    <div class="span6" style="text-align:right;">
       <button class="btn btn-small btn-primary">Add a Beer</button>
       <button class="btn btn-small btn-primary">Share</button>
     </div>
@@ -20,7 +22,7 @@
         <tr>
           <th>Brewery</th>
           <th>Beer</th>
-          <th>Quantity</th>
+          <th style="text-align:center;">Quantity</th>
           <th>Cellared on</th>
         </tr>
       </thead>
