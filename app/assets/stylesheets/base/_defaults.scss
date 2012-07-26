@@ -55,3 +55,65 @@ h5 {
   }
 }
 
+label {
+  color: $brewdega-orange;
+  display: block;
+  font-family: $smallFontFamily;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  width: 120px;
+}
+
+.table {
+  min-height: 200px;
+
+  th {
+    font-family: $smallFontFamily;
+    color: #754D2E;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  td {
+    border: 0px;
+    font-size: 12px;
+    vertical-align: middle;
+
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  form {
+    margin: 0px;
+  }
+}
+
+
+legend {
+  font-family: $smallFontFamily;
+  color: #754D2E;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: capitalize;
+  border: 0px;
+}
+
+dt {
+  font-family: $smallFontFamily;
+  color: $brewdega-orange;
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+dd { margin-left: 0px; }
+
