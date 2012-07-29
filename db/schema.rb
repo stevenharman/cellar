@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120722184011) do
+ActiveRecord::Schema.define(:version => 20120729185534) do
 
   create_table "beers", :force => true do |t|
     t.string   "batch"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(:version => 20120722184011) do
     t.integer  "category_id",   :null => false
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.text     "description"
   end
 
   add_index "styles", ["brewery_db_id"], :name => "index_styles_on_brewery_db_id", :unique => true

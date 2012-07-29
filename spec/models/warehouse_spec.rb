@@ -12,6 +12,14 @@ describe Warehouse do
       expect(categories.count).to eq(12)
     end
 
+    it 'fetches styles from BreweryDB', vcr: { record: :once } do
+      styles = subject.styles
+      expect(styles.first.id).to be_kind_of Fixnum
+      expect(styles.first.category_id).to be_kind_of Fixnum
+      expect(styles.each).to be_kind_of Enumerator
+      expect(styles.count).to eq(157)
+    end
+
     it 'fetches breweries from BreweryDB', vcr: { record: :once } do
       breweries = subject.breweries
       expect(breweries.first.id).to be_kind_of String

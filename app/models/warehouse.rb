@@ -15,4 +15,8 @@ class Warehouse
   def categories
     @client.categories.all
   end
+
+  def styles
+    @client.styles.all
+  end
 end
