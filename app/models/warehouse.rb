@@ -19,4 +19,10 @@ class Warehouse
   def styles
     @client.styles.all
   end
+
+  def brews_for_brewery(brewery)
+    @client.brewery(brewery.brewery_db_id).beers.each do |brew|
+      yield brew if block_given?
+    end
+  end
 end
