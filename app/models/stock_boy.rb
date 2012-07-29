@@ -11,19 +11,33 @@ class StockBoy
   end
 
   def inventory
-    @warehouse.categories.each do |c|
+    stock_categories
+    stock_styles
+    stock_breweries
+  end
+
+  private
+
+  def stock_categories
+    @warehouse.categories.map do |c|
       category = CategorySnapshot.stock(c)
       @log.record(category)
     end
+  end
 
-    @warehouse.styles.each do |s|
+  def stock_styles
+    @warehouse.styles.map do |s|
       style = StyleSnapshot.stock(s)
       @log.record(style)
     end
+  end
 
+  def stock_breweries
     @warehouse.breweries.each do |b|
       brewery =  BrewerySnapshot.stock(b)
       @log.record(brewery)
+      yield brewery if block_given?
+      brewery
     end
   end
 
