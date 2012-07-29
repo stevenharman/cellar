@@ -6,22 +6,30 @@ describe StockBoy do
   let(:log) { stub('InventoryLogger') }
 
   describe '#inventory' do
-    let(:brewery_1) { stub('Brewery #1') }
-    let(:brewery_2) { stub('Brewery #2') }
+    let(:categories) { [stub('Category #1'), stub('Category #2')] }
+    let(:breweries) { [stub('Brewery #1'), stub('Brewery #2')] }
     before do
-      warehouse.stub(:breweries) { [brewery_1, brewery_2] }
+      warehouse.stub(:categories) { categories }
+      warehouse.stub(:breweries) { breweries }
+      CategorySnapshot.stub(:stock)
       BrewerySnapshot.stub(:stock)
       log.stub(:record)
     end
 
+    it 'stockes categories from the warehouse' do
+      CategorySnapshot.should_receive(:stock).with(categories.first)
+      CategorySnapshot.should_receive(:stock).with(categories.last)
+      subject.inventory
+    end
+
     it 'stocks breweries from the warehouse' do
-      BrewerySnapshot.should_receive(:stock).with(brewery_1)
-      BrewerySnapshot.should_receive(:stock).with(brewery_2)
+      BrewerySnapshot.should_receive(:stock).with(breweries.first)
+      BrewerySnapshot.should_receive(:stock).with(breweries.last)
       subject.inventory
     end
 
     it 'tracks the inventory in the log' do
-      log.should_receive(:record).twice
+      log.should_receive(:record).exactly(4).times
       subject.inventory
     end
   end

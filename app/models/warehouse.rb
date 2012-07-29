@@ -11,4 +11,8 @@ class Warehouse
   def breweries
     @client.breweries.all
   end
+
+  def categories
+    @client.categories.all
+  end
 end

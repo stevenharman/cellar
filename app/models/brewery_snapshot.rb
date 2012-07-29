@@ -32,9 +32,9 @@ class BrewerySnapshot
 
   private
 
-  def find_or_initialize(warehouse_id)
-    brewery = @brewery_catalog.find_by_brewery_db_id(warehouse_id)
-    brewery || @brewery_catalog.new.tap { |b| b.brewery_db_id = warehouse_id }
+  def find_or_initialize(brewery_db_id)
+    brewery = @brewery_catalog.find_by_brewery_db_id(brewery_db_id)
+    brewery || @brewery_catalog.new.tap { |b| b.brewery_db_id = brewery_db_id }
   end
 
 end
