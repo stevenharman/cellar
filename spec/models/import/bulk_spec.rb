@@ -1,11 +1,11 @@
-require 'models/import/stock_boy'
+require 'models/import/bulk'
 
-describe Import::StockBoy do
+describe Import::Bulk do
   subject { described_class.new(warehouse, log) }
   let(:warehouse) { stub('Import::Warehouse') }
   let(:log) { stub('Import::Log') }
 
-  describe '#inventory' do
+  describe '#perform' do
     let(:categories) { [stub('Category #1'), stub('Category #2')] }
     let(:styles) { [stub('Style #1'), stub('Style #2')] }
     let(:breweries) { [stub('Brewery #1'), stub('Brewery #2')] }
@@ -22,24 +22,24 @@ describe Import::StockBoy do
     it 'stocks categories from the warehouse' do
       Import::Category.should_receive(:import).with(categories.first)
       Import::Category.should_receive(:import).with(categories.last)
-      subject.inventory
+      subject.perform
     end
 
     it 'stocks styles from the warehouse' do
       Import::Style.should_receive(:import).with(styles.first)
       Import::Style.should_receive(:import).with(styles.last)
-      subject.inventory
+      subject.perform
     end
 
     it 'stocks breweries from the warehouse' do
       Import::Brewery.should_receive(:import).with(breweries.first)
       Import::Brewery.should_receive(:import).with(breweries.last)
-      subject.inventory
+      subject.perform
     end
 
-    it 'tracks the inventory in the log' do
+    it 'tracks the imports in the log' do
       log.should_receive(:record).exactly(6).times
-      subject.inventory
+      subject.perform
     end
   end
 end
