@@ -16,6 +16,7 @@ describe Import::Bulk do
       Import::Category.stub(:import)
       Import::Style.stub(:import)
       Import::Brewery.stub(:import)
+      Import::BrewCatalog.stub(:import_from)
       log.stub(:record)
     end
 
@@ -34,6 +35,11 @@ describe Import::Bulk do
     it 'stocks breweries from the warehouse' do
       Import::Brewery.should_receive(:import).with(breweries.first)
       Import::Brewery.should_receive(:import).with(breweries.last)
+      subject.perform
+    end
+
+    it 'imports brews for the brewery' do
+      Import::BrewCatalog.should_receive(:import_from).twice
       subject.perform
     end
 

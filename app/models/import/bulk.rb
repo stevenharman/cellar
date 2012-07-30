@@ -1,6 +1,7 @@
 require_relative 'category'
 require_relative 'style'
 require_relative 'brewery'
+require_relative 'brew_catalog'
 require_relative 'log'
 
 module Import
@@ -18,7 +19,9 @@ module Import
     def perform
       import_categories
       import_styles
-      import_breweries
+      import_breweries do |brewery|
+        Import::BrewCatalog.import_from(brewery)
+      end
     end
 
     private
