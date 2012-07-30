@@ -2,7 +2,7 @@ require 'models/stock_boy'
 
 describe StockBoy do
   subject { described_class.new(warehouse, log) }
-  let(:warehouse) { stub('Warehouse') }
+  let(:warehouse) { stub('Import::Warehouse') }
   let(:log) { stub('Import::Log') }
 
   describe '#inventory' do

@@ -1,4 +1,4 @@
-require_relative '../warehouse_map'
+require_relative 'warehouse_map'
 
 module Import
   class Brewery

@@ -1,7 +1,7 @@
 require 'vcr_spec_helper'
-require 'models/warehouse'
+require 'models/import/warehouse'
 
-describe Warehouse do
+describe Import::Warehouse do
   subject { described_class.new }
 
   it 'fetches categories from BreweryDB', vcr: { record: :once } do
