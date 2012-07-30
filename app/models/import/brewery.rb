@@ -7,7 +7,7 @@ module Import
       new(raw_data).import
     end
 
-    def initialize(raw_data, brewery_catalog = Brewery)
+    def initialize(raw_data, brewery_catalog = ::Brewery)
       @raw_data = raw_data
       @brewery_catalog = brewery_catalog
       @brewery = find_or_initialize(raw_data.id)

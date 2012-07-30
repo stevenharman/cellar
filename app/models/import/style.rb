@@ -5,7 +5,7 @@ module Import
       new(raw_data).import
     end
 
-    def initialize(raw_data, style_catalog = Style, category_catalog = Category)
+    def initialize(raw_data, style_catalog = ::Style, category_catalog = ::Category)
       @raw_data = raw_data
       @style_catalog = style_catalog
       @style = find_or_initialize(raw_data.id)
