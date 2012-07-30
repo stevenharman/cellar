@@ -3,7 +3,7 @@ require 'models/stock_boy'
 describe StockBoy do
   subject { described_class.new(warehouse, log) }
   let(:warehouse) { stub('Warehouse') }
-  let(:log) { stub('InventoryLogger') }
+  let(:log) { stub('Import::Log') }
 
   describe '#inventory' do
     let(:categories) { [stub('Category #1'), stub('Category #2')] }

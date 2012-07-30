@@ -1,11 +1,11 @@
 require_relative 'import/category'
 require_relative 'import/style'
 require_relative 'import/brewery'
-require_relative 'inventory_log'
+require_relative 'import/log'
 
 class StockBoy
 
-  def initialize(warehouse, log = InventoryLog.new)
+  def initialize(warehouse, log = Import::Log.new)
     @warehouse = warehouse
     @log = log
   end
