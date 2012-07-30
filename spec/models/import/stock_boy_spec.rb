@@ -1,6 +1,6 @@
-require 'models/stock_boy'
+require 'models/import/stock_boy'
 
-describe StockBoy do
+describe Import::StockBoy do
   subject { described_class.new(warehouse, log) }
   let(:warehouse) { stub('Import::Warehouse') }
   let(:log) { stub('Import::Log') }
