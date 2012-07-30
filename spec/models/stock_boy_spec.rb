@@ -13,27 +13,27 @@ describe StockBoy do
       warehouse.stub(:categories) { categories }
       warehouse.stub(:breweries) { breweries }
       warehouse.stub(:styles) { styles }
-      CategorySnapshot.stub(:stock)
-      StyleSnapshot.stub(:stock)
-      BrewerySnapshot.stub(:stock)
+      Import::Category.stub(:import)
+      Import::Style.stub(:import)
+      Import::Brewery.stub(:import)
       log.stub(:record)
     end
 
     it 'stocks categories from the warehouse' do
-      CategorySnapshot.should_receive(:stock).with(categories.first)
-      CategorySnapshot.should_receive(:stock).with(categories.last)
+      Import::Category.should_receive(:import).with(categories.first)
+      Import::Category.should_receive(:import).with(categories.last)
       subject.inventory
     end
 
     it 'stocks styles from the warehouse' do
-      StyleSnapshot.should_receive(:stock).with(styles.first)
-      StyleSnapshot.should_receive(:stock).with(styles.last)
+      Import::Style.should_receive(:import).with(styles.first)
+      Import::Style.should_receive(:import).with(styles.last)
       subject.inventory
     end
 
     it 'stocks breweries from the warehouse' do
-      BrewerySnapshot.should_receive(:stock).with(breweries.first)
-      BrewerySnapshot.should_receive(:stock).with(breweries.last)
+      Import::Brewery.should_receive(:import).with(breweries.first)
+      Import::Brewery.should_receive(:import).with(breweries.last)
       subject.inventory
     end
 

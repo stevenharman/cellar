@@ -1,8 +1,8 @@
-require 'models/brewery_snapshot'
+require 'models/import/brewery'
 
-describe BrewerySnapshot do
+describe Import::Brewery do
 
-  describe '#.stock' do
+  describe '#.import' do
     subject { described_class.new(raw_data, brewery_catalog) }
     let(:brewery) { OpenStruct.new(save: true)}
     let(:raw_data) { OpenStruct.new(id: 'abc123') }
@@ -11,7 +11,7 @@ describe BrewerySnapshot do
     it 'updates the brewery when it already exists' do
       brewery_catalog.stub(:find_by_brewery_db_id).with(raw_data.id) { brewery }
       brewery.should_receive(:save)
-      subject.stock
+      subject.import
     end
 
     it 'adds a new brewery when it does already not exist' do
@@ -19,14 +19,14 @@ describe BrewerySnapshot do
       brewery_catalog.stub(:new) { brewery }
       brewery.should_receive(:save)
 
-      expect(subject.stock.brewery_db_id).to eql(raw_data.id)
+      expect(subject.import.brewery_db_id).to eql(raw_data.id)
     end
 
     describe 'maps in new data' do
       let(:raw_data) { fully_loaded_raw_data }
       before do
         brewery_catalog.stub(:find_by_brewery_db_id) { brewery }
-        subject.stock
+        subject.import
       end
 
       it { expect(brewery.name).to eql(raw_data.name) }
@@ -44,7 +44,7 @@ describe BrewerySnapshot do
       let(:raw_data) { OpenStruct.new }
       before do
         brewery_catalog.stub(:find_by_brewery_db_id) { brewery }
-        subject.stock
+        subject.import
       end
 
       it { expect(brewery.name).to_not be }

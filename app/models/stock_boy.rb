@@ -1,6 +1,6 @@
-require_relative 'category_snapshot'
-require_relative 'style_snapshot'
-require_relative 'brewery_snapshot'
+require_relative 'import/category'
+require_relative 'import/style'
+require_relative 'import/brewery'
 require_relative 'inventory_log'
 
 class StockBoy
@@ -20,21 +20,21 @@ class StockBoy
 
   def stock_categories
     @warehouse.categories.map do |c|
-      category = CategorySnapshot.stock(c)
+      category = Import::Category.import(c)
       @log.record(category)
     end
   end
 
   def stock_styles
     @warehouse.styles.map do |s|
-      style = StyleSnapshot.stock(s)
+      style = Import::Style.import(s)
       @log.record(style)
     end
   end
 
   def stock_breweries
     @warehouse.breweries.each do |b|
-      brewery =  BrewerySnapshot.stock(b)
+      brewery = Import::Brewery.import(b)
       @log.record(brewery)
       yield brewery if block_given?
       brewery
