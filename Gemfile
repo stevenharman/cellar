@@ -12,7 +12,7 @@ gem 'pg'
 gem 'pg_search'
 gem 'simple_form'
 gem 'slim'
-
+gem 'sidekiq'
 
 group :assets do
   gem 'sass-rails', '~> 3.1'

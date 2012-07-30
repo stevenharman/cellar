@@ -28,8 +28,7 @@ describe Import::Warehouse do
   end
 
   it "fetches a brewery's beers", vcr: { record: :once } do
-    brewery = stub(brewery_db_id: 'Idm5Y5')
-    brews = subject.brews_for_brewery(brewery)
+    brews = subject.brews_for_brewery('Idm5Y5')
     expect(brews.first.id).to be_kind_of String
     expect(brews.each).to be_kind_of Enumerator
     expect(brews.count).to eq(22)
