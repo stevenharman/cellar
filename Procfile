@@ -1,6 +1,6 @@
 # === Run on both Heroku and local dev boxen
 web:  bundle exec rails server thin -p $PORT
-worker: bundle exec sidekiq -c 8
+worker: bundle exec sidekiq -c 7
 
 # === Required for local dev boxen
 redis: redis-server config/redis.conf
