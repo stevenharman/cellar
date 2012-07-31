@@ -17,6 +17,18 @@ You'll need the following dependencies installed:
   1. `brew install redis`
   1. _That's it!_ We start a redis server via `foreman`.
 
+### Running
+
+We use [Foreman][foreman] to declare and run/stop all of the processes we use.
+This includes our Rails web server, a background worker (via
+[Sidekiq][sidekiq]), and the Redis server. To fire everything up just run the
+following from terminal:
+
+```bash
+$ foreman start
+```
+
+You can shut everything down by hitting `^C` _(that's `Control` + `C`)_.
 
 ### CSS Structure
 
@@ -42,6 +54,7 @@ useful.
 [README Driven Development][rdd]. Do it!
 
 
+[foreman]: https://devcenter.heroku.com/articles/procfile/
 [postgres-setup]: http://blog.willj.net/2011/05/31/setting-up-postgresql-for-ruby-on-rails-development-on-os-x/
 [rdd]: http://tom.preston-werner.com/2010/08/23/readme-driven-development.html
 [sidekiq]: https://github.com/mperham/sidekiq
