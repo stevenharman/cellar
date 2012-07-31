@@ -15,8 +15,8 @@ module Import
 
     def perform(brewery_id)
       @warehouse.brews_for_brewery(brewery_id).map do |b|
-        brew = Import::Brew.import(b)
-        @log.report(brew)
+        brew = Import::Brew.import(b.merge(brewery_id: brewery_id))
+        @log.record(brew)
       end
     end
 
