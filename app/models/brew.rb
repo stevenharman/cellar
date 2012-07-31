@@ -6,9 +6,9 @@ class Brew < ActiveRecord::Base
   has_many :beers
 
   validates :brewery, presence: true
-  validates :name, uniqueness: { scope: :brewery_id }, presence: true
+  validates :name, presence: true
   validates :abv, numericality: { allow_nil: true }
-  validates :ibu, numericality: { allow_nil: true, only_integer: true }
+  validates :ibu, numericality: { allow_nil: true }
   validates :brewery_db_id, uniqueness: true, presence: true
 
   attr_accessible :abv, :base_brew_id, :description, :ibu, :name, :organic, :year
