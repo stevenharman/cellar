@@ -17,7 +17,8 @@ module Import
     private
 
     def debug_message(item)
-      "[INVENTORY] SUCCEEDED: #{short_description(item)}."
+      status = item.valid? ? 'SUCCEEDED' : 'FAILED'
+      "[INVENTORY] #{status}: #{short_description(item)}."
     end
 
     def error_message(item)
