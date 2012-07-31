@@ -10,19 +10,19 @@ module Import
     end
 
     def breweries
-      @client.breweries.all
+      Array(@client.breweries.all)
     end
 
     def categories
-      @client.categories.all
+      Array(@client.categories.all)
     end
 
     def styles
-      @client.styles.all
+      Array(@client.styles.all)
     end
 
     def brews_for_brewery(brewery_id)
-      @client.brewery(brewery_id).beers
+      Array(@client.brewery(brewery_id).beers)
     end
   end
 end

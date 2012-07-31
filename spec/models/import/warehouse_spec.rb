@@ -34,4 +34,27 @@ describe Import::Warehouse do
     expect(brews.count).to eq(22)
   end
 
+  context 'no results from the server' do
+    let(:client) { BreweryDB::Client.any_instance }
+
+    it 'fetchs an empty list of categories rather than nil' do
+      client.stub_chain(:categories, :all) { nil }
+      expect(subject.categories).to be_empty
+    end
+
+    it 'fetchs an empty list of styles rather than nil' do
+      client.stub_chain(:styles, :all) { nil }
+      expect(subject.styles).to be_empty
+    end
+
+    it 'fetchs an empty list of breweries rather than nil' do
+      client.stub_chain(:breweries, :all) { nil }
+      expect(subject.breweries).to be_empty
+    end
+
+    it 'fetches an empty list of beers rather than a nil' do
+      client.stub_chain(:brewery, :beers) { nil }
+      expect(subject.brews_for_brewery('Idm5Y5')).to be_empty
+    end
+  end
 end

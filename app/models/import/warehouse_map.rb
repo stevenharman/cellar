@@ -8,6 +8,12 @@ module Import
       raw.to_s == 'Y'
     end
 
+    def self.decimal(raw)
+      return unless raw
+
+      BigDecimal.new(raw)
+    end
+
     def self.images(raw)
       raw || EmptyImages.new
     end
