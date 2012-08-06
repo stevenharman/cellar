@@ -5,13 +5,14 @@
 You'll need the following dependencies installed:
 
 #### PostgreSQL (for [light-weight searching][texticle])
-  1. `brew install postgres` (Pay attention to instructions for
-     starting/stopping PostgreSQL)
-  1. `brew doctor` (This may tell you to fix your `PATH`, so do that.)
+  1. Download, install, and run [Postgres.app][postgres.app]
   1. If you've already installed the `pg` gem: `gem uninstall pg` (we do this
      to ensure we've built against the right version of PostgreSQL)
   1. Install the `pg` gem: `bundle install`
   1. `bundle exec rake db:create db:schema:load`
+
+**NOTE:** Be sure to open the Postgres.app app to start your PostgreSQL server.
+Quitting the app will also stop the server.
 
 #### Redis (for [background jobs][sidekiq])
   1. `brew install redis`
@@ -55,7 +56,7 @@ useful.
 
 
 [foreman]: https://devcenter.heroku.com/articles/procfile/
-[postgres-setup]: http://blog.willj.net/2011/05/31/setting-up-postgresql-for-ruby-on-rails-development-on-os-x/
+[postgres.app]: http://postgresapp.com/
 [rdd]: http://tom.preston-werner.com/2010/08/23/readme-driven-development.html
 [sidekiq]: https://github.com/mperham/sidekiq
 [texticle]: https://tenderlove.github.com/texticle/
