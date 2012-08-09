@@ -5,11 +5,11 @@ module Import
       new(raw_data).import
     end
 
-    def initialize(raw_data, style_catalog = ::Style, category_catalog = ::Category)
+    def initialize(raw_data, style_factory = ::Style, category_factory = ::Category)
       @raw_data = raw_data
-      @style_catalog = style_catalog
+      @style_factory = style_factory
       @style = find_or_initialize(raw_data.id)
-      @category = category_catalog.find_by_brewery_db_id(raw_data.category_id)
+      @category = category_factory.find_by_brewery_db_id(raw_data.category_id)
     end
 
     def import
@@ -26,8 +26,8 @@ module Import
     private
 
     def find_or_initialize(brewery_db_id)
-      style = @style_catalog.find_by_brewery_db_id(brewery_db_id)
-      style || @style_catalog.new.tap { |b| b.brewery_db_id = brewery_db_id }
+      style = @style_factory.find_by_brewery_db_id(brewery_db_id)
+      style || @style_factory.new.tap { |b| b.brewery_db_id = brewery_db_id }
     end
 
   end

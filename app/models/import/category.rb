@@ -5,9 +5,9 @@ module Import
       new(raw_data).import
     end
 
-    def initialize(raw_data, category_catalog = ::Category)
+    def initialize(raw_data, category_factory = ::Category)
       @raw_data = raw_data
-      @category_catalog = category_catalog
+      @category_factory = category_factory
       @category = find_or_initialize(raw_data.id)
     end
 
@@ -23,8 +23,8 @@ module Import
     private
 
     def find_or_initialize(brewery_db_id)
-      category = @category_catalog.find_by_brewery_db_id(brewery_db_id)
-      category || @category_catalog.new.tap { |b| b.brewery_db_id = brewery_db_id }
+      category = @category_factory.find_by_brewery_db_id(brewery_db_id)
+      category || @category_factory.new.tap { |b| b.brewery_db_id = brewery_db_id }
     end
 
   end
