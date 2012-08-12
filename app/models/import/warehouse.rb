@@ -9,6 +9,10 @@ module Import
       end
     end
 
+    def brew(id)
+      @client.beers.find(id)
+    end
+
     def breweries
       Array(@client.breweries.all)
     end
