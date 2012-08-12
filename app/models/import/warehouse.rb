@@ -24,5 +24,9 @@ module Import
     def brews_for_brewery(brewery_id)
       Array(@client.brewery(brewery_id).beers)
     end
+
+    def brew(id)
+      @client.beers.find(id)
+    end
   end
 end

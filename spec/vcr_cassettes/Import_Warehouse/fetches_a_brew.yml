@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.brewerydb.com/v2/beer/VvFIVD?key=API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - BreweryDB Ruby Gem 0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Aug 2012 20:52:25 GMT
+      Server:
+      - Apache/2.2.22 (Amazon)
+      X-Powered-By:
+      - PHP/5.3.15
+      X-Ratelimit-Limit:
+      - Unlimited
+      X-Ratelimit-Remaining:
+      - Unlimited
+      Content-Length:
+      - '2471'
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"message":"READ ONLY MODE: Request Successful","data":{"id":"VvFIVD","name":"Hopslam
+        Ale","description":"Starting with six different hop varietals added to the
+        brew kettle & culminating with a massive dry-hop addition of Simcoe hops,
+        Bell''s Hopslam Ale possesses the most complex hopping schedule in the Bell''s
+        repetoire. Selected specifically because of their aromatic qualities, these
+        Pacific Northwest varieties contribute a pungent blend of grapefruit, stone
+        fruit, and floral notes. A generous malt bill and a solid dollop of honey
+        provide just enough body to keep the balance in check, resulting in a remarkably
+        drinkable rendition of the Double India Pale Ale style.","abv":"10","ibu":"70","glasswareId":5,"availableId":8,"styleId":31,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/VvFIVD\/upload_jPl9j1-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/VvFIVD\/upload_jPl9j1-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/VvFIVD\/upload_jPl9j1-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:26","updateDate":"2012-03-22 13:04:58","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        02:41:33"},"available":{"id":"8","name":"Winter","description":"Available
+        during the winter months."},"style":{"id":31,"categoryId":3,"category":{"id":3,"name":"North
+        American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"Imperial
+        or Double India Pale Ale","description":"Imperial or Double India Pale Ales
+        have intense hop bitterness, flavor and aroma. Alcohol content is medium-high
+        to high and notably evident. They range from deep golden to medium copper
+        in color. The style may use any variety of hops. Though the hop character
+        is intense it''s balanced with complex alcohol flavors, moderate to high fruity
+        esters and medium to high malt character. Hop character should be fresh and
+        lively and should not be harsh in quality. The use of large amounts of hops
+        may cause a degree of appropriate hop haze. Imperial or Double India Pale
+        Ales have medium-high to full body. Diacetyl should not be perceived. The
+        intention of this style of beer is to exhibit the fresh and bright character
+        of hops. Oxidative character and aged character should not be present.","ibuMin":"65","ibuMax":"100","abvMin":"7.5","abvMax":"10.5","srmMin":"5","srmMax":"13","ogMin":"1.075","fgMin":"1.012","fgMax":"1.02","createDate":"2012-03-21
+        20:06:45"}},"status":"success"}'
+    http_version: 
+  recorded_at: Sun, 12 Aug 2012 20:52:25 GMT
+recorded_with: VCR 2.2.4
