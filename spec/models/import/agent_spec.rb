@@ -1,6 +1,6 @@
-require 'models/import/bulk'
+require 'models/import/agent'
 
-describe Import::Bulk do
+describe Import::Agent do
   subject { described_class.new(warehouse, log) }
   let(:warehouse) { stub('Import::Warehouse') }
   let(:log) { stub('Import::Log') }

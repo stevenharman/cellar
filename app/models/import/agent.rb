@@ -5,7 +5,7 @@ require_relative 'brew_catalog'
 require_relative 'log'
 
 module Import
-  class Bulk
+  class Agent
 
     def self.import_from(warehouse)
       new(warehouse).perform
