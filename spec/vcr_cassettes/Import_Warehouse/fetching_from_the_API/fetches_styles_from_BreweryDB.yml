@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 12 Aug 2012 20:51:53 GMT
+      - Thu, 16 Aug 2012 01:14:50 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -1866,5 +1866,5 @@ http_interactions:
         or Perry","simpleUrl":"other-specialty-cider-or-perry","abvMin":"5","abvMax":"12","ogMin":"1.045","ogMax":"1.1","fgMin":"0.995","fgMax":"1.02","createDate":"2012-03-21
         20:06:46"}],"status":"success"}'
     http_version: 
-  recorded_at: Sun, 12 Aug 2012 20:51:54 GMT
+  recorded_at: Thu, 16 Aug 2012 01:14:52 GMT
 recorded_with: VCR 2.2.4
