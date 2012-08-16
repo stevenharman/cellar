@@ -27,6 +27,11 @@ describe Import::Warehouse do
     expect(breweries.count).to eq(3884)
   end
 
+  it 'fetches a single brewery', :vcr do
+    brewery = subject.brewery('Idm5Y5')
+    expect(brewery.id).to eq('Idm5Y5')
+  end
+
   it "fetches a brewery's beers", :vcr do
     brews = subject.brews_for_brewery('Idm5Y5')
     expect(brews.first.id).to be_kind_of String

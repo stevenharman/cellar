@@ -13,6 +13,10 @@ module Import
       Array(@client.breweries.all)
     end
 
+    def brewery(id)
+      @client.breweries.find(id)
+    end
+
     def categories
       Array(@client.categories.all)
     end
