@@ -8,7 +8,7 @@ module Import
   class Agent
 
     def self.import_from(warehouse)
-      new(warehouse).perform
+      new(warehouse).import_full_inventory
     end
 
     def initialize(warehouse, log = Import::Log.new)
@@ -16,12 +16,35 @@ module Import
       @log = log
     end
 
-    def perform
-      import_categories
-      import_styles
+    def import_full_inventory
+      import_styles_with_categories
       import_breweries do |brewery|
         Import::BrewCatalog.import_from(brewery)
       end
+    end
+
+    def import_styles_with_categories
+      import_categories
+      import_styles
+    end
+
+    def import_breweries
+      @warehouse.breweries.each do |b|
+        brewery = Import::Brewery.import(b)
+        @log.record(brewery)
+        yield brewery if block_given?
+        brewery
+      end
+    end
+
+    def import_brewery(id)
+      brewery = Import::Brewery.import(@warehouse.brewery(id))
+      @log.record(brewery)
+    end
+
+    def import_brew(id)
+      brew = Import::Brew.import(@warehouse.brew(id))
+      @log.record(brew)
     end
 
     private
@@ -39,15 +62,5 @@ module Import
         @log.record(style)
       end
     end
-
-    def import_breweries
-      @warehouse.breweries.each do |b|
-        brewery = Import::Brewery.import(b)
-        @log.record(brewery)
-        yield brewery if block_given?
-        brewery
-      end
-    end
-
   end
 end

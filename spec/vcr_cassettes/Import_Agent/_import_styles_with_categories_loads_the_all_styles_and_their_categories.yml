@@ -2,6 +2,56 @@
 http_interactions:
 - request:
     method: get
+    uri: http://api.brewerydb.com/v2/categories?key=API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - BreweryDB Ruby Gem 0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 16 Aug 2012 03:16:34 GMT
+      Server:
+      - Apache/2.2.22 (Amazon)
+      X-Powered-By:
+      - PHP/5.3.15
+      X-Ratelimit-Limit:
+      - Unlimited
+      X-Ratelimit-Remaining:
+      - Unlimited
+      Content-Length:
+      - '973'
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"message":"READ ONLY MODE: Request Successful","data":[{"id":1,"name":"British
+        Origin Ales","createDate":"2012-03-21 20:06:45"},{"id":2,"name":"Irish Origin
+        Ales","createDate":"2012-03-21 20:06:45"},{"id":3,"name":"North American Origin
+        Ales","createDate":"2012-03-21 20:06:45"},{"id":4,"name":"German Origin Ales","createDate":"2012-03-21
+        20:06:46"},{"id":5,"name":"Belgian And French Origin Ales","createDate":"2012-03-21
+        20:06:46"},{"id":6,"name":"International Ale Styles","createDate":"2012-03-21
+        20:06:46"},{"id":7,"name":"European-germanic Lager","createDate":"2012-03-21
+        20:06:46"},{"id":8,"name":"North American Lager","createDate":"2012-03-21
+        20:06:46"},{"id":9,"name":"Other Lager","createDate":"2012-03-21 20:06:46"},{"id":10,"name":"International
+        Styles","createDate":"2012-03-21 20:06:46"},{"id":11,"name":"Hybrid\/mixed
+        Beer","createDate":"2012-03-21 20:06:46"},{"id":12,"name":"Mead, Cider, &
+        Perry","createDate":"2012-03-21 20:06:46"}],"status":"success"}'
+    http_version: 
+  recorded_at: Thu, 16 Aug 2012 03:16:34 GMT
+- request:
+    method: get
     uri: http://api.brewerydb.com/v2/styles?key=API_KEY
     body:
       encoding: US-ASCII
@@ -19,7 +69,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 16 Aug 2012 03:21:00 GMT
+      - Thu, 16 Aug 2012 03:16:34 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -1866,5 +1916,5 @@ http_interactions:
         or Perry","simpleUrl":"other-specialty-cider-or-perry","abvMin":"5","abvMax":"12","ogMin":"1.045","ogMax":"1.1","fgMin":"0.995","fgMax":"1.02","createDate":"2012-03-21
         20:06:46"}],"status":"success"}'
     http_version: 
-  recorded_at: Thu, 16 Aug 2012 03:21:01 GMT
+  recorded_at: Thu, 16 Aug 2012 03:16:35 GMT
 recorded_with: VCR 2.2.4

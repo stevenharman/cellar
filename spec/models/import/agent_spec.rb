@@ -1,51 +1,36 @@
-require 'models/import/agent'
+require 'spec_helper'
 
-describe Import::Agent do
+describe Import::Agent, :vcr do
   subject { described_class.new(warehouse, log) }
-  let(:warehouse) { stub('Import::Warehouse') }
-  let(:log) { stub('Import::Log') }
+  let(:warehouse) { Import::Warehouse.new }
+  let(:log) { Import::Log.new }
 
-  describe '#perform' do
-    let(:categories) { [stub('Category #1'), stub('Category #2')] }
-    let(:styles) { [stub('Style #1'), stub('Style #2')] }
-    let(:breweries) { [stub('Brewery #1'), stub('Brewery #2')] }
-    before do
-      warehouse.stub(:categories) { categories }
-      warehouse.stub(:breweries) { breweries }
-      warehouse.stub(:styles) { styles }
-      Import::Category.stub(:import)
-      Import::Style.stub(:import)
-      Import::Brewery.stub(:import)
-      Import::BrewCatalog.stub(:import_from)
-      log.stub(:record)
-    end
+  it '#import_styles_with_categories loads the all styles and their categories' do
+    subject.import_styles_with_categories
+    expect(Style.count).to eq(157)
+    expect(Category.count).to eq(12)
+  end
 
-    it 'stocks categories from the warehouse' do
-      Import::Category.should_receive(:import).with(categories.first)
-      Import::Category.should_receive(:import).with(categories.last)
-      subject.perform
-    end
+  it '#import_breweries loads all of the breweries' do
+    subject.import_breweries
+    expect(Brewery.count).to eq(3877)
+  end
 
-    it 'stocks styles from the warehouse' do
-      Import::Style.should_receive(:import).with(styles.first)
-      Import::Style.should_receive(:import).with(styles.last)
-      subject.perform
-    end
+  it '#import_brewery loads the brewery' do
+    subject.import_brewery('Idm5Y5')
+    expect(Brewery.count).to eq(1)
+    expect(Brewery.first.brewery_db_id).to eq('Idm5Y5')
+  end
 
-    it 'stocks breweries from the warehouse' do
-      Import::Brewery.should_receive(:import).with(breweries.first)
-      Import::Brewery.should_receive(:import).with(breweries.last)
-      subject.perform
-    end
+  it '#import_brew loads the brew for all collaborating breweries' do
+    pending 'Re-work breweries -> brews data model'
+    alpine = subject.import_brewery('vDxSPd')
+    new_belgium = subject.import_brewery('Jt43j7')
 
-    it 'imports brews for the brewery' do
-      Import::BrewCatalog.should_receive(:import_from).twice
-      subject.perform
-    end
-
-    it 'tracks the imports in the log' do
-      log.should_receive(:record).exactly(6).times
-      subject.perform
-    end
+    brew = subject.import_brew('aapeRv')
+    expect(Brew.count).to eq(1)
+    expect(brew.brewery_db_id).to eq('99Uj1n')
+    expect(alpine.brews).to include(brew)
+    expect(new_belgium.brews).to include(brew)
   end
 end
