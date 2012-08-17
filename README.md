@@ -1,6 +1,6 @@
 # Cellar at [Brewdega](http://brewdega.com)
 
-## Developing
+## Development
 
 You'll need the following dependencies installed:
 
@@ -18,7 +18,16 @@ Quitting the app will also stop the server.
   1. `brew install redis`
   1. _That's it!_ We start a redis server via `foreman`.
 
-### Running
+#### ENV Vars
+
+You'll need a few environment variables set in order to start all of the
+processes. From terminal:
+
+```bash
+echo "SIDEKIQ_CONCURRENCY=25" > .env
+```
+
+### Running the app
 
 We use [Foreman][foreman] to declare and run/stop all of the processes we use.
 This includes our Rails web server, a background worker (via
@@ -26,7 +35,7 @@ This includes our Rails web server, a background worker (via
 following from terminal:
 
 ```bash
-$ foreman start
+foreman start
 ```
 
 You can shut everything down by hitting `^C` _(that's `Control` + `C`)_.
