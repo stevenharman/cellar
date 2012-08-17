@@ -2,8 +2,8 @@ namespace :deploy do
 
   desc 'deploys to Production Heroku environment'
   task :production do
-    puts `git push heroku master`
     puts `heroku pgbackups:capture --expire -a brewdega-cellar`
+    puts `git push heroku master`
     puts `heroku run rake db:migrate -a brewdega-cellar`
     puts `heroku restart -a brewdega-cellar`
     puts '==> Ping the app to spin up dynos. <=='
