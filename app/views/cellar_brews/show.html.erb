@@ -15,7 +15,7 @@
 
 <div class="row-fluid">
   <div class="span3">
-    <a href="#"><img src="http://placehold.it/212x212" alt="Beer Label" class="beerlabel"></a>
+    <a href="#"><img src="http://placehold.it/256x256" alt="Beer Label" class="beerlabel"></a>
     <p class="small"><b>Description:</b></br> <%= @brew.description %></p>
   </div>
 
@@ -35,7 +35,7 @@
         <tbody>
           <% for beer in @beers %>
             <tr class="beer">
-              <td>icon</td>
+              <td><img src="/assets/edit_icon_12.gif" alt="Edit"></td>
               <td><%= beer.batch %></td>
               <td><%= beer.bottled_on %></td>
               <td><%= beer.best_by %></td>

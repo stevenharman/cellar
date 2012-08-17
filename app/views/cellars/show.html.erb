@@ -2,12 +2,10 @@
   <div class="row-fluid">
     <div class="span6">
       <h2>My Cellar</h2>
-      <h3 class="owner-name"><%= @cellar.keeper.username %></h3>
-<!--
+     <h3 class="owner-name"><%= @cellar.keeper.username %></h3>
       <dl class="owner-details">
         <dt>Email: </dt><dd><%= @cellar.keeper.email %></dd>
       </dl>
--->
     </div>
     <div class="span6" style="text-align:right;">
       <button class="btn btn-small btn-primary">Add a Beer</button>
@@ -20,6 +18,7 @@
     <table class="table table-striped table-condensed">
       <thead>
         <tr>
+          <th>Edit</th>
           <th>Brewery</th>
           <th>Beer</th>
           <th style="text-align:center;">Quantity</th>
@@ -29,6 +28,7 @@
       <tbody>
         <% for brew in @cellar.stocked_brews %>
           <tr class="beer">
+            <td><img src="/assets/edit_icon_12.gif" alt="Edit"></td>
             <td><%= link_to brew.brewery.name, brew.brewery %></td>
             <td><%= link_to brew.name, brew %></td>
             <td style="text-align: center;"><%= brew.beers.size -%></td>
