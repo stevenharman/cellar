@@ -42,6 +42,19 @@
   }
 }
 
+@media (max-width : 320px) {
+  .page-header {
+    .logo {
+      margin-top: 0px;
+    }
+    /*
+.secondary-nav a {
+      font-size: .7em;
+    }
+*/
+  }
+}
+
 @media (max-width: 480px) {
   .splash {
     .call-to-action h2 {
@@ -51,12 +64,23 @@
   .browse {
     margin-bottom: 10px;
   }
+  .navbar-fixed-top {
+    margin-bottom: 0px;
+  }
+  .page-header {
+    .logo {
+      margin-top: 0px;
+    }
+    .secondary-nav a {
+      font-size: 1.1em;
+    }
+  }
 }
 
 @media (max-width: 767px) {
   .splash {
     .call-to-action h2 {
-      font-size: 1.8em;
+      font-size: 1.85em;
     }
   }
   .page-header {
@@ -72,6 +96,9 @@
     .browse {
       margin-bottom: 10px;
     }
+  }
+  .navbar-fixed-top {
+    margin-bottom: 0px;
   }
 }
 
