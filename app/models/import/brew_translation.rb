@@ -24,8 +24,8 @@ module Import
         b.large_image = labels.large
       end
 
-      @brew.save!
       @brew.breweries << new_breweries(raw_data.breweries)
+      @brew.save!
       @brew
     end
 
