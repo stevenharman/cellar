@@ -3,39 +3,39 @@
 <div class="row-fluid" id="sortbeers">
   <div class="span3">
   	<!--Cuisine -->
-  	<form name="monthly" method="get" action="">	
+  	<form name="monthly" method="get" action="">
   	<select name="menu1" onchange="MM_jumpMenu('parent',this,0)">
   	<option value="#" selected="selected">By Alphabet</option>
   	<option value="#">- - -</option>
   	</select>
-  	</form>     
-      
-  </div><!--END row_03_col_01-->
-  
+  	</form>
+
+  </div>
+
   <div class="span3">
-  
+
     <!--Location (Tags) -->
-    <form name="monthly" method="get" action="">	
+    <form name="monthly" method="get" action="">
     <select name="menu1" onchange="MM_jumpMenu('parent',this,0)">
     <option value="#" selected="selected">By Region</option>
     <option value="#">- - -</option>
     </select>
     </form>
-  
-  </div><!--END row_03_col_02-->
-  
+
+  </div>
+
   <div class="span3">
-  
+
     <!--Monthly -->
-    <form name="monthly" method="get" action="">	
+    <form name="monthly" method="get" action="">
     <select name="menu1" onchange="MM_jumpMenu('parent',this,0)">
     <option value="#" selected="selected">By Something</option>
     <option value="#">- - -</option>
     </select>
     </form>
-  
+
   </div><!--END row_03_col_03-->
-    
+
 </div>
 
 <fieldset class="beers-cellared">
@@ -52,7 +52,7 @@
       <% for brew in @brews %>
         <tr class="beer">
           <td><%= link_to brew.name, brew %></td>
-          <td><%= link_to brew.brewery.name, brew.brewery %></td>
+          <td><%= render partial: brew.breweries, spacer_template: 'breweries/brewery_spacer' %></td>
           <td>
             <%= link_to 'Cellar it!', new_beer_path, class: 'btn btn-primary' %>
           </td>
