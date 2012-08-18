@@ -16,7 +16,7 @@ BrewdegaCellar::Application.routes.draw do
     end
   end
 
-  resources :breweries
+  resources :breweries, only: [:index, :show]
   resources :brews
   resources :beers, only: [:index, :new, :create]
 
