@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Brew do
 
-  it { should belong_to(:brewery) }
+  it { should have_many(:breweries) }
   it { should have_many(:beers) }
 
   it { should validate_presence_of(:name) }

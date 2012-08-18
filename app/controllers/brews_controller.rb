@@ -10,7 +10,7 @@ class BrewsController < ApplicationController
 
   def new
     @brew = Brew.new
-    @brew.brewery_id = params[:brewery]
+    @brew.brewery_ids << params[:brewery]
   end
 
   def create

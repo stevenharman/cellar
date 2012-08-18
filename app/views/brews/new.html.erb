@@ -2,7 +2,7 @@
   <h1>Add a brew</h1>
 
   <%= form_for @brew do |f| %>
-    <label>Brewery: <%= f.collection_select :brewery_id, Brewery.all, :id, :name,
+    <label>Brewery: <%= f.collection_select :brewery_ids, Brewery.all, :id, :name,
                                             {include_blank: true}, autofocus: true %></label>
     <label>Name: <%= f.text_field :name, class: 'span8' %></label>
     <label>ABV: <%= f.text_field :abv, class: 'span2' %></label>

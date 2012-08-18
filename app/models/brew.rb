@@ -1,11 +1,12 @@
 class Brew < ActiveRecord::Base
-  belongs_to :brewery
   belongs_to :style
   belongs_to :base_brew, class_name: 'Brew'
+  has_many :brewery_brews
+  has_many :breweries, through: :brewery_brews, uniq: true
   has_many :variations, class_name: 'Brew', foreign_key: 'base_brew_id'
   has_many :beers
 
-  validates :brewery, presence: true
+  #validates :breweries, presence: true
   validates :name, presence: true
   validates :abv, numericality: { allow_nil: true }
   validates :ibu, numericality: { allow_nil: true }
@@ -20,7 +21,8 @@ class Brew < ActiveRecord::Base
   scope :with_beers, includes(:beers).joins(:beers)
 
   def searchable_name
-    "#{brewery.name} #{name}"
+    brewery_names = breweries.map { |b| b.name }.join(', ')
+    "#{brewery_names} #{name}"
   end
 
 end

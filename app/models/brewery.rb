@@ -1,5 +1,6 @@
 class Brewery < ActiveRecord::Base
-  has_many :brews
+  has_many :brewery_brews, dependent: :destroy
+  has_many :brews, through: :brewery_brews, uniq: true
 
   validates :name, presence: true
   validates :brewery_db_id, uniqueness: true, presence: true

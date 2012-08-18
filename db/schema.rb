@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120731031941) do
+ActiveRecord::Schema.define(:version => 20120817225944) do
 
   create_table "beers", :force => true do |t|
     t.string   "batch"
@@ -40,10 +40,19 @@ ActiveRecord::Schema.define(:version => 20120731031941) do
 
   add_index "breweries", ["brewery_db_id"], :name => "index_breweries_on_brewery_db_id", :unique => true
 
+  create_table "brewery_brews", :force => true do |t|
+    t.integer  "brewery_id", :null => false
+    t.integer  "brew_id",    :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "brewery_brews", ["brew_id"], :name => "index_brewery_brews_on_brew_id"
+  add_index "brewery_brews", ["brewery_id"], :name => "index_brewery_brews_on_brewery_id"
+
   create_table "brews", :force => true do |t|
     t.string   "name"
     t.decimal  "abv",              :precision => 5, :scale => 2
-    t.integer  "brewery_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description"
@@ -58,7 +67,6 @@ ActiveRecord::Schema.define(:version => 20120731031941) do
   end
 
   add_index "brews", ["brewery_db_id"], :name => "index_brews_on_brewery_db_id", :unique => true
-  add_index "brews", ["brewery_id"], :name => "index_brews_on_brewery_id"
   add_index "brews", ["style_id"], :name => "index_brews_on_style_id"
 
   create_table "categories", :force => true do |t|

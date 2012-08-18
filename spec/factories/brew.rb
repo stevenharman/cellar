@@ -2,7 +2,6 @@ require 'securerandom'
 
 FactoryGirl.define do
   factory :brew do
-    brewery
     style
     brewery_db_id { SecureRandom.hex(3) }
     name { Forgery::Name.industry }
