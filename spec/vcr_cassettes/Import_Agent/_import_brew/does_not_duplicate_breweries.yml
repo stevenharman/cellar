@@ -1,0 +1,263 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.brewerydb.com/v2/brewery/vDxSPd?key=API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - BreweryDB Ruby Gem 0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 18 Aug 2012 00:56:14 GMT
+      Server:
+      - Apache/2.2.22 (Amazon)
+      X-Powered-By:
+      - PHP/5.3.15
+      X-Ratelimit-Limit:
+      - Unlimited
+      X-Ratelimit-Remaining:
+      - Unlimited
+      Content-Length:
+      - '1256'
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"message":"READ ONLY MODE: Request Successful","data":{"id":"vDxSPd","name":"Alpine
+        Beer Company","description":"Alpine Beer Company opened its doors in the fall
+        of 2002. Years before, an interest in craft brewing developed into an actual
+        goal for the future. There were years of home brew competitions, brew science
+        classes, and extended beer runs thinly disguised as vacations. \r\nThe brewery
+        went through an expansion starting in late 2008 and became operational in
+        mid 2009. Four double sized fermentors were installed in an old garage behind
+        the current brewery. A cold box was erected adjacent to the garage and a bottling
+        machine with a nice labeler are housed there too. There is a small barrel
+        shed on the shady, north side of the garage.","website":"http:\/\/www.alpinebeerco.com\/","established":"2002","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:41:44","updateDate":"2012-03-21 19:06:03"},"status":"success"}'
+    http_version: 
+  recorded_at: Sat, 18 Aug 2012 00:56:14 GMT
+- request:
+    method: get
+    uri: http://api.brewerydb.com/v2/beer/aapeRv?key=API_KEY&withBreweries=Y
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - BreweryDB Ruby Gem 0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 18 Aug 2012 00:56:14 GMT
+      Server:
+      - Apache/2.2.22 (Amazon)
+      X-Powered-By:
+      - PHP/5.3.15
+      X-Ratelimit-Limit:
+      - Unlimited
+      X-Ratelimit-Remaining:
+      - Unlimited
+      Content-Length:
+      - '4634'
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"message":"READ ONLY MODE: Request Successful","data":{"id":"aapeRv","name":"Super
+        India Pale Ale","description":"Alpine might be small, but their brewing chops
+        are mighty. We teamed up to create this triple dry-hopped imperial IPA bursting
+        with Columbus, Amarillo, Centennial and Simcoe hops. Consider yourself a hero
+        for getting an Alpine beer outside of San Diego.","abv":"9","glasswareId":5,"availableId":2,"styleId":31,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/aapeRv\/upload_ptZbur-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/aapeRv\/upload_ptZbur-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/aapeRv\/upload_ptZbur-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-08-11
+        19:14:26","updateDate":"2012-08-15 13:11:42","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        02:41:33"},"available":{"id":"2","name":"Limited","description":"Limited availability."},"style":{"id":31,"categoryId":3,"category":{"id":3,"name":"North
+        American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"Imperial
+        or Double India Pale Ale","description":"Imperial or Double India Pale Ales
+        have intense hop bitterness, flavor and aroma. Alcohol content is medium-high
+        to high and notably evident. They range from deep golden to medium copper
+        in color. The style may use any variety of hops. Though the hop character
+        is intense it''s balanced with complex alcohol flavors, moderate to high fruity
+        esters and medium to high malt character. Hop character should be fresh and
+        lively and should not be harsh in quality. The use of large amounts of hops
+        may cause a degree of appropriate hop haze. Imperial or Double India Pale
+        Ales have medium-high to full body. Diacetyl should not be perceived. The
+        intention of this style of beer is to exhibit the fresh and bright character
+        of hops. Oxidative character and aged character should not be present.","ibuMin":"65","ibuMax":"100","abvMin":"7.5","abvMax":"10.5","srmMin":"5","srmMax":"13","ogMin":"1.075","fgMin":"1.012","fgMax":"1.02","createDate":"2012-03-21
+        20:06:45"},"breweries":[{"id":"vDxSPd","name":"Alpine Beer Company","description":"Alpine
+        Beer Company opened its doors in the fall of 2002. Years before, an interest
+        in craft brewing developed into an actual goal for the future. There were
+        years of home brew competitions, brew science classes, and extended beer runs
+        thinly disguised as vacations. \r\nThe brewery went through an expansion starting
+        in late 2008 and became operational in mid 2009. Four double sized fermentors
+        were installed in an old garage behind the current brewery. A cold box was
+        erected adjacent to the garage and a bottling machine with a nice labeler
+        are housed there too. There is a small barrel shed on the shady, north side
+        of the garage.","website":"http:\/\/www.alpinebeerco.com\/","established":"2002","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:41:44","updateDate":"2012-03-21 19:06:03"},{"id":"Jt43j7","name":"New Belgium
+        Brewing","description":"We''ll set the scene: 1989. Belgium. Boy on bike.
+        (OK, make that a young man of 32). As our aspiring young homebrewer rides
+        his mountain bike with fat tires through European villages famous for beer,
+        New Belgium Brewing Company was but a glimmer in his eye. Or basement. For
+        Jeff Lebesch would return to Fort Collins with a handful of ingredients and
+        an imagination full of recipes. And then there was beer. Jeff''s first two
+        basement-brewed creations? A brown dubbel with earthy undertones named Abbey
+        and a remarkably well-balanced amber he named Fat Tire. To say the rest was
+        history would be to overlook his wife''s involvement. Kim Jordan was New Belgium''s
+        first bottler, sales rep, distributor, marketer and financial planner. And
+        now, she''s our CEO.","website":"http:\/\/www.newbelgium.com\/","established":"1989","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:42:03","updateDate":"2012-05-18 15:24:47"}]},"status":"success"}'
+    http_version: 
+  recorded_at: Sat, 18 Aug 2012 00:56:14 GMT
+- request:
+    method: get
+    uri: http://api.brewerydb.com/v2/brewery/Jt43j7?key=API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - BreweryDB Ruby Gem 0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 18 Aug 2012 00:56:14 GMT
+      Server:
+      - Apache/2.2.22 (Amazon)
+      X-Powered-By:
+      - PHP/5.3.15
+      X-Ratelimit-Limit:
+      - Unlimited
+      X-Ratelimit-Remaining:
+      - Unlimited
+      Content-Length:
+      - '1372'
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"message":"READ ONLY MODE: Request Successful","data":{"id":"Jt43j7","name":"New
+        Belgium Brewing","description":"We''ll set the scene: 1989. Belgium. Boy on
+        bike. (OK, make that a young man of 32). As our aspiring young homebrewer
+        rides his mountain bike with fat tires through European villages famous for
+        beer, New Belgium Brewing Company was but a glimmer in his eye. Or basement.
+        For Jeff Lebesch would return to Fort Collins with a handful of ingredients
+        and an imagination full of recipes. And then there was beer. Jeff''s first
+        two basement-brewed creations? A brown dubbel with earthy undertones named
+        Abbey and a remarkably well-balanced amber he named Fat Tire. To say the rest
+        was history would be to overlook his wife''s involvement. Kim Jordan was New
+        Belgium''s first bottler, sales rep, distributor, marketer and financial planner.
+        And now, she''s our CEO.","website":"http:\/\/www.newbelgium.com\/","established":"1989","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:42:03","updateDate":"2012-05-18 15:24:47"},"status":"success"}'
+    http_version: 
+  recorded_at: Sat, 18 Aug 2012 00:56:14 GMT
+- request:
+    method: get
+    uri: http://api.brewerydb.com/v2/beer/aapeRv?key=API_KEY&withBreweries=Y
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - BreweryDB Ruby Gem 0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 18 Aug 2012 00:56:14 GMT
+      Server:
+      - Apache/2.2.22 (Amazon)
+      X-Powered-By:
+      - PHP/5.3.15
+      X-Ratelimit-Limit:
+      - Unlimited
+      X-Ratelimit-Remaining:
+      - Unlimited
+      Content-Length:
+      - '4634'
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"message":"READ ONLY MODE: Request Successful","data":{"id":"aapeRv","name":"Super
+        India Pale Ale","description":"Alpine might be small, but their brewing chops
+        are mighty. We teamed up to create this triple dry-hopped imperial IPA bursting
+        with Columbus, Amarillo, Centennial and Simcoe hops. Consider yourself a hero
+        for getting an Alpine beer outside of San Diego.","abv":"9","glasswareId":5,"availableId":2,"styleId":31,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/aapeRv\/upload_ptZbur-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/aapeRv\/upload_ptZbur-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/aapeRv\/upload_ptZbur-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-08-11
+        19:14:26","updateDate":"2012-08-15 13:11:42","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        02:41:33"},"available":{"id":"2","name":"Limited","description":"Limited availability."},"style":{"id":31,"categoryId":3,"category":{"id":3,"name":"North
+        American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"Imperial
+        or Double India Pale Ale","description":"Imperial or Double India Pale Ales
+        have intense hop bitterness, flavor and aroma. Alcohol content is medium-high
+        to high and notably evident. They range from deep golden to medium copper
+        in color. The style may use any variety of hops. Though the hop character
+        is intense it''s balanced with complex alcohol flavors, moderate to high fruity
+        esters and medium to high malt character. Hop character should be fresh and
+        lively and should not be harsh in quality. The use of large amounts of hops
+        may cause a degree of appropriate hop haze. Imperial or Double India Pale
+        Ales have medium-high to full body. Diacetyl should not be perceived. The
+        intention of this style of beer is to exhibit the fresh and bright character
+        of hops. Oxidative character and aged character should not be present.","ibuMin":"65","ibuMax":"100","abvMin":"7.5","abvMax":"10.5","srmMin":"5","srmMax":"13","ogMin":"1.075","fgMin":"1.012","fgMax":"1.02","createDate":"2012-03-21
+        20:06:45"},"breweries":[{"id":"vDxSPd","name":"Alpine Beer Company","description":"Alpine
+        Beer Company opened its doors in the fall of 2002. Years before, an interest
+        in craft brewing developed into an actual goal for the future. There were
+        years of home brew competitions, brew science classes, and extended beer runs
+        thinly disguised as vacations. \r\nThe brewery went through an expansion starting
+        in late 2008 and became operational in mid 2009. Four double sized fermentors
+        were installed in an old garage behind the current brewery. A cold box was
+        erected adjacent to the garage and a bottling machine with a nice labeler
+        are housed there too. There is a small barrel shed on the shady, north side
+        of the garage.","website":"http:\/\/www.alpinebeerco.com\/","established":"2002","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:41:44","updateDate":"2012-03-21 19:06:03"},{"id":"Jt43j7","name":"New Belgium
+        Brewing","description":"We''ll set the scene: 1989. Belgium. Boy on bike.
+        (OK, make that a young man of 32). As our aspiring young homebrewer rides
+        his mountain bike with fat tires through European villages famous for beer,
+        New Belgium Brewing Company was but a glimmer in his eye. Or basement. For
+        Jeff Lebesch would return to Fort Collins with a handful of ingredients and
+        an imagination full of recipes. And then there was beer. Jeff''s first two
+        basement-brewed creations? A brown dubbel with earthy undertones named Abbey
+        and a remarkably well-balanced amber he named Fat Tire. To say the rest was
+        history would be to overlook his wife''s involvement. Kim Jordan was New Belgium''s
+        first bottler, sales rep, distributor, marketer and financial planner. And
+        now, she''s our CEO.","website":"http:\/\/www.newbelgium.com\/","established":"1989","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:42:03","updateDate":"2012-05-18 15:24:47"}]},"status":"success"}'
+    http_version: 
+  recorded_at: Sat, 18 Aug 2012 00:56:15 GMT
+recorded_with: VCR 2.2.4

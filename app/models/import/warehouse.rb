@@ -30,7 +30,7 @@ module Import
     end
 
     def brew(id)
-      @client.beers.find(id, with_breweries: true)
+      @client.beers.find(id, withBreweries: 'Y')
     end
   end
 end

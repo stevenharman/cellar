@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 16 Aug 2012 03:21:30 GMT
+      - Sat, 18 Aug 2012 00:56:44 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -477,5 +477,5 @@ http_interactions:
         organizers may choose to distinguish these types of old ale from modern versions.)","ibuMin":"30","ibuMax":"65","abvMin":"6","abvMax":"9","srmMin":"12","srmMax":"30","ogMin":"1.058","fgMin":"1.014","fgMax":"1.03","createDate":"2012-03-21
         20:06:45"}}],"status":"success"}'
     http_version: 
-  recorded_at: Thu, 16 Aug 2012 03:21:31 GMT
+  recorded_at: Sat, 18 Aug 2012 00:56:45 GMT
 recorded_with: VCR 2.2.4

@@ -26,7 +26,7 @@ describe Import::Warehouse do
       expect(breweries.first.id).to be_kind_of String
       expect(breweries.each).to be_kind_of Enumerator
       #TODO: use #count as soon as it's implemented.
-      expect(breweries.count).to eq(3879)
+      expect(breweries.count).to eq(3840)
     end
 
     it 'fetches a single brewery' do

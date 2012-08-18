@@ -8,13 +8,13 @@ module Import
     def initialize(raw_data, brew_factory = ::Brew, brewery_factory = ::Brewery)
       @raw_data = raw_data
       @brew_factory = brew_factory
+      @brewery_factory = brewery_factory
       @brew = find_or_initialize(raw_data.id)
-      @brewery = brewery_factory.find_by_brewery_db_id(raw_data.brewery_id)
+      @new_breweries = new_breweries(raw_data.breweries)
     end
 
     def import
       @brew.tap do |b|
-        b.brewery = @brewery
         b.name = @raw_data.name
         b.description = @raw_data.description
         b.style_id = @raw_data.style_id
@@ -32,6 +32,7 @@ module Import
       end
 
       @brew.save!
+      @brew.breweries << @new_breweries
       @brew
     end
 
@@ -40,6 +41,12 @@ module Import
     def find_or_initialize(brewery_db_id)
       brewery = @brew_factory.find_by_brewery_db_id(brewery_db_id)
       brewery || @brew_factory.new.tap { |b| b.brewery_db_id = brewery_db_id }
+    end
+
+    def new_breweries(breweries)
+      ids = Array(breweries).map(&:id)
+      all_breweries = @brewery_factory.find_by_brewery_db_ids(ids)
+      all_breweries - @brew.breweries
     end
 
   end

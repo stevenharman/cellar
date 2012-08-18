@@ -10,4 +10,8 @@ class Brewery < ActiveRecord::Base
 
   include PgSearch
   multisearchable against: [:name]
+
+  def self.find_by_brewery_db_ids(ids)
+    where(brewery_db_id: ids)
+  end
 end

@@ -13,7 +13,7 @@ describe Import::Agent, :vcr do
 
   it '#import_breweries loads all of the breweries' do
     subject.import_breweries
-    expect(Brewery.count).to eq(3877)
+    expect(Brewery.count).to eq(3838)
   end
 
   it '#import_brewery loads the brewery' do
@@ -22,15 +22,29 @@ describe Import::Agent, :vcr do
     expect(Brewery.first.brewery_db_id).to eq('Idm5Y5')
   end
 
-  it '#import_brew loads the brew for all collaborating breweries' do
-    pending 'Re-work breweries -> brews data model'
-    alpine = subject.import_brewery('vDxSPd')
-    new_belgium = subject.import_brewery('Jt43j7')
+  describe '#import_brew' do
+    it 'loads the brew for all collaborating breweries' do
+      alpine = subject.import_brewery('vDxSPd')
+      new_belgium = subject.import_brewery('Jt43j7')
 
-    brew = subject.import_brew('aapeRv')
-    expect(Brew.count).to eq(1)
-    expect(brew.brewery_db_id).to eq('99Uj1n')
-    expect(alpine.brews).to include(brew)
-    expect(new_belgium.brews).to include(brew)
+      brew = subject.import_brew('aapeRv')
+      expect(Brew.count).to eq(1)
+      expect(brew.brewery_db_id).to eq('aapeRv')
+      expect(brew.breweries).to eq([alpine, new_belgium])
+      expect(alpine.brews).to eq([brew])
+      expect(new_belgium.brews).to eq([brew])
+    end
+
+    it 'does not duplicate breweries' do
+      alpine = subject.import_brewery('vDxSPd')
+      subject.import_brew('aapeRv')
+
+      new_belgium = subject.import_brewery('Jt43j7')
+      brew = subject.import_brew('aapeRv')
+      expect(Brew.count).to eq(1)
+      expect(brew.breweries).to eq([alpine, new_belgium])
+      expect(alpine.brews).to eq([brew])
+      expect(new_belgium.brews).to eq([brew])
+    end
   end
 end
