@@ -39,7 +39,8 @@ module Import
     end
 
     def import_brew(id)
-      brew = Import::Brew.import(@warehouse.brew(id))
+      raw_data = @warehouse.brew(id)
+      brew = Translator.new(BrewTranslation, Brew).translate(raw_data)
       @log.record(brew)
     end
 

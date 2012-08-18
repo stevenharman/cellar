@@ -1,4 +1,4 @@
-require_relative 'brew'
+require_relative 'brew_translation'
 require 'ostruct'
 require 'sidekiq'
 
@@ -17,7 +17,7 @@ module Import
     def perform(brewery_id)
       @warehouse.brews_for_brewery(brewery_id).map do |b|
         b.breweries = [OpenStruct.new(id: brewery_id)]
-        brew = Import::Brew.import(b)
+        brew = Translator.new(BrewTranslation, Brew).translate(b)
         @log.record(brew)
       end
     end
