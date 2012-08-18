@@ -7,7 +7,7 @@ module Import
     include Sidekiq::Worker
 
     def self.import_from(brewery)
-      preform_async(brewery.brewery_db_id)
+      perform_async(brewery.brewery_db_id)
     end
 
     def initialize(warehouse = Warehouse.new, log = Log.new)
