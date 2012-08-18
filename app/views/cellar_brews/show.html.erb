@@ -2,11 +2,11 @@
 
 <div class="row">
   <div class="span6">
-    <h5><%= render @brew.breweries %></h5>
+    <h5><%= render partial: @brew.breweries, spacer_template: 'breweries/brewery_spacer' %></h5>
   </div>
   <div class="span4">
     <dl class='brew-details'>
-      <dt class="span2">Style: </dt><dd>NO LONGER USED.&nbsp;</dd>
+      <dt class="span2">Style: </dt><dd><%= @brew.style.name %></dd>
       <dt class="span2">ABV: </dt><dd><%= @brew.abv %>%</dd>
       <dt class="span2">IBU: </dt><dd><%= @brew.ibu %></dd>
     </dl>

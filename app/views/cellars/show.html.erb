@@ -29,7 +29,7 @@
         <% for brew in @cellar.stocked_brews %>
           <tr class="beer">
             <td><img src="/assets/edit_icon_12.gif" alt="Edit"></td>
-            <td><%= render brew.breweries %></td>
+            <td><%= render partial: brew.breweries, spacer_template: 'breweries/brewery_spacer' %></td>
             <td><%= link_to brew.name, brew %></td>
             <td style="text-align: center;"><%= brew.beers.size -%></td>
             <td></td>
