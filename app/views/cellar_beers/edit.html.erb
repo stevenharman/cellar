@@ -1,5 +1,5 @@
 <h2><%= @beer.brew.name %></h2>
-<h5>By <%= link_to @beer.brew.brewery.name, @beer.brew.brewery, title: @beer.brew.brewery.name %></h5>
+<h5>By <%= render partial: @beer.brew.breweries, spacer_template: 'breweries/brewery_spacer' %></h5>
 
 <%= form_for @beer, url: cellar_beer_path(@beer.user, @beer) do |f| %>
   <%= render partial: 'beers/fields', locals: { fb: f } %>
