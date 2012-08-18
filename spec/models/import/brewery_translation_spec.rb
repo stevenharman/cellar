@@ -1,32 +1,21 @@
-require 'models/import/brewery'
+require 'models/import/brewery_translation'
 
-describe Import::Brewery do
+describe Import::BreweryTranslation do
 
-  describe '#.import' do
-    subject { described_class.new(raw_data, brewery_catalog) }
+  describe '#translate' do
+    subject { described_class.new(brewery) }
     let(:brewery) { OpenStruct.new(save: true)}
     let(:raw_data) { OpenStruct.new(id: 'abc123') }
-    let(:brewery_catalog) { stub }
 
-    it 'updates the brewery when it already exists' do
-      brewery_catalog.stub(:find_by_brewery_db_id).with(raw_data.id) { brewery }
+    it 'saves the translated brewery' do
       brewery.should_receive(:save)
-      subject.import
-    end
-
-    it 'adds a new brewery when it does already not exist' do
-      brewery_catalog.stub(:find_by_brewery_db_id) { nil }
-      brewery_catalog.stub(:new) { brewery }
-      brewery.should_receive(:save)
-
-      expect(subject.import.brewery_db_id).to eql(raw_data.id)
+      subject.translate(raw_data)
     end
 
     describe 'maps in new data' do
       let(:raw_data) { fully_loaded_raw_data }
       before do
-        brewery_catalog.stub(:find_by_brewery_db_id) { brewery }
-        subject.import
+        subject.translate(raw_data)
       end
 
       it { expect(brewery.name).to eql(raw_data.name) }
@@ -43,8 +32,7 @@ describe Import::Brewery do
       let(:brewery) { fully_loaded_brewery }
       let(:raw_data) { OpenStruct.new }
       before do
-        brewery_catalog.stub(:find_by_brewery_db_id) { brewery }
-        subject.import
+        subject.translate(raw_data)
       end
 
       it { expect(brewery.name).to_not be }

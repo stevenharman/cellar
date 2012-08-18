@@ -12,12 +12,6 @@ describe Import::Agent, :vcr do
     expect(Category.count).to eq(12)
   end
 
-  it '#import_breweries loads all of the breweries' do
-    warehouse.stub(:breweries) { [raw_data] }
-    Import::Brewery.should_receive(:import).with(raw_data)
-    subject.import_breweries
-  end
-
   it '#import_brewery loads the brewery' do
     subject.import_brewery('Idm5Y5')
     expect(Brewery.count).to eq(1)

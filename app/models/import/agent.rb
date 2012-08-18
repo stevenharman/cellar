@@ -1,8 +1,3 @@
-require_relative 'category'
-require_relative 'style'
-require_relative 'brewery'
-require_relative 'brew_catalog'
-require_relative 'log'
 
 module Import
   class Agent
@@ -30,7 +25,7 @@ module Import
 
     def import_breweries
       @warehouse.breweries.each do |b|
-        brewery = Import::Brewery.import(b)
+        brewery = Translator.new(BreweryTranslation, Brewery).translate(b)
         @log.record(brewery)
         yield brewery if block_given?
         brewery
@@ -38,7 +33,8 @@ module Import
     end
 
     def import_brewery(id)
-      brewery = Import::Brewery.import(@warehouse.brewery(id))
+      raw_data = @warehouse.brewery(id)
+      brewery = Translator.new(BreweryTranslation, Brewery).translate(raw_data)
       @log.record(brewery)
     end
 
