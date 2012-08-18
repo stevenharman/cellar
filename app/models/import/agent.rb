@@ -55,7 +55,7 @@ module Import
 
     def import_styles
       @warehouse.styles.map do |s|
-        style = Import::Style.import(s)
+        style = Translator.new(StyleTranslation, Style).translate(s)
         @log.record(style)
       end
     end
