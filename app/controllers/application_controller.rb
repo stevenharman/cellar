@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def load_cellar
-    keeper = User.for_username!(params[:user_id] || params[:username])
+    keeper = User.for_username!(params[:cellar_id] || params[:username])
     Cellar.new(keeper)
   end
 

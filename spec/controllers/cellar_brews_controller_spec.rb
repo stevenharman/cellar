@@ -17,25 +17,25 @@ describe CellarBrewsController do
 
       # ~/bob/brews/bobs_brew -> 200
       specify "he can see his brew" do
-        get :show, user_id: bob, id: bobs_brew
+        get :show, cellar_id: bob, id: bobs_brew
         response.should be_success
       end
 
       # ~/bob/brews/alices_brew -> 200
       specify "he can see brews that are not currently in his cellar" do
-        get :show, user_id: bob, id: alices_brew
+        get :show, cellar_id: bob, id: alices_brew
         response.should be_success
       end
 
       # ~/alice/brews/bobs_brew -> 404
       specify "he cannot see brew in Alice's Cellar" do
-        get :show, user_id: alice, id: bobs_brew
+        get :show, cellar_id: alice, id: bobs_brew
         response.should be_missing
       end
 
       # ~/alice/brews/alices_brew -> 404
       specify "he cannot see Alice's brew" do
-        get :show, user_id: alice, id: alices_brew
+        get :show, cellar_id: alice, id: alices_brew
         response.should be_missing
       end
 
@@ -43,7 +43,7 @@ describe CellarBrewsController do
 
     context 'and Bob is not signed in' do
       specify 'he cannot see his brew' do
-        get :show, user_id: bob, id: bobs_brew
+        get :show, cellar_id: bob, id: bobs_brew
         response.should redirect_to new_user_session_path
       end
     end
