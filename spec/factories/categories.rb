@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :category do
     sequence(:name) { |n| "Category ##{n}" }
-    sequence(:brewery_db_id)
+    brewery_db_id { SecureRandom.random_number(999_999_999) }
   end
 end
