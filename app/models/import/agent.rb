@@ -48,7 +48,7 @@ module Import
 
     def import_categories
       @warehouse.categories.map do |c|
-        category = Import::Category.import(c)
+        category = Translator.new(CategoryTranslation, Category).translate(c)
         @log.record(category)
       end
     end
