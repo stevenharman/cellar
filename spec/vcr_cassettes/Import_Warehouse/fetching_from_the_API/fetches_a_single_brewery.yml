@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:44 GMT
+      - Sat, 18 Aug 2012 01:19:13 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -57,5 +57,5 @@ http_interactions:
         friends, the consumer.","website":"http:\/\/www.foundersbrewing.com\/","established":"1997","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_LxyddJ-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_LxyddJ-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_LxyddJ-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:55","updateDate":"2012-04-09 19:06:30"},"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:44 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:14 GMT
 recorded_with: VCR 2.2.4

@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:45 GMT
+      - Sat, 18 Aug 2012 01:19:14 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -74,5 +74,5 @@ http_interactions:
         to sharing our beers with you.","website":"http:\/\/www.bellsbeer.com\/","established":"1985","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_KY2kdU-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_KY2kdU-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_KY2kdU-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:45","updateDate":"2012-04-09 19:01:20"}]},"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:45 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:15 GMT
 recorded_with: VCR 2.2.4

@@ -3,7 +3,8 @@ require 'spec_helper'
 describe Import::Agent, :vcr do
   subject { described_class.new(warehouse, log) }
   let(:warehouse) { Import::Warehouse.new }
-  let(:log) { Import::Log.new }
+  let(:log) { Import::Log::Noop.new }
+  let(:raw_data) { stub }
 
   it '#import_styles_with_categories loads the all styles and their categories' do
     subject.import_styles_with_categories
@@ -12,8 +13,9 @@ describe Import::Agent, :vcr do
   end
 
   it '#import_breweries loads all of the breweries' do
+    warehouse.stub(:breweries) { [raw_data] }
+    Import::Brewery.should_receive(:import).with(raw_data)
     subject.import_breweries
-    expect(Brewery.count).to eq(3838)
   end
 
   it '#import_brewery loads the brewery' do
@@ -35,7 +37,7 @@ describe Import::Agent, :vcr do
       expect(new_belgium.brews).to eq([brew])
     end
 
-    it 'does not duplicate breweries' do
+    it 'does not duplicate breweries when re-imported' do
       alpine = subject.import_brewery('vDxSPd')
       subject.import_brew('aapeRv')
 

@@ -14,6 +14,12 @@ module Import
       item
     end
 
+    class Noop
+      def record(item)
+        item
+      end
+    end
+
     private
 
     def debug_message(item)

@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:16 GMT
+      - Sat, 18 Aug 2012 01:18:45 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -412,7 +412,7 @@ http_interactions:
         Carl Schmetzer","website":"http:\/\/www.bierdeckelsammler.net\/en\/brewery\/31","established":"1716","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-07
         10:16:54","updateDate":"2012-08-13 11:15:38"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:17 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:45 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=2
@@ -432,7 +432,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:17 GMT
+      - Sat, 18 Aug 2012 01:18:45 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -738,7 +738,7 @@ http_interactions:
         Picobrouwerij","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:44","updateDate":"2012-03-21 19:06:03"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:17 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:46 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=3
@@ -758,7 +758,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:17 GMT
+      - Sat, 18 Aug 2012 01:18:46 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -1092,7 +1092,7 @@ http_interactions:
         environmentally-friendly fabrics also available.","website":"http:\/\/arkosebrewery.com\/","established":"2011","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/4JAg2G\/upload_oh1SxW-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/4JAg2G\/upload_oh1SxW-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/4JAg2G\/upload_oh1SxW-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:44","updateDate":"2012-07-22 12:40:02"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:17 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:46 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=4
@@ -1112,7 +1112,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:17 GMT
+      - Sat, 18 Aug 2012 01:18:46 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -1476,7 +1476,7 @@ http_interactions:
         Brothers Brewing","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-07-22
         12:46:02","updateDate":"2012-07-22 12:46:44"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:18 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:46 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=5
@@ -1496,7 +1496,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:18 GMT
+      - Sat, 18 Aug 2012 01:18:46 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -1863,7 +1863,7 @@ http_interactions:
         Brauerei","website":"http:\/\/www.bautzener.de\/","established":"1997","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-07
         10:20:00","updateDate":"2012-08-15 15:47:55"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:18 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:47 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=6
@@ -1883,7 +1883,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:18 GMT
+      - Sat, 18 Aug 2012 01:18:47 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -2239,7 +2239,7 @@ http_interactions:
         Brauhaus","website":"http:\/\/www.klafri-schroelie-bennigsen.de\/","established":"2003","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-07
         10:18:24","updateDate":"2012-08-13 01:22:26"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:18 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:47 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=7
@@ -2259,7 +2259,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:18 GMT
+      - Sat, 18 Aug 2012 01:18:47 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -2551,7 +2551,7 @@ http_interactions:
         our growlers. Tours of the brew house are also available by request.","website":"http:\/\/www.bigrockchophouse.com\/","established":"1984","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/tc0H6U\/upload_VmPssn-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/tc0H6U\/upload_VmPssn-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/tc0H6U\/upload_VmPssn-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:46","updateDate":"2012-04-09 18:55:10"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:19 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:47 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=8
@@ -2571,7 +2571,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:19 GMT
+      - Sat, 18 Aug 2012 01:18:47 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -2880,7 +2880,7 @@ http_interactions:
         many of which are made right here in Indiana.","website":"http:\/\/www.blackswanbrewpub.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/zs7jmp\/upload_0juySl-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/zs7jmp\/upload_0juySl-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/zs7jmp\/upload_0juySl-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:46","updateDate":"2012-03-21 19:06:16"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:19 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:48 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=9
@@ -2900,7 +2900,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:19 GMT
+      - Sat, 18 Aug 2012 01:18:48 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -3245,7 +3245,7 @@ http_interactions:
         16:09:05","updateDate":"2012-05-17 13:45:21"},{"id":"pVT9RH","name":"BNE Brewing","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:47","updateDate":"2012-03-21 19:06:16"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:19 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:48 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=10
@@ -3265,7 +3265,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:19 GMT
+      - Sat, 18 Aug 2012 01:18:48 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -3532,7 +3532,7 @@ http_interactions:
         Brewhouse","website":"http:\/\/www.bradysbrewhouse.com\/","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:47","updateDate":"2012-04-11 12:18:20"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:19 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:48 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=11
@@ -3552,7 +3552,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:20 GMT
+      - Sat, 18 Aug 2012 01:18:48 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -3701,7 +3701,7 @@ http_interactions:
         Val de Sambre","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:48","updateDate":"2012-03-21 19:06:04"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:20 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:49 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=12
@@ -3721,7 +3721,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:20 GMT
+      - Sat, 18 Aug 2012 01:18:49 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -3875,7 +3875,7 @@ http_interactions:
         Neunspringe Worbis","website":"http:\/\/brauerei-neunspringe.de\/","established":"1867","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-07
         10:20:32","updateDate":"2012-08-13 11:42:31"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:20 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:49 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=13
@@ -3895,7 +3895,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:20 GMT
+      - Sat, 18 Aug 2012 01:18:49 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -4053,7 +4053,7 @@ http_interactions:
         Gr\u00fcnstadt","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-07
         10:19:26","updateDate":"2012-08-16 12:16:46"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:20 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:49 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=14
@@ -4073,7 +4073,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:20 GMT
+      - Sat, 18 Aug 2012 01:18:49 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -4217,7 +4217,7 @@ http_interactions:
         character.","website":"http:\/\/www.breckbrew.com\/","established":"1990","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/IImUD9\/upload_oXaKXX-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/IImUD9\/upload_oXaKXX-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/IImUD9\/upload_oXaKXX-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:48","updateDate":"2012-03-21 19:06:11"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:21 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:49 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=15
@@ -4237,7 +4237,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:21 GMT
+      - Sat, 18 Aug 2012 01:18:49 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -4553,7 +4553,7 @@ http_interactions:
         and one of the most well loved restaurants in the city of Indianapolis.","website":"http:\/\/www.broadripplebrewpub.com\/","established":"1990","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/S4ShGM\/upload_2biEkX-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/S4ShGM\/upload_2biEkX-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/S4ShGM\/upload_2biEkX-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:48","updateDate":"2012-04-17 18:38:02"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:21 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:50 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=16
@@ -4573,7 +4573,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:21 GMT
+      - Sat, 18 Aug 2012 01:18:50 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -4774,7 +4774,7 @@ http_interactions:
         Riva","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-06-01
         13:05:55","updateDate":"2012-06-01 19:55:06"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:21 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:50 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=17
@@ -4794,7 +4794,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:21 GMT
+      - Sat, 18 Aug 2012 01:18:51 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -5100,7 +5100,7 @@ http_interactions:
         Brewing","established":"1998","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:49","updateDate":"2012-03-21 19:06:05"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:22 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:51 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=18
@@ -5120,7 +5120,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:22 GMT
+      - Sat, 18 Aug 2012 01:18:51 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -5446,7 +5446,7 @@ http_interactions:
         our region, as well as treating them to a wonderful meal and a great experience.","website":"http:\/\/www.capcitybrew.com\/","established":"1992","mailingListUrl":"http:\/\/capitolcitybrewingcompany.fbmta.com\/members\/UpdateProfile.aspx?Action=Subscribe&InputSource=w","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Vq0Dad\/upload_xGzfpJ-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Vq0Dad\/upload_xGzfpJ-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Vq0Dad\/upload_xGzfpJ-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:50","updateDate":"2012-03-21 19:06:05"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:22 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:52 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=19
@@ -5466,7 +5466,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:22 GMT
+      - Sat, 18 Aug 2012 01:18:52 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -5757,7 +5757,7 @@ http_interactions:
         Nacional","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:50","updateDate":"2012-03-21 19:06:05"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:22 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:52 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=20
@@ -5777,7 +5777,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:22 GMT
+      - Sat, 18 Aug 2012 01:18:52 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -6059,7 +6059,7 @@ http_interactions:
         friendly dishes made with the freshest ingredients.","website":"http:\/\/cjsbrewingcompany.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/5jCLG7\/upload_VewwjD-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/5jCLG7\/upload_VewwjD-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/5jCLG7\/upload_VewwjD-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:14","updateDate":"2012-03-21 19:06:13"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:23 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:52 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=21
@@ -6079,7 +6079,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:23 GMT
+      - Sat, 18 Aug 2012 01:18:52 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -6410,7 +6410,7 @@ http_interactions:
         and we strive to protect the environment. That''s just how we do business.","website":"http:\/\/www.coors.com\/","established":"1873","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/avMkil\/upload_KUwCAv-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/avMkil\/upload_KUwCAv-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/avMkil\/upload_KUwCAv-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:51","updateDate":"2012-03-21 19:06:05"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:23 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:53 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=22
@@ -6430,7 +6430,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:23 GMT
+      - Sat, 18 Aug 2012 01:18:53 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -6761,7 +6761,7 @@ http_interactions:
         sipping a fresh pint and listening to live music in no time.\r\nCheers!","website":"http:\/\/crossroadsbrewingco.com\/","established":"2010","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/tE9Evu\/upload_qG5pmo-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/tE9Evu\/upload_qG5pmo-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/tE9Evu\/upload_qG5pmo-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:52","updateDate":"2012-04-10 23:20:58"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:23 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:53 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=23
@@ -6781,7 +6781,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:23 GMT
+      - Sat, 18 Aug 2012 01:18:53 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -7074,7 +7074,7 @@ http_interactions:
         Stuft Pizza and Brewing","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:52","updateDate":"2012-03-21 19:06:06"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:24 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:53 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=24
@@ -7094,7 +7094,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:24 GMT
+      - Sat, 18 Aug 2012 01:18:53 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -7390,7 +7390,7 @@ http_interactions:
         because he''s making beer for you.","website":"http:\/\/www.doodlebrewing.com\/","established":"2008","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ifZ8V4\/upload_S4bCUw-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ifZ8V4\/upload_S4bCUw-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ifZ8V4\/upload_S4bCUw-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:53","updateDate":"2012-03-21 19:06:14"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:24 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:53 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=25
@@ -7410,7 +7410,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:24 GMT
+      - Sat, 18 Aug 2012 01:18:54 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -7715,7 +7715,7 @@ http_interactions:
         Brauerei im Alten Land","established":"2006","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-07
         10:18:31","updateDate":"2012-08-13 12:49:24"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:24 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:54 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=26
@@ -7735,7 +7735,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:24 GMT
+      - Sat, 18 Aug 2012 01:18:54 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -7974,7 +7974,7 @@ http_interactions:
         be had at the Empire Brewing Company.","website":"http:\/\/www.empirebrew.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/FLoT3g\/upload_s3NNpx-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/FLoT3g\/upload_s3NNpx-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/FLoT3g\/upload_s3NNpx-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:53","updateDate":"2012-03-21 19:06:10"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:25 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:54 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=27
@@ -7994,7 +7994,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:25 GMT
+      - Sat, 18 Aug 2012 01:18:54 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -8296,7 +8296,7 @@ http_interactions:
         Brewing Co","website":"http:\/\/www.fatboybeer.com\/","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:54","updateDate":"2012-03-21 19:06:16"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:25 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:54 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=28
@@ -8316,7 +8316,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:25 GMT
+      - Sat, 18 Aug 2012 01:18:55 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -8537,7 +8537,7 @@ http_interactions:
         heritage of our neighborhood and the early 1900s era when both thrived.","website":"http:\/\/www.flat12.me\/","established":"2010","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Ohy298\/upload_acFPeo-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Ohy298\/upload_acFPeo-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Ohy298\/upload_acFPeo-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:54","updateDate":"2012-04-18 23:58:56"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:25 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:55 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=29
@@ -8557,7 +8557,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:25 GMT
+      - Sat, 18 Aug 2012 01:18:55 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -8959,7 +8959,7 @@ http_interactions:
         is an exciting destination for food lovers and beer aficionados alike.","website":"http:\/\/frankenmuthbrewery.com\/","established":"1862","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/xUwGtE\/upload_VCaSiW-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/xUwGtE\/upload_VCaSiW-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/xUwGtE\/upload_VCaSiW-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:55","updateDate":"2012-04-09 18:51:03"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:26 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:55 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=30
@@ -8979,7 +8979,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:26 GMT
+      - Sat, 18 Aug 2012 01:18:55 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -9320,7 +9320,7 @@ http_interactions:
         Spezialit\u00e4ten Brauerei","established":"1314","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-07
         10:20:19","updateDate":"2012-08-13 12:14:02"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:26 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:55 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=31
@@ -9340,7 +9340,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:26 GMT
+      - Sat, 18 Aug 2012 01:18:56 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -9553,7 +9553,7 @@ http_interactions:
         18:09:46","updateDate":"2012-07-15 21:27:45"},{"id":"8VQfMl","name":"Gold-Ochsenbrauerei","website":"http:\/\/www.gold-ochsen.de\/","established":"1668","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-07
         10:17:00","updateDate":"2012-08-13 11:16:49"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:26 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:56 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=32
@@ -9573,7 +9573,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:26 GMT
+      - Sat, 18 Aug 2012 01:18:56 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -9916,7 +9916,7 @@ http_interactions:
         a fun night out.","website":"http:\/\/www.greatlakesbrewing.com\/","established":"1988","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uSFO4T\/upload_O5TpB8-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uSFO4T\/upload_O5TpB8-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uSFO4T\/upload_O5TpB8-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:56","updateDate":"2012-06-10 21:56:31"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:27 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:56 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=33
@@ -9936,7 +9936,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:27 GMT
+      - Sat, 18 Aug 2012 01:18:56 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -10221,7 +10221,7 @@ http_interactions:
         Biergenootschap Jopen","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:56","updateDate":"2012-03-21 19:06:06"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:27 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:56 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=34
@@ -10241,7 +10241,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:27 GMT
+      - Sat, 18 Aug 2012 01:18:57 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -10426,7 +10426,7 @@ http_interactions:
         Feierling","website":"http:\/\/www.feierling.de\/","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-07
         10:16:33","updateDate":"2012-08-13 10:55:33"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:27 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:57 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=35
@@ -10446,7 +10446,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:27 GMT
+      - Sat, 18 Aug 2012 01:18:57 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -10647,7 +10647,7 @@ http_interactions:
         Brauerei GmbH & Co. KG","established":"1878","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-07
         10:19:06","updateDate":"2012-08-13 14:28:14"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:28 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:57 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=36
@@ -10667,7 +10667,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:28 GMT
+      - Sat, 18 Aug 2012 01:18:57 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -10909,7 +10909,7 @@ http_interactions:
         Kaltenhausen Salzachtal","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:57","updateDate":"2012-03-21 19:06:07"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:28 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:57 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=37
@@ -10929,7 +10929,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:28 GMT
+      - Sat, 18 Aug 2012 01:18:57 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -11206,7 +11206,7 @@ http_interactions:
         the hammers as you read this...","website":"http:\/\/www.howardbrewing.com\/","established":"2012","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1yqdyJ\/upload_rzuPYK-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1yqdyJ\/upload_rzuPYK-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1yqdyJ\/upload_rzuPYK-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-03-29
         20:46:18","updateDate":"2012-08-12 11:19:46"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:28 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:58 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=38
@@ -11226,7 +11226,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:28 GMT
+      - Sat, 18 Aug 2012 01:18:58 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -11444,7 +11444,7 @@ http_interactions:
         that the region can be proud to call its own.","website":"http:\/\/www.ironcitybrewingcompany.com\/","established":"1861","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/O2ScDy\/upload_N3drhs-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/O2ScDy\/upload_N3drhs-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/O2ScDy\/upload_N3drhs-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:58","updateDate":"2012-03-21 19:06:07"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:29 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:58 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=39
@@ -11464,7 +11464,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:29 GMT
+      - Sat, 18 Aug 2012 01:18:58 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -11738,7 +11738,7 @@ http_interactions:
         a range of beer styles from around the world.","website":"http:\/\/johnharvards.com\/","established":"1992","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/z2MPZY\/upload_dGppcY-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/z2MPZY\/upload_dGppcY-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/z2MPZY\/upload_dGppcY-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:15","updateDate":"2012-04-18 01:55:01"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:29 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:58 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=40
@@ -11758,7 +11758,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:29 GMT
+      - Sat, 18 Aug 2012 01:18:58 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -11994,7 +11994,7 @@ http_interactions:
         Hemp Beer Company","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:59","updateDate":"2012-03-21 19:06:07"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:29 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:59 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=41
@@ -12014,7 +12014,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:29 GMT
+      - Sat, 18 Aug 2012 01:18:59 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -12242,7 +12242,7 @@ http_interactions:
         Brewing Co","website":"http:\/\/www.petes.org\/","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:00","updateDate":"2012-03-21 19:06:17"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:30 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:59 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=42
@@ -12262,7 +12262,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:30 GMT
+      - Sat, 18 Aug 2012 01:18:59 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -12505,7 +12505,7 @@ http_interactions:
         Sahti Oy","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:00","updateDate":"2012-03-21 19:06:07"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:30 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:59 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=43
@@ -12525,7 +12525,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:30 GMT
+      - Sat, 18 Aug 2012 01:18:59 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -12806,7 +12806,7 @@ http_interactions:
         thirsty and fun-loving, we''ll send you home refreshed and fulfilled.","website":"http:\/\/www.libertysteakhouseandbrewery.com\/","established":"2000","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/XOcBJQ\/upload_0ymCkb-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/XOcBJQ\/upload_0ymCkb-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/XOcBJQ\/upload_0ymCkb-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:00","updateDate":"2012-03-21 19:06:07"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:30 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:00 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=44
@@ -12826,7 +12826,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:30 GMT
+      - Sat, 18 Aug 2012 01:19:00 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -13113,7 +13113,7 @@ http_interactions:
         patrons 19 or older may participate in the tasting component of the tour.","website":"http:\/\/www.longwoodbrewpub.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/jtBUsv\/upload_BhCmx8-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/jtBUsv\/upload_BhCmx8-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/jtBUsv\/upload_BhCmx8-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-03-30
         01:13:50","updateDate":"2012-03-30 01:28:11"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:31 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:00 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=45
@@ -13133,7 +13133,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:31 GMT
+      - Sat, 18 Aug 2012 01:19:00 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -13374,7 +13374,7 @@ http_interactions:
         every pint is served at properly conditioned cellar temperatures.","website":"http:\/\/madfoxbrewing.com\/","established":"2010","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vkOn59\/upload_7oXAUh-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vkOn59\/upload_7oXAUh-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vkOn59\/upload_7oXAUh-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:01","updateDate":"2012-03-21 19:06:11"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:31 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:00 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=46
@@ -13394,7 +13394,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:31 GMT
+      - Sat, 18 Aug 2012 01:19:00 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -13629,7 +13629,7 @@ http_interactions:
         room, bring the family and enjoy Corning\u2019s first brewpub.","website":"http:\/\/www.936-beer.com\/","established":"1997","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/QqMY7n\/upload_f0yECE-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/QqMY7n\/upload_f0yECE-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/QqMY7n\/upload_f0yECE-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:01","updateDate":"2012-03-21 19:06:11"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:31 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:01 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=47
@@ -13649,7 +13649,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:31 GMT
+      - Sat, 18 Aug 2012 01:19:01 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -13888,7 +13888,7 @@ http_interactions:
         restaurants, and retail outlets.","website":"http:\/\/www.michiganbrewing.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BLTzoT\/upload_J3Kgqp-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BLTzoT\/upload_J3Kgqp-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BLTzoT\/upload_J3Kgqp-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:02","updateDate":"2012-06-14 11:51:28"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:32 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:01 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=48
@@ -13908,7 +13908,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:32 GMT
+      - Sat, 18 Aug 2012 01:19:01 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -14184,7 +14184,7 @@ http_interactions:
         check our calendar for scheduled tasting events at the brewery.","website":"http:\/\/www.bendbrewingbeer.com\/","established":"2006","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/zpGIxB\/upload_ywwMfl-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/zpGIxB\/upload_ywwMfl-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/zpGIxB\/upload_ywwMfl-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:02","updateDate":"2012-03-21 19:06:12"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:32 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:01 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=49
@@ -14204,7 +14204,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:32 GMT
+      - Sat, 18 Aug 2012 01:19:01 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -14496,7 +14496,7 @@ http_interactions:
         a respectful business practice.","website":"http:\/\/mtcarmelbrewingcompany.com\/","established":"2005","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:03","updateDate":"2012-03-21 19:06:14"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:32 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:02 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=50
@@ -14516,7 +14516,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:32 GMT
+      - Sat, 18 Aug 2012 01:19:02 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -14781,7 +14781,7 @@ http_interactions:
         Brewing Co","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:03","updateDate":"2012-03-21 19:06:17"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:33 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:03 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=51
@@ -14801,7 +14801,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:33 GMT
+      - Sat, 18 Aug 2012 01:19:03 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -15137,7 +15137,7 @@ http_interactions:
         we''re just trying to make a living doing what we love, brewing beer.","website":"http:\/\/northshirebrewery.com\/","established":"2009","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/kc28OR\/upload_mgT8kI-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/kc28OR\/upload_mgT8kI-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/kc28OR\/upload_mgT8kI-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:04","updateDate":"2012-04-19 13:06:45"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:33 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:03 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=52
@@ -15157,7 +15157,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:33 GMT
+      - Sat, 18 Aug 2012 01:19:03 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -15447,7 +15447,7 @@ http_interactions:
         Brewing","website":"http:\/\/www.oldbisbeebrewingcompany.com\/","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:04","updateDate":"2012-04-13 14:10:28"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:33 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:03 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=53
@@ -15467,7 +15467,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:34 GMT
+      - Sat, 18 Aug 2012 01:19:03 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -15728,7 +15728,7 @@ http_interactions:
         Brewery","website":"http:\/\/www.orkneybrewery.co.uk\/","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:04","updateDate":"2012-03-21 19:06:08"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:34 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:04 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=54
@@ -15748,7 +15748,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:34 GMT
+      - Sat, 18 Aug 2012 01:19:04 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -15985,7 +15985,7 @@ http_interactions:
         02:42:05","updateDate":"2012-03-21 19:06:18"},{"id":"F9PADg","name":"Parkbrauerei","website":"http:\/\/www.parkbrauerei.de\/","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-17
         20:10:32","updateDate":"2012-08-17 20:10:32"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:34 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:04 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=55
@@ -16005,7 +16005,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:34 GMT
+      - Sat, 18 Aug 2012 01:19:04 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -16367,7 +16367,7 @@ http_interactions:
         Peak Patio Steakhouse & Microbrewery","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:05","updateDate":"2012-03-21 19:06:08"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:34 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:05 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=56
@@ -16387,7 +16387,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:35 GMT
+      - Sat, 18 Aug 2012 01:19:05 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -16712,7 +16712,7 @@ http_interactions:
         to carry on this Columbus tradition.","website":"http:\/\/www.powerhousebrewingco.com\/","established":"2005","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/tkaZbQ\/upload_1SXctY-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/tkaZbQ\/upload_1SXctY-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/tkaZbQ\/upload_1SXctY-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-04-16
         22:05:56","updateDate":"2012-04-16 22:27:31"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:35 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:05 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=57
@@ -16732,7 +16732,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:35 GMT
+      - Sat, 18 Aug 2012 01:19:05 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -16872,7 +16872,7 @@ http_interactions:
         Wilhelm Ketterer","website":"http:\/\/www.brauerei-ketterer.de\/","established":"1888","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-07
         10:16:50","updateDate":"2012-08-13 11:12:18"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:35 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:05 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=58
@@ -16892,7 +16892,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:35 GMT
+      - Sat, 18 Aug 2012 01:19:05 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -17121,7 +17121,7 @@ http_interactions:
         will remain our mission.","website":"http:\/\/www.redbrickbrewing.com\/","established":"1993","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/11gqIZ\/upload_sSVuiv-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/11gqIZ\/upload_sSVuiv-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/11gqIZ\/upload_sSVuiv-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:06","updateDate":"2012-03-21 19:06:11"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:35 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:06 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=59
@@ -17141,7 +17141,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:35 GMT
+      - Sat, 18 Aug 2012 01:19:06 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -17437,7 +17437,7 @@ http_interactions:
         the best in locally made flavors","website":"http:\/\/www.sierrablancabrewery.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/2AmA3b\/upload_5t0jqo-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/2AmA3b\/upload_5t0jqo-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/2AmA3b\/upload_5t0jqo-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:07","updateDate":"2012-05-07 13:07:52"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:36 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:06 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=60
@@ -17457,7 +17457,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:36 GMT
+      - Sat, 18 Aug 2012 01:19:06 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -17763,7 +17763,7 @@ http_interactions:
         Valley Brewing","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:07","updateDate":"2012-03-21 19:06:08"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:36 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:06 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=61
@@ -17783,7 +17783,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:36 GMT
+      - Sat, 18 Aug 2012 01:19:06 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -18071,7 +18071,7 @@ http_interactions:
         02:42:07","updateDate":"2012-03-21 19:06:08"},{"id":"TzG5MY","name":"Sambrook''s","website":"http:\/\/www.sambrooksbrewery.co.uk","established":"2008","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/TzG5MY\/upload_9nLguT-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/TzG5MY\/upload_9nLguT-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/TzG5MY\/upload_9nLguT-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:07","updateDate":"2012-03-21 19:06:10"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:37 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:07 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=62
@@ -18091,7 +18091,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:37 GMT
+      - Sat, 18 Aug 2012 01:19:07 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -18360,7 +18360,7 @@ http_interactions:
         Privatbrauerei Helmut Bosch","website":"http:\/\/www.schluessel-giengen.de\/","established":"1838","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-07
         10:17:12","updateDate":"2012-08-16 15:05:03"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:37 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:07 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=63
@@ -18380,7 +18380,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:37 GMT
+      - Sat, 18 Aug 2012 01:19:07 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -18653,7 +18653,7 @@ http_interactions:
         New England! Cheers!","website":"http:\/\/www.sherwoodbrewers.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/h2Q89S\/upload_4BN3aE-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/h2Q89S\/upload_4BN3aE-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/h2Q89S\/upload_4BN3aE-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:08","updateDate":"2012-03-21 19:06:14"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:37 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:07 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=64
@@ -18673,7 +18673,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:37 GMT
+      - Sat, 18 Aug 2012 01:19:07 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -19014,7 +19014,7 @@ http_interactions:
         nettle pale, and dandelion bitter. A truly unique experience!","established":"2010","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/68FCTA\/upload_XuQJWY-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/68FCTA\/upload_XuQJWY-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/68FCTA\/upload_XuQJWY-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:08","updateDate":"2012-03-21 19:06:19"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:38 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:08 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=65
@@ -19034,7 +19034,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:38 GMT
+      - Sat, 18 Aug 2012 01:19:08 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -19332,7 +19332,7 @@ http_interactions:
         States.","website":"http:\/\/www.spatenusa.com\/","established":"1397","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:08","updateDate":"2012-03-21 19:06:09"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:38 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:08 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=66
@@ -19352,7 +19352,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:38 GMT
+      - Sat, 18 Aug 2012 01:19:08 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -19641,7 +19641,7 @@ http_interactions:
         menus are available for your group.","website":"http:\/\/www.steelheadbrewery.com","established":"1995","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/X3cZyU\/upload_RpTtNy-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/X3cZyU\/upload_RpTtNy-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/X3cZyU\/upload_RpTtNy-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:09","updateDate":"2012-03-21 19:06:12"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:38 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:08 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=67
@@ -19661,7 +19661,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:38 GMT
+      - Sat, 18 Aug 2012 01:19:09 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -19931,7 +19931,7 @@ http_interactions:
         Brewing Co","website":"http:\/\/www.sunvalleybrewery.com\/","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:09","updateDate":"2012-03-21 19:06:18"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:39 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:09 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=68
@@ -19951,7 +19951,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:39 GMT
+      - Sat, 18 Aug 2012 01:19:09 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -20254,7 +20254,7 @@ http_interactions:
         line should take care of itself.","website":"http:\/\/texasbigbeer.com\/","established":"2011","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/pF0ajA\/upload_dpbPQQ-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/pF0ajA\/upload_dpbPQQ-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/pF0ajA\/upload_dpbPQQ-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:09","updateDate":"2012-07-11 19:07:12"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:39 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:09 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=69
@@ -20274,7 +20274,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:39 GMT
+      - Sat, 18 Aug 2012 01:19:09 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -20591,7 +20591,7 @@ http_interactions:
         of our dining room, we look forward to your patronage.","website":"http:\/\/www.thepeekskillbrewery.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/iEqfUq\/upload_BXQKl4-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/iEqfUq\/upload_BXQKl4-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/iEqfUq\/upload_BXQKl4-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:10","updateDate":"2012-03-21 19:06:12"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:39 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:10 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=70
@@ -20611,7 +20611,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:39 GMT
+      - Sat, 18 Aug 2012 01:19:10 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -20961,7 +20961,7 @@ http_interactions:
         charm - you\u2019ll know it when you taste it.","website":"http:\/\/www.tinroofbeer.com\/","established":"2010","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/33shrE\/upload_UysUQ9-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/33shrE\/upload_UysUQ9-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/33shrE\/upload_UysUQ9-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:10","updateDate":"2012-07-23 12:04:26"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:40 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:10 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=71
@@ -20981,7 +20981,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:40 GMT
+      - Sat, 18 Aug 2012 01:19:10 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -21291,7 +21291,7 @@ http_interactions:
         Beverage (International) Co., Ltd","website":"http:\/\/www.tropbevco.com\/","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:11","updateDate":"2012-03-21 19:06:09"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:40 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:10 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=72
@@ -21311,7 +21311,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:40 GMT
+      - Sat, 18 Aug 2012 01:19:11 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -21614,7 +21614,7 @@ http_interactions:
         BBQ! Daily specials, happy hour & outdoor seating.","website":"http:\/\/www.unclebillys.com\/","established":"2007","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/H6Lwrl\/upload_Tu94GB-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/H6Lwrl\/upload_Tu94GB-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/H6Lwrl\/upload_Tu94GB-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:11","updateDate":"2012-06-25 17:16:21"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:41 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:11 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=73
@@ -21634,7 +21634,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:41 GMT
+      - Sat, 18 Aug 2012 01:19:11 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -21915,7 +21915,7 @@ http_interactions:
         stand out in the beer-saturated market of the Northwest.","website":"http:\/\/www.vertigobrew.com\/","established":"2008","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/K3Jy1E\/upload_0tfG8j-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/K3Jy1E\/upload_0tfG8j-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/K3Jy1E\/upload_0tfG8j-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:11","updateDate":"2012-03-21 19:06:13"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:41 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:11 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=74
@@ -21935,7 +21935,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:41 GMT
+      - Sat, 18 Aug 2012 01:19:11 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -22174,7 +22174,7 @@ http_interactions:
         Street Lake Country","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:12","updateDate":"2012-03-21 19:06:10"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:41 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:12 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=75
@@ -22194,7 +22194,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:41 GMT
+      - Sat, 18 Aug 2012 01:19:12 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -22476,7 +22476,7 @@ http_interactions:
         wood-fired brick oven pizza, sandwiches, salads, and appetizers.","website":"http:\/\/www.wichitabrew.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Cbxn1y\/upload_hPddVo-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Cbxn1y\/upload_hPddVo-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Cbxn1y\/upload_hPddVo-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:13","updateDate":"2012-03-30 00:58:50"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:42 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:12 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=76
@@ -22496,7 +22496,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:42 GMT
+      - Sat, 18 Aug 2012 01:19:12 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -22769,7 +22769,7 @@ http_interactions:
         Hofbru AG","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:13","updateDate":"2012-03-21 19:06:10"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:42 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:12 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=77
@@ -22789,7 +22789,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:43 GMT
+      - Sat, 18 Aug 2012 01:19:12 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -22990,7 +22990,7 @@ http_interactions:
         Bryggeri","website":"http:\/\/www.aegirbrewery.com\/","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:13","updateDate":"2012-03-21 19:06:19"}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:43 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:13 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/breweries?key=API_KEY&p=78
@@ -23010,7 +23010,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:43 GMT
+      - Sat, 18 Aug 2012 01:19:13 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -23029,5 +23029,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"currentPage":78,"numberOfPages":77,"totalResults":3840,"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:43 GMT
+  recorded_at: Sat, 18 Aug 2012 01:19:13 GMT
 recorded_with: VCR 2.2.4

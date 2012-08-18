@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:13 GMT
+      - Sat, 18 Aug 2012 01:18:42 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -48,7 +48,7 @@ http_interactions:
         shed on the shady, north side of the garage.","website":"http:\/\/www.alpinebeerco.com\/","established":"2002","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:44","updateDate":"2012-03-21 19:06:03"},"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:13 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:42 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/brewery/Jt43j7?key=API_KEY
@@ -68,7 +68,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:13 GMT
+      - Sat, 18 Aug 2012 01:18:42 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -99,7 +99,7 @@ http_interactions:
         And now, she''s our CEO.","website":"http:\/\/www.newbelgium.com\/","established":"1989","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:03","updateDate":"2012-05-18 15:24:47"},"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:13 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:42 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/beer/aapeRv?key=API_KEY&withBreweries=Y
@@ -119,7 +119,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 00:56:13 GMT
+      - Sat, 18 Aug 2012 01:18:42 GMT
       Server:
       - Apache/2.2.22 (Amazon)
       X-Powered-By:
@@ -179,5 +179,5 @@ http_interactions:
         now, she''s our CEO.","website":"http:\/\/www.newbelgium.com\/","established":"1989","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:03","updateDate":"2012-05-18 15:24:47"}]},"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 00:56:14 GMT
+  recorded_at: Sat, 18 Aug 2012 01:18:42 GMT
 recorded_with: VCR 2.2.4
