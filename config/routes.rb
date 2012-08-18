@@ -17,8 +17,8 @@ BrewdegaCellar::Application.routes.draw do
   end
 
   resources :breweries, only: [:index, :show]
-  resources :brews
-  resources :beers, only: [:index, :new, :create]
+  resources :brews, only: [:index, :show]
+  resources :beers, only: [:new, :create]
 
   require 'sidekiq/web'
   mount Sidekiq::Web => '/secret-sidekiq'

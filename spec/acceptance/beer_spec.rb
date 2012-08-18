@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Beers!' do
+feature 'Beers' do
   background do
     @brew = FactoryGirl.create(:brew)
     @bob = sign_in_new_user
