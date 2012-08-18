@@ -1,19 +1,13 @@
-require 'models/import/brew_catalog'
-require 'sidekiq/testing/inline'
+require 'spec_helper'
 
-describe Import::BrewCatalog do
+describe Import::BrewCatalog, :vcr do
   let(:catalog) { described_class.new(warehouse, log) }
-  let(:brews) { [Hash.new, Hash.new] }
-  let(:warehouse) { stub('Inline::Warehouse') }
-  let(:log) { stub('Import::Log')  }
-  before do
-    warehouse.stub(:brews_for_brewery) { brews }
-    log.stub(:record)
-  end
+  let(:warehouse) { Import::Warehouse.new }
+  let(:log) { Import::Log::Noop.new  }
+  let!(:brewery) { FactoryGirl.create(:brewery, brewery_db_id: 'Idm5Y5') }
 
   it 'imports the brews from the brewery', vcr: { record: :once } do
-    Import::Brew.should_receive(:import).with({brewery_id: 'Idm5Y5'})
-    Import::Brew.should_receive(:import).with({brewery_id: 'Idm5Y5'})
-    catalog.perform('Idm5Y5')
+    brews = catalog.perform('Idm5Y5')
+    expect(brewery.brews.size).to eq(brews.size)
   end
 end

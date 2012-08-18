@@ -1,4 +1,5 @@
 require_relative 'brew'
+require 'ostruct'
 require 'sidekiq'
 
 module Import
@@ -15,7 +16,8 @@ module Import
 
     def perform(brewery_id)
       @warehouse.brews_for_brewery(brewery_id).map do |b|
-        brew = Import::Brew.import(b.merge(brewery_id: brewery_id))
+        b.breweries = [OpenStruct.new(id: brewery_id)]
+        brew = Import::Brew.import(b)
         @log.record(brew)
       end
     end
