@@ -1,3 +1,6 @@
+require 'bigdecimal'
+require 'date'
+
 module Import
   module WarehouseMap
     class EmptyImages < OpenStruct; end
