@@ -1,13 +1,7 @@
 <h2><%= @brew.name %></h2>
 
 <div class="row">
-<<<<<<< HEAD
-  <div class="span6">
-    <h5><%= render partial: @brew.breweries, spacer_template: 'breweries/brewery_spacer' %></h5>
-=======
-    <h5><%= link_to @brew.brewery.name, @brew.brewery, title: @brew.brewery.name %></h5>
->>>>>>> Small Brews/CSS Tweak
-  </div>
+  <h5 class="span6"><%= render partial: @brew.breweries, spacer_template: 'breweries/brewery_spacer' %></h5>
 </div>
 
 <div class="row">
