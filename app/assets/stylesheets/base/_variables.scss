@@ -16,5 +16,5 @@ $largeFontFamily: "alternate-gothic-no-2-d", Helvetica, Arial, sans-serif !defau
 $smallFontFamily: "futura-pt", Helvetica, Arial, sans-serif !default;
 
 $tableBackground: $beige;
-$tableBackgroundAccent: desaturate(darken($tableBackground, 6%), 15%);
+$tableBackgroundAccent: desaturate(darken($tableBackground, 4%), 10%);
 $tableBackgroundHover: desaturate(darken($tableBackground, 5%), 5%);
