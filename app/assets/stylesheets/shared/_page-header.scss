@@ -34,17 +34,16 @@
     }
   }
 
-  $search_browse_height: 2.25em;
-  $search_browse_base_font_size: 1.8em;
+  $search_browse_base_font_size: 1.8;
+  $search_browse_height: 4;
 
   .search {
-    font-size: $search_browse_base_font_size;
     position: relative;
 
     .query {
       background: no-repeat 15px center image-url('searchiconline_large.png');
-      font-size: inherit;
-      height: $search_browse_height;
+      font-size: $search_browse_base_font_size * 1em;
+      height: ($search_browse_height/$search_browse_base_font_size) * 1em;
       line-height: 1.5em;
       padding-left: 2.5em;
       padding-right: 3.5em;
@@ -54,27 +53,27 @@
 
     .search-button {
       $search_margin: 0.25em;
+
+      top: $search_margin;
+      right: $search_margin;
       bottom: $search_margin;
       font-weight: bolder;
       position: absolute;
-      right: $search_margin;
       text-transform: uppercase;
-      top: $search_margin;
     }
   }
 
   .browse {
     background-color: $brown;
-    font-size: $search_browse_base_font_size;
-    height: $search_browse_height;
+    height: $search_browse_height * 1em;
 
     & > a {
       color: $lightBrown;
       display: block;
       font-family: $largeFontFamily;
-      font-size: $search_browse_base_font_size * 1.25;
-      line-height: 1em;
-      padding: 0 0.4em;
+      font-size: $search_browse_base_font_size * 1.11em;
+      line-height: 2.2em; //hacky attempt to center the text.
+      padding: 0 0.5em;
       text-transform: uppercase;
 
       .caret {
