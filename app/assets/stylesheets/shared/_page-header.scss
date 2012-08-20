@@ -1,5 +1,7 @@
 .page-header {
   $pageHeaderHeight: 80px;
+  $search_browse_height: 4;
+  $search_browse_base_font_size: 1.8;
 
   border-bottom: none;
   margin-bottom: 0;
@@ -33,9 +35,6 @@
       &:hover { color: darken($linkColor, 15%); }
     }
   }
-
-  $search_browse_base_font_size: 1.8;
-  $search_browse_height: 4;
 
   .search {
     position: relative;
@@ -85,17 +84,18 @@
 
     .dropdown-menu {
       background-color: $brown;
+      width: 99%;
 
       a {
         $linkColor: $yellow;
 
         color: $linkColor;
-        font-size: 1.1em;
+        font-size: $search_browse_base_font_size * 1em;
         font-weight: bolder;
+        line-height: 1.1em;
         text-decoration: none;
         &:hover { color: darken($linkColor, 15%); }
       }
     }
   }
 }
-
