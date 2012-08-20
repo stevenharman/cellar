@@ -10,7 +10,8 @@ header.page-header
       li= link_to('Contact us', '#', title: 'Get in touch with the Brewdega crew.')
   .row-fluid
     = simple_form_for(:search, method: :get, html: { class: 'search form-search span9' }) do |f|
-      = f.search_field :query, placeholder: 'Find a beer...', class: 'query'
+      = f.search_field :query, placeholder: 'Find a beer or brewery...', class: 'query'
+      = f.submit 'Search', class: 'search-button btn btn-primary'
 
     .browse.dropdown.span3
       = link_to '/browse', class: 'dropdown-toggle', data: { toggle: 'dropdown', target: '.browse' } do

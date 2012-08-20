@@ -34,43 +34,53 @@
     }
   }
 
+  $search_browse_height: 2.25em;
+  $search_browse_base_font_size: 1.8em;
+
   .search {
+    font-size: $search_browse_base_font_size;
+    position: relative;
+
     .query {
-      font-size: 1.8em;
-      height: 53px;
+      background: no-repeat 15px center image-url('searchiconline_large.png');
+      font-size: inherit;
+      height: $search_browse_height;
       line-height: 1.5em;
+      padding-left: 2.5em;
+      padding-right: 3.5em;
       width: 100%;
-      padding-left: 60px;
-      background-image: image-url('searchiconline_large.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-position-x: 15px;
       @include box-sizing(border-box);
     }
 
     .search-button {
+      $search_margin: 0.25em;
+      bottom: $search_margin;
+      font-weight: bolder;
+      position: absolute;
+      right: $search_margin;
       text-transform: uppercase;
+      top: $search_margin;
     }
   }
 
   .browse {
     background-color: $brown;
-    padding: 1px 0;
-    height: 53px;
+    font-size: $search_browse_base_font_size;
+    height: $search_browse_height;
 
     & > a {
       color: $lightBrown;
       display: block;
       font-family: $largeFontFamily;
-      font-size: 30px;
+      font-size: $search_browse_base_font_size * 1.25;
       line-height: 1em;
-      padding:.4em;
+      padding: 0 0.4em;
       text-transform: uppercase;
 
       .caret {
         border-top: 4px solid white;
         float: right;
-        margin-top: 10px;
+        margin-top: 0.5em;
       }
     }
 
