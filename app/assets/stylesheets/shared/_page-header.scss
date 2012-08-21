@@ -57,6 +57,7 @@
       right: $search_margin;
       bottom: $search_margin;
       font-weight: bolder;
+      font-family: $smallFontFamily;
       position: absolute;
       text-transform: uppercase;
     }
@@ -91,9 +92,9 @@
 
       a {
         $linkColor: $yellow;
-
+        padding: 6px 13px;
         color: $linkColor;
-        font-size: 1.5em;
+        font-size: 1.2em;
         font-weight: bolder;
         line-height: 1.1em;
         &:hover { color: white; }
