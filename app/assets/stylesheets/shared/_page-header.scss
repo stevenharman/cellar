@@ -65,6 +65,7 @@
   .browse {
     background-color: $brown;
     height: $search_browse_height * 1em;
+    @include border-radius(3px);
 
     & > a {
       color: $lightBrown;
