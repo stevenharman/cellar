@@ -74,11 +74,13 @@
       line-height: 2.2em; //hacky attempt to center the text.
       padding: 0 0.5em;
       text-transform: uppercase;
+      &:hover { color: white; }
 
       .caret {
-        border-top: 4px solid white;
+        border-width: 0.25em ! important;
+        border-top-color: white;
         float: right;
-        margin-top: 0.5em;
+        margin-top: 1em;
       }
     }
 
@@ -93,8 +95,7 @@
         font-size: $search_browse_base_font_size * 1em;
         font-weight: bolder;
         line-height: 1.1em;
-        text-decoration: none;
-        &:hover { color: darken($linkColor, 15%); }
+        &:hover { color: white; }
       }
     }
   }
