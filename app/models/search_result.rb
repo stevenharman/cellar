@@ -1,5 +1,9 @@
 class SearchResult
   include Enumerable
+  extend Forwardable
+
+  PAGINATION_API = [:current_page, :empty?, :limit_value, :num_pages, :total_count]
+  def_delegators :@results, *PAGINATION_API
 
   def initialize(results)
     @results = results
