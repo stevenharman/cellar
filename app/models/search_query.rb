@@ -5,11 +5,12 @@ class SearchQuery
   include ActiveModel::Conversion
   include ActiveModel::Validations
 
-  attr_reader :terms
+  attr_reader :terms, :page
   alias_method :q, :terms
 
-  def initialize(terms = nil)
+  def initialize(terms = nil, page = 1)
     @terms = terms
+    @page = page
   end
 
   def persisted?; false; end
