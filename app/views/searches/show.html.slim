@@ -11,7 +11,7 @@ article#search-results
         th
         th
     tbody
-      tr.result
-        td
-        td
-        td
+      - for result in @search_result do
+        == render(partial: 'brew', object: result) if result.is_a? Brew
+        == render(partial: 'brewery', object: result) if result.is_a? Brewery
+

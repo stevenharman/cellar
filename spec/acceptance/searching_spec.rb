@@ -3,12 +3,16 @@ require 'spec_helper'
 feature 'Searching' do
 
   scenario 'for a brewery we know about' do
-    search_for('A Brewery Name')
-    pending('Building out Search')
-    expect_results_include('A Brewery Name')
+    brewery = a_known_brewery
+    search_for(brewery.name)
+    expect_results_include(brewery.name)
   end
 
   private
+
+  def a_known_brewery
+    FactoryGirl.create(:brewery)
+  end
 
   def search_for(terms)
     visit root_path
