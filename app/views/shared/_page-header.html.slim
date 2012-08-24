@@ -11,7 +11,7 @@ header.page-header
   .row-fluid
     = form_tag(search_path, method: :get, class: 'search form-search span9') do
       = search_field_tag :q, search_query.q, placeholder: 'Find a beer or brewery...', class: 'query'
-      = submit_tag 'Search', class: 'search-button btn btn-primary'
+      = submit_tag 'Search', name: nil, class: 'search-button btn btn-primary'
 
     .browse.dropdown.span3
       = link_to '/browse', class: 'dropdown-toggle', data: { toggle: 'dropdown', target: '.browse' } do
