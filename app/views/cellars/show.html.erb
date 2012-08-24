@@ -1,36 +1,26 @@
 <article class="cellar">
   <div class="row-fluid">
-    <div class="span6">
-      <h2>My Cellar</h2>
-
-     <!-- <dl class="owner-details">
-        <dt>Email: </dt><dd><%= @cellar.keeper.email %></dd>
-      </dl>-->
-    </div>
+    <h2 class="span6">My Cellar</h2>
     <div class="span6" style="text-align:right;">
       <button class="btn btn-small btn-primary">Add a Beer</button>
       <button class="btn btn-small btn-primary">Share</button>
     </div>
   </div>
-  
+
   <div class="row-fluid">
     <div class="span12 dashboard">
-      <div style="float:left;">
-        <a href="#"><img src="http://placehold.it/128x128" alt="gravatar""></a>
-      </div>
+      <a href="#" class="pull-left"><img src="http://placehold.it/128x128" alt="gravatar"></a>
       <div class="span3">
         <h3 class="owner-name"><%= @cellar.keeper.username %></h3>
         website<br>
         Location<br>
         Joined May, 2012
       </div>
-      <div class="span3">
-        <ul class="stats">
-          <li><h4>6 TOTAL BEERS</h4></li>
-          <li><h4>2 UNIQUE BEERS</h4></li>
-          <li><h4>2 BREWERIES</h4></li>
-        </ul>
-      </div>
+      <ul class="stats span3">
+        <li><h4>6 TOTAL BEERS</h4></li>
+        <li><h4>2 UNIQUE BEERS</h4></li>
+        <li><h4>2 BREWERIES</h4></li>
+      </ul>
     </div>
   </div>
 
