@@ -20,10 +20,12 @@ BrewdegaCellar::Application.routes.draw do
   resources :brews, only: [:index, :show]
   resources :beers, only: [:new, :create]
 
-  require 'sidekiq/web'
-  mount Sidekiq::Web => '/secret-sidekiq'
+  resource :search, only: [:show]
 
   get "/:username" => "cellars#show", as: :cellar
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/secret-sidekiq'
 
   root :to => "home#index"
 end

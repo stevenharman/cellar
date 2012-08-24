@@ -3,8 +3,8 @@ require 'spec_helper'
 feature 'Searching' do
 
   scenario 'for a brewery we know about' do
-    pending('Building out Search')
     search_for('A Brewery Name')
+    pending('Building out Search')
     expect_results_include('A Brewery Name')
   end
 
