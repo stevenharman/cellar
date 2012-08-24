@@ -1,7 +1,8 @@
 class SearchEngine
 
   def self.search(query)
-    SearchResult.new(PgSearch.multisearch(query.terms))
+    result = PgSearch.multisearch(query.terms).includes(:searchable)
+    SearchResult.new(result)
   end
 
 end
