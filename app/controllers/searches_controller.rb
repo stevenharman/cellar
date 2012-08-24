@@ -6,6 +6,7 @@ class SearchesController < ApplicationController
   private
 
   def search_query
-    SearchQuery.new(params[:q])
+    # MAGIC: Shared variable b/t here and application_helper. Ugh!
+    @search_query ||= SearchQuery.new(params[:q])
   end
 end
