@@ -15,3 +15,4 @@ article#search-results
         == render(partial: 'brew', object: result) if result.is_a? Brew
         == render(partial: 'brewery', object: result) if result.is_a? Brewery
 
+  == paginate @search_result

@@ -22,4 +22,12 @@ describe SearchEngine do
     expect(result).to include(founders)
     expect(result).to include(red_rye)
   end
+
+  it 'pages the results' do
+    result = stub('PGSearch Result')
+    PgSearch.stub_chain(:multisearch, :includes) { result }
+    result.should_receive(:page).with(42)
+
+    search_engine.search(SearchQuery.new('hi', 42))
+  end
 end
