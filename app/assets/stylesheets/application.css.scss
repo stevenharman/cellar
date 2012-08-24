@@ -71,10 +71,10 @@
   }
   .awning.navbar {
     .brand {
-      background: image-url('brewdega-logo-icon.png') no-repeat;
+      background: image-url('brewdega-logo-icon.png') no-repeat 50% 10px;
       float: right;
       width: 50px;
-  
+
       span { visibility: hidden; }
     }
   }
