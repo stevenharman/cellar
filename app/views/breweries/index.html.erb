@@ -15,7 +15,7 @@
           <td><%= link_to brewery.name, brewery %></td>
           <td>NA</td>
           <td>
-            <%= link_to 'View List', new_beer_path, class: 'btn btn-primary' %>
+            <%= link_to 'View List', brewery_path(brewery), class: 'btn btn-primary' %>
           </td>
         </tr>
       <% end %>
