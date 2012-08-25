@@ -15,6 +15,15 @@
       width: 22em;
       &> * { text-transform: none; }
     }
+
+    .prefix {
+      color: $grayLight;
+      display: block;
+      font-size: 0.85em;
+      position: relative;
+      bottom: -0.5em;
+      left: -0.75em;
+    }
   }
   .searchqt {
     text-align: right;

@@ -2,5 +2,8 @@ tr.result.brewery
   td.icon= image_tag(brewery.icon || 'http://placehold.it/64x64', alt: brewery.name)
   td.name
     h3= link_to brewery.name, brewery, title: brewery.name
-  td= link_to(brewery.website, brewery.website) if brewery.website
+  td
+    - if brewery.website
+      small.prefix visit them at
+      = link_to(brewery.website, brewery.website)
 
