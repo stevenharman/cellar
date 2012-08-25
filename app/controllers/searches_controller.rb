@@ -1,9 +1,13 @@
 class SearchesController < ApplicationController
   def show
-    @search_result = SearchEngine.search(search_query)
+    @search_result = decorate(SearchEngine.search(search_query))
   end
 
   private
+
+  def decorate(result)
+    SearchResultDecorator.new(result)
+  end
 
   def search_query
     # MAGIC: Shared variable b/t here and application_helper. Ugh!

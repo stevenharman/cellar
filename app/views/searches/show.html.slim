@@ -7,10 +7,9 @@ article#search-results
   table.table.table-striped.table-condensed
     thead
       tr
-        th*{colspan: 3} All results
+        th*{colspan: 3} Results
     tbody
       - for result in @search_result do
-        == render(partial: 'brew', object: result) if result.is_a? Brew
-        == render(partial: 'brewery', object: result) if result.is_a? Brewery
+        == render partial: result
 
   == paginate @search_result
