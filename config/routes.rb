@@ -22,6 +22,8 @@ BrewdegaCellar::Application.routes.draw do
 
   resource :search, only: [:show]
 
+  resource :heartbeat, only: [:show]
+
   require 'sidekiq/web'
   mount Sidekiq::Web => '/secret-sidekiq'
 
