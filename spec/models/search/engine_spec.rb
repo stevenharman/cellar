@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe SearchEngine do
+describe Search::Engine do
   subject(:search_engine) { described_class }
 
   it 'finds both breweries and brews' do
     founders_brewing = FactoryGirl.create(:brewery, name: 'Founders Brewing Company')
     founders_ale = FactoryGirl.create(:brew, name: "Founder's Red Rye Ale")
-    query = SearchQuery.new('founders')
+    query = Search::Query.new('founders')
     result = search_engine.search(query)
 
     expect(result).to include(founders_brewing)
@@ -16,7 +16,7 @@ describe SearchEngine do
   it 'finds brews with matching brewery names' do
     founders = FactoryGirl.create(:brewery, name: 'Founders Brewing Company')
     red_rye = FactoryGirl.create(:brew, breweries: [founders])
-    query = SearchQuery.new('founders')
+    query = Search::Query.new('founders')
     result = search_engine.search(query)
 
     expect(result).to include(founders)
@@ -28,6 +28,6 @@ describe SearchEngine do
     PgSearch.stub_chain(:multisearch, :includes) { result }
     result.should_receive(:page).with(42)
 
-    search_engine.search(SearchQuery.new('hi', 42))
+    search_engine.search(Search::Query.new('hi', 42))
   end
 end

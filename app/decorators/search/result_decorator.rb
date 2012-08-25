@@ -1,8 +1,9 @@
 require 'delegate'
-require_relative 'search/brew_decorator'
-require_relative 'search/brewery_decorator'
+require_relative 'brew_decorator'
+require_relative 'brewery_decorator'
 
-class SearchResultDecorator < SimpleDelegator
+module Search
+class ResultDecorator < SimpleDelegator
   include Enumerable
 
   def initialize(search_result)
@@ -29,5 +30,5 @@ class SearchResultDecorator < SimpleDelegator
     @result_decorators ||= { Brew => Search::BrewDecorator,
                              Brewery => Search::BreweryDecorator }
   end
-
+end
 end

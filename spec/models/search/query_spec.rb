@@ -1,7 +1,7 @@
 require 'support/active_model_lint'
-require 'models/search_query'
+require 'models/search/query'
 
-describe SearchQuery do
+describe Search::Query do
   describe 'ActiveModel Lint' do
     it_behaves_like "ActiveModel"
   end
