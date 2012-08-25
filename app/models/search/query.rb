@@ -14,6 +14,10 @@ module Search
       @page = page
     end
 
+    def empty?
+      terms.nil? || terms == ''
+    end
+
     def persisted?; false; end
 
   end

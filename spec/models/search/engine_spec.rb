@@ -30,4 +30,16 @@ describe Search::Engine do
 
     search_engine.search(Search::Query.new('hi', 42))
   end
+
+  it 'does not search for an empty query' do
+    PgSearch.should_not_receive(:multisearch)
+    result = search_engine.search(Search::Query.new(''))
+    expect(result.count).to eq(0)
+  end
+
+  it 'does not search for a nil query' do
+    PgSearch.should_not_receive(:multisearch)
+    result = search_engine.search(Search::Query.new(nil))
+    expect(result.count).to eq(0)
+  end
 end
