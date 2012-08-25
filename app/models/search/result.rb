@@ -1,10 +1,18 @@
+require 'kaminari'
+
 module Search
   class Result
     include Enumerable
     extend Forwardable
 
+    Empty = Kaminari::PaginatableArray
+
     PAGINATION_API = [:current_page, :empty?, :limit_value, :num_pages, :total_count]
     def_delegators :@results, *PAGINATION_API
+
+    def self.empty
+      new(Empty.new.page)
+    end
 
     def initialize(results)
       @results = results

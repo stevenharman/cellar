@@ -34,12 +34,14 @@ describe Search::Engine do
   it 'does not search for an empty query' do
     PgSearch.should_not_receive(:multisearch)
     result = search_engine.search(Search::Query.new(''))
-    expect(result.count).to eq(0)
+    expect(result.total_count).to eq(0)
+    expect(result.current_page).to eq(1)
   end
 
   it 'does not search for a nil query' do
     PgSearch.should_not_receive(:multisearch)
     result = search_engine.search(Search::Query.new(nil))
-    expect(result.count).to eq(0)
+    expect(result.total_count).to eq(0)
+    expect(result.current_page).to eq(1)
   end
 end

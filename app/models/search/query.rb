@@ -14,7 +14,7 @@ module Search
       @page = page
     end
 
-    def empty?
+    def blank?
       terms.nil? || terms == ''
     end
 
