@@ -21,11 +21,15 @@ footer {
       max-width: 20em;
       width: 90%;
     }
+
+    p {
+      color: white;
+      @include small-text();
+    }
   }
 
-  p.small {
+  p.legal {
     color: white;
-    font-size: 11px;
-    line-height: 14px;
+    @include small-text();
   }
 }

@@ -8,6 +8,7 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
+@import "base/mixins";
 @import "base/defaults";
 @import "shared/awning";
 @import "shared/page-header";
@@ -15,12 +16,6 @@
 @import "searches_show";
 @import "splash";
 
-
-.small {
-  font-size: 11px;
-  line-height: 12px;
-  color: $brown;
-}
 
 .brew-details {
   line-height: 1em;

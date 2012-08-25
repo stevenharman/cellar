@@ -15,8 +15,8 @@ footer
     .newsletter.span3
       = simple_form_for(:newsleter, method: :post, html: { class: 'form-inline' }) do |f|
         h4 Sign Up For Our Newsletter
-        p.small Sign up if you'd like to receive Brewdega and Cellar updates
+        p Sign up if you'd like to receive Brewdega and Cellar updates
         = f.email_field :email, placeholder: 'Enter your email...'
         = f.button :submit, 'Subscribe', class: 'search-button btn-primary'
     .clearfix
-    p.small Privacy | Legal | 2012 Brewdega, LLC
+    p.legal Privacy | Legal | 2012 Brewdega, LLC
