@@ -3,18 +3,8 @@ body {
   background-attachment: fixed;
 }
 
-h1 {
+h1, h2, h3, h4 {
   font-family: $largeFontFamily;
-  font-size: 2.5em;
-  text-transform: uppercase;
-  color: $brewdega-orange;
-  font-style: normal;
-  font-weight:normal;
-}
-
-h2 {
-  font-family: $largeFontFamily;
-  font-size: 2.5em;
   text-transform: uppercase;
   color: $brewdega-orange;
   font-style: normal;
@@ -23,23 +13,10 @@ h2 {
 
 h3 {
   font-family: $smallFontFamily;
-  font-size: 1.1em;
   color: $brown;
-  font-style: normal;
-  font-weight:normal;
-}
-
-h4 {
-  font-family: $largeFontFamily;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  color: $brewdega-orange;
-  font-style: normal;
-  font-weight:normal;
 }
 
 h5 {
-  font-size: 1.5em;
   color: $brown;
   font-style: normal;
   font-weight:normal;
