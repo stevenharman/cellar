@@ -14,6 +14,7 @@
 @import 'shared/awning';
 @import 'shared/page-header';
 @import 'shared/footer';
+@import 'cellars_show';
 @import 'searches_show';
 @import 'splash';
 
@@ -122,13 +123,6 @@
   }
 }
 
-
-.dashboard {
-  @include border-radius(3px);
-  background-color: #fec846;
-  padding: 10px;
-}
-
 .widget{
   @include border-radius(3px);
   background-color: #fec846;
@@ -150,5 +144,4 @@
     }
   }
 }
-
 

@@ -4,24 +4,25 @@ article.cellar
     .span6*{style: "text-align:right;"}
       button.btn.btn-small.btn-primary Add a Beer
       button.btn.btn-small.btn-primary Share
-  .row-fluid
-    .span12.dashboard
-      a.pull-left*{href: '#'}
-        img*{alt: 'gravatar', src: 'http://placehold.it/128x128'}
-      .span3
-        h3.owner-name= @cellar.keeper.username
-        | website
-        br
-        | Location
-        br
-        | Joined May, 2012
-      ul.stats.span3
-        li
-          h4 6 TOTAL BEERS
-        li
-          h4 2 UNIQUE BEERS
-        li
-          h4 2 BREWERIES
+  .dashboard.row-fluid
+    .keeper-gravatar.span2.hidden-phone
+      = @cellar.keeper_gravatar(128)
+    .keeper.span3
+      h3.username= @cellar.keeper_username
+      dl.demographics.dl-horizontal
+        dt Website
+        dd= @cellar.website
+        dt Location
+        dd= @cellar.location
+        dt Joined
+        dd= @cellar.established
+    ul.stats.span3
+      li
+        h4 6 TOTAL BEERS
+      li
+        h4 4 UNIQUE BEERS
+      li
+        h4 2 BREWERIES
   fieldset.beers-cellared.row-fluid
     legend Cellared Beers
     table.table.table-striped.table-condensed

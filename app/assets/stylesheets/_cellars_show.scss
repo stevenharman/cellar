@@ -1,0 +1,24 @@
+.cellars.cellars-show {
+  .dashboard {
+    background-color: #fec846;
+    padding: 1em 0;
+
+    @include border-radius(3px);
+  }
+
+  .keeper-gravatar {
+    text-align: center;
+  }
+
+  .keeper {
+    .demographics {
+      dt {
+        width: 6.5em;
+        text-align: left;
+      }
+      dd {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -22,16 +22,16 @@ class User < ActiveRecord::Base
     beers.find(id)
   end
 
-  def to_param
-    username
-  end
-
   def stocked_brews
     brews.with_beers.merge(Beer.cellared)
   end
 
   def stocked_beers(brew)
     beers.cellared.by_brew(brew)
+  end
+
+  def joined
+    created_at
   end
 
   # Public: Delegate to other's #model if it is a Draper decorator
@@ -41,4 +41,7 @@ class User < ActiveRecord::Base
     super(other.respond_to?(:model) ? other.model : other)
   end
 
+  def to_param
+    username
+  end
 end
