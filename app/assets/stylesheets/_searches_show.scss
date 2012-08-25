@@ -1,0 +1,9 @@
+.searches.searches-show {
+  .result {
+    img {
+      height: 48px;
+      width: 48px;
+      @include border-radius(3px);
+    }
+  }
+}
