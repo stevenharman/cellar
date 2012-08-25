@@ -1,0 +1,43 @@
+article.cellar
+  .row-fluid
+    h2.span6 My Cellar
+    .span6*{style: "text-align:right;"}
+      button.btn.btn-small.btn-primary Add a Beer
+      button.btn.btn-small.btn-primary Share
+  .row-fluid
+    .span12.dashboard
+      a.pull-left*{href: '#'}
+        img*{alt: 'gravatar', src: 'http://placehold.it/128x128'}
+      .span3
+        h3.owner-name= @cellar.keeper.username
+        | website
+        br
+        | Location
+        br
+        | Joined May, 2012
+      ul.stats.span3
+        li
+          h4 6 TOTAL BEERS
+        li
+          h4 2 UNIQUE BEERS
+        li
+          h4 2 BREWERIES
+  fieldset.beers-cellared.row-fluid
+    legend Cellared Beers
+    table.table.table-striped.table-condensed
+      thead
+        tr
+          th Edit
+          th Brewery
+          th Beer
+          th Quantity
+          th Cellared on
+      tbody
+        - for brew in @cellar.stocked_brews
+          tr.beer
+            td= image_tag('edit_icon_12.gif', alt: 'Edit')
+            td= render partial: brew.breweries, spacer_template: 'breweries/brewery_spacer'
+            td= link_to brew.name, brew
+            td= brew.beers.size
+            td= link_to 'Details', cellar_brew_path(@cellar.keeper, brew), class: 'btn btn-primary'
+
