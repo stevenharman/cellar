@@ -1,9 +1,19 @@
 .searches.searches-show {
+  $icon-width: 48px;
   .result {
-    img {
-      height: 48px;
-      width: 48px;
-      @include border-radius(3px);
+    .icon {
+      min-width: $icon-width;
+      width: $icon-width;
+
+      img {
+        height: $icon-width;
+        width: $icon-width;
+        @include border-radius(3px);
+      }
+    }
+    .name {
+      width: 22em;
+      &> * { text-transform: none; }
     }
   }
 }
