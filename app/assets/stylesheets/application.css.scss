@@ -80,6 +80,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  .page-container {
+    padding: 0 5px 0;
+  }
+}
+
 @media (max-width: 768px) {
   body {
     padding-left: 0;
@@ -92,21 +98,14 @@
       line-height: 1.1em;
     }
   }
+
   .page-header {
     padding-top: 10px;
-    .logo {
-      text-align: center;
-      /* margin-top: 20px; */
-    }
 
-    .secondary-nav {
-      text-align: center;
-    }
-
-    .browse {
-      margin-bottom: 10px;
-    }
+    .logo { text-align: center; }
+    .browse { margin-bottom: 10px; }
   }
+
   .navbar-fixed-top {
     margin-bottom: 0;
     margin-left: 0;
