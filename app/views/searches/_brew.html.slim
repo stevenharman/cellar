@@ -1,4 +1,4 @@
-tr.result
+tr.result.brew
+  td= image_tag(brew.icon || 'http://placehold.it/64x64', alt: brew.name)
   td= link_to brew.name, brew, title: brew.name
   td== render partial: brew.breweries, spacer_template: 'breweries/brewery_spacer'
-  td

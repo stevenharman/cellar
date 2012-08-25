@@ -1,5 +1,5 @@
-tr.result
+tr.result.brewery
+  td = image_tag(brewery.icon || 'http://placehold.it/64x64', alt: brewery.name)
   td== render brewery
   td= simple_format(truncate(brewery.description, length: 140))
-  td
 
