@@ -2,19 +2,20 @@
  *= require_self
  */
 
-@import "base/variables";
+@import 'base/variables';
 
 /* Pull in full boostrap, for now. Eventually, only the parts we want. */
-@import "bootstrap";
-@import "bootstrap-responsive";
+@import 'bootstrap';
+@import 'bootstrap-responsive';
+@import 'font-awesome';
 
-@import "base/mixins";
-@import "base/defaults";
-@import "shared/awning";
-@import "shared/page-header";
-@import "shared/footer";
-@import "searches_show";
-@import "splash";
+@import 'base/mixins';
+@import 'base/defaults';
+@import 'shared/awning';
+@import 'shared/page-header';
+@import 'shared/footer';
+@import 'searches_show';
+@import 'splash';
 
 
 .brew-details {

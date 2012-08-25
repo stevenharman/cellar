@@ -3,18 +3,24 @@ footer
     .logo.span3.hidden-phone
       = image_tag('footer_logo.gif', alt: 'Cellar: Stock up. Drink up.')
     .twitter-feed.span3.hidden-phone
-      h4= link_to('Twitter Feed', 'http://twitter.com/brewdega', title: 'Twitter')
+      h4= link_to('http://twitter.com/brewdega', title: 'Twitter') do
+        i.icon-twitter
+        |  Twitter Feed
       ul
         li Toot 1
         li Toot 2
     .recent-posts.span3.hidden-phone
-      h4= link_to('Recent Posts', 'http://blog.brewdega.com/', title: 'Blog')
+      h4= link_to('http://blog.brewdega.com/', title: 'Blog') do
+        i.icon-bookmark
+        |  Recent Posts
       ul
         li Post 1
         li Post 2
     .newsletter.span3
       = simple_form_for(:newsleter, method: :post, html: { class: 'form-inline' }) do |f|
-        h4 Sign Up For Our Newsletter
+        h4
+          i.icon-envelope-alt
+          |  Sign Up For Our Newsletter
         p Sign up if you'd like to receive Brewdega and Cellar updates
         = f.email_field :email, placeholder: 'Enter your email...'
         = f.button :submit, 'Subscribe', class: 'search-button btn-primary'
