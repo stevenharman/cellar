@@ -5,7 +5,10 @@ header.page-header
     ul.secondary-nav.span6.hidden-phone
       - if user_signed_in?
         li= link_to('My Cellar', cellar_path(current_user))
-      li= link_to('Blog', 'http://blog.brewdega.com', \
+      li
+        = link_to('http://blog.brewdega.com/rss', title: 'Subscribe to our RSS feed') do
+          i.icon-rss
+        = link_to('Blog', 'http://blog.brewdega.com', \
                     title: 'Get updates, news, and banter at the Brewdega blog.')
       li= link_to('Contact us', '#', title: 'Get in touch with the Brewdega crew.')
   .row-fluid
