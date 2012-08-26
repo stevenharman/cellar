@@ -84,6 +84,10 @@ describe User do
       it "excludes Bob's unstocked Backwoods" do
         bob.stocked_beers(backwoods).should_not include(drunk_beer)
       end
+
+      it 'includes all cellared beers when no brew is given' do
+        bob.stocked_beers.should =~ (bobs_backwoods + [other_beer])
+      end
     end
   end
 
