@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe CellarBrewsController do
 
-  describe "When viewing a Brew" do
+  describe 'When viewing a Brew' do
     let(:bob) { FactoryGirl.create(:bob) }
     let(:alice) { FactoryGirl.create(:alice) }
     let(:bobs_brew) { FactoryGirl.create(:brew) }
@@ -12,17 +12,17 @@ describe CellarBrewsController do
       FactoryGirl.create(:beer, user: alice, brew: alices_brew)
     end
 
-    context "and Bob signed in" do
+    context 'and Bob signed in' do
       before { sign_in bob }
 
       # ~/bob/brews/bobs_brew -> 200
-      specify "he can see his brew" do
+      specify 'he can see his brew' do
         get :show, cellar_id: bob, id: bobs_brew
         response.should be_success
       end
 
       # ~/bob/brews/alices_brew -> 200
-      specify "he can see brews that are not currently in his cellar" do
+      specify 'he can see brews that are not currently in his cellar' do
         get :show, cellar_id: bob, id: alices_brew
         response.should be_success
       end

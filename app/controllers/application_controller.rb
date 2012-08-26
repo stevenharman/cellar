@@ -14,13 +14,13 @@ class ApplicationController < ActionController::Base
   end
 
   def not_authenticated
-    redirect_to new_user_session_path, :alert => "Please sign in first."
+    redirect_to new_user_session_path, :alert => 'Please sign in first.'
   end
 
   private
 
   def render_404(exception=nil)
-    render template: "errors/404", status: 404
+    render template: 'errors/404', status: 404
   end
 
 end

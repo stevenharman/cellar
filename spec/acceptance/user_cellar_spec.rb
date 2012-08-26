@@ -16,35 +16,35 @@ feature "Viewing a user's cellar" do
     FactoryGirl.create(:beer, :skunked, brew: skunked_brew, user:bob)
   end
 
-  scenario "only show a summary of brews in the cellar" do
+  scenario 'only show a summary of brews in the cellar' do
     visit cellar_path(bob)
     find('.cellar').should have_content('3 total')
   end
 
-  scenario "do not include brews with only drunk beers" do
+  scenario 'do not include brews with only drunk beers' do
     visit cellar_path(bob)
-    find('.cellar').should_not have_content("Drunk Brew")
+    find('.cellar').should_not have_content('Drunk Brew')
   end
 
-  scenario "do not include brews with only traded beers" do
+  scenario 'do not include brews with only traded beers' do
     visit cellar_path(bob)
-    find('.cellar').should_not have_content("Traded Brew")
+    find('.cellar').should_not have_content('Traded Brew')
   end
 
-  scenario "do not include brews with only skunked beers" do
+  scenario 'do not include brews with only skunked beers' do
     visit cellar_path(bob)
-    find('.cellar').should_not have_content("Skunked Brew")
+    find('.cellar').should_not have_content('Skunked Brew')
   end
 end
 
-feature "Drink a beer from the Cellar" do
+feature 'Drink a beer from the Cellar' do
   let(:bob) { sign_in_new_user(:bob) }
   let(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
 
-  scenario "after drinking, the beer is no longer in the Cellar" do
+  scenario 'after drinking, the beer is no longer in the Cellar' do
     visit cellar_brew_path(bob, bobs_beer.brew)
     page.should have_css('.beers-cellared .beer')
-    click_button "Drink"
+    click_button 'Drink'
     page.should_not have_css('.beers-cellared .beer')
   end
 

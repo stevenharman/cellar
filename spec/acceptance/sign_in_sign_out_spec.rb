@@ -6,7 +6,7 @@ feature 'Signing in and out' do
   scenario 'Signing in with valid credentials' do
     sign_in(bob)
 
-    page.should have_content "Welcome back to the Cellar"
+    page.should have_content 'Welcome back to the Cellar'
     current_path.should == root_path
   end
 
@@ -17,7 +17,7 @@ feature 'Signing in and out' do
       click_link 'Sign out'
     end
 
-    page.should have_content "signed out"
+    page.should have_content 'signed out'
     current_path.should == root_path
   end
 

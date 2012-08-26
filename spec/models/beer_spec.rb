@@ -17,21 +17,21 @@ describe Beer do
 
   it { should_not allow_value(nil).for(:status) }
 
-  it "defaults to cellared" do
+  it 'defaults to cellared' do
     Beer.new.status.should == :cellared
   end
 
-  describe "Making a beer" do
+  describe 'Making a beer' do
     let(:brew) { FactoryGirl.create(:brew) }
     let(:beer_stuff) { FactoryGirl.attributes_for(:beer) }
 
-    it "makes a beer of the given brew" do
+    it 'makes a beer of the given brew' do
       beer = Beer.make(beer_stuff, brew)
       beer.brew.should == brew
     end
   end
 
-  describe "#cellared_by?" do
+  describe '#cellared_by?' do
     let(:bob) { User.new }
     let(:beer) { Beer.new }
 
@@ -48,8 +48,8 @@ describe Beer do
     end
   end
 
-  describe "scopes" do
-    describe "for status" do
+  describe 'scopes' do
+    describe 'for status' do
       before do
         brew = FactoryGirl.create(:brew)
         FactoryGirl.create(:beer, brew: brew)
@@ -58,44 +58,44 @@ describe Beer do
         FactoryGirl.create(:beer, :skunked, brew: brew)
       end
 
-      it ".cellared only returns cellared beers" do
+      it '.cellared only returns cellared beers' do
         beers = Beer.cellared.all
         beers.should have(1).beer
       end
 
-      it ".drunk only returns drunk beers" do
+      it '.drunk only returns drunk beers' do
         beers = Beer.drunk.all
         beers.should have(1).beer
       end
 
-      it ".traded only returns traded beers" do
+      it '.traded only returns traded beers' do
         beers = Beer.traded.all
         beers.should have(1).beer
       end
 
-      it ".skunked only returns skunked beers" do
+      it '.skunked only returns skunked beers' do
         beers = Beer.skunked.all
         beers.should have(1).beer
       end
     end
 
-    describe ".by_brew" do
+    describe '.by_brew' do
       let(:backwoods) { FactoryGirl.create(:brew) }
       let!(:bobs_backwoods) { FactoryGirl.create_list(:beer, 2, brew: backwoods) }
       let!(:other_beer) { FactoryGirl.create(:beer) }
 
-      it "includes only Backwoods Bastards" do
+      it 'includes only Backwoods Bastards' do
         beers = Beer.by_brew(backwoods)
         beers.should have(2).beers
         beers.should =~ bobs_backwoods
       end
 
-      it "can search using the brew id" do
+      it 'can search using the brew id' do
         Beer.by_brew(backwoods.id).should =~ bobs_backwoods
       end
     end
 
-    describe ".cellared_by" do
+    describe '.cellared_by' do
       let(:bob) { FactoryGirl.create(:bob) }
       let!(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
       let!(:other_beer) { FactoryGirl.create(:beer) }

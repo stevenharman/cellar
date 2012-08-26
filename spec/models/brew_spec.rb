@@ -18,14 +18,14 @@ describe Brew do
 
   it { should allow_mass_assignment_of(:description) }
 
-  describe "scope .with_beers" do
+  describe 'scope .with_beers' do
     let!(:empty_brew) { FactoryGirl.create(:brew) }
     before do
       FactoryGirl.create_list(:beer, 2, brew: FactoryGirl.create(:brew))
       FactoryGirl.create(:beer)
     end
 
-    it "includes only brews that have beers" do
+    it 'includes only brews that have beers' do
       brews_with_beers = Brew.with_beers.all
       brews_with_beers.should_not include(empty_brew)
       brews_with_beers.size.should == 2

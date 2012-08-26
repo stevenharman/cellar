@@ -27,7 +27,7 @@ BrewdegaCellar::Application.routes.draw do
   require 'sidekiq/web'
   mount Sidekiq::Web => '/secret-sidekiq'
 
-  get "/:username" => "cellars#show", as: :cellar
+  get '/:username' => 'cellars#show', as: :cellar
 
-  root :to => "home#index"
+  root :to => 'home#index'
 end

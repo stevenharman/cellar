@@ -9,7 +9,7 @@ feature 'Signing up' do
     fill_in 'user_password', with: 'password'
     click_on 'sign_up'
 
-    page.should have_content "bob_the_beer_dude, welcome to the Cellar"
+    page.should have_content 'bob_the_beer_dude, welcome to the Cellar'
     User.find_by_username('bob_the_beer_dude').should be
   end
 end

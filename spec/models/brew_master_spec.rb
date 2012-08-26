@@ -3,8 +3,8 @@ require 'brew_master'
 describe BrewMaster do
 
   describe 'Processing a beer order' do
-    let(:order) { double("BeerOrder") }
-    let(:brew) { double("Brew") }
+    let(:order) { double('BeerOrder') }
+    let(:brew) { double('Brew') }
     before do
       order.stub(brew_id: 123)
       order.stub(beers: [])
@@ -17,7 +17,7 @@ describe BrewMaster do
     end
 
     describe 'with beer params' do
-      let(:beer_stuff) { double("Beer Params") }
+      let(:beer_stuff) { double('Beer Params') }
       before { order.stub(beers: [beer_stuff]) }
 
       it 'makes a beer for the brew' do

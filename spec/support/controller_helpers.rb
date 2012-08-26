@@ -2,7 +2,7 @@ module ControllerHelpers
 
   def sign_in(user)
     if user.is_a?(User) && user.persisted?
-      @request.env["devise.mapping"] = Devise.mappings[:user]
+      @request.env['devise.mapping'] = Devise.mappings[:user]
       #user.confirm! unless user.confirmed?
       super(user)
     else # likely a stub user, so stub Devise too.

@@ -1,22 +1,22 @@
 <h2><%= @brew.name %></h2>
 <h5><%= render partial: @brew.breweries, spacer_template: 'breweries/brewery_spacer' %></h5>
 </br>
-<div class="row-fluid">
-  <div class="span3">
-    <a href="#"><img src="http://placehold.it/256x256" alt="Beer Label" class="beerlabel"></a>
+<div class='row-fluid'>
+  <div class='span3'>
+    <a href='#'><img src='http://placehold.it/256x256' alt='Beer Label' class='beerlabel'></a>
   </div>
-  <div class="span6">
+  <div class='span6'>
     <dl class='brew-details'>
       <dt>ABV: </dt><dd><%= @brew.abv %></dd>
       <dt>IBU: </dt><dd><%= @brew.ibu %></dd>
-      <dt>Description: </dt><dd class="description"><%= @brew.description %></dd>
+      <dt>Description: </dt><dd class='description'><%= @brew.description %></dd>
     </dl>
     </br>
     <p>
-      <%= link_to "Cellar them!", new_beer_path(brew: @brew), class: 'btn btn-primary' %>
+      <%= link_to 'Cellar them!', new_beer_path(brew: @brew), class: 'btn btn-primary' %>
     </p>
   </div>
-  <div class="span3 widget">
+  <div class='span3 widget'>
     <h3>Other Brews</h3>
     List of other brews by this brewery
     <ul>

@@ -3,7 +3,7 @@ require 'models/search/query'
 
 describe Search::Query do
   describe 'ActiveModel Lint' do
-    it_behaves_like "ActiveModel"
+    it_behaves_like 'ActiveModel'
   end
 
   it 'defaults to the first page' do

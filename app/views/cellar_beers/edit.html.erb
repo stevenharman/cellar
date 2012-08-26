@@ -3,6 +3,6 @@
 
 <%= form_for @beer, url: cellar_beer_path(@beer.user, @beer) do |f| %>
   <%= render partial: 'beers/fields', locals: { fb: f } %>
-  <%= f.submit "Save", id: 'update_beer', class: 'btn btn-primary' %>
+  <%= f.submit 'Save', id: 'update_beer', class: 'btn btn-primary' %>
 <% end %>
 

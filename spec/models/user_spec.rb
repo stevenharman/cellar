@@ -20,13 +20,13 @@ describe User do
   it { should validate_presence_of(:password) }
   it { should allow_mass_assignment_of(:password) }
 
-  describe "creating a user" do
+  describe 'creating a user' do
     let(:bob) { FactoryGirl.create(:user) }
 
     it { bob.should be_valid }
   end
 
-  describe ".for_username!" do
+  describe '.for_username!' do
     context 'with user whom exists' do
       let(:bob) { FactoryGirl.create(:bob) }
       before { bob }
@@ -45,14 +45,14 @@ describe User do
     end
   end
 
-  describe "finding beers" do
+  describe 'finding beers' do
     let(:bob) { FactoryGirl.create(:bob) }
 
-    describe "#find_beer" do
+    describe '#find_beer' do
       context "when the beer is in the user's cellar" do
         let(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
 
-        it "fetches the beer" do
+        it 'fetches the beer' do
           bob.find_beer(bobs_beer.id).should == bobs_beer
         end
       end
@@ -62,7 +62,7 @@ describe User do
       end
     end
 
-    describe "#stocked_beers" do
+    describe '#stocked_beers' do
       let(:backwoods) { FactoryGirl.create(:brew) }
       let(:bobs_backwoods) { FactoryGirl.create_list(:beer, 2, brew: backwoods, user: bob) }
       let(:drunk_beer) { FactoryGirl.create(:beer, :drunk, brew: backwoods, user: bob) }
@@ -91,7 +91,7 @@ describe User do
     end
   end
 
-  describe "#stocked_brews" do
+  describe '#stocked_brews' do
     let(:bob) { FactoryGirl.create(:user) }
     let(:brew_1) { FactoryGirl.create(:brew) }
     let(:brew_2) { FactoryGirl.create(:brew) }
