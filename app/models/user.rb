@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :username, :password, :remember_me
   has_many :beers
-  has_many :brews, through: :beers
+  has_many :brews, through: :beers, uniq: true
+  has_many :breweries, through: :brews, uniq: true
 
   validates :email, uniqueness: true, presence: true, email: true
   validates :username, uniqueness: true, presence: true
