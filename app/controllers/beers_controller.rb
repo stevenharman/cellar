@@ -6,8 +6,10 @@ class BeersController < ApplicationController
   end
 
   def new
-    @beer = Beer.new
-    @beer.brew_id = params[:brew]
+    brew_id = params[:brew]
+    return redirect_to brews_path unless brew_id
+
+    @beer = Brew.find(brew_id).beers.build
     @beer_count = 1
   end
 
