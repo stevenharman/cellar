@@ -17,14 +17,31 @@
       text-align: center;
     }
 
-  .keeper {
-    .demographics {
-      dt {
-        width: 6.5em;
-        text-align: left;
+    .keeper {
+      .username {
+        color: $brown;
       }
-      dd {
-        margin-left: 0;
+
+      .demographics {
+        dt {
+          width: 6.5em;
+          text-align: left;
+        }
+        dd {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .stats {
+      font-size: 1.5em;
+      font-family: $largeFontFamily;
+      margin-bottom: 0;
+      margin-top: 0;
+
+      dt {
+        position: relative;
+        left: -0.75em;
       }
     }
   }

@@ -85,6 +85,26 @@
   .page-container {
     padding: 0 5px 0;
   }
+
+  .cellars.cellars-show {
+    .dashboard {
+      .keeper {
+        text-align: center;
+
+        .demographics {
+          @include centered-definition-list();
+        }
+      }
+
+      .stats {
+        margin-bottom: 0;
+        text-align: right;
+
+        @include centered-definition-list();
+        dt { left: 0; }
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -121,6 +141,12 @@
       padding: 0;
     }
   }
+}
+
+.dashboard {
+  @include border-radius(3px);
+  background-color: #fec846;
+  padding: 10px;
 }
 
 .widget{

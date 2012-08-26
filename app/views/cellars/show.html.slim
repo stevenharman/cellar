@@ -4,10 +4,10 @@ article.cellar
     button.btn.btn-small.btn-primary Share
   h1 My Cellar
   .dashboard.row-fluid
-    .keeper-gravatar.span2.hidden-phone
+    .keeper-gravatar.span2
       = @cellar.keeper_gravatar(128)
-    .keeper.span3
-      h3.username= @cellar.keeper_username
+    .keeper.span4
+      h2.username= @cellar.keeper_username
       dl.demographics.dl-horizontal
         dt Website
         dd= @cellar.website
@@ -15,13 +15,12 @@ article.cellar
         dd= @cellar.location
         dt Joined
         dd= @cellar.established
-    ul.stats.span3
-      li
-        h4 6 TOTAL BEERS
-      li
-        h4 4 UNIQUE BEERS
-      li
-        h4 2 BREWERIES
+    dl.stats.span6
+      dt beers
+      dd 6 total
+      dd 4 unique
+      dt breweries
+      dd 2 total
   fieldset.beers-cellared.row-fluid
     legend Cellared Beers
     table.table.table-striped.table-condensed
