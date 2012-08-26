@@ -8,7 +8,6 @@ feature 'Beers' do
 
   scenario 'Adding a beers to the cellar' do
     visit new_beer_path
-    select(@brew.name, from: 'Name')
     fill_in 'beer_batch', with: 'B432'
     fill_in 'beer_bottled_on', with: 90.days.ago
     fill_in 'beer_best_by', with: 1.year.from_now
@@ -24,7 +23,7 @@ feature 'Beers' do
     fill_in 'beer_batch', with: 'B432'
     fill_in 'beer_bottled_on', with: 90.days.ago
     fill_in 'beer_best_by', with: 1.year.from_now
-    fill_in 'count', with: 4
+    fill_in 'count', with: 0
     click_on 'add_beer'
 
     Beer.all.size.should == 0

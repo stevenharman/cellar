@@ -1,0 +1,12 @@
+div
+  h1= @beer.brew.name
+
+  = simple_form_for @beer do |f|
+    = f.hidden_field :brew_id
+    = f.input :batch, input_html: { class: 'span8', autofocus: true }
+    = f.input :bottled_on, add_month_numbers: true, start_year: 1990, end_year: Date.today.year, include_blank: true
+    = f.input :best_by, add_month_numbers: true, start_year: Date.today.year, end_year: 20.years.from_now.year, discard_day: true, include_blank: true
+    label Count: #{text_field_tag :count, @beer_count, class: 'span2'}
+
+    = f.submit 'Cellar it!', id: 'add_beer', class: 'btn btn-primary'
+

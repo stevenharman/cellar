@@ -9,7 +9,6 @@ class BeersController < ApplicationController
     @beer = Beer.new
     @beer.brew_id = params[:brew]
     @beer_count = 1
-    @brews = Brew.all
   end
 
   def create
