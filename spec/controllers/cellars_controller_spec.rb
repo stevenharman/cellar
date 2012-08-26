@@ -3,8 +3,8 @@ require 'spec_helper'
 describe CellarsController do
 
   describe 'GET /:username' do
-    context "When the users exists" do
-      let(:bob) { double("User") }
+    context "When the user exists" do
+      let(:bob) { User.new }
       before { bob }
 
       it "load his cellar" do

@@ -4,10 +4,10 @@ feature "Viewing a user's cellar" do
   let(:bob) { FactoryGirl.create(:user) }
 
   background do
-    christmas_ale = FactoryGirl.create(:brew, name: "Christmas Ale")
-    drunk_brew = FactoryGirl.create(:brew, name: "Drunk Brew")
-    traded_brew = FactoryGirl.create(:brew, name: "Traded Brew")
-    skunked_brew = FactoryGirl.create(:brew, name: "Skunked Brew")
+    christmas_ale = FactoryGirl.create(:brew, name: 'Christmas Ale')
+    drunk_brew = FactoryGirl.create(:brew, name: 'Drunk Brew')
+    traded_brew = FactoryGirl.create(:brew, name: 'Traded Brew')
+    skunked_brew = FactoryGirl.create(:brew, name: 'Skunked Brew')
     FactoryGirl.create_list(:beer, 3, brew: christmas_ale, user: bob)
     FactoryGirl.create(:beer, :drunk, brew: christmas_ale, user:bob)
 
@@ -18,7 +18,7 @@ feature "Viewing a user's cellar" do
 
   scenario "only show a summary of brews in the cellar" do
     visit cellar_path(bob)
-    find('.cellar').should have_content("Christmas Ale 3")
+    find('.cellar').should have_content('3 total')
   end
 
   scenario "do not include brews with only drunk beers" do

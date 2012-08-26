@@ -17,10 +17,10 @@ article.cellar
         dd= @cellar.established
     dl.stats.span6
       dt beers
-      dd 6 total
-      dd 4 unique
+      dd #{@cellar.total_beers} total
+      dd #{@cellar.unique_brews} unique
       dt breweries
-      dd 2 total
+      dd #{@cellar.total_breweries} total
   fieldset.beers-cellared.row-fluid
     legend Cellared Beers
     table.table.table-striped.table-condensed
