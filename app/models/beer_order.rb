@@ -4,8 +4,8 @@ class BeerOrder
   attr_reader :beers
 
   def initialize(count, beer_stuffs)
-    @count = count
+    @count = [0, count].max
     @brew_id = beer_stuffs.delete(:brew_id)
-    @beers = Array.new(count, beer_stuffs)
+    @beers = Array.new(@count, beer_stuffs)
   end
 end
