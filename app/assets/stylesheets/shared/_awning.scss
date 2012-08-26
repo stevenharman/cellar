@@ -14,7 +14,11 @@
   }
 
   .current-user-links {
-    .gravatar { margin-right: 1em; }
+    .gravatar {
+      margin-right: 1em;
+
+      @include border-radius(2px);
+    }
 
     & > a {
       padding-top: 15px !important;
