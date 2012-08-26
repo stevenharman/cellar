@@ -1,14 +1,21 @@
 .cellars.cellars-show {
+  .cellar {
+    h1 {
+      display: inline-block;
+    }
+    .actions {
+      float: right;
+    }
+  }
   .dashboard {
     background-color: #fec846;
     padding: 1em 0;
 
     @include border-radius(3px);
-  }
 
-  .keeper-gravatar {
-    text-align: center;
-  }
+    .keeper-gravatar {
+      text-align: center;
+    }
 
   .keeper {
     .demographics {

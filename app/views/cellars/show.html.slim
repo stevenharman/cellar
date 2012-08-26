@@ -1,9 +1,8 @@
 article.cellar
-  .row-fluid
-    h2.span6 My Cellar
-    .span6*{style: "text-align:right;"}
-      button.btn.btn-small.btn-primary Add a Beer
-      button.btn.btn-small.btn-primary Share
+  .actions
+    button.btn.btn-small.btn-primary Add a Beer
+    button.btn.btn-small.btn-primary Share
+  h1 My Cellar
   .dashboard.row-fluid
     .keeper-gravatar.span2.hidden-phone
       = @cellar.keeper_gravatar(128)
