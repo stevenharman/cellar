@@ -1,26 +1,41 @@
 article.cellar
   .actions
+    button.btn.btn-small.btn-primary Import
     button.btn.btn-small.btn-primary Add a Beer
     button.btn.btn-small.btn-primary Share
   h1 My Cellar
   .dashboard.row-fluid
     .keeper-gravatar.span2
       = @cellar.keeper_gravatar(128)
-    .keeper.span4
+    .keeper.span10
       h2.username= @cellar.keeper_username
-      dl.demographics.dl-horizontal
-        dt Website
+      dl.demographics
+        dt Website:
         dd= @cellar.website
-        dt Location
+        dt Location: 
         dd= @cellar.location
-        dt Joined
+        dt Joined: 
         dd= @cellar.established
-    dl.stats.span6
-      dt beers
-      dd #{@cellar.total_beers} total
-      dd #{@cellar.unique_brews} unique
-      dt breweries
-      dd #{@cellar.total_breweries} total
+      #stats
+        dl
+          dt Beers
+          .stat-box
+            .split-left.line
+              dd.number #{@cellar.total_beers}
+              dd.label TOTAL
+            .split-left
+              dd.number #{@cellar.unique_brews}
+              dd.label UNIQUE
+            .clear
+        dl
+          dt Breweries
+          .stat-box
+            dd.number #{@cellar.total_breweries}
+            dd.label TOTAL
+        dl
+          dt Info
+          .stat-box
+            dd.info Dude talking about the best burgers and beer to be found out there. Likes to design and run a lot. Marathoner.
   fieldset.beers-cellared.row-fluid
     legend Cellared Beers
     table.table.table-striped.table-condensed
