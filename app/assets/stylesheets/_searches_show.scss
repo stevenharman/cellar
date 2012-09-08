@@ -29,3 +29,12 @@
     text-align: right;
   }
 }
+
+#search-results {
+  table thead th {
+    background-color: $yellow;
+  }
+  .nav {
+    margin-bottom: 0px;
+  }
+}
