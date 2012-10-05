@@ -29,78 +29,66 @@
       }
       .demographics {
         margin-top: 0px;
-        dl {
-          margin: 0;
-          padding: 0;
-        }
+        margin: 0;
+        padding: 0;
+
         dt {
+          display: inline;
           text-align: left;
-          float: left;
           color: $brown;
         }
+
         dd {
           margin: 0 16px 0 5px;
-          float: left;
+          display: inline;
           color: $brown;
-          font-size: 0.8em;
           text-transform: uppercase;
         }
       }
     }
-    #stats {
+    .stats {
       dl {
-        margin: 8px 10px 0 0;
-      }
-      dd {
-        text-align: center;
-      }
-      dl, .split-left, .stat-whole {
-        float: left;
+        display: inline-block;
+        color: $brewdega-orange;
+        margin-bottom: 0;
+        text-transform: uppercase;
       }
       dt {
-        font-size:13px;
-        font-family: $largeFontFamily; 
-        text-transform: uppercase; 
-        color: $brewdega-orange;
-        font-weight: bold; 
-        margin-bottom: 4px;
-        letter-spacing: 1px;
+        font-family: $largeFontFamily;
       }
-      .stat-box {
-        background-color:#f8d47d;
-        border-radius:8px; 
-        -moz-border-radius:8px;
-        -webkit-border-radius:8px;
-        padding:8px 8px 4px 8px;
-        height: 34px;
-      }
-      .number {
-        font-size:21px;
+      dd {
+        border-right: 1px solid $brown;
+        background-color: #f8d47d;
+        color: $brown;
+        display: inline-block;
         font-family: $smallFontFamily;
-        color:#F2664F;
-        font-weight: bold;
-      }
-      .label {
-        font-size:8px;
-        font-family: $smallFontFamily;
-        text-transform: uppercase;
         letter-spacing: 1px;
-        color: #754D2E; 
-        margin: 0; 
-        font-weight: bold;
-        background: none;
+        min-height: 3em;
+        padding: 0.5em 0.5em 0.25em;
+        text-align: center;
+
+        &:first-of-type {
+          @include border-left-radius(8px);
+        }
+        &:last-of-type {
+          border-right: none;
+          @include border-right-radius(8px);
+        }
+
+        span {
+          display: block;
+          color: $brewdega-orange;
+          font-size: 2em;
+        }
       }
       .line {
-        padding-right: 8px; 
-        margin-right: 6px; 
         border-right: 1px solid #666;
+        margin-right: 6px;
+        padding-right: 8px;
       }
-      .info {
-        width: 400px;
-        text-align: left;
-        font-size: 11px;
-        line-height: 13px;
-        color: $brown;
+      .bio dd {
+        text-align: justify;
+        text-transform: none;
       }
     }
   }

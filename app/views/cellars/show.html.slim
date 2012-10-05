@@ -12,30 +12,27 @@ article.cellar
       dl.demographics
         dt Website:
         dd= @cellar.website
-        dt Location: 
+        dt Location:
         dd= @cellar.location
-        dt Joined: 
+        dt Joined:
         dd= @cellar.established
-      #stats
-        dl
+      .stats.row-fluid
+        dl.beers.span2
           dt Beers
-          .stat-box
-            .split-left.line
-              dd.number #{@cellar.total_beers}
-              dd.label TOTAL
-            .split-left
-              dd.number #{@cellar.unique_brews}
-              dd.label UNIQUE
-            .clear
-        dl
+          dd
+            span= @cellar.total_beers
+            | Total
+          dd
+            span= @cellar.unique_brews
+            | Unique
+        dl.breweries.span1
           dt Breweries
-          .stat-box
-            dd.number #{@cellar.total_breweries}
-            dd.label TOTAL
-        dl
+          dd
+            span= @cellar.total_breweries
+            | Total
+        dl.bio.span8
           dt Info
-          .stat-box
-            dd.info Dude talking about the best burgers and beer to be found out there. Likes to design and run a lot. Marathoner.
+          dd Dude talking about the best burgers and beer to be found out there. Likes to design and run a lot. Marathoner.
   fieldset.beers-cellared.row-fluid
     legend Cellared Beers
     table.table.table-striped.table-condensed
