@@ -7,7 +7,7 @@ module Search
 
     Empty = Kaminari::PaginatableArray
 
-    PAGINATION_API = [:current_page, :empty?, :limit_value, :num_pages, :total_count]
+    PAGINATION_API = [:current_page, :empty?, :limit_value, :total_pages, :total_count]
     def_delegators :@results, *PAGINATION_API
 
     def self.empty
