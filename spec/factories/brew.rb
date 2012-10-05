@@ -11,5 +11,7 @@ FactoryGirl.define do
     original_gravity { rand(1030..1060)/1000.0 }
     year { Date.new(rand(2000..2012)) }
     organic { Forgery::Basic.boolean }
+
+    after(:build) { |brew| brew.breweries << FactoryGirl.create(:brewery) }
   end
 end
