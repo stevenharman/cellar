@@ -34,12 +34,6 @@
   padding: 0 $gridGutterWidth 0;
 }
 
-.stats {
-    list-style: none;
-    margin-top: 10px;
-    margin-left: 0px;
-}
-
 @media (min-width: 980px) {
   .page-container {
     padding-top: ($navbarHeight + 10px);
@@ -86,26 +80,6 @@
   .page-container {
     padding: 0 8px 0;
   }
-
-  .cellars.cellars-show {
-    .dashboard {
-      .keeper {
-        text-align: center;
-
-        .demographics {
-          @include centered-definition-list();
-        }
-      }
-
-      .stats {
-        margin-bottom: 0;
-        text-align: right;
-
-        @include centered-definition-list();
-        dt { left: 0; }
-      }
-    }
-  }
 }
 
 @media (max-width: 768px) {
@@ -142,12 +116,6 @@
       padding: 0;
     }
   }
-}
-
-.dashboard {
-  @include border-radius(3px);
-  background-color: #fec846;
-  padding: 10px;
 }
 
 .widget{

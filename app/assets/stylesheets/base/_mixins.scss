@@ -6,11 +6,13 @@
 @mixin centered-definition-list {
   dt {
     clear: left;
+    display: block;
     float: left;
     width: 45%;
     text-align: right;
   }
   dd {
+    display: block;
     text-align: left;
     margin-left: 50%;
   }

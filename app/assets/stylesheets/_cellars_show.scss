@@ -7,9 +7,13 @@
       float: right;
     }
   }
+
+
+
+
   .dashboard {
     background-color: #fec846;
-    padding: 1em .8em;
+    padding: 1em 0;
 
     @include border-radius(3px);
 
@@ -89,6 +93,16 @@
       .bio dd {
         text-align: justify;
         text-transform: none;
+      }
+    }
+
+    @media (max-width: 767px) {
+
+      .keeper {
+        text-align: center;
+        dt { text-align: left; }
+
+        .demographics { @include centered-definition-list(); }
       }
     }
   }

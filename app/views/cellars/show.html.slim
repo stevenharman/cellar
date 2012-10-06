@@ -8,8 +8,8 @@ article.cellar
     .keeper-gravatar.span2
       = @cellar.keeper_gravatar(128)
     .keeper.span10
-      h2.username= @cellar.keeper_username
-      dl.demographics
+      h2.username.row-fluid= @cellar.keeper_username
+      dl.demographics.row-fluid
         dt Website:
         dd= @cellar.website
         dt Location:
@@ -17,7 +17,7 @@ article.cellar
         dt Joined:
         dd= @cellar.established
       .stats.row-fluid
-        dl.beers.span2
+        dl.beers.span3
           dt Beers
           dd
             span= @cellar.total_beers
@@ -25,12 +25,12 @@ article.cellar
           dd
             span= @cellar.unique_brews
             | Unique
-        dl.breweries.span1
+        dl.breweries.span2
           dt Breweries
           dd
             span= @cellar.total_breweries
             | Total
-        dl.bio.span8
+        dl.bio.span6
           dt Info
           dd Dude talking about the best burgers and beer to be found out there. Likes to design and run a lot. Marathoner.
   fieldset.beers-cellared.row-fluid
