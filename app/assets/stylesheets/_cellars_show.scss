@@ -3,13 +3,9 @@
     h1 {
       display: inline-block;
     }
-    .actions {
-      float: right;
+    .actions { float: right;
     }
   }
-
-
-
 
   .dashboard {
     background-color: #fec846;
@@ -30,24 +26,29 @@
         color: $brown;
         margin: 0;
         padding: 0;
+        text-transform: none;
       }
       .demographics {
         margin-top: 0px;
         margin: 0;
         padding: 0;
+        position: relative;
+        top: -0.5em;
 
         dt {
           display: inline;
+          margin-left: 2em;
+          margin-right: 0.5em;
           text-align: left;
           color: $brown;
         }
 
         dd {
-          margin: 0 16px 0 5px;
           display: inline;
           color: $brown;
-          text-transform: uppercase;
         }
+
+        .website { display: none; }
       }
     }
     .stats {
@@ -55,10 +56,11 @@
         display: inline-block;
         color: $brewdega-orange;
         margin-bottom: 0;
-        text-transform: uppercase;
+        margin-top: 0;
       }
       dt {
         font-family: $largeFontFamily;
+        text-transform: uppercase;
       }
       dd {
         border-right: 1px solid $brown;
@@ -70,6 +72,7 @@
         min-height: 3em;
         padding: 0.5em 0.5em 0.25em;
         text-align: center;
+        text-transform: uppercase;
 
         &:first-of-type {
           @include border-left-radius(8px);
@@ -102,7 +105,11 @@
         text-align: center;
         dt { text-align: left; }
 
-        .demographics { @include centered-definition-list(); }
+        .demographics {
+          .website { display: block; }
+
+          @include centered-definition-list();
+        }
       }
     }
   }

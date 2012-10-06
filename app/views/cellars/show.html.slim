@@ -8,9 +8,9 @@ article.cellar
     .keeper-gravatar.span2
       = @cellar.keeper_gravatar(128)
     .keeper.span10
-      h2.username.row-fluid= @cellar.keeper_username
-      dl.demographics.row-fluid
-        dt Website:
+      h2.username= @cellar.keeper_username
+      dl.demographics
+        dt.website Website:
         dd= @cellar.website
         dt Location:
         dd= @cellar.location
@@ -38,17 +38,15 @@ article.cellar
     table.table.table-striped.table-condensed
       thead
         tr
-          th Edit
-          th Brewery
           th Beer
+          th Brewery
           th Quantity
-          th Cellared on
+          th
       tbody
         - for brew in @cellar.stocked_brews
           tr.beer
-            td= image_tag('edit_icon_12.gif', alt: 'Edit')
+            td= link_to brew.name, cellar_brew_path(@cellar.keeper, brew)
             td= render partial: brew.breweries, spacer_template: 'breweries/brewery_spacer'
-            td= link_to brew.name, brew
             td= brew.beers.size
             td= link_to 'Details', cellar_brew_path(@cellar.keeper, brew), class: 'btn btn-primary'
 
