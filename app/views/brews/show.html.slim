@@ -7,7 +7,7 @@ article.brew
     h5.brewery-name= render partial: @brew.breweries, spacer_template: 'breweries/brewery_spacer'
 
   .row-fluid
-    = image_tag('http://placehold.it/256x256', alt: @brew.name, class: :span3)
+    = image_tag(@brew.large_image || 'http://placehold.it/256x256', alt: @brew.name, class: :span3)
     .span9
       dl.details
         dt Style:
