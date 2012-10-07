@@ -17,3 +17,14 @@
     margin-left: 50%;
   }
 }
+
+@mixin inline-definition-list {
+  dt {
+    display: inline-block;
+    margin-left: 2em;
+    margin-right: 0.5em;
+  }
+  dd {
+    display: inline-block;
+  }
+}

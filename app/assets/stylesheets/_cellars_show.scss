@@ -35,16 +35,14 @@
         position: relative;
         top: -0.5em;
 
+        @include inline-definition-list;
+
         dt {
-          display: inline;
-          margin-left: 2em;
-          margin-right: 0.5em;
           text-align: left;
           color: $brown;
         }
 
         dd {
-          display: inline;
           color: $brown;
         }
 
@@ -53,7 +51,6 @@
     }
     .stats {
       dl {
-        display: inline-block;
         color: $brewdega-orange;
         margin-bottom: 0;
         margin-top: 0;

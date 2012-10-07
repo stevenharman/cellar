@@ -19,7 +19,7 @@ class CellarBeersController < ApplicationController
 
   def drink
     @beer.drink!
-    redirect_to cellar_brew_path(@cellar.keeper, @beer.brew)
+    redirect_to brew_path(@beer.brew)
   end
 
   private

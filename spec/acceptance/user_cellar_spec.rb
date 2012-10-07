@@ -44,7 +44,8 @@ feature 'Drink a beer from the Cellar' do
   let(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
 
   scenario 'after drinking, the beer is no longer in the Cellar' do
-    visit cellar_brew_path(bob, bobs_beer.brew)
+    visit brew_path(bobs_beer.brew)
+    pending 'Moving toward showing cellared brews on brew page.'
     page.should have_css('.beers-cellared .beer')
     click_button 'Drink'
     page.should_not have_css('.beers-cellared .beer')

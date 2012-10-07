@@ -45,8 +45,8 @@ article.cellar
       tbody
         - for brew in @cellar.stocked_brews
           tr.beer
-            td= link_to brew.name, cellar_brew_path(@cellar.keeper, brew)
+            td= link_to brew.name, brew
             td= render partial: brew.breweries, spacer_template: 'breweries/brewery_spacer'
             td= brew.beers.size
-            td= link_to 'Details', cellar_brew_path(@cellar.keeper, brew), class: 'btn btn-primary'
+            td= link_to 'Details', brew, class: 'btn btn-primary'
 
