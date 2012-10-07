@@ -2,12 +2,12 @@ require 'spec_helper'
 
 feature "Viewing a user's cellar" do
   let(:bob) { FactoryGirl.create(:user) }
+  let!(:christmas_ale) { FactoryGirl.create(:brew, name: 'Christmas Ale') }
+  let!(:drunk_brew) { FactoryGirl.create(:brew, name: 'Drunk Brew') }
+  let!(:traded_brew) { FactoryGirl.create(:brew, name: 'Traded Brew') }
+  let!(:skunked_brew) { FactoryGirl.create(:brew, name: 'Skunked Brew') }
 
   background do
-    christmas_ale = FactoryGirl.create(:brew, name: 'Christmas Ale')
-    drunk_brew = FactoryGirl.create(:brew, name: 'Drunk Brew')
-    traded_brew = FactoryGirl.create(:brew, name: 'Traded Brew')
-    skunked_brew = FactoryGirl.create(:brew, name: 'Skunked Brew')
     FactoryGirl.create_list(:beer, 3, brew: christmas_ale, user: bob)
     FactoryGirl.create(:beer, :drunk, brew: christmas_ale, user:bob)
 
@@ -45,10 +45,8 @@ feature 'Drink a beer from the Cellar' do
 
   scenario 'after drinking, the beer is no longer in the Cellar' do
     visit brew_path(bobs_beer.brew)
-    pending 'Moving toward showing cellared brews on brew page.'
     page.should have_css('.beers-cellared .beer')
     click_button 'Drink'
     page.should_not have_css('.beers-cellared .beer')
   end
-
 end

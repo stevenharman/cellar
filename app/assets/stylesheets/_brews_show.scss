@@ -1,21 +1,23 @@
 .brews.brews-show {
-  hgroup {
-    .brew, .brewery {
-      display: inline-block;
-      margin-bottom: 0;
-      margin-right: 0.5em;
-      text-transform: none;
+  .brew {
+    hgroup {
+      .name, .brewery-name {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 0.5em;
+        text-transform: none;
+      }
     }
-  }
 
-  .brew-details {
-    margin-top: 0;
-    @include inline-definition-list;
+    .details {
+      margin-top: 0;
+      @include inline-definition-list;
 
-    dt {
-      color: $brown;
+      dt {
+        color: $brown;
 
-      &:first-child { margin-left: 0; }
+        &:first-child { margin-left: 0; }
+      }
     }
   }
 }

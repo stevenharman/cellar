@@ -6,8 +6,7 @@ class BrewsController < ApplicationController
 
   def show
     @brew = Brew.find(params[:id])
-
-    @beers = CellarDecorator.new(Cellar.new(current_user || VisitingKeeper.new))
+    @cellar = current_cellar
   end
 
 end

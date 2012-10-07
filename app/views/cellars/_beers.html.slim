@@ -1,26 +1,26 @@
-fieldset.beers-cellared
-  legend In your cellar
-  table.table.table-striped
-    thead
-      tr
-        th Batch
-        th Bottled on
-        th Best by
-        th Cellared on
-        th
-    tbody
-      - for beer in []# cellar.beers_for(brew)
-        tr.beer
-          td= beer.batch
-          td= beer.bottled_on
-          td= beer.best_by
-          td= beer.created_at
-          td
-            = form_tag drink_cellar_beer_path(beer.user, beer), method: :put do
-              = submit_tag 'Drink', class: 'btn btn-primary'
-    - if [].empty? #beers.empty?
-      tr.no-beer
-        td colspan='5'
-          ' You don't have any #{@brew.name} in you cellar.
-          = link_to 'Stock one now!', new_beer_path(brew: @brew)
-
+- if user_signed_in?
+  fieldset.beers-cellared
+    legend In your cellar
+    table.table.table-striped
+      thead
+        tr
+          th Batch
+          th Bottled on
+          th Best by
+          th Cellared on
+          th
+      tbody
+        - for beer in cellar.beers_for(brew)
+          tr.beer
+            td= beer.batch
+            td= beer.bottled_on
+            td= beer.best_by
+            td= beer.created_at
+            td
+              = form_tag drink_cellar_beer_path(beer.user, beer), method: :put do
+                = submit_tag 'Drink', class: 'btn btn-primary'
+        - if cellar.beers_for(brew).empty?
+          tr.no-beer
+            td colspan='5'
+              ' You don't have any #{@brew.name} in you cellar.
+              = link_to 'Stock one now!', new_beer_path(brew: @brew)

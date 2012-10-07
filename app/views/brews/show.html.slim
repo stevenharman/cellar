@@ -1,22 +1,23 @@
 - content_for :title do
   = @brew.name
 
-article
+article.brew
   hgroup
-    h2.brew= @brew.name
-    h5.brewery= render partial: @brew.breweries, spacer_template: 'breweries/brewery_spacer'
+    h2.name= @brew.name
+    h5.brewery-name= render partial: @brew.breweries, spacer_template: 'breweries/brewery_spacer'
 
-  dl.brew-details
-    dt Style:
-    dd= @brew.style.name
-    dt ABV:
-    dd
-      = @brew.abv
-      | %
-    dt IBU:
-    dd= @brew.ibu
   .row-fluid
     = image_tag('http://placehold.it/256x256', alt: @brew.name, class: :span3)
-    .description.span9
-      = simple_format(@brew.description)
-      == render 'cellars/beers', brew: @brew
+    .span9
+      dl.details
+        dt Style:
+        dd= @brew.style.name
+        dt ABV:
+        dd
+          = @brew.abv
+          | %
+        dt IBU:
+        dd= @brew.ibu
+      .description
+        = simple_format(@brew.description)
+      == render 'cellars/beers', brew: @brew, cellar: @cellar

@@ -8,6 +8,11 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def current_cellar
+    @decorated_current_cellar ||=
+      CellarDecorator.new(Cellar.new(current_user))
+  end
+
   def load_cellar
     keeper = User.for_username!(params[:cellar_id] || params[:username])
     Cellar.new(keeper)
