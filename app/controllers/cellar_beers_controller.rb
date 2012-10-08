@@ -5,12 +5,14 @@ class CellarBeersController < ApplicationController
   def show
   end
 
+  # TODO Remove edit and generic update as we don't yet use them.
   def edit
   end
 
   def update
-    if @beer.update_attributes(params[:beer])
-      redirect_to cellar_beer_path(@beer.user, @beer)
+    #if @beer.update_attributes(params[:beer])
+    if @beer.update_attributes(params.slice(:status))
+      redirect_to brew_path(@beer.brew)
     else
       flash.now[:alert] = "Oops! #{@beer.errors.full_messages.join(", ")}"
       render :edit

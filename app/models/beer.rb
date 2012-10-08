@@ -6,7 +6,7 @@ class Beer < ActiveRecord::Base
   validates :user, presence: true
   validates :status, inclusion: [:cellared, :drunk, :traded, :skunked]
 
-  attr_accessible :batch, :bottled_on, :best_by
+  attr_accessible :batch, :bottled_on, :best_by, :status
 
   scope :cellared, where(status: :cellared)
   scope :drunk, where(status: :drunk)

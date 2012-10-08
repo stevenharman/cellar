@@ -1,13 +1,15 @@
 - if user_signed_in?
   fieldset.beers-cellared
-    legend In your cellar
+    legend
+      ' In your cellar :
+      small= cellar.beers_for(brew).count
     table.table.table-striped
       thead
         tr
           th Batch
           th Bottled on
           th Best by
-          th Cellared on
+          th Cellared
           th
       tbody
         - for beer in cellar.beers_for(brew)
@@ -15,10 +17,16 @@
             td= beer.batch
             td= beer.bottled_on
             td= beer.best_by
-            td= beer.created_at
-            td
-              = form_tag drink_cellar_beer_path(beer.user, beer), method: :put do
-                = submit_tag 'Drink', class: 'btn btn-primary'
+            td= l(beer.created_at, format: :month_year)
+            = form_tag cellar_beer_path(beer.user, beer), method: :put do
+              td.status.btn-group
+                = button_tag 'Drink', name: 'status', value: :drunk, class: 'btn'
+                = button_tag class: 'btn dropdown-toggle',  data: { toggle: 'dropdown' } do
+                  span.caret
+                ul.dropdown-menu
+                  li= button_tag 'Trade', name: 'status', value: :traded, class: 'btn'
+                  /li= button_tag 'Share', name: 'status', value: :shared, class: 'btn'
+                  li= button_tag 'Skunk', name: 'status', value: :skunked, class: 'btn'
         - if cellar.beers_for(brew).empty?
           tr.no-beer
             td colspan='5'
