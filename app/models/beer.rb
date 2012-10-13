@@ -17,11 +17,6 @@ class Beer < ActiveRecord::Base
     self.user == other_user
   end
 
-  def drink!
-    self.status = :drunk
-    save!
-  end
-
   def status
     read_attribute(:status).to_sym
   end

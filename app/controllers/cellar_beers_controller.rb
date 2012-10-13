@@ -1,6 +1,6 @@
 class CellarBeersController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :load_beer, only: [:show, :edit, :update, :drink]
+  before_filter :load_beer, only: [:show, :edit, :update]
 
   def show
   end
@@ -17,11 +17,6 @@ class CellarBeersController < ApplicationController
       flash.now[:alert] = "Oops! #{@beer.errors.full_messages.join(", ")}"
       render :edit
     end
-  end
-
-  def drink
-    @beer.drink!
-    redirect_to brew_path(@beer.brew)
   end
 
   private
