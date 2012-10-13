@@ -39,14 +39,42 @@ feature "Viewing a user's cellar" do
   end
 end
 
-feature 'Drink a beer from the Cellar' do
+feature 'Viewing your own cellar' do
+  include Acceptance::CellarHelpers
   let(:bob) { sign_in_new_user(:bob) }
-  let(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
+  let!(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
+
+  scenario 'can get details about the bottles of a brew in your cellar' do
+    visit cellar_path(bob)
+    view_brew_page(bobs_beer.brew)
+
+    expect_to_be_in_the_cellar(bobs_beer)
+  end
+end
+
+feature 'Removing a beer from the Cellar' do
+  include Acceptance::CellarHelpers
+  let(:bob) { sign_in_new_user(:bob) }
+  let!(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
+  background do
+    visit brew_path(bobs_beer.brew)
+  end
 
   scenario 'after drinking, the beer is no longer in the Cellar' do
-    visit brew_path(bobs_beer.brew)
-    page.should have_css('.beers-cellared .beer')
-    click_button 'Drink'
-    page.should_not have_css('.beers-cellared .beer')
+    expect_to_be_in_the_cellar(bobs_beer)
+    drink_from_the_cellar(bobs_beer)
+    expect_not_to_be_in_the_cellar(bobs_beer)
+  end
+
+  scenario 'after trading, the beer is no longer in the Cellar' do
+    expect_to_be_in_the_cellar(bobs_beer)
+    trade_from_the_cellar(bobs_beer)
+    expect_not_to_be_in_the_cellar(bobs_beer)
+  end
+
+  scenario 'after skunking, the beer is no longer in the Cellar' do
+    expect_to_be_in_the_cellar(bobs_beer)
+    skunk_from_the_cellar(bobs_beer)
+    expect_not_to_be_in_the_cellar(bobs_beer)
   end
 end
