@@ -20,4 +20,16 @@
       }
     }
   }
+
+  .beers-cellared {
+    .status {
+      .dropdown-menu {
+        min-width: initial;
+        padding: 0;
+
+        li { margin: 0.5em; }
+        button { min-width: 10em; }
+      }
+    }
+  }
 }
