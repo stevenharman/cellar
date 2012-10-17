@@ -20,4 +20,4 @@ article.brew
         dd= @brew.ibu
       .description
         = simple_format(@brew.description)
-      == render 'cellars/beers', brew: @brew, cellar: @cellar
+      == render 'cellars/beers_for_brew', brew: @brew

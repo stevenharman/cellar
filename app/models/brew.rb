@@ -1,3 +1,5 @@
+require 'pg_search'
+
 class Brew < ActiveRecord::Base
   belongs_to :style
   belongs_to :base_brew, class_name: 'Brew'

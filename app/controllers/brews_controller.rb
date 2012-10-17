@@ -5,8 +5,8 @@ class BrewsController < ApplicationController
   end
 
   def show
-    @brew = Brew.find(params[:id])
-    @cellar = current_cellar
+    brew = Brew.find(params[:id])
+    @brew = CellaredBrewDecorator.new(brew: brew, cellar: current_cellar)
   end
 
 end
