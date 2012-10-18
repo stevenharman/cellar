@@ -1,9 +1,5 @@
 class BeersController < ApplicationController
-  before_filter :authenticate_user!, except: [:index]
-
-  def index
-    @beers = Beer.includes(:brew).order('brews.name')
-  end
+  before_filter :authenticate_user!
 
   def new
     brew_id = params[:brew]
