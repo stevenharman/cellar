@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   def create
     user = authenticate_user!(:recall => 'sessions#new')
     sign_in user
-    redirect_to root_url, notice: 'Welcome back to the Cellar'
+    redirect_to after_sign_in_path_for(user), notice: 'Welcome back to the Cellar'
   end
 
   def destroy
