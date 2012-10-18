@@ -2,6 +2,9 @@
   = @brew.name
 
 article.brew
+  = link_to new_beer_path(brew: @brew), class: 'add-to-cellar btn' do
+    span.icon-plus-sign
+    |  Stock one now!
   hgroup
     h2.name= @brew.name
     h5.brewery-name= render partial: @brew.breweries, spacer_template: 'breweries/brewery_spacer'

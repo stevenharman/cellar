@@ -9,6 +9,11 @@
       }
     }
 
+    .add-to-cellar {
+      float: right;
+      margin-top: 0.75em;
+    }
+
     .details {
       margin-top: 0;
       @include inline-definition-list;
