@@ -10,18 +10,16 @@ class BeersController < ApplicationController
   end
 
   def create
-    cellar = Cellar.new(current_user)
     order = BeerOrder.new(params[:count].to_i, params[:beer])
-    receipt = cellar.stock_beer(order)
+    receipt = current_cellar.stock_beer(order)
 
     if receipt.success?
-      redirect_to(cellar_path(current_user), notice: "#{order.count} cellared!")
+      redirect_to(cellar_path(current_user), notice: "Added #{order.count} #{receipt.brew_name} to your cellar!")
     else
       @beer = receipt.example_beer
       @beer_count = order.count
-      @brews = Brew.all
 
-      flash.now[:alert] = "Oops! #{@beer.errors.full_messages.join(", ")}"
+      flash.now[:alert] = "Oops! #{receipt.error_messages.join(", ")}"
       render :new
     end
   end
