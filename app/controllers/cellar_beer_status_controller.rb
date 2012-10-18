@@ -4,7 +4,9 @@ class CellarBeerStatusController < ApplicationController
 
   def update
     beer = current_cellar.find_beer(params[:beer_id])
-    unless beer.update_attributes(params.slice(:status))
+    if beer.update_attributes(params.slice(:status))
+      flash[:notice] = "That #{beer.brew.name} was #{beer.status}!"
+    else
       flash[:alert] = "Oops! #{beer.errors.full_messages.join(", ")}"
     end
 
