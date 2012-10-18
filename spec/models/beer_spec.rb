@@ -38,13 +38,13 @@ describe Beer do
     context 'when Bob owns the beer' do
       before { beer.user = bob }
 
-      specify { beer.should be_cellared_by(bob) }
+      it { beer.should be_cellared_by(bob) }
     end
 
     context 'when Alice owns the beer' do
       before { beer.user = User.new }
 
-      specify { beer.should_not be_cellared_by(bob) }
+      it { beer.should_not be_cellared_by(bob) }
     end
   end
 
