@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SupplyChain::BrewCatalog, :vcr do
+describe SupplyChain::BrewCatalogRequest, :vcr do
   let(:catalog) { described_class.new(warehouse, log) }
   let(:warehouse) { SupplyChain::Warehouse.new }
   let(:log) { SupplyChain::Log::Noop.new  }

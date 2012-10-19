@@ -4,7 +4,7 @@ class WebHooksController < ApplicationController
 
   def create
     if notification.valid?(ServiceKeys.brewery_db)
-      #SupplyChain::BrewContribution.place(brew)
+      #SupplyChain::BrewContribution.submit(brew)
       SupplyChain::BrewRequest.order(id: notification.attribute_id)
       head :created
     else

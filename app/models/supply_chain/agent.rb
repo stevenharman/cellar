@@ -14,7 +14,7 @@ module SupplyChain
     def import_full_inventory
       import_styles_with_categories
       import_breweries do |brewery|
-        BrewCatalog.import_from(brewery)
+        BrewCatalogRequest.order(brewery)
       end
     end
 
