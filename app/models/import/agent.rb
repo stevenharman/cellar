@@ -25,7 +25,7 @@ module Import
 
     def import_breweries
       @warehouse.breweries.each do |b|
-        brewery = Translator.new(BreweryTranslation, Brewery).translate(b)
+        brewery = Translator.new(BreweryTranslation, ::Brewery).translate(b)
         @log.record(brewery)
         yield brewery if block_given?
         brewery
@@ -34,13 +34,13 @@ module Import
 
     def import_brewery(id)
       raw_data = @warehouse.brewery(id)
-      brewery = Translator.new(BreweryTranslation, Brewery).translate(raw_data)
+      brewery = Translator.new(BreweryTranslation, ::Brewery).translate(raw_data)
       @log.record(brewery)
     end
 
     def import_brew(id)
       raw_data = @warehouse.brew(id)
-      brew = Translator.new(BrewTranslation, Brew).translate(raw_data)
+      brew = Translator.new(BrewTranslation, ::Brew).translate(raw_data)
       @log.record(brew)
     end
 
@@ -48,14 +48,14 @@ module Import
 
     def import_categories
       @warehouse.categories.map do |c|
-        category = Translator.new(CategoryTranslation, Category).translate(c)
+        category = Translator.new(CategoryTranslation, ::Category).translate(c)
         @log.record(category)
       end
     end
 
     def import_styles
       @warehouse.styles.map do |s|
-        style = Translator.new(StyleTranslation, Style).translate(s)
+        style = Translator.new(StyleTranslation, ::Style).translate(s)
         @log.record(style)
       end
     end
