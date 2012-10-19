@@ -1,6 +1,6 @@
-require 'models/import/warehouse_map'
+require 'models/supply_chain/warehouse_map'
 
-describe Import::WarehouseMap do
+describe SupplyChain::WarehouseMap do
   subject(:map) { described_class }
 
   describe '.boolean' do
@@ -29,7 +29,7 @@ describe Import::WarehouseMap do
 
   describe '.images' do
     it 'is EmptyImages when given nothing' do
-      expect(subject.images(nil)).to be_an(Import::WarehouseMap::EmptyImages)
+      expect(subject.images(nil)).to be_an(SupplyChain::WarehouseMap::EmptyImages)
     end
 
     it 'is what it was given' do

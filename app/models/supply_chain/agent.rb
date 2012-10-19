@@ -1,12 +1,12 @@
 
-module Import
+module SupplyChain
   class Agent
 
     def self.import_from(warehouse)
       new(warehouse).import_full_inventory
     end
 
-    def initialize(warehouse, log = Import::Log.new)
+    def initialize(warehouse, log = SupplyChain::Log.new)
       @warehouse = warehouse
       @log = log
     end

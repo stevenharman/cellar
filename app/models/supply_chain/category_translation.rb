@@ -1,4 +1,4 @@
-module Import
+module SupplyChain
   class CategoryTranslation
 
     def initialize(category)

@@ -13,12 +13,12 @@ describe WebHooksController do
                                subAction: sub_action, timestamp: timestamp } }
   before do
     ServiceKeys.stub(:brewery_db) { '2a3e944b3fcc18c0617ea642c9edb5dd' }
-    Import::Brew.stub(:perform_async) { 'jid' }
+    SupplyChain::Brew.stub(:perform_async) { 'jid' }
   end
 
   context 'receiving a beer edited notification from BreweryDB' do
     it 'queues an job to sync the updated beer' do
-      Import::Brew.should_receive(:perform_async)
+      SupplyChain::Brew.should_receive(:perform_async)
       post :create, brewery_db_payload
     end
 
@@ -31,7 +31,7 @@ describe WebHooksController do
   context 'receiving a bogus notification from BreweryDB' do
     it 'does not do any work' do
       pending('need to drive out the BreweryDB::WebHook')
-      Import::Brew.should_not_receive(:perform_async)
+      SupplyChain::Brew.should_not_receive(:perform_async)
       post :create, brewery_db_payload
       expect(response.status).to eq(422)
     end

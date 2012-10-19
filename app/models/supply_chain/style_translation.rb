@@ -1,4 +1,4 @@
-module Import
+module SupplyChain
   class StyleTranslation
 
     def initialize(style, category_factory = ::Category)

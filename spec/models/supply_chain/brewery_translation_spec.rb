@@ -1,6 +1,6 @@
-require 'models/import/brewery_translation'
+require 'models/supply_chain/brewery_translation'
 
-describe Import::BreweryTranslation do
+describe SupplyChain::BreweryTranslation do
 
   describe '#translate' do
     subject { described_class.new(brewery) }

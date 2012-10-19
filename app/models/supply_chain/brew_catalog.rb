@@ -2,7 +2,7 @@ require_relative 'brew_translation'
 require 'ostruct'
 require 'sidekiq'
 
-module Import
+module SupplyChain
   class BrewCatalog
     include Sidekiq::Worker
 

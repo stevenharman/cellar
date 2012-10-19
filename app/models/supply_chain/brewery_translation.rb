@@ -1,6 +1,6 @@
 require_relative 'warehouse_map'
 
-module Import
+module SupplyChain
   class BreweryTranslation
 
     def initialize(brewery)

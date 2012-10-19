@@ -1,6 +1,6 @@
 require 'delegate'
 
-module Import
+module SupplyChain
   class Log < SimpleDelegator
 
     def initialize(log = Rails.logger)

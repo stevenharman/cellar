@@ -1,4 +1,4 @@
-module Import
+module SupplyChain
   class BrewTranslation
 
     def initialize(brew, brewery_factory = ::Brewery)

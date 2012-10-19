@@ -1,7 +1,7 @@
 require 'service_keys'
 require 'brewery_db'
 
-module Import
+module SupplyChain
   class Warehouse
 
     def initialize(brewery_db_api_key = ServiceKeys.brewery_db)

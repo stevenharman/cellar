@@ -1,4 +1,4 @@
-module Import
+module SupplyChain
   class Translator
 
     def initialize(translation, factory)

@@ -1,7 +1,7 @@
 require 'vcr_spec_helper'
-require 'models/import/warehouse'
+require 'models/supply_chain/warehouse'
 
-describe Import::Warehouse do
+describe SupplyChain::Warehouse do
   subject { described_class.new }
 
   describe 'fetching from the API', :vcr do

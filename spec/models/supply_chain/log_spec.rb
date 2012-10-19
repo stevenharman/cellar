@@ -1,6 +1,6 @@
-require 'models/import/log'
+require 'models/supply_chain/log'
 
-describe Import::Log do
+describe SupplyChain::Log do
   subject { described_class.new(base_log) }
   let(:base_log) { stub.as_null_object }
   let(:item) { stub('Item').as_null_object }

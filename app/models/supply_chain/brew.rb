@@ -1,6 +1,6 @@
 require 'sidekiq'
 
-module Import
+module SupplyChain
   class Brew
     include Sidekiq::Worker
 

@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Import::Agent, :vcr do
+describe SupplyChain::Agent, :vcr do
   subject { described_class.new(warehouse, log) }
-  let(:warehouse) { Import::Warehouse.new }
-  let(:log) { Import::Log::Noop.new }
+  let(:warehouse) { SupplyChain::Warehouse.new }
+  let(:log) { SupplyChain::Log::Noop.new }
   let(:raw_data) { stub }
 
   it '#import_styles_with_categories loads the all styles and their categories' do

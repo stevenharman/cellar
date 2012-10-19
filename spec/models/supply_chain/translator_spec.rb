@@ -1,10 +1,10 @@
-require 'models/import/translator'
+require 'models/supply_chain/translator'
 
-describe Import::Translator do
+describe SupplyChain::Translator do
   subject { described_class.new(translation_class, factory) }
   let(:translation_class) { stub }
   let(:factory) { stub }
-  let(:translation) { stub('Import::Translation') }
+  let(:translation) { stub('SupplyChain::Translation') }
   let(:item) { OpenStruct.new }
   let(:data) { stub(id: 'abc123') }
   before do

@@ -1,7 +1,7 @@
 require 'bigdecimal'
 require 'date'
 
-module Import
+module SupplyChain
   module WarehouseMap
     class EmptyImages < OpenStruct; end
 

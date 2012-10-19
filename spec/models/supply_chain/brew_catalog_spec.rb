@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Import::BrewCatalog, :vcr do
+describe SupplyChain::BrewCatalog, :vcr do
   let(:catalog) { described_class.new(warehouse, log) }
-  let(:warehouse) { Import::Warehouse.new }
-  let(:log) { Import::Log::Noop.new  }
+  let(:warehouse) { SupplyChain::Warehouse.new }
+  let(:log) { SupplyChain::Log::Noop.new  }
   let!(:brewery) { FactoryGirl.create(:brewery, brewery_db_id: 'Idm5Y5') }
 
   it 'imports the brews from the brewery', vcr: { record: :once } do
