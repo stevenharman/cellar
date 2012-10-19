@@ -1,10 +1,10 @@
 require 'sidekiq'
 
 module SupplyChain
-  class Brew
+  class BrewRequest
     include Sidekiq::Worker
 
-    def self.import(args)
+    def self.order(args)
       perform_async(args)
     end
 

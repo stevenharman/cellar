@@ -4,7 +4,8 @@ class WebHooksController < ApplicationController
 
   def create
     if notification.valid?(ServiceKeys.brewery_db)
-      SupplyChain::Brew.import(id: notification.attribute_id)
+      #SupplyChain::BrewContribution.place(brew)
+      SupplyChain::BrewRequest.order(id: notification.attribute_id)
       head :created
     else
       head :unprocessable_entity
