@@ -42,6 +42,10 @@ describe SupplyChain::WarehouseMap do
       expect(subject.year(nil)).to be_nil
     end
 
+    it 'is nil when they year-looking string is zero' do
+      expect(subject.year('0')).to be_nil
+    end
+
     it 'is the Year when given a year-looking string' do
       expect(subject.year('1999')).to eq(Date.new(1999))
     end

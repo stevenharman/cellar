@@ -22,9 +22,10 @@ module SupplyChain
     end
 
     def self.year(raw)
-      return unless raw
+      year = raw.to_i
+      return unless year > 0
 
-      Date.new(raw.to_i)
+      Date.new(year)
     end
 
   end
