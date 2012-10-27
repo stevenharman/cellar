@@ -14,11 +14,14 @@ describe WebHooksController do
   before do
     ServiceKeys.stub(:brewery_db) { '2a3e944b3fcc18c0617ea642c9edb5dd' }
     SupplyChain::BrewRequest.stub(:order) { 'jid' }
+    BreweryDB::WebHook.any_instance.stub(:valid?) { true }
   end
 
   context 'receiving a beer edited notification from BreweryDB' do
+    let(:action) { nil } # b/c Rails' test harness strips it out, but IRL it makes it through. FML.
+
     it 'queues an job to sync the updated beer' do
-      SupplyChain::BrewRequest.should_receive(:order)
+      SupplyChain::BrewRequest.should_receive(:order).with(id: attribute_id, action: action, sub_action: sub_action)
       post :create, brewery_db_payload
     end
 
@@ -29,8 +32,11 @@ describe WebHooksController do
   end
 
   context 'receiving a bogus notification from BreweryDB' do
+    before do
+      BreweryDB::WebHook.any_instance.stub(:valid?) { false }
+    end
+
     it 'does not do any work' do
-      pending('need to drive out the BreweryDB::WebHook')
       SupplyChain::BrewRequest.should_not_receive(:order)
       post :create, brewery_db_payload
       expect(response.status).to eq(422)

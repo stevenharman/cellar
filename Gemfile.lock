@@ -1,6 +1,7 @@
 GIT
-  remote: https://github.com/tylerhunt/brewery_db.git
-  revision: 1ccaf124544f0f06893114ac1fc30dae49ff9874
+  remote: https://github.com/brewdega/brewery_db.git
+  revision: 05c02828bc2952815401abb1bd29c32769fff497
+  branch: basic_webhook_support
   specs:
     brewery_db (0.0.1)
       faraday (~> 0.8.0)
@@ -89,7 +90,7 @@ GEM
       railties (>= 3.0.0)
     faraday (0.8.4)
       multipart-post (~> 1.1)
-    faraday_middleware (0.8.8)
+    faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)
     ffi (1.1.5)
     font-awesome-sass-rails (2.0.0.0)
