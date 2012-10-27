@@ -13,7 +13,6 @@ module SupplyChain
     end
 
     def perform(args)
-      binding.remote_pry
       id = brew_id(args)
       Agent.new(@warehouse).import_brew(id)
     end
