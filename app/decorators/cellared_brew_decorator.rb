@@ -17,6 +17,10 @@ class CellaredBrewDecorator < ApplicationDecorator
     beers.size
   end
 
+  def style_name
+    style && style.name
+  end
+
   private
 
   attr_reader :cellar
