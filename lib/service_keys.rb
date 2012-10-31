@@ -1,3 +1,5 @@
+require_relative '../config/initializers/brewery_db'
+
 module ServiceKeys
 
   def self.brewery_db

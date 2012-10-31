@@ -1,4 +1,4 @@
-require_relative '../config/initializers/brewery_db'
+require 'service_keys'
 require 'vcr'
 
 RSpec.configure do |c|
@@ -10,6 +10,6 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.ignore_localhost = true
   c.configure_rspec_metadata!
-  c.filter_sensitive_data('API_KEY') { ENV['BREWERY_DB_API_KEY'] }
+  c.filter_sensitive_data('API_KEY') { ServiceKeys.brewery_db }
 end
 
