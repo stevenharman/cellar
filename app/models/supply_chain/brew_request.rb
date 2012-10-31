@@ -1,4 +1,5 @@
 require 'sidekiq'
+require_relative 'warehouse'
 
 module SupplyChain
   class BrewRequest
