@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.brewerydb.com/v2/brewery/aaN9Np?key=API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - BreweryDB Ruby Gem 0.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 01 Nov 2012 00:55:01 GMT
+      Server:
+      - Apache/2.2.23 (Amazon)
+      X-Powered-By:
+      - PHP/5.3.17
+      X-Ratelimit-Limit:
+      - Unlimited
+      X-Ratelimit-Remaining:
+      - Unlimited
+      Content-Length:
+      - '1492'
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+    body:
+      encoding: US-ASCII
+      string: ! '{"message":"READ ONLY MODE: Request Successful","data":{"id":"aaN9Np","name":"Twisted
+        Pine Brewing Company","description":"Established in 1995, Twisted Pine Brewing
+        Company produces only 100% natural, unpasteurized pure malt ales, batch brewed
+        and hand-crafted. Because we believe that craft beer is best enjoyed fresh,
+        Twisted Pine ales can only be found throughout Colorado. By maintaining only
+        a local presence we feel proud that our beers capture the full flavor and
+        variety of style found at our brewery. It is our intention to bring to you
+        a select family of individually distinctive ales that we as brewers would
+        enjoy drinking ourselves. That is our final measure. We ignore costs, fads,
+        and difficulty in creating our ales. And, while we are very serious about
+        the art and business of beer making, we try to avoid taking ourselves too
+        seriously. After all, we realize brewing a fine beer isn''t exactly nuclear
+        physics. It''s something far more important. -Twistedpine.com","website":"http:\/\/www.twistedpinebrewing.com\/","established":"1995","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/aaN9Np\/upload_w2WxVa-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/aaN9Np\/upload_w2WxVa-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/aaN9Np\/upload_w2WxVa-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-02
+        21:42:11","updateDate":"2012-09-29 17:54:57"},"status":"success"}'
+    http_version: 
+  recorded_at: Thu, 01 Nov 2012 00:55:02 GMT
+recorded_with: VCR 2.2.5

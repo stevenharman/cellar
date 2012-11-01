@@ -16,6 +16,11 @@ class WebHooksController < ApplicationController
   private
 
   def notification_params
-    Rack::Utils.parse_nested_query(request.raw_post).with_indifferent_access
+    post_params = Rack::Utils.parse_nested_query(request.raw_post).with_indifferent_access
+    post_params.merge(query_string_params)
+  end
+
+  def query_string_params
+    params.slice(:key, :nonce)
   end
 end
