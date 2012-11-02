@@ -6,12 +6,12 @@ describe WebHooksController do
   let(:brewery_db_payload) { { key: key, nonce: nonce } }
   before do
     ServiceKeys.stub(:brewery_db) { '2a3e944b3fcc18c0617ea642c9edb5dd' }
-    SupplyChain.stub(:handle) { 'jid' }
+    SupplyChain.stub(:route) { 'jid' }
   end
 
   context 'receiving a beer edited notification from BreweryDB' do
     it 'places an order to update the brew' do
-      SupplyChain.should_receive(:handle).with(an_instance_of(SupplyChain::Order))
+      SupplyChain.should_receive(:route).with(an_instance_of(SupplyChain::Order))
       post :create, brewery_db_payload
     end
 

@@ -2,7 +2,7 @@ require_relative 'supply_chain/order'
 
 module SupplyChain
 
-  def self.handle(order)
+  def self.route(order)
     directory.route(order)
   end
 

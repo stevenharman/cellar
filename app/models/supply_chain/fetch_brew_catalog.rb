@@ -3,10 +3,10 @@ require 'ostruct'
 require 'sidekiq'
 
 module SupplyChain
-  class BrewCatalogRequest
+  class FetchBrewCatalog
     include Sidekiq::Worker
 
-    def self.order(brewery)
+    def self.process(brewery)
       perform_async(brewery.brewery_db_id)
     end
 

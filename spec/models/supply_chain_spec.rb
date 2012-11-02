@@ -5,7 +5,7 @@ require 'models/supply_chain/fetch_brewery'
 describe SupplyChain do
   subject(:supply_chain) { described_class }
 
-  describe '.handle' do
+  describe '.route' do
     let(:order) { SupplyChain::Order.new(brewery_db_payload) }
     let(:action) { 'edit' }
     let(:attribute) { 'beer' }
@@ -23,7 +23,7 @@ describe SupplyChain do
       it 'places an order to update the brew' do
         #SupplyChain::FetchBrew.should_receive(:process).with(order)
         SupplyChain::FetchBrew.should_receive(:perform_async).with(order.attribute_id)
-        supply_chain.handle(order)
+        supply_chain.route(order)
       end
     end
 
@@ -33,7 +33,7 @@ describe SupplyChain do
       it 'places an order to update the brewery' do
         #SupplyChain::FetchBrewery.should_receive(:process).with(order)
         SupplyChain::FetchBrewery.should_receive(:perform_async).with(order.attribute_id)
-        supply_chain.handle(order)
+        supply_chain.route(order)
       end
     end
   end

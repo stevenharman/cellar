@@ -6,7 +6,7 @@ class WebHooksController < ApplicationController
     order = SupplyChain.order_from_brewery_db(notification_params)
 
     if order.valid?
-      SupplyChain.handle(order)
+      SupplyChain.route(order)
       head :created
     else
       head :unprocessable_entity
