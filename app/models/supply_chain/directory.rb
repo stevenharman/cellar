@@ -1,3 +1,6 @@
+require_relative 'fetch_brew'
+require_relative 'fetch_brewery'
+
 module SupplyChain
   class Directory
 
@@ -10,9 +13,9 @@ module SupplyChain
     def handler(order)
       case order.attribute
       when 'beer'
-        BrewRequest
+        FetchBrew
       when 'brewery'
-        BreweryRequest
+        FetchBrewery
       end
     end
 

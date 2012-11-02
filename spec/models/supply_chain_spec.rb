@@ -1,6 +1,6 @@
 require 'models/supply_chain'
-require 'models/supply_chain/brew_request'
-require 'models/supply_chain/brewery_request'
+require 'models/supply_chain/fetch_brew'
+require 'models/supply_chain/fetch_brewery'
 
 describe SupplyChain do
   subject(:supply_chain) { described_class }
@@ -21,8 +21,8 @@ describe SupplyChain do
 
     context 'order is for a brew' do
       it 'places an order to update the brew' do
-        #SupplyChain::BrewRequest.should_receive(:process).with(order)
-        SupplyChain::BrewRequest.should_receive(:perform_async).with(order.attribute_id)
+        #SupplyChain::FetchBrew.should_receive(:process).with(order)
+        SupplyChain::FetchBrew.should_receive(:perform_async).with(order.attribute_id)
         supply_chain.handle(order)
       end
     end
@@ -31,8 +31,8 @@ describe SupplyChain do
       let(:attribute) { 'brewery' }
 
       it 'places an order to update the brewery' do
-        #SupplyChain::BreweryRequest.should_receive(:process).with(order)
-        SupplyChain::BreweryRequest.should_receive(:perform_async).with(order.attribute_id)
+        #SupplyChain::FetchBrewery.should_receive(:process).with(order)
+        SupplyChain::FetchBrewery.should_receive(:perform_async).with(order.attribute_id)
         supply_chain.handle(order)
       end
     end

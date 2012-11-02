@@ -1,4 +1,3 @@
-require_relative 'supply_chain/brew_request'
 require_relative 'supply_chain/order'
 
 module SupplyChain

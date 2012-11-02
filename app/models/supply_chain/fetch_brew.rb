@@ -2,7 +2,7 @@ require 'sidekiq'
 require_relative 'warehouse'
 
 module SupplyChain
-  class BreweryRequest
+  class FetchBrew
     include Sidekiq::Worker
 
     def self.process(order)
@@ -14,9 +14,8 @@ module SupplyChain
     end
 
     def perform(id)
-      Agent.new(@warehouse).import_brewery(id)
+      Agent.new(@warehouse).import_brew(id)
     end
 
   end
 end
-
