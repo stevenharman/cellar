@@ -1,19 +1,21 @@
 require_relative 'supply_chain/order'
+require_relative 'supply_chain/job'
 
 module SupplyChain
 
   def self.route(order)
-    directory.route(order)
+    jobs.map do |job|
+      job.fulfill(order)
+    end
   end
 
   def self.order_from_brewery_db(params)
     Order.new(params)
   end
 
-  private
-
-  def self.directory
-    @directory ||= Directory.new
+  def self.jobs
+    Job.directory
   end
+  #private_class_method :jobs # Needed?
 
 end

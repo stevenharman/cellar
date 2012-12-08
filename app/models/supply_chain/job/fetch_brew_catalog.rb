@@ -1,4 +1,4 @@
-require_relative 'brew_translation'
+require_relative '../brew_translation'
 require 'ostruct'
 require 'sidekiq'
 
@@ -6,8 +6,8 @@ module SupplyChain
   class FetchBrewCatalog
     include Sidekiq::Worker
 
-    def self.process(brewery)
-      perform_async(brewery.brewery_db_id)
+    def self.fulfill(order)
+      perform_async(order.attribute_id) if order.attribute == 'brew_catalog'
     end
 
     def initialize(warehouse = Warehouse.new, log = Log.new)

@@ -6,7 +6,7 @@ describe WebHooksController do
   let(:brewery_db_payload) { { key: key, nonce: nonce } }
   before do
     ServiceKeys.stub(:brewery_db) { '2a3e944b3fcc18c0617ea642c9edb5dd' }
-    SupplyChain.stub(:route) { 'jid' }
+    SupplyChain.stub(:route) { ['jid'] }
   end
 
   context 'receiving a beer edited notification from BreweryDB' do

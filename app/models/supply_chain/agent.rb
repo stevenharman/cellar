@@ -14,7 +14,8 @@ module SupplyChain
     def import_full_inventory
       import_styles_with_categories
       import_breweries do |brewery|
-        FetchBrewCatalog.process(brewery)
+        order = OpenStruct.new(attribute_id: brewery.brewery_db_id, attribute: 'brew_catalog')
+        FetchBrewCatalog.fulfill(order)
       end
     end
 

@@ -13,5 +13,13 @@ module SupplyChain
     def valid?(api_key = ServiceKeys.brewery_db)
       super(api_key)
     end
+
+    def brewery?
+      attribute == 'brewery'
+    end
+
+    def brew?
+      attribute == 'beer'
+    end
   end
 end
