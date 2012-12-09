@@ -1,6 +1,7 @@
 .DS_Store
 .bundle
 .env
+.rbenv-version
 .sass-cache
 db/*.sqlite3
 log/*.log
@@ -9,4 +10,3 @@ tmp/
 *.swp
 /tags
 coverage
-
