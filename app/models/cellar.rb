@@ -46,6 +46,7 @@ class Cellar
   end
 
   def cancel!(beers)
+    # TODO: use destroy?
     beers.map { |beer| beer.delete }
   end
 

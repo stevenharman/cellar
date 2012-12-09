@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  has_many :styles
+  has_many :styles, dependent: :destroy
 
   validates :name, uniqueness: true, presence: true
   validates :brewery_db_id, uniqueness: true, presence: true
