@@ -1,7 +1,7 @@
 source :rubygems
 
 ruby '1.9.3'
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.9'
 gem 'jquery-rails'
 gem 'thin'
 gem 'brewery_db', git: 'https://github.com/brewdega/brewery_db.git', branch: 'basic_webhook_support'
