@@ -1,4 +1,4 @@
-require 'cellar'
+require 'models/cellar'
 
 describe Cellar do
   let(:bob) { double('User') }
@@ -30,7 +30,7 @@ describe Cellar do
         before { beer.stub(:valid?).and_return(false) }
 
         it "doesn't add the beer to the cellar" do
-          beer.should_receive(:delete).once
+          beer.should_receive(:destroy).once
           cellar.stock_beer(order)
         end
       end

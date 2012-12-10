@@ -1,7 +1,6 @@
 class Brewery < ActiveRecord::Base
   has_many :brewery_brews, inverse_of: :brewery, dependent: :destroy
   has_many :brews, through: :brewery_brews, uniq: true
-  # TODO: Add composite index on ["brewery_id", "brew_id"]
 
   validates :name, presence: true
   validates :brewery_db_id, uniqueness: true, presence: true
