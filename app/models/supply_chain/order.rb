@@ -21,5 +21,10 @@ module SupplyChain
     def brew?
       attribute == 'beer'
     end
+
+    def brew_catalog?
+      attribute == 'brew_catalog'
+    end
+
   end
 end

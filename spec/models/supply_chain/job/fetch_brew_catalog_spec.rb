@@ -13,14 +13,14 @@ describe SupplyChain::Job::FetchBrewCatalog, :vcr do
 
   describe '.fulfill' do
     it 'fulfills orders for brew_catalog' do
-      order = OpenStruct.new(attribute: 'brew_catalog', attribute_id: 'abc123')
+      order = SupplyChain::Order.new(attribute: 'brew_catalog', attribute_id: 'abc123')
 
       described_class.should_receive(:perform_async).with(order.attribute_id)
       described_class.fulfill(order)
     end
 
     it 'does nothing for non-brew_catalog orders' do
-      order = OpenStruct.new(attribute: 'beer', attribute_id: 'abc123')
+      order = SupplyChain::Order.new(attribute: 'beer', attribute_id: 'abc123')
 
       described_class.should_not_receive(:perform_async)
       described_class.fulfill(order)

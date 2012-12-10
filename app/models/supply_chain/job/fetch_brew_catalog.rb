@@ -8,7 +8,7 @@ module SupplyChain
       include Sidekiq::Worker
 
       def self.fulfill(order)
-        perform_async(order.attribute_id) if order.attribute == 'brew_catalog'
+        perform_async(order.attribute_id) if order.brew_catalog?
       end
 
       def initialize(warehouse = Warehouse.new, log = Log.new)
