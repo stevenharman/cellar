@@ -24,12 +24,12 @@ module SupplyChain
 
     def debug_message(item)
       status = item.valid? ? 'SUCCEEDED' : 'FAILED'
-      "[INVENTORY] #{status}: #{short_description(item)}."
+      "[SUPPLY_CHAIN] #{status}: #{short_description(item)}."
     end
 
     def error_message(item)
       <<-MSG
-      [INVENTORY] FAILED: #{short_description(item)}.
+      [SUPPLY_CHAIN] FAILED: #{short_description(item)}.
       #{item.errors.full_messages}
       #{item.inspect}
       MSG
