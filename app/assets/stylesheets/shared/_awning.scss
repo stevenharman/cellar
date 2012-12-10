@@ -2,6 +2,7 @@
   .navbar-inner {
     height: $navbarHeight;
     background: transparent image-url('awning.png') repeat-x;
+    border: 0 none;
     @include box-shadow(none);
   }
 

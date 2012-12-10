@@ -40,7 +40,8 @@ GEM
     addressable (2.3.2)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
-    bootstrap-sass (2.1.1.0)
+    bootstrap-sass (2.2.1.1)
+      sass (~> 3.2)
     bourne (1.1.2)
       mocha (= 0.10.5)
     builder (3.0.4)
@@ -273,7 +274,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (~> 2.1.0)
+  bootstrap-sass (~> 2.2.1)
   brewery_db!
   capybara
   capybara-webkit
