@@ -17,4 +17,35 @@ describe SupplyChain::Order do
       expect(order).to_not be_valid('a_bogus_api_key')
     end
   end
+
+  describe 'actions' do
+
+    it 'is a brewery fetch when a brewery was inserted' do
+      expect(order(attribute: 'brewery', action: 'insert')).to be_fetch_brewery
+    end
+
+    it 'is a brewery fetch when a brewery was edited' do
+      expect(order(attribute: 'brewery', action: 'edit')).to be_fetch_brewery
+    end
+
+    it 'is a brewery delete when a brewery was deleted' do
+      expect(order(attribute: 'brewery', action: 'delete')).to be_delete_brewery
+    end
+
+    it 'is a brew fetch when a beer was inserted' do
+      expect(order(attribute: 'beer', action: 'insert')).to be_fetch_brew
+    end
+
+    it 'is a brew fetch when a beer was edited' do
+      expect(order(attribute: 'beer', action: 'edit')).to be_fetch_brew
+    end
+
+    it 'is a brew delete when a beer was deleted' do
+      expect(order(attribute: 'beer', action: 'delete')).to be_delete_brew
+    end
+
+    def order(args)
+      described_class.new(args)
+    end
+  end
 end

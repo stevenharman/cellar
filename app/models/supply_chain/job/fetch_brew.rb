@@ -9,7 +9,7 @@ module SupplyChain
       include SupplyChain::Job
 
       def self.fulfill(order)
-        perform_async(order.attribute_id) if order.brew?
+        perform_async(order.attribute_id) if order.fetch_brew?
       end
 
       def initialize(warehouse = Warehouse.new)
