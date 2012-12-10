@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120817225944) do
+ActiveRecord::Schema.define(:version => 20121210002513) do
 
   create_table "beers", :force => true do |t|
     t.string   "batch"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20120817225944) do
   end
 
   add_index "brewery_brews", ["brew_id"], :name => "index_brewery_brews_on_brew_id"
-  add_index "brewery_brews", ["brewery_id"], :name => "index_brewery_brews_on_brewery_id"
+  add_index "brewery_brews", ["brewery_id", "brew_id"], :name => "index_brewery_brews_on_brewery_id_brew_id", :unique => true
 
   create_table "brews", :force => true do |t|
     t.string   "name"
