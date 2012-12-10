@@ -1,6 +1,6 @@
 require 'models/supply_chain/job/fetch_brewery'
 
-describe SupplyChain::FetchBrewery do
+describe SupplyChain::Job::FetchBrewery do
 
   describe '.fulfill' do
     let(:order) { stub('Order', attribute_id: 'abc123') }

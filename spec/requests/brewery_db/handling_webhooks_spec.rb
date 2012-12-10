@@ -9,7 +9,7 @@ describe 'Receiving a WebHook from BreweryDB' do
       expect(Brewery.count).to eq(0)
 
       post webhooks_path(key: key, nonce: nonce), { attribute: 'brewery', attributeId: 'aaN9Np', action: 'insert' }
-      SupplyChain::FetchBrewery.drain
+      SupplyChain::Job::FetchBrewery.drain
 
       expect(Brewery.count).to eq(1)
     end
@@ -20,7 +20,7 @@ describe 'Receiving a WebHook from BreweryDB' do
       expect(Brew.count).to eq(0)
 
       post webhooks_path(key: key, nonce: nonce), { attribute: 'beer', attributeId: 'g7ABnw', action: 'insert' }
-      SupplyChain::FetchBrew.drain
+      SupplyChain::Job::FetchBrew.drain
 
       expect(Brew.count).to eq(1)
     end
