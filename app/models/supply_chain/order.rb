@@ -14,6 +14,10 @@ module SupplyChain
       super(api_key)
     end
 
+    def fetch_brew_catalog?
+      false
+    end
+
     def brewery?
       attribute == 'brewery'
     end
