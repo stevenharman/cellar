@@ -8,6 +8,11 @@ ENV['REDISTOGO_URL'] ||= local_redis_url.call
 
 Sidekiq.configure_server do |config|
   config.redis = { url: ENV['REDISTOGO_URL'], namespace: 'brewdega-cellar' }
+
+  sidekiq_concurrency = ENV['SIDEKIQ_CONCURRENCY']
+  if(sidekiq_concurrency)
+    ActiveRecord::Base.configurations['production']['pool'] = sidekiq_concurrency.to_i
+  end
 end
 
 Sidekiq.configure_client do |config|
