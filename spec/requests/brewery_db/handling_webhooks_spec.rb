@@ -26,4 +26,10 @@ describe 'Receiving a WebHook from BreweryDB' do
     end
   end
 
+  context 'a brewery was deleted' do
+    it 'destroys the brewery and any brews if it had no beers'
+
+    it 'fails if the brewery had beers'
+  end
+
 end
