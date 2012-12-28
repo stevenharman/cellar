@@ -27,9 +27,28 @@ describe 'Receiving a WebHook from BreweryDB' do
   end
 
   context 'a brewery was deleted' do
-    it 'destroys the brewery and any brews if it had no beers'
+    let!(:brewery) { brew.breweries.first }
+    let(:brew) { FactoryGirl.create(:brew) }
 
-    it 'fails if the brewery had beers'
+    it 'destroys the brewery and its relationship to the brew if it had no beers' do
+      expect(Brewery.count).to eq(1)
+      expect(BreweryBrew.count).to eq(1)
+      expect(Brew.count).to eq(1)
+
+      post webhooks_path(key: key, nonce: nonce), { attribute: 'brewery', attributeId: brewery.brewery_db_id, action: 'delete' }
+      SupplyChain::Job::DestroyBrewery.drain
+
+      expect(Brewery.count).to eq(0)
+      expect(BreweryBrew.count).to eq(0)
+      expect(Brew.count).to eq(1)
+    end
+
+    it 'fails if the brewery had beers' do
+      FactoryGirl.create(:beer, brew: brew)
+
+      post webhooks_path(key: key, nonce: nonce), { attribute: 'brewery', attributeId: brewery.brewery_db_id, action: 'delete' }
+      expect { SupplyChain::Job::DestroyBrewery.drain }.to raise_error /cannot be destroyed/
+    end
   end
 
 end
