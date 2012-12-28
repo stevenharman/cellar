@@ -7,7 +7,7 @@ module SupplyChain
     ACTIONS = [:insert, :edit, :delete]
 
     def initialize(params)
-      webhook = BreweryDB::WebHook.new(params)
+      webhook = brewery_db_webhook(params)
       super(webhook)
     end
 
@@ -53,6 +53,10 @@ module SupplyChain
 
     def fetch?
       insert? or edit?
+    end
+
+    def brewery_db_webhook(params)
+      BreweryDB::WebHook.new(params)
     end
 
   end
