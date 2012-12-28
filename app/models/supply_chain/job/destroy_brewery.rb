@@ -1,5 +1,6 @@
 require 'sidekiq'
 require_relative '../job'
+require_relative '../../clean_up'
 
 module SupplyChain
   module Job
@@ -12,13 +13,7 @@ module SupplyChain
       end
 
       def perform(id)
-        brewery = Brewery.find_by_brewery_db_id(id)
-        beers = brewery.brews.joins(:beers)
-        if(beers.empty?)
-          brewery.destroy!
-        else
-          fail "Brewery #{brewery.id} (#{brewery.brewery_db_id}) cannot be destroyed; it has #{beers.count} beers cellared."
-        end
+        CleanUp.brewery(id)
       end
 
     end
