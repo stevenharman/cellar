@@ -47,9 +47,9 @@ describe SupplyChain::BreweryTranslation do
 
     def fully_loaded_raw_data
       images = OpenStruct.new(
-        icon: 'http://brewdega.com/icon.png',
-        medium: 'http://brewdega.com/medium.png',
-        large: 'http://brewdega.com/large.png'
+        icon: 'https://brewdega.com/icon.png',
+        medium: 'https://brewdega.com/medium.png',
+        large: 'https://brewdega.com/large.png'
       )
       OpenStruct.new(
         id: 'abc123', name: 'Brewdega',

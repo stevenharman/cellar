@@ -45,7 +45,7 @@ http_interactions:
         mid 2009. Four double sized fermentors were installed in an old garage behind
         the current brewery. A cold box was erected adjacent to the garage and a bottling
         machine with a nice labeler are housed there too. There is a small barrel
-        shed on the shady, north side of the garage.","website":"http:\/\/www.alpinebeerco.com\/","established":"2002","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        shed on the shady, north side of the garage.","website":"http:\/\/www.alpinebeerco.com\/","established":"2002","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:44","updateDate":"2012-03-21 19:06:03"},"status":"success"}'
     http_version: 
   recorded_at: Sat, 18 Aug 2012 01:18:42 GMT
@@ -96,7 +96,7 @@ http_interactions:
         Abbey and a remarkably well-balanced amber he named Fat Tire. To say the rest
         was history would be to overlook his wife''s involvement. Kim Jordan was New
         Belgium''s first bottler, sales rep, distributor, marketer and financial planner.
-        And now, she''s our CEO.","website":"http:\/\/www.newbelgium.com\/","established":"1989","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        And now, she''s our CEO.","website":"http:\/\/www.newbelgium.com\/","established":"1989","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:03","updateDate":"2012-05-18 15:24:47"},"status":"success"}'
     http_version: 
   recorded_at: Sat, 18 Aug 2012 01:18:42 GMT
@@ -164,7 +164,7 @@ http_interactions:
         were installed in an old garage behind the current brewery. A cold box was
         erected adjacent to the garage and a bottling machine with a nice labeler
         are housed there too. There is a small barrel shed on the shady, north side
-        of the garage.","website":"http:\/\/www.alpinebeerco.com\/","established":"2002","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        of the garage.","website":"http:\/\/www.alpinebeerco.com\/","established":"2002","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:44","updateDate":"2012-03-21 19:06:03"},{"id":"Jt43j7","name":"New Belgium
         Brewing","description":"We''ll set the scene: 1989. Belgium. Boy on bike.
         (OK, make that a young man of 32). As our aspiring young homebrewer rides
@@ -176,7 +176,7 @@ http_interactions:
         and a remarkably well-balanced amber he named Fat Tire. To say the rest was
         history would be to overlook his wife''s involvement. Kim Jordan was New Belgium''s
         first bottler, sales rep, distributor, marketer and financial planner. And
-        now, she''s our CEO.","website":"http:\/\/www.newbelgium.com\/","established":"1989","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        now, she''s our CEO.","website":"http:\/\/www.newbelgium.com\/","established":"1989","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:03","updateDate":"2012-05-18 15:24:47"}]},"status":"success"}'
     http_version: 
   recorded_at: Sat, 18 Aug 2012 01:18:42 GMT

@@ -48,7 +48,7 @@ http_interactions:
         and difficulty in creating our ales. And, while we are very serious about
         the art and business of beer making, we try to avoid taking ourselves too
         seriously. After all, we realize brewing a fine beer isn''t exactly nuclear
-        physics. It''s something far more important. -Twistedpine.com","website":"http:\/\/www.twistedpinebrewing.com\/","established":"1995","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/aaN9Np\/upload_w2WxVa-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/aaN9Np\/upload_w2WxVa-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/aaN9Np\/upload_w2WxVa-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-02
+        physics. It''s something far more important. -Twistedpine.com","website":"http:\/\/www.twistedpinebrewing.com\/","established":"1995","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/aaN9Np\/upload_w2WxVa-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/aaN9Np\/upload_w2WxVa-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/aaN9Np\/upload_w2WxVa-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-02
         21:42:11","updateDate":"2012-09-29 17:54:57"},"status":"success"}'
     http_version: 
   recorded_at: Thu, 01 Nov 2012 00:55:02 GMT

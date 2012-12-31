@@ -71,7 +71,7 @@ http_interactions:
         change to the city landscape.  Our ongoing goal is to brew thoughtfully, creatively
         and artistically. We strive to bring an authentic and pleasant experience
         to all of our customers through our unique ales and beers. We look forward
-        to sharing our beers with you.","website":"http:\/\/www.bellsbeer.com\/","established":"1985","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_KY2kdU-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_KY2kdU-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_KY2kdU-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        to sharing our beers with you.","website":"http:\/\/www.bellsbeer.com\/","established":"1985","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_KY2kdU-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_KY2kdU-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_KY2kdU-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:45","updateDate":"2012-04-09 19:01:20"}]},"status":"success"}'
     http_version: 
   recorded_at: Sat, 18 Aug 2012 01:19:15 GMT

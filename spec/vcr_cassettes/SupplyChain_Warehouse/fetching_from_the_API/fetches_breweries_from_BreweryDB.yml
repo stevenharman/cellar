@@ -37,7 +37,7 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ! '{"currentPage":1,"numberOfPages":77,"totalResults":3840,"data":[{"id":"Klgom2","name":"''t
-        Hofbrouwerijke","website":"http:\/\/www.thofbrouwerijke.be\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Klgom2\/upload_Ks8JQY-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Klgom2\/upload_Ks8JQY-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Klgom2\/upload_Ks8JQY-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        Hofbrouwerijke","website":"http:\/\/www.thofbrouwerijke.be\/","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Klgom2\/upload_Ks8JQY-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Klgom2\/upload_Ks8JQY-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Klgom2\/upload_Ks8JQY-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:19"},{"id":"cJio9R","name":"(512)
         Brewing Company","description":"(512) Brewing Company is a microbrewery located
         in the heart of Austin, brewing for the community using as many local, domestic
@@ -46,14 +46,14 @@ http_interactions:
         quality that is possible from small handcrafted batches. Our beers are built
         on old world English and Belgian recipes, but enhanced to celebrate bold domestic
         ingredients. Made with Austin\u2019s mineral rich water, the (512) beers taste
-        like none other.","website":"http:\/\/www.512brewing.com\/","established":"2008","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/cJio9R\/upload_knal4J-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/cJio9R\/upload_knal4J-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/cJio9R\/upload_knal4J-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        like none other.","website":"http:\/\/www.512brewing.com\/","established":"2008","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/cJio9R\/upload_knal4J-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/cJio9R\/upload_knal4J-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/cJio9R\/upload_knal4J-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-06-27 13:22:37"},{"id":"snQlvg","name":"10 Barrel
         Brewing Company","description":"We brew into a 10 Barrel Brewhouse, giving
         us the freedom to experiment with our recipes in order to produce the highest
         quality of beer that we can.  This isn\u2019t just any 10 Barrel brewhouse
         though, it\u2019s a state of the art system that allows us to blend new technology
         with the tradition of craft fundamentals.  In other words we can\u2019t produce
-        a TON of beer, but we can make it the highest quality.","website":"http:\/\/www.10barrel.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/snQlvg\/upload_sNB83T-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/snQlvg\/upload_sNB83T-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/snQlvg\/upload_sNB83T-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        a TON of beer, but we can make it the highest quality.","website":"http:\/\/www.10barrel.com\/","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/snQlvg\/upload_sNB83T-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/snQlvg\/upload_sNB83T-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/snQlvg\/upload_sNB83T-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:11"},{"id":"P8gV9M","name":"16 Mile
         Brewing Company","description":"16 Mile Brewing Company, Inc. opened its doors
         in July 2009 to the public. It is owned and operated by Brett McCrea and Chad
@@ -65,7 +65,7 @@ http_interactions:
         replaced Lewes as the County Seat when numerous petitions were sent to Delaware\u2019s
         General Assembly requesting that the move be made to accommodate all county
         residents. (For more information see \u201c16 Miles from Anywhere: A History
-        of Georgetown, Del., by William J. Wade.)","website":"http:\/\/16milebrewery.com\/","established":"2009","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/P8gV9M\/upload_PsZP5g-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/P8gV9M\/upload_PsZP5g-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/P8gV9M\/upload_PsZP5g-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        of Georgetown, Del., by William J. Wade.)","website":"http:\/\/16milebrewery.com\/","established":"2009","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/P8gV9M\/upload_PsZP5g-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/P8gV9M\/upload_PsZP5g-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/P8gV9M\/upload_PsZP5g-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-04-21 12:38:02"},{"id":"nFgA09","name":"192 Brewing
         Company","description":"We began building our dream in 2007. We have improved
         our recipes, gathered feedback, made changes, and sampled our products. We
@@ -80,7 +80,7 @@ http_interactions:
         of award winning house made brews and American grilled cuisine in a comfortable
         loft like setting. Join us before and after Giants baseball games in our outdoor
         beer garden. A great location for functions and parties in our semi-private
-        Brewers Loft. See you soon at the 21A!","website":"http:\/\/www.21st-amendment.com\/","established":"2000","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/EdRcIs\/upload_YmgSv3-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/EdRcIs\/upload_YmgSv3-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/EdRcIs\/upload_YmgSv3-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        Brewers Loft. See you soon at the 21A!","website":"http:\/\/www.21st-amendment.com\/","established":"2000","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/EdRcIs\/upload_YmgSv3-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/EdRcIs\/upload_YmgSv3-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/EdRcIs\/upload_YmgSv3-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-08-14 13:13:41"},{"id":"V79a57","name":"23rd
         Street Brewery","description":"Here at the 23rd Street Brewery, we pride ourselves
         in creating and offering ales and lagers of exceptional quality. Often in
@@ -94,14 +94,14 @@ http_interactions:
         Kansas. \r\n\r\nBryan \"Bucky\" Buckingham, brew master of the 23rd Street
         Brewery, is creating mouth watering specialty beers and recently won a Silver
         Medal in the Irish Style Red Ale category at the 2007 Great American Beer
-        Festival for Crimson Phog.","website":"http:\/\/www.brew23.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/V79a57\/upload_jGcnCU-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/V79a57\/upload_jGcnCU-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/V79a57\/upload_jGcnCU-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        Festival for Crimson Phog.","website":"http:\/\/www.brew23.com\/","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/V79a57\/upload_jGcnCU-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/V79a57\/upload_jGcnCU-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/V79a57\/upload_jGcnCU-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:11"},{"id":"1ZnmlG","name":"2nd Shift
         Brewing Co","description":"We are a micro that will be making beer that is
         big on flavor and aroma, the way beer should be. There will be several styles
         and a continuing line of seasonal and special beers that will be produced
-        throughout the year.","website":"http:\/\/www.2ndshiftbrewing.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1ZnmlG\/upload_Gs8aAV-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1ZnmlG\/upload_Gs8aAV-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1ZnmlG\/upload_Gs8aAV-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        throughout the year.","website":"http:\/\/www.2ndshiftbrewing.com\/","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1ZnmlG\/upload_Gs8aAV-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1ZnmlG\/upload_Gs8aAV-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1ZnmlG\/upload_Gs8aAV-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:14"},{"id":"qxAQSJ","name":"3 Fonteinen
-        Brouwerij Ambachtelijke Geuzestekerij","website":"http:\/\/www.3fonteinen.be\/index.htm","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/qxAQSJ\/upload_awf3wV-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/qxAQSJ\/upload_awf3wV-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/qxAQSJ\/upload_awf3wV-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        Brouwerij Ambachtelijke Geuzestekerij","website":"http:\/\/www.3fonteinen.be\/index.htm","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/qxAQSJ\/upload_awf3wV-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/qxAQSJ\/upload_awf3wV-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/qxAQSJ\/upload_awf3wV-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:03"},{"id":"ul5arW","name":"3 Ravens
         Brewing","description":"3 Ravens began in 2003 out of necessity, when a local
         hotel stopped serving traditional English style cask conditioned ''Real Ale''
@@ -113,7 +113,7 @@ http_interactions:
         taking Silver and Bronze medals at the Australian & International Beer Awards.
         3 Ravens hit the shelves of local restaurants and bars and demand soon outgrew
         supply. In 2005, the brewery was upgraded to 1200 litres to help service a
-        growing list of stockists and a swag of thirsty engineers!","website":"http:\/\/www.3ravens.com.au\/","established":"2003","mailingListUrl":"http:\/\/www.3ravens.com.au\/contact.htm","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ul5arW\/upload_Ts3nUA-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ul5arW\/upload_Ts3nUA-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ul5arW\/upload_Ts3nUA-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-05
+        growing list of stockists and a swag of thirsty engineers!","website":"http:\/\/www.3ravens.com.au\/","established":"2003","mailingListUrl":"http:\/\/www.3ravens.com.au\/contact.htm","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ul5arW\/upload_Ts3nUA-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ul5arW\/upload_Ts3nUA-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ul5arW\/upload_Ts3nUA-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-05
         15:00:57","updateDate":"2012-03-21 19:06:20"},{"id":"Hw7H52","name":"3 Sheeps
         Brewing Co.","description":"All families have their stories: tales of grandparents
         and great-grandparents and the incredible things they accomplished, or lived
@@ -135,14 +135,14 @@ http_interactions:
         turned into a passion, which turned into an obsession, which turned into quitting
         my day job and opening a brewery.\r\n\r\nThis is my Really Cool Waterslide
         - my choice to take a dream and make it my reality. Thank you to all those
-        who have helped me get here.\r\n\r\n- Grant Pauly, 3 Sheeps Brewing","website":"http:\/\/www.3sheepsbrewing.com\/","established":"2012","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Hw7H52\/upload_4t8Fju-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Hw7H52\/upload_4t8Fju-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Hw7H52\/upload_4t8Fju-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-03-08
+        who have helped me get here.\r\n\r\n- Grant Pauly, 3 Sheeps Brewing","website":"http:\/\/www.3sheepsbrewing.com\/","established":"2012","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Hw7H52\/upload_4t8Fju-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Hw7H52\/upload_4t8Fju-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Hw7H52\/upload_4t8Fju-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-03-08
         20:04:30","updateDate":"2012-03-24 01:13:06"},{"id":"ucVIMa","name":"3 Stars
         Brewing Company","description":"3 Stars Brewing is a DC based production brewery
         founded by Mike McGarvey and Dave Coleman to provide the community with great,
         fresh, local craftbeer. \r\n\r\nWe are looking forward to opening our doors
         in 2011. In doing so, we will proudly brew beers that push the limits of conventional
         brewing while still providing our customers with great, fresh, local craft
-        beers...contact us at info@3starsbrewing.com","website":"http:\/\/3starsbrewing.com\/","established":"2010","mailingListUrl":"http:\/\/3starsbrewing.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ucVIMa\/upload_cYg9co-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ucVIMa\/upload_cYg9co-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ucVIMa\/upload_cYg9co-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        beers...contact us at info@3starsbrewing.com","website":"http:\/\/3starsbrewing.com\/","established":"2010","mailingListUrl":"http:\/\/3starsbrewing.com\/","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ucVIMa\/upload_cYg9co-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ucVIMa\/upload_cYg9co-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ucVIMa\/upload_cYg9co-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-05-17 13:45:47"},{"id":"AvxLqi","name":"3docs
         Brew House","description":"Historians sometimes disagree as to the origin
         of the 3docs, but all agree on their mission to bring an impressive beer and
@@ -153,7 +153,7 @@ http_interactions:
         the next thing you would hear would be a knock at the door, which would be
         followed by eternal enlightenment. But alas, I have said to much. To know
         the 3docs is to know their heart. Just as cavemen enjoyed fire, the 3docs
-        hope that you will enjoy 3docs Brew House.","website":"http:\/\/3docsbrewhouse.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/AvxLqi\/upload_ilJhnx-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/AvxLqi\/upload_ilJhnx-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/AvxLqi\/upload_ilJhnx-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        hope that you will enjoy 3docs Brew House.","website":"http:\/\/3docsbrewhouse.com\/","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/AvxLqi\/upload_ilJhnx-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/AvxLqi\/upload_ilJhnx-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/AvxLqi\/upload_ilJhnx-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:15"},{"id":"j4bzi7","name":"4 Paws
         Brewing","description":"4 Paws Brewing LLC is a microbrewery established in
         Chicago, IL. The brewery will be located in the Uptown\/Edgewater neighborhood
@@ -165,11 +165,11 @@ http_interactions:
         why 4 paws you might ask? The short answer is our little dog Sadie. Sadie
         is a rescue dog that we adopted over Memorial Day weekend of 2010. She''s
         a big part of who we are and what we''re all about. So that''s how we got
-        our name, but what are we all about?","website":"http:\/\/4pawsbrewing.com\/","established":"2011","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/j4bzi7\/upload_5F1smZ-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/j4bzi7\/upload_5F1smZ-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/j4bzi7\/upload_5F1smZ-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-03-06
+        our name, but what are we all about?","website":"http:\/\/4pawsbrewing.com\/","established":"2011","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/j4bzi7\/upload_5F1smZ-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/j4bzi7\/upload_5F1smZ-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/j4bzi7\/upload_5F1smZ-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-03-06
         15:45:21","updateDate":"2012-03-21 19:06:20"},{"id":"RLc3kq","name":"406 Brewing
-        Company","description":"406 Brewing Company with brewer Matt Muth","established":"2011","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/RLc3kq\/upload_UNoevn-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/RLc3kq\/upload_UNoevn-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/RLc3kq\/upload_UNoevn-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        Company","description":"406 Brewing Company with brewer Matt Muth","established":"2011","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/RLc3kq\/upload_UNoevn-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/RLc3kq\/upload_UNoevn-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/RLc3kq\/upload_UNoevn-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-06-17 14:10:32"},{"id":"k570yD","name":"49th
-        State Brewing Company","website":"http:\/\/49statebrewing.com\/","established":"2011","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/k570yD\/upload_1QLmC3-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/k570yD\/upload_1QLmC3-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/k570yD\/upload_1QLmC3-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        State Brewing Company","website":"http:\/\/49statebrewing.com\/","established":"2011","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/k570yD\/upload_1QLmC3-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/k570yD\/upload_1QLmC3-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/k570yD\/upload_1QLmC3-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-07-22 12:21:19"},{"id":"3Cwn6s","name":"4th Street
         Brewing Co","description":"Welcome to Gresham''s favorite locally-owned brew
         pub and restaurant! Come check out our state of the art facility in the heart
@@ -177,10 +177,10 @@ http_interactions:
         our locally brewed beer, our family-friendly restaurant, our incredible sports
         bar, or our unparalleled meeting space perfect for private parties, rehearsal
         dinners, meetings and more, 4th Street Brewing is the perfect choice for any
-        occasion.","website":"http:\/\/www.4thstreetbrewing.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/3Cwn6s\/upload_U5Ihkr-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/3Cwn6s\/upload_U5Ihkr-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/3Cwn6s\/upload_U5Ihkr-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        occasion.","website":"http:\/\/www.4thstreetbrewing.com\/","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/3Cwn6s\/upload_U5Ihkr-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/3Cwn6s\/upload_U5Ihkr-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/3Cwn6s\/upload_U5Ihkr-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:15"},{"id":"YcEXhH","name":"4th Way
         Brewing Co.","description":"Microbrewery with a cafe to feature our wide range
-        of beer styles matched with local organic eats.","website":"http:\/\/www.4thwaybrewingco.com\/","established":"2010","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/YcEXhH\/upload_K0J0TA-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/YcEXhH\/upload_K0J0TA-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/YcEXhH\/upload_K0J0TA-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        of beer styles matched with local organic eats.","website":"http:\/\/www.4thwaybrewingco.com\/","established":"2010","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/YcEXhH\/upload_K0J0TA-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/YcEXhH\/upload_K0J0TA-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/YcEXhH\/upload_K0J0TA-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:15"},{"id":"GDFP48","name":"5 Rabbit
         Cerveceria Inc","description":"The first Latin microbrewery in the US, 5 Rabbit
         is all about making the best beer. At 5 Rabbit we celebrate the centuries-old
@@ -188,7 +188,7 @@ http_interactions:
         that uniquely Latin attitude towards life that has so captured the imagination
         of the world. It additionally sets out to become an integral part of the local
         Hispanic community and aid in its advancement. 5 Rabbit is locally brewed
-        in Chicago, Illinois.","website":"http:\/\/www.5rabbitbrewery.com\/","established":"2011","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/GDFP48\/upload_uQWabz-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/GDFP48\/upload_uQWabz-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/GDFP48\/upload_uQWabz-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        in Chicago, Illinois.","website":"http:\/\/www.5rabbitbrewery.com\/","established":"2011","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/GDFP48\/upload_uQWabz-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/GDFP48\/upload_uQWabz-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/GDFP48\/upload_uQWabz-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:14"},{"id":"3zqgUV","name":"50 Back
         Brewing Company","description":"Our entire purpose is to say \"Thank you\"
         to all of the active Troops and Veterans in our Country who have served so
@@ -202,17 +202,17 @@ http_interactions:
         our idea, everyone invariably expresses their gratitude for the fact that
         we are providing a manner in which they can give back on an individual and
         personal level. Surprisingly, Troops and Veterans have said \"Thank you\"
-        back to us!","website":"http:\/\/www.50back.com\/","established":"2010","mailingListUrl":"http:\/\/www.50back.com\/subscribe","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/3zqgUV\/upload_yLfzkI-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/3zqgUV\/upload_yLfzkI-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/3zqgUV\/upload_yLfzkI-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        back to us!","website":"http:\/\/www.50back.com\/","established":"2010","mailingListUrl":"http:\/\/www.50back.com\/subscribe","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/3zqgUV\/upload_yLfzkI-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/3zqgUV\/upload_yLfzkI-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/3zqgUV\/upload_yLfzkI-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-05-25 12:42:33"},{"id":"vsz5a5","name":"508 Brewery","description":"508
         Restaurant and Brewery, Bar and Mediterranean American Rustic Cuisine SOHO,
-        NY","website":"http:\/\/www.508nyc.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vsz5a5\/upload_BCGRzf-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vsz5a5\/upload_BCGRzf-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vsz5a5\/upload_BCGRzf-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-04-21
+        NY","website":"http:\/\/www.508nyc.com\/","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vsz5a5\/upload_BCGRzf-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vsz5a5\/upload_BCGRzf-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vsz5a5\/upload_BCGRzf-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-04-21
         01:17:56","updateDate":"2012-04-22 21:49:46"},{"id":"PZOy9a","name":"5th Street
         Brewpub","description":"Opened in June of 2003 in historic Downtown Sedalia,
         Missouri. The 5th Street Brewpub is a restaurant with a full bar featuring
         our own handcrafted beers. Our brewing system came on-line in February 2005.
         We have pale and red ales, a great dark porter, and are currently producing
         other seasonal beers. We are also proud to serve the major brands brews as
-        well as specialty brews from other handcrafting breweries.","website":"http:\/\/www.5thstreetbrewpub.com\/","established":"2003","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/PZOy9a\/upload_zV6dp0-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/PZOy9a\/upload_zV6dp0-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/PZOy9a\/upload_zV6dp0-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        well as specialty brews from other handcrafting breweries.","website":"http:\/\/www.5thstreetbrewpub.com\/","established":"2003","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/PZOy9a\/upload_zV6dp0-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/PZOy9a\/upload_zV6dp0-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/PZOy9a\/upload_zV6dp0-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:15"},{"id":"QtDyxR","name":"612 Brew
         LLC","description":"At 612Brew, the newest beer company in the 612, we want
         to make your newest favorite beer you\u2019ve never had.\r\n\r\nWith our operation
@@ -220,7 +220,7 @@ http_interactions:
         test out much larger batches of hand crafted beer and present them for you
         to try. You never know what we may brew next, a Porter, a Pilsner, a Bock
         or a Belgian. We are excited for each new beer that we make and hope you get
-        excited to try them.","website":"http:\/\/612brew.com\/","established":"2006","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/QtDyxR\/upload_RQJsAZ-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/QtDyxR\/upload_RQJsAZ-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/QtDyxR\/upload_RQJsAZ-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        excited to try them.","website":"http:\/\/612brew.com\/","established":"2006","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/QtDyxR\/upload_RQJsAZ-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/QtDyxR\/upload_RQJsAZ-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/QtDyxR\/upload_RQJsAZ-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:15"},{"id":"7QsOEY","name":"7 Seas
         Brewing Company","description":"Formed in 2008 by Travis Guterson and Mike
         Runion, 7 Seas Brewing is an innovative craft brewery, making audacious, yet
@@ -232,7 +232,7 @@ http_interactions:
         one that will invoke an emotional, contemplative response from the drinker.
         It should cause them to smile, knowing that in our homogenized, cookie cutter
         world of consumerism, there are still people crafting something of integrity
-        and authenticity.","website":"http:\/\/www.7seasbrewing.com\/","established":"2008","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/7QsOEY\/upload_1OiSyZ-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/7QsOEY\/upload_1OiSyZ-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/7QsOEY\/upload_1OiSyZ-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        and authenticity.","website":"http:\/\/www.7seasbrewing.com\/","established":"2008","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/7QsOEY\/upload_1OiSyZ-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/7QsOEY\/upload_1OiSyZ-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/7QsOEY\/upload_1OiSyZ-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:11"},{"id":"jkbCNz","name":"75th
         Street Brewery","description":"75th Street Brewery is Kansas City\u2019s first
         and best brewpub that opened its doors in 1993.  Located in the historic Waldo
@@ -249,16 +249,16 @@ http_interactions:
         Yeast, and Water. No additives or preservatives are used. Because our beers
         are handcrafted in small batches and kept cold, no preservatives or pasteurization
         are required. You are guaranteed a fresh and natural pint of beer every time.
-        Cheers!","website":"http:\/\/75thstreet.com\/","established":"1993","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/jkbCNz\/upload_aLpv3X-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/jkbCNz\/upload_aLpv3X-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/jkbCNz\/upload_aLpv3X-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        Cheers!","website":"http:\/\/75thstreet.com\/","established":"1993","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/jkbCNz\/upload_aLpv3X-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/jkbCNz\/upload_aLpv3X-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/jkbCNz\/upload_aLpv3X-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:11"},{"id":"ToWOJj","name":"8 Wired
         Brewing Company","description":"A microbrewing company based in Marlborough,
         New Zealand.\r\n\r\nTo produce mindblowing beers that will wow craftbeer lovers,
-        excite fellow beer geeks and educate the mis-guided who still believe that","website":"http:\/\/www.8wired.co.nz\/","established":"2009","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ToWOJj\/upload_CvpKYi-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ToWOJj\/upload_CvpKYi-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ToWOJj\/upload_CvpKYi-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        excite fellow beer geeks and educate the mis-guided who still believe that","website":"http:\/\/www.8wired.co.nz\/","established":"2009","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ToWOJj\/upload_CvpKYi-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ToWOJj\/upload_CvpKYi-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/ToWOJj\/upload_CvpKYi-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:19"},{"id":"1mv7t1","name":"8th Wonder
         Brewing Company","description":"A crafty brewery in HouTex. Our proximity
         to Minute Maid Park, Toyota Center & Dynamo Stadium, makes 8W the craft beer
         for the home team. \r\n\r\nWe are dedicated to brewing fresh, tasty artisanal
-        ales.","website":"http:\/\/8thwonderbrewery.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1mv7t1\/upload_9MsUpz-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1mv7t1\/upload_9MsUpz-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1mv7t1\/upload_9MsUpz-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-06-27
+        ales.","website":"http:\/\/8thwonderbrewery.com\/","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1mv7t1\/upload_9MsUpz-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1mv7t1\/upload_9MsUpz-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/1mv7t1\/upload_9MsUpz-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-06-27
         13:24:46","updateDate":"2012-06-27 13:26:42"},{"id":"BeKCbW","name":"907 Brewing","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-07-22
         12:22:27","updateDate":"2012-07-22 12:22:27"},{"id":"SIlrQa","name":"961 BEER","description":"961
         Beer began during the dark days of the July 2006 siege on Lebanon. Tired with
@@ -272,12 +272,12 @@ http_interactions:
         in the world, and the only microbrewery in the Middle East (and still are).
         Although 961 Beer now brews nearly 2 million liters per year, they still insist
         upon making beer using the very same principles: traditional techniques, quality
-        ingredients and love.","website":"http:\/\/www.961beer.com","established":"2006","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/SIlrQa\/upload_N7AHMN-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/SIlrQa\/upload_N7AHMN-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/SIlrQa\/upload_N7AHMN-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-02-08
+        ingredients and love.","website":"http:\/\/www.961beer.com","established":"2006","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/SIlrQa\/upload_N7AHMN-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/SIlrQa\/upload_N7AHMN-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/SIlrQa\/upload_N7AHMN-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-02-08
         15:28:05","updateDate":"2012-03-21 19:06:20"},{"id":"8s5sUs","name":"A1A Ale
         Works","description":"Handcrafted and brewed to excellence, A1A Ale Works
         goes to great lengths to serve each guest the freshest beer possible. This
         commitment to serving nothing but the finest and freshest beer has led to
-        numerous awards.","website":"http:\/\/www.a1aaleworks.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/8s5sUs\/upload_uO4bXK-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/8s5sUs\/upload_uO4bXK-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/8s5sUs\/upload_uO4bXK-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        numerous awards.","website":"http:\/\/www.a1aaleworks.com\/","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/8s5sUs\/upload_uO4bXK-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/8s5sUs\/upload_uO4bXK-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/8s5sUs\/upload_uO4bXK-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:12"},{"id":"L0Tlgy","name":"Aalener
         L\u00f6wenbrauerei Gebr. Barth KG","website":"http:\/\/www.xn--aalener-lwenbru-elb41a.de\/","established":"1668","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-07
         10:16:54","updateDate":"2012-08-08 17:02:15"},{"id":"HqOPPk","name":"Aardwolf
@@ -299,9 +299,9 @@ http_interactions:
         water as ingredients in the production of beer. The law is known as the purity
         law and Aass Brewery is still loyal to Duke Wilhelm of Bavaria. In Norway
         the brewery is known for outstanding quality and large number of different
-        beer types.","website":"http:\/\/www.aass.no","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/TGtEbk\/upload_fgq5cE-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/TGtEbk\/upload_fgq5cE-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/TGtEbk\/upload_fgq5cE-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        beer types.","website":"http:\/\/www.aass.no","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/TGtEbk\/upload_fgq5cE-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/TGtEbk\/upload_fgq5cE-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/TGtEbk\/upload_fgq5cE-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:03"},{"id":"5ac2lB","name":"Abbaye
-        de Leffe","website":"http:\/\/www.abbaye-de-leffe.be\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/5ac2lB\/upload_rHwnfZ-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/5ac2lB\/upload_rHwnfZ-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/5ac2lB\/upload_rHwnfZ-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        de Leffe","website":"http:\/\/www.abbaye-de-leffe.be\/","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/5ac2lB\/upload_rHwnfZ-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/5ac2lB\/upload_rHwnfZ-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/5ac2lB\/upload_rHwnfZ-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:03"},{"id":"huKquc","name":"Abbaye
         de Maredsous","description":"Beer Maredsous is a beer Belgian of high fermentation
         brewed by Moortgat. Curiously, this beer has never been produced at the site
@@ -309,7 +309,7 @@ http_interactions:
         we can enjoy the on-site in earthen mugs. Since 1963, the abbey has entrusted
         the production and marketing at the brewery Duvel Moortgat located Puurs (province
         ofAntwerp), (which also gives us the Duvel) under the control of the monks.
-        The beer is filtered before bottling, giving it very clear.","website":"http:\/\/www.maredsous.be\/","established":"1963","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/huKquc\/upload_vwSdph-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/huKquc\/upload_vwSdph-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/huKquc\/upload_vwSdph-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        The beer is filtered before bottling, giving it very clear.","website":"http:\/\/www.maredsous.be\/","established":"1963","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/huKquc\/upload_vwSdph-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/huKquc\/upload_vwSdph-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/huKquc\/upload_vwSdph-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:03"},{"id":"usU4Jz","name":"Abbey
         Ales Brewery","description":"Founded in 1997, Abbey Ales is the first and
         only brewery in the historic City of Bath for over forty years, and is the
@@ -318,7 +318,7 @@ http_interactions:
         4.2% abv best bitter.\r\n\r\nSuccessfully launched at the Bath CAMRA beer
         festival in October 1997 Bellringer is now the top selling cask bitter in
         the World Heritage City of Bath and is as popular with the many visitors to
-        the Georgian City as it is with Bathonians.","website":"http:\/\/www.abbeyales.co.uk\/","established":"1997","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/usU4Jz\/upload_yFOAzG-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/usU4Jz\/upload_yFOAzG-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/usU4Jz\/upload_yFOAzG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-07-12
+        the Georgian City as it is with Bathonians.","website":"http:\/\/www.abbeyales.co.uk\/","established":"1997","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/usU4Jz\/upload_yFOAzG-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/usU4Jz\/upload_yFOAzG-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/usU4Jz\/upload_yFOAzG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-07-12
         12:12:16","updateDate":"2012-07-12 12:12:17"},{"id":"uA7DZB","name":"Abbey
         Beverage Co, LLC","description":"Abbey Beverage Company is the producer of
         Monks'' Ale and Monks'' Wit. Monks'' Ale has been available in New Mexico
@@ -336,7 +336,7 @@ http_interactions:
         the commercial brewing licenses are transferred in 2011. This facility will
         start as a pilot brewery and slowly expand to produce Monks'' Ale and Monks''
         Wit in draft, and seasonal draft beers. This brewery will be open for visits
-        on a limited basis.","website":"http:\/\/www.abbeybeveragecompany.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uA7DZB\/upload_e98jXs-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uA7DZB\/upload_e98jXs-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uA7DZB\/upload_e98jXs-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        on a limited basis.","website":"http:\/\/www.abbeybeveragecompany.com\/","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uA7DZB\/upload_e98jXs-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uA7DZB\/upload_e98jXs-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uA7DZB\/upload_e98jXs-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:15"},{"id":"sqIClK","name":"Abbey
         Brewing Co","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:15"},{"id":"TWs0Z9","name":"Abbey
@@ -344,9 +344,9 @@ http_interactions:
         02:41:43","updateDate":"2012-03-21 19:06:14"},{"id":"wXmTDU","name":"Abbey
         Wright Brewing Company","description":"The Valley Inn & Abbey Wright Brewing
         Co. have a superb selection of our own hand-crafted beers. We also have 22
-        beers on tap, and a huge selection of bottled beer from around the world.","website":"http:\/\/www.thevalley-inn.com\/","established":"2005","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/wXmTDU\/upload_o5pHUZ-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/wXmTDU\/upload_o5pHUZ-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/wXmTDU\/upload_o5pHUZ-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        beers on tap, and a huge selection of bottled beer from around the world.","website":"http:\/\/www.thevalley-inn.com\/","established":"2005","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/wXmTDU\/upload_o5pHUZ-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/wXmTDU\/upload_o5pHUZ-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/wXmTDU\/upload_o5pHUZ-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:03"},{"id":"YrVHMv","name":"Aberdeen
-        Brewing","description":"Aberdeen Brewing Company","established":"2000","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/YrVHMv\/upload_L1qoVO-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/YrVHMv\/upload_L1qoVO-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/YrVHMv\/upload_L1qoVO-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        Brewing","description":"Aberdeen Brewing Company","established":"2000","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/YrVHMv\/upload_L1qoVO-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/YrVHMv\/upload_L1qoVO-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/YrVHMv\/upload_L1qoVO-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:03"},{"id":"BBE5WM","name":"Abita
         Brewing Company","description":"Founded in 1986, the Abita Brewing Company
         is nestled in the piney woods 30 miles north of New Orleans. In its first
@@ -366,7 +366,7 @@ http_interactions:
         the finest and freshest tasting as proven by our loyal customers and great
         chefs of the south who use Abita Beer in their recipes. We''re proud of our
         brewery and the beers we make. Try Abita Beer today and taste a bit of the
-        South!","website":"http:\/\/www.abita.com\/","established":"1986","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BBE5WM\/upload_JxxaIB-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BBE5WM\/upload_JxxaIB-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BBE5WM\/upload_JxxaIB-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        South!","website":"http:\/\/www.abita.com\/","established":"1986","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BBE5WM\/upload_JxxaIB-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BBE5WM\/upload_JxxaIB-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BBE5WM\/upload_JxxaIB-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:03"},{"id":"M4K0XQ","name":"AC Golden
         Brewing Company","description":"The AC Golden Brewing Company is a subsidiary
         of MillerCoors, a joint venture between SABMiller and Molson Coors Brewing
@@ -377,14 +377,14 @@ http_interactions:
         first beer, Herman Joseph''s Private Reserve, in 2008. The company began brewing
         its seasonal beer, a Vienna Style lager called Winterfest, in 2009. In April
         2010, AC Golden introduced Colorado Native lager in Colorado, an amber lager
-        made with 100% Colorado ingredients.","website":"http:\/\/www.acgolden.com\/","established":"2007","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/M4K0XQ\/upload_udl31N-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/M4K0XQ\/upload_udl31N-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/M4K0XQ\/upload_udl31N-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        made with 100% Colorado ingredients.","website":"http:\/\/www.acgolden.com\/","established":"2007","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/M4K0XQ\/upload_udl31N-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/M4K0XQ\/upload_udl31N-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/M4K0XQ\/upload_udl31N-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:11"},{"id":"VA10ul","name":"Acadian
         Craft Brewing, LLC","established":"2011","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:15"},{"id":"34MUbw","name":"Achel
         Brewery","description":"Achel brewery or Brouwerij der Sint-Benedictusabdij
         de Achelse Kluis is a Belgian Trappist brewery, and the smallest of the seven
         currently approved Trappist breweries. It is located in the Abbey of Saint
-        Benedict in the Belgian municipality of Achel. It brews five trappist beers","website":"http:\/\/www.achelsekluis.org\/","established":"1998","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/34MUbw\/upload_IDvhvg-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/34MUbw\/upload_IDvhvg-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/34MUbw\/upload_IDvhvg-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        Benedict in the Belgian municipality of Achel. It brews five trappist beers","website":"http:\/\/www.achelsekluis.org\/","established":"1998","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/34MUbw\/upload_IDvhvg-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/34MUbw\/upload_IDvhvg-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/34MUbw\/upload_IDvhvg-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:05"},{"id":"7Tjp4C","name":"Adelbert''s
         Brewery","description":"Adelbert''s Brewery is named as a tribute to George
         Adelbert Hovey (1953-2000), the founder\u2019s brother.  Del always took time
@@ -395,7 +395,7 @@ http_interactions:
         hand-pollinating flowers in a green house he treated all with respect and
         dignity.   He lived to a high standard of empathy and self sacrifice.   \r\n\r\nOur
         Mission is to brew Belgian Style bottle conditioned beers that people will
-        seek, savor and share with others.","website":"http:\/\/www.adelbertsbeer.com\/","established":"2011","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/7Tjp4C\/upload_keAvee-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/7Tjp4C\/upload_keAvee-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/7Tjp4C\/upload_keAvee-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        seek, savor and share with others.","website":"http:\/\/www.adelbertsbeer.com\/","established":"2011","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/7Tjp4C\/upload_keAvee-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/7Tjp4C\/upload_keAvee-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/7Tjp4C\/upload_keAvee-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-06-27 13:23:02"},{"id":"fToAQf","name":"Adirondack
         Pub & Brewery","description":"All of our craft-brewed beers are made on the
         premises using only the finest malt, hops, yeast and water. We currently produce
@@ -403,7 +403,7 @@ http_interactions:
         is 60 barrels (1,860 gallons), with an even larger serving capacity in our
         cold cellars. We invite you to taste hand-crafted beer at its finest. Look
         for Adirondack Pub & Brewery''s hand-crafted beers at great establishments
-        throughout New York State.","website":"http:\/\/www.adkpub.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/fToAQf\/upload_wlgfIY-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/fToAQf\/upload_wlgfIY-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/fToAQf\/upload_wlgfIY-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        throughout New York State.","website":"http:\/\/www.adkpub.com\/","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/fToAQf\/upload_wlgfIY-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/fToAQf\/upload_wlgfIY-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/fToAQf\/upload_wlgfIY-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:11"},{"id":"B94gyT","name":"Adler
         Br\u00e4u","website":"http:\/\/www.adlerbraeu.de\/","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-07
         10:16:38","updateDate":"2012-08-15 13:23:55"},{"id":"nSnV7u","name":"Adler-Brauerei
@@ -462,7 +462,7 @@ http_interactions:
         We''re doing test batches and figuring out how best to get our fine, quality
         brews to the thirsty of Chicagoland.\r\nWe''re specializing in unique recipes,
         introducing twists on existing styles to create a range of beers geared towards
-        those who like their beer to be a little... different.","website":"http:\/\/admiralsasquatch.com\/","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/GWZObt\/upload_CCpNKY-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/GWZObt\/upload_CCpNKY-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/GWZObt\/upload_CCpNKY-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        those who like their beer to be a little... different.","website":"http:\/\/admiralsasquatch.com\/","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/GWZObt\/upload_CCpNKY-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/GWZObt\/upload_CCpNKY-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/GWZObt\/upload_CCpNKY-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:15"},{"id":"nUwtfn","name":"Adnams
         Brewery","description":"Adnams is one of England''s oldest and most respected
         breweries, but despite its rich heritage and enduring fame, Adnams is not
@@ -470,12 +470,12 @@ http_interactions:
         and innovative packaging designs has made it Britain''s fastest growing brewery
         over the last two years. To top it off, Adnams'' head brewer was recently
         chosen as Britain''s Brewer of the Year by a panel of his peers. The aggressive
-        team at Adnams is raring to go and keen to make a mark in the U.S.","website":"http:\/\/www.adnams.co.uk\/","established":"1872","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/nUwtfn\/upload_R9g6zc-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/nUwtfn\/upload_R9g6zc-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/nUwtfn\/upload_R9g6zc-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        team at Adnams is raring to go and keen to make a mark in the U.S.","website":"http:\/\/www.adnams.co.uk\/","established":"1872","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/nUwtfn\/upload_R9g6zc-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/nUwtfn\/upload_R9g6zc-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/nUwtfn\/upload_R9g6zc-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-07-12 12:23:26"},{"id":"PofhpE","name":"Affligem
         Brewery","description":"The Op-Ale brewery in Opwijk Belgium was licenced
         by the Affligem Abbey to brew beers under the Affligem Abbey brand name, along
         with their own Op-Ale, as well as beers under the brand name of the Postel
-        Abbey. Affligem was taken over by Heineken who renamed it the Affligem brewery.","website":"http:\/\/www.affligembeer.be\/","established":"1935","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/PofhpE\/upload_h7gZI9-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/PofhpE\/upload_h7gZI9-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/PofhpE\/upload_h7gZI9-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        Abbey. Affligem was taken over by Heineken who renamed it the Affligem brewery.","website":"http:\/\/www.affligembeer.be\/","established":"1935","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/PofhpE\/upload_h7gZI9-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/PofhpE\/upload_h7gZI9-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/PofhpE\/upload_h7gZI9-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:03"},{"id":"BqFigo","name":"Against
         The Grain Brewery","description":"Louisville''s only brewer-owned brewery
         is, like most worthwhile undertakings, the product of dissatisfaction with
@@ -490,9 +490,9 @@ http_interactions:
         beers. Regular menu changes allow us to take full advantage of the best seasonal
         ingredients, our chef''s whim, and optimal pairing with our dynamic beer list.\r\n\r\nThrow
         your preconceived notions right the hell out the window. We aren''t just another
-        brewpub. We are Against the Grain!","website":"http:\/\/www.atgbrewery.com\/","established":"2012","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BqFigo\/upload_gvUBj5-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BqFigo\/upload_gvUBj5-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BqFigo\/upload_gvUBj5-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-04-15
+        brewpub. We are Against the Grain!","website":"http:\/\/www.atgbrewery.com\/","established":"2012","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BqFigo\/upload_gvUBj5-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BqFigo\/upload_gvUBj5-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/BqFigo\/upload_gvUBj5-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-04-15
         19:19:34","updateDate":"2012-04-15 19:33:20"},{"id":"28OVyf","name":"Agassiz
-        Brewing Company","description":"Agassiz Brewing Company","established":"1998","isOrganic":"N","images":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/28OVyf\/upload_OxbKEE-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/28OVyf\/upload_OxbKEE-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/28OVyf\/upload_OxbKEE-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        Brewing Company","description":"Agassiz Brewing Company","established":"1998","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/28OVyf\/upload_OxbKEE-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/28OVyf\/upload_OxbKEE-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/28OVyf\/upload_OxbKEE-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:03"},{"id":"WTq1ic","name":"Aiken
         Brewing Company","website":"http:\/\/www.aikenbrewingcompany.com\/","established":"1997","isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:43","updateDate":"2012-03-21 19:06:15"},{"id":"eCqaSS","name":"Airdale
