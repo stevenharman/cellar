@@ -12,9 +12,18 @@ module SupplyChain
         perform_async(order.attribute_id) if order.delete_brewery?
       end
 
-      def perform(id)
-        CleanUp.brewery(id)
+      def initialize(brewery_factory = Brewery)
+        @brewery_factory = brewery_factory
       end
+
+      def perform(id)
+        brewery = brewery_factory.find_by_brewery_db_id(id)
+        CleanUp.brewery(brewery)
+      end
+
+      private
+
+      attr_reader :brewery_factory
 
     end
   end
