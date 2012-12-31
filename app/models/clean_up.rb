@@ -14,4 +14,12 @@ module CleanUp
     end
   end
 
+  def self.brew(brew)
+    if(brew.beers.empty?)
+      brew.destroy
+    else
+      fail "Brew #{brew.id} (#{brew.brewery_db_id}) cannot be destroyed; it has #{brew.beers.count} beers cellared."
+    end
+  end
+
 end

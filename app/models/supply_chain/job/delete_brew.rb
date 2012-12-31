@@ -12,8 +12,9 @@ module SupplyChain
         perform_async(order.attribute_id) if order.delete_brew?
       end
 
-      def perform(id)
-        CleanUp.brew(id)
+      def perform(id, brew_factory = Brew)
+        brew = brew_factory.find_by_brewery_db_id(id)
+        CleanUp.brew(brew)
       end
 
     end

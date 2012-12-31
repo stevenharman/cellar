@@ -3,7 +3,7 @@ require 'pg_search'
 class Brew < ActiveRecord::Base
   belongs_to :style
   belongs_to :base_brew, class_name: 'Brew'
-  has_many :brewery_brews, inverse_of: :brew
+  has_many :brewery_brews, inverse_of: :brew, dependent: :destroy
   has_many :breweries, through: :brewery_brews, uniq: true
   has_many :variations, class_name: 'Brew', foreign_key: 'base_brew_id'
   has_many :beers
