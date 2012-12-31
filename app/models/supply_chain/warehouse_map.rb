@@ -3,7 +3,7 @@ require 'date'
 
 module SupplyChain
   module WarehouseMap
-    class EmptyImages < OpenStruct; end
+    EmptyImages = Struct.new(:icon, :medium, :large)
 
     def self.boolean(raw)
       return unless raw

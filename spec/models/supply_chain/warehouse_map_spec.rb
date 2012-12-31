@@ -19,35 +19,38 @@ describe SupplyChain::WarehouseMap do
 
   describe '.decimal' do
     it 'is nil when nothing' do
-      expect(subject.decimal(nil)).to be_nil
+      expect(map.decimal(nil)).to be_nil
     end
 
     it 'is a decimal when given a number-looking string' do
-      expect(subject.decimal('1.234')).to eq(1.234)
+      expect(map.decimal('1.234')).to eq(1.234)
     end
   end
 
   describe '.images' do
-    it 'is EmptyImages when given nothing' do
-      expect(subject.images(nil)).to be_an(SupplyChain::WarehouseMap::EmptyImages)
+    it 'is empty when given nothing' do
+      images = map.images(nil)
+      expect(images.icon).to be_nil
+      expect(images.medium).to be_nil
+      expect(images.large).to be_nil
     end
 
     it 'is what it was given' do
-      expect(subject.images('picture!')).to eq('picture!')
+      expect(map.images('picture!')).to eq('picture!')
     end
   end
 
   describe '.year' do
     it 'is nil when nothing' do
-      expect(subject.year(nil)).to be_nil
+      expect(map.year(nil)).to be_nil
     end
 
     it 'is nil when they year-looking string is zero' do
-      expect(subject.year('0')).to be_nil
+      expect(map.year('0')).to be_nil
     end
 
     it 'is the Year when given a year-looking string' do
-      expect(subject.year('1999')).to eq(Date.new(1999))
+      expect(map.year('1999')).to eq(Date.new(1999))
     end
   end
 end
