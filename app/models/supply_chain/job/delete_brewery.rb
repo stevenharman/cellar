@@ -4,7 +4,7 @@ require_relative '../../clean_up'
 
 module SupplyChain
   module Job
-    class DestroyBrewery
+    class DeleteBrewery
       include Sidekiq::Worker
       include SupplyChain::Job
 

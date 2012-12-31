@@ -1,7 +1,7 @@
-require 'models/supply_chain/job/destroy_brewery'
+require 'models/supply_chain/job/delete_brewery'
 require 'models/supply_chain/order'
 
-describe SupplyChain::Job::DestroyBrewery do
+describe SupplyChain::Job::DeleteBrewery do
   describe '.fulfill' do
     it 'fulfills orders for a deleted brewery' do
       order = build_order(attribute: 'brewery', action: 'delete', attributeId: 'abc123')
