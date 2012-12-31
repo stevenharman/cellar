@@ -11,7 +11,7 @@ Sidekiq.configure_server do |config|
 
   sidekiq_concurrency = ENV['SIDEKIQ_CONCURRENCY']
   if(sidekiq_concurrency)
-    ActiveRecord::Base.configurations['production']['pool'] = sidekiq_concurrency.to_i
+    ActiveRecord::Base.configurations[Rails.env.downcase]['pool'] = sidekiq_concurrency.to_i
   end
 end
 
