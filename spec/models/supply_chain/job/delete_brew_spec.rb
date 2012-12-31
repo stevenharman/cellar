@@ -30,7 +30,7 @@ describe SupplyChain::Job::DeleteBrew do
   end
 
   describe '#perform' do
-    subject(:job) { described_class.new }
+    subject(:job) { described_class.new(fake_brew_factory) }
     let(:brew) { stub('a Brew') }
     let(:fake_brew_factory) { stub('Brew') }
     before do
@@ -39,7 +39,7 @@ describe SupplyChain::Job::DeleteBrew do
 
     it 'cleans up the brew' do
       CleanUp.should_receive(:brew).with(brew)
-      job.perform('abc123', fake_brew_factory)
+      job.perform('abc123')
     end
   end
 end
