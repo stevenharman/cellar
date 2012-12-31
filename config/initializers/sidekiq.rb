@@ -11,7 +11,10 @@ Sidekiq.configure_server do |config|
 
   sidekiq_concurrency = ENV['SIDEKIQ_CONCURRENCY']
   if(sidekiq_concurrency)
-    ActiveRecord::Base.configurations[Rails.env.downcase]['pool'] = sidekiq_concurrency.to_i
+    Rails.logger.warn("Setting custom connection pool size of #{sidekiq_concurrency} for Sidekiq Server...")
+    Rails.logger.warn("ActiveRecord::Base.connection_pool size = #{ActiveRecord::Base.connection_pool.instance_variable_get('@size')}")
+    ActiveRecord::Base.connection_pool.instance_variable_set('@size', sidekiq_concurrency.to_i)
+    Rails.logger.warn("ActiveRecord::Base.connection_pool size = #{ActiveRecord::Base.connection_pool.instance_variable_get('@size')}")
   end
 end
 

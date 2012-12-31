@@ -2,16 +2,13 @@ development:
   adapter: postgresql
   encoding: unicode
   database: cellar_development
-  pool: 25
 
 test:
   adapter: postgresql
   encoding: unicode
   database: cellar_test
-  pool: 25
 
 production:
   adapter: postgresql
   encoding: unicode
   database: cellar_production
-  pool: 25
