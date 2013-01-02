@@ -33,12 +33,16 @@ describe SupplyChain::Job::DeleteBrewery do
     subject(:job) { described_class.new(fake_brewery_factory) }
     let(:brewery) { stub('a Brewery') }
     let(:fake_brewery_factory) { stub('Brewery') }
-    before do
-      fake_brewery_factory.stub(:find_by_brewery_db_id).with('abc123') { brewery }
-    end
 
     it 'cleans up the brewery' do
+      fake_brewery_factory.stub(:find_by_brewery_db_id).with('abc123') { brewery }
       CleanUp.should_receive(:brewery).with(brewery)
+      job.perform('abc123')
+    end
+
+    it 'no-ops when the brewery does not exist' do
+      fake_brewery_factory.stub(:find_by_brewery_db_id) { nil }
+      CleanUp.should_not_receive(:brewery)
       job.perform('abc123')
     end
   end

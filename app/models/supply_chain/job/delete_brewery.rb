@@ -18,7 +18,7 @@ module SupplyChain
 
       def perform(id)
         brewery = brewery_factory.find_by_brewery_db_id(id)
-        CleanUp.brewery(brewery)
+        CleanUp.brewery(brewery) if brewery
       end
 
       private
