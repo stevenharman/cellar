@@ -3,7 +3,7 @@ require_relative 'beers_from_brewery_query'
 module CleanUp
 
   def self.brewery(brewery)
-    beers = BeersFromBreweryQuery.new(brewery)
+    beers = BeersFromBreweryQuery.query(brewery)
 
     if(beers.empty?)
       brewery.destroy

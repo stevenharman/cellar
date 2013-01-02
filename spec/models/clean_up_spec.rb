@@ -7,14 +7,14 @@ describe CleanUp do
     let(:brewery) { stub('Brewery', id: 42, brewery_db_id: 'abc123') }
 
     it 'destroys the brewery if we have no beers for it' do
-      BeersFromBreweryQuery.stub(:new).with(brewery) { [] }
+      BeersFromBreweryQuery.stub(:query).with(brewery) { [] }
       brewery.should_receive(:destroy)
 
       clean_up.brewery(brewery)
     end
 
     it 'fails to destroy the brewery when it has beers' do
-      BeersFromBreweryQuery.stub(:new).with(brewery) { [stub('Beer')] }
+      BeersFromBreweryQuery.stub(:query).with(brewery) { [stub('Beer')] }
       expect { clean_up.brewery(brewery) }.to raise_error(/cannot be destroyed; it has 1 beers cellared/)
     end
   end
