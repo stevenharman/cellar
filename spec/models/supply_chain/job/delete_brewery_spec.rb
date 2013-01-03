@@ -44,7 +44,7 @@ describe SupplyChain::Job::DeleteBrewery do
     context 'when the brewery does not exist' do
       subject(:job) { described_class.new }
 
-      it 'fails with meaningful error when the brewery does not exist' do
+      it 'fails with meaningful error' do
         CleanUp.should_not_receive(:brewery)
         expect { job.perform('abc123') }.to raise_error(ActiveRecord::RecordNotFound)
       end

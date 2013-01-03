@@ -1,3 +1,4 @@
+require 'active_record_spec_helper'
 require 'models/supply_chain/job/delete_brew'
 require 'models/supply_chain/order'
 
@@ -33,13 +34,20 @@ describe SupplyChain::Job::DeleteBrew do
     subject(:job) { described_class.new(fake_brew_factory) }
     let(:brew) { stub('a Brew') }
     let(:fake_brew_factory) { stub('Brew') }
-    before do
-      fake_brew_factory.stub(:find_by_brewery_db_id).with('abc123') { brew }
-    end
 
     it 'cleans up the brew' do
+      fake_brew_factory.stub(:find_by_brewery_db_id!).with('abc123') { brew }
       CleanUp.should_receive(:brew).with(brew)
       job.perform('abc123')
+    end
+
+    context 'when the brew does not exist' do
+      subject(:job) { described_class.new }
+
+      it 'fails with meaningful error' do
+        CleanUp.should_not_receive(:brew)
+        expect { job.perform('abc123') }.to raise_error(ActiveRecord::RecordNotFound)
+      end
     end
   end
 end

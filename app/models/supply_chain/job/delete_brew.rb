@@ -1,5 +1,6 @@
 require 'sidekiq'
 require_relative '../job'
+require_relative '../../brew'
 require_relative '../../clean_up'
 
 module SupplyChain
@@ -17,7 +18,7 @@ module SupplyChain
       end
 
       def perform(id)
-        brew = brew_factory.find_by_brewery_db_id(id)
+        brew = brew_factory.find_by_brewery_db_id!(id)
         CleanUp.brew(brew)
       end
 
