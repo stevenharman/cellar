@@ -1,3 +1,5 @@
+require 'pg_search'
+
 class Brewery < ActiveRecord::Base
   has_many :brewery_brews, inverse_of: :brewery, dependent: :destroy
   has_many :brews, through: :brewery_brews, uniq: true
