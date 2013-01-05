@@ -1,6 +1,7 @@
 require 'rack/utils'
 
 class WebHooksController < ApplicationController
+  skip_before_filter :verify_authenticity_token, only: [:create]
 
   def create
     order = SupplyChain.order_from_brewery_db(notification_params)
