@@ -1,14 +1,11 @@
-development:
+development: &development
   adapter: postgresql
   encoding: unicode
   database: cellar_development
+  pool: <%= ENV['SIDEKIQ_CONCURRENCY'] || 5 %>
 
 test:
-  adapter: postgresql
-  encoding: unicode
+  <<: *development
   database: cellar_test
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: cellar_production
+# production: NOT HERE because Heroku uses ENV['DATABASE_URL']
