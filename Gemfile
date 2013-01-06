@@ -13,7 +13,7 @@ gem 'pg_search'
 gem 'simple_form'
 gem 'slim'
 gem 'sidekiq'
-gem 'sinatra', :require => nil # for sidekiq monitoring
+gem 'sinatra', require: false # for sidekiq monitoring
 
 group :assets do
   gem 'sass-rails', '~> 3.1'
@@ -29,7 +29,7 @@ group :test do
   gem 'database_cleaner'
   gem 'with_model'
   gem 'shoulda-matchers'
-  gem 'simplecov', :require => false
+  gem 'simplecov', require: false
   gem 'vcr'
   gem 'webmock'
 end
