@@ -1,3 +1,6 @@
+# Prevent buffering Foreman output
+STDOUT.sync = true
+
 BrewdegaCellar::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -25,6 +28,9 @@ BrewdegaCellar::Application.configure do
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
+
+  # Log to STDOUT so all logs show together via Foreman
+  # config.logger = Logger.new(STDOUT)
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
