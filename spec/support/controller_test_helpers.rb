@@ -1,4 +1,4 @@
-module ControllerHelpers
+module ControllerTestHelpers
 
   def sign_in(user)
     if user.is_a?(User) && user.persisted?

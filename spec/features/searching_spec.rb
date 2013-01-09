@@ -17,7 +17,7 @@ feature 'Searching' do
   def search_for(terms)
     visit root_path
     fill_in 'q', with: terms
-    click_link_or_button 'Search'
+    find('.search-button').click
   end
 
   def expect_results_include(text)
