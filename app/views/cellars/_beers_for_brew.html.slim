@@ -15,9 +15,9 @@
         - for beer in brew.beers
           tr.beer*{'data-id' => beer.id}
             td= beer.batch
-            td= beer.bottled_on
-            td= beer.best_by
-            td= l(beer.created_at, format: :month_year)
+            td= ldate(beer.bottled_on, format: :long)
+            td= ldate(beer.best_by, format: :long)
+            td= ldate(beer.created_at, format: :month_year)
             td.status
               = simple_form_for beer, url: cellar_beer_status_path(beer.user, beer) do
                 .btn-group

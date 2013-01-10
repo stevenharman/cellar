@@ -6,7 +6,3 @@
   <dt class='span2'>Bottled on: </dt><dd><%= @beer.bottled_on %>&nbsp;</dd>
   <dt class='span2'>Best by: </dt><dd><%= @beer.best_by %></dd>
 </dl>
-
-<p>
-  <%= link_to 'Edit', edit_cellar_beer_path(@beer.user, @beer), class: 'btn', id: 'edit_beer' %>
-</p>
