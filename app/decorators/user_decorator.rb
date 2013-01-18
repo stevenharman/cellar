@@ -1,7 +1,7 @@
 require 'digest/md5'
 
 class UserDecorator < ApplicationDecorator
-  decorates :user
+  delegate_all
 
   def gravatar(size = 32)
     hashed_email = Digest::MD5.hexdigest(email)

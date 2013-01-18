@@ -3,6 +3,7 @@ require_relative '../models/brew'
 
 class CellaredBrewDecorator < ApplicationDecorator
   decorates :brew
+  delegate_all
 
   def initialize(args)
     @cellar = args.delete(:cellar)
@@ -10,7 +11,7 @@ class CellaredBrewDecorator < ApplicationDecorator
   end
 
   def beers
-    @beers ||= cellar.beers_for(brew)
+    @beers ||= cellar.beers_for(model)
   end
 
   def beer_count

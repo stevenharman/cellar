@@ -1,6 +1,8 @@
 class CellarDecorator < ApplicationDecorator
-  decorates :cellar
+  delegate_all
   decorates_association :keeper
+
+  alias_method :cellar, :source
 
   def keeper_gravatar(*args)
     keeper.gravatar(*args)

@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :render_404
 
   def current_user
-    @decorated_current_user ||= (UserDecorator.decorate(super) if super)
+    @decorated_current_user ||= (UserDecorator.new(super) if super)
   end
 
   protected
