@@ -1,7 +1,7 @@
 BrewdegaCellar::Application.routes.draw do
 
   devise_for :user, skip: :all
-  as :user do
+  devise_scope :user do
     get 'sign_in' => 'sessions#new', as: :new_user_session
     post 'sign_in' => 'sessions#create', as: :user_session
     delete 'sign_out' => 'sessions#destroy', as: :destroy_user_session
