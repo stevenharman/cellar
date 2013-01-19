@@ -14,4 +14,11 @@ module FeatureTestHelpers
     user
   end
 
+  def sign_out(user)
+    within('.current-user-links') do
+      click_link user.username
+      click_link 'Sign out'
+    end
+  end
+
 end
