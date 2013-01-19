@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true, presence: true, email: true
   validates :username, uniqueness: true, presence: true
   validates :password, presence: { on: :create },
-                       length: { in: 6...128, if: 'password.present?' }
+                       length: { in: 8...128, if: 'password.present?' }
 
   def self.for_username!(username)
     find_by_username!(username.downcase)
