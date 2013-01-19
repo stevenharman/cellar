@@ -6,8 +6,8 @@ BrewdegaCellar::Application.routes.draw do
     post 'sign_in' => 'sessions#create', as: :user_session
     delete 'sign_out' => 'sessions#destroy', as: :destroy_user_session
 
-    scope '/settings' do
-      resource :password, controller: 'Devise::Passwords'
+    namespace :settings do
+      resource :password, only: [:new, :create, :edit, :update]
     end
   end
 

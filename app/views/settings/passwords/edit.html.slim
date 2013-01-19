@@ -1,0 +1,6 @@
+h2 Change your password
+= simple_form_for(resource, :as => resource_name, :url => settings_password_path, :html => { :method => :put }) do |f|
+  = devise_error_messages!
+  = f.hidden_field :reset_password_token
+  = f.input :password, :autofocus => true, label: false
+  = f.submit 'Change my password', class: 'btn btn-success'
