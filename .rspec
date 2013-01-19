@@ -1,3 +1,4 @@
+--order rand
 --colour
 -I app
 -r pry
