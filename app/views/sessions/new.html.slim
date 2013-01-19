@@ -1,6 +1,7 @@
 = simple_form_for @user, url: new_user_session_path do |f|
   = f.input :username, input_html: { autofocus: true }
   = f.input :password
+  p Forgot your password? #{link_to 'Reset it', new_settings_password_path}
   = f.input :remember_me, as: :boolean, label: false, \
     inline_label: 'Yes, remember me'
   = f.button :submit, 'Sign in'
