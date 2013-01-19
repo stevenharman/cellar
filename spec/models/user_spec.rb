@@ -1,42 +1,49 @@
 require 'spec_helper'
 
 describe User do
-  it { should have_many(:beers) }
 
-  it { should validate_presence_of(:username) }
-  it { should allow_mass_assignment_of(:username) }
   it 'validates uniqueness of username' do
     FactoryGirl.create(:user)
-    User.new.should validate_uniqueness_of(:username)
+    expect(User.new).to validate_uniqueness_of(:username)
   end
 
-  it { should validate_presence_of(:email) }
-  it { should allow_mass_assignment_of(:email) }
   it 'validates uniqueness of email' do
     FactoryGirl.create(:user)
-    User.new.should validate_uniqueness_of(:email)
+    expect(User.new).to validate_uniqueness_of(:email)
   end
 
-  it { should validate_presence_of(:password) }
-  it { should allow_mass_assignment_of(:password) }
+  it 'requires password for new user' do
+    expect(User.new).to have(1).errors_on(:password)
+  end
 
-  describe 'creating a user' do
+  describe 'an existing user' do
     let(:bob) { FactoryGirl.create(:user) }
 
-    it { bob.should be_valid }
+    it { expect(bob).to be_valid }
+
+    it 'does not require a password' do
+      bob.password = nil
+      expect(bob).to have(0).errors_on(:password)
+    end
+
+    it 'requires a minimum password length when password is being set' do
+      bob.password = 'abc12345'
+      expect(bob).to have(0).errors_on(:password)
+      bob.password = 'abc1234'
+      expect(bob).to have(1).errors_on(:password)
+    end
   end
 
   describe '.for_username!' do
     context 'with user whom exists' do
-      let(:bob) { FactoryGirl.create(:bob) }
-      before { bob }
+      let!(:bob) { FactoryGirl.create(:bob) }
 
       it 'finds him' do
-        User.for_username!('bob').should == bob
+        expect(User.for_username!('bob')).to eq(bob)
       end
 
       it 'finds him with differently cased username' do
-        User.for_username!('BoB').should == bob
+        expect(User.for_username!('BoB')).to eq(bob)
       end
     end
 
@@ -53,7 +60,7 @@ describe User do
         let(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
 
         it 'fetches the beer' do
-          bob.find_beer(bobs_beer.id).should == bobs_beer
+          expect(bob.find_beer(bobs_beer.id)).to eq(bobs_beer)
         end
       end
 
@@ -64,29 +71,18 @@ describe User do
 
     describe '#stocked_beers' do
       let(:backwoods) { FactoryGirl.create(:brew) }
-      let(:bobs_backwoods) { FactoryGirl.create_list(:beer, 2, brew: backwoods, user: bob) }
-      let(:drunk_beer) { FactoryGirl.create(:beer, :drunk, brew: backwoods, user: bob) }
-      let(:other_beer) { FactoryGirl.create(:beer, user: bob) }
-      before do
-        backwoods
-        other_beer
-        drunk_beer
-      end
+      let!(:bobs_backwoods) { FactoryGirl.create_list(:beer, 2, brew: backwoods, user: bob) }
+      let!(:drunk_beer) { FactoryGirl.create(:beer, :drunk, brew: backwoods, user: bob) }
+      let!(:other_beer) { FactoryGirl.create(:beer, user: bob) }
 
-      it "includes Bob's Backwoods" do
-        bob.stocked_beers(backwoods) =~ bobs_backwoods
-      end
-
-      it "excludes Bob's other cellared brews" do
-        bob.stocked_beers(backwoods).should_not include(other_beer)
-      end
-
-      it "excludes Bob's unstocked Backwoods" do
-        bob.stocked_beers(backwoods).should_not include(drunk_beer)
+      it "includes Bob's Backwoods, while excluding his unstocked Backwoods and his other brews" do
+        expect(bob.stocked_beers(backwoods)).to match_array(bobs_backwoods)
+        expect(bob.stocked_beers(backwoods)).to_not match_array([drunk_beer])
+        expect(bob.stocked_beers(backwoods)).to_not match_array([other_beer])
       end
 
       it 'includes all cellared beers when no brew is given' do
-        bob.stocked_beers.should =~ (bobs_backwoods + [other_beer])
+        expect(bob.stocked_beers).to match_array(bobs_backwoods + [other_beer])
       end
     end
   end
@@ -105,7 +101,7 @@ describe User do
     end
 
     it "includes only brews currently in bob's cellar" do
-      bob.stocked_brews.should =~ [brew_1, brew_3]
+      expect(bob.stocked_brews).to match_array([brew_1, brew_3])
     end
   end
 end

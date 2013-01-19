@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
 
   validates :email, uniqueness: true, presence: true, email: true
   validates :username, uniqueness: true, presence: true
-  validates :password, presence: { on: :create },
+  validates :password, presence: { if: :password_required? },
                        length: { in: 8...128, if: 'password.present?' }
 
   def self.for_username!(username)
@@ -46,5 +46,11 @@ class User < ActiveRecord::Base
 
   def to_param
     username
+  end
+
+  private
+
+  def password_required?
+    new_record? || !password.nil?
   end
 end
