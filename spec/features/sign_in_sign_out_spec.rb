@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Signing in and out' do
+feature 'Signing in and out', :feature, :slow do
   let(:bob) { FactoryGirl.create(:bob) }
 
   scenario 'Signing in with valid credentials' do

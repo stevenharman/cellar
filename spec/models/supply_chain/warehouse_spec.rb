@@ -21,7 +21,7 @@ describe SupplyChain::Warehouse do
       expect(styles.count).to eq(157)
     end
 
-    it 'fetches breweries from BreweryDB' do
+    it 'fetches breweries from BreweryDB', :slow do
       breweries = subject.breweries
       expect(breweries.first.id).to be_kind_of String
       expect(breweries.each).to be_kind_of Enumerator

@@ -6,7 +6,7 @@ describe SupplyChain::Agent, :vcr do
   let(:log) { SupplyChain::Log::Noop.new }
   let(:raw_data) { stub }
 
-  it '#import_styles_with_categories loads the all styles and their categories' do
+  it '#import_styles_with_categories loads the all styles and their categories', :slow do
     subject.import_styles_with_categories
     expect(Style.count).to eq(157)
     expect(Category.count).to eq(12)

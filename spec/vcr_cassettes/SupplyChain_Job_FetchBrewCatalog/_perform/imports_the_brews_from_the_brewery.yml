@@ -19,17 +19,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 02:02:25 GMT
+      - Sat, 19 Jan 2013 17:50:29 GMT
       Server:
-      - Apache/2.2.22 (Amazon)
+      - Apache/2.2.23 (Amazon)
       X-Powered-By:
-      - PHP/5.3.15
+      - PHP/5.3.19
       X-Ratelimit-Limit:
       - Unlimited
       X-Ratelimit-Remaining:
       - Unlimited
-      Connection:
-      - close
       Transfer-Encoding:
       - chunked
       Content-Type:
@@ -53,7 +51,7 @@ http_interactions:
         intention of this style of beer is to exhibit the fresh and bright character
         of hops. Oxidative character and aged character should not be present.","ibuMin":"65","ibuMax":"100","abvMin":"7.5","abvMax":"10.5","srmMin":"5","srmMax":"13","ogMin":"1.075","fgMin":"1.012","fgMax":"1.02","createDate":"2012-03-21
         20:06:45"}},{"id":"n5eVF5","name":"2011 Bushing Monk","description":"Fermented
-        with pure raspberries","abv":"9.2","glasswareId":5,"styleId":70,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/n5eVF5\/upload_3b1cRD-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/n5eVF5\/upload_3b1cRD-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/n5eVF5\/upload_3b1cRD-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        with pure raspberries","abv":"9.2","glasswareId":5,"styleId":70,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/n5eVF5\/upload_3b1cRD-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/n5eVF5\/upload_3b1cRD-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/n5eVF5\/upload_3b1cRD-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:37","updateDate":"2012-03-22 13:05:23","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
         02:41:33"},"style":{"id":70,"categoryId":5,"category":{"id":5,"name":"Belgian
         And French Origin Ales","createDate":"2012-03-21 20:06:46"},"name":"Other
@@ -71,8 +69,8 @@ http_interactions:
         An all-day IPA naturally brewed with a complex array of malts, grains and
         hops. Balanced for optimal aromatic and a clean finish. The perfect reward
         for an honest day''s work and the ultimate companion to celebrate life''s
-        simple pleasures.","abv":"4.7","ibu":"42","glasswareId":5,"availableId":1,"styleId":30,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/UEHHoX\/upload_dtPhgy-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/UEHHoX\/upload_dtPhgy-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/UEHHoX\/upload_dtPhgy-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:42:39","updateDate":"2012-07-15 00:34:10","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        simple pleasures.","abv":"4.7","ibu":"42","glasswareId":5,"availableId":1,"styleId":30,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/UEHHoX\/upload_dtPhgy-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/UEHHoX\/upload_dtPhgy-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/UEHHoX\/upload_dtPhgy-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:42:39","updateDate":"2012-09-08 15:46:34","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
         02:41:33"},"available":{"id":"1","name":"Year Round","description":"Available
         year round as a staple beer."},"style":{"id":30,"categoryId":3,"category":{"id":3,"name":"North
         American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"American-Style
@@ -96,8 +94,8 @@ http_interactions:
         20:06:45"}},{"id":"bL7eDZ","name":"Backwoods Bastard","description":"Expect
         lovely, warm smells of single malt scotch, oaky bourbon barrels, smoke, sweet
         caramel and roasted malts, a bit of earthy spice, and a scintilla of dark
-        fruit. It\u2019s a kick-back sipper made to excite the palate.","abv":"10.2","ibu":"50","glasswareId":8,"availableId":2,"styleId":8,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/bL7eDZ\/upload_G91AUf-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/bL7eDZ\/upload_G91AUf-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/bL7eDZ\/upload_G91AUf-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:42:44","updateDate":"2012-03-22 13:05:08","glass":{"id":8,"name":"Tulip","createDate":"2012-01-03
+        fruit. It\u2019s a kick-back sipper made to excite the palate.","abv":"10.2","ibu":"50","glasswareId":8,"availableId":2,"styleId":8,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/bL7eDZ\/upload_G91AUf-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/bL7eDZ\/upload_G91AUf-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/bL7eDZ\/upload_G91AUf-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:42:44","updateDate":"2012-09-06 17:35:55","glass":{"id":8,"name":"Tulip","createDate":"2012-01-03
         02:41:33"},"available":{"id":"2","name":"Limited","description":"Limited availability."},"style":{"id":8,"categoryId":1,"category":{"id":1,"name":"British
         Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"Scottish-Style Heavy
         Ale","description":"Scottish heavy ale is moderate in strength and dominated
@@ -121,7 +119,7 @@ http_interactions:
         surprise you with a big hop flavor and a toasty sweet aroma. Pours black from
         the chocolate and de-bitterized black rye malts. This ale is medium bodied
         and is well flavored with hints of toffee, nutty undertones and a dry crisp
-        finish.","abv":"6.6","glasswareId":5,"availableId":2,"styleId":112,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/XTrGE0\/upload_t9Jmnu-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/XTrGE0\/upload_t9Jmnu-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/XTrGE0\/upload_t9Jmnu-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        finish.","abv":"6.6","glasswareId":5,"availableId":2,"styleId":112,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/XTrGE0\/upload_t9Jmnu-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/XTrGE0\/upload_t9Jmnu-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/XTrGE0\/upload_t9Jmnu-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:42:50","updateDate":"2012-03-22 13:05:01","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
         02:41:33"},"available":{"id":"2","name":"Limited","description":"Limited availability."},"style":{"id":112,"categoryId":11,"category":{"id":11,"name":"Hybrid\/mixed
         Beer","createDate":"2012-03-21 20:06:46"},"name":"Light American Wheat Ale
@@ -141,9 +139,9 @@ http_interactions:
         lover''s consummate beer. Brewed with an abundance of flaked oats, bitter
         and imported chocolates, and Sumatra and Kona coffee, this stout has an intense
         fresh-roasted java nose topped with a frothy, cinnamon-colored head that goes
-        forever.","abv":"8.3","ibu":"60","glasswareId":5,"srmId":41,"availableId":4,"styleId":43,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/9na4NR\/upload_PwPNgf-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/9na4NR\/upload_PwPNgf-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/9na4NR\/upload_PwPNgf-large.png"},"status":"verified","statusDisplay":"Verified","servingTemperature":"cellar","servingTemperatureDisplay":"Cellar
-        - (12-14C\/54-57F)","createDate":"2012-01-03 02:42:54","updateDate":"2012-03-28
-        01:19:14","glass":{"id":5,"name":"Pint","createDate":"2012-01-03 02:41:33"},"srm":{"id":41,"name":"Over
+        forever.","abv":"8.3","ibu":"60","glasswareId":5,"srmId":41,"availableId":4,"styleId":43,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/9na4NR\/upload_PwPNgf-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/9na4NR\/upload_PwPNgf-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/9na4NR\/upload_PwPNgf-large.png"},"status":"verified","statusDisplay":"Verified","servingTemperature":"cellar","servingTemperatureDisplay":"Cellar
+        - (12-14C\/54-57F)","createDate":"2012-01-03 02:42:54","updateDate":"2012-12-18
+        19:38:40","glass":{"id":5,"name":"Pint","createDate":"2012-01-03 02:41:33"},"srm":{"id":41,"name":"Over
         40","hex":"000000"},"available":{"id":"4","name":"Seasonal","description":"Available
         at the same time of year, every year."},"style":{"id":43,"categoryId":3,"category":{"id":3,"name":"North
         American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"American-Style
@@ -155,8 +153,8 @@ http_interactions:
         and bitterness can be moderately perceived but should not overwhelm the overall
         character. Hop aroma is usually moderately-high to overwhelmingly hop-floral,
         -citrus or -herbal. Diacetyl (butterscotch) levels should be absent.","ibuMin":"50","ibuMax":"80","abvMin":"7","abvMax":"12","srmMin":"40","srmMax":"40","ogMin":"1.08","fgMin":"1.02","fgMax":"1.03","createDate":"2012-03-21
-        20:06:46"}},{"id":"oHbFpl","name":"CBS Imperial Stout","abv":"10.6","glasswareId":5,"availableId":8,"styleId":43,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/oHbFpl\/upload_RSQuM8-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/oHbFpl\/upload_RSQuM8-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/oHbFpl\/upload_RSQuM8-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:42:58","updateDate":"2012-07-15 00:37:31","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        20:06:46"}},{"id":"oHbFpl","name":"CBS Imperial Stout","abv":"10.6","glasswareId":5,"availableId":8,"styleId":43,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/oHbFpl\/upload_RSQuM8-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/oHbFpl\/upload_RSQuM8-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/oHbFpl\/upload_RSQuM8-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:42:58","updateDate":"2012-09-08 16:52:10","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
         02:41:33"},"available":{"id":"8","name":"Winter","description":"Available
         during the winter months."},"style":{"id":43,"categoryId":3,"category":{"id":3,"name":"North
         American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"American-Style
@@ -174,8 +172,8 @@ http_interactions:
         yourself a pint of this complex flavorful ale and bask in the frothy head''s
         floral bouquet. Relish the immense citrus accents, achieved by the abundance
         of dry hopping. This ale''s sweet, malty undertones balance the hop character
-        with a finish that never turns too bitter.","abv":"7.2","ibu":"65","availableId":1,"styleId":30,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/rAHla4\/upload_volsG7-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/rAHla4\/upload_volsG7-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/rAHla4\/upload_volsG7-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:42:58","updateDate":"2012-03-22 13:04:40","available":{"id":"1","name":"Year
+        with a finish that never turns too bitter.","abv":"7.2","ibu":"65","availableId":1,"styleId":30,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/rAHla4\/upload_volsG7-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/rAHla4\/upload_volsG7-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/rAHla4\/upload_volsG7-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:42:58","updateDate":"2012-09-06 17:35:26","available":{"id":"1","name":"Year
         Round","description":"Available year round as a staple beer."},"style":{"id":30,"categoryId":3,"category":{"id":3,"name":"North
         American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"American-Style
         India Pale Ale","description":"American-style India pale ales are perceived
@@ -199,8 +197,8 @@ http_interactions:
         a soft spot for this one. Using only fresh Michigan tart cherries, this beauty
         tantalizes with intense flavors combined with a no hesitation malt bill. Adding
         fresh cherries at five separate stages of fermentation achieves the ultimate
-        balance between tartness and sweetness.","abv":"6.5","ibu":"15","glasswareId":5,"availableId":4,"styleId":119,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/dEjDHI\/upload_W8k62F-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/dEjDHI\/upload_W8k62F-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/dEjDHI\/upload_W8k62F-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:42:58","updateDate":"2012-03-22 13:05:06","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        balance between tartness and sweetness.","abv":"6.5","ibu":"15","glasswareId":5,"availableId":4,"styleId":119,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/dEjDHI\/upload_W8k62F-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/dEjDHI\/upload_W8k62F-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/dEjDHI\/upload_W8k62F-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:42:58","updateDate":"2012-09-06 17:35:45","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
         02:41:33"},"available":{"id":"4","name":"Seasonal","description":"Available
         at the same time of year, every year."},"style":{"id":119,"categoryId":11,"category":{"id":11,"name":"Hybrid\/mixed
         Beer","createDate":"2012-03-21 20:06:46"},"name":"Fruit Beer","description":"Fruit
@@ -221,8 +219,8 @@ http_interactions:
         is brewed with an intense focus on the malt bill creating a very strong, rich,
         malty characteristic and a sweetness indicative of its cousin the barleywine.
         We are especially proud of the balance in this beer making it deceptively
-        smooth and drinkable at 9.3% alcohol by volume.","abv":"9.8","ibu":"50","availableId":3,"styleId":13,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/OR1ggJ\/upload_62KjNA-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/OR1ggJ\/upload_62KjNA-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/OR1ggJ\/upload_62KjNA-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:43:02","updateDate":"2012-03-22 13:05:01","available":{"id":"3","name":"Not
+        smooth and drinkable at 9.3% alcohol by volume.","abv":"9.8","ibu":"50","availableId":3,"styleId":13,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/OR1ggJ\/upload_62KjNA-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/OR1ggJ\/upload_62KjNA-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/OR1ggJ\/upload_62KjNA-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:02","updateDate":"2012-09-06 17:35:43","available":{"id":"3","name":"Not
         Available","description":"Beer is not available."},"style":{"id":13,"categoryId":1,"category":{"id":1,"name":"British
         Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"Old Ale","description":"Dark
         amber to brown in color, old ales are medium to full bodied with a malty sweetness.
@@ -249,8 +247,8 @@ http_interactions:
         used to create this monster. More IBU''s than any brewery has documented,
         more than you would believe and dry-hopped for twenty-six days straight with
         a combination of 10 hop varieties. Dangerously drinkable and deliciously evil.
-        We dare you to dance with the Devil.","abv":"12","ibu":"112","availableId":2,"styleId":31,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/d4TIzB\/upload_kDZWXW-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/d4TIzB\/upload_kDZWXW-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/d4TIzB\/upload_kDZWXW-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:43:04","updateDate":"2012-03-22 13:05:01","available":{"id":"2","name":"Limited","description":"Limited
+        We dare you to dance with the Devil.","abv":"12","ibu":"112","availableId":2,"styleId":31,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/d4TIzB\/upload_kDZWXW-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/d4TIzB\/upload_kDZWXW-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/d4TIzB\/upload_kDZWXW-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:04","updateDate":"2012-09-06 17:35:42","available":{"id":"2","name":"Limited","description":"Limited
         availability."},"style":{"id":31,"categoryId":3,"category":{"id":3,"name":"North
         American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"Imperial
         or Double India Pale Ale","description":"Imperial or Double India Pale Ales
@@ -269,24 +267,29 @@ http_interactions:
         ruby in color and brewed with ten varieties of imported malts this beer continuously
         lives up to its reputation as a bold and powerful ale. Dirty Bastard is complex
         in the finish with hints of smoke and peat paired with a malty richness, finalized
-        with a good bit of hop attitude.  This beer ain''t for the wee lads.","abv":"8.5","ibu":"50","srmId":33,"availableId":1,"styleId":14,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/4F7QA9\/upload_7oaCFM-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/4F7QA9\/upload_7oaCFM-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/4F7QA9\/upload_7oaCFM-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:43:05","updateDate":"2012-03-22 13:04:37","srm":{"id":33,"name":"33","hex":"520907"},"available":{"id":"1","name":"Year
-        Round","description":"Available year round as a staple beer."},"style":{"id":14,"categoryId":1,"category":{"id":1,"name":"British
-        Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"Strong Ale","description":"Light
-        amber to mid-range brown in color, strong ales are medium to full bodied with
-        a malty sweetness and may have low levels of roast malt character. Hop aroma
-        should be minimal and flavor can vary from none to medium in character intensity.
-        Fruity-ester flavors and aromas can contribute to the character of this ale.
-        Bitterness should be minimal but evident and balanced with malt and\/or caramel-like
-        sweetness. Alcohol types can be varied and complex. A rich, often sweet and
-        complex estery character may be evident. Very low levels of diacetyl are acceptable.
-        Chill haze is acceptable at low temperatures. (This style may often be split
-        into two categories, strong and very strong.)","ibuMin":"30","ibuMax":"65","abvMin":"7","abvMax":"11","srmMin":"8","srmMax":"21","ogMin":"1.06","fgMin":"1.014","fgMax":"1.04","createDate":"2012-03-21
+        with a good bit of hop attitude.  This beer ain''t for the wee lads.","abv":"8.5","ibu":"50","srmId":33,"availableId":1,"styleId":15,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/4F7QA9\/upload_7oaCFM-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/4F7QA9\/upload_7oaCFM-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/4F7QA9\/upload_7oaCFM-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:05","updateDate":"2012-08-29 19:25:42","srm":{"id":33,"name":"33","hex":"520907"},"available":{"id":"1","name":"Year
+        Round","description":"Available year round as a staple beer."},"style":{"id":15,"categoryId":1,"category":{"id":1,"name":"British
+        Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"Scotch Ale","description":"Scotch
+        ales are overwhelmingly malty and full-bodied. Perception of hop bitterness
+        is very low. Hop flavor and aroma are very low or nonexistent. Color ranges
+        from deep copper to brown. The clean alcohol flavor balances the rich and
+        dominant sweet maltiness in flavor and aroma. A caramel character is often
+        a part of the profile. Dark roasted malt flavors and aroma may be evident
+        at low levels. If present, fruity esters are generally at low aromatic and
+        flavor levels. Low diacetyl levels are acceptable. Chill haze is allowable
+        at cold temperatures. Though there is little evidence suggesting that traditionally
+        made strong Scotch ales exhibited peat smoke character, the current marketplace
+        offers many Scotch Ales with peat or smoke character present at low to medium
+        levels. Thus a peaty\/smoky character may be evident at low levels (ales with
+        medium or higher smoke character would be considered a smoke flavored beer
+        and considered in another category). Scotch Ales may be split into two subcategories:
+        Traditional (no smoke character) and Peated (low level of peat smoke character).","ibuMin":"25","ibuMax":"35","abvMin":"6.2","abvMax":"8","srmMin":"15","srmMax":"30","ogMin":"1.072","fgMin":"1.016","fgMax":"1.028","createDate":"2012-03-21
         20:06:45"}},{"id":"FYS1Qj","name":"Double Trouble","description":"An imperial
         IPA that was brewed to turn your world upside down. Hops will get you coming
         and going. Pungent aromatics up front pair with a malt-balanced backbone and
-        a smooth bitter finish.","abv":"9.4","ibu":"86","glasswareId":5,"availableId":4,"styleId":31,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/FYS1Qj\/upload_PdACrc-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/FYS1Qj\/upload_PdACrc-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/FYS1Qj\/upload_PdACrc-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:43:06","updateDate":"2012-03-22 13:05:06","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        a smooth bitter finish.","abv":"9.4","ibu":"86","glasswareId":5,"availableId":4,"styleId":31,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/FYS1Qj\/upload_PdACrc-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/FYS1Qj\/upload_PdACrc-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/FYS1Qj\/upload_PdACrc-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:06","updateDate":"2012-09-06 17:35:50","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
         02:41:33"},"available":{"id":"4","name":"Seasonal","description":"Available
         at the same time of year, every year."},"style":{"id":31,"categoryId":3,"category":{"id":3,"name":"North
         American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"Imperial
@@ -305,8 +308,8 @@ http_interactions:
         Cascade hops in a bottle. Our medium-bodied, Pale Ale has a distinctive floral
         hop aroma and refreshing citrus flavor. Founders Pale Ale has a slight malty
         sweetness with a balanced hop finish. A perfect beer to enjoy while mowing
-        the lawn, boating, grilling with friends or just taking it easy.","abv":"5.4","ibu":"35","availableId":1,"styleId":25,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/vA8S4Z\/upload_6ZxRVM-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/vA8S4Z\/upload_6ZxRVM-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/vA8S4Z\/upload_6ZxRVM-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:43:14","updateDate":"2012-05-01 11:24:57","available":{"id":"1","name":"Year
+        the lawn, boating, grilling with friends or just taking it easy.","abv":"5.4","ibu":"35","availableId":1,"styleId":25,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/vA8S4Z\/upload_6ZxRVM-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/vA8S4Z\/upload_6ZxRVM-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/vA8S4Z\/upload_6ZxRVM-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:14","updateDate":"2012-08-23 01:20:53","available":{"id":"1","name":"Year
         Round","description":"Available year round as a staple beer."},"style":{"id":25,"categoryId":3,"category":{"id":3,"name":"North
         American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"American-Style
         Pale Ale","description":"American pale ales range from deep golden to copper
@@ -323,8 +326,8 @@ http_interactions:
         20:06:45"}},{"id":"DeqSN0","name":"Harvest Ale","description":"This liquid
         dream pours a hazy golden orange straw color with a white, two-finger head.
         Your first sip of this beer rewards you with a super juicy hop presence bursting
-        with citrus, then finishes to introduce toasted malt undertones.","abv":"6.5","ibu":"70","availableId":2,"styleId":25,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/DeqSN0\/upload_vCNf5W-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/DeqSN0\/upload_vCNf5W-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/DeqSN0\/upload_vCNf5W-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:43:20","updateDate":"2012-03-22 13:05:08","available":{"id":"2","name":"Limited","description":"Limited
+        with citrus, then finishes to introduce toasted malt undertones.","abv":"6.5","ibu":"70","availableId":2,"styleId":25,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/DeqSN0\/upload_vCNf5W-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/DeqSN0\/upload_vCNf5W-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/DeqSN0\/upload_vCNf5W-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:20","updateDate":"2012-09-06 17:35:51","available":{"id":"2","name":"Limited","description":"Limited
         availability."},"style":{"id":25,"categoryId":3,"category":{"id":3,"name":"North
         American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"American-Style
         Pale Ale","description":"American pale ales range from deep golden to copper
@@ -343,8 +346,8 @@ http_interactions:
         well for years. Brewed with ten varieties of malted barley this stout is extremely
         smooth, complex and rich in body. We recommend serving at cellar temperature.
         Sit back and enjoy its richness and complexity, your about to drink the ultimate
-        winter warmer.","abv":"10.5","ibu":"90","glasswareId":5,"availableId":2,"styleId":43,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/IqPdv8\/upload_wMJMGO-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/IqPdv8\/upload_wMJMGO-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/IqPdv8\/upload_wMJMGO-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:43:28","updateDate":"2012-03-22 13:05:01","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        winter warmer.","abv":"10.5","ibu":"90","glasswareId":5,"availableId":2,"styleId":43,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/IqPdv8\/upload_wMJMGO-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/IqPdv8\/upload_wMJMGO-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/IqPdv8\/upload_wMJMGO-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:28","updateDate":"2012-09-06 17:35:29","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
         02:41:33"},"available":{"id":"2","name":"Limited","description":"Limited availability."},"style":{"id":43,"categoryId":3,"category":{"id":3,"name":"North
         American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"American-Style
         Imperial Stout","description":"Black in color, American-style imperial stouts
@@ -359,8 +362,8 @@ http_interactions:
         we\u2019ve got here is an imperial stout brewed with a massive amount of coffee
         and chocolates, then cave-aged in oak bourbon barrels for an entire year to
         make sure wonderful bourbon undertones come through in the finish. Makes your
-        taste buds squeal with delight.","abv":"11.2","ibu":"70","glasswareId":5,"availableId":2,"styleId":43,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/0kkUpk\/upload_U0LD97-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/0kkUpk\/upload_U0LD97-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/0kkUpk\/upload_U0LD97-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:43:33","updateDate":"2012-03-22 13:05:01","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        taste buds squeal with delight.","abv":"11.2","ibu":"70","glasswareId":5,"availableId":2,"styleId":43,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/0kkUpk\/upload_U0LD97-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/0kkUpk\/upload_U0LD97-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/0kkUpk\/upload_U0LD97-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:33","updateDate":"2012-09-06 17:35:47","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
         02:41:33"},"available":{"id":"2","name":"Limited","description":"Limited availability."},"style":{"id":43,"categoryId":3,"category":{"id":3,"name":"North
         American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"American-Style
         Imperial Stout","description":"Black in color, American-style imperial stouts
@@ -375,8 +378,8 @@ http_interactions:
         here is a rarity. A special, one-of-a-kind ale that is only made once a year.
         Sometimes that\u2019s all. Forever. No more. Nada. Limited-time only. You
         never know what you\u2019re gonna get. But you can be sure it\u2019ll be damn
-        tasty.","abv":"12","ibu":"112","availableId":3,"styleId":125,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/z1Oq48\/upload_1KMKmu-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/z1Oq48\/upload_1KMKmu-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/z1Oq48\/upload_1KMKmu-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:43:45","updateDate":"2012-03-22 13:05:08","available":{"id":"3","name":"Not
+        tasty.","abv":"12","ibu":"112","availableId":3,"styleId":125,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/z1Oq48\/upload_1KMKmu-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/z1Oq48\/upload_1KMKmu-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/z1Oq48\/upload_1KMKmu-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:45","updateDate":"2012-09-06 17:35:58","available":{"id":"3","name":"Not
         Available","description":"Beer is not available."},"style":{"id":125,"categoryId":11,"category":{"id":11,"name":"Hybrid\/mixed
         Beer","createDate":"2012-03-21 20:06:46"},"name":"Specialty Beer","description":"These
         beers are brewed using unusual fermentable sugars, grains and starches that
@@ -398,8 +401,8 @@ http_interactions:
         with a creamy tan head. The nose is sweet with strong chocolate and caramel
         malt presence. No absence of hops gives Founders'' robust porter the full
         flavor you deserve and expect. Cozy like velvet. It\u2019s a lover, not a
-        fighter.","abv":"6.5","ibu":"45","glasswareId":5,"srmId":41,"availableId":1,"styleId":19,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/Mhg1uh\/upload_sESOWG-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/Mhg1uh\/upload_sESOWG-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/Mhg1uh\/upload_sESOWG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:43:59","updateDate":"2012-03-22 13:05:08","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        fighter.","abv":"6.5","ibu":"45","glasswareId":5,"srmId":41,"availableId":1,"styleId":19,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/Mhg1uh\/upload_sESOWG-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/Mhg1uh\/upload_sESOWG-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/Mhg1uh\/upload_sESOWG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:59","updateDate":"2012-09-06 17:35:31","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
         02:41:33"},"srm":{"id":41,"name":"Over 40","hex":"000000"},"available":{"id":"1","name":"Year
         Round","description":"Available year round as a staple beer."},"style":{"id":19,"categoryId":1,"category":{"id":1,"name":"British
         Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"Robust Porter","description":"Robust
@@ -416,8 +419,8 @@ http_interactions:
         caramel malts imparting a sweet richness. Red''s Rye is impressively balanced
         with its hop bitterness and huge citrus bouquet achieved from the immense
         amarillo dry hop. The generous amount of malted rye used accentuates a spicy
-        crisp finish.","abv":"6.6","ibu":"70","availableId":1,"styleId":112,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/FOC78c\/upload_ss7TXm-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/FOC78c\/upload_ss7TXm-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/FOC78c\/upload_ss7TXm-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:44:04","updateDate":"2012-03-22 13:05:01","available":{"id":"1","name":"Year
+        crisp finish.","abv":"6.6","ibu":"70","availableId":1,"styleId":112,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/FOC78c\/upload_ss7TXm-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/FOC78c\/upload_ss7TXm-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/FOC78c\/upload_ss7TXm-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:44:04","updateDate":"2012-09-06 17:35:40","available":{"id":"1","name":"Year
         Round","description":"Available year round as a staple beer."},"style":{"id":112,"categoryId":11,"category":{"id":11,"name":"Hybrid\/mixed
         Beer","createDate":"2012-03-21 20:06:46"},"name":"Light American Wheat Ale
         or Lager with Yeast","description":"This beer can be made using either ale
@@ -438,7 +441,7 @@ http_interactions:
         down a path all our own. Using only fresh raspberries, r\u00fcb\u00e6us translates
         into intense flavors combined with a no hesitation malt bill. In fermentation
         we add fresh raspberries at five separate stages to achieve the ultimate balance
-        between tartness and sweetness.","abv":"7","availableId":2,"styleId":119,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/m7IsWs\/upload_Envmj4-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/m7IsWs\/upload_Envmj4-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/m7IsWs\/upload_Envmj4-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        between tartness and sweetness.","abv":"7","availableId":2,"styleId":119,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/m7IsWs\/upload_Envmj4-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/m7IsWs\/upload_Envmj4-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/m7IsWs\/upload_Envmj4-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:44:07","updateDate":"2012-03-22 13:05:01","available":{"id":"2","name":"Limited","description":"Limited
         availability."},"style":{"id":119,"categoryId":11,"category":{"id":11,"name":"Hybrid\/mixed
         Beer","createDate":"2012-03-21 20:06:46"},"name":"Fruit Beer","description":"Fruit
@@ -453,8 +456,8 @@ http_interactions:
         A statement by the brewer explaining what fruits are used is essential in
         order for fair assessment in competitions. If this beer is a classic style
         with fruit, the brewer should also specify the classic style.","ibuMin":"5","ibuMax":"70","abvMin":"2.5","abvMax":"12","srmMin":"5","srmMax":"50","ogMin":"1.03","fgMin":"1.006","fgMax":"1.03","createDate":"2012-03-21
-        20:06:46"}},{"id":"99Uj1n","name":"Curmudgeon\u2019s Better Half","abv":"11.9","glasswareId":5,"styleId":13,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/99Uj1n\/upload_vcInAc-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/99Uj1n\/upload_vcInAc-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/99Uj1n\/upload_vcInAc-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-02-21
-        11:27:00","updateDate":"2012-03-22 13:05:50","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        20:06:46"}},{"id":"99Uj1n","name":"Curmudgeon\u2019s Better Half","abv":"11.9","glasswareId":5,"styleId":13,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/99Uj1n\/upload_vcInAc-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/99Uj1n\/upload_vcInAc-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/99Uj1n\/upload_vcInAc-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-02-21
+        11:27:00","updateDate":"2012-09-08 17:12:04","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
         02:41:33"},"style":{"id":13,"categoryId":1,"category":{"id":1,"name":"British
         Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"Old Ale","description":"Dark
         amber to brown in color, old ales are medium to full bodied with a malty sweetness.
@@ -475,7 +478,17 @@ http_interactions:
         style may often be split into two categories, strong and very strong. Brettanomyces
         organisms and acidic characters reflect historical character. Competition
         organizers may choose to distinguish these types of old ale from modern versions.)","ibuMin":"30","ibuMax":"65","abvMin":"6","abvMax":"9","srmMin":"12","srmMax":"30","ogMin":"1.058","fgMin":"1.014","fgMax":"1.03","createDate":"2012-03-21
-        20:06:45"}}],"status":"success"}'
+        20:06:45"}},{"id":"PZNgSy","name":"Frangelic Mountain Brown","abv":"9","availableId":2,"styleId":37,"isOrganic":"N","status":"verified","statusDisplay":"Verified","createDate":"2012-08-23
+        19:10:50","updateDate":"2012-08-24 00:31:59","available":{"id":"2","name":"Limited","description":"Limited
+        availability."},"style":{"id":37,"categoryId":3,"category":{"id":3,"name":"North
+        American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"American-Style
+        Brown Ale","description":"American brown ales range from deep copper to brown
+        in color. Roasted malt caramel-like and chocolate-like characters should be
+        of medium intensity in both flavor and aroma. American brown ales have evident
+        low to medium hop flavor and aroma, medium to high hop bitterness, and a medium
+        body. Estery and fruity-ester characters should be subdued. Diacetyl should
+        not be perceived. Chill haze is allowable at cold temperatures.","ibuMin":"25","ibuMax":"45","abvMin":"4","abvMax":"6.4","srmMin":"15","srmMax":"26","ogMin":"1.04","fgMin":"1.01","fgMax":"1.018","createDate":"2012-03-21
+        20:06:46"}}],"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 02:02:26 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Sat, 19 Jan 2013 17:50:30 GMT
+recorded_with: VCR 2.4.0

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Viewing a brew page' do
+feature 'Viewing a brew page', :feature, :slow do
   let!(:beer) { FactoryGirl.create(:beer, user: bob) }
   let(:bob) { FactoryGirl.create(:user) }
 

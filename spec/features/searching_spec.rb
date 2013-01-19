@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Searching' do
+feature 'Searching', :feature, :slow do
 
   scenario 'for a brewery we know about' do
     brewery = a_known_brewery

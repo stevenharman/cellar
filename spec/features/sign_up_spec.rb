@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature 'Signing up' do
+feature 'Signing up', :feature, :slow do
 
   scenario 'Sign up with valid username, email, and password' do
     visit sign_up_path

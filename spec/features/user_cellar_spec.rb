@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "Viewing a user's cellar" do
+feature "Viewing a user's cellar", :feature, :slow do
   let(:bob) { FactoryGirl.create(:user) }
   let!(:christmas_ale) { FactoryGirl.create(:brew, name: 'Christmas Ale') }
   let!(:drunk_brew) { FactoryGirl.create(:brew, name: 'Drunk Brew') }
@@ -39,7 +39,7 @@ feature "Viewing a user's cellar" do
   end
 end
 
-feature 'Viewing your own cellar' do
+feature 'Viewing your own cellar', :feature, :slow do
   include Acceptance::CellarHelpers
   let(:bob) { sign_in_new_user(:bob) }
   let!(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
@@ -52,7 +52,7 @@ feature 'Viewing your own cellar' do
   end
 end
 
-feature 'Removing a beer from the Cellar' do
+feature 'Removing a beer from the Cellar', :feature, :slow do
   include Acceptance::CellarHelpers
   let(:bob) { sign_in_new_user(:bob) }
   let!(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
