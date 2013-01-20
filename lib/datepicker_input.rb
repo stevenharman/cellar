@@ -1,7 +1,7 @@
 class DatepickerInput < SimpleForm::Inputs::Base
   def input
-    date_inputs = @builder.text_field(attribute_name, input_html_options)
-    date_inputs << @builder.hidden_field(attribute_name, { id: nil, class: "#{attribute_name}-alt"})
+    # TODO: Use @builder#date_field when upgrading to Rails 4.
+    date_inputs = @builder.text_field(attribute_name, {type: 'date'}.merge(input_html_options))
 
     icon = template.content_tag(:i, '', class: 'icon-calendar')
     date_inputs <<  template.content_tag(:span, icon, class: 'add-on')
