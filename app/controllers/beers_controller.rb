@@ -10,7 +10,7 @@ class BeersController < ApplicationController
   end
 
   def create
-    order = BeerOrder.new(params[:count].to_i, params[:beer])
+    order = BeerOrder.new(params[:beer])
     receipt = current_cellar.stock_beer(order)
 
     if receipt.success?

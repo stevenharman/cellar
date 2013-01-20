@@ -1,12 +1,12 @@
 div
   h1= @beer.brew.name
 
-  = simple_form_for @beer do |f|
+  = simple_form_for(@beer, html: {class: 'form-horizontal'}) do |f|
     = f.hidden_field :brew_id
-    = f.input :batch, input_html: { class: 'span8', autofocus: true }
+    = f.input :batch, input_html: { autofocus: true }
     = f.input :bottled_on, as: :datepicker
     = f.input :best_by, as: :datepicker
-    label Count: #{number_field_tag :count, @beer_count, min: 1, class: 'span2'}
+    = f.input :count, as: :numeric, input_html: { value: @beer_count, min: 1, class: 'span1' }
 
     = f.submit 'Cellar it!', id: 'add_beer', class: 'btn btn-primary'
 

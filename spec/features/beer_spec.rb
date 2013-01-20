@@ -9,7 +9,7 @@ feature 'Beers', :feature, :slow do
   scenario 'Adding a beers to the cellar' do
     visit new_beer_path(brew: @brew.id)
     fill_in 'beer_batch', with: 'B432'
-    fill_in 'count', with: 4
+    fill_in 'beer_count', with: 4
     click_on 'add_beer'
 
     Beer.all.size.should == 4

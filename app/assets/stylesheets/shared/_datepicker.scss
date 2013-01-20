@@ -78,7 +78,10 @@ $datepickerGrey: #f7f7f7;
   text-align: center;
 
   select {
+    height: auto;
     width: auto;
+    padding: 0;
+    margin: 0.5em 0.25em;
   }
 }
 .ui-datepicker-prev, .ui-datepicker-next {
