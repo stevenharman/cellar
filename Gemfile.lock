@@ -1,6 +1,7 @@
 GIT
-  remote: https://github.com/tylerhunt/brewery_db.git
-  revision: 32fbf84a99f1c788e1fbc0a5fa7d0583698cff43
+  remote: https://github.com/brewdega/brewery_db.git
+  revision: b197481c917eb0c6b591d8c7ffa91dca41df98c9
+  branch: debugging_requests
   specs:
     brewery_db (0.0.1)
       faraday (~> 0.8.0)
