@@ -1,15 +1,36 @@
 require 'spec_helper'
 
 feature 'Signing up', :feature, :slow do
+  let(:bobs_email) { 'bob@brewdega.com' }
 
   scenario 'Sign up with valid username, email, and password' do
-    visit sign_up_path
-    fill_in 'user_username', with: 'bob_the_beer_dude'
-    fill_in 'user_email', with: 'bob@brewdega.com'
-    fill_in 'user_password', with: 'password'
-    click_on 'sign_up'
+    sign_up(username: 'bob_the_beer_dude', email: bobs_email, password: 'password')
 
-    page.should have_content 'bob_the_beer_dude, welcome to the Cellar'
-    User.find_by_username('bob_the_beer_dude').should be
+    pending('Devise is being a pain. Lets break up.')
+    expect_user_to_be_unconfirmed(bobs_email)
+
+    visit_confirmation_page(bobs_email)
+    expect_user_to_be_confirmed(bobs_email)
+  end
+
+  private
+
+  def sign_up(user)
+    visit sign_up_path
+    fill_in 'user_username', with: user[:username]
+    fill_in 'user_email', with: user[:email]
+    fill_in 'user_password', with: user[:password]
+    click_on 'sign_up'
+  end
+
+  def expect_user_to_be_unconfirmed(email)
+    expect(User.find_by_email(email)).not_to be_confirmed
+    expect(page).to have_content("We have sent a confirmation email to '#{email}' -- please follow the instructions in it.")
+  end
+
+  def expect_user_to_be_confirmed(email)
+    user = User.find_by_email(email)
+    expect(user).to be_confirmed
+    expect(page).to have_content("#{user.username}, welcome to the Cellar")
   end
 end
