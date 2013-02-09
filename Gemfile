@@ -41,6 +41,6 @@ group :development, :test do
   gem 'heroku'
   gem 'pry-rails'
   gem 'pry-remote'
-  gem 'rspec-rails', '~> 2.6'
+  gem 'rspec-rails', '~> 2.12'
 end
 
