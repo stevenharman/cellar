@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/brewdega/brewery_db.git
-  revision: b1ee6c157df9a171c162e4847b9d0c26dc30b04b
+  revision: afaa646aae9bed04cb6ecd072ac29b68f8028c48
   branch: debugging_requests
   specs:
     brewery_db (0.0.1)
