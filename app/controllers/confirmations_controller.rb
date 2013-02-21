@@ -1,4 +1,4 @@
-class ConfirmationsController < ::Devise::ConfirmationsController
+class ConfirmationsController < ApplicationController
   respond_to :html
 
   def new
