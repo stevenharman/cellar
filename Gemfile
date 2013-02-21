@@ -44,3 +44,4 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.12'
 end
 
+gem 'mailcatcher', group: :development

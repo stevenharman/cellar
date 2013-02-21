@@ -18,6 +18,9 @@ BrewdegaCellar::Application.configure do
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { :host => "localhost:#{ENV.fetch('PORT') { 3000 }}" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { address: 'localhost', port: 1025 }
 
   # Raise exception on mass assignment protection for Active Record models
   config.active_record.mass_assignment_sanitizer = :strict
@@ -40,6 +43,4 @@ BrewdegaCellar::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-
-  config.action_mailer.default_url_options = { :host => "localhost:#{ENV.fetch('PORT') { 3000 }}" }
 end

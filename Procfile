@@ -4,3 +4,4 @@ worker: bundle exec sidekiq -c $SIDEKIQ_CONCURRENCY
 
 # === Required for local dev boxen
 redis: redis-server config/redis.conf
+mailcatcher: bundle exec mailcatcher -f
