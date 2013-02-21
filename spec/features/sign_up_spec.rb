@@ -6,7 +6,6 @@ feature 'Signing up', :feature, :slow do
   scenario 'Sign up with valid username, email, and password' do
     sign_up(username: 'bob_the_beer_dude', email: bobs_email, password: 'password')
 
-    pending('Devise is being a pain. Lets break up.')
     expect_user_to_be_unconfirmed(bobs_email)
 
     visit_confirmation_page(bobs_email)
@@ -25,12 +24,17 @@ feature 'Signing up', :feature, :slow do
 
   def expect_user_to_be_unconfirmed(email)
     expect(User.find_by_email(email)).not_to be_confirmed
-    expect(page).to have_content("We have sent a confirmation email to '#{email}' -- please follow the instructions in it.")
+    expect(page).to have_content(I18n.t('cellar.registrations.signed_up_but_unconfirmed', email: email))
   end
 
   def expect_user_to_be_confirmed(email)
     user = User.find_by_email(email)
     expect(user).to be_confirmed
-    expect(page).to have_content("#{user.username}, welcome to the Cellar")
+    expect(page).to have_content(I18n.t('cellar.confirmations.confirmed', username: user.username))
+  end
+
+  def visit_confirmation_page(email)
+    user = User.find_by_email(email)
+    visit confirmation_path(confirmation_token: user.confirmation_token)
   end
 end

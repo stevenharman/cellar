@@ -8,3 +8,13 @@ en:
   time:
     formats:
       month_year: "%b %Y"
+
+  cellar:
+    registrations:
+      signed_up_but_unconfirmed: >
+        We have sent a confirmation email to '%{email}' -- please follow the
+        instructions in it.
+    confirmations:
+      confirmed: >
+        Hello %{username}, your account was confirmed and you are now signed in.
+

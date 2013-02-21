@@ -7,8 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      sign_in(@user)
-      redirect_to root_path, notice: "#{@user.username}, welcome to the Cellar!"
+      redirect_to root_path, notice: t('cellar.registrations.signed_up_but_unconfirmed', email: @user.email)
     else
       render :new
     end
