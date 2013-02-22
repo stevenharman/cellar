@@ -43,4 +43,8 @@ BrewdegaCellar::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Silence annoying asset logs
+  require 'peaceful_assets_logger'
+  config.middleware.insert_before Rails::Rack::Logger, PeacefulAssetsLogger
 end
