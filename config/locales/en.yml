@@ -17,4 +17,7 @@ en:
     confirmations:
       confirmed: >
         Hello %{username}, your account was confirmed and you are now signed in.
-
+      need_instructions: >
+        Didn't receive confirmation instructions?
+      resend_button: "Resend confirmation instructions"
+      instructions_sent: "You will receive an email with instructions about how to confirm your account in a few minutes."

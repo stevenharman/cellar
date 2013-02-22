@@ -1,0 +1,14 @@
+h1 Sign up for the Brewdega Cellar.
+
+= simple_form_for @user do |f|
+  - if @user.errors.any?
+    ul.error_messages
+      - for message in @user.errors.full_messages
+        li= message
+
+  = f.input :username, input_html: { autofocus: true }
+  = f.input :email
+  = f.input :password, required: true
+  = f.submit id: 'sign_up', class: 'btn btn-primary'
+
+p Already have an account? #{link_to 'Sign in', new_user_session_path} now!

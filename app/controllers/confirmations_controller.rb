@@ -9,6 +9,7 @@ class ConfirmationsController < ApplicationController
     @user = User.send_confirmation_instructions(user_params)
 
     if @user.errors.empty?
+      flash[:notice] = t('cellar.confirmations.instructions_sent')
       respond_with({}, location: new_user_session_path)
     else
       flash[:alert] = @user.errors.full_messages.join(', ')

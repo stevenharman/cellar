@@ -12,6 +12,15 @@ feature 'Signing up', :feature, :slow do
     expect_user_to_be_confirmed(bobs_email)
   end
 
+  scenario 'Resending confirmation instructions' do
+    sign_up(username: 'bob_the_beer_dude', email: bobs_email, password: 'password')
+    sign_in_with(username: 'bob_the_beer_dude', password: 'password')
+
+    expect_confirmation_required_message
+    request_resend_confirmation_instructions('bob_the_beer_dude')
+    expect_confirmation_instructions_sent_message
+  end
+
   private
 
   def sign_up(user)
@@ -31,6 +40,20 @@ feature 'Signing up', :feature, :slow do
     user = User.find_by_email(email)
     expect(user).to be_confirmed
     expect(page).to have_content(I18n.t('cellar.confirmations.confirmed', username: user.username))
+  end
+
+  def expect_confirmation_required_message
+    expect(page).to have_text(I18n.t('devise.failure.unconfirmed'))
+  end
+
+  def expect_confirmation_instructions_sent_message
+    expect(page).to have_text(I18n.t('cellar.confirmations.instructions_sent'))
+  end
+
+  def request_resend_confirmation_instructions(username)
+    page.find('.resend-confirmation').click
+    fill_in 'user_username', with: username
+    page.find('.resend-confirmation').click
   end
 
   def visit_confirmation_page(email)

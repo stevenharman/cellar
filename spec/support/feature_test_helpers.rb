@@ -7,6 +7,12 @@ module FeatureTestHelpers
     click_button 'Sign in'
   end
 
+  def sign_in_with(credentials)
+    user = User.new(credentials)
+    sign_in(user)
+    user
+  end
+
   def sign_in_new_user(user_profile=:user)
     user = FactoryGirl.create(user_profile, password: 'password' )
     user.password = 'password'
