@@ -1,11 +1,10 @@
 = simple_form_for @user, url: new_user_session_path do |f|
   = f.input :username, required: false, input_html: { autofocus: true }
   = f.input :password
-  = f.input :remember_me, as: :boolean, label: false, inline_label: 'Yes, remember me'
+  = f.input :remember_me, as: :boolean, label: false, inline_label: t('.remember_me')
   p
-    = link_to 'Forgot your password?', new_settings_password_path
-    - unless @user.confirmed?
-      '  or
-      = link_to(t('cellar.confirmations.need_instructions'), new_confirmation_path, class: 'resend-confirmation')
-  = f.button :submit, 'Sign in'
-p Don't have an account? #{link_to 'Sign up', sign_up_path} for one now!
+    =' link_to(t('.forgot_password'), new_settings_password_path)
+    =' t('.link_separator')
+    = link_to(t('.confirmation_instructions'), new_confirmation_path, class: 'resend-confirmation')
+  = f.button :submit, t('cellar.sign_in')
+p= t('.sign_up_html', link: link_to(t('cellar.sign_up'), sign_up_path))

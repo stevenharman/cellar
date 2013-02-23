@@ -2,7 +2,7 @@
   .navbar-inner
     .container
       = link_to(root_path, class: 'brand') do
-        span Brewdega
+        span= t('cellar.brewdega')
 
       ul.nav
         - if user_signed_in?
@@ -12,10 +12,10 @@
               = current_user.username
               b.caret
             ul.dropdown-menu
-              li= link_to('My cellar', cellar_path(current_user))
-              li= link_to('Sign out', destroy_user_session_path, method: :delete)
+              li= link_to(t('cellar.my_cellar'), cellar_path(current_user))
+              li= link_to(t('cellar.sign_out'), destroy_user_session_path, method: :delete)
         - else
           li= link_to(new_user_session_path) do
             i.icon-signin
-            |  Sign in
-          li= link_to('Sign up', sign_up_path)
+            |  #{t('cellar.sign_in')}
+          li= link_to(t('cellar.sign_up'), sign_up_path)

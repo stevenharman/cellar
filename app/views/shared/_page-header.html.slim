@@ -1,24 +1,23 @@
 header.page-header
   .row-fluid
-    .logo.span6= link_to(root_path, title: 'Cellar', class: 'home') do
-      = image_tag('cellar-full-logo.png', alt: 'Brewdega Cellar: Stock up. Drink up.')
+    .logo.span6= link_to(root_path, title: t('cellar.full_tagline'), class: 'home') do
+      = image_tag('cellar-full-logo.png', alt: t('cellar.full_tagline'))
     ul.secondary-nav.span6.hidden-phone
       - if user_signed_in?
-        li= link_to('My Cellar', cellar_path(current_user))
+        li= link_to(t('cellar.my_cellar'), cellar_path(current_user))
       li
-        = link_to('http://blog.brewdega.com/rss', title: 'Subscribe to our RSS feed') do
+        = link_to('http://blog.brewdega.com/rss', title: t('.rss_subscribe')) do
           i.icon-rss
-        = link_to('Blog', 'http://blog.brewdega.com', \
-                    title: 'Get updates, news, and banter at the Brewdega blog.')
-      li= link_to('Contact us', '#', title: 'Get in touch with the Brewdega crew.')
+        = link_to(t('.blog.text'), 'http://blog.brewdega.com', title: t('.blog.alt_text'))
+      li= link_to(t('.contact_us.text'), '#', title: t('.contact_us.alt_text'))
   .row-fluid
     = form_tag(search_path, method: :get, class: 'search form-search span9') do
-      = search_field_tag :q, search_query.q, placeholder: 'Find a beer or brewery...', class: 'query'
-      = submit_tag 'Search', name: nil, class: 'search-button btn btn-primary'
+      = search_field_tag :q, search_query.q, placeholder: t('.search.placeholder'), class: 'query'
+      = submit_tag t('.search.button'), name: nil, class: 'search-button btn btn-primary'
 
     .browse.dropdown.span3
       = link_to '/browse', class: 'dropdown-toggle', data: { toggle: 'dropdown', target: '.browse' } do
-        ' Browse
+        ' #{t('.browse')}
         span.caret
       ul.dropdown-menu
         li= link_to 'Breweries', breweries_path

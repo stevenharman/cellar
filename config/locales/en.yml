@@ -9,15 +9,43 @@ en:
     formats:
       month_year: "%b %Y"
 
+  sessions:
+    new:
+      confirmation_instructions: "Didn't receive confirmation instructions?"
+      forgot_password: "Forgot your password?"
+      link_separator: "or"
+      remember_me: "Yes, remember me"
+      sign_up_html: "Don't have an account? %{link} for one now!"
+  shared:
+    page-header:
+      browse: "Browse"
+      blog:
+        text: "Blog"
+        alt_text: "Get updates, news, and banter at the Brewdega blog."
+      contact_us:
+        text: "Contact us"
+        alt_text: "Get in touch with the Brewdega crew."
+      rss_subscribe: "Subscribe to our RSS feed"
+      search:
+        button: "Search"
+        placeholder: "Find a beer or brewery..."
   cellar:
+    brewdega: "Brewdega"
+    full_tagline: "Cellar at Brewdega: Stock up. Drink up."
+    my_cellar: "My cellar"
+    sign_in: "Sign in"
+    sign_out: "Sign out"
+    sign_up: "Sign up"
+    tagline: "Stock up. Drink up."
+    confirmations:
+      confirmed: >
+        Hello %{username}, your account was confirmed and you are now signed in.
+      resend_button: "Resend confirmation instructions"
+      instructions_sent: >
+        You will receive an email with instructions about how to confirm your
+        account in a few minutes.
     registrations:
       signed_up_but_unconfirmed: >
         We have sent a confirmation email to '%{email}' -- please follow the
         instructions in it.
-    confirmations:
-      confirmed: >
-        Hello %{username}, your account was confirmed and you are now signed in.
-      need_instructions: >
-        Didn't receive confirmation instructions?
-      resend_button: "Resend confirmation instructions"
-      instructions_sent: "You will receive an email with instructions about how to confirm your account in a few minutes."
+
