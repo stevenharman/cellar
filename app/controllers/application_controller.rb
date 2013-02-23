@@ -22,6 +22,10 @@ class ApplicationController < ActionController::Base
     redirect_to new_user_session_path, :alert => 'Please sign in first.'
   end
 
+  def redirect_if_already_signed_in
+    redirect_to root_path if signed_in?
+  end
+
   private
 
   def render_404(exception=nil)

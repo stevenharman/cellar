@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-  before_filter :allow_params_authentication!, :only => :create
+  before_filter :redirect_if_already_signed_in, only: :new
+  before_filter :allow_params_authentication!, only: :create
 
   def new
     @user = User.new(params[:user])
@@ -15,4 +16,5 @@ class SessionsController < ApplicationController
     sign_out
     redirect_to root_path, notice: 'You have been signed out.'
   end
+
 end

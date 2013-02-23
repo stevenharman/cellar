@@ -1,4 +1,5 @@
 class ConfirmationsController < ApplicationController
+  before_filter :redirect_if_already_signed_in, only: :new
   respond_to :html
 
   def new
