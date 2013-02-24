@@ -1,9 +1,7 @@
+- content_for :title do
+  = @cellar.name
+
 article.cellar
-  .actions
-    button.btn.btn-small.btn-primary Import
-    button.btn.btn-small.btn-primary Add a Beer
-    button.btn.btn-small.btn-primary Share
-  h1 My Cellar
   .dashboard.row-fluid
     .keeper-gravatar.span2
       = @cellar.keeper_gravatar(128)

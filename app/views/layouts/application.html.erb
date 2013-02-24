@@ -22,7 +22,7 @@
   <script type='text/javascript'>try{Typekit.load();}catch(e){}</script>
 
   <title>
-    <%= content_for?(:title) ?  yield(:title) : 'Brewdega Cellar' %>
+    <%= content_for?(:title) ?  yield(:title) : t('cellar.full_tagline') %>
   </title>
 
   <%= stylesheet_link_tag 'application' %>

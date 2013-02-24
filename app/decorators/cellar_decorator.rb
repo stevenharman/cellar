@@ -8,6 +8,10 @@ class CellarDecorator < ApplicationDecorator
     keeper.gravatar(*args)
   end
 
+  def name
+    h.t('cellar.name', keeper: keeper_username)
+  end
+
   def keeper_username
     keeper.username
   end
