@@ -1,11 +1,5 @@
 .cellars.cellars-show {
-  .cellar {
-    h1 {
-      display: inline-block;
-    }
-    .actions { float: right;
-    }
-  }
+  .cellar { }
 
   .dashboard {
     background-color: #fec846;
@@ -29,6 +23,9 @@
         text-transform: none;
       }
       .demographics {
+        $text: $brown;
+        $lighterText: $mutedBrown;
+
         margin-top: 0px;
         margin: 0;
         padding: 0;
@@ -38,15 +35,19 @@
         @include inline-definition-list;
 
         dt {
+          color: $lighterText;
+          margin-right: 0.25em;
           text-align: left;
-          color: $brown;
         }
 
         dd {
-          color: $brown;
+          color: $text;
         }
 
-        .website { display: none; }
+        .joined {
+          color: $lighterText;
+          time { color: $text; }
+        }
       }
     }
     .stats {
@@ -85,11 +86,6 @@
           font-size: 2em;
         }
       }
-      .line {
-        border-right: 1px solid #666;
-        margin-right: 6px;
-        padding-right: 8px;
-      }
       .bio dd {
         text-align: justify;
         text-transform: none;
@@ -103,7 +99,6 @@
         dt { text-align: left; }
 
         .demographics {
-          .website { display: block; }
 
           @include centered-definition-list();
         }

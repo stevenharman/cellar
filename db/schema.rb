@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121210002513) do
+ActiveRecord::Schema.define(:version => 20130224180121) do
 
   create_table "beers", :force => true do |t|
     t.string   "batch"
@@ -118,6 +118,9 @@ ActiveRecord::Schema.define(:version => 20121210002513) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.text     "bio"
+    t.string   "website"
+    t.string   "location"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

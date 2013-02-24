@@ -8,12 +8,18 @@ article.cellar
     .keeper.span10
       h2.username= @cellar.keeper_username
       dl.demographics
-        dt.website Website:
-        dd= @cellar.website
-        dt Location:
-        dd= @cellar.location
-        dt Joined:
-        dd= @cellar.established
+        - if @cellar.website
+          dt
+            i.icon-external-link
+          dd= @cellar.website
+        - if @cellar.location
+          dt
+            i.icon-map-marker
+          dd= @cellar.location
+        dt
+          i.icon-time
+        dd.joined
+          = t('cellar.users.joined_html', date: ldate(@cellar.established, format: :month_day_year))
       .stats.row-fluid
         dl.beers.span3
           dt Beers
@@ -28,9 +34,10 @@ article.cellar
           dd
             span= @cellar.total_breweries
             | Total
-        dl.bio.span6
-          dt Info
-          dd Dude talking about the best burgers and beer to be found out there. Likes to design and run a lot. Marathoner.
+        - if @cellar.keeper_bio
+          dl.bio.span6
+            dt Info
+            dd= simple_format(@cellar.keeper_bio)
   fieldset.beers-cellared.row-fluid
     legend Cellared Beers
     table.table.table-striped.table-condensed

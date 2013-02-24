@@ -7,6 +7,7 @@ en:
       month_year: "%b %Y"
   time:
     formats:
+      month_day_year: "%b %d, %Y"
       month_year: "%b %Y"
 
   sessions:
@@ -49,4 +50,6 @@ en:
       signed_up_but_unconfirmed: >
         We have sent a confirmation email to '%{email}' -- please follow the
         instructions in it.
+    users:
+      joined_html: "Joined on %{date}"
 

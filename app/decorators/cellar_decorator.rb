@@ -16,12 +16,16 @@ class CellarDecorator < ApplicationDecorator
     keeper.username
   end
 
+  def keeper_bio
+    keeper.bio
+  end
+
   def established
-    "#{h.distance_of_time_in_words_to_now(keeper.joined)} ago"
+    keeper.joined
   end
 
   def location
-    'Fix this, USA'
+    keeper.location unless keeper.location.blank?
   end
 
   def total_beers
@@ -43,6 +47,6 @@ class CellarDecorator < ApplicationDecorator
   end
 
   def website
-    h.link_to('http://example.com', 'http://example.com')
+    h.link_to(keeper.website, keeper.website) unless keeper.website.blank?
   end
 end
