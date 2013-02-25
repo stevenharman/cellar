@@ -3,7 +3,7 @@ require 'draper'
 require 'decorators/cellared_brew_decorator'
 
 describe CellaredBrewDecorator do
-  subject(:cellared_brew) { described_class.new(brew: brew, cellar: cellar) }
+  subject(:cellared_brew) { described_class.new(brew, context: {cellar: cellar}) }
   let(:brew) { stub }
   let(:cellar) { stub }
 

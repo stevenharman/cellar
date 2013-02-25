@@ -3,9 +3,9 @@ require_relative 'brew_decorator'
 class CellaredBrewDecorator < BrewDecorator
   decorates :brew
 
-  def initialize(args)
-    @cellar = args.delete(:cellar)
-    super(args.delete(:brew), args)
+  def initialize(*args)
+    super
+    @cellar = context.fetch(:cellar)
   end
 
   def beers
@@ -14,6 +14,11 @@ class CellaredBrewDecorator < BrewDecorator
 
   def beer_count
     beers.size
+  end
+
+  def total_cellared
+    # use a counter cache, #total_cellared
+    model.beers.cellared.count
   end
 
   private

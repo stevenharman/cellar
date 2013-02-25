@@ -10,15 +10,12 @@ article.brew*{'data-id' => brew.id}
         span.separator
           '  |
     dl.inventory
-      - if current_user
-        dt= t('.inventory.this_cellar')
-        dd
-          // FUCK. We need to know how to get this.
-          = brew.beers.merge(Beer.cellared_by(current_user)).merge(Beer.cellared).count
+      dt= t('.inventory.this_cellar')
+      dd
+        = brew.beer_count
       dt= t('.inventory.all_cellars')
       dd
-        // use a counter cache, #total_cellared
-        = brew.beers.merge(Beer.cellared).count
+        = brew.total_cellared
     dl.details
       - if brew.abv.present?
         dt ABV

@@ -41,7 +41,7 @@ class CellarDecorator < ApplicationDecorator
   end
 
   def stocked_brews
-    cellar.stocked_brews.includes(:breweries).decorate
+    cellar.stocked_brews.includes(:breweries).map { |b| CellaredBrewDecorator.new(b, context: {cellar: cellar}) }
   end
 
   def website
