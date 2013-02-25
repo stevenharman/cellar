@@ -1,0 +1,104 @@
+ul.cards {
+  list-style: none;
+  margin-left: 0;
+
+  @extend .thumbnails;
+
+  .card {
+    @extend .thumbnail;
+    background-color: $tableBackground;
+    border-color: $tableBorder;
+
+
+    //height: 9em;
+  }
+}
+
+article.brew {
+  $labelWidth: 10em;
+  min-height: $labelWidth;
+  position: relative;
+
+  figure {
+    float: left;
+    margin: 0;
+    vertical-align: top;
+
+    img {
+      @include border-radius(4px);
+      width: $labelWidth;
+    }
+  }
+
+  .content {
+    color: $mutedBrown;
+    margin-left: $labelWidth + 0.5em;
+  }
+
+  .name {
+    margin: 0;
+    text-transform: none;
+
+    a {
+      display: block;
+      @include text-overflow;
+    }
+  }
+
+  .breweries {
+    color: $lightBrown;
+    margin-left: 0.5em;
+    margin-top: -0.5em;
+    @include text-overflow;
+
+    .separator:last-of-type { display: none; }
+  }
+
+  .inventory, .details {
+    @include inline-definition-list;
+
+    dt {
+      color: $lightBrown;
+      text-transform: lowercase;
+    }
+    dd {
+      margin-right: 0.5em;
+
+      &:last-of-type { margin-right: 0; }
+    }
+  }
+
+  .inventory {
+    margin: 0.5em 0 0.25em;
+    dt {
+      vertical-align: top;
+    }
+    dd {
+      font-size: 2em;
+      margin-right: 1em;
+      vertical-align: text-top;
+    }
+  }
+
+  .details {
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+
+    dt { margin-right: 0.25em; }
+  }
+
+  /* Portrait tablet to landscape and desktop */
+  @media (min-width: 768px) and (max-width: 979px) {
+    .breweries {
+      margin-left: 0;
+
+      .by { display: none; }
+    }
+
+    .details {
+      dt.style,
+      dt.style + dd { display: none; }
+    }
+  }
+}

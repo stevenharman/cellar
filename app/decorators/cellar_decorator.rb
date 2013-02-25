@@ -41,7 +41,7 @@ class CellarDecorator < ApplicationDecorator
   end
 
   def stocked_brews
-    cellar.stocked_brews.includes(:breweries)
+    cellar.stocked_brews.includes(:breweries).decorate
   end
 
   def website

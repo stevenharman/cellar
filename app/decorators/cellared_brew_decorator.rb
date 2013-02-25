@@ -1,9 +1,7 @@
-require_relative 'application_decorator'
-require_relative '../models/brew'
+require_relative 'brew_decorator'
 
-class CellaredBrewDecorator < ApplicationDecorator
+class CellaredBrewDecorator < BrewDecorator
   decorates :brew
-  delegate_all
 
   def initialize(args)
     @cellar = args.delete(:cellar)
@@ -16,10 +14,6 @@ class CellaredBrewDecorator < ApplicationDecorator
 
   def beer_count
     beers.size
-  end
-
-  def style_name
-    style && style.name
   end
 
   private

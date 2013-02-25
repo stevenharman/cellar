@@ -10,6 +10,13 @@ en:
       month_day_year: "%b %d, %Y"
       month_year: "%b %Y"
 
+  brews:
+    card:
+      breweries:
+        by: "By"
+      inventory:
+        all_cellars: All cellars
+        this_cellar: This cellar
   sessions:
     new:
       confirmation_instructions: "Didn't receive confirmation instructions?"

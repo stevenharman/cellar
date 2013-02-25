@@ -40,20 +40,8 @@ article.cellar
             dd= simple_format(@cellar.keeper_bio)
   fieldset.beers-cellared.row-fluid
     legend Cellared Beers
-    table.table.table-striped.table-condensed
-      thead
-        tr
-          th
-          th Beer
-          th Brewery
-          th Quantity
-          th
-      tbody
-        - for brew in @cellar.stocked_brews
-          tr.brew*{'data-id' => brew.id}
-            td.icon= image_tag(brew.icon || 'http://placehold.it/64x64', alt: brew.name)
-            td= link_to brew.name, brew
-            td= render partial: brew.breweries, spacer_template: 'breweries/brewery_spacer'
-            td= brew.beers.size
-            td= link_to 'Details', brew, class: 'btn btn-primary'
+    ul.cards
+      - for brew in @cellar.stocked_brews
+        li.card.span6
+          == render 'brews/card', brew: brew
 
