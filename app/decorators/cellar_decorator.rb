@@ -33,13 +33,11 @@ class CellarDecorator < ApplicationDecorator
   end
 
   def total_breweries
-    # TODO: drop the #to_a when this is fixed https://github.com/rails/rails/issues/1003
-    keeper.breweries.merge(Beer.cellared).to_a.count
+    keeper.breweries.merge(Beer.cellared).count
   end
 
   def unique_brews
-    # TODO: drop the #to_a when this is fixed https://github.com/rails/rails/issues/1003
-    stocked_brews.to_a.size
+    cellar.stocked_brews.size
   end
 
   def stocked_brews
