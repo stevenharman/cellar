@@ -1,12 +1,12 @@
 - content_for :title do
-  = @cellar.name
+  = @cellar.full_name
 
 article.cellar
   .dashboard.row-fluid
     .keeper-gravatar.span2
       = @cellar.keeper_gravatar(128)
     .keeper.span10
-      h2.username= @cellar.keeper_username
+      h2.username= @cellar.name
       dl.demographics
         - if @cellar.website
           dt
