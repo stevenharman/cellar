@@ -1,6 +1,6 @@
 class CellarDecorator < ApplicationDecorator
   delegate_all
-  decorates_association :keeper
+  decorates_association :keeper, with: UserDecorator
 
   alias_method :cellar, :source
 

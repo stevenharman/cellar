@@ -9,13 +9,11 @@ class ApplicationController < ActionController::Base
   protected
 
   def current_cellar
-    @decorated_current_cellar ||=
-      CellarDecorator.new(Cellar.new(current_user))
+    @decorated_current_cellar ||= decorated_cellar(current_user)
   end
 
-  def load_cellar
-    keeper = User.for_username!(params[:cellar_id] || params[:username])
-    Cellar.new(keeper)
+  def requested_cellar
+    @requested_cellar ||= load_cellar(params[:cellar_id] || params[:username])
   end
 
   def not_authenticated
@@ -30,6 +28,20 @@ class ApplicationController < ActionController::Base
 
   def render_404(exception=nil)
     render template: 'errors/404', status: 404
+  end
+
+  def decorated_cellar(keeper)
+    keeper = keeper || AnonymousUser.new
+    CellarDecorator.new(Cellar.new(keeper))
+  end
+
+  def load_cellar(cellar_name)
+    if (current_cellar.name == cellar_name)
+      current_cellar
+    else
+      keeper = User.for_username!(cellar_name)
+      decorated_cellar(keeper)
+    end
   end
 
 end

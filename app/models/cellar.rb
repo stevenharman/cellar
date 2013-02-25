@@ -8,6 +8,10 @@ class Cellar
     @brew_master = brew_master
   end
 
+  def name
+    keeper.username
+  end
+
   def stock_beer(order)
     new_beers = @brew_master.process(order)
     cellared_beers = add_to_cellar(new_beers)
