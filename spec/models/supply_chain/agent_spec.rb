@@ -12,7 +12,7 @@ describe SupplyChain::Agent, :vcr do
     expect(Category.count).to eq(12)
   end
 
-  it '#import_brewery loads the brewery' do
+  it '#import_brewery loads the brewery', :slow do
     subject.import_brewery('Idm5Y5')
     expect(Brewery.count).to eq(1)
     expect(Brewery.first.brewery_db_id).to eq('Idm5Y5')
