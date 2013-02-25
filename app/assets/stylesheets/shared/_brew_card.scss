@@ -26,6 +26,9 @@ article.brew {
 
     img {
       @include border-radius(4px);
+      background-color: $white;
+      border-style: groove;
+      border-width: 1px;
       width: $labelWidth;
     }
   }
