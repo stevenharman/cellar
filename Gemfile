@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '1.9.3'
-gem 'rails', github: 'rails/rails', branch: '3-2-stable'
+gem 'rails', '3.2.13.rc1'
 gem 'jquery-rails'
 gem 'thin'
 gem 'brewery_db', github: 'tylerhunt/brewery_db'
