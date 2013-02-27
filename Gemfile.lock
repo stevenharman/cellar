@@ -145,7 +145,7 @@ GEM
     mocha (0.10.5)
       metaclass (~> 0.0.1)
     multi_json (1.6.1)
-    multipart-post (1.1.5)
+    multipart-post (1.2.0)
     netrc (0.7.7)
     nokogiri (1.5.6)
     orm_adapter (0.4.0)
@@ -231,7 +231,7 @@ GEM
       multi_json (~> 1)
       redis (~> 3)
       redis-namespace
-    simple_form (2.0.4)
+    simple_form (2.1.0)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
     simplecov (0.7.1)
