@@ -20,9 +20,6 @@ class Brew < ActiveRecord::Base
   include PgSearch
   multisearchable against: [:searchable_name]
 
-  scope :with_beers, includes(:beers).joins(:beers)
-  scope :with_breweries, includes(:breweries)
-
   def searchable_name
     brewery_names = breweries.map { |b| b.name }.join(', ')
     "#{brewery_names} #{name}"
