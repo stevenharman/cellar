@@ -15,6 +15,22 @@ if defined?(Bundler)
 end
 
 module BrewdegaCellar
+  def self.override_db_connection_pool_size!(size = 35)
+    database_url = ENV['DATABASE_URL']
+
+    if database_url && (database_url !~ /pool/)
+      pool_size = ENV.fetch('DATABASE_POOL_SIZE', size)
+      db = URI.parse(database_url)
+      if db.query
+        db.query << "&pool=#{pool_size}"
+      else
+        db.query = "pool=#{pool_size}"
+      end
+      ENV['DATABASE_URL'] = db.to_s
+      ActiveRecord::Base.establish_connection
+    end
+  end
+
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
