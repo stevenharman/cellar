@@ -16,24 +16,8 @@ class CellarDecorator < ApplicationDecorator
     h.t('cellar.full_name', name: cellar.name)
   end
 
-  def established
-    keeper.joined
-  end
-
   def location
     keeper.location unless keeper.location.blank?
-  end
-
-  def total_beers
-    keeper.stocked_beers.count
-  end
-
-  def total_breweries
-    keeper.breweries.merge(Beer.cellared).count
-  end
-
-  def unique_brews
-    cellar.stocked_brews.size
   end
 
   def stocked_brews

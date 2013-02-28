@@ -12,27 +12,43 @@ class Cellar
     keeper.username
   end
 
-  def stock_beer(order)
-    new_beers = @brew_master.process(order)
-    cellared_beers = add_to_cellar(new_beers)
-    ensure_successfully_cellared(cellared_beers)
-    BeerOrderReceipt.new(cellared_beers)
+  def established
+    keeper.joined
+  end
+
+  def total_breweries
+    keeper.breweries.merge(Beer.cellared).count
   end
 
   def stocked_brews
     keeper.stocked_brews
   end
 
-  def find_beer(id)
-    keeper.find_beer(id)
+  def unique_brews
+    stocked_brews.size
+  end
+
+  def total_beers
+    keeper.stocked_beers.count
   end
 
   def beers_for(brew)
     keeper.stocked_beers(brew)
   end
 
+  def find_beer(id)
+    keeper.find_beer(id)
+  end
+
   def kept_by?(other_user)
     keeper == other_user
+  end
+
+  def stock_beer(order)
+    new_beers = @brew_master.process(order)
+    cellared_beers = add_to_cellar(new_beers)
+    ensure_successfully_cellared(cellared_beers)
+    BeerOrderReceipt.new(cellared_beers)
   end
 
   private
