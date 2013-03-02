@@ -22,7 +22,7 @@ BrewdegaCellar::Application.routes.draw do
 
   resources :breweries, only: [:index, :show]
   resources :brews, only: [:index, :show]
-  resources :beers, only: [:new, :create]
+  resources :beer_orders, only: [:new, :create]
 
   resource :search, only: [:show]
 

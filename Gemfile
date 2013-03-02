@@ -14,6 +14,7 @@ gem 'simple_form'
 gem 'slim'
 gem 'sidekiq'
 gem 'sinatra', require: false # for sidekiq monitoring
+gem 'virtus'
 
 group :assets do
   gem 'sass-rails', '~> 3.1'

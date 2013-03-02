@@ -1,35 +1,19 @@
-require 'brew_master'
+require 'models/brew_master'
 
 describe BrewMaster do
 
   describe 'Processing a beer order' do
-    let(:order) { double('BeerOrder') }
-    let(:brew) { double('Brew') }
+    let(:order) { BeerOrder.new(brew: brew, count: 3) }
+    let(:brew) { double('Brew', name: 'Boont Amber Ale', id: 99) }
     before do
-      order.stub(brew_id: 123)
-      order.stub(beers: [])
-      Brew.stub(:find_by_id).and_return(brew)
+      stub_const('Beer', stub)
+      Beer.stub(:make).with(order.to_hash, brew) { double('Beer') }
     end
 
-    it 'finds the specified brew' do
-      Brew.should_receive(:find_by_id).with(123)
-      BrewMaster.process(order)
-    end
-
-    describe 'with beer params' do
-      let(:beer_stuff) { double('Beer Params') }
-      before { order.stub(beers: [beer_stuff]) }
-
-      it 'makes a beer for the brew' do
-        Beer.should_receive(:make).with(beer_stuff, brew)
-        BrewMaster.process(order)
-      end
+    it 'makes the specified number of beers' do
+      beers = described_class.process(order)
+      expect(beers).to have(3).beers
     end
   end
-
-  protected
-
-  class Brew; end unless defined?(Brew)
-  class Beer; end unless defined?(Beer)
 
 end

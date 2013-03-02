@@ -1,29 +1,32 @@
+require 'support/active_model_lint'
 require 'models/beer_order'
 
 describe BeerOrder do
-  let(:stuffs) { { count: '3', brew_id: 123, batch: 'abc' } }
+  subject(:order) { described_class.new(args)}
+  let(:brew) { stub(name: 'Black Ops', id: 42) }
+  let(:args) { { count: '3', batch: 'abc', brew: brew } }
 
-  describe 'an order for 3 beers' do
-    subject(:order) { described_class.new(stuffs) }
+  describe 'ActiveModel Lint' do
+    it_behaves_like 'ActiveModel'
+  end
 
-    specify { expect(order.count).to eq(3) }
-    specify { expect(order.beers.size).to eq(3) }
-
-    it 'sets the brew_id' do
-      expect(order.brew_id).to eq(123)
+  describe '#count' do
+    it 'defaults to a count of 1' do
+      expect(described_class.new.count).to eq(1)
     end
 
-    it 'removes brew_id from beer attributes' do
-      order.beers.each { |b| expect(b).to_not have_key(:brew_id) }
-    end
-
-    it 'passes other keys through to beer attributes' do
-      order.beers.each { |b| expect(b).to have_key(:batch) }
+    it 'requires a miniumm of 1 beer to be ordered' do
+      order = described_class.new(count: -1)
+      expect(order).not_to be_valid
+      expect(order.errors[:count]).to have(1).error
     end
   end
 
-  it 'allows a minimum order number of 0' do
-    order = described_class.new(stuffs.merge(count: -1))
-    expect(order.count).to eq(0)
+  it 'knows the brew id' do
+    expect(order.brew_name).to eq(brew.name)
+  end
+
+  it 'knows the brew name' do
+    expect(order.brew_id).to eq(brew.id)
   end
 end
