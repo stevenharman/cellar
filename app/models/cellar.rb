@@ -28,8 +28,8 @@ class Cellar
     stocked_brews.size
   end
 
-  def total_beers
-    keeper.stocked_beers.count
+  def total_beers(brew = nil)
+    beers_for(brew).count
   end
 
   def beers_for(brew)

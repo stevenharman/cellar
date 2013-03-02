@@ -6,11 +6,12 @@ class ApplicationController < ActionController::Base
     @decorated_current_user ||= (UserDecorator.new(super) if super)
   end
 
-  protected
-
   def current_cellar
     @decorated_current_cellar ||= decorated_cellar(current_user)
   end
+  helper_method :current_cellar
+
+  protected
 
   def requested_cellar
     @requested_cellar ||= load_cellar(params[:cellar_id] || params[:username])

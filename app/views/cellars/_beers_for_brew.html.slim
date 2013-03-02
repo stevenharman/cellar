@@ -2,7 +2,7 @@
   fieldset.beers-cellared
     legend
       ' In your cellar :
-      small= brew.beer_count
+      small= cellar.total_beers(brew)
     table.table.table-striped
       thead
         tr
@@ -12,7 +12,7 @@
           th Cellared
           th
       tbody
-        - for beer in brew.beers
+        - for beer in cellar.beers_for(brew)
           tr.beer*{'data-id' => beer.id}
             td= beer.batch
             td= ldate(beer.bottled_on, format: :long)

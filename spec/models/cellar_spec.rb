@@ -38,7 +38,7 @@ describe Cellar do
     end
 
     it 'returns an order receipt' do
-      cellar.stock_beer(order).should be_a(BeerOrderReceipt)
+      expect(cellar.stock_beer(order)).to be_a(BeerOrderReceipt)
     end
   end
 
@@ -46,7 +46,7 @@ describe Cellar do
     it "gets currently cellared brews from the user's cellar" do
       stocked_brews = [double('Brew 1'), double('Brew 2')]
       bob.stub(:stocked_brews) { stocked_brews }
-      cellar.stocked_brews.should == stocked_brews
+      expect(cellar.stocked_brews).to eq(stocked_brews)
     end
   end
 
@@ -56,26 +56,40 @@ describe Cellar do
 
       it 'fetches the beer' do
         bob.stub(:find_beer).with(42).and_return(bobs_beer)
-        cellar.find_beer(42).should == bobs_beer
+        expect(cellar.find_beer(42)).to eq(bobs_beer)
       end
     end
   end
 
   describe '#beers_for' do
     let(:brew) { double('Brew') }
-    let(:bobs_beers) { double("Bob's Beers") }
+    let(:bobs_beer) { double('Beer') }
 
     it 'gets the beers from the keeper' do
-      bob.stub(:stocked_beers).with(brew).and_return(bobs_beers)
-      cellar.beers_for(brew).should == bobs_beers
+      bob.stub(:stocked_beers).with(brew) { [bobs_beer] }
+      expect(cellar.beers_for(brew)).to match_array([bobs_beer])
+    end
+  end
+
+  describe '#total_beers' do
+    let(:brew) { double('Brew') }
+
+    it 'counts the stoked beers for the given brew' do
+      bob.stub(:stocked_beers).with(brew) { [double, double]}
+      expect(cellar.total_beers(brew)).to eq(2)
     end
   end
 
   describe '#kept_by?' do
     let(:alice) { double('User - Alice') }
 
-    specify { cellar.should be_kept_by(bob) }
-    specify { cellar.should_not be_kept_by(alice) }
+    it 'is kept by bob' do
+      expect(cellar).to be_kept_by(bob)
+    end
+
+    it 'is not kept by alice' do
+      expect(cellar).not_to be_kept_by(alice)
+    end
   end
 
 end
