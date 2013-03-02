@@ -16,7 +16,7 @@ class BeerOrderReceipt
     example_beer.errors.full_messages
   end
 
-  def success?
+  def valid?
     @beers.all?(&:valid?)
   end
 

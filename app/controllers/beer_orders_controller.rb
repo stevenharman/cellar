@@ -1,5 +1,6 @@
 class BeerOrdersController < ApplicationController
   before_filter :authenticate_user!
+  respond_to :html
 
   def new
     brew = load_brew(params[:brew])
@@ -13,13 +14,13 @@ class BeerOrdersController < ApplicationController
     @order = BeerOrder.new(beer_order_params.merge(brew: brew))
     receipt = current_cellar.stock_beer(@order)
 
-    if receipt.success?
-      success_message = t('beer_orders.success', count: @order.count, name: @order.brew_name)
-      redirect_to(cellar_path(current_user), notice: success_message)
+    if receipt.valid?
+      flash[:notice] = t('beer_orders.success', count: @order.count, name: @order.brew_name)
     else
       flash.now[:alert] = "Oops! #{receipt.error_messages.join(", ")}"
-      render :new
     end
+
+    respond_with(receipt, location: cellar_path(current_user))
   end
 
   private
