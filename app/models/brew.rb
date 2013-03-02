@@ -1,12 +1,12 @@
 require 'pg_search'
 
 class Brew < ActiveRecord::Base
-  belongs_to :style
-  belongs_to :base_brew, class_name: 'Brew'
+  belongs_to :style, inverse_of: :brews
+  belongs_to :base_brew, inverse_of: :variations, class_name: 'Brew'
   has_many :brewery_brews, inverse_of: :brew, dependent: :destroy
   has_many :breweries, through: :brewery_brews, uniq: true
-  has_many :variations, class_name: 'Brew', foreign_key: 'base_brew_id'
-  has_many :beers
+  has_many :variations, inverse_of: :base_brew, class_name: 'Brew', foreign_key: 'base_brew_id'
+  has_many :beers, inverse_of: :brew
 
   #validates :breweries, presence: true
   validates :name, presence: true

@@ -1,6 +1,6 @@
 class Style < ActiveRecord::Base
-  belongs_to :category
-  has_many :brews
+  belongs_to :category, inverse_of: :styles
+  has_many :brews, inverse_of: :style
 
   validates :category, presence: true
   validates :name, uniqueness: true, presence: true

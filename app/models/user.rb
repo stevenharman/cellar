@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
     :trackable, :confirmable
 
   attr_accessible :bio, :email, :location, :password, :remember_me, :username, :website
-  has_many :beers
+  has_many :beers, inverse_of: :user
   has_many :brews, through: :beers, uniq: true
   has_many :breweries, through: :brews, uniq: true
 

@@ -1,6 +1,6 @@
 class Beer < ActiveRecord::Base
-  belongs_to :brew
-  belongs_to :user
+  belongs_to :brew, inverse_of: :beers
+  belongs_to :user, inverse_of: :beers
 
   validates :brew, presence: true
   validates :user, presence: true
