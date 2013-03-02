@@ -10,7 +10,7 @@ article.brew*{'data-id' => brew.id}
         span.separator
           '  |
     dl.inventory
-      - if user_signed_in?
+      - if your_cellar.active?
         dt= t('.inventory.your_cellar')
         dd
           = your_cellar.total_beers(brew)

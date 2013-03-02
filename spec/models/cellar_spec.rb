@@ -1,9 +1,9 @@
 require 'models/cellar'
 
 describe Cellar do
+  subject(:cellar) { Cellar.new(bob, brew_master) }
   let(:bob) { double('User') }
   let(:brew_master) { double('BrewMaster') }
-  let(:cellar) { Cellar.new(bob, brew_master) }
 
   describe 'Socking a Cellar' do
     let(:order) { double('BeerOrder') }
@@ -77,6 +77,18 @@ describe Cellar do
     it 'counts the stoked beers for the given brew' do
       bob.stub(:stocked_beers).with(brew) { [double, double]}
       expect(cellar.total_beers(brew)).to eq(2)
+    end
+  end
+
+  describe '#active?' do
+    it 'is active when the keeper is active' do
+      bob.stub(:active?) { true }
+      expect(cellar).to be_active
+    end
+
+    it 'is inactive when the keeper is inactive' do
+      bob.stub(:active?) { false }
+      expect(cellar).not_to be_active
     end
   end
 

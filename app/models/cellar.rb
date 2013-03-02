@@ -12,6 +12,10 @@ class Cellar
     keeper.username
   end
 
+  def active?
+    keeper.active?
+  end
+
   def established
     keeper.joined
   end

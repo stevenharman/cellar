@@ -34,6 +34,18 @@ describe User do
     end
   end
 
+  describe '#active?' do
+    it 'is true when they exist in the system' do
+      bob = FactoryGirl.create(:user)
+      expect(bob).to be_active
+    end
+
+    it 'is false when they do not exist in the system' do
+      bob = User.new
+      expect(bob).not_to be_active
+    end
+  end
+
   describe '.for_username!' do
     context 'with user whom exists' do
       let!(:bob) { FactoryGirl.create(:bob) }

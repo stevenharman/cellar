@@ -19,6 +19,10 @@ class User < ActiveRecord::Base
     find_by_username!(username.downcase)
   end
 
+  def active?
+    persisted?
+  end
+
   def find_beer(id)
     beers.find(id)
   end
