@@ -4,7 +4,7 @@ describe BeerOrder do
   let(:stuffs) { { count: '3', brew_id: 123, batch: 'abc' } }
 
   describe 'an order for 3 beers' do
-    subject(:order) { BeerOrder.new(stuffs) }
+    subject(:order) { described_class.new(stuffs) }
 
     specify { expect(order.count).to eq(3) }
     specify { expect(order.beers.size).to eq(3) }
