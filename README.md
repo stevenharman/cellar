@@ -2,21 +2,35 @@
 
 ## Development
 
+### Getting up and Running
+
 You'll need the following dependencies installed:
 
 #### PostgreSQL (for [light-weight searching][texticle])
-  1. Download, install, and run [Postgres.app][postgres.app]
-  1. If you've already installed the `pg` gem: `gem uninstall pg` (we do this
-     to ensure we've built against the right version of PostgreSQL)
-  1. Install the `pg` gem: `bundle install`
-  1. `bundle exec rake db:create db:schema:load`
+  1.  Download, install, and run [Postgres.app][postgres.app]
+  1.  If you've already installed the `pg` gem (we do this
+      to ensure we've built against the right version of PostgreSQL):
+
+      ```bash
+      gem uninstall pg
+      ```
+  1.  Install the `pg` gem:
+  
+      ```bash
+      bundle install
+      ```
+  1.  Setup the database:
+
+      ```bash
+      bundle exec rake db:create db:schema:load
+      ```
 
 **NOTE:** Be sure to open the Postgres.app app to start your PostgreSQL server.
 Quitting the app will also stop the server.
 
 #### Redis (for [background jobs][sidekiq])
-  1. `brew install redis`
-  1. _That's it!_ We start a redis server via `foreman`.
+  1.  `brew install redis`
+  1.  _That's it!_ We start a redis server via `foreman`.
 
 #### ENV Vars
 
@@ -26,6 +40,23 @@ processes. From terminal:
 ```bash
 echo "SIDEKIQ_CONCURRENCY=25" > .env
 ```
+
+### Updating the app
+  1.  Update any RubyGem dependencies:
+
+      ```bash
+      bundle
+      ```
+  1.  Update the database schema:
+
+      ```bash
+      bundle exec rake db:migrate test:prepare
+      ```
+  1.  _(Optional)_ Update your brewery/brew data from BreweryDB.com:
+
+      ``` bash
+      bundle exec rake brewery_db:import
+      ```
 
 ### Running the app
 
