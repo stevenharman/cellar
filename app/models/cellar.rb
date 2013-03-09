@@ -3,7 +3,6 @@ require_relative 'beer_order_receipt'
 
 class Cellar
   attr_reader :keeper
-  delegate :transaction, to: :keeper
 
   def initialize(user, brew_master=BrewMaster)
     @keeper = user

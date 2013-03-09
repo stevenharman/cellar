@@ -1,4 +1,4 @@
-require 'active_record/errors'
+require 'batch'
 require_relative 'beer_order_receipt'
 
 class Clerk
@@ -19,9 +19,9 @@ class Clerk
   attr_reader :brew_master, :cellar
 
   def stock(beers)
-    batch do
+    Batch.run do |batch|
       beers.each do |beer|
-        cancel_batch unless cellar.add(beer)
+        batch.cancel unless cellar.add(beer)
       end
     end
   end
@@ -29,15 +29,4 @@ class Clerk
   def issue_receipt(beers)
     BeerOrderReceipt.new(beers)
   end
-
-  def cancel_batch
-    fail ActiveRecord::Rollback, "Unable to add beers to #{cellar.name}'s cellar"
-  end
-
-  def batch
-    cellar.transaction do
-      yield
-    end
-  end
 end
-
