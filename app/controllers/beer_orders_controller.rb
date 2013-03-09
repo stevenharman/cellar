@@ -12,7 +12,8 @@ class BeerOrdersController < ApplicationController
   def create
     brew = load_brew(beer_order_params[:brew_id])
     @order = BeerOrder.new(beer_order_params.merge(brew: brew))
-    receipt = current_cellar.stock_beer(@order)
+
+    receipt = Clerk.new(current_cellar).procure(@order)
 
     if receipt.valid?
       flash[:notice] = t('beer_orders.success', count: @order.count, name: @order.brew_name)

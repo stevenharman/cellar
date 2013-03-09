@@ -2,43 +2,15 @@ require 'models/cellar'
 
 describe Cellar do
   subject(:cellar) { Cellar.new(bob, brew_master) }
-  let(:bob) { double('User') }
+  let(:bob) { double('User', beers: []) }
   let(:brew_master) { double('BrewMaster') }
 
-  describe 'Socking a Cellar' do
-    let(:order) { double('BeerOrder') }
-    let(:new_beers) { [] }
-    before do
-      brew_master.stub(:process).and_return(new_beers)
-    end
+  describe '#add' do
+    let(:beer) { double('Beer') }
 
-    context 'with an order for beer' do
-      let(:beer) { double('Beer').as_null_object }
-      let(:new_beers) { [beer] }
-
-      it "adds the beer to the user's cellar" do
-        beer.should_receive(:user=).once.with(bob)
-        cellar.stock_beer(order)
-      end
-
-      it 'saves the beer' do
-        beer.should_receive(:save).once
-        cellar.stock_beer(order)
-      end
-
-      context 'and the beer is invalid' do
-        before { beer.stub(:valid?).and_return(false) }
-
-        it "doesn't add the beer to the cellar" do
-          beer.should_receive(:destroy).once
-          cellar.stock_beer(order)
-        end
-      end
-
-    end
-
-    it 'returns an order receipt' do
-      expect(cellar.stock_beer(order)).to be_a(BeerOrderReceipt)
+    it "puts the beer in the keeper's beer collection" do
+      cellar.add(beer)
+      expect(bob.beers).to match_array([beer])
     end
   end
 

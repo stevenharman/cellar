@@ -1,7 +1,9 @@
+require 'active_support/core_ext/module/delegation'
 require_relative 'beer_order_receipt'
 
 class Cellar
   attr_reader :keeper
+  delegate :transaction, to: :keeper
 
   def initialize(user, brew_master=BrewMaster)
     @keeper = user
@@ -48,29 +50,8 @@ class Cellar
     keeper == other_user
   end
 
-  def stock_beer(order)
-    new_beers = @brew_master.process(order)
-    cellared_beers = add_to_cellar(new_beers)
-    ensure_successfully_cellared(cellared_beers)
-    BeerOrderReceipt.new(cellared_beers)
-  end
-
-  private
-
-  def add_to_cellar(beers)
-    beers.collect do |beer|
-      beer.user = keeper
-      beer.save
-      beer
-    end
-  end
-
-  def ensure_successfully_cellared(beers)
-    cancel!(beers) unless beers.all?(&:valid?)
-  end
-
-  def cancel!(beers)
-    beers.map { |beer| beer.destroy }
+  def add(beer)
+    keeper.beers.push(beer)
   end
 
 end
