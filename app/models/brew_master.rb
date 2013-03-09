@@ -1,5 +1,3 @@
-require_relative 'beer_order'
-
 class BrewMaster
 
   def self.process(order)

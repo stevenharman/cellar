@@ -22,11 +22,11 @@ describe BeerOrder do
     end
   end
 
-  it 'knows the brew id' do
+  it 'knows the brew name' do
     expect(order.brew_name).to eq(brew.name)
   end
 
-  it 'knows the brew name' do
+  it 'knows the brew id' do
     expect(order.brew_id).to eq(brew.id)
   end
 end
