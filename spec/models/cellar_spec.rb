@@ -1,9 +1,8 @@
 require 'models/cellar'
 
 describe Cellar do
-  subject(:cellar) { Cellar.new(bob, brew_master) }
+  subject(:cellar) { Cellar.new(bob) }
   let(:bob) { double('User', beers: []) }
-  let(:brew_master) { double('BrewMaster') }
 
   describe '#add' do
     let(:beer) { double('Beer') }

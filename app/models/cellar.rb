@@ -4,9 +4,8 @@ require_relative 'beer_order_receipt'
 class Cellar
   attr_reader :keeper
 
-  def initialize(user, brew_master=BrewMaster)
+  def initialize(user)
     @keeper = user
-    @brew_master = brew_master
   end
 
   def name
