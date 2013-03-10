@@ -1,5 +1,3 @@
-require 'models/beer'
-
 class AnonymousUser
   attr_reader :username
 

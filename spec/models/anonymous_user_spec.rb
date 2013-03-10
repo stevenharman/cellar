@@ -1,5 +1,6 @@
 require 'active_record_spec_helper'
 require 'models/anonymous_user'
+require 'models/beer'
 
 describe AnonymousUser do
   subject(:user) { AnonymousUser.new }
