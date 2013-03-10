@@ -1,11 +1,16 @@
-require 'active_support/core_ext/module/delegation'
 require_relative 'beer_order_receipt'
+require_relative 'cellared_beer_statistics'
 
 class Cellar
-  attr_reader :keeper
+  attr_reader :keeper, :beer_stats
 
-  def initialize(user)
-    @keeper = user
+  def self.find_by(keeper)
+    new(keeper, CellaredBeerStatistics.analyze(keeper))
+  end
+
+  def initialize(keeper, cellared_beer_stats)
+    @keeper = keeper
+    @beer_stats = cellared_beer_stats
   end
 
   def name

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe CellarDecorator do
-  subject(:cellar) { described_class.new(Cellar.new(bob)) }
+  subject(:cellar) { described_class.new(Cellar.new(bob, double)) }
   let(:bob) { User.new(username: 'bob') }
 
   describe '#name' do

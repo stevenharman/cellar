@@ -1,8 +1,18 @@
 require 'models/cellar'
 
 describe Cellar do
-  subject(:cellar) { Cellar.new(bob) }
+  subject(:cellar) { described_class.new(bob, stats) }
   let(:bob) { double('User', beers: []) }
+  let(:stats) { double('CellaredBeerStatistics') }
+
+  describe '.find_by' do
+    it 'loads the cellar with the keeper and statistics' do
+      CellaredBeerStatistics.stub(:analyze).with(bob) { stats }
+
+      cellar = described_class.find_by(bob)
+      expect(cellar.beer_stats).to eq(stats)
+    end
+  end
 
   describe '#add' do
     let(:beer) { double('Beer') }
@@ -14,7 +24,7 @@ describe Cellar do
   end
 
   describe '#cellared_brews' do
-    it "gets currently cellared brews from the user's cellar" do
+    it "gets currently cellared brews from the keeper's cellar" do
       cellared_brews = [double('Brew 1'), double('Brew 2')]
       bob.stub(:cellared_brews) { cellared_brews }
       expect(cellar.cellared_brews).to eq(cellared_brews)

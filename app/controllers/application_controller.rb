@@ -33,7 +33,7 @@ class ApplicationController < ActionController::Base
 
   def decorated_cellar(keeper)
     keeper = keeper || AnonymousUser.new
-    CellarDecorator.new(Cellar.new(keeper))
+    CellarDecorator.new(Cellar.find_by(keeper))
   end
 
   def load_cellar(cellar_name)
