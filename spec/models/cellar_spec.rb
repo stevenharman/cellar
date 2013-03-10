@@ -13,11 +13,11 @@ describe Cellar do
     end
   end
 
-  describe '#stocked_brews' do
+  describe '#cellared_brews' do
     it "gets currently cellared brews from the user's cellar" do
-      stocked_brews = [double('Brew 1'), double('Brew 2')]
-      bob.stub(:stocked_brews) { stocked_brews }
-      expect(cellar.stocked_brews).to eq(stocked_brews)
+      cellared_brews = [double('Brew 1'), double('Brew 2')]
+      bob.stub(:cellared_brews) { cellared_brews }
+      expect(cellar.cellared_brews).to eq(cellared_brews)
     end
   end
 

@@ -41,7 +41,7 @@ article.cellar
   fieldset.beers-cellared.row-fluid
     legend Cellared Beers
     ul.cards
-      - for brew in @cellar.stocked_brews
+      - for brew in @cellar.cellared_brews
         li.card.span6
           == render 'brews/card', brew: brew, this_cellar: @cellar, your_cellar: current_cellar
 

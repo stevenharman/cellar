@@ -21,15 +21,15 @@ class Cellar
   end
 
   def total_breweries
-    keeper.breweries.merge(Beer.cellared).count
+    keeper.breweries.cellared.count
   end
 
-  def stocked_brews
-    keeper.stocked_brews
+  def cellared_brews
+    keeper.cellared_brews
   end
 
   def unique_brews
-    stocked_brews.size
+    cellared_brews.size
   end
 
   def total_beers(brew = nil)

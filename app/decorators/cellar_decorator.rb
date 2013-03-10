@@ -20,8 +20,8 @@ class CellarDecorator < ApplicationDecorator
     keeper.location unless keeper.location.blank?
   end
 
-  def stocked_brews
-    brews = cellar.stocked_brews.includes(:style).includes(:breweries).decorate
+  def cellared_brews
+    brews = cellar.cellared_brews.includes(:style).includes(:breweries).decorate
   end
 
   def website

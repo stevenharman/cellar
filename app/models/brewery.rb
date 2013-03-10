@@ -13,6 +13,8 @@ class Brewery < ActiveRecord::Base
   include PgSearch
   multisearchable against: [:name]
 
+  scope :cellared, -> { scoped.merge(Beer.cellared) }
+
   def self.find_by_brewery_db_ids(ids)
     where(brewery_db_id: ids)
   end

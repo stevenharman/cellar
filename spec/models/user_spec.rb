@@ -99,7 +99,7 @@ describe User do
     end
   end
 
-  describe '#stocked_brews' do
+  describe '#cellared_brews' do
     let(:bob) { FactoryGirl.create(:user) }
     let(:brew_1) { FactoryGirl.create(:brew) }
     let(:brew_2) { FactoryGirl.create(:brew) }
@@ -113,7 +113,7 @@ describe User do
     end
 
     it "includes only brews currently in bob's cellar" do
-      expect(bob.stocked_brews).to match_array([brew_1, brew_3])
+      expect(bob.cellared_brews).to match_array([brew_1, brew_3])
     end
   end
 end
