@@ -14,7 +14,7 @@ require 'delegate'
 #         867      => 2,
 #         5309     => 2,
 #       }
-class CellaredBeerStatisticsQuery < DelegateClass(User)
+class CellaredBeerStatisticsQuery < SimpleDelegator
 
   def self.query(keeper)
     new(keeper)
