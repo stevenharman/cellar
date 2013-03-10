@@ -38,7 +38,7 @@ class Cellar
   end
 
   def beers_for(brew)
-    keeper.stocked_beers(brew)
+    keeper.cellared_beers(brew)
   end
 
   def find_beer(id)

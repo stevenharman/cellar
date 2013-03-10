@@ -31,10 +31,10 @@ class User < ActiveRecord::Base
     brews.merge(Beer.cellared)
   end
 
-  def stocked_beers(brew = nil)
-    cellared_beers = beers.cellared
-    cellared_beers = cellared_beers.by_brew(brew) if brew
-    cellared_beers
+  def cellared_beers(brew = nil)
+    cellared = beers.cellared
+    cellared = cellared.by_brew(brew) if brew
+    cellared
   end
 
   def joined

@@ -38,7 +38,7 @@ describe Cellar do
     let(:bobs_beer) { double('Beer') }
 
     it 'gets the beers from the keeper' do
-      bob.stub(:stocked_beers).with(brew) { [bobs_beer] }
+      bob.stub(:cellared_beers).with(brew) { [bobs_beer] }
       expect(cellar.beers_for(brew)).to match_array([bobs_beer])
     end
   end
@@ -47,7 +47,7 @@ describe Cellar do
     let(:brew) { double('Brew') }
 
     it 'counts the stoked beers for the given brew' do
-      bob.stub(:stocked_beers).with(brew) { [double, double]}
+      bob.stub(:cellared_beers).with(brew) { [double, double]}
       expect(cellar.total_beers(brew)).to eq(2)
     end
   end

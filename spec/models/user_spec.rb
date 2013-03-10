@@ -81,20 +81,20 @@ describe User do
       end
     end
 
-    describe '#stocked_beers' do
+    describe '#cellared_beers' do
       let(:backwoods) { FactoryGirl.create(:brew) }
       let!(:bobs_backwoods) { FactoryGirl.create_list(:beer, 2, brew: backwoods, user: bob) }
       let!(:drunk_beer) { FactoryGirl.create(:beer, :drunk, brew: backwoods, user: bob) }
       let!(:other_beer) { FactoryGirl.create(:beer, user: bob) }
 
       it "includes Bob's Backwoods, while excluding his unstocked Backwoods and his other brews" do
-        expect(bob.stocked_beers(backwoods)).to match_array(bobs_backwoods)
-        expect(bob.stocked_beers(backwoods)).to_not match_array([drunk_beer])
-        expect(bob.stocked_beers(backwoods)).to_not match_array([other_beer])
+        expect(bob.cellared_beers(backwoods)).to match_array(bobs_backwoods)
+        expect(bob.cellared_beers(backwoods)).to_not match_array([drunk_beer])
+        expect(bob.cellared_beers(backwoods)).to_not match_array([other_beer])
       end
 
       it 'includes all cellared beers when no brew is given' do
-        expect(bob.stocked_beers).to match_array(bobs_backwoods + [other_beer])
+        expect(bob.cellared_beers).to match_array(bobs_backwoods + [other_beer])
       end
     end
   end
