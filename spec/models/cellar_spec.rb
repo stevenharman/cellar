@@ -52,12 +52,12 @@ describe Cellar do
     end
   end
 
-  describe '#total_beers' do
+  describe '#beers_count' do
     let(:brew) { double('Brew') }
 
     it 'counts the cellared beers for the given brew' do
       stats.stub(:beers_count).with(brew) { 2 }
-      expect(cellar.total_beers(brew)).to eq(2)
+      expect(cellar.beers_count(brew)).to eq(2)
     end
   end
 

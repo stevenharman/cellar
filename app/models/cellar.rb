@@ -33,11 +33,11 @@ class Cellar
     keeper.cellared_brews
   end
 
-  def unique_brews
+  def brews_count
     beer_stats.brews_count
   end
 
-  def total_beers(brew = nil)
+  def beers_count(brew = nil)
     beer_stats.beers_count(brew)
   end
 
