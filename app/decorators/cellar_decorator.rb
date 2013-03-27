@@ -24,6 +24,7 @@ class CellarDecorator < ApplicationDecorator
     brews = cellar.cellared_brews.includes(:style).includes(:breweries).decorate
   end
 
+  # TODO: Ensure the user's #website is legit; URI.parse & check protocol & host.
   def website
     h.link_to(keeper.website, keeper.website) unless keeper.website.blank?
   end

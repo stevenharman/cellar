@@ -14,10 +14,13 @@ class Brew < ActiveRecord::Base
   validates :brewery_db_id, uniqueness: true, presence: true
 
   attr_accessible :abv, :base_brew_id, :description, :ibu, :name, :organic, :year
+  #TODO use `coder: JSON` in Rails 4, consider hstore field
   store :labels, accessors: [:icon, :medium_image, :large_image]
 
   scope :cellared, -> { scoped.merge(Beer.cellared) }
 
+  #TODO use tsvector columns w/triggers for updating.
+  # see: https://github.com/jenseng/hair_trigger
   include PgSearch
   multisearchable against: [:searchable_name]
 

@@ -8,8 +8,11 @@ class Brewery < ActiveRecord::Base
   validates :brewery_db_id, uniqueness: true, presence: true
 
   attr_accessible :description, :established, :name, :organic, :website
+  #TODO use `coder: JSON` in Rails 4, consider hstore field
   store :images, accessors: [:icon, :medium_image, :large_image]
 
+  #TODO use tsvector columns w/triggers for updating.
+  # see: https://github.com/jenseng/hair_trigger
   include PgSearch
   multisearchable against: [:name]
 
