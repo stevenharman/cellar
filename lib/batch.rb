@@ -1,8 +1,10 @@
 require 'active_record'
 
 class Batch
+  extend Forwardable
+  delegate transaction: :connection
+
   attr_reader :connection
-  delegate :transaction, to: :connection
 
   def self.run(&block)
     new.run(&block)

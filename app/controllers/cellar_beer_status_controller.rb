@@ -7,7 +7,7 @@ class CellarBeerStatusController < ApplicationController
     if beer.update_attributes(params.slice(:status))
       flash[:notice] = "That #{beer.brew.name} was #{beer.status}!"
     else
-      flash[:alert] = "Oops! #{beer.errors.full_messages.join(", ")}"
+      flash[:alert] = beer.errors.full_messages.join(". ")
     end
 
     respond_with beer, location: brew_path(beer.brew)
