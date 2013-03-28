@@ -1,11 +1,13 @@
 require 'models/clerk'
 
 describe Clerk do
-  subject(:clerk) { described_class.new(cellar, brew_master) }
+  subject(:clerk) { described_class.new(cellar, inventory_report, brew_master) }
   let(:cellar) { double('Cellar', add: true) }
   let(:brew_master) { double('BrewMaster') }
-  let(:order) { double('order') }
+  let(:inventory_report) { double('InventoryReport', calculate: nil) }
+  let(:order) { double('order', brew: brew) }
   let(:beer) { double('Beer') }
+  let(:brew) { double('Brew') }
   let(:a_batch) { double('Batch') }
 
   describe '#procure' do
@@ -17,6 +19,11 @@ describe Clerk do
     it 'adds the beer to the cellar' do
       cellar.should_receive(:add).with(beer).twice
       a_batch.should_not_receive(:cancel)
+      clerk.procure(order)
+    end
+
+    it 'calculates the inventory for the cellar and brew' do
+      inventory_report.should_receive(:calculate).with(brew)
       clerk.procure(order)
     end
 

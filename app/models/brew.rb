@@ -24,6 +24,11 @@ class Brew < ActiveRecord::Base
   include PgSearch
   multisearchable against: [:searchable_name]
 
+  def calculate_cellared_beers_count
+    update_column(:cellared_beers_count, beers.cellared.count)
+    cellared_beers_count
+  end
+
   def searchable_name
     brewery_names = breweries.map { |b| b.name }.join(', ')
     "#{brewery_names} #{name}"

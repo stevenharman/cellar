@@ -2,21 +2,22 @@ require 'batch'
 require_relative 'beer_order_receipt'
 
 class Clerk
+  attr_reader :brew_master, :cellar, :inventory_report
 
-  def initialize(cellar, brew_master = BrewMaster)
+  def initialize(cellar, inventory_report = InventoryReport, brew_master = BrewMaster)
     @cellar = cellar
+    @inventory_report = inventory_report
     @brew_master = brew_master
   end
 
   def procure(order)
     beers = brew_master.process(order)
     stock(beers)
+    update_inventory(order.brew)
     issue_receipt(beers)
   end
 
   private
-
-  attr_reader :brew_master, :cellar
 
   def stock(beers)
     Batch.run do |batch|
@@ -28,5 +29,9 @@ class Clerk
 
   def issue_receipt(beers)
     BeerOrderReceipt.new(beers)
+  end
+
+  def update_inventory(brew)
+    inventory_report.calculate(brew)
   end
 end

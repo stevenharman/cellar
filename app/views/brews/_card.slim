@@ -12,16 +12,15 @@ article.brew*{'data-id' => brew.id}
     dl.inventory
       - if your_cellar.active?
         dt= t('.inventory.your_cellar')
-        dd
+        dd.your-cellar-count
           = your_cellar.beers_count(brew)
       - unless your_cellar == this_cellar
         dt= t('.inventory.this_cellar')
-        dd
+        dd.this-cellar-count
           = this_cellar.beers_count(brew)
       dt= t('.inventory.all_cellars')
-      dd
-        // Use a counter cache Brew#cellared_beers_count
-        = brew.beers.cellared.count
+      dd.all-cellars-count
+        = brew.cellared_beers_count
     dl.details
       - if brew.abv.present?
         dt ABV

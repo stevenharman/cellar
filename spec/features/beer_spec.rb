@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 feature 'Beers', :feature, :slow do
+  include Acceptance::CellarHelpers
   let!(:bob) { sign_in_new_user }
   let(:brew) { FactoryGirl.create(:brew) }
 
@@ -12,6 +13,7 @@ feature 'Beers', :feature, :slow do
 
     expect(Beer.count).to eq(2)
     expect(current_path).to eq(cellar_path(bob))
+    expect_all_cellared_count_to_be(2, brew: brew)
   end
 
  end
