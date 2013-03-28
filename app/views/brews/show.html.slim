@@ -1,7 +1,7 @@
 - content_for :title do
   = @brew.name
 
-article.brew
+article.brew*{'data-id' => @brew.id}
   = link_to new_beer_order_path(brew: @brew), class: 'add-to-cellar btn' do
     span.icon-plus-sign
     |  Stock one now!
@@ -23,4 +23,4 @@ article.brew
         dd= @brew.ibu
       .description
         = simple_format(@brew.description)
-      == render 'cellars/beers_for_brew', brew: @brew, cellar: current_cellar
+      == render 'cellars/beers_for_brew', brew: @brew, your_cellar: current_cellar
