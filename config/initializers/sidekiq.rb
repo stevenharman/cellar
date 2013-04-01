@@ -9,9 +9,18 @@ ENV['REDISTOGO_URL'] ||= local_redis_url.call
 Sidekiq.configure_server do |config|
   config.redis = { url: ENV['REDISTOGO_URL'], namespace: 'brewdega-cellar' }
 
-  BrewdegaCellar.override_db_connection_pool_size!(Sidekiq.options[:concurrency])
+  Rails.application.config.after_initialize do
+    ActiveRecord::Base.connection_pool.disconnect!
 
-  Rails.logger.info("Connection Pool size for Sidekiq Server is now: #{ActiveRecord::Base.connection.pool.instance_variable_get('@size')}")
+    ActiveSupport.on_load(:active_record) do
+      config = Rails.application.config.database_configuration[Rails.env]
+      config['reaping_frequency'] = ENV['DATABASE_REAP_FREQ'] || 10 # seconds
+      config['pool'] = ENV['DATABASE_POOL_SIZE'] || Sidekiq.options[:concurrency]
+      ActiveRecord::Base.establish_connection(config)
+
+      Rails.logger.info("Connection Pool size for Sidekiq Server is now: #{ActiveRecord::Base.connection.pool.instance_variable_get('@size')}")
+    end
+  end
 end
 
 Sidekiq.configure_client do |config|
