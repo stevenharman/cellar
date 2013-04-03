@@ -18,6 +18,11 @@ class BeerOrder
 
   validates :count, numericality: { greater_than_or_equal_to: 1 }
 
+  def self.prepare(args, brew_factory = Brew)
+    brew = brew_factory.find_by_id(args[:brew_id])
+    new(args.merge(brew: brew))
+  end
+
   def initialize(args = {})
     @brew = args.delete(:brew)
     super(args)

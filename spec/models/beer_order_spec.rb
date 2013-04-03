@@ -3,11 +3,24 @@ require 'models/beer_order'
 
 describe BeerOrder do
   subject(:order) { described_class.new(args)}
-  let(:brew) { stub(name: 'Black Ops', id: 42) }
+  let(:brew) { double(name: 'Black Ops', id: 42) }
   let(:args) { { count: '3', batch: 'abc', brew: brew } }
 
   describe 'ActiveModel Lint' do
     it_behaves_like 'ActiveModel'
+  end
+
+  describe '.prepare' do
+    let(:args) { { brew_id: 42 } }
+    let(:brew_factory) { double('Brew') }
+    before do
+      brew_factory.stub(:find_by_id).with(42) { brew }
+    end
+
+    it 'finds the beer for the order' do
+      order = described_class.prepare(args, brew_factory)
+      expect(order.brew).to eq(brew)
+    end
   end
 
   describe '#count' do

@@ -10,9 +10,7 @@ class BeerOrdersController < ApplicationController
   end
 
   def create
-    brew = load_brew(beer_order_params[:brew_id])
-    @order = BeerOrder.new(beer_order_params.merge(brew: brew))
-
+    @order = BeerOrder.prepare(beer_order_params)
     receipt = Clerk.new(current_cellar).procure(@order)
 
     if receipt.valid?
