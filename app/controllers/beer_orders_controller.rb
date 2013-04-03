@@ -3,7 +3,7 @@ class BeerOrdersController < ApplicationController
   respond_to :html
 
   def new
-    brew = load_brew(params[:brew])
+    brew = Brew.find_by_id(params[:brew])
     return redirect_to brews_path, alert: t('beer_orders.missing_brew') unless brew
 
     @order = BeerOrder.new(brew: brew)
@@ -26,10 +26,6 @@ class BeerOrdersController < ApplicationController
 
   def beer_order_params
     params[:beer_order]
-  end
-
-  def load_brew(brew_id)
-    @brew ||= Brew.find_by_id(brew_id)
   end
 
 end
