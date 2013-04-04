@@ -32,7 +32,7 @@ describe Cellar do
 
     it 'updates the beer status' do
       beer.should_receive(:update_status).with(status)
-      cellar.update(beer, status)
+      cellar.update(beer.id, status)
     end
   end
 

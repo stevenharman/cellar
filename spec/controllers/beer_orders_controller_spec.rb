@@ -5,7 +5,7 @@ describe BeerOrdersController do
   let(:brew) { FactoryGirl.create(:brew) }
   before { sign_in bob }
 
-  describe 'POST /beers' do
+  describe 'POST /beer_orders' do
     it 'creates 1 beer by default' do
       post :create, beer_order: {brew_id: brew.id}
       expect(Beer.count).to eq(1)

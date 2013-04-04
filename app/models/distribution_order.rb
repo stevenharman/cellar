@@ -7,6 +7,10 @@ class DistributionOrder
 
   attr_reader :beer_id, :status
 
+  def self.prepare(*args)
+    new(*args)
+  end
+
   def initialize(args = {})
     @beer = args[:beer]
     @beer_id = args[:beer_id]

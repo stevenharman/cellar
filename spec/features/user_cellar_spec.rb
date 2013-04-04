@@ -56,14 +56,20 @@ feature 'Removing a beer from the Cellar', :feature, :slow do
   include Acceptance::CellarHelpers
   let(:bob) { sign_in_new_user(:bob) }
   let!(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
+  let(:brew) { bobs_beer.brew }
   background do
-    visit brew_path(bobs_beer.brew)
+    bobs_beer.brew.calculate_cellared_beers_count
+    visit brew_path(brew)
   end
 
   scenario 'after drinking, the beer is no longer in the Cellar' do
     expect_to_be_in_the_cellar(bobs_beer)
+    expect_all_cellared_count_to_be(1, brew: brew)
+
     drink_from_the_cellar(bobs_beer)
+
     expect_not_to_be_in_the_cellar(bobs_beer)
+    expect_all_cellared_count_to_be(0, brew: brew)
   end
 
   scenario 'after trading, the beer is no longer in the Cellar' do
