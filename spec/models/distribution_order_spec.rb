@@ -26,4 +26,30 @@ describe DistributionOrder do
       expect(reissued_order.brew_name).to eq(brew.name)
     end
   end
+
+  describe '#successful?' do
+    let(:beer) { double('Beer', valid?: true, status: 'traded') }
+
+    it 'is successful when the beer is valid and its status is the ordered status' do
+      order = described_class.new(beer: beer, status: 'traded')
+      expect(order).to be_successful
+    end
+
+    it 'is unsuccessful when there is no beer' do
+      order = described_class.new(beer: nil, status: 'traded')
+      expect(order).not_to be_successful
+    end
+
+    it 'is unsuccessful when the beer is invalid' do
+      beer.stub(:valid?) { false }
+      order = described_class.new(beer: beer, status: 'traded')
+      expect(order).not_to be_successful
+    end
+
+    it 'is unsuccessful when the beers status is not the distribution status' do
+      beer.stub(:status) { 'cellared' }
+      order = described_class.new(beer: beer, status: 'traded')
+      expect(order).not_to be_successful
+    end
+  end
 end

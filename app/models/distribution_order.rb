@@ -25,6 +25,12 @@ class DistributionOrder
     self.class.new(beer: beer, beer_id: beer.id, status: status)
   end
 
+  def successful?
+    beer &&
+    beer.valid? &&
+    beer.status == status
+  end
+
   def persisted?; false; end
 
   private
