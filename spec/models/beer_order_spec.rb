@@ -17,7 +17,7 @@ describe BeerOrder do
       brew_factory.stub(:find_by_id).with(42) { brew }
     end
 
-    it 'finds the beer for the order' do
+    it 'finds the brew for the order' do
       order = described_class.prepare(args, brew_factory)
       expect(order.brew).to eq(brew)
     end
