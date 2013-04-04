@@ -44,6 +44,22 @@ describe Beer do
     end
   end
 
+  describe '#update_status' do
+
+    it 'is true when it succeeds' do
+      beer = FactoryGirl.build(:beer, :cellared)
+      expect(beer.update_status('drunk')).to be_true
+      expect(beer).to be_drunk
+    end
+
+    it 'is false when it fails' do
+      beer = FactoryGirl.create(:beer, :cellared)
+      expect(beer.update_status('no_such_status')).to be_false
+      expect(beer).not_to be_cellared
+      expect(beer.reload).to be_cellared
+    end
+  end
+
   describe 'scopes' do
     describe 'for status' do
       before do

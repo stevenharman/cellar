@@ -34,6 +34,11 @@ class Beer < ActiveRecord::Base
     write_attribute(:status, value.to_s)
   end
 
+  def update_status(value)
+    self.status = value
+    save
+  end
+
   def self.make(attributes, brew)
     self.new(attributes) do |beer|
       beer.brew = brew
