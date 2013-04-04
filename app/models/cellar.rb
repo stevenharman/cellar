@@ -57,4 +57,9 @@ class Cellar
     keeper.beers.push(beer)
   end
 
+  def update(beer, status)
+    beer = find_beer(beer.id)
+    beer.update_status(status)
+  end
+
 end

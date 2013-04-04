@@ -1,15 +1,15 @@
 require 'models/cellar'
 
 describe Cellar do
-  subject(:cellar) { described_class.new(bob, stats) }
-  let(:bob) { double('User', beers: []) }
+  subject(:cellar) { described_class.new(keeper, stats) }
+  let(:keeper) { double('User', beers: []) }
   let(:stats) { double('CellaredBeerStatistics') }
 
   describe '.find_by' do
     it 'loads the cellar with the keeper and statistics' do
-      CellaredBeerStatistics.stub(:analyze).with(bob) { stats }
+      CellaredBeerStatistics.stub(:analyze).with(keeper) { stats }
 
-      cellar = described_class.find_by(bob)
+      cellar = described_class.find_by(keeper)
       expect(cellar.beer_stats).to eq(stats)
     end
   end
@@ -19,14 +19,27 @@ describe Cellar do
 
     it "puts the beer in the keeper's beer collection" do
       cellar.add(beer)
-      expect(bob.beers).to match_array([beer])
+      expect(keeper.beers).to match_array([beer])
+    end
+  end
+
+  describe '#update' do
+    let(:beer) { double('Beer', id: 42) }
+    let(:status) { 'drunk' }
+    before do
+      keeper.stub(:find_beer).with(42) { beer }
+    end
+
+    it 'updates the beer status' do
+      beer.should_receive(:update_status).with(status)
+      cellar.update(beer, status)
     end
   end
 
   describe '#cellared_brews' do
     it "gets currently cellared brews from the keeper's cellar" do
       cellared_brews = [double('Brew 1'), double('Brew 2')]
-      bob.stub(:cellared_brews) { cellared_brews }
+      keeper.stub(:cellared_brews) { cellared_brews }
       expect(cellar.cellared_brews).to eq(cellared_brews)
     end
   end
@@ -36,7 +49,7 @@ describe Cellar do
       let(:bobs_beer) { double('Beer') }
 
       it 'fetches the beer' do
-        bob.stub(:find_beer).with(42).and_return(bobs_beer)
+        keeper.stub(:find_beer).with(42).and_return(bobs_beer)
         expect(cellar.find_beer(42)).to eq(bobs_beer)
       end
     end
@@ -47,7 +60,7 @@ describe Cellar do
     let(:bobs_beer) { double('Beer') }
 
     it 'gets the beers from the keeper' do
-      bob.stub(:cellared_beers).with(brew) { [bobs_beer] }
+      keeper.stub(:cellared_beers).with(brew) { [bobs_beer] }
       expect(cellar.beers_for(brew)).to match_array([bobs_beer])
     end
   end
@@ -63,12 +76,12 @@ describe Cellar do
 
   describe '#active?' do
     it 'is active when the keeper is active' do
-      bob.stub(:active?) { true }
+      keeper.stub(:active?) { true }
       expect(cellar).to be_active
     end
 
     it 'is inactive when the keeper is inactive' do
-      bob.stub(:active?) { false }
+      keeper.stub(:active?) { false }
       expect(cellar).not_to be_active
     end
   end
@@ -76,8 +89,8 @@ describe Cellar do
   describe '#kept_by?' do
     let(:alice) { double('User - Alice') }
 
-    it 'is kept by bob' do
-      expect(cellar).to be_kept_by(bob)
+    it 'is kept by keeper' do
+      expect(cellar).to be_kept_by(keeper)
     end
 
     it 'is not kept by alice' do
