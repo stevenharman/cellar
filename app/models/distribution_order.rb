@@ -5,15 +5,11 @@ class DistributionOrder
   include ActiveModel::Conversion
   include ActiveModel::Validations
 
-  def self.prepare(distribution_args, beer_factory = Beer)
-    beer = beer_factory.find_by_id(distribution_args[:beer_id])
-    new(distribution_args.merge(beer: beer))
-  end
-
-  attr_reader :beer, :status
+  attr_reader :beer_id, :status
 
   def initialize(args = {})
     @beer = args[:beer]
+    @beer_id = args[:beer_id]
     @status = args[:status]
   end
 
@@ -25,5 +21,15 @@ class DistributionOrder
     brew.name
   end
 
+  def reissue(beer)
+    self.class.new(beer: beer, beer_id: beer.id, status: status)
+  end
+
   def persisted?; false; end
+
+  private
+
+  def beer
+    @beer
+  end
 end

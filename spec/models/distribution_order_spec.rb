@@ -7,32 +7,23 @@ describe DistributionOrder do
     it_behaves_like 'ActiveModel'
   end
 
-  describe '.prepare' do
-    let(:order) { described_class.prepare(args, beer_factory) }
-    let(:args) { { beer_id: 456, status: 'drunk'} }
-    let(:beer_factory) { double('Beer') }
-    let(:beer) { double('a Beer') }
-    before do
-      beer_factory.stub(:find_by_id).with(456) { beer }
-    end
-
-    it 'finds the beer for the order' do
-      expect(order.beer).to eq(beer)
-    end
-
-    it 'maps the status' do
-      expect(order.status).to eq('drunk')
-    end
-  end
-
-  describe 'an order' do
-    subject(:order) { described_class.new(beer: beer) }
-    let(:beer) { double('Beer', brew: brew) }
+  describe '#reissue' do
+    subject(:order) { described_class.new(beer_id: beer.id, status: 'drunk') }
+    let(:beer) { double('Beer', id: 42, brew: brew) }
     let(:brew) { double('Brew', name: 'Darth Earnhardt') }
+    let(:reissued_order) { order.reissue(beer) }
+
+    it 'knows the beer id' do
+      expect(reissued_order.beer_id).to eq(beer.id)
+    end
+
+    it 'knows the distribution status' do
+      expect(reissued_order.status).to eq('drunk')
+    end
 
     it 'knows the brew being distributed' do
-      expect(order.brew).to eq(brew)
-      expect(order.brew_name).to eq(brew.name)
+      expect(reissued_order.brew).to eq(brew)
+      expect(reissued_order.brew_name).to eq(brew.name)
     end
   end
 end

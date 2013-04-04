@@ -17,6 +17,12 @@ class Clerk
     issue_receipt(beers)
   end
 
+  def distribute(order)
+    beer = cellar.update(order.beer_id, order.status)
+    update_inventory(beer.brew)
+    order.reissue(beer)
+  end
+
   private
 
   def stock(beers)
