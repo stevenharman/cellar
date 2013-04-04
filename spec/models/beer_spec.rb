@@ -11,14 +11,10 @@ describe Beer do
   it { should allow_mass_assignment_of(:bottled_on) }
   it { should allow_mass_assignment_of(:best_by) }
 
-  [:cellared, :drunk, :traded, :skunked].each do |status|
-    it { should allow_value(status).for(:status) }
-  end
-
   it { should_not allow_value(nil).for(:status) }
 
   it 'defaults to cellared' do
-    Beer.new.status.should == :cellared
+    expect(described_class.new).to be_cellared
   end
 
   describe 'Making a beer' do

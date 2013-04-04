@@ -2,10 +2,13 @@ class Beer < ActiveRecord::Base
   belongs_to :brew, inverse_of: :beers
   belongs_to :user, inverse_of: :beers
 
+  ALLOWED_STATUSES = [:cellared, :drunk, :traded, :skunked].freeze
+
   validates :brew, presence: true
   validates :user, presence: true
-  validates :status, inclusion: [:cellared, :drunk, :traded, :skunked]
+  validates :status, inclusion: ALLOWED_STATUSES
 
+  #TODO: remove :status from attr_accessible
   attr_accessible :batch, :bottled_on, :best_by, :status
 
   scope :cellared, where(status: :cellared)
@@ -15,6 +18,12 @@ class Beer < ActiveRecord::Base
 
   def cellared_by?(other_user)
     self.user == other_user
+  end
+
+  ALLOWED_STATUSES.each do |s|
+    define_method("#{s}?") do
+      self.status == s
+    end
   end
 
   def status
