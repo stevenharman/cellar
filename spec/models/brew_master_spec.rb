@@ -3,7 +3,7 @@ require 'models/brew_master'
 describe BrewMaster do
 
   describe 'Processing a beer order' do
-    let(:order) { BeerOrder.new(brew: brew, count: 3) }
+    let(:order) { StockOrder.new(brew: brew, count: 3) }
     let(:brew) { double('Brew', name: 'Boont Amber Ale', id: 99) }
     before do
       stub_const('Beer', stub)

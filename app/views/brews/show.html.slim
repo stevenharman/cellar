@@ -2,7 +2,7 @@
   = @brew.name
 
 article.brew*{'data-id' => @brew.id}
-  = link_to new_beer_order_path(brew: @brew), class: 'add-to-cellar btn' do
+  = link_to new_stock_order_path(brew: @brew), class: 'add-to-cellar btn' do
     span.icon-plus-sign
     |  Stock one now!
   hgroup

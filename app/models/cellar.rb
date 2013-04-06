@@ -1,4 +1,4 @@
-require_relative 'beer_order_receipt'
+require_relative 'stock_order_receipt'
 require_relative 'cellared_beer_statistics'
 
 class Cellar

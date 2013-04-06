@@ -10,7 +10,7 @@ describe Clerk do
   let(:brew) { double('Brew') }
 
   describe '#procure' do
-    let(:order) { double('BeerOrder', brew: brew) }
+    let(:order) { double('StockOrder', brew: brew) }
     let(:a_batch) { double('Batch') }
     before do
       Batch.stub(:run).and_yield(a_batch)

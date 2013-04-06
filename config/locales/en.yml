@@ -10,7 +10,7 @@ en:
       month_day_year: "%b %d, %Y"
       month_year: "%b %Y"
 
-  beer_orders:
+  stock_orders:
     missing_brew: "Oh no, we couldn't find the Beer you were trying to stock!"
     success: "Huzzah! We added %{count} %{name} to your cellar."
   brews:

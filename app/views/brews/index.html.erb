@@ -15,7 +15,7 @@
           <td><%= link_to brew.name, brew %></td>
           <td><%= render partial: brew.breweries, spacer_template: 'breweries/brewery_spacer' %></td>
           <td>
-            <%= link_to 'Cellar it!', new_beer_order_path(brew: brew), class: 'btn btn-primary' %>
+            <%= link_to 'Cellar it!', new_stock_order_path(brew: brew), class: 'btn btn-primary' %>
           </td>
         </tr>
       <% end %>

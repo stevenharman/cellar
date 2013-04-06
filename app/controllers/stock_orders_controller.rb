@@ -1,20 +1,20 @@
-class BeerOrdersController < ApplicationController
+class StockOrdersController < ApplicationController
   before_filter :authenticate_user!
   respond_to :html
 
   def new
     brew = Brew.find_by_id(params[:brew])
-    return redirect_to brews_path, alert: t('beer_orders.missing_brew') unless brew
+    return redirect_to brews_path, alert: t('stock_orders.missing_brew') unless brew
 
-    @order = BeerOrder.new(brew: brew)
+    @order = StockOrder.new(brew: brew)
   end
 
   def create
-    @order = BeerOrder.prepare(beer_order_params)
+    @order = StockOrder.prepare(stock_order_params)
     receipt = Clerk.new(current_cellar).procure(@order)
 
     if receipt.valid?
-      flash[:notice] = t('beer_orders.success', count: @order.count, name: @order.brew_name)
+      flash[:notice] = t('stock_orders.success', count: @order.count, name: @order.brew_name)
     else
       flash.now[:alert] = "Oops! #{receipt.error_messages.join(", ")}"
     end
@@ -24,8 +24,8 @@ class BeerOrdersController < ApplicationController
 
   private
 
-  def beer_order_params
-    params[:beer_order]
+  def stock_order_params
+    params[:stock_order]
   end
 
 end

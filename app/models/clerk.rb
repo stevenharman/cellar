@@ -1,5 +1,5 @@
 require 'batch'
-require_relative 'beer_order_receipt'
+require_relative 'stock_order_receipt'
 
 class Clerk
   attr_reader :brew_master, :cellar, :inventory_report
@@ -34,7 +34,7 @@ class Clerk
   end
 
   def issue_receipt(beers)
-    BeerOrderReceipt.new(beers)
+    StockOrderReceipt.new(beers)
   end
 
   def update_inventory(brew)

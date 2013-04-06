@@ -2,7 +2,7 @@ require 'active_support/core_ext/module/delegation'
 require 'active_model'
 require 'virtus'
 
-class BeerOrder
+class StockOrder
   include Virtus
   extend ActiveModel::Naming
   include ActiveModel::Conversion

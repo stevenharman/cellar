@@ -1,7 +1,7 @@
-require 'beer_order_receipt'
+require 'stock_order_receipt'
 
-describe BeerOrderReceipt do
-  let(:receipt) { BeerOrderReceipt.new(beers) }
+describe StockOrderReceipt do
+  subject(:receipt) { described_class.new(beers) }
 
   describe 'all ordered beers were created' do
     let(:beers) { Array.new(4, stub(:valid? => true)) }

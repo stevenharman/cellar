@@ -1,4 +1,4 @@
-class BeerOrderReceipt
+class StockOrderReceipt
 
   def initialize(beers)
     @beers = beers
