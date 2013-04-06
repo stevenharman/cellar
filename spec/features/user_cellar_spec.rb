@@ -74,13 +74,21 @@ feature 'Removing a beer from the Cellar', :feature, :slow do
 
   scenario 'after trading, the beer is no longer in the Cellar' do
     expect_to_be_in_the_cellar(bobs_beer)
+    expect_all_cellared_count_to_be(1, brew: brew)
+
     trade_from_the_cellar(bobs_beer)
+
     expect_not_to_be_in_the_cellar(bobs_beer)
+    expect_all_cellared_count_to_be(0, brew: brew)
   end
 
   scenario 'after skunking, the beer is no longer in the Cellar' do
     expect_to_be_in_the_cellar(bobs_beer)
+    expect_all_cellared_count_to_be(1, brew: brew)
+
     skunk_from_the_cellar(bobs_beer)
+
     expect_not_to_be_in_the_cellar(bobs_beer)
+    expect_all_cellared_count_to_be(0, brew: brew)
   end
 end
