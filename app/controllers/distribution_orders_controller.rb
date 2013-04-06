@@ -1,4 +1,4 @@
-class CellarBeerStatusController < ApplicationController
+class DistributionOrdersController < ApplicationController
   before_filter :authenticate_user!
   respond_to :html
 

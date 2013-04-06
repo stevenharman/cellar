@@ -21,7 +21,8 @@
             td= ldate(beer.best_by, format: :long)
             td= ldate(beer.created_at, format: :month_year)
             td.status
-              = simple_form_for beer, url: cellar_beer_status_path(beer.user, beer) do
+              = simple_form_for beer, url: cellar_distribution_order_path(beer.user) do
+                = hidden_field_tag :beer_id, beer.id, id: nil
                 .btn-group
                   = button_tag 'Drink', name: 'status', value: :drunk, class: 'btn'
                   = button_tag class: 'btn dropdown-toggle',  data: { toggle: 'dropdown' } do

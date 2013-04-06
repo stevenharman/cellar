@@ -15,9 +15,8 @@ BrewdegaCellar::Application.routes.draw do
   get 'sign_up' => 'users#new'
   resources :users, only: [:create]
   resources :users, path: '', only: [], as: :cellar do
-    resources :beers, controller: :cellar_beers, only: [:show] do
-      resource :status, controller: :cellar_beer_status, only: [:update]
-    end
+    resources :beers, controller: :cellar_beers, only: [:show]
+    resource :distribution_order, controller: :distribution_orders, only: [:update]
   end
 
   resources :breweries, only: [:index, :show]

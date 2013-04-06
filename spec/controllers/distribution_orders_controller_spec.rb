@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe CellarBeerStatusController do
+describe DistributionOrdersController do
   let(:bob) { FactoryGirl.create(:bob) }
   let(:beer) { FactoryGirl.create(:beer, user: bob) }
   before { sign_in bob }
 
-  describe 'PUT /cellar_beer_status' do
+  describe 'PUT /:cellar_id/distribution_order' do
     it 'remove the beer from the cellar' do
       put :update, { cellar_id: bob.id, beer_id: beer.id, status: 'drunk' }
 
