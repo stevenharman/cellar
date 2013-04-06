@@ -15,6 +15,7 @@ gem 'slim'
 gem 'sidekiq'
 gem 'sinatra', require: false # for sidekiq monitoring
 gem 'virtus'
+gem 'newrelic_rpm'
 
 group :assets do
   gem 'sass-rails', '~> 3.1'
