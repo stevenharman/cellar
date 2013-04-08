@@ -42,6 +42,7 @@ describe SupplyChain::Job::DeleteBrew do
     end
 
     context 'when the brew does not exist' do
+      require 'models/brew'
       subject(:job) { described_class.new }
 
       it 'fails with meaningful error' do
