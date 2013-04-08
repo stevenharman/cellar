@@ -9,6 +9,8 @@ module SupplyChain
       include Sidekiq::Worker
       include SupplyChain::Job
 
+      attr_reader :brewery_factory
+
       def self.fulfill(order)
         perform_async(order.attribute_id) if order.delete_brewery?
       end
@@ -21,10 +23,6 @@ module SupplyChain
         brewery = brewery_factory.find_by_brewery_db_id!(id)
         CleanUp.brewery(brewery)
       end
-
-      private
-
-      attr_reader :brewery_factory
 
     end
   end
