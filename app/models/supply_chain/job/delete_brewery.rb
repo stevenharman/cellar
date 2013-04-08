@@ -1,6 +1,5 @@
 require 'sidekiq'
 require_relative '../job'
-require_relative '../../brewery'
 require_relative '../../clean_up'
 
 module SupplyChain
@@ -15,7 +14,7 @@ module SupplyChain
         perform_async(order.attribute_id) if order.delete_brewery?
       end
 
-      def initialize(brewery_factory = Brewery)
+      def initialize(brewery_factory = ::Brewery)
         @brewery_factory = brewery_factory
       end
 
