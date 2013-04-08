@@ -22,7 +22,7 @@ en:
         this_cellar: "This cellar"
   sessions:
     new:
-      confirmation_instructions: "Didn't receive confirmation instructions?"
+      confirmation_instructions: "Missing confirmation email?"
       forgot_password: "Forgot your password?"
       link_separator: "or"
       remember_me: "Yes, remember me"
