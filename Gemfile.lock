@@ -1,13 +1,4 @@
 GIT
-  remote: git://github.com/Casecommons/pg_search.git
-  revision: 3039ba615cee79fb022a8275490487e8c30d9847
-  specs:
-    pg_search (0.6.0)
-      activerecord (>= 3.1)
-      activesupport (>= 3.1)
-      arel
-
-GIT
   remote: git://github.com/tylerhunt/brewery_db.git
   revision: c19c42b5716007d6518abdc266eb210f898ccfea
   specs:
@@ -53,21 +44,18 @@ GEM
     bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
     builder (3.0.4)
-    capybara (2.0.3)
+    capybara (2.1.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
-      selenium-webdriver (~> 2.0)
-      xpath (~> 1.0.0)
+      xpath (~> 2.0)
     capybara-webkit (0.14.2)
       capybara (~> 2.0, >= 2.0.2)
       json
     celluloid (0.12.4)
       facter (>= 1.6.12)
       timers (>= 1.0.0)
-    childprocess (0.3.9)
-      ffi (~> 1.0, >= 1.0.11)
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -106,7 +94,6 @@ GEM
       multipart-post (~> 1.1)
     faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)
-    ffi (1.6.0)
     font-awesome-sass-rails (3.0.2.2)
       railties (>= 3.1.1)
       sass-rails (>= 3.1.1)
@@ -124,7 +111,7 @@ GEM
       rubyzip
     heroku-api (0.3.9)
       excon (~> 0.20.1)
-    hike (1.2.1)
+    hike (1.2.2)
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (2.2.1)
@@ -157,7 +144,11 @@ GEM
     newrelic_rpm (3.6.0.78)
     nokogiri (1.5.9)
     orm_adapter (0.4.0)
-    pg (0.15.0)
+    pg (0.15.1)
+    pg_search (0.6.1)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     polyglot (0.3.3)
     pry (0.9.12)
       coderay (~> 1.0.5)
@@ -208,7 +199,7 @@ GEM
     rspec-core (2.13.1)
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.13.0)
+    rspec-mocks (2.13.1)
     rspec-rails (2.13.0)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
@@ -222,11 +213,6 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    selenium-webdriver (2.31.0)
-      childprocess (>= 0.2.5)
-      multi_json (~> 1.0)
-      rubyzip
-      websocket (~> 1.0.4)
     shoulda-matchers (2.0.0)
       activesupport (>= 3.0.0)
     sidekiq (2.9.0)
@@ -271,7 +257,7 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
-    uglifier (1.3.0)
+    uglifier (2.0.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     vcr (2.4.0)
@@ -283,11 +269,10 @@ GEM
     webmock (1.11.0)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
-    websocket (1.0.7)
     with_model (0.3.1)
       activerecord (>= 2.3.5, < 4.0.0)
       rspec (~> 2.11)
-    xpath (1.0.0)
+    xpath (2.0.0)
       nokogiri (~> 1.3)
 
 PLATFORMS
@@ -312,7 +297,7 @@ DEPENDENCIES
   mailcatcher
   newrelic_rpm
   pg
-  pg_search!
+  pg_search
   pry-rails
   pry-remote
   rails (= 3.2.13)
