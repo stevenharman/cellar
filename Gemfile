@@ -8,14 +8,15 @@ gem 'brewery_db', github: 'tylerhunt/brewery_db'
 gem 'devise', '~> 2.1'
 gem 'draper'
 gem 'kaminari'
+gem 'newrelic_rpm'
 gem 'pg'
 gem 'pg_search'
+gem 'rack-timeout'
 gem 'simple_form'
 gem 'slim'
 gem 'sidekiq'
 gem 'sinatra', require: false # for sidekiq monitoring
 gem 'virtus'
-gem 'newrelic_rpm'
 
 group :assets do
   gem 'sass-rails', '~> 3.1'
