@@ -98,4 +98,16 @@ describe Cellar do
     end
   end
 
+  describe '#profile' do
+    let(:profile) { cellar.profile }
+
+    it 'uses the cellar' do
+      expect(profile.cellar).to eq(cellar)
+    end
+
+    it 'uses the keeper' do
+      expect(profile.user).to eq(keeper)
+    end
+  end
+
 end

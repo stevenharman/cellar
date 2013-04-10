@@ -1,5 +1,6 @@
-require_relative 'stock_order_receipt'
 require_relative 'cellared_beer_statistics'
+require_relative 'profile'
+require_relative 'stock_order_receipt'
 
 class Cellar
   attr_reader :keeper, :beer_stats
@@ -13,6 +14,11 @@ class Cellar
     @beer_stats = cellared_beer_stats
   end
 
+  def profile
+    @profile ||= Profile.new(self)
+  end
+
+  # TODO: remove this?
   def name
     keeper.username
   end
