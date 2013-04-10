@@ -15,7 +15,7 @@ You'll need the following dependencies installed:
       gem uninstall pg
       ```
   1.  Install the `pg` gem:
-  
+
       ```bash
       bundle install
       ```
@@ -41,7 +41,24 @@ processes. From terminal:
 echo "SIDEKIQ_CONCURRENCY=25" > .env
 ```
 
+Other _optional_ ENV Vars you can set include:
+
+  - `BREWERY_DB_API_KEY`: key to use to connect to BreweryDB.com. _(Default to
+    our dev key)_
+  - `DATABASE_POOL_SIZE`: set the size of the Sidekiq ActiveRecord connection
+    pool. _(Default = `SIDEKIQ_CONCURRENCY`)_
+  - `DATABASE_REAP_FREQ`: how often (in seconds) the database connection pool
+    should be reaped. _(Default = `10`)_
+  - `DATABASE_URL`: set to mimic the behavior of setting the database
+    connection on Heroku. _(Default to using `config/database.yml`)_
+  - `REDISTOGO_URL`: Redis database to use. _(Default to localhost)_
+  - `UNICORN_BACKLOG`: [tune Unicorn, making Herkou retry other
+    dynos](ttm-unicorn) rather than timing out. _(Default = `200`)_
+  - `WEB_CONCURRENCY`: set the number of [Unicorn](unicorn) worker processes.
+    _(Defaults = `3`)_
+
 ### Updating the app
+
   1.  Update any RubyGem dependencies:
 
       ```bash
@@ -101,3 +118,5 @@ useful.
 [sidekiq]: https://github.com/mperham/sidekiq
 [texticle]: https://tenderlove.github.com/texticle/
 [thoughtbot-css]: http://robots.thoughtbot.com/post/25098505945/style-sheet-swag-architecting-your-applications-styles "Style Sheet Swag: architecting your applications styles"
+[ttm-unicorn]: http://devblog.thinkthroughmath.com/blog/2013/02/27/managing-request-queuing-with-rails-on-heroku/
+[unicorn]: http://unicorn.bogomips.org/

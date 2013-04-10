@@ -23,6 +23,4 @@ Sidekiq.configure_server do |config|
   end
 end
 
-Sidekiq.configure_client do |config|
-  config.redis = { url: ENV['REDISTOGO_URL'], namespace: 'brewdega-cellar', :size => 1 }
-end
+# NOTE: Sidekiq.configure_client is done in config/unicorn.rb's after_fork block
