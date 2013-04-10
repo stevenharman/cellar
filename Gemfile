@@ -11,7 +11,6 @@ gem 'kaminari'
 gem 'newrelic_rpm'
 gem 'pg'
 gem 'pg_search'
-gem 'rack-timeout'
 gem 'simple_form'
 gem 'slim'
 gem 'sidekiq'
@@ -25,6 +24,8 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.0.3'
 end
+
+gem 'rack-timeout', group: :production
 
 group :test do
   gem 'capybara'
