@@ -1,17 +1,11 @@
 class CellarDecorator < ApplicationDecorator
   delegate_all
   decorates_association :keeper, with: UserDecorator
+  decorates_association :profile, with: ProfileDecorator
 
   alias_method :cellar, :source
 
-  def keeper_gravatar(*args)
-    keeper.gravatar(*args)
-  end
-
-  def keeper_bio
-    keeper.bio
-  end
-
+  # TODO: Just put this in the view?
   def full_name
     h.t('cellar.full_name', name: cellar.name)
   end
@@ -24,8 +18,4 @@ class CellarDecorator < ApplicationDecorator
     brews = cellar.cellared_brews.includes(:style).includes(:breweries).decorate
   end
 
-  # TODO: Ensure the user's #website is legit; URI.parse & check protocol & host.
-  def website
-    h.link_to(keeper.website, keeper.website) unless keeper.website.blank?
-  end
 end

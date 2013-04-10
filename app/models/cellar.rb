@@ -27,10 +27,6 @@ class Cellar
     keeper.active?
   end
 
-  def established
-    keeper.joined
-  end
-
   def total_breweries
     keeper.breweries.cellared.count
   end

@@ -1,13 +1,13 @@
 .profile.row-fluid
   .keeper-avatar.span2
-    = profile.keeper_gravatar(128)
+    = profile.gravatar(128)
   .keeper.span10
-    h2.username= profile.name
+    h2.username= profile.username
     dl.demographics
       - if profile.website
         dt
           i.icon-external-link
-        dd.website= profile.website
+        dd.website= link_to(profile.website, profile.website)
       - if profile.location
         dt
           i.icon-map-marker
@@ -15,7 +15,7 @@
       dt
         i.icon-time
       dd.joined
-        = t('.joined_html', date: ldate(profile.established, format: :month_day_year))
+        = t('.joined_html', date: ldate(profile.joined, format: :month_day_year))
     .stats.row-fluid
       dl.beers.span3
         dt Beers
@@ -30,8 +30,8 @@
         dd
           span= profile.total_breweries
           | Total
-      - if profile.keeper_bio
+      - if profile.bio
         dl.bio.span6
           dt Info
-          dd= simple_format(profile.keeper_bio)
+          dd= simple_format(profile.bio)
 
