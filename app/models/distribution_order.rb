@@ -32,7 +32,7 @@ class DistributionOrder
   def successful?
     beer &&
     beer.valid? &&
-    beer.status == status
+    beer.public_send("#{status}?")
   end
 
   def persisted?; false; end
