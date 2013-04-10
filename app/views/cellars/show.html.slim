@@ -2,42 +2,7 @@
   = @cellar.full_name
 
 article.cellar
-  .dashboard.row-fluid
-    .keeper-gravatar.span2
-      = @cellar.keeper_gravatar(128)
-    .keeper.span10
-      h2.username= @cellar.name
-      dl.demographics
-        - if @cellar.website
-          dt
-            i.icon-external-link
-          dd= @cellar.website
-        - if @cellar.location
-          dt
-            i.icon-map-marker
-          dd= @cellar.location
-        dt
-          i.icon-time
-        dd.joined
-          = t('cellar.users.joined_html', date: ldate(@cellar.established, format: :month_day_year))
-      .stats.row-fluid
-        dl.beers.span3
-          dt Beers
-          dd
-            span= @cellar.beers_count
-            | Total
-          dd
-            span= @cellar.brews_count
-            | Unique
-        dl.breweries.span2
-          dt Breweries
-          dd
-            span= @cellar.total_breweries
-            | Total
-        - if @cellar.keeper_bio
-          dl.bio.span6
-            dt Info
-            dd= simple_format(@cellar.keeper_bio)
+  == render 'shared/profile', profile: @cellar
   fieldset.beers-cellared.row-fluid
     legend Cellared Beers
     ul.cards
