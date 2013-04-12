@@ -8,7 +8,8 @@ ul.cards {
     @extend .thumbnail;
     background-color: $tableBackground;
     border-color: $tableBorder;
-
+    border: 0px;
+    padding: 10px;
 
     //height: 9em;
   }
@@ -21,7 +22,7 @@ article.brew {
 
   figure {
     float: left;
-    margin: 0;
+    margin: 0 10px 0 0;
     vertical-align: top;
 
     img {
@@ -50,8 +51,7 @@ article.brew {
 
   .breweries {
     color: $lightBrown;
-    margin-left: 0.5em;
-    margin-top: -0.5em;
+    margin-left: 0.25em;
     @include text-overflow;
 
     .separator:last-of-type { display: none; }
@@ -62,7 +62,8 @@ article.brew {
 
     dt {
       color: $lightBrown;
-      text-transform: lowercase;
+      text-transform: uppercase;
+      font-size: .8em;
     }
     dd {
       margin-right: 0.5em;
@@ -78,13 +79,14 @@ article.brew {
     }
     dd {
       font-size: 2em;
+      font-family: $smallFontFamily;
       margin-right: 1em;
       vertical-align: text-top;
     }
   }
 
   .details {
-    margin: 0;
+    margin: 0 0 0 0.25em;
     position: absolute;
     bottom: 0;
 
