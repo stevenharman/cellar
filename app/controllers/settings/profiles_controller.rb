@@ -5,6 +5,7 @@ module Settings
 
     def show
       @profile = Profile.new(current_cellar)
+      respond_with(@profile)
     end
 
     def update

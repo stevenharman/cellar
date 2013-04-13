@@ -9,11 +9,11 @@ class ConfirmationsController < ApplicationController
   def create
     @user = User.send_confirmation_instructions(user_params)
 
-    if @user.errors.empty?
+    if @user.valid?
       flash[:notice] = t('flash.confirmations.create.notice')
       respond_with({}, location: new_user_session_path)
     else
-      flash[:alert] = t('flash.confirmations.create.alert')
+      flash.now[:alert] = t('flash.confirmations.create.alert')
       respond_with(@user)
     end
   end
@@ -28,7 +28,7 @@ class ConfirmationsController < ApplicationController
         format.html { redirect_to after_sign_in_path_for(@user) }
       end
     else
-      flash[:alert] = t('flash.confirmations.show.alert')
+      flash.now[:alert] = t('flash.confirmations.show.alert')
       respond_with(@user.errors, status: :unprocessable_entity) do |format|
         format.html { render :new }
       end
