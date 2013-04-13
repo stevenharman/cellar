@@ -1,5 +1,7 @@
 article.user-profile
   == render 'shared/profile', profile: @profile
-  = simple_form_for(:user, url: settings_profile_path, method: :put) do |f|
+  = simple_form_for(@profile, url: settings_profile_path, method: :put) do |f|
     = f.input :website
+    = f.input :location
+    = f.input :bio, as: :text, input_html: {rows: 10}
     = f.submit t('.update_button'), class: 'update-profile btn'

@@ -6,11 +6,16 @@ feature 'Updating settings', :feature, :slow do
   scenario 'User can update their profile' do
     visit_profile_page(bob)
     update_profile(
-      website: 'http://boblawblog.com'
+      bio: 'My name is Bob. I blog. About law.',
+      location: 'Atlanta, GA',
+      website: 'http://boblawblog.com',
     )
 
-    pending('Driving it out from here')
-    expect_profile_to_include(website: 'http://boblawblog.com')
+    expect_profile_to_include(
+      bio: 'My name is Bob. I blog. About law.',
+      location: 'Atlanta, GA',
+      website: 'http://boblawblog.com',
+    )
   end
 
   private
@@ -21,15 +26,15 @@ feature 'Updating settings', :feature, :slow do
 
   def update_profile(info)
     info.each do |field, value|
-      fill_in "user_#{field}", with: value
+      fill_in "profile_#{field}", with: value
     end
 
-    find('.update-profile.btn')
+    find('.update-profile.btn').click
   end
 
   def expect_profile_to_include(info)
     info.each do |field, value|
-      expect(page).to have_css(".profile .demographics .#{field}", text: value)
+      expect(page).to have_css(".profile .#{field}", text: value)
     end
   end
 end

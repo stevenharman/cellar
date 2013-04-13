@@ -13,6 +13,7 @@ en:
   stock_orders:
     missing_brew: "Oh no, we couldn't find the Beer you were trying to stock!"
     success: "Huzzah! We added %{count} %{name} to your cellar."
+
   brews:
     card:
       breweries:
@@ -20,6 +21,7 @@ en:
       inventory:
         all_cellars: "All cellars"
         this_cellar: "This cellar"
+
   sessions:
     new:
       confirmation_instructions: "Missing confirmation email?"
@@ -27,10 +29,12 @@ en:
       link_separator: "or"
       remember_me: "Yes, remember me"
       sign_up_html: "Don't have an account? %{link} for one now!"
+
   settings:
     profiles:
       show:
         update_button: "Update"
+
   shared:
     page-header:
       browse: "Browse"
@@ -46,6 +50,13 @@ en:
         placeholder: "Find a beer or brewery..."
     profile:
       joined_html: "Joined on %{date}"
+
+  flash:
+    profile:
+      update:
+        alert: "Whoops! There was a problem updating your profile."
+        notice: "Thanks! Your profile has been updated."
+
   cellar:
     brewdega: "Brewdega"
     full_tagline: "Cellar at Brewdega: Stock up. Drink up."
