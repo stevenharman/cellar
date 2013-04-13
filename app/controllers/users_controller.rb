@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to root_path, notice: t('cellar.registrations.signed_up_but_unconfirmed', email: @user.email)
+      redirect_to root_path, notice: t('flash.users.create.notice', email: @user.email)
     else
       render :new
     end

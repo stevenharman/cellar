@@ -10,10 +10,10 @@ class ConfirmationsController < ApplicationController
     @user = User.send_confirmation_instructions(user_params)
 
     if @user.errors.empty?
-      flash[:notice] = t('cellar.confirmations.instructions_sent')
+      flash[:notice] = t('flash.confirmations.create.notice')
       respond_with({}, location: new_user_session_path)
     else
-      flash[:alert] = @user.errors.full_messages.join(', ')
+      flash[:alert] = t('flash.confirmations.create.alert')
       respond_with(@user)
     end
   end
@@ -21,14 +21,14 @@ class ConfirmationsController < ApplicationController
   def show
     @user = User.confirm_by_token(params[:confirmation_token])
 
-    if @user.errors.empty?
+    if @user.valid?
       sign_in(@user)
-      flash[:notice] = t('cellar.confirmations.confirmed', username: @user.username)
+      flash[:notice] = t('flash.confirmations.show.notice', username: @user.username)
       respond_with(@user) do |format|
         format.html { redirect_to after_sign_in_path_for(@user) }
       end
     else
-      flash[:alert] = @user.errors.full_messages.join(', ')
+      flash[:alert] = t('flash.confirmations.show.alert')
       respond_with(@user.errors, status: :unprocessable_entity) do |format|
         format.html { render :new }
       end

@@ -52,10 +52,28 @@ en:
       joined_html: "Joined on %{date}"
 
   flash:
+
     profile:
       update:
         alert: "Whoops! There was a problem updating your profile."
         notice: "Thanks! Your profile has been updated."
+
+    confirmations:
+      create:
+        notice: >
+          You will receive an email with instructions about how to confirm your
+          account in a few minutes.
+        alert: "Whoops! There was a sending your confirmation instructions."
+      show:
+        notice: >
+          Hello %{username}, your account was confirmed and you are now signed in.
+        alert: "Whoops! There was a problem confirming your email."
+
+    users:
+      create:
+        notice: >
+          We have sent a confirmation email to '%{email}' -- please follow the
+          instructions in it.
 
   cellar:
     brewdega: "Brewdega"
@@ -67,14 +85,5 @@ en:
     sign_up: "Sign up"
     tagline: "Stock up. Drink up."
     confirmations:
-      confirmed: >
-        Hello %{username}, your account was confirmed and you are now signed in.
       resend_button: "Resend confirmation instructions"
-      instructions_sent: >
-        You will receive an email with instructions about how to confirm your
-        account in a few minutes.
-    registrations:
-      signed_up_but_unconfirmed: >
-        We have sent a confirmation email to '%{email}' -- please follow the
-        instructions in it.
 

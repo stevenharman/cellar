@@ -33,13 +33,13 @@ feature 'Signing up', :feature, :slow do
 
   def expect_user_to_be_unconfirmed(email)
     expect(User.find_by_email(email)).not_to be_confirmed
-    expect(page).to have_content(I18n.t('cellar.registrations.signed_up_but_unconfirmed', email: email))
+    expect(page).to have_content(I18n.t('flash.users.create.notice', email: email))
   end
 
   def expect_user_to_be_confirmed(email)
     user = User.find_by_email(email)
     expect(user).to be_confirmed
-    expect(page).to have_content(I18n.t('cellar.confirmations.confirmed', username: user.username))
+    expect(page).to have_content(I18n.t('flash.confirmations.show.notice', username: user.username))
   end
 
   def expect_confirmation_required_message
@@ -47,7 +47,7 @@ feature 'Signing up', :feature, :slow do
   end
 
   def expect_confirmation_instructions_sent_message
-    expect(page).to have_text(I18n.t('cellar.confirmations.instructions_sent'))
+    expect(page).to have_text(I18n.t('flash.confirmations.create.notice'))
   end
 
   def request_resend_confirmation_instructions(username)
