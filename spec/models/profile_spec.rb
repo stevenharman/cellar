@@ -28,6 +28,9 @@ describe Profile do
   end
 
   describe 'ActiveModel Lint' do
+    let(:keeper) { double('User', valid?: true, errors: errors) }
+    let(:errors) { ActiveModel::Errors.new(nil) }
+
     it_behaves_like 'ActiveModel'
   end
 end

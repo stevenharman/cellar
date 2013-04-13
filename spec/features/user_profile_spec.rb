@@ -33,8 +33,10 @@ feature 'Updating settings', :feature, :slow do
   end
 
   def expect_profile_to_include(info)
+    expect(current_path).to eq(settings_profile_path)
+
     info.each do |field, value|
-      expect(page).to have_css(".profile .#{field}", text: value)
+      expect(page).to have_css(".profile .keeper .#{field}", text: value)
     end
   end
 end

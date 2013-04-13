@@ -6,6 +6,9 @@
 #    it_behaves_like "ActiveModel"
 
 shared_examples_for 'ActiveModel' do
+  # include `Object#blank?` because it is used deep inside the lint tests, so
+  # we need it for isolated tests. #lolrails
+  require 'active_support/core_ext/object/blank.rb'
   require 'test/unit/assertions'
   require 'active_model/lint'
   include Test::Unit::Assertions

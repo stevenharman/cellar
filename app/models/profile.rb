@@ -4,11 +4,11 @@ class Profile
   extend Forwardable
   extend ActiveModel::Naming
   include ActiveModel::Conversion
-  include ActiveModel::Validations
 
   attr_reader :cellar, :user
   delegate [:beers_count, :brews_count, :total_breweries] => :cellar
   delegate [:bio, :joined, :location, :gravatar, :username, :website] => :user
+  delegate [:valid?, :errors] => :user
 
   def initialize(cellar)
     @cellar = cellar

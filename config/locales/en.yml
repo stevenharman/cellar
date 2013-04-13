@@ -32,7 +32,7 @@ en:
 
   settings:
     profiles:
-      show:
+      edit:
         update_button: "Update"
 
   shared:

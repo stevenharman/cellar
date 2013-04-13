@@ -8,8 +8,9 @@ BrewdegaCellar::Application.routes.draw do
 
     resource :confirmation, only: [:new, :create, :show]
     namespace :settings do
-      resource :profile, only: [:show, :update]
       resource :password, only: [:new, :create, :edit, :update]
+      get      'profile' => 'profiles#edit'
+      resource :profile, only: [:update]
     end
   end
 

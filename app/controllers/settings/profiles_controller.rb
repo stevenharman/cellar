@@ -3,7 +3,7 @@ module Settings
     before_filter :authenticate_user!
     respond_to :html
 
-    def show
+    def edit
       @profile = Profile.new(current_cellar)
       respond_with(@profile)
     end
@@ -13,12 +13,11 @@ module Settings
 
       if @profile.update(profile_params)
         flash[:notice] = t('flash.profile.update.notice')
-        respond_with @profile, location: settings_profile_path
       else
         flash.now[:alert] = t('flash.profile.update.alert')
-        render :show, status: :unprocessable_entity
       end
 
+      respond_with @profile, location: settings_profile_path
     end
 
     private
