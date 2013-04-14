@@ -1,8 +1,8 @@
 article.user-profile
   == render 'shared/profile', profile: @profile
   .row-fluid
-    nav.settings.span3
-      ul
+    nav.settings
+      ul.span3
         li.profile= link_to(t('settings.profile_link'), settings_profile_path)
         li.password= link_to(t('settings.password_link'), '#')
     = simple_form_for(@profile, url: settings_profile_path, method: :put, html: {class: 'span9 row-fluid'}) do |f|
