@@ -4,7 +4,7 @@ class StockOrdersController < ApplicationController
 
   def new
     brew = Brew.find_by_id(params[:brew])
-    return redirect_to brews_path, alert: t('stock_orders.missing_brew') unless brew
+    return redirect_to brews_path, alert: t('flash.stock_orders.new.alert') unless brew
 
     @order = StockOrder.new(brew: brew)
   end
@@ -14,9 +14,9 @@ class StockOrdersController < ApplicationController
     receipt = Clerk.new(current_cellar).procure(@order)
 
     if receipt.valid?
-      flash[:notice] = t('stock_orders.success', count: @order.count, name: @order.brew_name)
+      flash[:notice] = create_message(:notice, @order)
     else
-      flash.now[:alert] = "Oops! #{receipt.error_messages.join(", ")}"
+      flash.now[:alert] = create_message(:alert, @order)
     end
 
     respond_with(receipt, location: cellar_path(current_user))
@@ -26,6 +26,10 @@ class StockOrdersController < ApplicationController
 
   def stock_order_params
     params[:stock_order]
+  end
+
+  def create_message(key, order)
+    t("flash.stock_orders.create.#{key}", count: order.count, name: order.brew_name)
   end
 
 end

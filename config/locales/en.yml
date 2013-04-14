@@ -10,10 +10,6 @@ en:
       month_day_year: "%b %d, %Y"
       month_year: "%b %Y"
 
-  stock_orders:
-    missing_brew: "Oh no, we couldn't find the Beer you were trying to stock!"
-    success: "Huzzah! We added %{count} %{name} to your cellar."
-
   brews:
     card:
       breweries:
@@ -36,7 +32,7 @@ en:
 
     profiles:
       link: 'Edit profile'
-      title: 'Your profile'
+      title: 'My profile'
       edit:
         update_button: "Update"
 
@@ -79,6 +75,13 @@ en:
         notice: >
           We have sent a confirmation email to '%{email}' -- please follow the
           instructions in it.
+
+    stock_orders:
+      new:
+        alert: "Oh no, we couldn't find the Beer you were trying to stock!"
+      create:
+        notice: "Huzzah! We added %{count} %{name} to your cellar."
+        alert: "Woops! There was a problem stocking those %{count} %{name}."
 
   cellar:
     brewdega: "Brewdega"
