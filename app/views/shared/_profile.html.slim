@@ -4,11 +4,11 @@
   .keeper.span10
     h2.username= profile.username
     dl.demographics
-      - if profile.website
+      - if profile.website?
         dt
           i.icon-external-link
         dd.website= link_to(profile.website, profile.website)
-      - if profile.location
+      - if profile.location?
         dt
           i.icon-map-marker
         dd.location= profile.location
@@ -30,7 +30,7 @@
         dd
           span= profile.total_breweries
           | Total
-      - if profile.bio
+      - if profile.bio?
         dl.bio.span6
           dt Info
           dd= simple_format(profile.bio)

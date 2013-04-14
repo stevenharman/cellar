@@ -25,6 +25,18 @@ class Profile
     user.update_attributes(profile_args)
   end
 
+  def bio?
+    bio.present?
+  end
+
+  def location?
+    location.present?
+  end
+
+  def website?
+    website.present?
+  end
+
   def persisted?
     false
   end
