@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 
   validates :email, uniqueness: true, presence: true, email: true
   validates :username, uniqueness: true, presence: true
+  validates :website, url: true, allow_blank: true
   validates :password, presence: { if: :password_required? },
                        length: { in: 8...128, if: 'password.present?' }
 
@@ -39,6 +40,11 @@ class User < ActiveRecord::Base
 
   def joined
     created_at
+  end
+
+  def website=(value)
+    value = Website.parse(value) unless value.blank?
+    write_attribute(:website, value)
   end
 
   # Public: Delegate to other's #model if it is a Draper decorator

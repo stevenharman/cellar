@@ -46,6 +46,25 @@ describe User do
     end
   end
 
+  describe '#website=' do
+    let(:bob) { User.new(website: 'http://example.com') }
+
+    it 'updates the website' do
+      bob.website = 'brewdega.com'
+      expect(bob.website).to eq('http://brewdega.com')
+    end
+
+    it 'clears out existing values when empty is given' do
+      bob.website = ''
+      expect(bob.website).to be_empty
+    end
+
+    it 'clears out existing values when nil is given' do
+      bob.website = nil
+      expect(bob.website).to be_nil
+    end
+  end
+
   describe '.for_username!' do
     context 'with user whom exists' do
       let!(:bob) { FactoryGirl.create(:bob) }
