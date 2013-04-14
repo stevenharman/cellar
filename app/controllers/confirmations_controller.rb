@@ -24,14 +24,10 @@ class ConfirmationsController < ApplicationController
     if @user.valid?
       sign_in(@user)
       flash[:notice] = t('flash.confirmations.show.notice', username: @user.username)
-      respond_with(@user) do |format|
-        format.html { redirect_to after_sign_in_path_for(@user) }
-      end
+      redirect_to after_sign_in_path_for(@user)
     else
       flash.now[:alert] = t('flash.confirmations.show.alert')
-      respond_with(@user.errors, status: :unprocessable_entity) do |format|
-        format.html { render :new }
-      end
+      render :new
     end
   end
 
