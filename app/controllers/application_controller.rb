@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   end
 
   def not_authenticated
-    redirect_to new_user_session_path, :alert => 'Please sign in first.'
+    redirect_to new_user_session_path, :alert => t('flash.application.must_sign_in')
   end
 
   def redirect_if_already_signed_in

@@ -7,9 +7,9 @@ class DistributionOrdersController < ApplicationController
     @order = Clerk.new(current_cellar).distribute(@order)
 
     if @order.successful?
-      flash[:notice] = "That #{@order.brew_name} was #{@order.status}!"
+      flash[:notice] = notice_message(@order)
     else
-      flash[:alert] = @order.errors.full_messages.join(". ")
+      flash[:alert] = alert_message(@order)
     end
 
     respond_with @order, location: brew_path(@order.brew) do |format|
@@ -21,6 +21,15 @@ class DistributionOrdersController < ApplicationController
 
   def distribution_params
     params.slice(:beer_id, :status)
+  end
+
+  def notice_message(order)
+    t('flash.distribution_orders.update.notice', name: order.brew_name, status: order.status)
+  end
+
+  def alert_message(order)
+    errors = order.errors.full_messages.join('. ')
+    t('flash.distribution_orders.update.alert_html', errors: errors).html_safe
   end
 
 end

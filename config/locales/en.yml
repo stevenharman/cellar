@@ -54,6 +54,16 @@ en:
 
   flash:
 
+    application:
+      must_sign_in: 'Please sign in first.'
+
+    distribution_orders:
+      update:
+        alert_html: >
+          <h4>Whoops! There was a problem updating that beer.</h4>
+          %{errors}
+        notice: "That %{name} was %{status}."
+
     profile:
       update:
         alert: "Whoops! There was a problem updating your profile."
@@ -75,6 +85,12 @@ en:
         notice: >
           We have sent a confirmation email to '%{email}' -- please follow the
           instructions in it.
+
+    sessions:
+      create:
+        notice: "Hello %{name}. Welcome back to the Cellar."
+      destroy:
+        notice: "You have been signed out."
 
     stock_orders:
       new:
