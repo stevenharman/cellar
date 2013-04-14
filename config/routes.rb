@@ -33,7 +33,7 @@ BrewdegaCellar::Application.routes.draw do
   resources :webhooks, controller: :web_hooks, only: [:create]
 
   require 'sidekiq/web'
-  mount Sidekiq::Web => '/secret-sidekiq'
+  mount Sidekiq::Web => '/secret-sidekiq', constraints: Constraint::Admin.new
 
   get '/:username' => 'cellars#show', as: :cellar
 
