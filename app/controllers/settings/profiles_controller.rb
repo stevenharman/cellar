@@ -4,12 +4,12 @@ module Settings
     respond_to :html
 
     def edit
-      @profile = Profile.new(current_cellar)
+      @profile = Profile.for(current_cellar)
       respond_with(@profile)
     end
 
     def update
-      @profile = Profile.new(current_cellar)
+      @profile = Profile.for(current_cellar)
 
       if @profile.update(profile_params)
         flash[:notice] = t('flash.profile.update.notice')

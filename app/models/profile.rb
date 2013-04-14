@@ -10,6 +10,10 @@ class Profile
   delegate [:bio, :joined, :location, :gravatar, :username, :website] => :user
   delegate [:valid?, :errors] => :user
 
+  def self.for(cellar)
+    new(cellar)
+  end
+
   def initialize(cellar)
     @cellar = cellar
     @user = cellar.keeper
