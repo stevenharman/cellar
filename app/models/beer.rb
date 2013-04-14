@@ -2,14 +2,13 @@ class Beer < ActiveRecord::Base
   belongs_to :brew, inverse_of: :beers
   belongs_to :user, inverse_of: :beers
 
-  ALLOWED_STATUSES = [:cellared, :drunk, :traded, :skunked].freeze
+  ALLOWED_STATUSES = %w(cellared drunk traded skunked).freeze
 
   validates :brew, presence: true
   validates :user, presence: true
   validates :status, inclusion: ALLOWED_STATUSES
 
-  #TODO: remove :status from attr_accessible
-  attr_accessible :batch, :bottled_on, :best_by, :status
+  attr_accessible :batch, :bottled_on, :best_by
 
   scope :cellared, where(status: :cellared)
   scope :drunk, where(status: :drunk)
@@ -24,14 +23,6 @@ class Beer < ActiveRecord::Base
     define_method("#{s}?") do
       self.status == s
     end
-  end
-
-  def status
-    read_attribute(:status).to_sym
-  end
-
-  def status=(value)
-    write_attribute(:status, value.to_s)
   end
 
   def update_status(value)
