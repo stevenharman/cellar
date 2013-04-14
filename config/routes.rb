@@ -7,6 +7,8 @@ BrewdegaCellar::Application.routes.draw do
     delete 'sign_out' => 'sessions#destroy', as: :destroy_user_session
 
     resource :confirmation, only: [:new, :create, :show]
+
+    get 'settings' => redirect('/settings/profile')
     namespace :settings do
       resource :password_reset, only: [:new, :create, :edit, :update]
       get      'profile' => 'profiles#edit'
