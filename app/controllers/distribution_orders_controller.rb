@@ -12,7 +12,9 @@ class DistributionOrdersController < ApplicationController
       flash[:alert] = @order.errors.full_messages.join(". ")
     end
 
-    respond_with @order, location: brew_path(@order.brew)
+    respond_with @order, location: brew_path(@order.brew) do |format|
+      format.html { redirect_to brew_path(@order.brew) }
+    end
   end
 
   private

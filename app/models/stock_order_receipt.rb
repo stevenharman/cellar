@@ -8,8 +8,12 @@ class StockOrderReceipt
     @example_beer ||= @beers.first
   end
 
+  def errors
+    example_beer.errors
+  end
+
   def error_messages
-    example_beer.errors.full_messages
+    errors.full_messages
   end
 
   def valid?

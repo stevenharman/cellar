@@ -28,9 +28,10 @@ describe DistributionOrder do
   end
 
   describe '#successful?' do
-    let(:beer) { double('Beer', valid?: true, traded?: true) }
+    let(:beer) { double('Beer', valid?: true, traded?: true, errors: errors) }
+    let(:errors) { ActiveModel::Errors.new(nil) }
 
-    it 'is successful when the beer is valid and its status is the ordered status' do
+    it 'is successful when the beer is valid' do
       order = described_class.new(beer: beer, status: 'traded')
       expect(order).to be_successful
     end
@@ -42,12 +43,8 @@ describe DistributionOrder do
 
     it 'is unsuccessful when the beer is invalid' do
       beer.stub(:valid?) { false }
-      order = described_class.new(beer: beer, status: 'traded')
-      expect(order).not_to be_successful
-    end
+      beer.errors.add(:base, 'It is broke')
 
-    it 'is unsuccessful when the beers status is not the distribution status' do
-      beer.stub(:traded?) { false }
       order = described_class.new(beer: beer, status: 'traded')
       expect(order).not_to be_successful
     end
