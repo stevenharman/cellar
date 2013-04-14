@@ -2,8 +2,8 @@
   = f.input :username, required: false, input_html: { autofocus: true }
   = f.input :password
   = f.input :remember_me, as: :boolean, label: false, inline_label: t('.remember_me')
-  p
-    =' link_to(t('.forgot_password'), new_settings_password_path)
+  e
+    =' link_to(t('.forgot_password'), new_settings_password_reset_path)
     =' t('.link_separator')
     = link_to(t('.confirmation_instructions'), new_confirmation_path, class: 'resend-confirmation')
   = f.button :submit, t('cellar.sign_in')
