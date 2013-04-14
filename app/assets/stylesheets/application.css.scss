@@ -123,25 +123,3 @@
   }
 }
 
-.widget{
-  @include border-radius(3px);
-  background-color: #fec846;
-  font-size: 0.85em;
-  padding: 6px 15px 6px 15px;
-
-  h3 {
-    font-size: 1.4em;
-  }
-
-  ul {
-    list-style: none;
-    margin-left: 0px;
-    li {
-      border-bottom: 1px dotted #968883;
-      color: $brown;
-      font-size: 11px;
-      padding: 6px 0 6px 0;
-    }
-  }
-}
-

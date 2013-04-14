@@ -36,7 +36,7 @@ feature 'Updating settings', :feature, :slow do
     expect(current_path).to eq(settings_profile_path)
 
     info.each do |field, value|
-      expect(page).to have_css(".profile .keeper .#{field}", text: value)
+      expect(page).to have_css(".profile-box .keeper .#{field}", text: value)
     end
   end
 end
