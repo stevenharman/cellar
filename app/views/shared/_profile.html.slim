@@ -2,7 +2,9 @@
   .keeper-avatar.span2
     = profile.gravatar(128)
   .keeper.span10
-    h2.username= profile.username
+    h2.username
+      = profile.username
+      small= profile.name
     dl.demographics
       - if profile.website?
         dt

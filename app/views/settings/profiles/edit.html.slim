@@ -6,6 +6,7 @@
 
 = simple_form_for(@profile, url: settings_profile_path, method: :put, html: {class: 'span9 row-fluid'}) do |f|
   .span6
+    = f.input :name, required: false, input_html: {class: 'span11'}
     = f.input :website, required: false, input_html: {class: 'span11'}
     = f.input :location, required: false, input_html: {class: 'span11'}
   = f.input :bio, as: :text, required: false, input_html: {rows: 10, class: 'span6'}

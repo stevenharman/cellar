@@ -24,7 +24,7 @@ module Settings
     private
 
     def profile_params
-      params[:profile].slice(:bio, :location, :website)
+      params[:profile].slice(:bio, :location, :name, :website)
     end
   end
 end

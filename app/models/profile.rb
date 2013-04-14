@@ -7,7 +7,7 @@ class Profile
 
   attr_reader :cellar, :user
   delegate [:beers_count, :brews_count, :total_breweries] => :cellar
-  delegate [:bio, :joined, :location, :gravatar, :username, :website] => :user
+  delegate [:bio, :gravatar, :joined, :location, :name, :username, :website] => :user
   delegate [:valid?, :errors] => :user
 
   def self.for(cellar)

@@ -8,6 +8,7 @@ feature 'Updating settings', :feature, :slow do
     update_profile(
       bio: 'My name is Bob. I blog. About law.',
       location: 'Atlanta, GA',
+      name: 'Bob Bobberson',
       website: 'http://boblawblog.com',
     )
 

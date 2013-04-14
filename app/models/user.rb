@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
     :trackable, :confirmable
 
-  attr_accessible :bio, :email, :location, :password, :remember_me, :username, :website
+  attr_accessible :bio, :email, :location, :name, :password, :remember_me,
+                  :username, :website
+
   has_many :beers, inverse_of: :user
   has_many :brews, through: :beers, uniq: true
   has_many :breweries, through: :brews, uniq: true
