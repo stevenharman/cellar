@@ -1,7 +1,13 @@
 article.user-profile
   == render 'shared/profile', profile: @profile
-  = simple_form_for(@profile, url: settings_profile_path, method: :put) do |f|
-    = f.input :website
-    = f.input :location
-    = f.input :bio, as: :text, input_html: {rows: 10}
-    = f.submit t('.update_button'), class: 'update-profile btn'
+  .row-fluid
+    nav.settings.span3
+      ul
+        li.profile= link_to(t('settings.profile_link'), settings_profile_path)
+        li.password= link_to(t('settings.password_link'), '#')
+    = simple_form_for(@profile, url: settings_profile_path, method: :put, html: {class: 'span9 row-fluid'}) do |f|
+      .span6
+        = f.input :website, required: false, input_html: {class: 'span11'}
+        = f.input :location, required: false, input_html: {class: 'span11'}
+      = f.input :bio, as: :text, required: false, input_html: {rows: 10, class: 'span6'}
+      = f.submit t('.update_button'), class: 'update-profile btn'

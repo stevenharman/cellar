@@ -13,6 +13,7 @@
               b.caret
             ul.dropdown-menu
               li= link_to(t('cellar.my_cellar'), cellar_path(current_user))
+              li= link_to(t('cellar.settings'), settings_profile_path)
               li= link_to(t('cellar.sign_out'), destroy_user_session_path, method: :delete)
         - else
           li= link_to(new_user_session_path) do

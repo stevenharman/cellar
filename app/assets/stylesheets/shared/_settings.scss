@@ -1,0 +1,24 @@
+nav.settings {
+  text-transform: uppercase;
+
+  ul {
+    border: 1px solid $inputBorder;
+  }
+
+  li {
+    list-style: none;
+    border-bottom: 1px solid $inputBorder;
+    &:last-child { border-bottom: none; }
+
+    a {
+      display: block;
+      padding: 0.5em;
+    }
+
+    &.active {
+      background-color: $brewdega-orange;
+      a { color: #fff; }
+    }
+  }
+
+}

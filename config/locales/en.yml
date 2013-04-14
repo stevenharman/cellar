@@ -31,6 +31,9 @@ en:
       sign_up_html: "Don't have an account? %{link} for one now!"
 
   settings:
+    profile_link: 'Edit profile'
+    password_link: 'Change password'
+
     profiles:
       edit:
         update_button: "Update"
@@ -80,6 +83,7 @@ en:
     full_tagline: "Cellar at Brewdega: Stock up. Drink up."
     full_name: "%{name}'s Cellar"
     my_cellar: "My cellar"
+    settings: "My settings"
     sign_in: "Sign in"
     sign_out: "Sign out"
     sign_up: "Sign up"
