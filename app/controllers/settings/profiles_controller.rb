@@ -1,5 +1,6 @@
 module Settings
   class ProfilesController < ApplicationController
+    layout 'settings'
     before_filter :authenticate_user!
     respond_to :html
 

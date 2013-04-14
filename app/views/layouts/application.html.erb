@@ -49,7 +49,7 @@
       </div>
       <%= render 'shared/page-header' %>
       <div class='page-content'>
-        <%= yield %>
+        <%= content_for?(:content) ? yield(:content) : yield %>
       </div>
     </div>
     <%= render 'shared/footer' %>

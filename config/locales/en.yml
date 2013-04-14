@@ -31,10 +31,12 @@ en:
       sign_up_html: "Don't have an account? %{link} for one now!"
 
   settings:
-    profile_link: 'Edit profile'
-    password_link: 'Change password'
+    passwords:
+      link: 'Change password'
 
     profiles:
+      link: 'Edit profile'
+      title: 'Your profile'
       edit:
         update_button: "Update"
 
