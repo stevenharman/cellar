@@ -32,7 +32,6 @@ group :test do
   gem 'capybara-webkit'
   gem 'database_cleaner'
   gem 'with_model'
-  gem 'shoulda-matchers'
   gem 'simplecov', require: false
   gem 'vcr'
   gem 'webmock'

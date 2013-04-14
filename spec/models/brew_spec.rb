@@ -2,19 +2,17 @@ require 'spec_helper'
 
 describe Brew do
 
-  it { should have_many(:breweries) }
-  it { should have_many(:beers) }
+  describe '#calculate_cellared_beers_count' do
+    subject(:brew) { FactoryGirl.create(:brew) }
+    before do
+      FactoryGirl.create(:beer, :cellared, brew: brew)
+      FactoryGirl.create(:beer, :traded, brew: brew)
+    end
 
-  it { should validate_presence_of(:name) }
-  it { should allow_mass_assignment_of(:name) }
+    it 'updates the count of cellared beers for this brew' do
+      brew.calculate_cellared_beers_count
+      expect(brew.cellared_beers_count).to eq(1)
+    end
+  end
 
-  it { should allow_mass_assignment_of(:abv) }
-  it { should validate_numericality_of(:abv) }
-  it { should allow_value(nil).for(:abv) }
-
-  it { should allow_mass_assignment_of(:ibu) }
-  it { should validate_numericality_of(:ibu) }
-  it { should allow_value(nil).for(:ibu) }
-
-  it { should allow_mass_assignment_of(:description) }
 end

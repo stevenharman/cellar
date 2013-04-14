@@ -2,24 +2,12 @@ require 'spec_helper'
 
 describe User do
 
-  it 'validates uniqueness of username' do
-    FactoryGirl.create(:user)
-    expect(User.new).to validate_uniqueness_of(:username)
-  end
-
-  it 'validates uniqueness of email' do
-    FactoryGirl.create(:user)
-    expect(User.new).to validate_uniqueness_of(:email)
-  end
-
   it 'requires password for new user' do
     expect(User.new).to have(1).errors_on(:password)
   end
 
   describe 'an existing user' do
     let(:bob) { FactoryGirl.create(:user) }
-
-    it { expect(bob).to be_valid }
 
     it 'does not require a password' do
       bob.password = nil
@@ -35,13 +23,13 @@ describe User do
   end
 
   describe '#active?' do
+    let(:bob) { User.new }
     it 'is true when they exist in the system' do
-      bob = FactoryGirl.create(:user)
+      bob.stub(:persisted?) { true }
       expect(bob).to be_active
     end
 
     it 'is false when they do not exist in the system' do
-      bob = User.new
       expect(bob).not_to be_active
     end
   end
