@@ -13,6 +13,7 @@
           th Best by
           th Cellared
           th
+          th
       tbody
         - for beer in your_cellar.beers_for(brew)
           tr.beer*{'data-id' => beer.id}
@@ -31,6 +32,9 @@
                     li= button_tag 'Trade', name: 'status', value: :traded, class: 'btn'
                     /li= button_tag 'Share', name: 'status', value: :shared, class: 'btn'
                     li= button_tag 'Skunk', name: 'status', value: :skunked, class: 'btn'
+            td
+              = link_to(edit_cellar_beer_path(beer.user, beer)) do
+                i.icon-circle-arrow-right
         - if brew.beers.empty?
           tr.no-beer
             td colspan='5'

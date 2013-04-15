@@ -1,5 +1,5 @@
 article.beer
-  h2= @beer.brew.name
+  h2= link_to(@beer.brew.name, @beer.brew)
   dt.span2 By
   - for brewery in @beer.brew.breweries do
     dd

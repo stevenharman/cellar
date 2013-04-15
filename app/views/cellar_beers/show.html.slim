@@ -1,5 +1,5 @@
 article.beer
-  h2= @beer.brew.name
+  h2= link_to(@beer.brew.name, @beer.brew)
   dl.details
     dt By
     - for brewery in @beer.brew.breweries do
@@ -9,9 +9,9 @@ article.beer
     dt Batch:
     dd.batch=' @beer.batch
     dt Bottled on:
-    dd.bottled_on=' @beer.bottled_on
+    dd.bottled_on= ldate(@beer.bottled_on, format: :long)
     dt Best by:
-    dd.best_by=' @beer.best_by
+    dd.best_by= ldate(@beer.best_by, format: :long)
     dt Notes:
     dd.notes= simple_format(@beer.notes)
 
