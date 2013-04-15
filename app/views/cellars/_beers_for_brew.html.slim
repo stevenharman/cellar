@@ -33,7 +33,7 @@
                     /li= button_tag 'Share', name: 'status', value: :shared, class: 'btn'
                     li= button_tag 'Skunk', name: 'status', value: :skunked, class: 'btn'
             td
-              = link_to(edit_cellar_beer_path(beer.user, beer)) do
+              = link_to(cellar_beer_path(beer.user, beer)) do
                 i.icon-circle-arrow-right.icon-2x
         - if brew.beers.empty?
           tr.no-beer

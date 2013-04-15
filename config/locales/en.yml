@@ -13,6 +13,9 @@ en:
   cellar_beers:
     show:
       edit_link: 'Edit this beer'
+    edit:
+      cancel: 'Nevermind'
+      update: 'Update'
 
   brews:
     card:
