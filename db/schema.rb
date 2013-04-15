@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130414222139) do
+ActiveRecord::Schema.define(:version => 20130414234415) do
 
   create_table "beers", :force => true do |t|
     t.string   "batch"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20130414222139) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.string   "status",     :default => "cellared"
+    t.text     "notes"
   end
 
   add_index "beers", ["brew_id"], :name => "index_beers_on_brew_id"

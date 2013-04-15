@@ -8,7 +8,7 @@ class Beer < ActiveRecord::Base
   validates :user, presence: true
   validates :status, inclusion: ALLOWED_STATUSES
 
-  attr_accessible :batch, :bottled_on, :best_by
+  attr_accessible :batch, :bottled_on, :best_by, :notes
 
   scope :cellared, where(status: :cellared)
   scope :drunk, where(status: :drunk)

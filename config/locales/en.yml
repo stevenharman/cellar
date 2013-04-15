@@ -10,6 +10,10 @@ en:
       month_day_year: "%b %d, %Y"
       month_year: "%b %Y"
 
+  cellar_beers:
+    show:
+      edit_link: 'Edit this beer'
+
   brews:
     card:
       breweries:
@@ -56,6 +60,11 @@ en:
 
     application:
       must_sign_in: 'Please sign in first.'
+
+    cellar_beers:
+      update:
+        alert: "Whoops! There was a problem updating that %{name}."
+        notice: "We updated that %{name}."
 
     distribution_orders:
       update:

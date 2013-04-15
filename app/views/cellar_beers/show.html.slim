@@ -1,0 +1,18 @@
+article.beer
+  h2= @beer.brew.name
+  dl.details
+    dt By
+    - for brewery in @beer.brew.breweries do
+      dd
+        = link_to brewery.name, brewery, title: brewery.name, class: 'brewery'
+        span.separator= " | "
+    dt Batch:
+    dd.batch=' @beer.batch
+    dt Bottled on:
+    dd.bottled_on=' @beer.bottled_on
+    dt Best by:
+    dd.best_by=' @beer.best_by
+    dt Notes:
+    dd.notes= simple_format(@beer.notes)
+
+  p= link_to(t('.edit_link'), edit_cellar_beer_path())
