@@ -7,8 +7,8 @@
         ul.span3
           li.profile class=(activate_setting('profile'))
             = link_to(t('settings.profiles.link'), settings_profile_path)
-          li.password class=(activate_setting('password'))
-            = link_to(t('settings.passwords.link'), edit_settings_password_change_path)
+          li.password class=(activate_setting('password_change'))
+            = link_to(t('settings.password_changes.link'), settings_password_change_path)
       .span9
         = yield
 

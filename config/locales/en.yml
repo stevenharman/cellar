@@ -47,10 +47,11 @@ en:
       sign_up_html: "Don't have an account? %{link} for one now!"
 
   settings:
-    passwords:
-      link: 'Change password'
-      edit:
-        title: 'Change your password'
+    password_changes:
+      link: "Change password"
+      new:
+        title: "Change your password"
+        button: "Make it so"
 
     profiles:
       link: 'Edit profile'
@@ -78,7 +79,7 @@ en:
         notice: "That %{name} was %{status}."
 
     password_change:
-      update:
+      create:
         alert: "Whoops! There was a problem changing your password"
         notice: "Your password has been changed."
 

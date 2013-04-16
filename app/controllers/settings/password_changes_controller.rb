@@ -4,18 +4,18 @@ module Settings
     before_filter :authenticate_user!
     respond_to :html
 
-    def edit
+    def new
       @password_change = PasswordChange.new(current_user)
       respond_with(@password_change)
     end
 
-    def update
+    def create
       @password_change = PasswordChange.new(current_user)
       if @password_change.call(change_params)
-        flash[:notice] = t('flash.password_change.update.notice')
+        flash[:notice] = t('flash.password_change.create.notice')
         sign_in(current_user, bypass: true)
       else
-        flash.now[:alert] = t('flash.password_change.update.alert')
+        flash.now[:alert] = t('flash.password_change.create.alert')
       end
 
       respond_with(@password_change, location: settings_profile_path)

@@ -9,7 +9,7 @@ feature 'Password change', :feature, :slow do
   end
 
   scenario 'User can reset her own password' do
-    visit edit_settings_password_change_path
+    visit settings_password_change_path
     update_password(current: alice.password, new: new_password)
 
     expect_user_can_sign_in_with_new_password(alice, new_password)

@@ -10,8 +10,11 @@ BrewdegaCellar::Application.routes.draw do
 
     get 'settings' => redirect('/settings/profile')
     namespace :settings do
-      resource :password_change, only: [:edit, :update], path: :password
+      get      'password' => 'password_changes#new', as: :password_change
+      resource :password_change, only: [:create], path: :password
+
       resource :password_reset, only: [:new, :create, :edit, :update]
+
       get      'profile' => 'profiles#edit'
       resource :profile, only: [:update]
     end
