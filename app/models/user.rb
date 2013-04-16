@@ -44,6 +44,13 @@ class User < ActiveRecord::Base
     created_at
   end
 
+  def update_password(new_password)
+    self.password = new_password
+    result = self.save
+    self.password = self.password_confirmation = nil
+    result
+  end
+
   def website=(value)
     value = Website.parse(value) unless value.blank?
     write_attribute(:website, value)

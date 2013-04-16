@@ -34,6 +34,35 @@ describe User do
     end
   end
 
+  describe '#update_password' do
+    let(:bob) { FactoryGirl.create(:bob) }
+    context 'a valid new password' do
+      it 'persists the new password' do
+        expect(bob.update_password('sekret 123')).to be_true
+        expect(bob.reload.valid_password?('sekret 123')).to be_true
+      end
+
+      it 'clears out the password' do
+        bob.update_password('sekret 123')
+        expect(bob.password).to be_nil
+        expect(bob.password_confirmation).to be_nil
+      end
+    end
+
+    context 'an invalid new password' do
+      it 'does not persist the new password' do
+        expect(bob.update_password('abc')).to be_false
+        expect(bob.reload.valid_password?('abc')).to be_false
+      end
+
+      it 'clears out the password' do
+        bob.update_password('abc')
+        expect(bob.password).to be_nil
+        expect(bob.password_confirmation).to be_nil
+      end
+    end
+  end
+
   describe '#website=' do
     let(:bob) { User.new(website: 'http://example.com') }
 

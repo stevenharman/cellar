@@ -10,6 +10,16 @@ en:
       month_day_year: "%b %d, %Y"
       month_year: "%b %Y"
 
+  # ActiveModel
+
+  activemodel:
+    errors:
+      models:
+        settings/password_change:
+          attributes:
+            current:
+              invalid: "does not match"
+
   cellar_beers:
     show:
       edit_link: 'Edit this beer'
