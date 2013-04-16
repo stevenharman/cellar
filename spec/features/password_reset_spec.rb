@@ -1,18 +1,16 @@
 require 'spec_helper'
 
 feature 'Password reset', :feature, :slow do
+  include Acceptance::PasswordHelpers
+
   let(:bob) { FactoryGirl.create(:bob) }
 
   scenario 'User forgot password' do
     request_password_reset(bob)
     visit_reset_password_page(bob)
-    bob.password = submit_new_password('An Sekret!1')
+    new_password = submit_new_password('An Sekret!1')
 
-    sign_out(bob)
-    sign_in(bob)
-
-    page.should have_content 'Welcome back to the Cellar'
-    current_path.should == root_path
+    expect_user_can_sign_in_with_new_password(bob, new_password)
   end
 
   private
@@ -20,7 +18,7 @@ feature 'Password reset', :feature, :slow do
   def request_password_reset(user)
     visit new_settings_password_reset_path
     fill_in 'user_username', with: user.username
-    find('.request-password-reset.btn').click
+    find('.request-password-reset').click
   end
 
   def visit_reset_password_page(user)
@@ -30,7 +28,7 @@ feature 'Password reset', :feature, :slow do
 
   def submit_new_password(new_password)
     fill_in 'user_password', with: new_password
-    find('.change-password.btn').click
+    find('.change-password').click
     new_password
   end
 end
