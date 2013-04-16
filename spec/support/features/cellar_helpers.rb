@@ -1,4 +1,4 @@
-module Acceptance
+module Features
   module CellarHelpers
     def view_brew_page(brew)
       brew_row = find(%(.brew[data-id="#{brew.id}"]))

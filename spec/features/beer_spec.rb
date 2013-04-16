@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'Beers', :feature, :slow do
-  include Acceptance::CellarHelpers
+  include Features::CellarHelpers
   let!(:bob) { sign_in_new_user }
   let(:brew) { FactoryGirl.create(:brew) }
 

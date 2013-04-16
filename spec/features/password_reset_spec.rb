@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'Password reset', :feature, :slow do
-  include Acceptance::PasswordHelpers
+  include Features::PasswordHelpers
 
   let(:bob) { FactoryGirl.create(:bob) }
 

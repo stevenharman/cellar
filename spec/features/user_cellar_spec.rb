@@ -40,7 +40,7 @@ feature "Viewing a user's cellar", :feature, :slow do
 end
 
 feature 'Viewing your own cellar', :feature, :slow do
-  include Acceptance::CellarHelpers
+  include Features::CellarHelpers
   let(:bob) { sign_in_new_user(:bob) }
   let!(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
 
@@ -53,7 +53,7 @@ feature 'Viewing your own cellar', :feature, :slow do
 end
 
 feature 'Removing a beer from the Cellar', :feature, :slow do
-  include Acceptance::CellarHelpers
+  include Features::CellarHelpers
   let(:bob) { sign_in_new_user(:bob) }
   let!(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
   let(:brew) { bobs_beer.brew }

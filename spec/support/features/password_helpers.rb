@@ -1,4 +1,4 @@
-module Acceptance
+module Features
   module PasswordHelpers
 
     def expect_user_can_sign_in_with_new_password(user, password)
