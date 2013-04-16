@@ -1,24 +1,19 @@
 module Settings
-  class ProfilesController < ApplicationController
-    layout 'settings'
-    before_filter :authenticate_user!
+  class ProfilesController < BaseController
     respond_to :html
 
     def edit
-      @profile = Profile.for(current_cellar)
-      respond_with(@profile)
+      respond_with(current_profile)
     end
 
     def update
-      @profile = Profile.for(current_cellar)
-
-      if @profile.update(profile_params)
+      if current_profile.update(profile_params)
         flash[:notice] = t('flash.profile.update.notice')
       else
         flash.now[:alert] = t('flash.profile.update.alert')
       end
 
-      respond_with @profile, location: settings_profile_path
+      respond_with current_profile, location: settings_profile_path
     end
 
     private

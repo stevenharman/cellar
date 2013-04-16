@@ -1,5 +1,5 @@
 - content_for :content do
-  = yield(:top) if content_for?(:top)
+  = render 'shared/profile', profile: current_profile
 
   article.user-settings
     .row-fluid

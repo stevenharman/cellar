@@ -1,10 +1,7 @@
 - content_for :title do
   = t('settings.profiles.title')
 
-- content_for :top do
-  = render 'shared/profile', profile: @profile
-
-= simple_form_for(@profile, url: settings_profile_path, method: :put, html: {class: 'row-fluid'}) do |f|
+= simple_form_for(current_profile, url: settings_profile_path, method: :put, html: {class: 'row-fluid'}) do |f|
   .span6
     = f.input :name, required: false, input_html: {class: 'span11'}
     = f.input :website, required: false, input_html: {class: 'span11'}

@@ -1,7 +1,5 @@
 module Settings
-  class PasswordChangesController < ApplicationController
-    layout 'settings'
-    before_filter :authenticate_user!
+  class PasswordChangesController < BaseController
     respond_to :html
 
     def new
