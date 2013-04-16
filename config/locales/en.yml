@@ -49,6 +49,8 @@ en:
   settings:
     passwords:
       link: 'Change password'
+      edit:
+        title: 'Change your password'
 
     profiles:
       link: 'Edit profile'
@@ -74,6 +76,11 @@ en:
           <h4>Whoops! There was a problem updating that beer.</h4>
           %{errors}
         notice: "That %{name} was %{status}."
+
+    password_change:
+      update:
+        alert: "Whoops! There was a problem changing your password"
+        notice: "Your password has been changed."
 
     profile:
       update:

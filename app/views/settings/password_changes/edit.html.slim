@@ -1,0 +1,5 @@
+h2= t('.title')
+= simple_form_for(@password_change, url: settings_password_change_path, method: :put) do |f|
+  = f.input :current, as: :password, autofocus: true
+  = f.input :new, as: :password
+  = f.submit 'Change my password', class: 'change-password btn btn-success'
