@@ -25,10 +25,10 @@ en:
 
   cellar_beers:
     show:
-      edit_link: 'Edit this beer'
+      edit_link: "Edit this beer"
     edit:
-      cancel: 'Nevermind'
-      update: 'Update'
+      cancel: "Nevermind"
+      update: "Update"
 
   brews:
     card:
@@ -54,8 +54,8 @@ en:
         button: "Make it so"
 
     profiles:
-      link: 'Edit profile'
-      title: 'My profile'
+      link: "Edit profile"
+      title: "My profile"
       edit:
         update_button: "Update"
 
@@ -64,7 +64,7 @@ en:
   flash:
 
     application:
-      must_sign_in: 'Please sign in first.'
+      must_sign_in: "Please sign in first."
 
     cellar_beers:
       update:
