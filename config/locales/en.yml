@@ -20,6 +20,9 @@ en:
             current:
               invalid: "does not match"
 
+
+  # Controllers
+
   cellar_beers:
     show:
       edit_link: 'Edit this beer'
@@ -53,21 +56,7 @@ en:
       edit:
         update_button: "Update"
 
-  shared:
-    page-header:
-      browse: "Browse"
-      blog:
-        text: "Blog"
-        alt_text: "Get updates, news, and banter at the Brewdega blog."
-      contact_us:
-        text: "Contact us"
-        alt_text: "Get in touch with the Brewdega crew."
-      rss_subscribe: "Subscribe to our RSS feed"
-      search:
-        button: "Search"
-        placeholder: "Find a beer or brewery..."
-    profile:
-      joined_html: "Joined on %{date}"
+  # Flash messages
 
   flash:
 
@@ -120,6 +109,26 @@ en:
       create:
         notice: "Huzzah! We added %{count} %{name} to your cellar."
         alert: "Woops! There was a problem stocking those %{count} %{name}."
+
+  # Views
+
+  shared:
+    page-header:
+      browse: "Browse"
+      blog:
+        text: "Blog"
+        alt_text: "Get updates, news, and banter at the Brewdega blog."
+      contact_us:
+        text: "Contact us"
+        alt_text: "Get in touch with the Brewdega crew."
+      rss_subscribe: "Subscribe to our RSS feed"
+      search:
+        button: "Search"
+        placeholder: "Find a beer or brewery..."
+    profile:
+      joined_html: "Joined on %{date}"
+
+  # App-wide
 
   cellar:
     brewdega: "Brewdega"
