@@ -10,4 +10,11 @@ module ApplicationHelper
     end
   end
 
+  def tooltip(text, options = {})
+    {
+      data: { toggle: :tooltip },
+      title: text
+    }.merge(options)
+  end
+
 end

@@ -121,6 +121,10 @@ en:
   # Views
 
   shared:
+    awning:
+      search:
+        button: "Search"
+        placeholder: "Find a beer or brewery..."
     page-header:
       browse: "Browse"
       blog:
@@ -130,9 +134,6 @@ en:
         text: "Contact us"
         alt_text: "Get in touch with the Brewdega crew."
       rss_subscribe: "Subscribe to our RSS feed"
-      search:
-        button: "Search"
-        placeholder: "Find a beer or brewery..."
     profile:
       joined_html: "Joined on %{date}"
 
