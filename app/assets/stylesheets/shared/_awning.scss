@@ -1,5 +1,8 @@
 .awning.navbar {
   $topPadding: 15px;
+  .btn { margin-top: 0; }
+
+  color: white;
 
   .navbar-inner {
     height: $navbarHeight;
@@ -19,8 +22,6 @@
   .search {
     display: inline-block;
     margin-top: $topPadding;
-
-    .search-button { margin-top: 0; }
   }
 
   .current-user-links {
@@ -52,6 +53,12 @@
     .my-profile {
       border-right: 1px solid white;
       padding-right: 0.5em;
+    }
+
+    .sign-in { padding-right: 0.5em; }
+    .sign-up a {
+      @extend .btn;
+      @extend .btn-success
     }
   }
 }

@@ -21,7 +21,9 @@
           li.sign-out= link_to(destroy_user_session_path, tooltip(t('cellar.sign_out'), method: :delete)) do
                 i.icon-signout
         - else
-          li= link_to(new_user_session_path) do
+          li.sign-in= link_to(new_user_session_path) do
             i.icon-signin
             |  #{t('cellar.sign_in')}
-          li= link_to(t('cellar.sign_up'), sign_up_path)
+          li.sign-up
+            ' or
+            = link_to(t('cellar.sign_up'), sign_up_path)
