@@ -11,7 +11,7 @@
       ul.current-user-links
         - if user_signed_in?
           li.my-profile
-            = link_to(cellar_path(current_user)) do
+            = link_to(cellar_path(current_user), tooltip(t('cellar.my_cellar'))) do
               = current_user.gravatar
               = current_user.username
           li.my-cellar= link_to(cellar_path(current_user), tooltip(t('cellar.my_cellar'))) do
