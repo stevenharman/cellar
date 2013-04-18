@@ -1,1 +1,2 @@
-$('#splash-carousel').carousel();
+$ ->
+  $('#splash-carousel').carousel();
