@@ -19,9 +19,29 @@
     span { display: none; }
   }
 
-  .search {
+  .search-indicator {
+    color: white;
+    text-transform: uppercase;
+
+    &:hover, &:focus {
+      text-decoration: none;
+      text-shadow: 0 0 4px white;
+      @include transition(all 0.4s linear);
+    }
+
+    i { margin-right: 0.5em; }
+  }
+
+  .search-box {
     display: inline-block;
     margin-top: $topPadding;
+
+    .search-form-wrapper { display: none; }
+
+    form.search {
+      display: inline-block;
+      margin: 0;
+    }
   }
 
   .current-user-links {

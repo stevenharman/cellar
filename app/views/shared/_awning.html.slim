@@ -4,9 +4,12 @@
       = link_to(root_path, class: 'brand') do
         = image_tag('cellar-sticker.png')
         span= t('cellar.brewdega')
-      = form_tag(search_path, method: :get, class: 'search form-search') do
-        = search_field_tag :q, search_query.q, placeholder: t('.search.placeholder'), class: 'query'
-        = submit_tag t('.search.button'), name: nil, class: 'search-button btn btn-primary'
+      span.search-box
+        = link_to(search_path, class: 'search-indicator') do
+            i.icon-search.icon-large
+            = t('.search.text')
+        span.search-form-wrapper
+          == render 'searches/form', search_query: search_query
 
       ul.current-user-links
         - if user_signed_in?

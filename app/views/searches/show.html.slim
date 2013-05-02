@@ -1,8 +1,8 @@
-article#search-results
+article.search-results
   .row-fluid
-    h2.span6 Search results
-    .search-summary.span6 We found #{number_with_delimiter(@search_result.total_count)} matches
-  .row-fluid
+    .span9.offset1
+      == render 'searches/form', search_query: search_query
+    .search-summary.span2= t('searches.show.summary', count: number_with_delimiter(@search_result.total_count))
 
   table.table.table-striped.table-condensed
     thead

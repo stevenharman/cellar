@@ -21,6 +21,6 @@ feature 'Searching', :feature, :slow do
   end
 
   def expect_results_include(text)
-    expect(find('#search-results')).to have_content(text)
+    expect(find('.search-results')).to have_content(text)
   end
 end

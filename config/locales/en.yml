@@ -38,6 +38,14 @@ en:
         all_cellars: "All cellars"
         this_cellar: "This cellar"
 
+  searches:
+    show:
+      summary: "We found %{count} matches"
+    form:
+      button: "Search"
+      placeholder: "Find a beer or brewery..."
+
+
   sessions:
     new:
       confirmation_instructions: "Missing confirmation email?"
@@ -125,6 +133,7 @@ en:
       search:
         button: "Search"
         placeholder: "Find a beer or brewery..."
+        text: "Search"
     page-header:
       browse: "Browse"
       blog:
