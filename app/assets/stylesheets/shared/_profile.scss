@@ -19,8 +19,9 @@
       margin: 0;
       padding: 0;
       text-transform: none;
+      text-transform: uppercase;
 
-      small { margin-left: 0.5em; }
+      small { margin-left: 0.5em; color: #AB8811; }
     }
     .demographics {
       $text: $brown;
@@ -59,6 +60,7 @@
     dt {
       font-family: $largeFontFamily;
       text-transform: uppercase;
+      letter-spacing: 0px;
     }
     dd {
       border-right: 1px solid $brown;
@@ -66,7 +68,7 @@
       color: $brown;
       display: inline-block;
       font-family: $smallFontFamily;
-      letter-spacing: 1px;
+      font-size: .7em;
       min-height: 3em;
       padding: 0.5em 0.5em 0.25em;
       text-align: center;
@@ -83,12 +85,15 @@
       span {
         display: block;
         color: $brewdega-orange;
-        font-size: 2em;
+        font-size: 2.5em;
       }
     }
     .bio dd {
-      text-align: justify;
       text-transform: none;
+      font-size: .8em;
+      line-height: 1.1em;
+      font-family: Helvetica,Arial,sans-serif;
+      text-align: left;
     }
   }
 

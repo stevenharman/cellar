@@ -92,3 +92,40 @@ dt {
 
 dd { margin-left: 0px; }
 
+textarea, input[type="text"] {
+  background-color: #EBEAE9;
+  border: 0;
+  box-shadow: none;
+}
+
+.settings ul li{
+  font-family: "futura-pt",Helvetica,Arial,sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase; 
+}
+
+.btn-primary {
+  font: bold 13px/24px $smallFontFamily,Helvetica,Arial,Sans-serif;
+  border: none;
+  text-transform: uppercase;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #f2664f;
+  color: #FFF;
+  text-align: center;
+}
+
+.btn {
+  font: bold 13px/24px $smallFontFamily,Helvetica,Arial,Sans-serif;
+  border: none;
+  text-transform: uppercase;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: #f2664f;
+  color: #FFF;
+  text-align: center;
+  text-shadow: none;
+}
+
