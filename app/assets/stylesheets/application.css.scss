@@ -54,29 +54,11 @@
       font-size: 2.1em;
     }
   }
-  .browse {
-    margin-bottom: 10px;
-  }
   .navbar-fixed-top {
     margin-bottom: 0px;
   }
-  .page-header {
-    .search .query {
-      font-size: 1.5em;
-      padding-left: 2.8em;
-    }
-    .logo {
-      margin-top: 0px;
-    }
-  }
   .awning.navbar {
-    .brand {
-      background: image-url('brewdega-logo-icon.png') no-repeat 50% 10px;
-      float: right;
-      width: 50px;
-
-      span { visibility: hidden; }
-    }
+    .brand { display: none; }
   }
 }
 
@@ -98,11 +80,6 @@
       font-size: 2.1em;
       line-height: 1.1em;
     }
-  }
-
-  .page-header {
-    .logo { text-align: center; }
-    .browse { margin-bottom: 10px; }
   }
 
   .navbar-fixed-top {

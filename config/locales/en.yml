@@ -134,15 +134,6 @@ en:
         button: "Search"
         placeholder: "Find a beer or brewery..."
         text: "Search"
-    page-header:
-      browse: "Browse"
-      blog:
-        text: "Blog"
-        alt_text: "Get updates, news, and banter at the Brewdega blog."
-      contact_us:
-        text: "Contact us"
-        alt_text: "Get in touch with the Brewdega crew."
-      rss_subscribe: "Subscribe to our RSS feed"
     profile:
       joined_html: "Joined on %{date}"
 
