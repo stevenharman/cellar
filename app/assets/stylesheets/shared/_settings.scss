@@ -6,8 +6,10 @@ nav.settings {
   }
 
   li {
-    list-style: none;
     border-bottom: 1px solid $inputBorder;
+    font-family: $smallFontFamily;
+    letter-spacing: 1px;
+    list-style: none;
     &:last-child { border-bottom: none; }
 
     a {
