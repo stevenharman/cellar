@@ -3,7 +3,10 @@ $ ->
 
   $('.awning').on('click', '.search-indicator', (event)->
     event.preventDefault()
-    $(this).toggle()
-    $('.awning .search-form-wrapper').toggle()
+    $('.awning .search-indicator').hide()
+    $('.awning .search-form-wrapper').show()
     $('.awning .search .query').focus()
+  ).on('focusout', '.search .query', (event)->
+    $('.awning .search-form-wrapper').hide()
+    $('.awning .search-indicator').show()
   )

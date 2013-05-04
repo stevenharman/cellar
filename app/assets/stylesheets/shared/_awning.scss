@@ -1,5 +1,8 @@
 .awning.navbar {
-  $topPadding: 20px;
+  $top-padding: 20px;
+  $query-top-margin: -0.25 * $top-padding;
+  $avatar-size: 32px;
+
   .btn { margin-top: 0; }
 
   color: white;
@@ -22,14 +25,27 @@
 
   .search-box {
     display: inline-block;
+    line-height: $avatar-size;
     margin-left: 1em;
-    margin-top: $topPadding;
+    margin-top: $top-padding;
+    max-width: 20em;
+    width: 45%;
 
     .search-form-wrapper { display: none; }
 
     form.search {
       display: inline-block;
       margin: 0;
+      width: 100%;
+
+      .query {
+        margin-top: $query-top-margin;
+        width: 100%;
+      }
+
+      .search-button {
+        display: none;
+      }
     }
   }
 
@@ -45,7 +61,7 @@
   .current-user-links {
     float: right;
     list-style: none;
-    padding-top: $topPadding !important;
+    padding-top: $top-padding !important;
 
     a {
       @include transition-glow;
@@ -61,7 +77,7 @@
     }
 
     .avatar {
-      width: 32px;
+      width: $avatar-size;
 
       @include border-radius(2px);
     }
