@@ -57,15 +57,21 @@
   .navbar-fixed-top {
     margin-bottom: 0px;
   }
-  .awning.navbar {
-    .brand { display: none; }
-  }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   .page-container {
     padding: 0 8px 0;
+  }
+
+  .awning.navbar {
+    .brand,
+    .username { display: none; }
+    .my-profile {
+      border: none !important;
+      padding-right: 0 !important;
+    }
   }
 }
 

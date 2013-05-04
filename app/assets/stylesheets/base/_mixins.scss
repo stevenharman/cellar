@@ -28,3 +28,11 @@
     margin-right: 2em;
   }
 }
+
+@mixin transition-glow($property: all, $duration: 0.1s, $timing-function: ease-in) {
+  &:hover, &:focus {
+    text-decoration: none;
+    text-shadow: 0 0 4px white;
+    @include transition($property, $duration, $timing-function);
+  }
+}

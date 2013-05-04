@@ -1,5 +1,5 @@
 .awning.navbar {
-  $topPadding: 15px;
+  $topPadding: 20px;
   .btn { margin-top: 0; }
 
   color: white;
@@ -13,27 +13,16 @@
 
   .brand {
     padding-bottom: 0;
+    padding-right: 0;
     padding-top: 0;
 
     img { height: 80px; }
     span { display: none; }
   }
 
-  .search-indicator {
-    color: white;
-    text-transform: uppercase;
-
-    &:hover, &:focus {
-      text-decoration: none;
-      text-shadow: 0 0 4px white;
-      @include transition(all 0.4s linear);
-    }
-
-    i { margin-right: 0.5em; }
-  }
-
   .search-box {
     display: inline-block;
+    margin-left: 1em;
     margin-top: $topPadding;
 
     .search-form-wrapper { display: none; }
@@ -44,25 +33,27 @@
     }
   }
 
+  .search-indicator {
+    @include transition-glow;
+
+    color: white;
+    text-transform: uppercase;
+
+    i { margin-right: 0.5em; }
+  }
+
   .current-user-links {
-    float:right;
+    float: right;
     list-style: none;
     padding-top: $topPadding !important;
 
     a {
+      @include transition-glow;
+
       color: white;
       padding: 0.5em 0.25em 0.5em 0.25em;
 
       i { font-size: 1.25em; }
-
-      &:hover, &:focus {
-        text-decoration: none;
-
-        & > i {
-          text-shadow: 0 0 4px white;
-          @include transition(all 0.4s linear);
-        }
-      }
     }
 
     li {
@@ -70,11 +61,12 @@
     }
 
     .avatar {
-      margin-right: 1em;
       width: 32px;
 
       @include border-radius(2px);
     }
+
+    .username { margin-left: 1em; }
 
     .my-profile {
       border-right: 1px solid white;
