@@ -26,7 +26,7 @@
             = link_to(t('cellar.sign_up'), sign_up_path)
 
       span.search-box
-        = link_to(search_path, class: 'search-indicator') do
+        = link_to(search_path, class: 'search-indicator', tabindex: 1) do
             i.icon-search.icon-large
             = t('.search.text')
         span.search-form-wrapper
