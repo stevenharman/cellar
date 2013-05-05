@@ -1,74 +1,83 @@
 .profile-box {
-  background-color: #fec846;
-  padding: 1em 0;
+  background-color: $yellow;
+  $text-well-background-color: #f8d47d;
+  $text-well-color: $brown;
+
+  padding: 1em;
   margin-bottom: 1em;
 
   @include border-radius(3px);
 
-  .keeper-avatar {
-    text-align: center;
+  .avatar {
+    float: left;
+    margin-right: 1em;
+    width: 128px;
+    @include border-radius(3px);
+  }
 
-    .avatar {
-      @include border-radius(3px);
+  .bio {
+    $line-height: 1.1em;
+
+    clear: both;
+    color: $text-well-color;
+    font-family: $text-block-font-family;
+    font-size: 0.8em;
+    line-height: $line-height;
+    margin: 0.5em 0 0;
+  }
+
+  .username {
+    color: $brown;
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+
+    small {
+      color: lighten(desaturate($brown, 20%), 15%);
+      margin-left: 0.5em;
+      white-space: nowrap;
+    }
+  }
+  .demographics {
+    $text: $brown;
+    $lighterText: $mutedBrown;
+
+    color: $text;
+    list-style: none;
+    margin: 0;
+    position: relative;
+    top: -0.5em;
+
+    li {
+      display: inline-block;
+      margin-right: 1em;
+    }
+
+    i {
+      color: $lighterText;
+      margin-right: 0.25em;
     }
   }
 
-  .keeper {
-    .username {
-      color: $brown;
-      margin: 0;
-      padding: 0;
-      text-transform: none;
-      text-transform: uppercase;
-
-      small { margin-left: 0.5em; color: #AB8811; }
-    }
-    .demographics {
-      $text: $brown;
-      $lighterText: $mutedBrown;
-
-      margin-top: 0px;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      top: -0.5em;
-
-      @include inline-definition-list;
-
-      dt {
-        color: $lighterText;
-        margin-right: 0.25em;
-        text-align: left;
-      }
-
-      dd {
-        color: $text;
-      }
-
-      .joined {
-        color: $lighterText;
-        time { color: $text; }
-      }
-    }
-  }
   .stats {
     dl {
       color: $brewdega-orange;
+      display: inline-block;
       margin-bottom: 0;
       margin-top: 0;
+      margin-right: 1em;
     }
     dt {
       font-family: $largeFontFamily;
-      text-transform: uppercase;
       letter-spacing: 0px;
     }
     dd {
+      background-color: $text-well-background-color;
       border-right: 1px solid $brown;
-      background-color: #f8d47d;
-      color: $brown;
+      color: $text-well-color;
       display: inline-block;
       font-family: $smallFontFamily;
-      font-size: .7em;
+      font-size: 0.7em;
       min-height: 3em;
       padding: 0.5em 0.5em 0.25em;
       text-align: center;
@@ -83,31 +92,42 @@
       }
 
       span {
-        display: block;
         color: $brewdega-orange;
+        display: block;
         font-size: 2.5em;
       }
     }
-    .bio dd {
-      text-transform: none;
-      font-size: .8em;
-      line-height: 1.1em;
-      font-family: Helvetica,Arial,sans-serif;
-      text-align: left;
-    }
   }
 
-  /* Landscape phone to portrait tablet */
-  @media (max-width: 767px) {
+  /* Portrait phones (including Galaxy) and down */
+  @media (max-width: 380px) {
+    $avatar-width: 80px;
 
-    .keeper {
-      text-align: center;
-      dt { text-align: left; }
+    .avatar {
+      margin-right: 0.5em;
+      width: $avatar-width;
+    }
 
-      .demographics {
+    .username {
+      line-height: 1em;
 
-        @include centered-definition-list();
+      small { display: none; }
+    }
+
+    .demographics {
+      font-family: $smallFontFamily;
+      font-size: 0.8em;
+      top: 0;
+
+      li {
+        line-height: 1em;
       }
     }
+
+    .stats {
+      margin-top: 0.5em;
+    }
+
+    .bio { display: none; }
   }
 }
