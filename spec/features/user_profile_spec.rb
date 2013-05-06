@@ -15,7 +15,7 @@ feature 'Updating settings', :feature, :slow do
     expect_profile_to_include(
       bio: 'My name is Bob. I blog. About law.',
       location: 'Atlanta, GA',
-      website: 'http://boblawblog.com',
+      website: 'boblawblog.com',
     )
   end
 
@@ -37,7 +37,7 @@ feature 'Updating settings', :feature, :slow do
     expect(current_path).to eq(settings_profile_path)
 
     info.each do |field, value|
-      expect(page).to have_css(".profile-box .keeper .#{field}", text: value)
+      expect(page).to have_css(".profile-box .#{field}", text: value)
     end
   end
 end
