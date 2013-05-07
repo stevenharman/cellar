@@ -1,7 +1,7 @@
 module Features
   module CellarHelpers
     def view_brew_page(brew)
-      brew_row = find(%(.brew[data-id="#{brew.id}"]))
+      brew_row = find(%(.brew[data-id="#{brew.id}"] .name))
       brew_row.click_link(brew.name)
     end
 
