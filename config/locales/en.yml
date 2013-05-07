@@ -30,6 +30,10 @@ en:
       cancel: "Nevermind"
       update: "Update"
 
+  breweries:
+    show:
+      legend: "Brews"
+
   brews:
     card:
       inventory:

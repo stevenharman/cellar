@@ -1,0 +1,22 @@
+- content_for :title do
+  = @brewery.name
+
+article.brewery*{'data-id' => @brewery.id}
+  hgroup
+    h2= @brewery.name
+
+  .row-fluid
+    = image_tag(@brewery.large_image || 'http://placehold.it/256x256', alt: @brewery.name, class: :span3)
+    .span9
+      ul.details
+      - if @brewery.website?
+        li.website
+          i.icon-external-link
+          = link_to(@brewery.website_name, @brewery.website, title: @brewery.name)
+
+  fieldset.beers-cellared.row-fluid
+    legend= t('.legend')
+    ul.cards
+      - for brew in @brewery.brews
+        li.span4
+          == render 'brews/card', brew: brew, this_cellar: current_cellar, your_cellar: current_cellar

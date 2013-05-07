@@ -6,7 +6,7 @@ class ProfileDecorator < ApplicationDecorator
   delegate :gravatar, to: :user
 
   def website_name
-    (website || '').gsub(%r{\Ahttps?://}, '')
+    strip_protocol(website)
   end
 
 end
