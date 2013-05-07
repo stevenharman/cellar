@@ -64,15 +64,15 @@ $datepickerGrey: #f7f7f7;
 
 .ui-datepicker-header {
   background-color: $brown;
-  color: $lightBrown;
+  color: $brown-highlight;
   font-weight: bold;
   @include box-shadow(inset 0px 1px 1px 0px rgba(250, 250, 250, .2));
-  text-shadow: 1px -1px 0px $mutedBrown;
+  text-shadow: 1px -1px 0px $brown-accent;
   filter: dropshadow(color=$brown, offx=1, offy=-1);
   line-height: 30px;
   border-width: 1px 0 0 0;
   border-style: solid;
-  border-color: $mutedBrown;
+  border-color: $brown-accent;
 }
 .ui-datepicker-title {
   text-align: center;

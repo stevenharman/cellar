@@ -1,35 +1,40 @@
-article.brew*{'data-id' => brew.id}
-  figure
-    = image_tag(brew.medium_image || 'http://placehold.it/140x140', alt: brew.name)
+article.brew.card*{'data-id' => brew.id}
   .content
-    h3.name= link_to brew.name, brew, title: brew.name
-    .breweries
-      span.by=' t('.breweries.by')
-      - for brewery in brew.breweries do
-        = link_to brewery.name, brewery, title: brewery.name, class: 'brewery'
-        span.separator
-          '  |
-    dl.inventory
-      - if your_cellar.active?
-        dt= t('.inventory.your_cellar')
-        dd.your-cellar-count
-          = your_cellar.beers_count(brew)
+    figure
+      = link_to(brew, title: brew.name) do
+        = image_tag(brew.medium_image || 'http://placehold.it/140x140', alt: brew.name)
+    .make
+      h3.name= link_to(brew.name, brew, title: brew.name)
+      .breweries
+        - for brewery in brew.breweries do
+          = link_to(brewery.name, brewery, title: brewery.name, class: 'brewery')
+          span.separator
+            '  |
+      ul.details
+        li.style
+          i.icon-beer
+          = brew.style_name
+        - if brew.abv.present?
+          li.abv
+            label= t('cellar.brew.abv')
+            | #{brew.abv}%
+        - if brew.ibu.present?
+          li.ibu
+            label= t('cellar.brew.ibu')
+            = brew.ibu
+  .footer
+    ul.inventory
+      li.actions
+        = link_to(brew, title: t('.inventory.actions')) do
+          i.icon-cog
       - unless your_cellar == this_cellar
-        dt= t('.inventory.this_cellar')
-        dd.this-cellar-count
+        li.this-cellar-count
           = this_cellar.beers_count(brew)
-      dt= t('.inventory.all_cellars')
-      dd.all-cellars-count
+          label= t('.inventory.this_cellar')
+      - if your_cellar.active?
+        li.your-cellar-count
+          = your_cellar.beers_count(brew)
+          label= t('.inventory.your_cellar')
+      li.all-cellars-count
         = brew.cellared_beers_count
-    dl.details
-      - if brew.abv.present?
-        dt ABV
-        dd
-          = brew.abv
-          | %
-      - if brew.ibu.present?
-        dt IBU
-        dd= brew.ibu
-      dt.style
-        i.icon-beer
-      dd= brew.style_name
+        label= t('.inventory.all_cellars')

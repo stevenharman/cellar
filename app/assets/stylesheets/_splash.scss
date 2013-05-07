@@ -18,7 +18,7 @@
       }
     }
     small {
-      color: $lightBrown;
+      color: $brown-highlight;
       display: block;
       font-size: 12px;
       line-height: 1em;
@@ -31,7 +31,7 @@
     }
 
     li {
-      border-bottom: 1px dotted $lightBrown;
+      border-bottom: 1px dotted $brown-highlight;
       margin: 0 1em;
       &:last-child { border-bottom: none; }
     }

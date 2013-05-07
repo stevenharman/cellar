@@ -25,7 +25,8 @@
 /* HACK for thumbnails in a fluid grid.
  * see: https://github.com/twitter/bootstrap/issues/3494#issuecomment-9025325 */
 .row-fluid {
-  ul.thumbnails {
+  ul.thumbnails,
+  ul.cards {
     li.span12 + li { margin-left : 0px; }
     li.span6:nth-child(2n + 3) { margin-left : 0px; }
     li.span4:nth-child(3n + 4) { margin-left : 0px; }

@@ -1,110 +1,152 @@
-ul.cards {
+.cards {
   list-style: none;
   margin-left: 0;
 
-  @extend .thumbnails;
-
   .card {
-    @extend .thumbnail;
-    background-color: $tableBackground;
-    border-color: $tableBorder;
-    border: 0px;
-    padding: 10px;
+    background-color: white;
+    border: 1px solid $beige;
+    border-bottom: none;
+    color: $brown;
+    margin-bottom: 1em;
 
-    //height: 9em;
+    @include border-top-radius(4px);
+
+    .content { padding: 0.5em; }
   }
 }
 
-article.brew {
-  $labelWidth: 10em;
-  min-height: $labelWidth;
-  position: relative;
+.brew.card {
+  $label-width: 7em;
 
   figure {
     float: left;
-    margin: 0 10px 0 0;
-    vertical-align: top;
+    margin: 0;
+    width: $label-width;
 
     img {
-      @include border-radius(4px);
-      background-color: $white;
-      border-style: groove;
-      border-width: 1px;
-      width: $labelWidth;
+      background-color: white;
     }
   }
 
-  .content {
-    color: $mutedBrown;
-    margin-left: $labelWidth + 0.5em;
-  }
+  .content { min-height: $label-width; }
 
-  .name {
-    margin: 0;
-    text-transform: none;
+  .make {
+    margin-left: $label-width + 0.5em;
 
-    a {
-      display: block;
-      @include text-overflow;
+    .name {
+      font-family: $largeFontFamily;
+      margin: 0;
+      text-transform: none;
+
+      a {
+        display: block;
+        @include text-overflow;
+      }
     }
-  }
 
-  .breweries {
-    color: $lightBrown;
-    margin-left: 0.25em;
-    @include text-overflow;
-
-    .separator:last-of-type { display: none; }
-  }
-
-  .inventory, .details {
-    @include inline-definition-list;
-
-    dt {
-      color: $lightBrown;
-      text-transform: uppercase;
-      font-size: .8em;
-    }
-    dd {
-      margin-right: 0.5em;
-
-      &:last-of-type { margin-right: 0; }
-    }
-  }
-
-  .inventory {
-    margin: 0.5em 0 0.25em;
-    dt {
-      vertical-align: top;
-    }
-    dd {
-      font-size: 2em;
+    .breweries {
+      color: $brown-highlight;
       font-family: $smallFontFamily;
-      margin-right: 1em;
-      vertical-align: text-top;
+      @include text-overflow;
+
+      .separator:last-of-type { display: none; }
+
+      a {
+        color: $brown;
+        @include clickable;
+      }
     }
   }
 
   .details {
-    margin: 0 0 0 0.25em;
-    position: absolute;
-    bottom: 0;
+    margin: 0;
+    font-family: $text-block-font-family;
 
-    dt { margin-right: 0.25em; }
-  }
+    li {
+      display: inline-block;
+      margin-right: 1em;
 
-  /* Portrait tablet to landscape and desktop, most phones in portrait */
-  @media (min-width: 768px) and (max-width: 979px),
-    (max-width: 380px) {
-    .breweries {
-      margin-left: 0;
-
-      .by { display: none; }
+      > label {
+        color: $brown-highlight;
+        cursor: text;
+        display: inline;
+        font-family: $smallFontFamily;
+        font-size: 0.75em;
+        margin-right: 0.75em;
+      }
     }
 
-    .details {
-      dt.style,
-      dt.style + dd { display: none; }
+    .style {
+      font-size: 0.85em;
+      display: block;
+      margin: 0;
+      @include text-overflow;
+    }
+  }
+
+  .footer {
+    background-color: $beige;
+    clear: both;
+    margin: 0.25em 0 0;
+  }
+
+  .inventory {
+    $footer-height: 1.75em;
+
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+
+    li {
+      color: $brewdega-orange;
+      font-family: $text-block-font-family;
+      font-size: 1.4em;
+      display: inline-block;
+      padding: 0.25em 0.25em 0;
+      border-right: 1px solid white;
+      text-align: center;
+      height: $footer-height;
+      vertical-align: middle;
+    }
+
+    label {
+      color: $brown;
+      cursor: text;
+      font-family: $smallFontFamily;
+      font-size: 0.5em;
+      line-height: 1em;
+      margin: 0;
+    }
+
+    .actions {
+      line-height: $footer-height;
+      padding-left: 0;
+      padding-right: 0;
+
+      a {
+        color: $brown;
+        padding: 0.5em 0.5em 0;
+        @include clickable;
+
+        &:hover { text-decoration: none; }
+      }
+    }
+  }
+
+  /* Landscape phones and down */
+  @media (max-width: 480px) {
+    .name a,
+    .breweries,
+    .style { white-space: normal !important; }
+  }
+}
+
+@media (max-width: 979px) and (min-width: 768px) {
+  /* We are overriding the normal span4 behavior to act like a span 6 */
+  .row-fluid {
+    .cards .span4 {
+      @include grid-fluid-span(6, $fluidGridColumnWidth768, $fluidGridGutterWidth);
+      margin-left: $fluidGridGutterWidth !important;
     }
   }
 }

@@ -29,6 +29,10 @@
   }
 }
 
+@mixin clickable($color: $brewdega-orange) {
+ &:hover { color: $color; }
+}
+
 @mixin transition-glow($property: all, $duration: 0.1s, $timing-function: ease-in) {
   &:hover, &:focus {
     text-decoration: none;
