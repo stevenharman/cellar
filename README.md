@@ -88,6 +88,14 @@ foreman start
 
 You can shut everything down by hitting `^C` _(that's `Control` + `C`)_.
 
+#### Development data
+
+You can pull down a copy of production data by running
+
+```bash
+bin/import
+```
+
 ### CSS Structure
 
 Generally we follow the structure outlined by [thoughtbot][thoughtbot-css].
@@ -101,11 +109,6 @@ Generally we follow the structure outlined by [thoughtbot][thoughtbot-css].
 
 Please read the above-mentioned article from thoughtbot for more explaination
 of this convention.
-
-### Development data
-
-If you want some sample data, `rake openbeerdb:import`. Temporary, but it is
-useful.
 
 ## What's missing?
 
