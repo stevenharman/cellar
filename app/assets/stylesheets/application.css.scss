@@ -36,9 +36,14 @@
   }
 }
 
+body {
+  > .container {
+    background: $bodyBackground;
+  }
+}
+
 .page-container {
-  background: $bodyBackground;
-  padding: 0 $gridGutterWidth 0;
+  padding: 10px $gridGutterWidth 0;
 }
 
 @media (min-width: 980px) {
@@ -63,7 +68,7 @@
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   .page-container {
-    padding: 0 8px 0;
+    padding: 4px 8px 0;
   }
 
   .awning.navbar {
@@ -98,7 +103,6 @@
 
 @media (max-width: 979px) {
   .navbar-fixed-top {
-    background-color: $white;
     margin-bottom: 0;
 
     .navbar-inner {
