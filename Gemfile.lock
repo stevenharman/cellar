@@ -41,7 +41,7 @@ GEM
     arel (3.0.2)
     backports (2.6.7)
     bcrypt-ruby (3.0.1)
-    better_errors (0.7.2)
+    better_errors (0.8.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
     binding_of_caller (0.7.1)
@@ -108,7 +108,7 @@ GEM
     forgery (0.5.0)
     haml (4.0.2)
       tilt
-    hashie (2.0.4)
+    hashie (2.0.5)
     heroku (2.39.2)
       heroku-api (~> 0.3.7)
       launchy (>= 0.3.2)
