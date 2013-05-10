@@ -10,8 +10,9 @@ Because installing dependencies is such a pain, we've bootstrapped this baby for
 bin/bootstrap
 ```
 
-and follow any instructions it gives you. After you done this, you should have
-PostgreSQL, Redis, and the Heroku Toolbelt installed and ready to go.
+being sure to follow any instructions it gives you. After you've done that you
+should have `PostgreSQL`, `Redis`, and the `Heroku Toolbelt` installed and
+ready to go.
 
 #### ENV Vars
 
