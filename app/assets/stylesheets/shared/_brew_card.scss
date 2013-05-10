@@ -1,48 +1,4 @@
-.cards {
-  list-style: none;
-  margin-left: 0;
-
-  .card {
-    background-color: white;
-    border: 1px solid $beige;
-    border-bottom: none;
-    color: $brown;
-    margin-bottom: 1em;
-
-    @include border-top-radius(4px);
-
-    .content { padding: 0.5em; }
-  }
-}
-
 .brew.card {
-  $label-width: 7em;
-
-  figure {
-    float: left;
-    margin: 0;
-    width: $label-width;
-
-    img {
-      background-color: white;
-    }
-  }
-
-  .content { min-height: $label-width; }
-
-  .make {
-    margin-left: $label-width + 0.5em;
-
-    .name {
-      font-family: $largeFontFamily;
-      margin: 0;
-      text-transform: none;
-
-      a {
-        display: block;
-        @include text-overflow;
-      }
-    }
 
     .breweries {
       color: $brown-highlight;
@@ -56,97 +12,11 @@
         @include clickable;
       }
     }
-  }
 
-  .details {
+  .details .style {
+    font-size: 0.85em;
+    display: block;
     margin: 0;
-    font-family: $text-block-font-family;
-
-    li {
-      display: inline-block;
-      margin-right: 1em;
-
-      > label {
-        color: $brown-highlight;
-        cursor: text;
-        display: inline;
-        font-family: $smallFontFamily;
-        font-size: 0.75em;
-        margin-right: 0.75em;
-      }
-    }
-
-    .style {
-      font-size: 0.85em;
-      display: block;
-      margin: 0;
-      @include text-overflow;
-    }
-  }
-
-  .footer {
-    background-color: $beige;
-    clear: both;
-    margin: 0.25em 0 0;
-  }
-
-  .inventory {
-    $footer-height: 1.75em;
-
-    display: inline-block;
-    list-style: none;
-    margin: 0;
-
-    li {
-      color: $brewdega-orange;
-      font-family: $text-block-font-family;
-      font-size: 1.4em;
-      display: inline-block;
-      padding: 0.25em 0.25em 0;
-      border-right: 1px solid white;
-      text-align: center;
-      height: $footer-height;
-      vertical-align: middle;
-    }
-
-    label {
-      color: $brown;
-      cursor: text;
-      font-family: $smallFontFamily;
-      font-size: 0.5em;
-      line-height: 1em;
-      margin: 0;
-    }
-
-    .actions {
-      line-height: $footer-height;
-      padding-left: 0;
-      padding-right: 0;
-
-      a {
-        color: $brown;
-        padding: 0.5em 0.5em 0;
-        @include clickable;
-
-        &:hover { text-decoration: none; }
-      }
-    }
-  }
-
-  /* Landscape phones and down */
-  @media (max-width: 480px) {
-    .name a,
-    .breweries,
-    .style { white-space: normal !important; }
-  }
-}
-
-@media (max-width: 979px) and (min-width: 768px) {
-  /* We are overriding the normal span4 behavior to act like a span 6 */
-  .row-fluid {
-    .cards .span4 {
-      @include grid-fluid-span(6, $fluidGridColumnWidth768, $fluidGridGutterWidth);
-      margin-left: $fluidGridGutterWidth !important;
-    }
+    @include text-overflow;
   }
 }

@@ -1,0 +1,23 @@
+article.brewery.card*{'data-id' => brewery.id}
+  .content
+    figure
+      = link_to(brewery, title: brewery.name) do
+        = image_tag(brewery.medium_image || 'http://placehold.it/140x140', alt: brewery.name)
+    .specifics
+      h3.name= link_to(brewery.name, brewery, title: brewery.name)
+
+      ul.details
+        -if brewery.website?
+          li.website
+            i.icon-external-link
+            = link_to(brewery.website_name, brewery.website)
+
+  .footer
+    ul.inventory
+      li.actions
+        = link_to(brewery, title: t('.inventory.actions')) do
+          i.icon-cog
+      li.brews-count
+        = brewery.brews.count
+        label= t('.inventory.brews_count')
+

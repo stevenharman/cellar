@@ -1,0 +1,10 @@
+- content_for :title do
+  = t('.title')
+
+article.brews
+  hgroup
+    h1 = t('.title')
+
+  fieldset.row-fluid
+    == render 'breweries/cards', breweries: @breweries
+  = paginate @breweries
