@@ -4,33 +4,14 @@
 
 ### Getting up and Running
 
-You'll need the following dependencies installed:
+Because installing dependencies is such a pain, we've bootstrapped this baby for you! Just run
 
-#### PostgreSQL (for [light-weight searching][texticle])
-  1.  Download, install, and run [Postgres.app][postgres.app]
-  1.  If you've already installed the `pg` gem (we do this
-      to ensure we've built against the right version of PostgreSQL):
+```bash
+bin/bootstrap
+```
 
-      ```bash
-      gem uninstall pg
-      ```
-  1.  Install the `pg` gem:
-
-      ```bash
-      bundle install
-      ```
-  1.  Setup the database:
-
-      ```bash
-      bundle exec rake db:create db:schema:load
-      ```
-
-**NOTE:** Be sure to open the Postgres.app app to start your PostgreSQL server.
-Quitting the app will also stop the server.
-
-#### Redis (for [background jobs][sidekiq])
-  1.  `brew install redis`
-  1.  _That's it!_ We start a redis server via `foreman`.
+and follow any instructions it gives you. After you done this, you should have
+PostgreSQL, Redis, and the Heroku Toolbelt installed and ready to go.
 
 #### ENV Vars
 
@@ -55,7 +36,7 @@ Other _optional_ ENV Vars you can set include:
   - `UNICORN_BACKLOG`: [tune Unicorn, making Herkou retry other
     dynos](ttm-unicorn) rather than timing out. _(Default = `200`)_
   - `WEB_CONCURRENCY`: set the number of [Unicorn](unicorn) worker processes.
-    _(Defaults = `3`)_
+    _(Default = `3`)_
 
 ### Updating the app
 
@@ -74,6 +55,9 @@ Other _optional_ ENV Vars you can set include:
       ``` bash
       bundle exec rake brewery_db:import
       ```
+
+      Alternatively, you could pull in the latest production data, as
+      [mentioned below](#development-data).
 
 ### Running the app
 
@@ -116,7 +100,6 @@ of this convention.
 
 
 [foreman]: https://devcenter.heroku.com/articles/procfile/
-[postgres.app]: http://postgresapp.com/
 [rdd]: http://tom.preston-werner.com/2010/08/23/readme-driven-development.html
 [sidekiq]: https://github.com/mperham/sidekiq
 [texticle]: https://tenderlove.github.com/texticle/
