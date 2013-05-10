@@ -35,6 +35,8 @@ en:
       legend: "Brews"
 
   brews:
+    index:
+      title: "Browse beers"
     card:
       inventory:
         actions: "See your cellared beers"

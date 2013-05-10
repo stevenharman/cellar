@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   rescue_from ActiveRecord::RecordNotFound, with: :render_404
 
+  DEFAULT_PER_PAGE = 30
+
   def current_user
     @decorated_current_user ||= (UserDecorator.new(super) if super)
   end
@@ -27,10 +29,6 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def render_404(exception=nil)
-    render template: 'errors/404', status: 404
-  end
-
   def decorated_cellar(keeper)
     keeper = keeper || AnonymousUser.new
     CellarDecorator.new(Cellar.find_by(keeper))
@@ -43,6 +41,17 @@ class ApplicationController < ActionController::Base
       keeper = User.for_username!(cellar_name)
       decorated_cellar(keeper)
     end
+  end
+
+  def paginate(collection, options = {})
+    options = { per_page: DEFAULT_PER_PAGE }.merge(options)
+    paged_collection = collection.page(options[:page]).per(options[:per_page])
+
+    PaginatingDecorator.decorate(paged_collection)
+  end
+
+  def render_404(exception=nil)
+    render template: 'errors/404', status: 404
   end
 
 end
