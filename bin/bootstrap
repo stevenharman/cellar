@@ -1,0 +1,69 @@
+#!/bin/sh
+
+brew_install_if_needed() {
+  package=$1
+
+  brew info $package | grep "Not installed" > /dev/null 2>&1
+  if [[ "$?" -eq "0" ]]; then
+    brew install $package
+  fi
+}
+
+add_git_remote_if_needed() {
+  name=$1
+  url=$2
+
+  git remote | grep $name > /dev/null 2>&1
+  if [[ "$?" -eq "1" ]]; then
+    git remote add $name $url
+  fi
+}
+
+setup_database() {
+  success=0
+
+  rake db:create:all
+  let success=success+$?
+
+  rake db:reset
+  let success=$?+success
+
+  RAILS_ENV=test rake db:reset
+  let success=$?+success
+
+  if [[ "$success" -ne "0" ]]; then
+    echo "I couldn't setup your database for you. Manual steps required."
+    printf "\e[36m"
+    echo ""
+    echo "---------------------------------"
+    echo "Some manual setup steps required:"
+    echo ""
+    echo "1) Edit config/database.yml if a username or password is required"
+    echo "   for your PostgreSQL installation."
+    echo "2) Initialize databases with:"
+    echo "     rake db:create:all"
+    echo "     rake db:reset"
+    echo "     RAILS_ENV=test rake db:reset"
+    printf "\e[0m"
+  fi
+}
+
+# Brew packages
+brew_install_if_needed postgresql
+brew_install_if_needed redis
+brew_install_if_needed heroku-toolbelt
+
+# database.yml
+if [ ! -f config/database.yml ]; then
+  cp config/database.yml.example config/database.yml
+fi
+
+# Heroku deployments
+add_git_remote_if_needed production git@heroku.com:brewdega-cellar.git
+
+# Gems
+bundle install
+
+# Try to be helpful by setting up the database
+setup_database
+
