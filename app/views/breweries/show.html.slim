@@ -16,7 +16,4 @@ article.brewery*{'data-id' => @brewery.id}
 
   fieldset.beers-cellared.row-fluid
     legend= t('.legend')
-    ul.cards
-      - for brew in @brewery.brews
-        li.span4
-          == render 'brews/card', brew: brew, this_cellar: current_cellar, your_cellar: current_cellar
+    == render 'brews/cards', brews: @brewery.brews, this_cellar: current_cellar, your_cellar: current_cellar

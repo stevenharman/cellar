@@ -5,8 +5,4 @@ article.cellar
   == render 'shared/profile', profile: @cellar.profile
   fieldset.beers-cellared.row-fluid
     legend Cellared Beers
-    ul.cards
-      - for brew in @cellar.cellared_brews
-        li.span4
-          == render 'brews/card', brew: brew, this_cellar: @cellar, your_cellar: current_cellar
-
+    == render 'brews/cards', brews: @cellar.cellared_brews, this_cellar: @cellar, your_cellar: current_cellar

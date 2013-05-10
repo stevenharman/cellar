@@ -6,8 +6,5 @@ article.brews
     h1 = t('.title')
 
   fieldset.beers-cellared.row-fluid
-    ul.cards
-      - for brew in @brews
-        li.span4
-          == render 'brews/card', brew: brew, this_cellar: current_cellar, your_cellar: current_cellar
+    == render 'brews/cards', brews: @brews, this_cellar: current_cellar, your_cellar: current_cellar
   = paginate @brews
