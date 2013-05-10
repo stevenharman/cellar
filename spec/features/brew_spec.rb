@@ -11,7 +11,7 @@ feature 'Viewing a brew page', :feature, :slow do
 
     scenario 'show cellar info on the brew page' do
       visit brew_path(beer.brew)
-      page.should have_css('.beers-cellared .beer')
+      page.should have_css('.cellared-beers .beer')
     end
   end
 
@@ -19,7 +19,7 @@ feature 'Viewing a brew page', :feature, :slow do
     scenario 'do not show cellar info' do
       visit brew_path(beer.brew)
       page.find('.brew .name').should have_content(beer.brew.name)
-      page.should_not have_css('.beers-cellared')
+      page.should_not have_css('.cellared-beers')
     end
   end
 end

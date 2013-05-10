@@ -14,6 +14,6 @@ article.brewery*{'data-id' => @brewery.id}
           i.icon-external-link
           = link_to(@brewery.website_name, @brewery.website, title: @brewery.name)
 
-  fieldset.beers-cellared.row-fluid
+  fieldset.brewery-brews.row-fluid
     legend= t('.legend')
     == render 'brews/cards', brews: @brewery.brews, this_cellar: current_cellar, your_cellar: current_cellar

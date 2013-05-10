@@ -18,11 +18,11 @@ module Features
     end
 
     def expect_to_be_in_the_cellar(beer)
-      page.should have_css(%(.beers-cellared .beer[data-id="#{beer.id}"]))
+      page.should have_css(%(.cellared-beers .beer[data-id="#{beer.id}"]))
     end
 
     def expect_not_to_be_in_the_cellar(beer)
-      page.should_not have_css(%(.beers-cellared .beer[data-id="#{beer.id}"]))
+      page.should_not have_css(%(.cellared-beers .beer[data-id="#{beer.id}"]))
     end
 
     def expect_all_cellared_count_to_be(count, args)

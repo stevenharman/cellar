@@ -3,6 +3,6 @@
 
 article.cellar
   == render 'shared/profile', profile: @cellar.profile
-  fieldset.beers-cellared.row-fluid
+  fieldset.cellared-brews.row-fluid
     legend Cellared Beers
     == render 'brews/cards', brews: @cellar.cellared_brews, this_cellar: @cellar, your_cellar: current_cellar
