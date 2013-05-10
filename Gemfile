@@ -27,16 +27,6 @@ end
 
 gem 'rack-timeout', group: :production
 
-group :test do
-  gem 'capybara'
-  gem 'capybara-webkit'
-  gem 'database_cleaner'
-  gem 'with_model'
-  gem 'simplecov', require: false
-  gem 'vcr'
-  gem 'webmock'
-end
-
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'foreman'
@@ -47,4 +37,18 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.12'
 end
 
-gem 'mailcatcher', group: :development
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'mailcatcher'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
+  gem 'with_model'
+  gem 'simplecov', require: false
+  gem 'vcr'
+  gem 'webmock'
+end
