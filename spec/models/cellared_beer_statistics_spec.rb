@@ -35,14 +35,21 @@ describe CellaredBeerStatistics do
       end
     end
 
-    describe '#brews_count' do
-      it 'is zero when there are no stats' do
+    it '#brews_count counts the brews we have stats on' do
+      expect(stats.brews_count).to eq(2)
+    end
+
+    context 'there are no statistics' do
+      let(:raw_stats) { Hash.new }
+
+      it '#beers_count is zero' do
         stats = described_class.new({})
-        expect(stats.brews_count).to eq(0)
+        expect(stats.beers_count).to eq(0)
       end
 
-      it 'counts the brews we have stats on' do
-        expect(stats.brews_count).to eq(2)
+      it '#brews_count is zero' do
+        stats = described_class.new({})
+        expect(stats.brews_count).to eq(0)
       end
     end
   end

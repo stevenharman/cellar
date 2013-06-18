@@ -27,7 +27,7 @@ class CellaredBeerStatistics
   private
 
   def total_beer_count
-    stats.values.reduce(&:+)
+    stats.values.reduce(0, :+)
   end
 
   def stats
