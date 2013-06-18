@@ -27,6 +27,7 @@ BrewdegaCellar::Application.routes.draw do
     resource :distribution_order, controller: :distribution_orders, only: [:update]
   end
 
+  resources :cellars, only: [:index]
   resources :breweries, only: [:index, :show]
   resources :brews, only: [:index, :show]
   resources :stock_orders, only: [:new, :create]

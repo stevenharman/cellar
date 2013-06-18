@@ -5,6 +5,10 @@ require_relative 'stock_order_receipt'
 class Cellar
   attr_reader :keeper, :beer_stats
 
+  def self.for(keepers)
+    Array(keepers).map { |k| find_by(k) }
+  end
+
   def self.find_by(keeper)
     new(keeper, CellaredBeerStatistics.analyze(keeper))
   end

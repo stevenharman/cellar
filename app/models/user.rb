@@ -1,3 +1,5 @@
+require 'devise'
+
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :validatable, :lockable, :timeoutable and

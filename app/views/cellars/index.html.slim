@@ -1,0 +1,7 @@
+ul
+  - for cellar in @cellar_list
+    li.cellar
+      h4
+        = link_to(cellar.full_name, cellar_path(cellar.keeper))
+
+= paginate @cellar_list
