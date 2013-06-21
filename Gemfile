@@ -12,7 +12,7 @@ gem 'newrelic_rpm'
 gem 'pg'
 gem 'pg_search'
 gem 'simple_form'
-gem 'slim', '~> 1.3'
+gem 'slim', '~> 2.0'
 gem 'sinatra', require: false # for sidekiq monitoring
 gem 'sidekiq'
 gem 'virtus'
