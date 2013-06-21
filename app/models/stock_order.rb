@@ -10,8 +10,8 @@ class StockOrder
 
   attribute :count, Integer, default: 1
   attribute :batch, String
-  attribute :bottled_on, Date
   attribute :best_by, Date
+  attribute :vintage, Integer
 
   attr_reader :brew
   delegate :id, :name, to: :brew, prefix: true
@@ -32,7 +32,7 @@ class StockOrder
     {
       batch: batch,
       best_by: best_by,
-      bottled_on: bottled_on,
+      vintage: vintage,
     }
   end
 

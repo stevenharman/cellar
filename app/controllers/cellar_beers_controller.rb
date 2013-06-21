@@ -30,7 +30,7 @@ class CellarBeersController < ApplicationController
   end
 
   def beer_params
-    params[:beer].slice(:batch, :best_by, :bottled_on, :notes)
+    params[:beer].slice(:batch, :best_by, :vintage, :notes)
   end
 
   def find_beer(beer_id)

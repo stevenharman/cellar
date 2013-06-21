@@ -18,7 +18,7 @@
         - for beer in your_cellar.beers_for(brew)
           tr.beer*{'data-id' => beer.id}
             td= beer.batch
-            td= ldate(beer.bottled_on, format: :long)
+            td= beer.vintage
             td= ldate(beer.best_by, format: :long)
             td= ldate(beer.created_at, format: :month_year)
             td.status

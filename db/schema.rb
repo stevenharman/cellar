@@ -11,11 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130414234415) do
+ActiveRecord::Schema.define(:version => 20130621002239) do
 
   create_table "beers", :force => true do |t|
     t.string   "batch"
-    t.date     "bottled_on"
     t.date     "best_by"
     t.integer  "brew_id"
     t.datetime "created_at"
@@ -23,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20130414234415) do
     t.integer  "user_id"
     t.string   "status",     :default => "cellared"
     t.text     "notes"
+    t.integer  "vintage"
   end
 
   add_index "beers", ["brew_id"], :name => "index_beers_on_brew_id"

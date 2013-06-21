@@ -3,7 +3,7 @@ FactoryGirl.define do
     brew
     user
     batch '2011B'
-    bottled_on { rand(6).months.ago }
+    vintage { (1970...2013).to_a.sample }
     best_by { (30..90).to_a.shuffle.first.days.from_now }
 
     trait(:cellared) { status 'cellared' }
