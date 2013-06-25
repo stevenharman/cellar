@@ -4,7 +4,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: $largeFontFamily;
+  font-family: $large-font-family;
   text-transform: uppercase;
   color: $brewdega-orange;
   font-style: normal;
@@ -12,7 +12,7 @@ h1, h2, h3, h4 {
 }
 
 h3 {
-  font-family: $smallFontFamily;
+  font-family: $small-font-family;
   color: $brown;
   font-size: 1.6em;
   line-height: 1.15em;
@@ -37,7 +37,7 @@ h5 {
 label {
   color: $brewdega-orange;
   display: block;
-  font-family: $smallFontFamily;
+  font-family: $small-font-family;
   letter-spacing: 1px;
   margin-bottom: 5px;
   text-transform: uppercase;
@@ -47,7 +47,7 @@ label {
   min-height: 200px;
 
   th {
-    font-family: $smallFontFamily;
+    font-family: $small-font-family;
     color: $brown;
     font-style: normal;
     font-weight: 700;
@@ -72,7 +72,7 @@ label {
 }
 
 legend {
-  font-family: $smallFontFamily;
+  font-family: $small-font-family;
   color: $brown;
   font-size: 1.2em;
   font-style: normal;
@@ -83,7 +83,7 @@ legend {
 }
 
 dt {
-  font-family: $smallFontFamily;
+  font-family: $small-font-family;
   color: $brewdega-orange;
   text-transform: uppercase;
   letter-spacing: 1px;

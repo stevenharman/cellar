@@ -2,7 +2,7 @@
 
     .breweries {
       color: $brown-highlight;
-      font-family: $smallFontFamily;
+      font-family: $small-font-family;
       @include text-overflow;
 
       .separator:last-of-type { display: none; }

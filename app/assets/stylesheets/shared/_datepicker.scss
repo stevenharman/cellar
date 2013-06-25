@@ -4,7 +4,7 @@ $datepickerGrey: #f7f7f7;
   width: 216px;
   height: auto;
   margin: 5px auto 0;
-  font-family: $smallFontFamily;
+  font-family: $small-font-family;
   @include box-shadow(0px 0px 10px 0px rgba(0, 0, 0, .5));
 
   a { text-decoration: none; }
