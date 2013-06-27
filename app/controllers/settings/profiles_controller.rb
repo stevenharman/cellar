@@ -8,9 +8,9 @@ module Settings
 
     def update
       if current_profile.update(profile_params)
-        flash[:notice] = t('flash.profile.update.notice')
+        flash[:success] = t('flash.profile.update.success')
       else
-        flash.now[:alert] = t('flash.profile.update.alert')
+        flash.now[:error] = t('flash.profile.update.error')
       end
 
       respond_with current_profile, location: settings_profile_path

@@ -1,3 +1,5 @@
+@import '../globals/all';
+
 .cards {
   list-style: none;
   margin-left: 0;
@@ -69,7 +71,7 @@
       margin: 0;
 
       li {
-        color: $brewdega-orange;
+        color: $orange;
         font-family: $text-block-font-family;
         font-size: 1.4em;
         display: inline-block;
@@ -120,14 +122,12 @@
   } // .card
 }
 
+@import 'neat';
 @media (max-width: 979px) and (min-width: 768px) {
   /* We are overriding the normal span4 behavior to act like a span 6 */
   .row-fluid {
     .cards .span4 {
-      @include grid-fluid-span(6, $fluidGridColumnWidth768, $fluidGridGutterWidth);
-      margin-left: $fluidGridGutterWidth !important;
+      @include span-columns(6);
     }
   }
 }
-
-@import 'brew_card';

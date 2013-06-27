@@ -1,8 +1,10 @@
+@import '../globals/all';
+
 footer {
   background-color: $brown-accent;
   min-height: 10em;
-  padding: $gridGutterWidth;
-  padding-bottom: $gridGutterWidth/2;
+  padding: $gutter;
+  padding-bottom: $gutter/1;
 
   ul {
     list-style: none;

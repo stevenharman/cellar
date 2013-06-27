@@ -3,6 +3,14 @@
   line-height: 1.4em;
 }
 
+// Text overflow
+// Requires inline-block or block for proper styling
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 @mixin centered-definition-list {
   dt {
     clear: left;
@@ -29,7 +37,7 @@
   }
 }
 
-@mixin clickable($color: $brewdega-orange) {
+@mixin clickable($color: $orange) {
  &:hover { color: $color; }
 }
 

@@ -15,9 +15,9 @@ class CellarBeersController < ApplicationController
     @beer= find_beer(params[:id])
 
     if @beer.update_attributes(beer_params)
-      flash[:notice] = t('flash.cellar_beers.update.notice', name: @beer.brew.name)
+      flash[:success] = t('flash.cellar_beers.update.success', name: @beer.brew.name)
     else
-      flash[:alert] = t('flash.cellar_beers.update.notice', name: @beer.brew.name)
+      flash[:error] = t('flash.cellar_beers.update.error', name: @beer.brew.name)
     end
 
     respond_with(@beer, location: cellar_beer_path(@beer.user, @beer))

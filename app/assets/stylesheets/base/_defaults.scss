@@ -1,41 +1,6 @@
-body {
-  background-image: image-url('bg-bottles.png');
-  background-attachment: fixed;
-}
-
-h1, h2, h3, h4 {
-  font-family: $large-font-family;
-  text-transform: uppercase;
-  color: $brewdega-orange;
-  font-style: normal;
-  font-weight:normal;
-}
-
-h3 {
-  font-family: $small-font-family;
-  color: $brown;
-  font-size: 1.6em;
-  line-height: 1.15em;
-}
-
-h5 {
-  color: $brown;
-  font-style: normal;
-  font-weight:normal;
-
-  a {
-    $linkColor: $brown;
-    color: $linkColor;
-    text-decoration: none;
-    &:hover {
-      color: darken($linkColor, 15%);
-      text-decoration: none;
-    }
-  }
-}
 
 label {
-  color: $brewdega-orange;
+  color: $orange;
   display: block;
   font-family: $small-font-family;
   letter-spacing: 1px;
@@ -84,7 +49,7 @@ legend {
 
 dt {
   font-family: $small-font-family;
-  color: $brewdega-orange;
+  color: $orange;
   text-transform: uppercase;
   letter-spacing: 1px;
 }

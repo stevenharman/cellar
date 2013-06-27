@@ -20,7 +20,8 @@ class ApplicationController < ActionController::Base
   end
 
   def not_authenticated
-    redirect_to new_user_session_path, :alert => t('flash.application.must_sign_in')
+    flash[:error] = t('flash.application.must_sign_in')
+    redirect_to new_user_session_path
   end
 
   def redirect_if_already_signed_in

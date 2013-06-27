@@ -10,10 +10,10 @@ class ConfirmationsController < ApplicationController
     @user = User.send_confirmation_instructions(user_params)
 
     if @user.valid?
-      flash[:notice] = t('flash.confirmations.create.notice')
+      flash[:success] = t('flash.confirmations.create.success')
       respond_with({}, location: new_user_session_path)
     else
-      flash.now[:alert] = t('flash.confirmations.create.alert')
+      flash.now[:error] = t('flash.confirmations.create.error')
       respond_with(@user)
     end
   end
@@ -23,10 +23,10 @@ class ConfirmationsController < ApplicationController
 
     if @user.valid?
       sign_in(@user)
-      flash[:notice] = t('flash.confirmations.show.notice', username: @user.username)
+      flash[:success] = t('flash.confirmations.show.success', username: @user.username)
       redirect_to after_sign_in_path_for(@user)
     else
-      flash.now[:alert] = t('flash.confirmations.show.alert')
+      flash.now[:error] = t('flash.confirmations.show.error')
       render :new
     end
   end

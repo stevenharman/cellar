@@ -1,5 +1,5 @@
 $ ->
-  $('.no-touch [data-toggle~="tooltip"]').tooltip(placement: 'bottom')
+  #$('.no-touch [data-toggle~="tooltip"]').tooltip(placement: 'bottom')
 
   $('.awning').on('click', '.search-indicator', (event)->
     event.preventDefault()

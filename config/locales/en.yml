@@ -88,55 +88,55 @@ en:
 
     cellar_beers:
       update:
-        alert: "Whoops! There was a problem updating that %{name}."
-        notice: "We updated that %{name}."
+        error: "Whoops! There was a problem updating that %{name}."
+        success: "We updated that %{name}."
 
     distribution_orders:
       update:
-        alert_html: >
+        error_html: >
           <h4>Whoops! There was a problem updating that beer.</h4>
           %{errors}
-        notice: "That %{name} was %{status}."
+        success: "That %{name} was %{status}."
 
     password_change:
       create:
-        alert: "Whoops! There was a problem changing your password"
-        notice: "Your password has been changed."
+        error: "Whoops! There was a problem changing your password"
+        success: "Your password has been changed."
 
     profile:
       update:
-        alert: "Whoops! There was a problem updating your profile."
-        notice: "Thanks! Your profile has been updated."
+        error: "Whoops! There was a problem updating your profile."
+        success: "Thanks! Your profile has been updated."
 
     confirmations:
       create:
-        notice: >
+        success: >
           You will receive an email with instructions about how to confirm your
           account in a few minutes.
-        alert: "Whoops! There was a sending your confirmation instructions."
+        error: "Whoops! There was a sending your confirmation instructions."
       show:
-        notice: >
+        success: >
           Hello %{username}, your account was confirmed and you are now signed in.
-        alert: "Whoops! There was a problem confirming your email."
+        error: "Whoops! There was a problem confirming your email."
 
     users:
       create:
-        notice: >
+        success: >
           We have sent a confirmation email to '%{email}' -- please follow the
           instructions in it.
 
     sessions:
       create:
-        notice: "Hello %{name}. Welcome back to the Cellar."
+        success: "Hello %{name}. Welcome back to the Cellar."
       destroy:
-        notice: "You have been signed out."
+        success: "You have been signed out."
 
     stock_orders:
       new:
-        alert: "Oh no, we couldn't find the Beer you were trying to stock!"
+        error: "Oh no, we couldn't find the Beer you were trying to stock!"
       create:
-        notice: "Huzzah! We added %{count} %{name} to your cellar."
-        alert: "Woops! There was a problem stocking those %{count} %{name}."
+        success: "Huzzah! We added %{count} %{name} to your cellar."
+        error: "Woops! There was a problem stocking those %{count} %{name}."
 
   # Views
 

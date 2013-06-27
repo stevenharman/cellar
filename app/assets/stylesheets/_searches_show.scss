@@ -44,9 +44,9 @@
       width: $icon-width;
 
       img {
+        border-radius: 3px;
         height: $icon-width;
         width: $icon-width;
-        @include border-radius(3px);
       }
     }
     .name {
@@ -55,7 +55,7 @@
     }
 
     .prefix {
-      color: $grayLight;
+      color: green;
       display: block;
       font-size: 0.85em;
       position: relative;

@@ -6,7 +6,7 @@ module Features
       sign_out(user)
       sign_in(user)
 
-      expect(page).to have_content I18n.t('flash.sessions.create.notice', name: user.username)
+      expect(page).to have_content I18n.t('flash.sessions.create.succes', name: user.username)
       expect(current_path).to eq(root_path)
     end
   end

@@ -1,18 +1,19 @@
+@import '../globals/all';
+
 .profile-box {
   background-color: $yellow;
   $text-well-background-color: #f8d47d;
   $text-well-color: $brown;
 
+  border-radius: 3px;
   padding: 1em;
   margin-bottom: 1em;
 
-  @include border-radius(3px);
-
   .avatar {
+    border-radius: 3px;
     float: left;
     margin-right: 1em;
     width: 128px;
-    @include border-radius(3px);
   }
 
   .bio {
@@ -62,7 +63,7 @@
 
   .stats {
     dl {
-      color: $brewdega-orange;
+      color: $orange;
       display: inline-block;
       margin-bottom: 0;
       margin-top: 0;
@@ -93,7 +94,7 @@
       }
 
       span {
-        color: $brewdega-orange;
+        color: $orange;
         display: block;
         font-size: 2.5em;
       }

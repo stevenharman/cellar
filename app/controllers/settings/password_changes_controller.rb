@@ -10,10 +10,10 @@ module Settings
     def create
       @password_change = PasswordChange.new(current_user)
       if @password_change.call(change_params)
-        flash[:notice] = t('flash.password_change.create.notice')
+        flash[:success] = t('flash.password_change.create.success')
         sign_in(current_user, bypass: true)
       else
-        flash.now[:alert] = t('flash.password_change.create.alert')
+        flash.now[:error] = t('flash.password_change.create.error')
       end
 
       respond_with(@password_change, location: settings_profile_path)

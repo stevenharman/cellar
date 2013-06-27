@@ -1,3 +1,5 @@
+@import '../globals/all';
+
 .awning.navbar {
   $top-padding: 20px;
   $query-top-margin: -0.25 * $top-padding;
@@ -8,7 +10,7 @@
   color: white;
 
   .navbar-inner {
-    height: $navbarHeight;
+    height: $awning-height;
     background: transparent image-url('awning.png') repeat-x;
     border: 0 none;
     @include box-shadow(none);
@@ -77,9 +79,8 @@
     }
 
     .avatar {
+      border-radius: 2px;
       width: $avatar-size;
-
-      @include border-radius(2px);
     }
 
     .username { margin-left: 1em; }
