@@ -3,3 +3,9 @@
 @import './mixins';
 @import './typeography';
 @import './grid_settings';
+
+// disable this so Neat's grid/grid mixin doesn't drop the box-sizing rule dozens of times.
+$border-box-sizing: false;
+// enable visual-grid for development
+$visual-grid: true;
+@import 'neat';

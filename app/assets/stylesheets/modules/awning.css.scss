@@ -1,32 +1,25 @@
 @import '../globals/all';
 
-.awning.navbar {
+.awning {
   $top-padding: 20px;
   $query-top-margin: -0.25 * $top-padding;
   $avatar-size: 32px;
 
-  .btn { margin-top: 0; }
-
+  background: transparent image-url('awning.png') repeat-x;
   color: white;
-
-  .navbar-inner {
-    height: $awning-height;
-    background: transparent image-url('awning.png') repeat-x;
-    border: 0 none;
-    @include box-shadow(none);
-  }
+  height: $awning-height;
 
   .brand {
-    padding-bottom: 0;
-    padding-right: 0;
-    padding-top: 0;
+    @include inline-block;
+    float: left;
+    padding-left: $gutter / 2;
 
     img { height: 80px; }
     span { display: none; }
   }
 
   .search-box {
-    display: inline-block;
+    @include inline-block;
     line-height: $avatar-size;
     margin-left: 1em;
     margin-top: $top-padding;
@@ -36,7 +29,7 @@
     .search-form-wrapper { display: none; }
 
     form.search {
-      display: inline-block;
+      @include inline-block;
       margin: 0;
       width: 100%;
 
@@ -51,7 +44,7 @@
     }
   }
 
-  .search-indicator {
+  a.search-indicator {
     @include transition-glow;
 
     color: white;
@@ -62,7 +55,6 @@
 
   .current-user-links {
     float: right;
-    list-style: none;
     padding-top: $top-padding !important;
 
     a {
@@ -76,10 +68,13 @@
 
     li {
       display: inline-block;
+      zoom: 1;
+      vertical-align: middle;
     }
 
     .avatar {
       border-radius: 2px;
+      vertical-align: middle;
       width: $avatar-size;
     }
 
@@ -92,9 +87,29 @@
     }
 
     .sign-in { padding-right: 0.5em; }
-    .sign-up a {
-      @extend .btn;
-      @extend .btn-success
+  }
+
+  @include media($desktop) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    & + * {
+      padding-top: ($awning-height + 10px);
+    }
+
+    .awning-inner {
+      @include outer-container;
+    }
+  }
+
+  @include media($tablet) {
+    .brand, .username { display: none; }
+
+    .my-profile {
+      border: none !important;
+      padding-right: 0 !important;
     }
   }
 }

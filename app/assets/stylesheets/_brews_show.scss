@@ -2,7 +2,7 @@
   .brew {
     hgroup {
       .name, .brewery-name {
-        display: inline-block;
+        @include inline-block;
         margin-bottom: 0;
         margin-right: 0.5em;
         text-transform: none;

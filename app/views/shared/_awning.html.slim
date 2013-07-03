@@ -1,33 +1,32 @@
-.awning.navbar.navbar-fixed-top
-  .navbar-inner
-    .container
-      = link_to(root_path, class: 'brand') do
-        = image_tag('cellar-sticker.png')
-        span= t('cellar.brewdega')
+.awning
+  .awning-inner
+    = link_to(root_path, class: 'brand') do
+      = image_tag('cellar-sticker.png')
+      span= t('cellar.brewdega')
 
-      ul.current-user-links
-        - if user_signed_in?
-          li.my-profile
-            = link_to(cellar_path(current_user), tooltip(t('cellar.my_cellar'))) do
-              = current_user.gravatar
-              span.username= current_user.username
-          li.my-cellar= link_to(cellar_path(current_user), tooltip(t('cellar.my_cellar'))) do
-                i.icon-briefcase
-          li.my-settings= link_to(settings_profile_path, tooltip(t('cellar.settings'))) do
-                i.icon-cog
-          li.sign-out= link_to(destroy_user_session_path, tooltip(t('cellar.sign_out'), method: :delete)) do
-                i.icon-signout
-        - else
-          li.sign-in= link_to(new_user_session_path) do
-            i.icon-signin
-            |  #{t('cellar.sign_in')}
-          li.sign-up
-            ' or
-            = link_to(t('cellar.sign_up'), sign_up_path)
+    ul.current-user-links
+      - if user_signed_in?
+        li.my-profile
+          = link_to(cellar_path(current_user), tooltip(t('cellar.my_cellar'))) do
+            = current_user.gravatar
+            span.username= current_user.username
+        li.my-cellar= link_to(cellar_path(current_user), tooltip(t('cellar.my_cellar'))) do
+              i.icon-briefcase
+        li.my-settings= link_to(settings_profile_path, tooltip(t('cellar.settings'))) do
+              i.icon-cog
+        li.sign-out= link_to(destroy_user_session_path, tooltip(t('cellar.sign_out'), method: :delete)) do
+              i.icon-signout
+      - else
+        li.sign-in= link_to(new_user_session_path) do
+          i.icon-signin
+          |  #{t('cellar.sign_in')}
+        li.sign-up
+          ' or
+          = link_to(t('cellar.sign_up'), sign_up_path)
 
-      span.search-box
-        = link_to(search_path, class: 'search-indicator', tabindex: 1) do
-            i.icon-search.icon-large
-            = t('.search.text')
-        span.search-form-wrapper
-          == render 'searches/form', search_query: search_query
+    span.search-box
+      = link_to(search_path, class: 'search-indicator', tabindex: 1) do
+          i.icon-search.icon-large
+          = t('.search.text')
+      span.search-form-wrapper
+        == render 'searches/form', search_query: search_query

@@ -28,11 +28,11 @@
 
 @mixin inline-definition-list {
   dt {
-    display: inline-block;
+    @include inline-block;
     margin-right: 0.5em;
   }
   dd {
-    display: inline-block;
+    @include inline-block;
     margin-right: 2em;
   }
 }

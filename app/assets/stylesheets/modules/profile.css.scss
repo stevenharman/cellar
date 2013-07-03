@@ -50,9 +50,9 @@
     top: -0.5em;
 
     li {
-      display: inline-block;
-      margin-right: 1em;
+      @include inline-block;
       @include text-overflow;
+      margin-right: 1em;
     }
 
     i {
@@ -63,8 +63,8 @@
 
   .stats {
     dl {
+      @include inline-block;
       color: $orange;
-      display: inline-block;
       margin-bottom: 0;
       margin-top: 0;
       margin-right: 1em;
@@ -74,10 +74,10 @@
       letter-spacing: 0px;
     }
     dd {
+      @include inline-block;
       background-color: $text-well-background-color;
       border-right: 1px solid $brown;
       color: $text-well-color;
-      display: inline-block;
       font-family: $small-font-family;
       font-size: 0.7em;
       min-height: 3em;

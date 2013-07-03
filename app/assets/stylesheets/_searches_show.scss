@@ -19,7 +19,6 @@
 
       .search-button {
         $search_margin: 0.25em;
-        @extend .btn-primary;
 
         bottom: $search_margin;
         font-family: $small-font-family;

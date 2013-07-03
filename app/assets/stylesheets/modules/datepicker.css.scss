@@ -52,7 +52,7 @@ $datepickerGrey: #f7f7f7;
   }
 
   td span, td a {
-    display: inline-block;
+    @include inline-block;
     font-weight: bold;
     text-align: center;
     width: 30px;
@@ -87,7 +87,7 @@ $datepickerGrey: #f7f7f7;
   }
 }
 .ui-datepicker-prev, .ui-datepicker-next {
-  display: inline-block;
+  @include inline-block;
   font-family: 'FontAwesome';
   width: 30px;
   height: 30px;

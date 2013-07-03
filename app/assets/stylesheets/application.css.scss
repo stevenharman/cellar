@@ -5,10 +5,6 @@
  */
 
 @import 'globals/all';
-
-$visual-grid: true;
-@import 'neat';
-
 @import 'font-awesome';
 
 @import 'brews_show';
@@ -18,16 +14,20 @@ $visual-grid: true;
 
 /* HACK for thumbnails in a fluid grid.
  * see: https://github.com/twitter/bootstrap/issues/3494#issuecomment-9025325 */
-.row-fluid {
-  ul.thumbnails,
-  ul.cards {
-    li.span12 + li { margin-left : 0px; }
-    li.span6:nth-child(2n + 3) { margin-left : 0px; }
-    li.span4:nth-child(3n + 4) { margin-left : 0px; }
-    li.span3:nth-child(4n + 5) { margin-left : 0px; }
-    li.span2:nth-child(6n + 7) { margin-left : 0px; }
-    li.span1:nth-child(12n + 13) { margin-left : 0px; }
-  }
+//.row-fluid {
+//  ul.thumbnails,
+//  ul.cards {
+//    li.span12 + li { margin-left : 0px; }
+//    li.span6:nth-child(2n + 3) { margin-left : 0px; }
+//    li.span4:nth-child(3n + 4) { margin-left : 0px; }
+//    li.span3:nth-child(4n + 5) { margin-left : 0px; }
+//    li.span2:nth-child(6n + 7) { margin-left : 0px; }
+//    li.span1:nth-child(12n + 13) { margin-left : 0px; }
+//  }
+//}
+
+* {
+  @include box-sizing(border-box);
 }
 
 body {
@@ -38,12 +38,12 @@ body {
 }
 
 .page-container {
-  padding: 10px $gutter 0;
+  padding-left: $gutter;
+  padding-right: $gutter;
 }
 
 @media (min-width: 980px) {
   .page-container {
-    padding-top: ($awning-height + 10px);
     padding-bottom: 20px;
   }
 }
@@ -55,26 +55,8 @@ body {
       font-size: 2.1em;
     }
   }
-  .navbar-fixed-top {
-    margin-bottom: 0px;
-  }
 }
 
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-  .page-container {
-    padding: 4px 8px 0;
-  }
-
-  .awning.navbar {
-    .brand,
-    .username { display: none; }
-    .my-profile {
-      border: none !important;
-      padding-right: 0 !important;
-    }
-  }
-}
 
 @media (max-width: 768px) {
   body {
@@ -86,22 +68,6 @@ body {
     .call-to-action h2 {
       font-size: 2.1em;
       line-height: 1.1em;
-    }
-  }
-
-  .navbar-fixed-top {
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 979px) {
-  .navbar-fixed-top {
-    margin-bottom: 0;
-
-    .navbar-inner {
-      padding: 0;
     }
   }
 }

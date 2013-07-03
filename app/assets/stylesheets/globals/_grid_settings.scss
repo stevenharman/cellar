@@ -1,10 +1,12 @@
-@import "neat-helpers";
+@import 'neat-helpers';
 
-// Change the grid settings
-$column: 90px;
-$gutter: 30px;
-$grid-columns: 12;
-$max-width: em(1088);
+// Change the default grid settings
+// $column: golden-ratio(1em, 3); // Column width
+// $gutter: golden-ratio(1em, 1); // Gutter between each two columns
+// $grid-columns: 12; // Total number of columns in the grid
+// $max-width: em(1088); // Max-width of the outer container
+// $border-box-sizing: true; // Makes all elements have a border-box layout
+// $default-layout-direction: LTR;
 
 // Define your breakpoints
 $mobile: new-breakpoint(max-width 480px 4);
