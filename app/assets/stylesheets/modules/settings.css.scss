@@ -6,6 +6,9 @@
 
 .settings-nav {
   @include span-columns(3 of 12);
+  @include media($tablet) {
+    @include span-columns(3 of 8);
+  }
   @include media($mobile) { @include fill-parent; }
 
   text-transform: uppercase;
@@ -38,6 +41,9 @@
 
 .settings-content {
   @include span-columns(9 of 12);
+  @include media($tablet) {
+    @include span-columns(5 of 8);
+  }
   @include media($mobile) { @include fill-parent; }
 }
 
@@ -49,11 +55,13 @@
 
   .profile-fields {
     @include span-columns(4 of 9);
+    @include media($tablet) { @include fill-parent; }
     @include media($mobile) { @include fill-parent; }
   }
 
   .profile-bio {
     @include span-columns(5 of 9);
+    @include media($tablet) { @include fill-parent; }
     @include media($mobile) { @include fill-parent; }
     @include omega;
   }
