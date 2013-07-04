@@ -6,6 +6,10 @@
 
 // disable this so Neat's grid/grid mixin doesn't drop the box-sizing rule dozens of times.
 $border-box-sizing: false;
+
 // enable visual-grid for development
-$visual-grid: true;
+//$visual-grid: true;
+$visual-grid-color: #268BD2;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.25;
 @import 'neat';

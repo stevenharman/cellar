@@ -33,43 +33,27 @@
 
 body {
   > .container {
-    background: white;
     @include outer-container;
+    background: white;
+    max-width: $max-width + (2*$gutter);
   }
 }
 
 .page-container {
   padding-left: $gutter;
   padding-right: $gutter;
-}
 
-@media (min-width: 980px) {
-  .page-container {
-    padding-bottom: 20px;
+  @include media($mobile) {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
   }
 }
 
-/* Landscape phones and down */
-@media (max-width: 480px) {
-  .splash {
-    .call-to-action h2 {
-      font-size: 2.1em;
-    }
-  }
-}
+.page-content {
+  padding-bottom: $gutter;
 
-
-@media (max-width: 768px) {
-  body {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .splash {
-    .call-to-action h2 {
-      font-size: 2.1em;
-      line-height: 1.1em;
-    }
+  @include media($mobile) {
+    padding-bottom: 0.5em;
   }
 }
 

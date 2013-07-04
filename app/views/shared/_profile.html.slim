@@ -30,6 +30,5 @@
         span= profile.total_breweries
         | Total
 
-  .clearfix
   - if profile.bio?
     = simple_format(profile.bio, class: :bio)

@@ -14,8 +14,13 @@ footer {
   }
 
   .logo, .recent-tweets, .recent-blog {
-    @include span-columns(4);
+    @include span-columns(4 of 12);
     @include pad(default 0);
+
+    @include media($mobile) {
+      @include fill-parent;
+      display: none;
+    }
   }
 
   .logo {
@@ -28,15 +33,9 @@ footer {
   }
 
   p.legal {
+    @include pad(1em default);
     clear: both;
     font-size: em(11);
     margin-bottom: 0;
-    padding-left: flex-gutter();
-  }
-
-  @include media($mobile) {
-    .logo, .recent-tweets, .recent-blog {
-      display: none;
-    }
   }
 }

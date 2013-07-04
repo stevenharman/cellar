@@ -22,7 +22,7 @@
     clear: both;
     color: $text-well-color;
     font-family: $sans-serif;
-    font-size: 0.8em;
+    font-size: em(12, 16);
     line-height: $line-height;
     margin: 0.5em 0 0;
   }
@@ -85,7 +85,7 @@
       border-right: 1px solid $brown;
       color: $text-well-color;
       font-family: $small-font-family;
-      font-size: 0.7em;
+      font-size: em(11, 16);
       margin-left: 0;
       min-height: 3em;
       padding: 0.5em 0.5em 0.25em;
@@ -103,13 +103,13 @@
       span {
         color: $orange;
         display: block;
-        font-size: 2.5em;
+        font-size: em(36, 16);
       }
     }
   }
 
   /* Landscape phones and down */
-  @media (max-width: 480px) {
+  @include media($mobile) {
     $avatar-width: 80px;
 
     .avatar {
@@ -119,6 +119,7 @@
 
     .username {
       line-height: 1em;
+      font-size: 1.25rem;
 
       small { display: none; }
     }
