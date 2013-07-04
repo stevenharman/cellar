@@ -46,7 +46,7 @@
 
     .details {
       margin: 0;
-      font-family: $text-block-font-family;
+      font-family: $sans-serif;
 
       li {
         @include inline-block;
@@ -73,7 +73,7 @@
       li {
         @include inline-block;
         color: $orange;
-        font-family: $text-block-font-family;
+        font-family: $sans-serif;
         font-size: 1.4em;
         padding: 0.25em 0.25em 0;
         border-right: 1px solid white;

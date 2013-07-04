@@ -30,7 +30,3 @@ $notice-color: $light-yellow;
 $success-color: $light-green;
 
 $awning-height: 86px;
-
-$tableBackground: lighten($beige, 10%);
-$tableBackgroundAccent: desaturate(lighten($tableBackground, 4%), 10%);
-$tableBackgroundHover: desaturate(darken($tableBackground, 5%), 5%);

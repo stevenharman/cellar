@@ -2,7 +2,7 @@
 
 .profile-box {
   background-color: $yellow;
-  $text-well-background-color: #f8d47d;
+  $text-well-background-color: lighten($yellow, 10%);
   $text-well-color: $brown;
 
   border-radius: 3px;
@@ -21,7 +21,7 @@
 
     clear: both;
     color: $text-well-color;
-    font-family: $text-block-font-family;
+    font-family: $sans-serif;
     font-size: 0.8em;
     line-height: $line-height;
     margin: 0.5em 0 0;
@@ -31,20 +31,22 @@
     color: $brown;
     margin: 0;
     padding: 0;
+    line-height: 1em;
     text-transform: none;
 
     small {
       color: lighten(desaturate($brown, 20%), 15%);
+      font-size: em(10, 16);
       margin-left: 0.5em;
       white-space: nowrap;
     }
   }
   .demographics {
     $text: $brown;
-    $lighterText: $brown-accent;
+    $lighter-text: $brown-accent;
 
     color: $text;
-    list-style: none;
+    font-size: em(14, 16);
     margin: 0;
     position: relative;
     top: -0.5em;
@@ -56,12 +58,15 @@
     }
 
     i {
-      color: $lighterText;
+      color: $lighter-text;
       margin-right: 0.25em;
     }
   }
 
   .stats {
+    position: relative;
+    top: -0.25em;
+
     dl {
       @include inline-block;
       color: $orange;
@@ -72,6 +77,7 @@
     dt {
       font-family: $large-font-family;
       letter-spacing: 0px;
+      margin-top: 0;
     }
     dd {
       @include inline-block;
@@ -80,6 +86,7 @@
       color: $text-well-color;
       font-family: $small-font-family;
       font-size: 0.7em;
+      margin-left: 0;
       min-height: 3em;
       padding: 0.5em 0.5em 0.25em;
       text-align: center;

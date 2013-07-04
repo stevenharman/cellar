@@ -1,5 +1,12 @@
 @import '../globals/all';
 
+/* These are the colors we used to use. Delete them if not used
+    after we finish the transition to Bourbon
+$table-background: lighten($beige, 10%);
+$table-background-accent: desaturate(lighten($table-background, 4%), 10%);
+$table-background-hover: desaturate(darken($table-background, 5%), 5%);
+*/
+
 table {
   margin: ($base-line-height * .5) 0;
   width: 100%;
