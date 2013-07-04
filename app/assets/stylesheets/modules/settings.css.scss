@@ -1,14 +1,21 @@
 @import '../globals/all';
 
-nav.settings {
+.settings {
+  @include clearfix;
+}
+
+.settings-nav {
+  @include span-columns(3 of 12);
+  @include media($mobile) { @include fill-parent; }
+
   text-transform: uppercase;
 
   ul {
-    border: 1px solid green;
+    border: 1px solid $base-border-color;
   }
 
   li {
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid $base-border-color;
     font-family: $small-font-family;
     letter-spacing: 1px;
     list-style: none;
@@ -17,15 +24,41 @@ nav.settings {
     a {
       display: block;
       padding: 0.8em;
-      color: #A79D99;
-      font-size: .9em;
-      &:hover {text-decoration: none;color: $orange;}
+      color: $light-gray;
+      font-size: em(14, 16);
+      &:hover { color: $orange; }
     }
 
     &.active {
       background-color: $orange;
-      a { color: #fff; }
+      a { color: white; }
     }
   }
+}
 
+.settings-content {
+  @include span-columns(9 of 12);
+  @include media($mobile) { @include fill-parent; }
+}
+
+.settings-profile {
+  textarea,
+  #{$all-text-inputs} {
+    width: 100%;
+  }
+
+  .profile-fields {
+    @include span-columns(4 of 9);
+    @include media($mobile) { @include fill-parent; }
+  }
+
+  .profile-bio {
+    @include span-columns(5 of 9);
+    @include media($mobile) { @include fill-parent; }
+    @include omega;
+  }
+
+  .update-profile {
+    @include clearfix;
+  }
 }

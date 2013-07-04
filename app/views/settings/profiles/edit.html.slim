@@ -1,10 +1,11 @@
 - content_for :title do
   = t('settings.profiles.title')
 
-= simple_form_for(current_profile, url: settings_profile_path, method: :put, html: {class: 'row-fluid'}) do |f|
-  .span6
-    = f.input :name, required: false, input_html: {class: 'span11'}
-    = f.input :website, required: false, input_html: {class: 'span11'}
-    = f.input :location, required: false, input_html: {class: 'span11'}
-  = f.input :bio, as: :text, required: false, input_html: {rows: 10, class: 'span6'}
-  = f.submit t('.update_button'), class: 'update-profile btn'
+= simple_form_for(current_profile, url: settings_profile_path, method: :put, html: {class: 'settings-profile'}) do |f|
+  .profile-fields
+    = f.input :name, required: false
+    = f.input :website, required: false
+    = f.input :location, required: false
+  .profile-bio
+    = f.input :bio, as: :text, required: false, input_html: {rows: 10}
+  = f.submit t('.update_button'), class: 'update-profile'
