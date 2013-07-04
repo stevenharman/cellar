@@ -9,6 +9,12 @@
 // $default-layout-direction: LTR;
 
 // Define your breakpoints
-$desktop: new-breakpoint(min-width 769px 12);
-$tablet: new-breakpoint(max-width 768px 8);
-$mobile: new-breakpoint(max-width 480px 4);
+$mobile-size: 480px;
+$tablet-size: 768px;
+$desktop-size: ($tablet-size + 1);
+$desktop-large-size: 979px;
+
+$desktop: new-breakpoint(min-width $desktop-size 12);
+$desktop-small: new-breakpoint(min-width $desktop-size max-width $desktop-large-size 12);
+$tablet: new-breakpoint(max-width $tablet-size 8);
+$mobile: new-breakpoint(max-width $mobile-size 4);

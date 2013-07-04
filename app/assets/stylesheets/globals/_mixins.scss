@@ -43,3 +43,30 @@
     @include transition($property, $duration, $timing-function);
   }
 }
+
+// ------------------------------------------------------------
+// Omega Reset for Bourbon Neat
+// ------------------------------------------------------------
+// from: http://joshfry.me/notes/omega-reset-for-bourbon-neat/
+//
+// Allows you to reset omega() styles on new media queries
+// when you need to change the number of columns
+//
+// Useage:
+//
+// @include breakpoint(480px)  {
+//  @include span-columns(6);
+//  @include omega(2n);
+// }
+// @include breakpoint(768px)  {
+//  @include omega-reset(2n);
+//  @include span-columns(4);
+//  @include omega(3n);
+// }
+//
+// ------------------------------------------------------------
+
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}

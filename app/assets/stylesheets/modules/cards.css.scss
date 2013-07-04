@@ -1,18 +1,42 @@
 @import '../globals/all';
 
 .cards {
-  list-style: none;
-  margin-left: 0;
 
   .card {
     $label-width: 7em;
 
+    @include media($desktop) {
+      @include span-columns(4 of 12);
+      @include omega(3n);
+    }
+
+    @include media($desktop-small) {
+      @include omega-reset(3n);
+      @include span-columns(6 of 12);
+      @include omega(2n);
+    }
+
+    @include media($tablet) {
+      @include omega-reset(2n);
+      @include span-columns(4 of 8);
+      @include omega(2n);
+    }
+
+    @include media($mobile) {
+      @include span-columns(4 of 4);
+
+      .name a,
+      .breweries,
+      .style { white-space: normal !important; }
+    }
+
+    @include border-top-radius(4px);
     background-color: white;
     border: 1px solid $beige;
     border-bottom: none;
     color: $brown;
+    font-size: em(14, 16);
     margin-bottom: 1em;
-    @include border-top-radius(4px);
 
     .content {
       min-height: $label-width;
@@ -45,8 +69,9 @@
     }
 
     .details {
-      margin: 0;
       font-family: $sans-serif;
+      padding: 0;
+      margin: 0;
 
       li {
         @include inline-block;
@@ -64,10 +89,10 @@
     }
 
     .inventory {
-      $footer-height: 1.75em;
+      $footer-height: em(32, 16);
 
       @include inline-block;
-      list-style: none;
+      padding: 0;
       margin: 0;
 
       li {
@@ -86,15 +111,17 @@
         color: $brown;
         cursor: text;
         font-family: $small-font-family;
-        font-size: 0.5em;
+        font-size: em(8, 16);
         line-height: 1em;
         margin: 0;
+        text-transform: uppercase;
       }
 
       .actions {
         line-height: $footer-height;
         padding-left: 0;
         padding-right: 0;
+        padding-top: 0;
 
         a {
           color: $brown;
@@ -111,22 +138,5 @@
       clear: both;
       margin: 0.25em 0 0;
     }
-
-    /* Landscape phones and down */
-    @media (max-width: 480px) {
-      .name a,
-      .breweries,
-      .style { white-space: normal !important; }
-    }
-
   } // .card
-}
-
-@media (max-width: 979px) and (min-width: 768px) {
-  /* We are overriding the normal span4 behavior to act like a span 6 */
-  .row-fluid {
-    .cards .span4 {
-      @include span-columns(6);
-    }
-  }
 }

@@ -13,10 +13,14 @@ $form-font-family: $sans-serif;
 $form-width: em(300);
 
 fieldset {
-  background: #f1f1f1;
-  border: 1px solid lighten($base-border-color, 20%);
-  margin: 0 0 $base-line-height 0;
-  padding: $base-line-height $base-line-height ($base-line-height * .75) $base-line-height;
+  border: none;
+  margin: 0;
+  padding: 0; //$base-line-height $base-line-height ($base-line-height * .75) $base-line-height;
+
+  legend {
+    color: $brown;
+    font-family: $small-font-family;
+  }
 }
 
 input,

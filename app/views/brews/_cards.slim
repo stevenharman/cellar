@@ -1,4 +1,4 @@
 ul.cards
   - for brew in brews
-    li.span4
+    li.card
       == render 'brews/card', brew: brew, this_cellar: this_cellar, your_cellar: your_cellar

@@ -86,6 +86,11 @@ hr {
 
 img {
   margin: 0;
+  max-width: 100%;
+  width: auto\9;
+  height: auto;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
 }
 
 abbr, acronym {

@@ -1,19 +1,19 @@
 @import '../globals/all';
 
-.brew.card {
+.card .brew {
 
-    .breweries {
-      color: $brown-highlight;
-      font-family: $small-font-family;
-      @include text-overflow;
+  .breweries {
+    color: $brown-highlight;
+    font-family: $small-font-family;
+    @include text-overflow;
 
-      .separator:last-of-type { display: none; }
+    .separator:last-of-type { display: none; }
 
-      a {
-        color: $brown;
-        @include clickable;
-      }
+    a {
+      color: $brown;
+      @include clickable;
     }
+  }
 
   .details .style {
     font-size: 0.85em;

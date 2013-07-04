@@ -1,4 +1,4 @@
-article.brew.card*{'data-id' => brew.id}
+article.brew*{'data-id' => brew.id}
   .content
     figure
       = link_to(brew, title: brew.name) do
@@ -11,9 +11,10 @@ article.brew.card*{'data-id' => brew.id}
           span.separator
             '  |
       ul.details
-        li.style
-          i.icon-beer
-          = brew.style_name
+        - if brew.style_name.present?
+          li.style
+            i.icon-beer
+            = brew.style_name
         - if brew.abv.present?
           li.abv
             label= t('cellar.brew.abv')
