@@ -2,36 +2,41 @@
 
 footer {
   background-color: $brown-accent;
-  min-height: 10em;
-  padding: $gutter;
-  padding-bottom: $gutter/1;
+  color: white;
+  width: 100%;
 
   ul {
-    list-style: none;
-    margin-left: 0px;
     li {
-      border-bottom: 1px dotted #968883;
-      color: white;
-      font-size: 11px;
-      padding: 6px 0 6px 0;
+      border-bottom: 1px dotted $brown-highlight;
+      font-size: em(12);
+      padding: em(6) 0;
     }
   }
 
-  .newsletter {
-    input[type=email] {
-      margin: 0 0.5em 0.5em 0;
-      max-width: 20em;
-      width: 90%;
-    }
+  .logo, .recent-tweets, .recent-blog {
+    @include span-columns(4);
+    @include pad(default 0);
+  }
 
-    p {
-      color: white;
-      @include small-text();
-    }
+  .logo {
+    padding-left: flex-gutter();
+  }
+
+  .recent-blog {
+    @include omega;
+    padding-right: flex-gutter();
   }
 
   p.legal {
-    color: white;
-    @include small-text();
+    clear: both;
+    font-size: em(11);
+    margin-bottom: 0;
+    padding-left: flex-gutter();
+  }
+
+  @include media($mobile) {
+    .logo, .recent-tweets, .recent-blog {
+      display: none;
+    }
   }
 }

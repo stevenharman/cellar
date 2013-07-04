@@ -153,7 +153,12 @@ en:
 
   cellar:
     brewdega: "Brewdega"
+    tagline: "Stock up. Drink up."
     full_tagline: "Cellar at Brewdega: Stock up. Drink up."
+    recent_blog: "Recent Posts"
+    recent_blog_alt: "Updates from our blog."
+    recent_tweets: "Recent Tweets"
+    recent_tweets_alt: "Follow us on Twitter for more news."
     full_name: "%{name}'s Cellar"
     my_cellar: "My cellar"
     brew:
@@ -163,7 +168,6 @@ en:
     sign_in: "Sign in"
     sign_out: "Sign out"
     sign_up: "Sign up"
-    tagline: "Stock up. Drink up."
     confirmations:
       resend_button: "Resend confirmation instructions"
 

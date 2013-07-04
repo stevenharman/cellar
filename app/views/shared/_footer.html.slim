@@ -1,28 +1,18 @@
 footer
-  .row-fluid
-    .logo.span3.hidden-phone
-      = image_tag('footer_logo.gif', alt: 'Cellar: Stock up. Drink up.')
-    .twitter-feed.span3.hidden-phone
-      h4= link_to('http://twitter.com/brewdega', title: 'Twitter') do
-        i.icon-twitter
-        |  Twitter Feed
-      ul
-        li Toot 1
-        li Toot 2
-    .recent-posts.span3.hidden-phone
-      h4= link_to('http://blog.brewdega.com/', title: 'Blog') do
-        i.icon-bookmark
-        |  Recent Posts
-      ul
-        li Post 1
-        li Post 2
-    .newsletter.span3
-      = simple_form_for(:newsletter, url: '#', method: :post, html: { class: 'form-inline' }) do |f|
-        h4
-          i.icon-envelope-alt
-          |  Sign Up For Our Newsletter
-        p Sign up if you'd like to receive Brewdega and Cellar updates
-        = f.email_field :email, placeholder: 'Enter your email...'
-        = f.button :submit, 'Subscribe', class: 'subscribe-button btn-primary'
-    .clearfix
-    p.legal Privacy | Legal | 2012 Brewdega, LLC
+  .logo
+    = image_tag('footer_logo.gif', alt: t('cellar.full_tagline'))
+  .recent-tweets.hidden-phone
+    h4= link_to('http://twitter.com/brewdega', title: t('cellar.recent_tweets_alt')) do
+      i.icon-twitter
+      =< t('cellar.recent_tweets')
+    ul
+      li Toot 1
+      li Toot 2
+  .recent-blog
+    h4= link_to('http://blog.brewdega.com/', title: t('cellar.recent_blog_alt')) do
+      i.icon-bookmark
+      =< t('cellar.recent_blog')
+    ul
+      li Post 1
+      li Post 2
+  p.legal Privacy | Legal | © 2013 Brewdega, LLC
