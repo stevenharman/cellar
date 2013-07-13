@@ -1,9 +1,15 @@
-.splash {
-  background-color:  $brown;
+@import 'globals/all';
 
+.marketing-section {
+}
+
+.marketing-section-signup {
+
+}
+
+.marketing-section-junk {
   .call-to-action {
     background-color: $brown;
-    list-style: none;
     margin: 0;
     text-transform: uppercase;
 
@@ -34,10 +40,5 @@
       margin: 0 1em;
       &:last-child { border-bottom: none; }
     }
-  }
-  .the-numbers {
-    background-color: red;
-    position: relative;
-    margin-bottom: 0px;
   }
 }

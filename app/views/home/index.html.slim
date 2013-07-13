@@ -1,5 +1,17 @@
-section.splash.row-fluid
-  ul.call-to-action.span3
+section.marketing-section.marketing-section-signup
+  = simple_form_for @user do |f|
+    - if @user.errors.any?
+      ul.error_messages
+        - for message in @user.errors.full_messages
+          li= message
+
+    = f.input :username, input_html: { autofocus: true }
+    = f.input :email
+    = f.input :password, required: true
+    = f.submit id: 'sign_up', class: 'btn btn-primary'
+
+section.marketing-section.marketing-section-junk
+  ul.call-to-action
     li
       h2= link_to(sign_up_path, title: 'Sign up') do
         small Get started
@@ -12,5 +24,3 @@ section.splash.row-fluid
       h2= link_to(search_path) do
         small Know your brews
         ' Search beers
-  .the-numbers
-    | Just some content here
