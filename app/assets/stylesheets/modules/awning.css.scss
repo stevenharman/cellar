@@ -17,7 +17,7 @@
     span { display: none; }
   }
 
-  .search-box {
+  .awning-search-box {
     @include inline-block;
     line-height: $avatar-size;
     margin-left: 1em;
@@ -27,7 +27,7 @@
 
     .search-form-wrapper { display: none; }
 
-    form.search {
+    .search-form {
       @include inline-block;
       margin: 0;
       width: 100%;
