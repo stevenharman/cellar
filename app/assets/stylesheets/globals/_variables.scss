@@ -16,6 +16,7 @@ $light-green: #E6EFC2;
 
 //  Font Colors
 $base-font-color: $dark-gray;
+$base-font-color-light: lighten($base-font-color, 15%);
 
 //  Text Link Colors
 $base-link-color: $orange;

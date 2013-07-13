@@ -108,12 +108,12 @@ hgroup {
 }
 
 del {
-  color: lighten($base-font-color, 15%);
+  color: $base-font-color-light;
 }
 
 blockquote {
   border-left: 2px solid $base-border-color;
-  color: lighten($base-font-color, 15%);
+  color: $base-font-color-light;
   font-style: italic;
   margin: $base-line-height 0;
   padding-left: $base-line-height * .5;
