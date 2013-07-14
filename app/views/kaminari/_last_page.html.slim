@@ -6,4 +6,5 @@
 /    per_page:      number of items to fetch per page
 /    remote:        data-remote
 li.last
-  = link_to_unless current_page.last?, raw(t 'views.pagination.last'), url, {:remote => remote}
+  = link_to_unless(current_page.last?, raw(t('kaminari.pagination.last')), url,
+      rel: 'last', title: t('kaminari.pagination.last_title'), remote: remote)

@@ -1,0 +1,52 @@
+@import '../globals/all';
+
+.pagination {
+  $active-background-color: $base-background-color-disabled;
+
+  text-align: center;
+
+  ul {
+    @include inline-block;
+    font-size: em(14, 16);
+
+    &> li {
+      @include inline-block;
+
+      &> a,
+      &> span {
+        @include inline-block;
+        border: 1px solid $base-border-color-light;
+        border-left-width: 0;
+        padding: 0.25em 0.75em;
+
+      }
+
+      &.active > a,
+      &.active > span,
+      &> a:hover,
+      &> a:focus {
+        background-color: $active-background-color;
+      }
+
+      &.active,
+      &.disabled {
+        &> a,
+        &> span {
+          color: $base-font-color-disabled;
+          cursor: default;
+        }
+      }
+
+      &:first-child > a,
+      &:first-child > span {
+        @include border-left-radius(3px);
+        border-left-width: 1px;
+      }
+
+      &:last-child > a,
+      &:last-child > span {
+        @include border-right-radius(3px);
+      }
+    }
+  }
+}

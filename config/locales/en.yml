@@ -140,6 +140,18 @@ en:
 
   # Views
 
+  kaminari:
+    pagination:
+      first: "<icon class='icon-double-angle-left'></i>"
+      first_title: "First"
+      previous: "<icon class='icon-angle-left'></i>"
+      previous_title: "Previous"
+      truncate: "&hellip;"
+      next: "<icon class='icon-angle-right'></i>"
+      next_title: "Next"
+      last: "<icon class='icon-double-angle-right'></i>"
+      last_title: "Last"
+
   shared:
     awning:
       search:

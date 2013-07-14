@@ -17,6 +17,8 @@ $light-green: #E6EFC2;
 //  Font Colors
 $base-font-color: $dark-gray;
 $base-font-color-light: lighten($base-font-color, 15%);
+$base-font-color-disabled: lighten($base-font-color, 25%);
+$base-background-color-disabled: lighten($base-font-color-disabled, 45%);
 
 //  Text Link Colors
 $base-link-color: $orange;
@@ -24,6 +26,7 @@ $hover-link-color: darken($base-link-color, 15%);
 
 // Border color
 $base-border-color: $light-gray;
+$base-border-color-light: lighten($light-gray, 15%);
 
 // Flash Colors
 $error-color: $light-red;
