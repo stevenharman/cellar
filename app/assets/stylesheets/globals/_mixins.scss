@@ -1,9 +1,23 @@
+// Ensures the hover state also has the correct color;
+@mixin clickable($color: $orange) {
+ &:hover { color: $color; }
+}
+
 // Text overflow
 // Requires inline-block or block for proper styling
 @mixin text-overflow() {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+// Apply glow transistion on :hover and :focus
+@mixin transition-glow($property: all, $duration: 0.1s, $timing-function: ease-in) {
+  &:hover, &:focus {
+    text-decoration: none;
+    text-shadow: 0 0 4px white;
+    @include transition($property, $duration, $timing-function);
+  }
 }
 
 @mixin centered-definition-list {
@@ -29,18 +43,6 @@
   dd {
     @include inline-block;
     margin-right: 2em;
-  }
-}
-
-@mixin clickable($color: $orange) {
- &:hover { color: $color; }
-}
-
-@mixin transition-glow($property: all, $duration: 0.1s, $timing-function: ease-in) {
-  &:hover, &:focus {
-    text-decoration: none;
-    text-shadow: 0 0 4px white;
-    @include transition($property, $duration, $timing-function);
   }
 }
 

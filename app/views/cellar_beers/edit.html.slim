@@ -13,5 +13,5 @@ article.beer
       = f.input :best_by, as: :datepicker
       = f.input :notes, as: :text, input_html: {rows: 10}
 
-      = f.submit t('.update'), class: 'update-beer btn btn-success'
-      = link_to(t('.cancel'), cellar_beer_path(@beer.user, @beer), class: 'btn')
+      = f.submit t('.update'), class: 'update-beer btn-success'
+      = link_to(t('.cancel'), cellar_beer_path(@beer.user, @beer))

@@ -94,14 +94,30 @@ select {
 }
 
 button:not(.reset-style), // Add class of 'reset-style' to prevent a button from being styled
-input[type="submit"]:not(.reset-style) {
-  @include button(simple, #fafafa);
+input[type="submit"]:not(.reset-style),
+.btn {
+  @include button-flat($base-color: #DDD);
+//  @include button(flat, #fafafa);
 
   // Button Overrides
-  border-color: #BBB;
-  box-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.06);
   font-size: $form-font-size;
-  padding: 0.7em 1.9em;
+  padding: 0.7em 1.5em;
+
+  &.btn-primary {
+    @include button-flat($base-color: $blue);
+  }
+  &.btn-alt {
+    @include button-flat($base-color: $brown);
+  }
+  &.btn-success {
+    @include button-flat($base-color: $green);
+  }
+  &.btn-warning {
+    @include button-flat($base-color: $orange);
+  }
+  &.btn-danger {
+    @include button-flat($base-color: $red);
+  }
 }
 
 .field-with-errors {

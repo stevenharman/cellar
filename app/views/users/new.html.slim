@@ -9,6 +9,6 @@ h1 Sign up for the Brewdega Cellar.
   = f.input :username, input_html: { autofocus: true }
   = f.input :email
   = f.input :password, required: true
-  = f.submit id: 'sign_up', class: 'btn btn-primary'
+  = f.submit id: 'sign_up', class: 'btn-primary'
 
 p Already have an account? #{link_to 'Sign in', new_user_session_path} now!

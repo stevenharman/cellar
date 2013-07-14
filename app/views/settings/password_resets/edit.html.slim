@@ -2,4 +2,4 @@ h2 Enter a new password
 = simple_form_for(resource, url: settings_password_reset_path, method: :put) do |f|
   = f.hidden_field :reset_password_token
   = f.input :password, autofocus: true, label: false
-  = f.submit 'Change my password', class: 'change-password btn btn-success'
+  = f.submit 'Change my password', class: 'change-password btn-success'
