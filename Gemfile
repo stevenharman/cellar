@@ -21,7 +21,7 @@ group :assets do
   gem 'sass-rails', '~> 3.1'
   gem 'bourbon', '~> 3.1'
   gem 'neat', '~> 1.3' # Grid framework built upon Bourbon.
-  gem 'font-awesome-sass-rails'
+  gem 'font-awesome-rails', '~> 3.2'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.0.3'
 end
