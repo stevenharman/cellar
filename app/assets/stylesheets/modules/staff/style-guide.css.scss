@@ -1,0 +1,12 @@
+@import '../../globals/all';
+
+.style-guide-section {
+  @include pad;
+  border: 1px solid $base-border-color;
+
+  &.buttons {
+    button, .btn {
+      margin-right: 1em;
+    }
+  }
+}

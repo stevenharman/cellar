@@ -1,0 +1,51 @@
+fieldset.style-guide-section.headings
+  legend Headings
+
+  h1 h1. The quick brown fox jumped...
+  h2 h2. The quick brown fox jumped...
+  h3 h3. The quick brown fox jumped...
+  h4 h4. The quick brown fox jumped...
+  h5 h5. The quick brown fox jumped...
+  h6 h6. The quick brown fox jumped...
+
+fieldset.style-guide-section.text
+  legend Text
+  p
+    | A pretty typical paragraph of text. This one includes some a link to this
+      very #{link_to('style guide', '#')}, right here.
+  p
+    | More text, with some other stuff... Wolf cray food truck, bitters freegan
+      dreamcatcher pug before they sold out Bushwick small batch synth beard.
+      Tonx swag twee pug direct trade. Skateboard keffiyeh pop-up fanny pack
+      church-key.
+    blockquote cite='http://html5doctor.com/blockquote-q-cite/'
+      | A blockquote with more text in it. It's all great.
+      cite
+        =link_to('HTML5 Doctor', 'http://html5doctor.com/blockquote-q-cite/')
+    | Truffaut polaroid umami, fixie wayfarers Tonx brunch Wes
+      Anderson intelligentsia. Narwhal thundercats 8-bit sartorial, Austin
+      authentic tattooed occupy flexitarian fanny pack yr aesthetic irony pop-up.
+
+fieldset.style-guide-section.forms
+  legend Forms
+
+  = simple_form_for :style_guide, url: '#', method: :get do |f|
+    = f.input :text, error: true
+    = f.error :texts
+    = f.input :textarea, as: :text
+    = f.input :select_box, collection: 18..60
+    = f.input :check_boxes, as: :check_boxes
+    = f.input :radios, as: :radio_buttons
+    = f.submit 'Submit form'
+
+
+fieldset.style-guide-section.buttons
+  legend Buttons
+
+  button button
+  button disabled=true button (disabled)
+  button.btn-primary .btn-primary
+  button.btn-alt .btn-alt
+  button.btn-success .btn-success
+  button.btn-warning .btn-warning
+  button.btn-danger .btn-danger

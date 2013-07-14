@@ -41,6 +41,8 @@ BrewdegaCellar::Application.routes.draw do
   resources :webhooks, controller: :web_hooks, only: [:create]
 
   namespace :staff, constraints: Constraint::Admin.new do
+    resource :style_guide, only: [:show]
+
     require 'sidekiq/web'
     mount Sidekiq::Web => 'sidekiq'
   end
