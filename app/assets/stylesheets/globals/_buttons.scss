@@ -23,10 +23,13 @@
   @include transition-property(background);
   @include transition-duration(0.3s);
 
-  box-shadow: none;
+  background-clip: padding-box;
   background-color: $base-color;
   border: none;
+  box-shadow: none;
   color: $color;
+  display: inline-block;
+  text-decoration: none;
   text-shadow: none;
 
   &:hover:not(:disabled),
