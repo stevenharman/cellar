@@ -2,14 +2,18 @@
 
 .flashes {
   .error, .notice, .success, #flash_failure, #flash_success, #flash_notice {
-    margin-bottom: .75em;
-    margin-bottom: .75rem;
-    padding: .75em;
-    padding: .75rem;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
+    padding: 0.5em;
+    padding: 0.5rem;
   }
 
   .error, #flash_failure {
     background: $error-color;
+    border-color: darken($error-color, 20%);
     color: darken($error-color, 60%);
   }
 
@@ -19,6 +23,7 @@
 
   .notice, #flash_notice {
     background: $notice-color;
+    border-color: darken($notice-color, 20%);
     color: darken($notice-color, 60%);
   }
 
@@ -28,10 +33,24 @@
 
   .success, #flash_success {
     background: $success-color;
+    border-color: darken($success-color, 20%);
     color: darken($success-color, 50%);
   }
 
   .success a, #flash_success a {
     color: darken($success-color, 50%);
+  }
+
+  button.close {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    float: right;
+    opacity: 0.4;
+    padding: 0;
+
+    &:hover, &:focus {
+      opacity: 0.8;
+    }
   }
 }
