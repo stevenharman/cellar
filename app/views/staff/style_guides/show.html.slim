@@ -30,8 +30,8 @@ fieldset.style-guide-section.forms
   legend Forms
 
   = simple_form_for :style_guide, url: '#', method: :get do |f|
-    = f.input :text, error: true
-    = f.error :texts
+    = f.input :text
+    = f.input :disabled_text, disabled: true, input_html: {value: 'some junk'}
     = f.input :textarea, as: :text
     = f.input :select_box, collection: 18..60
     = f.input :check_boxes, as: :check_boxes
