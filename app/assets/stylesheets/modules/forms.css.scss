@@ -67,6 +67,13 @@ textarea,
     box-shadow: $form-box-shadow-focus;
     outline: none;
   }
+
+  &:disabled
+  {
+    background-color: $base-background-color-disabled;
+    color: $base-font-color-disabled;
+    cursor: not-allowed;
+  }
 }
 
 input[type="search"] {
