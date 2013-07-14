@@ -100,7 +100,7 @@ en:
 
     password_change:
       create:
-        error: "Whoops! There was a problem changing your password"
+        error: "Whoops! There was a problem changing your password."
         success: "Your password has been changed."
 
     profile:
