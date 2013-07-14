@@ -180,6 +180,7 @@ en:
     sign_in: "Sign in"
     sign_out: "Sign out"
     sign_up: "Sign up"
+    sign_up_for_cellar: "Sign up for Cellar"
     confirmations:
       resend_button: "Resend confirmation instructions"
 
