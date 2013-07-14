@@ -1,0 +1,12 @@
+@import '../globals/all';
+
+.error-page {
+  @include pad;
+  background: $error-color;
+  border-color: darken($error-color, 20%);
+  color: darken($error-color, 60%);
+
+  a {
+    color: darken($error-color, 60%);
+  }
+}
