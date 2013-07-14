@@ -1,17 +1,21 @@
 @import '../globals/all';
+@import 'font-awesome';
 
 $datepickerGrey: #f7f7f7;
 
 .ui-datepicker {
-  width: 216px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+  font-family: $small-font-family;
   height: auto;
   margin: 5px auto 0;
-  font-family: $small-font-family;
-  @include box-shadow(0px 0px 10px 0px rgba(0, 0, 0, .5));
+  width: 216px;
 
   a { text-decoration: none; }
 
-  table { width: 100%; }
+  table {
+    margin: 0;
+    width: 100%;
+  }
 
   thead {
     background-color: $datepickerGrey;
@@ -30,12 +34,14 @@ $datepickerGrey: #f7f7f7;
     font-size: 0.9em;
     padding: 5px 0;
     color: #666666;
+    text-align: center;
     text-shadow: 1px 0px 0px #fff;
     filter: dropshadow(color=#fff, offx=1, offy=0);
   }
 
   tbody td {
     padding: 0;
+    border-width: 0;
     border-right: 1px solid #bbb;
   }
 
@@ -68,7 +74,7 @@ $datepickerGrey: #f7f7f7;
   background-color: $brown;
   color: $brown-highlight;
   font-weight: bold;
-  @include box-shadow(inset 0px 1px 1px 0px rgba(250, 250, 250, .2));
+  box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, .2);
   text-shadow: 1px -1px 0px $brown-accent;
   filter: dropshadow(color=$brown, offx=1, offy=-1);
   line-height: 30px;
@@ -80,6 +86,7 @@ $datepickerGrey: #f7f7f7;
   text-align: center;
 
   select {
+    display: inline;
     height: auto;
     width: auto;
     padding: 0;
@@ -117,7 +124,7 @@ $datepickerGrey: #f7f7f7;
     background: -ms-linear-gradient(top,  #ededed 0%,#dedede 100%);
     background: linear-gradient(top,  #ededed 0%,#dedede 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#dedede',GradientType=0 );
-    @include box-shadow(inset 1px 1px 0px 0px rgba(250, 250, 250, .5));
+    box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
   }
 
   .ui-state-hover {
@@ -126,13 +133,12 @@ $datepickerGrey: #f7f7f7;
 
   .ui-state-active {
     background: $orange;
-    @include box-shadow(inset 0px 0px 10px 0px rgba(0, 0, 0, .1));
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
     color: white;
     text-shadow: 0px 1px 0px #4d7a85;
     filter: dropshadow(color=#4d7a85, offx=0, offy=1);
     border: 1px solid #55838f;
     position: relative;
-    margin: -1px;
   }
 
   $child_width: 29px;
