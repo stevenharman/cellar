@@ -7,4 +7,4 @@
 /    remote:        data-remote
 li.next
   = link_to_unless(current_page.last?, raw(t('kaminari.pagination.next')), url,
-      rel: 'next', title: t('kaminari.pagination.next_hint'), remote: remote)
+      rel: 'next', title: t('kaminari.pagination.next_title'), remote: remote)
