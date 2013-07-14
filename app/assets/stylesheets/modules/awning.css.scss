@@ -8,6 +8,7 @@
   background: transparent image-url('awning.png') repeat-x;
   color: white;
   height: $awning-height;
+  z-index: $awning-z-index;
 
   .brand {
     @include inline-block;
