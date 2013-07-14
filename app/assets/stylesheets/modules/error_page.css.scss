@@ -5,8 +5,15 @@
   background: $error-color;
   border-color: darken($error-color, 20%);
   color: darken($error-color, 60%);
+  text-align: center;
 
   a {
     color: darken($error-color, 60%);
+  }
+
+  small {
+    color: darken(grayscale($error-color), 40%);
+    display: block;
+    margin-right: -25%;
   }
 }

@@ -140,6 +140,14 @@ en:
 
   # Views
 
+  errors:
+    internal_server_error:
+      message: "Oh no, something broke on our end!"
+      sub_message: "We'll get on it."
+    not_found:
+      message: "Oh Noes, 404es!"
+      sub_message: "Gone missing?"
+
   kaminari:
     pagination:
       first: "<icon class='icon-double-angle-left'></i>"

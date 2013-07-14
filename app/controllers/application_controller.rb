@@ -52,7 +52,7 @@ class ApplicationController < ActionController::Base
   end
 
   def render_404(exception=nil)
-    render template: 'errors/404', status: 404
+    render template: 'errors/not_found', status: 404
   end
 
 end
