@@ -5,6 +5,6 @@ article.brews
   hgroup
     h1 = t('.title')
 
-  fieldset.row-fluid
+  fieldset
     == render 'brews/cards', brews: @brews, this_cellar: current_cellar, your_cellar: current_cellar
   = paginate @brews

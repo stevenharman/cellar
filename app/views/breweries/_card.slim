@@ -1,4 +1,4 @@
-article.brewery.card*{'data-id' => brewery.id}
+article.brewery*{'data-id' => brewery.id}
   .content
     figure
       = link_to(brewery, title: brewery.name) do
@@ -20,4 +20,3 @@ article.brewery.card*{'data-id' => brewery.id}
       li.brews-count
         = brewery.brews.count
         label= t('.inventory.brews_count')
-
