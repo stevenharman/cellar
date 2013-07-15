@@ -83,27 +83,50 @@ bin/import
 
 ### CSS Structure
 
-Generally we follow the structure outlined by [thoughtbot][thoughtbot-css].
+Generally we follow [Scalable and Modular Architecture for CSS
+(SMACSS)](smacss) for structuring our CSS. We also rely on [Bourbon](bourbon)
+and [Bourbon Neat](bourbon-neat) as a [Sass](sass) mixin library and sensible
+grid system, respectively.
 
-  * Page-specific styles should be organized by the controller and action (i.e.
-    `<controller>/_<action>.scss`) the same way the rails views are organized.
-  * Base variables, mixins, and default styles go in `base/_variables.scss`,
-    `base/_mixins.scss`, `base/_defaults.scss`, etc.
-  * Shared components go in `shared/_header.scss`, `shared/_footer.scss`,
-    `shared/_navbar.scss`, etc.
+It is recommended to check out the references listed below to learn more about SMACSS, Bourbon, etc.
 
-Please read the above-mentioned article from thoughtbot for more explaination
-of this convention.
+The **TL;DR** is:
+
+  * All global settings and custom mixins belong under the
+    `globals/` directory as Sass partials.
+  * The base styling of various `HTML` elements is defined in `base.css.scss`,
+    which is included as part of the `application.css.scss`
+  * Re-usable modules go in `modules/` directory and are full Sass sheets (not
+    partials).
+    * Modules should `@import '../globals/all'` to get access to variables,
+      mixins, etc.
+    * Modules in this directory are automagically included in the compiled CSS
+      for the whole site.
+  * We are trying to avoid page-specific styling, instead preferring to think
+    in terms of modules. So, try the module approach... please.
+
+#### Resources for reference and learning:
+
+  * [SMACSS and Rails: a Styleguide for the Asset
+    Pipeline](http://blog.55minutes.com/2013/01/smacss-and-rails/)
+  * [SMACSS website](smacss)
+  * [Bourbon Documentation](http://bourbon.io/docs/)
+  * [Bourbon Neat Documentation](http://neat.bourbon.io/docs/)
+  * [Bourbon Neat Examples](http://neat.bourbon.io/examples/)
+  * [Sass website](sass) also has pretty decent docs, and _a whole lot of useful functions_
 
 ## What's missing?
 
 [README Driven Development][rdd]. Do it!
 
 
+[bourbon-neat]: http://neat.bourbon.io/ "A lightweight semantic grid framework for Sass and Bourbon"
+[bourbon]: http://bourbon.io/ "A simple and lightweight mixin library for Sass"
 [foreman]: https://devcenter.heroku.com/articles/procfile/
 [rdd]: http://tom.preston-werner.com/2010/08/23/readme-driven-development.html
+[sass]: http://sass-lang.com/ "Syntactically Awesome Style Sheets"
 [sidekiq]: https://github.com/mperham/sidekiq
+[smacss]: http://smacss.com/ "Scalable and Modular Architecture for CSS"
 [texticle]: https://tenderlove.github.com/texticle/
-[thoughtbot-css]: http://robots.thoughtbot.com/post/25098505945/style-sheet-swag-architecting-your-applications-styles "Style Sheet Swag: architecting your applications styles"
 [ttm-unicorn]: http://devblog.thinkthroughmath.com/blog/2013/02/27/managing-request-queuing-with-rails-on-heroku/
 [unicorn]: http://unicorn.bogomips.org/
