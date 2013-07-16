@@ -49,9 +49,14 @@ setup_database() {
 }
 
 # Brew packages
-brew_install_if_needed postgresql
-brew_install_if_needed redis
 brew_install_if_needed heroku-toolbelt
+brew_install_if_needed redis
+
+# Postgres
+which postgres | grep "Postgres.app" > /dev/null 2>&1
+if [[ "$?" -eq "0" ]]; then
+  brew_install_if_needed postgresql
+fi
 
 # database.yml
 if [ ! -f config/database.yml ]; then
