@@ -110,6 +110,7 @@ The **TL;DR** is:
   * [SMACSS and Rails: a Styleguide for the Asset
     Pipeline](http://blog.55minutes.com/2013/01/smacss-and-rails/)
   * [SMACSS website](smacss)
+  * [SMACSS intro videos](http://tv.adobe.com/search/?q=smacss)
   * [Bourbon Documentation](http://bourbon.io/docs/)
   * [Bourbon Neat Documentation](http://neat.bourbon.io/docs/)
   * [Bourbon Neat Examples](http://neat.bourbon.io/examples/)
