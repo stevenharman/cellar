@@ -109,7 +109,8 @@ The **TL;DR** is:
 #### Style Guide
 
 We also have a style guide available right in the app. After [starting the
-app](#running-the-app), go to [http://localhost:5000/staff/style_guide]().
+app](#running-the-app), go to
+[http://localhost:5000/staff/style_guide](http://localhost:5000/staff/style_guide).
 You'll need to be an admin to see anything in the `staff/` route. You can make
 yourself an admin via Rails console:
 
