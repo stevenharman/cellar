@@ -6,9 +6,7 @@
 
 .settings-nav {
   @include span-columns(3 of 12);
-  @include media($tablet) {
-    @include span-columns(3 of 8);
-  }
+  @include media($tablet) { @include span-columns(3 of 8); }
   @include media($mobile) { @include fill-parent; }
 
   text-transform: uppercase;

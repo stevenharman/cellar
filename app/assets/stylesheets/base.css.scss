@@ -51,7 +51,7 @@ h5 {
 
 h6 {
   font-size: $base-font-size;
-  line-height: lh();
+  line-height: $base-line-height;
   margin: 0;
 }
 

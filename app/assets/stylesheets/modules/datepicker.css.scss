@@ -117,12 +117,12 @@ $datepickerGrey: #f7f7f7;
 .ui-datepicker-calendar {
   .ui-state-default {
     background: #ededed;
-    background: -moz-linear-gradient(top,  #ededed 0%, #dedede 100%);
+    background: -moz-linear-gradient(top, #ededed 0%, #dedede 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ededed), color-stop(100%,#dedede));
-    background: -webkit-linear-gradient(top,  #ededed 0%,#dedede 100%);
-    background: -o-linear-gradient(top,  #ededed 0%,#dedede 100%);
-    background: -ms-linear-gradient(top,  #ededed 0%,#dedede 100%);
-    background: linear-gradient(top,  #ededed 0%,#dedede 100%);
+    background: -webkit-linear-gradient(top, #ededed 0%,#dedede 100%);
+    background: -o-linear-gradient(top, #ededed 0%,#dedede 100%);
+    background: -ms-linear-gradient(top, #ededed 0%,#dedede 100%);
+    background: linear-gradient(top, #ededed 0%,#dedede 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#dedede',GradientType=0 );
     box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5);
   }
