@@ -1,0 +1,22 @@
+@import '../globals/all';
+
+.brew {
+}
+
+.similar-brews-legend {
+  margin-bottom: 0.5em;
+}
+.similar-brews-list {
+  border: 1px solid $base-border-color-light;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+
+  li {
+    @include text-overflow;
+    margin-bottom: 0.5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
