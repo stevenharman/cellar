@@ -1,10 +1,10 @@
-@mixin button-flat($style: flat, $base-color: #DDD) {
+@mixin button-flat($style: flat, $base-color: #DDD, $text-color: null) {
 
   @if $base-color == grayscale($base-color) {
     @include flat($base-color, $grayscale: true);
   }
   @else {
-    @include flat($base-color);
+    @include flat($base-color, $text-color);
   }
 
   &:disabled {
@@ -13,10 +13,11 @@
   }
 }
 
-@mixin flat($base-color, $grayscale: false) {
-  $color: hsl(0, 0, 100%);
+@mixin flat($base-color, $text-color: null, $grayscale: false) {
+  $color: $text-color;
+  $color: hsl(0, 0, 100%) !default;
 
-  @if lightness($base-color) > 70% {
+  @if (lightness($base-color) > 70%) and (not $text-color) {
     $color: hsl(0, 0, 20%);
   }
 
