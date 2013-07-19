@@ -88,15 +88,6 @@ Generally we follow [Scalable and Modular Architecture for CSS
 and [Bourbon Neat](bourbon-neat) as a [Sass](sass) mixin library and sensible
 grid system, respectively.
 
-We also have a style guide available right in the app. After [starting the
-app](#running-the-app), go to [http://localhost:5000/staff/style_guide]().
-You'll need to be an admin to see anything in the `staff/` route. You can make
-yourself an admin via Rails console:
-
-```ruby
-me = User.find_by_username('my_username_here'); me.admin = true; me.save!
-```
-
 It is recommended to check out the references listed below to learn more about
 SMACSS, Bourbon, etc.
 
@@ -114,6 +105,17 @@ The **TL;DR** is:
       for the whole site.
   * We are trying to avoid page-specific styling, instead preferring to think
     in terms of modules. So, try the module approach... please.
+
+#### Style Guide
+
+We also have a style guide available right in the app. After [starting the
+app](#running-the-app), go to [http://localhost:5000/staff/style_guide]().
+You'll need to be an admin to see anything in the `staff/` route. You can make
+yourself an admin via Rails console:
+
+```ruby
+me = User.find_by_username('my_username_here'); me.admin = true; me.save!
+```
 
 #### Resources for reference and learning:
 
