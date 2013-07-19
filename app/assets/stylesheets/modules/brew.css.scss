@@ -1,6 +1,38 @@
 @import '../globals/all';
 
 .brew {
+  .add-to-cellar {
+    float: right;
+  }
+}
+
+.brew-basics {
+  .name {
+    margin: 0;
+  }
+  .brewery-name {
+    margin: 0;
+  }
+}
+
+.brew-details {
+  @include clearfix;
+  font-size: em(12, 16);
+
+  .detail {
+    @include inline-block;
+    @include span-columns(2 of 9);
+    line-height: 1.1em;
+
+    //&.style { @include span-columns(3 of 9); }
+    &:last-child { @include omega; }
+
+    label {
+      font-size: inherit;
+      line-height: 1em;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .similar-brews-legend {

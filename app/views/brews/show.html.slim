@@ -3,22 +3,27 @@
 
 article.split-view.brew*{'data-id' => @brew.id}
   .split-view-main
-    hgroup
-      h2.name= @brew.name
-      h5.brewery-name= render partial: @brew.breweries, spacer_template: 'breweries/brewery_spacer'
+    hgroup.brew-basics
+      h1.name= @brew.name
+      .brewery-name= render partial: @brew.breweries, spacer_template: 'breweries/brewery_spacer'
 
-    .description
+    .brew-description
       = simple_format(@brew.description)
 
-    dl.details
-      dt Style:
-      dd= @brew.style_name
-      dt ABV:
-      dd
+    ul.brew-details
+      li.detail.style
+        label Style
+        = @brew.style_name
+      li.detail.abv
+        label ABV
         = @brew.abv
         | %
-      dt IBU:
-      dd= @brew.ibu
+      li.detail.ibu
+        label IBU
+        = @brew.ibu
+      li.detail.availability
+        label Availability
+        | Fake Thing
 
     == render 'cellars/beers_for_brew', brew: @brew, your_cellar: current_cellar
 
