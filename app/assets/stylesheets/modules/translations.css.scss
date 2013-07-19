@@ -1,0 +1,10 @@
+// Used to detect where we're missing i18n translations from our locales files.
+.translation_missing {
+  background-image: -webkit-gradient(linear,  left top,  right bottom, color-stop(0.00, red), color-stop(16%, orange), color-stop(32%, yellow), color-stop(48%, green), color-stop(60%, blue), color-stop(76%, indigo), color-stop(1.00, violet));
+  color: #fff;
+  font-family: "Comic sans MS";
+  outline: 2px dashed red;
+  padding: 0.2em 0.4em;
+  text-shadow: 1px 1px 0px #000;
+}
+
