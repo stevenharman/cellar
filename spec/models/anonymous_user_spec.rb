@@ -1,11 +1,15 @@
-require 'active_record_spec_helper'
-require 'models/anonymous_user'
-require 'models/beer'
+require 'spec_helper'
 
 describe AnonymousUser do
   subject(:user) { AnonymousUser.new }
 
   it { expect(user).not_to be_active }
 
-  it { expect(user.cellared_beers).to be_empty }
+  context 'with cellared beers' do
+    before do
+      FactoryGirl.create(:beer)
+    end
+
+    it { expect(user.cellared_beers).to be_empty }
+  end
 end
