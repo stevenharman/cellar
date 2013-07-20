@@ -31,4 +31,6 @@
           tr.no-beer
             td colspan='5'
               ' You don't have any #{@brew.name} in you cellar.
-              = link_to 'Stock one now!', new_stock_order_path(brew: brew)
+              = link_to(new_stock_order_path(brew: brew), class: 'add-to-cellar btn') do
+                span.icon-plus-sign
+                =< t('cellar.stock_one_now')
