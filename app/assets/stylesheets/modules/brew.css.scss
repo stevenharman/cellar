@@ -3,6 +3,11 @@
 .brew {
   .add-to-cellar {
     float: right;
+    margin-bottom: 1em;
+  }
+
+  .brew-label {
+    margin-bottom: 1em;
   }
 }
 
@@ -17,12 +22,11 @@
 
 .brew-details {
   @include clearfix;
-  font-size: em(12, 16);
 
   .detail {
-    @include inline-block;
     @include span-columns(2 of 9);
     line-height: 1.1em;
+    font-size: em(12, 16);
 
     //&.style { @include span-columns(3 of 9); }
     &:last-child { @include omega; }

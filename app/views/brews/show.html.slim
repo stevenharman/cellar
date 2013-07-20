@@ -25,13 +25,14 @@ article.split-view.brew*{'data-id' => @brew.id}
         label Availability
         | Fake Thing
 
-    == render 'cellars/beers_for_brew', brew: @brew, your_cellar: current_cellar
+    = render 'cellars/stats', cellar: current_cellar, brew: @brew
+    = render 'cellars/beers_for_brew', brew: @brew, your_cellar: current_cellar
 
   .split-view-sidebar
     = link_to(new_stock_order_path(brew: @brew), class: 'add-to-cellar btn btn-primary') do
       span.icon-plus-sign
       |  Stock one now!
-    = image_tag(@brew.medium_image || 'http://placehold.it/256x256', alt: @brew.name, class: :span3)
+    = image_tag(@brew.medium_image || 'http://placehold.it/256x256', alt: @brew.name, class: 'brew-label')
 
     .similar-brews
       h6.similar-brews-legend= t('.similar-brews')
