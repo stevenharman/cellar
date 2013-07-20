@@ -127,6 +127,18 @@ input[type="submit"]:not(.reset-style),
   }
 }
 
+.btn-group {
+  button,
+  input[type="submit"],
+  .btn {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
+  }
+}
+
 .field-with-errors {
   textarea,
   #{$all-text-inputs} {
