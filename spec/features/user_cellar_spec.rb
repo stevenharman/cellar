@@ -70,6 +70,7 @@ feature 'Removing a beer from the Cellar', :feature, :slow do
 
     expect_not_to_be_in_the_cellar(bobs_beer)
     expect_all_cellared_count_to_be(0, brew: brew)
+    expect_empty_beer_list
   end
 
   scenario 'after trading, the beer is no longer in the Cellar' do

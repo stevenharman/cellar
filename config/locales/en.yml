@@ -143,6 +143,11 @@ en:
   # Views
 
   cellars:
+    beer_list:
+      best_by: "Best by"
+      cellared_on: "Cellared"
+      empty: "Oh no, you don't have any %{brew_name} in your cellar."
+      vintage: "Vintage"
     stats:
       title: "Cellar Stats"
       all_cellared: "All cellars"
@@ -201,4 +206,5 @@ en:
     sign_up_for_cellar: "Sign up for Cellar"
     confirmations:
       resend_button: "Resend confirmation instructions"
+    stock_one_now: "Stock one now!"
 

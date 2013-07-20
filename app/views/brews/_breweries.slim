@@ -1,0 +1,5 @@
+- for brewery in brew.breweries do
+  = link_to(brewery.name, brewery, title: brewery.name, class: 'brew-brewery')
+  - unless brewery == brew.breweries.last
+    span.separator
+      '  |

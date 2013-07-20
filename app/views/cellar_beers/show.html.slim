@@ -2,10 +2,7 @@ article.beer
   h2= link_to(@beer.brew.name, @beer.brew)
   dl.details
     dt By
-    - for brewery in @beer.brew.breweries do
-      dd
-        = link_to brewery.name, brewery, title: brewery.name, class: 'brewery'
-        span.separator= " | "
+    dd= render 'brews/breweries', brew: @beer.brew
     dt Batch:
     dd.batch=' @beer.batch
     dt Bottled on:
