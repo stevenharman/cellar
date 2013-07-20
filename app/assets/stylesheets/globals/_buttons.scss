@@ -32,6 +32,8 @@
   display: inline-block;
   text-decoration: none;
   text-shadow: none;
+  font-family: $small-font-family;
+  text-transform: uppercase;
 
   &:hover:not(:disabled),
   &:focus:not(:disabled) {

@@ -1,10 +1,15 @@
 @import 'globals/all';
 
 .marketing-section {
+  h1 {
+    text-transform: uppercase;
+    font-size: 4em;
+  }
+  padding: 1em 0;
 }
 
 .marketing-section-signup {
-
+  background-color: $light-beige;
 }
 
 .marketing-section-junk {
@@ -41,4 +46,19 @@
       &:last-child { border-bottom: none; }
     }
   }
+}
+
+.stocking {
+  text-align: center;
+  background-color: $yellow;
+}
+
+.tracking {
+  text-align: center;
+  background-color: $light-beige;
+}
+
+.pricing {
+  text-align: center;
+  background-color: $orange;
 }

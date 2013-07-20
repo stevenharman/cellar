@@ -32,8 +32,11 @@ select {
 }
 
 label {
-  font-weight: bold;
+  font-family: $small-font-family;
+  text-transform: uppercase;
   margin-bottom: $base-line-height * .25;
+  color: $orange;
+  font-size: .8em;
 
   &.required::after {
     content: "*";
