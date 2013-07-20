@@ -1,10 +1,7 @@
 article.beer
   h2= link_to(@beer.brew.name, @beer.brew)
   dt.span2 By
-  - for brewery in @beer.brew.breweries do
-    dd
-      = link_to brewery.name, brewery, title: brewery.name, class: 'brewery'
-      span.separator= " | "
+  dd= render 'brews/breweries', brew: @beer.brew
 
   fieldset.details.fluid-row
     = simple_form_for(@beer, url: cellar_beer_path(@beer.user, @beer), html: {class: 'form-horizontal'}) do |f|

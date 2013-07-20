@@ -5,11 +5,7 @@ article.brew*{'data-id' => brew.id}
         = image_tag(brew.medium_image || 'http://placehold.it/140x140', alt: brew.name)
     .specifics
       h3.name= link_to(brew.name, brew, title: brew.name)
-      .breweries
-        - for brewery in brew.breweries do
-          = link_to(brewery.name, brewery, title: brewery.name, class: 'brewery')
-          span.separator
-            '  |
+      .breweries= render 'brews/breweries', brew: brew
       ul.details
         - if brew.style_name.present?
           li.style
