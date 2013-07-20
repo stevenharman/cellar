@@ -2,4 +2,4 @@
   h4.cellar-stats-legend= t('.title')
   ul.cellar-stats-list
     = render('cellars/stat', name: t('.your_cellar'), value: cellar.beers_count(brew)) if cellar.active?
-    = render('cellars/stat', name: t('.all_cellars'), value: brew.cellared_beers_count)
+    = render('cellars/stat', name: t('.all_cellars'), value: brew.cellared_beers_count, wrapper: 'all-cellars-count')
