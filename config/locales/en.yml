@@ -46,9 +46,9 @@ en:
     card:
       inventory:
         actions: "See your cellared beers"
-        all_cellars: "All cellars"
-        this_cellar: "This cellar"
-        your_cellar: "Your cellar"
+        all_cellared: "All cellars"
+        this_cellar_cellared: "This cellar"
+        your_cellared: "Your cellar"
     show:
       similar-brews: "Similar Beers"
 
@@ -145,10 +145,10 @@ en:
   cellars:
     stats:
       title: "Cellar Stats"
-      all_cellars: "All cellars"
+      all_cellared: "All cellars"
       for_trade: "For trade"
       in_search_of: "In search of"
-      your_cellar: "Your cellar"
+      your_cellared: "Your cellar"
 
   errors:
     internal_server_error:
