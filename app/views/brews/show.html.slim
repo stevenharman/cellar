@@ -7,26 +7,29 @@ article.split-view.brew*{'data-id' => @brew.id}
       h1.name= @brew.name
       .brewery-name= render 'brews/breweries', brew: @brew
 
-    .brew-description
-      = simple_format(@brew.description)
+    .brew-info
+      .brew-description
+        = simple_format(@brew.description)
 
-    ul.brew-details
-      li.detail.style
-        label Style
-        = @brew.style_name
-      li.detail.abv
-        label ABV
-        = @brew.abv
-        | %
-      li.detail.ibu
-        label IBU
-        = @brew.ibu
-      li.detail.availability
-        label Availability
-        | Fake Thing
+      ul.brew-details
+        li.detail.style
+          label Style
+          = @brew.style_name
+        li.detail.abv
+          label ABV
+          = @brew.abv
+          | %
+        li.detail.ibu
+          label IBU
+          = @brew.ibu
+        li.detail.availability
+          label Availability
+          | Fake Thing
 
-    = render 'cellars/stats', cellar: current_cellar, brew: @brew
-    = render 'cellars/beers_for_brew', brew: @brew, your_cellar: current_cellar
+      = render 'cellars/stats', cellar: current_cellar, brew: @brew
+
+    .beer-list
+      = render 'cellars/beers_for_brew', brew: @brew, your_cellar: current_cellar
 
   .split-view-sidebar
     = link_to(new_stock_order_path(brew: @brew), class: 'add-to-cellar btn btn-primary') do
