@@ -28,11 +28,14 @@ $hover-link-color: darken($base-link-color, 15%);
 
 // Border Colors
 $base-border-color: $light-gray;
-$base-border-color-light: lighten($light-gray, 15%);
+$base-border-color-light: lighten($base-border-color, 15%);
 
 // Background Colors
-$base-background-color-highlight: $beige;
 $base-background-color-disabled: lighten($base-font-color-disabled, 45%);
+
+// Section Colors (for cards, wells, callouts, etc.)
+$section-background-color: $light-beige;
+$section-border-color: $beige;
 
 // Flash Colors
 $error-color: $light-red;

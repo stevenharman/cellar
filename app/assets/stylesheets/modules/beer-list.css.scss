@@ -22,7 +22,7 @@
   $item-height: 5em;
 
   @include row;
-  border: 1px solid $base-border-color-light;
+  border: 1px solid $section-border-color;
   border-radius: 3px;
   margin-bottom: 1em;
 
@@ -47,8 +47,8 @@
 
   .beer-actions {
     @include span-columns(2 of 9);
-    background-color: $base-background-color-highlight;
-    border-left: 1px solid $base-border-color-light;
+    background-color: $section-background-color;
+    border-left: 1px solid $section-border-color;
     padding: 0;
     text-align: center;
   }
