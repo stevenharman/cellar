@@ -1,26 +1,42 @@
 - content_for :title do
   = @brew.name
 
-article.brew*{'data-id' => @brew.id}
-  = link_to new_stock_order_path(brew: @brew), class: 'add-to-cellar' do
-    span.icon-plus-sign
-    |  Stock one now!
-  hgroup
-    h2.name= @brew.name
-    h5.brewery-name= render partial: @brew.breweries, spacer_template: 'breweries/brewery_spacer'
+article.split-view.brew*{'data-id' => @brew.id}
+  .split-view-main
+    hgroup.brew-basics
+      h1.name= @brew.name
+      .brewery-name= render partial: @brew.breweries, spacer_template: 'breweries/brewery_spacer'
 
-  .row-fluid
-    = image_tag(@brew.large_image || 'http://placehold.it/256x256', alt: @brew.name, class: :span3)
-    .span9
-      dl.details
-        dt Style:
-        dd= @brew.style_name
-        dt ABV:
-        dd
-          = @brew.abv
-          | %
-        dt IBU:
-        dd= @brew.ibu
-      .description
-        = simple_format(@brew.description)
-      == render 'cellars/beers_for_brew', brew: @brew, your_cellar: current_cellar
+    .brew-description
+      = simple_format(@brew.description)
+
+    ul.brew-details
+      li.detail.style
+        label Style
+        = @brew.style_name
+      li.detail.abv
+        label ABV
+        = @brew.abv
+        | %
+      li.detail.ibu
+        label IBU
+        = @brew.ibu
+      li.detail.availability
+        label Availability
+        | Fake Thing
+
+    = render 'cellars/stats', cellar: current_cellar, brew: @brew
+    = render 'cellars/beers_for_brew', brew: @brew, your_cellar: current_cellar
+
+  .split-view-sidebar
+    = link_to(new_stock_order_path(brew: @brew), class: 'add-to-cellar btn btn-primary') do
+      span.icon-plus-sign
+      |  Stock one now!
+    = image_tag(@brew.medium_image || 'http://placehold.it/256x256', alt: @brew.name, class: 'brew-label')
+
+    .similar-brews
+      h6.similar-brews-legend= t('.similar-brews')
+      ul.similar-brews-list
+        li= link_to('Brew Name Here', '#')
+        li= link_to('Brew Name Here In Case Longer', '#')
+        li= link_to('Another Brew Name Here', '#')

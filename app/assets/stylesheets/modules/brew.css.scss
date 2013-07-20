@@ -1,0 +1,58 @@
+@import '../globals/all';
+
+.brew {
+  .add-to-cellar {
+    float: right;
+    margin-bottom: 1em;
+  }
+
+  .brew-label {
+    margin-bottom: 1em;
+  }
+}
+
+.brew-basics {
+  .name {
+    margin: 0;
+  }
+  .brewery-name {
+    margin: 0;
+  }
+}
+
+.brew-details {
+  @include clearfix;
+
+  .detail {
+    @include span-columns(2 of 9);
+    line-height: 1.1em;
+    font-size: em(12, 16);
+
+    //&.style { @include span-columns(3 of 9); }
+    &:last-child { @include omega; }
+
+    label {
+      font-size: inherit;
+      line-height: 1em;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.similar-brews-legend {
+  margin-bottom: 0.5em;
+}
+.similar-brews-list {
+  border: 1px solid $base-border-color-light;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+
+  li {
+    @include text-overflow;
+    margin-bottom: 0.5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

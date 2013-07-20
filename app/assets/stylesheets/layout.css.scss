@@ -1,0 +1,34 @@
+@import 'globals/all';
+
+// Since we disabled Neat's grid/grid mixin's box-sizing feature, we need to
+// manually do it here.
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  > .container {
+    @include outer-container;
+    background: white;
+    max-width: $max-width + (2*$gutter);
+  }
+}
+
+.page-container {
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @include media($mobile) {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+  }
+}
+
+.page-content {
+  padding-bottom: $gutter;
+
+  @include media($mobile) {
+    padding-bottom: 0.5em;
+  }
+}
+

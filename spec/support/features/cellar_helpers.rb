@@ -1,7 +1,7 @@
 module Features
   module CellarHelpers
     def view_brew_page(brew)
-      brew_row = find(%(.brew[data-id="#{brew.id}"] .name))
+      brew_row = find_brew(brew, '.specifics')
       brew_row.click_link(brew.name)
     end
 
@@ -27,12 +27,12 @@ module Features
 
     def expect_all_cellared_count_to_be(count, args)
       brew = args.fetch(:brew)
-      brew_inventory = find_brew_inventory(brew).find('.all-cellars-count')
-      expect(brew_inventory).to have_text(count)
+      brew_count = find_brew(args.fetch(:brew), '.all-cellared')
+      expect(brew_count).to have_text(count)
     end
 
-    def find_brew_inventory(brew)
-      page.find(%(.brew[data-id="#{brew.id}"] .inventory))
+    def find_brew(brew, selector = '')
+      page.find(%(.brew[data-id="#{brew.id}"] #{selector}).rstrip)
     end
   end
 end

@@ -51,7 +51,7 @@ h5 {
 
 h6 {
   font-size: $base-font-size;
-  line-height: lh();
+  line-height: $base-line-height;
   margin: 0;
 }
 
@@ -62,9 +62,9 @@ p {
 }
 
 a:link, a:visited {
+  @include transition(color 0.1s linear);
   color: $base-link-color;
   text-decoration: none;
-  @include transition(color 0.1s linear);
 
   &:hover {
     color: $hover-link-color;

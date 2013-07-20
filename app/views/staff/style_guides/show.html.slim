@@ -29,11 +29,13 @@ fieldset.style-guide-section.text
 fieldset.style-guide-section.forms
   legend Forms
 
-  = simple_form_for :style_guide, url: '#', method: :get do |f|
+  = simple_form_for @style_guide, url: '#', method: :get do |f|
     = f.input :text
-    = f.input :disabled_text, disabled: true, input_html: {value: 'some junk'}
+    = f.input :text_with_error
+    = f.input :disabled_text, disabled: true
     = f.input :textarea, as: :text
-    = f.input :select_box, collection: 18..60
+    = f.input :select_box, collection: Staff::StyleGuide::SELECT_OPTIONS
+    = f.input :agree, as: :boolean
     = f.input :check_boxes, as: :check_boxes
     = f.input :radios, as: :radio_buttons
     = f.submit 'Submit form'
@@ -49,3 +51,13 @@ fieldset.style-guide-section.buttons
   button.btn-success .btn-success
   button.btn-warning .btn-warning
   button.btn-danger .btn-danger
+
+fieldset.style-guide-section.buttons
+  legend Link Buttons
+
+  a.btn href='#' button
+  a.btn.btn-primary href='#' .btn-primary
+  a.btn.btn-alt href='#' .btn-alt
+  a.btn.btn-success href='#' .btn-success
+  a.btn.btn-warning href='#' .btn-warning
+  a.btn.btn-danger href='#' .btn-danger

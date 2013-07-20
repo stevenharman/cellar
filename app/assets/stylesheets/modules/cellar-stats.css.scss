@@ -1,0 +1,32 @@
+@import '../globals/all';
+
+.cellar-stats {
+  border-top: 1px solid $base-border-color;
+  margin-top: 1em;
+}
+
+.cellar-stats-legend {
+  margin-top: 1em;
+}
+
+.cellar-stats-list {
+  @include clearfix;
+  @include pad;
+  border-radius: 4px;
+  background-color: $base-background-color-highlight;
+
+  .stat {
+    @include span-columns(2 of 9);
+    text-align: center;
+
+    &:last-child { @include omega; }
+  }
+
+  .stat-name {
+    text-transform: uppercase;
+    font-size: em(12, 16);
+  }
+  .stat-value {
+    font-size: em(22, 16);
+  }
+}

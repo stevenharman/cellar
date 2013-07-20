@@ -19,7 +19,7 @@ class StockOrdersController < ApplicationController
       flash.now[:error] = create_message(:error, @order)
     end
 
-    respond_with(receipt, location: cellar_path(current_user))
+    respond_with(receipt, location: brew_path(@order.brew))
   end
 
   private

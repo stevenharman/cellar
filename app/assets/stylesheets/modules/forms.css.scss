@@ -106,8 +106,8 @@ select {
 button:not(.reset-style), // Add class of 'reset-style' to prevent a button from being styled
 input[type="submit"]:not(.reset-style),
 .btn {
-  @include button-flat($base-color: #DDD);
-//  @include button(flat, #fafafa);
+  @include button-flat($base-color: #DDD, $text-color: #333);
+  //@include button(flat, #fafafa);
 
   // Button Overrides
   font-size: $form-font-size;

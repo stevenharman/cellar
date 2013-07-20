@@ -1,6 +1,7 @@
 @import '../globals/all';
 
 .cards {
+  $highlight-color: $base-background-color-highlight;
 
   .card {
     $label-width: 7em;
@@ -32,7 +33,7 @@
 
     @include border-top-radius(4px);
     background-color: white;
-    border: 1px solid $beige;
+    border: 1px solid $highlight-color;
     border-bottom: none;
     color: $brown;
     font-size: em(14, 16);
@@ -134,7 +135,7 @@
     }
 
     .footer {
-      background-color: $beige;
+      background-color: $highlight-color;
       clear: both;
       margin: 0.25em 0 0;
     }

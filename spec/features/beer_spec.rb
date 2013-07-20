@@ -12,7 +12,7 @@ feature 'Beers', :feature, :slow do
     click_on 'add_beer'
 
     expect(Beer.count).to eq(2)
-    expect(current_path).to eq(cellar_path(bob))
+    expect(current_path).to eq(brew_path(brew))
     expect_all_cellared_count_to_be(2, brew: brew)
   end
 

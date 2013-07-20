@@ -21,15 +21,18 @@ $light-green: #E6EFC2;
 $base-font-color: $dark-gray;
 $base-font-color-light: lighten($base-font-color, 15%);
 $base-font-color-disabled: lighten($base-font-color, 25%);
-$base-background-color-disabled: lighten($base-font-color-disabled, 45%);
 
 //  Text Link Colors
 $base-link-color: $orange;
 $hover-link-color: darken($base-link-color, 15%);
 
-// Border color
+// Border Colors
 $base-border-color: $light-gray;
 $base-border-color-light: lighten($light-gray, 15%);
+
+// Background Colors
+$base-background-color-highlight: $beige;
+$base-background-color-disabled: lighten($base-font-color-disabled, 45%);
 
 // Flash Colors
 $error-color: $light-red;
