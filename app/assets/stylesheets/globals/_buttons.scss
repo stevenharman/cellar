@@ -34,6 +34,7 @@
   text-decoration: none;
   text-shadow: none;
 
+  &:link,
   &:visited { // for link-buttons (a.btn)
     color: $color;
   }
