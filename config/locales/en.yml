@@ -143,6 +143,11 @@ en:
   # Views
 
   cellars:
+    beer_list:
+      best_by: "Best by"
+      cellared_on: "Cellared"
+      empty: "Oh no, you don't have any %{brew_name} in your cellar."
+      vintage: "Vintage"
     stats:
       title: "Cellar Stats"
       all_cellared: "All cellars"

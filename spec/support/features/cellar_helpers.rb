@@ -18,11 +18,15 @@ module Features
     end
 
     def expect_to_be_in_the_cellar(beer)
-      page.should have_css(%(.cellared-beers .beer[data-id="#{beer.id}"]))
+      page.should have_css(%(.beer-list-beer[data-id="#{beer.id}"]))
     end
 
     def expect_not_to_be_in_the_cellar(beer)
-      page.should_not have_css(%(.cellared-beers .beer[data-id="#{beer.id}"]))
+      page.should_not have_css(%(.beer-list-beer[data-id="#{beer.id}"]))
+    end
+
+    def expect_empty_beer_list
+      expect(page).to have_css('.beer-list .beer-list-empty')
     end
 
     def expect_all_cellared_count_to_be(count, args)

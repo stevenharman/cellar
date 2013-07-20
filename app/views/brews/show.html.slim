@@ -26,10 +26,9 @@ article.split-view.brew*{'data-id' => @brew.id}
           label Availability
           | Fake Thing
 
-      = render 'cellars/stats', cellar: current_cellar, brew: @brew
 
-    .beer-list
-      = render 'cellars/beers_for_brew', brew: @brew, your_cellar: current_cellar
+    = render 'cellars/beer_list', cellar: current_cellar, brew: @brew
+    = render 'cellars/stats', cellar: current_cellar, brew: @brew
 
   .split-view-sidebar
     = link_to(new_stock_order_path(brew: @brew), class: 'add-to-cellar btn btn-primary') do

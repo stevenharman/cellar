@@ -1,0 +1,48 @@
+/ TODO: This means we need to model a brew page. #beer_list, #brew-info, etc.
+- beer_list = cellar.beers_for(brew)
+
+.beer-list
+  ul.beer-list-legend
+    li
+      label.beer-detail-name= t('.cellared_on')
+    li
+      label.beer-detail-name= t('.vintage')
+    li
+      label.beer-detail-name= t('.best_by')
+
+  ul.beer-list-beers
+    - for beer in beer_list
+      li.beer-list-beer*{'data-id' => beer.id} class="beer-status-#{beer.status}"
+
+        ul.beer-details
+          li.beer-detail.beer-cellared-on
+            = ldate(beer.created_at, format: :month_year)
+            label.beer-detail-name= t('.cellared_on')
+          li.beer-detail.beer-vintage
+            = beer.vintage
+            label.beer-detail-name= t('.vintage')
+          li.beer-detail.beer-best-by
+            = ldate(beer.best_by, format: :long)
+            label.beer-detail-name= t('.best_by')
+
+        = simple_form_for beer, url: cellar_distribution_order_path(beer.user), html: {class: 'beer-statuses'} do
+          = hidden_field_tag :beer_id, beer.id, id: nil
+          .btn-group
+            = button_tag 'Drink', name: 'status', value: :drunk
+            = button_tag 'Trade', name: 'status', value: :traded
+            /= button_tag 'Share', name: 'status', value: :shared
+            = button_tag 'Skunk', name: 'status', value: :skunked
+
+        ul.beer-actions
+          li.beer-action.beer-action-mark-for-trade
+            = link_to('FT', '#', title: 'Mark for trade')
+          li.beer-action.beer-action-edit
+            = link_to(edit_cellar_beer_path(beer.user, beer)) do
+              i.icon-edit
+
+    - if beer_list.empty?
+      li.beer-list-beer.beer-list-empty
+        span.message= t('.empty', brew_name: brew.name)
+        = link_to(new_stock_order_path(brew: brew), class: 'stock-one-now btn') do
+          span.icon-plus-sign
+          =< t('cellar.stock_one_now')
