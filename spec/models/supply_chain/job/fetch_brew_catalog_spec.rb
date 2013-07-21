@@ -14,7 +14,7 @@ describe SupplyChain::Job::FetchBrewCatalog do
   end
 
   describe '.fulfill' do
-    let(:order) { stub('Order', attribute_id: 'abc123') }
+    let(:order) { double('Order', attribute_id: 'abc123') }
 
     it 'fulfills orders for brew_catalog' do
       order.stub(fetch_brew_catalog?: true)

@@ -14,7 +14,7 @@ describe Search::ResultDecorator do
 
   describe 'unknown result' do
     it 'fails meaningfully trying to decorat' do
-      decorator = described_class.new([stub])
+      decorator = described_class.new([double])
       expect { decorator.first }.to raise_error NoMethodError
     end
   end

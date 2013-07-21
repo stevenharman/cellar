@@ -3,7 +3,7 @@ require 'models/supply_chain/job/fetch_brew'
 describe SupplyChain::Job::FetchBrew do
 
   describe '.fulfill' do
-    let(:order) { stub('Order', attribute_id: 'abc123') }
+    let(:order) { double('Order', attribute_id: 'abc123') }
 
     it 'fulfills fetch orders for brew' do
       order.stub(fetch_brew?: true)

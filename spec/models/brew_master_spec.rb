@@ -6,7 +6,7 @@ describe BrewMaster do
     let(:order) { StockOrder.new(brew: brew, count: 3) }
     let(:brew) { double('Brew', name: 'Boont Amber Ale', id: 99) }
     before do
-      stub_const('Beer', stub)
+      stub_const('Beer', double)
       Beer.stub(:make).with(order.to_hash, brew) { double('Beer') }
     end
 

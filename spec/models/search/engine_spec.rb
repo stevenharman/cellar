@@ -24,7 +24,7 @@ describe Search::Engine do
   end
 
   it 'pages the results' do
-    result = stub('PGSearch Result')
+    result = double('PGSearch Result')
     PgSearch.stub_chain(:multisearch, :includes) { result }
     result.should_receive(:page).with(42)
 

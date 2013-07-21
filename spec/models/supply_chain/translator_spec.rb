@@ -2,11 +2,11 @@ require 'models/supply_chain/translator'
 
 describe SupplyChain::Translator do
   subject { described_class.new(translation_class, factory) }
-  let(:translation_class) { stub }
-  let(:factory) { stub }
-  let(:translation) { stub('SupplyChain::Translation') }
+  let(:translation_class) { double }
+  let(:factory) { double }
+  let(:translation) { double('SupplyChain::Translation') }
   let(:item) { OpenStruct.new }
-  let(:data) { stub(id: 'abc123') }
+  let(:data) { double(id: 'abc123') }
   before do
     translation_class.stub(:new).with(item) { translation }
     translation.stub(:translate) { item }

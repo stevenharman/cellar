@@ -32,8 +32,8 @@ describe SupplyChain::Job::DeleteBrew do
 
   describe '#perform' do
     subject(:job) { described_class.new(fake_brew_factory) }
-    let(:brew) { stub('a Brew') }
-    let(:fake_brew_factory) { stub('Brew') }
+    let(:brew) { double('a Brew') }
+    let(:fake_brew_factory) { double('Brew') }
 
     it 'cleans up the brew' do
       fake_brew_factory.stub(:find_by_brewery_db_id!).with('abc123') { brew }

@@ -2,8 +2,8 @@ require 'models/supply_chain/log'
 
 describe SupplyChain::Log do
   subject { described_class.new(base_log) }
-  let(:base_log) { stub.as_null_object }
-  let(:item) { stub('Item').as_null_object }
+  let(:base_log) { double.as_null_object }
+  let(:item) { double('Item').as_null_object }
   before do
     item.stub(:valid?) { true }
   end
