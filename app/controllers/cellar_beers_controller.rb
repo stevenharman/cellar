@@ -20,7 +20,7 @@ class CellarBeersController < ApplicationController
       flash[:error] = t('flash.cellar_beers.update.error', name: @beer.brew.name)
     end
 
-    respond_with(@beer, location: cellar_beer_path(@beer.user, @beer))
+    respond_with(@beer, location: brew_path(@beer.brew))
   end
 
   private

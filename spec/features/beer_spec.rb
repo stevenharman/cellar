@@ -22,12 +22,13 @@ feature 'Beers', :feature, :slow do
 
     update_beer_details(
       notes: 'So. Very. Yummy!',
-      batch: 'abc123',
+      vintage: '2011',
     )
 
     expect_beer_details_to_include(
-      notes: 'So. Very. Yummy!',
-      batch: 'abc123',
+      # TODO: bring this back when we figure out the UX.
+      #notes: 'So. Very. Yummy!',
+      vintage: '2011',
     )
   end
 
@@ -53,7 +54,7 @@ feature 'Beers', :feature, :slow do
 
   def expect_beer_details_to_include(info)
     info.each do |field, value|
-      expect(page).to have_css(".beer .details .#{field}", text: value)
+      expect(page).to have_css(".beer-#{field}", text: value)
     end
   end
 
