@@ -19,7 +19,7 @@ fieldset {
 
   legend {
     color: $brown;
-    font-family: $small-font-family;
+    font-family: $header-font-family;
   }
 }
 
@@ -32,11 +32,11 @@ select {
 }
 
 label {
-  font-family: $small-font-family;
-  text-transform: uppercase;
-  margin-bottom: $base-line-height * .25;
   color: $brown;
-  font-size: .8em;
+  font-family: $small-font-family;
+  font-size: 0.8em;
+  margin-bottom: $base-line-height * 0.25;
+  text-transform: uppercase;
 
   &.required::after {
     content: "*";
