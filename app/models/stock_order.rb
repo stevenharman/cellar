@@ -17,7 +17,7 @@ class StockOrder
   delegate :id, :name, to: :brew, prefix: true
 
   validates :count, numericality: { greater_than_or_equal_to: 1 }
-  validates :vintage, numericality: true
+  validates :vintage, numericality: { only_integer: true, unless: ->(o) { o.vintage.blank? } }
 
   def self.prepare(args, brew_factory = Brew)
     brew = brew_factory.find_by_id(args[:brew_id])
