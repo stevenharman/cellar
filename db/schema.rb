@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130722011615) do
+ActiveRecord::Schema.define(:version => 20130722203539) do
 
   create_table "beers", :force => true do |t|
     t.date     "best_by"
@@ -33,14 +33,16 @@ ActiveRecord::Schema.define(:version => 20130722011615) do
     t.string   "website"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "brewery_db_id", :null => false
+    t.string   "brewery_db_id",                            :null => false
     t.text     "description"
     t.date     "established"
     t.boolean  "organic"
     t.text     "images"
+    t.string   "brewery_db_status", :default => "unknown", :null => false
   end
 
   add_index "breweries", ["brewery_db_id"], :name => "index_breweries_on_brewery_db_id", :unique => true
+  add_index "breweries", ["brewery_db_status"], :name => "index_breweries_on_brewery_db_status"
 
   create_table "brewery_brews", :force => true do |t|
     t.integer  "brewery_id", :null => false
@@ -59,17 +61,19 @@ ActiveRecord::Schema.define(:version => 20130722011615) do
     t.datetime "updated_at"
     t.text     "description"
     t.decimal  "ibu",                  :precision => 5, :scale => 2
-    t.string   "brewery_db_id",                                                     :null => false
+    t.string   "brewery_db_id",                                                             :null => false
     t.integer  "style_id"
     t.text     "labels"
     t.date     "year"
     t.boolean  "organic"
     t.string   "base_brew_id"
     t.decimal  "original_gravity"
-    t.integer  "cellared_beers_count",                               :default => 0, :null => false
+    t.integer  "cellared_beers_count",                               :default => 0,         :null => false
+    t.string   "brewery_db_status",                                  :default => "unknown", :null => false
   end
 
   add_index "brews", ["brewery_db_id"], :name => "index_brews_on_brewery_db_id", :unique => true
+  add_index "brews", ["brewery_db_status"], :name => "index_brews_on_brewery_db_status"
   add_index "brews", ["style_id"], :name => "index_brews_on_style_id"
 
   create_table "categories", :force => true do |t|
