@@ -8,43 +8,43 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - BreweryDB Ruby Gem 0.0.1
+      - BreweryDB Ruby Gem 0.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - '*/*'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 01 Nov 2012 00:57:20 GMT
+      - Mon, 22 Jul 2013 01:00:54 GMT
       Server:
-      - Apache/2.2.23 (Amazon)
+      - Apache/2.2.24 (Amazon)
       X-Powered-By:
-      - PHP/5.3.17
+      - PHP/5.3.26
       X-Ratelimit-Limit:
       - Unlimited
       X-Ratelimit-Remaining:
       - Unlimited
+      Vary:
+      - Accept-Encoding
       Content-Length:
-      - '4282'
-      Connection:
-      - close
+      - '1825'
       Content-Type:
       - application/json
     body:
-      encoding: US-ASCII
-      string: ! '{"message":"READ ONLY MODE: Request Successful","data":{"id":"g7ABnw","name":"Lake
+      encoding: UTF-8
+      string: '{"message":"READ ONLY MODE: Request Successful","data":{"id":"g7ABnw","name":"Lake
         Erie Monster","description":"An unfiltered imperial India pale ale with huge
         hop flavor.\r\n\r\nA beer this distinctively hoppy inspires many a tall tale.
         And they don''t come taller than South Bay Bessie, the legendary monster that
-        roams the shallow depths of Lake Erie.","abv":"9.1","ibu":"72","glasswareId":8,"availableId":5,"styleId":31,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/g7ABnw\/upload_zPuExA-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/g7ABnw\/upload_zPuExA-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/g7ABnw\/upload_zPuExA-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-02
-        21:43:35","updateDate":"2012-07-31 10:05:53","glass":{"id":8,"name":"Tulip","createDate":"2012-01-02
-        21:41:33"},"available":{"id":"5","name":"Spring","description":"Available
-        during the spring months."},"style":{"id":31,"categoryId":3,"category":{"id":3,"name":"North
-        American Origin Ales","createDate":"2012-03-21 16:06:45"},"name":"Imperial
+        roams the shallow depths of Lake Erie.","abv":"9.1","ibu":"72","glasswareId":8,"availableId":5,"styleId":31,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/g7ABnw\/upload_zPuExA-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/g7ABnw\/upload_zPuExA-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/g7ABnw\/upload_zPuExA-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:35","updateDate":"2012-07-31 14:05:53","glass":{"id":8,"name":"Tulip","createDate":"2012-01-03
+        02:41:33"},"available":{"id":5,"name":"Spring","description":"Available during
+        the spring months."},"style":{"id":31,"categoryId":3,"category":{"id":3,"name":"North
+        American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"Imperial
         or Double India Pale Ale","description":"Imperial or Double India Pale Ales
         have intense hop bitterness, flavor and aroma. Alcohol content is medium-high
         to high and notably evident. They range from deep golden to medium copper
@@ -56,7 +56,7 @@ http_interactions:
         Ales have medium-high to full body. Diacetyl should not be perceived. The
         intention of this style of beer is to exhibit the fresh and bright character
         of hops. Oxidative character and aged character should not be present.","ibuMin":"65","ibuMax":"100","abvMin":"7.5","abvMax":"10.5","srmMin":"5","srmMax":"13","ogMin":"1.075","fgMin":"1.012","fgMax":"1.02","createDate":"2012-03-21
-        16:06:45"},"breweries":[{"id":"uSFO4T","name":"Great Lakes Brewing Company","description":"In
+        20:06:45"},"breweries":[{"id":"uSFO4T","name":"Great Lakes Brewing Company","description":"In
         the 1870s, Cleveland had 30 breweries. By the early 1980s, the last one had
         shuttered its doors. So when brothers Patrick and Daniel Conway opened Great
         Lakes Brewing Company on September 6, 1988, it not only signaled a new era
@@ -66,14 +66,14 @@ http_interactions:
         of the beautiful Victorian era bar. The company''s commitment to sustainable
         business practices greatly contributed to its early popularity and success.
         Before long, Great Lakes Brewing Company had become one of Cleveland''s most
-        popular destinations for both dining and a fun night out.","website":"http:\/\/www.greatlakesbrewing.com\/","established":"1988","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uSFO4T\/upload_O5TpB8-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uSFO4T\/upload_O5TpB8-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uSFO4T\/upload_O5TpB8-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-02
-        21:41:56","updateDate":"2012-06-10 17:56:31","locations":[{"id":"8dIvZw","name":"Main
+        popular destinations for both dining and a fun night out.","website":"http:\/\/www.greatlakesbrewing.com\/","established":"1988","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uSFO4T\/upload_O5TpB8-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uSFO4T\/upload_O5TpB8-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/uSFO4T\/upload_O5TpB8-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:41:56","updateDate":"2012-06-10 21:56:31","locations":[{"id":"8dIvZw","name":"Main
         Brewery","streetAddress":"2516 Market Avenue","locality":"Cleveland","region":"Ohio","postalCode":"44113","phone":"216-771-4404","website":"http:\/\/www.greatlakesbrewing.com\/","hoursOfOperation":"Mon
         - Sat: 12:00 pm - 11:00 pm\r\nSun: 3:00 pm - 6:00 pm","latitude":41.484446,"longitude":-81.704436,"isPrimary":"Y","inPlanning":"N","isClosed":"N","openToPublic":"Y","locationType":"micro","locationTypeDisplay":"Micro
-        Brewery","countryIsoCode":"US","yearOpened":"1988","status":"verified","statusDisplay":"Verified","createDate":"2012-01-02
-        21:41:56","updateDate":"2012-03-21 16:05:25","country":{"isoCode":"US","name":"UNITED
-        STATES","displayName":"United States","isoThree":"USA","numberCode":840,"urlTitle":"united-states","createDate":"2012-01-02
-        21:41:33"}}]}]},"status":"success"}'
+        Brewery","countryIsoCode":"US","yearOpened":"1988","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:41:56","updateDate":"2012-03-21 20:05:25","country":{"isoCode":"US","name":"UNITED
+        STATES","displayName":"United States","isoThree":"USA","numberCode":840,"createDate":"2012-01-03
+        02:41:33"}}]}]},"status":"success"}'
     http_version: 
-  recorded_at: Thu, 01 Nov 2012 00:57:21 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Mon, 22 Jul 2013 01:00:54 GMT
+recorded_with: VCR 2.5.0
