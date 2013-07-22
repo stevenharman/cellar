@@ -6,7 +6,7 @@ class StockOrdersController < ApplicationController
     brew = Brew.find_by_id(params[:brew])
     return redirect_to brews_path, flash: { error: t('flash.stock_orders.new.error') } unless brew
 
-    @order = StockOrder.new(brew: brew)
+    @order = StockOrder.new(brew: brew, vintage: Date.current.year)
   end
 
   def create
