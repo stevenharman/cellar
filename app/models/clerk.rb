@@ -11,8 +11,10 @@ class Clerk
   end
 
   def procure(order)
-    if order.valid?
-      beers = brew_master.process(order)
+    beers = []
+
+    with_valid(order) do
+      beers.concat(brew_master.process(order))
       stock(beers)
       update_inventory(order.brew)
     end
@@ -42,5 +44,9 @@ class Clerk
 
   def update_inventory(brew)
     inventory_report.calculate(brew)
+  end
+
+  def with_valid(order)
+    yield if order.valid?
   end
 end
