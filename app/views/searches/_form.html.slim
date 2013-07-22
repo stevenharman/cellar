@@ -1,3 +1,4 @@
+- autofocus ||= false
 = form_tag(search_path, method: :get, class: 'search-form') do
-  = search_field_tag :q, search_query.q, placeholder: t('.placeholder'), class: 'query'
+  = search_field_tag :q, search_query.q, placeholder: t('.placeholder'), class: 'query', autofocus: autofocus
   = submit_tag t('.button'), name: nil, class: 'search-button'

@@ -1,6 +1,6 @@
 article.search-results
   .search-results-header
-    == render 'searches/form', search_query: search_query
+    == render 'searches/form', search_query: search_query, autofocus: true
 
   .search-results-summary= t('searches.show.summary', count: number_with_delimiter(@search_result.total_count))
   ul.search-results-list

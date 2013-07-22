@@ -3,7 +3,7 @@
 
 = simple_form_for(current_profile, url: settings_profile_path, method: :put, html: {class: 'settings-profile'}) do |f|
   .profile-fields
-    = f.input :name, required: false
+    = f.input :name, required: false, autofocus: true
     = f.input :website, required: false
     = f.input :location, required: false
   .profile-bio
