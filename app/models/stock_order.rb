@@ -9,7 +9,6 @@ class StockOrder
   include ActiveModel::Validations
 
   attribute :count, Integer, default: 1
-  attribute :batch, String
   attribute :best_by, Date
   attribute :vintage, Integer
 
@@ -30,7 +29,6 @@ class StockOrder
 
   def to_hash
     {
-      batch: batch,
       best_by: best_by,
       vintage: vintage,
     }

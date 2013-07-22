@@ -7,7 +7,7 @@ feature 'Beers', :feature, :slow do
 
   scenario 'Adding a beers to the cellar' do
     visit new_stock_order_path(brew: brew.id)
-    fill_in 'stock_order_batch', with: 'B432'
+    fill_in 'stock_order_vintage', with: '2011'
     fill_in 'stock_order_count', with: 2
     click_on 'add_beer'
 
