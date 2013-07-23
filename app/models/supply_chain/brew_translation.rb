@@ -17,6 +17,7 @@ module SupplyChain
         b.abv = WarehouseMap.decimal(raw_data.abv)
         b.ibu = WarehouseMap.decimal(raw_data.ibu)
         b.original_gravity = WarehouseMap.decimal(raw_data.original_gravity)
+        b.brewery_db_status = raw_data.status
 
         labels = WarehouseMap.images(raw_data.labels)
         b.icon = labels.icon
