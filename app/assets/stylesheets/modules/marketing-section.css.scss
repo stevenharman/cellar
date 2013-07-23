@@ -4,12 +4,43 @@
   h1 {
     text-transform: uppercase;
     font-size: 4em;
+    color: $orange;
   }
   padding: 1em 0;
+  min-height: 500px;
 }
 
 .marketing-section-signup {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   background-color: $light-beige;
+  
+  .intro-view {
+    @include clearfix;
+  }
+  
+  .intro-view-main {
+    @include span-columns(8 of 12);
+    @include pad(0px 10px 20px 20px);
+      h1 {
+        font-size: 6.25em;
+        line-height: .8em;
+      }
+  }
+  
+  .intro-view-sidebar {
+    @include span-columns(4 of 12);
+  }
+=======
+  background-color: $section-background-color;
+>>>>>>> fe74756728be60ab00a83aa75079ce1c605832a1
+=======
+  background-color: $section-background-color;
+>>>>>>> fe74756728be60ab00a83aa75079ce1c605832a1
+=======
+  background-color: $section-background-color;
+>>>>>>> fe74756728be60ab00a83aa75079ce1c605832a1
 }
 
 .marketing-section-junk {
@@ -48,17 +79,32 @@
   }
 }
 
-.stocking {
+.marketing-section-stocking {
   text-align: center;
   background-color: $yellow;
 }
 
-.tracking {
+.marketing-section-tracking {
   text-align: center;
-  background-color: $light-beige;
+  background-color: $section-background-color;
 }
 
-.pricing {
+.marketing-section-pricing {
   text-align: center;
   background-color: $orange;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    h1 {
+      color: #fff;
+    }
 }
+=======
+}
+>>>>>>> fe74756728be60ab00a83aa75079ce1c605832a1
+=======
+}
+>>>>>>> fe74756728be60ab00a83aa75079ce1c605832a1
+=======
+}
+>>>>>>> fe74756728be60ab00a83aa75079ce1c605832a1

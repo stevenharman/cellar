@@ -1,0 +1,76 @@
+@import '../globals/all';
+
+.beer-list {
+  @include clearfix;
+}
+
+.beer-list-legend {
+  @include span-columns(3 of 9);
+
+  li { @include span-columns(1 of 3); }
+
+  .beer-detail-name {
+    font-size: em(12, 16);
+  }
+}
+
+.beer-list-beers {
+  clear: both;
+}
+
+.beer-list-beer {
+  $item-height: 5em;
+
+  @include row;
+  border: 1px solid $section-border-color;
+  border-radius: 3px;
+  margin-bottom: 1em;
+
+  .beer-details {
+    @include span-columns(3 of 9);
+  }
+
+  .beer-detail {
+    @include span-columns(1 of 3);
+    margin-top: 0.25*$item-height;
+  }
+
+  .beer-detail-name {
+    display: none;
+  }
+
+  .beer-statuses {
+    @include span-columns(4 of 9);
+    text-align: center;
+    line-height: $item-height;
+  }
+
+  .beer-actions {
+    @include span-columns(2 of 9);
+    background-color: $section-background-color;
+    border-left: 1px solid $section-border-color;
+    padding: 0;
+    text-align: center;
+  }
+
+  .beer-action {
+    @include inline-block;
+
+    > a {
+      display: block;
+      padding-left: 1em;
+      padding-right: 1em;
+      line-height: $item-height;
+    }
+  }
+
+  &.beer-list-empty {
+    @include pad;
+
+    .message {
+      @include inline-block;
+      line-height: 2.5em;
+    }
+    .stock-one-now { float: right; }
+  }
+}

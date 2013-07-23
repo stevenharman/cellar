@@ -5,33 +5,35 @@ article.split-view.brew*{'data-id' => @brew.id}
   .split-view-main
     hgroup.brew-basics
       h1.name= @brew.name
-      .brewery-name= render partial: @brew.breweries, spacer_template: 'breweries/brewery_spacer'
+      .brewery-name= render 'brews/breweries', brew: @brew
 
-    .brew-description
-      = simple_format(@brew.description)
+    .brew-info
+      .brew-description
+        = simple_format(@brew.description)
 
-    ul.brew-details
-      li.detail.style
-        label Style
-        = @brew.style_name
-      li.detail.abv
-        label ABV
-        = @brew.abv
-        | %
-      li.detail.ibu
-        label IBU
-        = @brew.ibu
-      li.detail.availability
-        label Availability
-        | Fake Thing
+      ul.brew-details
+        li.detail.style
+          label Style
+          = @brew.style_name
+        li.detail.abv
+          label ABV
+          = @brew.abv
+          | %
+        li.detail.ibu
+          label IBU
+          = @brew.ibu
+        li.detail.availability
+          label Availability
+          | Fake Thing
 
+
+    = render 'cellars/beer_list', cellar: current_cellar, brew: @brew
     = render 'cellars/stats', cellar: current_cellar, brew: @brew
-    = render 'cellars/beers_for_brew', brew: @brew, your_cellar: current_cellar
 
   .split-view-sidebar
     = link_to(new_stock_order_path(brew: @brew), class: 'add-to-cellar btn btn-primary') do
       span.icon-plus-sign
-      |  Stock one now!
+      =< t('cellar.stock_one_now')
     = image_tag(@brew.medium_image || 'http://placehold.it/256x256', alt: @brew.name, class: 'brew-label')
 
     .similar-brews

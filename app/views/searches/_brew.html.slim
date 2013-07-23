@@ -5,4 +5,4 @@ li.search-result.search-result-brew
       = link_to brew.name, brew, title: brew.name
   .more-info
     small.prefix from
-    == render partial: brew.breweries, spacer_template: 'breweries/brewery_spacer'
+    = render 'brews/breweries', brew: brew
