@@ -1,6 +1,7 @@
 require 'sidekiq'
 require_relative '../job'
 require_relative '../warehouse'
+require_relative '../agent'
 
 module SupplyChain
   module Job
