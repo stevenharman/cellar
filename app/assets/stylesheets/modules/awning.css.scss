@@ -1,7 +1,7 @@
 @import '../globals/all';
 
 .awning {
-  $top-padding: 20px;
+  $top-padding: 15px;
   $query-top-margin: -0.25 * $top-padding;
   $avatar-size: 32px;
 
@@ -49,6 +49,7 @@
 
     color: white;
     text-transform: uppercase;
+    font-family: $small-font-family;
 
     i { margin-right: 0.5em; }
   }
