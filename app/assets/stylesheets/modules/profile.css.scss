@@ -32,13 +32,14 @@
     margin: 0;
     padding: 0;
     line-height: 1em;
-    text-transform: none;
+    text-transform: uppercase;
 
     small {
       color: lighten(desaturate($brown, 20%), 15%);
       font-size: em(10, 16);
       margin-left: 0.5em;
       white-space: nowrap;
+      text-transform: capitalize;
     }
   }
   .demographics {
@@ -88,7 +89,7 @@
       font-size: em(11, 16);
       margin-left: 0;
       min-height: 3em;
-      padding: 0.5em 0.5em 0.25em;
+      padding: 0.5em 1.5em 0.25em;
       text-align: center;
       text-transform: uppercase;
 
