@@ -35,7 +35,7 @@ label {
   font-family: $small-font-family;
   text-transform: uppercase;
   margin-bottom: $base-line-height * .25;
-  color: $orange;
+  color: $brown;
   font-size: .8em;
 
   &.required::after {
@@ -114,7 +114,7 @@ input[type="submit"]:not(.reset-style),
   padding: 0.7em 1.5em;
 
   &.btn-primary {
-    @include button-flat($base-color: $blue);
+    @include button-flat($base-color: $orange);
   }
   &.btn-alt {
     @include button-flat($base-color: $brown);
@@ -127,6 +127,18 @@ input[type="submit"]:not(.reset-style),
   }
   &.btn-danger {
     @include button-flat($base-color: $red);
+  }
+}
+
+.btn-group {
+  button,
+  input[type="submit"],
+  .btn {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
   }
 }
 
