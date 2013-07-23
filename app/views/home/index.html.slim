@@ -1,21 +1,14 @@
 section.marketing-section.marketing-section-signup
-  .intro-view
-    .intro-view-main
-      h1 stock, track & find your beer with ease
-      p What if keeping track of your beers were as easy as drinking them? Saving one for later is easy. Remembering what you have is not. Sign up now to make cellaring as easy as drinking.
-      button.btn-primary sign up
-      
-    .intro-view-sidebar
-      = simple_form_for @user do |f|
-        - if @user.errors.any?
-          ul.error_messages
-            - for message in @user.errors.full_messages
-              li= message
-    
-        = f.input :username, input_html: { autofocus: true }
-        = f.input :email
-        = f.input :password, required: true
-        = f.submit t('cellar.sign_up_for_cellar'), id: 'sign_up', class: 'btn-primary'
+  = simple_form_for @user do |f|
+    - if @user.errors.any?
+      ul.error_messages
+        - for message in @user.errors.full_messages
+          li= message
+
+    = f.input :username, input_html: { autofocus: true }
+    = f.input :email
+    = f.input :password, required: true
+    = f.submit t('cellar.sign_up_for_cellar'), id: 'sign_up', class: 'btn-primary'
 
 section.marketing-section.marketing-section-junk
   ul.call-to-action
@@ -34,40 +27,12 @@ section.marketing-section.marketing-section-junk
 
 section.marketing-section.marketing-section-stocking
   h1 easy to stock
-  button.btn-primary sign up
+  = link_to(t('cellar.sign_up'), sign_up_path, class: 'btn btn-primary', title: t('cellar.sign_up_for_cellar'))
 
 section.marketing-section.marketing-section-tracking
   h1 easy to track
-  p What if keeping track of your beers were as easy as drinking them? Saving one for later is easy. Remembering what you have is not. Sign up now to make cellaring as easy as drinking.
-  button.btn-primary sign up
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-section.marketing-section.pricing
-  h1 worth every ounce
-=======
+  = link_to(t('cellar.sign_up'), sign_up_path, class: 'btn btn-primary', title: t('cellar.sign_up_for_cellar'))
 
 section.marketing-section.marketing-section-pricing
   h1 worth every ounce
-  button.btn-primary sign up
->>>>>>> fe74756728be60ab00a83aa75079ce1c605832a1
-=======
-
-section.marketing-section.marketing-section-pricing
-  h1 worth every ounce
-  button.btn-primary sign up
->>>>>>> fe74756728be60ab00a83aa75079ce1c605832a1
-=======
-
-section.marketing-section.marketing-section-pricing
-  h1 worth every ounce
-  button.btn-primary sign up
->>>>>>> fe74756728be60ab00a83aa75079ce1c605832a1
-=======
-
-section.marketing-section.marketing-section-pricing
-  h1 worth every ounce
-  button.btn-primary sign up
->>>>>>> fe74756728be60ab00a83aa75079ce1c605832a1
+  = link_to(t('cellar.sign_up'), sign_up_path, class: 'btn btn-primary', title: t('cellar.sign_up_for_cellar'))
