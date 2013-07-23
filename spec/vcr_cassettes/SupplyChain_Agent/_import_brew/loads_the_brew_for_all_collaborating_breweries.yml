@@ -8,35 +8,35 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - BreweryDB Ruby Gem 0.0.1
+      - BreweryDB Ruby Gem 0.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - '*/*'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 01:18:42 GMT
+      - Mon, 22 Jul 2013 01:00:06 GMT
       Server:
-      - Apache/2.2.22 (Amazon)
+      - Apache/2.2.24 (Amazon)
       X-Powered-By:
-      - PHP/5.3.15
+      - PHP/5.3.26
       X-Ratelimit-Limit:
       - Unlimited
       X-Ratelimit-Remaining:
       - Unlimited
+      Vary:
+      - Accept-Encoding
       Content-Length:
-      - '1256'
-      Connection:
-      - close
+      - '673'
       Content-Type:
       - application/json
     body:
-      encoding: US-ASCII
-      string: ! '{"message":"READ ONLY MODE: Request Successful","data":{"id":"vDxSPd","name":"Alpine
+      encoding: UTF-8
+      string: '{"message":"READ ONLY MODE: Request Successful","data":{"id":"vDxSPd","name":"Alpine
         Beer Company","description":"Alpine Beer Company opened its doors in the fall
         of 2002. Years before, an interest in craft brewing developed into an actual
         goal for the future. There were years of home brew competitions, brew science
@@ -46,9 +46,9 @@ http_interactions:
         the current brewery. A cold box was erected adjacent to the garage and a bottling
         machine with a nice labeler are housed there too. There is a small barrel
         shed on the shady, north side of the garage.","website":"http:\/\/www.alpinebeerco.com\/","established":"2002","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:41:44","updateDate":"2012-03-21 19:06:03"},"status":"success"}'
+        02:41:44","updateDate":"2012-12-02 11:14:02"},"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 01:18:42 GMT
+  recorded_at: Mon, 22 Jul 2013 01:00:06 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/brewery/Jt43j7?key=API_KEY
@@ -57,35 +57,35 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - BreweryDB Ruby Gem 0.0.1
+      - BreweryDB Ruby Gem 0.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - '*/*'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 01:18:42 GMT
+      - Mon, 22 Jul 2013 01:00:06 GMT
       Server:
-      - Apache/2.2.22 (Amazon)
+      - Apache/2.2.24 (Amazon)
       X-Powered-By:
-      - PHP/5.3.15
+      - PHP/5.3.26
       X-Ratelimit-Limit:
       - Unlimited
       X-Ratelimit-Remaining:
       - Unlimited
+      Vary:
+      - Accept-Encoding
       Content-Length:
-      - '1372'
-      Connection:
-      - close
+      - '761'
       Content-Type:
       - application/json
     body:
-      encoding: US-ASCII
-      string: ! '{"message":"READ ONLY MODE: Request Successful","data":{"id":"Jt43j7","name":"New
+      encoding: UTF-8
+      string: '{"message":"READ ONLY MODE: Request Successful","data":{"id":"Jt43j7","name":"New
         Belgium Brewing","description":"We''ll set the scene: 1989. Belgium. Boy on
         bike. (OK, make that a young man of 32). As our aspiring young homebrewer
         rides his mountain bike with fat tires through European villages famous for
@@ -97,9 +97,9 @@ http_interactions:
         was history would be to overlook his wife''s involvement. Kim Jordan was New
         Belgium''s first bottler, sales rep, distributor, marketer and financial planner.
         And now, she''s our CEO.","website":"http:\/\/www.newbelgium.com\/","established":"1989","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:42:03","updateDate":"2012-05-18 15:24:47"},"status":"success"}'
+        02:42:03","updateDate":"2012-10-23 18:44:08"},"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 01:18:42 GMT
+  recorded_at: Mon, 22 Jul 2013 01:00:07 GMT
 - request:
     method: get
     uri: http://api.brewerydb.com/v2/beer/aapeRv?key=API_KEY&withBreweries=Y
@@ -108,41 +108,41 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - BreweryDB Ruby Gem 0.0.1
+      - BreweryDB Ruby Gem 0.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - '*/*'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 01:18:42 GMT
+      - Mon, 22 Jul 2013 01:00:07 GMT
       Server:
-      - Apache/2.2.22 (Amazon)
+      - Apache/2.2.24 (Amazon)
       X-Powered-By:
-      - PHP/5.3.15
+      - PHP/5.3.26
       X-Ratelimit-Limit:
       - Unlimited
       X-Ratelimit-Remaining:
       - Unlimited
+      Vary:
+      - Accept-Encoding
       Content-Length:
-      - '4634'
-      Connection:
-      - close
+      - '2519'
       Content-Type:
       - application/json
     body:
-      encoding: US-ASCII
-      string: ! '{"message":"READ ONLY MODE: Request Successful","data":{"id":"aapeRv","name":"Super
-        India Pale Ale","description":"Alpine might be small, but their brewing chops
-        are mighty. We teamed up to create this triple dry-hopped imperial IPA bursting
-        with Columbus, Amarillo, Centennial and Simcoe hops. Consider yourself a hero
-        for getting an Alpine beer outside of San Diego.","abv":"9","glasswareId":5,"availableId":2,"styleId":31,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/aapeRv\/upload_ptZbur-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/aapeRv\/upload_ptZbur-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/aapeRv\/upload_ptZbur-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-08-11
-        19:14:26","updateDate":"2012-08-15 13:11:42","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
-        02:41:33"},"available":{"id":"2","name":"Limited","description":"Limited availability."},"style":{"id":31,"categoryId":3,"category":{"id":3,"name":"North
+      encoding: UTF-8
+      string: '{"message":"READ ONLY MODE: Request Successful","data":{"id":"aapeRv","name":"Lips
+        of Faith - Super India Pale Ale","description":"Alpine might be small, but
+        their brewing chops are mighty. We teamed up to create this triple dry-hopped
+        imperial IPA bursting with Columbus, Amarillo, Centennial and Simcoe hops.
+        Consider yourself a hero for getting an Alpine beer outside of San Diego.","abv":"9","glasswareId":5,"availableId":2,"styleId":31,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/aapeRv\/upload_ptZbur-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/aapeRv\/upload_ptZbur-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/aapeRv\/upload_ptZbur-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-08-11
+        19:14:26","updateDate":"2013-05-05 13:54:24","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        02:41:33"},"available":{"id":2,"name":"Limited","description":"Limited availability."},"style":{"id":31,"categoryId":3,"category":{"id":3,"name":"North
         American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"Imperial
         or Double India Pale Ale","description":"Imperial or Double India Pale Ales
         have intense hop bitterness, flavor and aroma. Alcohol content is medium-high
@@ -165,19 +165,35 @@ http_interactions:
         erected adjacent to the garage and a bottling machine with a nice labeler
         are housed there too. There is a small barrel shed on the shady, north side
         of the garage.","website":"http:\/\/www.alpinebeerco.com\/","established":"2002","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/vDxSPd\/upload_XySOmk-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:41:44","updateDate":"2012-03-21 19:06:03"},{"id":"Jt43j7","name":"New Belgium
-        Brewing","description":"We''ll set the scene: 1989. Belgium. Boy on bike.
-        (OK, make that a young man of 32). As our aspiring young homebrewer rides
-        his mountain bike with fat tires through European villages famous for beer,
-        New Belgium Brewing Company was but a glimmer in his eye. Or basement. For
-        Jeff Lebesch would return to Fort Collins with a handful of ingredients and
-        an imagination full of recipes. And then there was beer. Jeff''s first two
-        basement-brewed creations? A brown dubbel with earthy undertones named Abbey
-        and a remarkably well-balanced amber he named Fat Tire. To say the rest was
-        history would be to overlook his wife''s involvement. Kim Jordan was New Belgium''s
-        first bottler, sales rep, distributor, marketer and financial planner. And
-        now, she''s our CEO.","website":"http:\/\/www.newbelgium.com\/","established":"1989","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:42:03","updateDate":"2012-05-18 15:24:47"}]},"status":"success"}'
+        02:41:44","updateDate":"2012-12-02 11:14:02","locations":[{"id":"AfyZtJ","name":"Main
+        Brewery","streetAddress":"2351 Alpine Boulevard","locality":"Alpine","region":"California","postalCode":"91901","phone":"619-445-2337","website":"http:\/\/www.alpinebeerco.com\/","hoursOfOperation":"Brewery
+        Hours:\r\nTues-Sat Noon-6pm\r\n\r\nPub Hours:\r\nTues-Thurs 11am-10pm\r\nFri\/Sat
+        11am-Midnight\r\nSun Noon-9pm","latitude":32.8354074,"longitude":-116.7659477,"isPrimary":"Y","inPlanning":"N","isClosed":"N","openToPublic":"Y","locationType":"micro","locationTypeDisplay":"Micro
+        Brewery","countryIsoCode":"US","yearOpened":"2002","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:41:44","updateDate":"2012-03-21 20:05:24","country":{"isoCode":"US","name":"UNITED
+        STATES","displayName":"United States","isoThree":"USA","numberCode":840,"createDate":"2012-01-03
+        02:41:33"}}]},{"id":"Jt43j7","name":"New Belgium Brewing","description":"We''ll
+        set the scene: 1989. Belgium. Boy on bike. (OK, make that a young man of 32).
+        As our aspiring young homebrewer rides his mountain bike with fat tires through
+        European villages famous for beer, New Belgium Brewing Company was but a glimmer
+        in his eye. Or basement. For Jeff Lebesch would return to Fort Collins with
+        a handful of ingredients and an imagination full of recipes. And then there
+        was beer. Jeff''s first two basement-brewed creations? A brown dubbel with
+        earthy undertones named Abbey and a remarkably well-balanced amber he named
+        Fat Tire. To say the rest was history would be to overlook his wife''s involvement.
+        Kim Jordan was New Belgium''s first bottler, sales rep, distributor, marketer
+        and financial planner. And now, she''s our CEO.","website":"http:\/\/www.newbelgium.com\/","established":"1989","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Jt43j7\/upload_QAvBNG-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:42:03","updateDate":"2012-10-23 18:44:08","locations":[{"id":"eOm6Xk","name":"Main
+        Brewery","streetAddress":"500 Linden Street","locality":"Fort Collins","region":"Colorado","postalCode":"80524","phone":"1-888-622-4044","website":"http:\/\/www.newbelgium.com\/","latitude":40.593415,"longitude":-105.066874,"isPrimary":"Y","inPlanning":"N","isClosed":"N","openToPublic":"Y","locationType":"micro","locationTypeDisplay":"Micro
+        Brewery","countryIsoCode":"US","yearOpened":"1989","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:42:03","updateDate":"2012-03-21 20:05:26","country":{"isoCode":"US","name":"UNITED
+        STATES","displayName":"United States","isoThree":"USA","numberCode":840,"createDate":"2012-01-03
+        02:41:33"}},{"id":"m1a0ra","name":"Asheville","streetAddress":"155 Craven
+        Street","locality":"Asheville","region":"North Carolina","postalCode":"28806","latitude":35.588813,"longitude":-82.573593,"isPrimary":"N","inPlanning":"Y","isClosed":"N","openToPublic":"N","locationType":"micro","locationTypeDisplay":"Micro
+        Brewery","countryIsoCode":"US","status":"verified","statusDisplay":"Verified","createDate":"2012-04-06
+        12:29:33","updateDate":"2012-04-06 12:29:33","country":{"isoCode":"US","name":"UNITED
+        STATES","displayName":"United States","isoThree":"USA","numberCode":840,"createDate":"2012-01-03
+        02:41:33"}}]}]},"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 01:18:42 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Mon, 22 Jul 2013 01:00:07 GMT
+recorded_with: VCR 2.5.0

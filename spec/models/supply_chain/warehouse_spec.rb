@@ -25,7 +25,7 @@ describe SupplyChain::Warehouse do
       breweries = subject.breweries
       expect(breweries.first.id).to be_kind_of String
       expect(breweries.each).to be_kind_of Enumerator
-      expect(breweries.count).to eq(3840)
+      expect(breweries.count).to eq(4444)
     end
 
     it 'fetches a single brewery' do
@@ -37,7 +37,7 @@ describe SupplyChain::Warehouse do
       brews = subject.brews_for_brewery('Idm5Y5')
       expect(brews.first.id).to be_kind_of String
       expect(brews.each).to be_kind_of Enumerator
-      expect(brews.count).to eq(22)
+      expect(brews.count).to eq(25)
     end
 
     it 'fetches a single brew' do

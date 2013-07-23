@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe SearchesController do
-  let(:search_result) { stub('Search::Result') }
+  let(:search_result) { double('Search::Result') }
 
   it 'delegates to the search engine' do
     Search::Engine.stub(:search).with(instance_of Search::Query) { search_result }

@@ -4,7 +4,7 @@ require 'models/stock_order'
 describe StockOrder do
   subject(:order) { described_class.new(args)}
   let(:brew) { double(name: 'Black Ops', id: 42) }
-  let(:args) { { count: '3', batch: 'abc', brew: brew } }
+  let(:args) { { count: '3', vintage: '2010', brew: brew } }
 
   describe 'ActiveModel Lint' do
     it_behaves_like 'ActiveModel'

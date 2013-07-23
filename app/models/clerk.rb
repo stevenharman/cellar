@@ -11,10 +11,15 @@ class Clerk
   end
 
   def procure(order)
-    beers = brew_master.process(order)
-    stock(beers)
-    update_inventory(order.brew)
-    issue_receipt(beers)
+    beers = []
+
+    with_valid(order) do
+      beers.concat(brew_master.process(order))
+      stock(beers)
+      update_inventory(order.brew)
+    end
+
+    issue_receipt(order, beers)
   end
 
   def distribute(order)
@@ -33,11 +38,15 @@ class Clerk
     end
   end
 
-  def issue_receipt(beers)
-    StockOrderReceipt.new(beers)
+  def issue_receipt(order, beers)
+    StockOrderReceipt.new(order, beers)
   end
 
   def update_inventory(brew)
     inventory_report.calculate(brew)
+  end
+
+  def with_valid(order)
+    yield if order.valid?
   end
 end

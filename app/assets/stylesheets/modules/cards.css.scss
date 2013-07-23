@@ -107,13 +107,11 @@
       }
 
       label {
-        color: $brown;
         cursor: text;
         font-family: $small-font-family;
         font-size: em(8, 16);
         line-height: 1em;
         margin: 0;
-        text-transform: uppercase;
       }
 
       .actions {

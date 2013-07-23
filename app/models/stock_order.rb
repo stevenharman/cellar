@@ -9,14 +9,15 @@ class StockOrder
   include ActiveModel::Validations
 
   attribute :count, Integer, default: 1
-  attribute :batch, String
   attribute :best_by, Date
+  attribute :notes, String
   attribute :vintage, Integer
 
   attr_reader :brew
   delegate :id, :name, to: :brew, prefix: true
 
   validates :count, numericality: { greater_than_or_equal_to: 1 }
+  validates :vintage, numericality: { only_integer: true, unless: ->(o) { o.vintage.blank? } }
 
   def self.prepare(args, brew_factory = Brew)
     brew = brew_factory.find_by_id(args[:brew_id])
@@ -30,8 +31,8 @@ class StockOrder
 
   def to_hash
     {
-      batch: batch,
       best_by: best_by,
+      notes: notes,
       vintage: vintage,
     }
   end

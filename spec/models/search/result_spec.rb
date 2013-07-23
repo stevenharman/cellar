@@ -1,9 +1,9 @@
 require 'models/search/result'
 
 describe Search::Result do
-  subject(:result) { described_class.new([stub(searchable: brewery), stub(searchable: brew)]) }
-  let(:brewery) { stub('Brewery') }
-  let(:brew) { stub('Brew') }
+  subject(:result) { described_class.new([double(searchable: brewery), double(searchable: brew)]) }
+  let(:brewery) { double('Brewery') }
+  let(:brew) { double('Brew') }
 
   it 'can iterate over the resulting objects' do
     expect(result.each).to be_an(Enumerator)

@@ -19,7 +19,7 @@
             = ldate(beer.created_at, format: :month_year)
             label.beer-detail-name= t('.cellared_on')
           li.beer-detail.beer-vintage
-            = beer.vintage
+            time= beer.vintage
             label.beer-detail-name= t('.vintage')
           li.beer-detail.beer-best-by
             = ldate(beer.best_by, format: :long)

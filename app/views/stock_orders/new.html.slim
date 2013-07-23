@@ -3,10 +3,10 @@ div
 
   = simple_form_for(@order, html: {class: 'form-horizontal'}) do |f|
     = f.hidden_field :brew_id
-    = f.input :batch, input_html: { autofocus: true }
-    = f.input :vintage, as: :numeric, input_html: { value: @order.vintage, min: 1970 }
+    = f.input :vintage, as: :numeric, input_html: { min: 1970, autofocus: true }
     = f.input :best_by, as: :datepicker
-    = f.input :count, as: :numeric, input_html: { value: @order.count, min: 1, class: 'span1' }
+    = f.input :notes, as: :text, input_html: { rows: 10 }
+    = f.input :count, as: :numeric, input_html: { min: 1 }
 
     = f.submit 'Cellar it!', id: 'add_beer', class: 'btn-primary'
 

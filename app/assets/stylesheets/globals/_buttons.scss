@@ -31,9 +31,9 @@
   box-shadow: none;
   color: $color;
   display: inline-block;
+  font-family: $small-font-family;
   text-decoration: none;
   text-shadow: none;
-  font-family: $small-font-family;
   text-transform: uppercase;
 
   &:link,

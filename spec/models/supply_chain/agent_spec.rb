@@ -4,7 +4,7 @@ describe SupplyChain::Agent, :vcr do
   subject { described_class.new(warehouse, log) }
   let(:warehouse) { SupplyChain::Warehouse.new }
   let(:log) { SupplyChain::Log::Noop.new }
-  let(:raw_data) { stub }
+  let(:raw_data) { double }
 
   it '#import_styles_with_categories loads the all styles and their categories', :slow do
     subject.import_styles_with_categories

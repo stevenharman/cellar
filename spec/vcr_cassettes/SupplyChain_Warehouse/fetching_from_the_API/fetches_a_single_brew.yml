@@ -8,35 +8,35 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - BreweryDB Ruby Gem 0.0.1
+      - BreweryDB Ruby Gem 0.2.0
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - '*/*'
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 18 Aug 2012 01:19:14 GMT
+      - Mon, 22 Jul 2013 01:00:21 GMT
       Server:
-      - Apache/2.2.22 (Amazon)
+      - Apache/2.2.24 (Amazon)
       X-Powered-By:
-      - PHP/5.3.15
+      - PHP/5.3.26
       X-Ratelimit-Limit:
       - Unlimited
       X-Ratelimit-Remaining:
       - Unlimited
+      Vary:
+      - Accept-Encoding
       Content-Length:
-      - '3834'
-      Connection:
-      - close
+      - '1984'
       Content-Type:
       - application/json
     body:
-      encoding: US-ASCII
-      string: ! '{"message":"READ ONLY MODE: Request Successful","data":{"id":"VvFIVD","name":"Hopslam
+      encoding: UTF-8
+      string: '{"message":"READ ONLY MODE: Request Successful","data":{"id":"VvFIVD","name":"Hopslam
         Ale","description":"Starting with six different hop varietals added to the
         brew kettle & culminating with a massive dry-hop addition of Simcoe hops,
         Bell''s Hopslam Ale possesses the most complex hopping schedule in the Bell''s
@@ -44,10 +44,10 @@ http_interactions:
         Pacific Northwest varieties contribute a pungent blend of grapefruit, stone
         fruit, and floral notes. A generous malt bill and a solid dollop of honey
         provide just enough body to keep the balance in check, resulting in a remarkably
-        drinkable rendition of the Double India Pale Ale style.","abv":"10","ibu":"70","glasswareId":5,"availableId":8,"styleId":31,"isOrganic":"N","labels":{"icon":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/VvFIVD\/upload_jPl9j1-icon.png","medium":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/VvFIVD\/upload_jPl9j1-medium.png","large":"http:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/VvFIVD\/upload_jPl9j1-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:43:26","updateDate":"2012-03-22 13:04:58","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
-        02:41:33"},"available":{"id":"8","name":"Winter","description":"Available
-        during the winter months."},"style":{"id":31,"categoryId":3,"category":{"id":3,"name":"North
+        drinkable rendition of the Double India Pale Ale style.","abv":"10","ibu":"70","glasswareId":5,"availableId":8,"styleId":31,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/VvFIVD\/upload_jPl9j1-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/VvFIVD\/upload_jPl9j1-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/VvFIVD\/upload_jPl9j1-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:43:26","updateDate":"2012-09-06 17:30:43","glass":{"id":5,"name":"Pint","createDate":"2012-01-03
+        02:41:33"},"available":{"id":8,"name":"Winter","description":"Available during
+        the winter months."},"style":{"id":31,"categoryId":3,"category":{"id":3,"name":"North
         American Origin Ales","createDate":"2012-03-21 20:06:45"},"name":"Imperial
         or Double India Pale Ale","description":"Imperial or Double India Pale Ales
         have intense hop bitterness, flavor and aroma. Alcohol content is medium-high
@@ -71,8 +71,13 @@ http_interactions:
         change to the city landscape.  Our ongoing goal is to brew thoughtfully, creatively
         and artistically. We strive to bring an authentic and pleasant experience
         to all of our customers through our unique ales and beers. We look forward
-        to sharing our beers with you.","website":"http:\/\/www.bellsbeer.com\/","established":"1985","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_KY2kdU-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_KY2kdU-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_KY2kdU-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:41:45","updateDate":"2012-04-09 19:01:20"}]},"status":"success"}'
+        to sharing our beers with you.","website":"http:\/\/www.bellsbeer.com\/","established":"1985","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_t0bnSw-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_t0bnSw-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/noGtDY\/upload_t0bnSw-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:41:45","updateDate":"2013-05-10 12:51:03","locations":[{"id":"NnffJ2","name":"Main
+        Brewery","streetAddress":"8938 Krum Ave.","locality":"Galesburg","region":"Michigan","postalCode":"49053","phone":"269-382-2338","website":"http:\/\/www.bellsbeer.com\/","latitude":42.2843486,"longitude":-85.4538497,"isPrimary":"Y","inPlanning":"N","isClosed":"N","openToPublic":"Y","locationType":"micro","locationTypeDisplay":"Micro
+        Brewery","countryIsoCode":"US","yearOpened":"1985","status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:41:45","updateDate":"2012-03-21 20:05:24","country":{"isoCode":"US","name":"UNITED
+        STATES","displayName":"United States","isoThree":"USA","numberCode":840,"createDate":"2012-01-03
+        02:41:33"}}]}]},"status":"success"}'
     http_version: 
-  recorded_at: Sat, 18 Aug 2012 01:19:15 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Mon, 22 Jul 2013 01:00:22 GMT
+recorded_with: VCR 2.5.0

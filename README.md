@@ -103,6 +103,9 @@ The **TL;DR** is:
       mixins, etc.
     * Modules in this directory are automagically included in the compiled CSS
       for the whole site.
+  * The `application.css.scss` has an **Inbox** and a **Shame** section. Use
+    them for fly-by commits, or things your not proud of, respectively. (See
+    each section for a better description.)
   * We are trying to avoid page-specific styling, instead preferring to think
     in terms of modules. So, try the module approach... please.
 
