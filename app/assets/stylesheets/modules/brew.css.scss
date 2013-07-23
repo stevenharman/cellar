@@ -11,13 +11,24 @@
   }
 }
 
+.brew-info {
+  margin-bottom: 1em;
+}
+
 .brew-basics {
   .name {
     margin: 0;
+    color: $brown;
   }
   .brewery-name {
+    font-family: $small-font-family;
+    text-transform: uppercase;
     margin: 0;
   }
+}
+
+.brew-description {
+  margin-bottom: 34px;
 }
 
 .brew-details {
@@ -41,15 +52,21 @@
 
 .similar-brews-legend {
   margin-bottom: 0.5em;
+  font-family: $small-font-family;
+  text-transform: uppercase;
+  color: $brown;
+  font-size: .8em;
 }
 .similar-brews-list {
-  border: 1px solid $base-border-color-light;
+  border: 1px solid $section-border-color;
   border-radius: 3px;
   padding: 0.5em 1em;
+  font-family: $large-font-family;
 
   li {
     @include text-overflow;
     margin-bottom: 0.5em;
+    font-size: 1.2em;
 
     &:last-child {
       margin-bottom: 0;

@@ -13,7 +13,7 @@
   @include clearfix;
   @include pad;
   border-radius: 4px;
-  background-color: $base-background-color-highlight;
+  background-color: $section-background-color;
 
   .stat {
     @include span-columns(2 of 9);
@@ -27,6 +27,8 @@
     font-size: em(12, 16);
   }
   .stat-value {
-    font-size: em(22, 16);
+    font-size: em(24, 16);
+    font-family: $small-font-family;
+    color: $brightorange;
   }
 }
