@@ -1,49 +1,5 @@
 @import '../globals/all';
 
-.settings {
-  @include clearfix;
-}
-
-.settings-nav {
-  @include span-columns(3 of 12);
-  @include media($tablet) { @include span-columns(3 of 8); }
-  @include media($mobile) { @include fill-parent; }
-
-  text-transform: uppercase;
-
-  ul {
-    border: 1px solid $base-border-color;
-  }
-
-  li {
-    border-bottom: 1px solid $base-border-color;
-    font-family: $small-font-family;
-    letter-spacing: 1px;
-    list-style: none;
-    &:last-child { border-bottom: none; }
-
-    a {
-      display: block;
-      padding: 0.8em;
-      color: $light-gray;
-      font-size: em(14, 16);
-    }
-
-    &.is-active {
-      background-color: $orange;
-      a { color: white; }
-    }
-  }
-}
-
-.settings-content {
-  @include span-columns(9 of 12);
-  @include media($tablet) {
-    @include span-columns(5 of 8);
-  }
-  @include media($mobile) { @include fill-parent; }
-}
-
 .settings-profile {
   textarea,
   #{$all-text-inputs} {

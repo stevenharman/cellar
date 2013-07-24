@@ -1,6 +1,6 @@
 module SettingsHelper
 
-  def activate_setting(item)
+  def active_nav(item)
     'is-active' if controller_name.singularize == item
   end
 

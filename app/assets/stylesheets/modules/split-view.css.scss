@@ -6,8 +6,37 @@
 
 .split-view-main {
   @include span-columns(9 of 12);
+  @include media($tablet) { @include span-columns(5 of 8); }
+  @include media($mobile) { @include fill-parent; }
 }
 
 .split-view-sidebar {
   @include span-columns(3 of 12);
+  @include media($tablet) { @include span-columns(3 of 8); }
+  @include media($mobile) { @include fill-parent; }
+}
+
+.split-view-nav {
+  border: 1px solid $base-border-color;
+  text-transform: uppercase;
+
+  li {
+    border-bottom: 1px solid $base-border-color;
+    font-family: $small-font-family;
+    letter-spacing: 1px;
+    list-style: none;
+    &:last-child { border-bottom: none; }
+
+    a {
+      display: block;
+      padding: 0.8em;
+      color: $light-gray;
+      font-size: em(14, 16);
+    }
+
+    &.is-active {
+      background-color: $orange;
+      a { color: white; }
+    }
+  }
 }
