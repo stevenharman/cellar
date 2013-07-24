@@ -40,7 +40,7 @@ BrewdegaCellar::Application.routes.draw do
   resource :heartbeat, only: [:show]
   resources :webhooks, controller: :web_hooks, only: [:create]
 
-  namespace :staff, constraints: Constraint::Admin.new do
+  namespace :staff, constraints: Constraint::Staff.new do
     resource :style_guide, only: [:show]
 
     require 'sidekiq/web'

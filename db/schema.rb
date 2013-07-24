@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130722203539) do
+ActiveRecord::Schema.define(:version => 20130724011027) do
 
   create_table "beers", :force => true do |t|
     t.date     "best_by"
@@ -129,13 +129,13 @@ ActiveRecord::Schema.define(:version => 20130722203539) do
     t.string   "website"
     t.string   "location"
     t.string   "name"
-    t.boolean  "admin",                  :default => false, :null => false
+    t.boolean  "staff",                  :default => false, :null => false
   end
 
-  add_index "users", ["admin"], :name => "index_users_on_admin"
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+  add_index "users", ["staff"], :name => "index_users_on_staff"
   add_index "users", ["username"], :name => "index_users_on_username", :unique => true
 
 end
