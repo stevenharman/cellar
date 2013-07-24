@@ -27,10 +27,9 @@
       padding: 0.8em;
       color: $light-gray;
       font-size: em(14, 16);
-      &:hover { color: $orange; }
     }
 
-    &.active {
+    &.is-active {
       background-color: $orange;
       a { color: white; }
     }
