@@ -13,7 +13,7 @@
         li.my-cellar= link_to(cellar_path(current_user), tooltip(t('cellar.my_cellar'))) do
               i.icon-list
         li.my-settings= link_to(settings_profile_path, tooltip(t('cellar.settings'))) do
-              i.icon-cogs
+              i.icon-wrench
         li.sign-out= link_to(destroy_user_session_path, tooltip(t('cellar.sign_out'), method: :delete)) do
               i.icon-signout
       - else
