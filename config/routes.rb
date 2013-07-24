@@ -44,7 +44,9 @@ BrewdegaCellar::Application.routes.draw do
     resource :style_guide, only: [:show]
 
     require 'sidekiq/web'
-    mount Sidekiq::Web => 'sidekiq'
+    mount Sidekiq::Web => 'sidekiq', as: :background_jobs
+
+    root to: 'dashboards#show'
   end
 
   get '/:username' => 'cellars#show', as: :cellar
