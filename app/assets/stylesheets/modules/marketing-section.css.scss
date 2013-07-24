@@ -5,11 +5,31 @@
     text-transform: uppercase;
     font-size: 4em;
   }
-  padding: 1em 0;
+  padding: 2em 0;
+  min-height: 420px;
 }
 
 .marketing-section-signup {
   background-color: $section-background-color;
+  
+  .intro-view {
+  @include clearfix;
+  }
+  
+  .intro-view-main {
+    @include span-columns(8 of 12);
+    padding: 0 2em;
+  }
+  
+  .intro-view-sidebar {
+    @include span-columns(4 of 12);
+  }
+  
+  h1 {
+    font-size: 6em;
+    line-height: .85em;
+    color: $orange;
+  }
 }
 
 .marketing-section-junk {
@@ -55,10 +75,24 @@
 
 .marketing-section-tracking {
   text-align: center;
+  background-color: #fff;
+  
+  .tracking-items {
+    @include span-columns(10);
+      @include shift(1);
+  }
+}
+
+.marketing-section-finding {
+  text-align: center;
   background-color: $section-background-color;
 }
 
 .marketing-section-pricing {
   text-align: center;
   background-color: $orange;
+  
+  h1 {
+    color: #fff;
+  }
 }
