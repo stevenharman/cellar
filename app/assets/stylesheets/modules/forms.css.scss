@@ -103,9 +103,8 @@ select {
   margin-bottom: $base-line-height * 1.5;
 }
 
-button:not(.reset-style), // Add class of 'reset-style' to prevent a button from being styled
-input[type="submit"]:not(.reset-style),
-.btn {
+// Add class of 'reset-style' to prevent a button from being styled
+#{$all-buttons} {
   @include button-flat($base-color: #DDD, $text-color: #333);
   //@include button(flat, #fafafa);
 
