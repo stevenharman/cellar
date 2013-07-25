@@ -16,14 +16,14 @@
 
         ul.beer-details
           li.beer-detail.beer-cellared-on
-            = ldate(beer.created_at, format: :month_year)
             label.beer-detail-name= t('.cellared_on')
+            = ldate(beer.created_at, format: :month_year)
           li.beer-detail.beer-vintage
-            time= beer.vintage
             label.beer-detail-name= t('.vintage')
+            time= beer.vintage
           li.beer-detail.beer-best-by
-            = ldate(beer.best_by, format: :long)
             label.beer-detail-name= t('.best_by')
+            = ldate(beer.best_by, format: :long)
 
         = simple_form_for beer, url: cellar_distribution_order_path(beer.user), html: {class: 'beer-statuses'} do
           = hidden_field_tag :beer_id, beer.id, id: nil

@@ -37,6 +37,8 @@
 
   .beer-detail-name {
     display: none;
+    line-height: 1em;
+    margin: 0;
   }
 
   .beer-statuses {
@@ -73,4 +75,36 @@
     }
     .stock-one-now { float: right; }
   }
+
+  @include media($mobile) {
+
+    .beer-list-legend { display: none; }
+
+    .beer-details {
+      @include fill-parent;
+
+      .beer-detail {
+        margin-top: 0.25em;
+      }
+      .beer-detail-name { display: block; }
+    }
+
+    .beer-statuses {
+      @include fill-parent;
+
+      .btn-group {
+        line-height: $base-line-height;
+        margin: 0.25em 0;
+
+        #{$all-buttons} {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .beer-actions {
+      @include fill-parent;
+    }
+  }
 }
+
