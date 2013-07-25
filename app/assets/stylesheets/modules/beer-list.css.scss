@@ -12,6 +12,8 @@
   .beer-detail-name {
     font-size: em(12, 16);
   }
+
+  @include media($mobile) { display: none; }
 }
 
 .beer-list-beers {
@@ -77,8 +79,6 @@
   }
 
   @include media($mobile) {
-
-    .beer-list-legend { display: none; }
 
     .beer-details {
       @include fill-parent;
