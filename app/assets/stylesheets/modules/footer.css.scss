@@ -4,38 +4,47 @@ footer {
   background-color: $brown-accent;
   color: white;
   width: 100%;
+}
 
-  ul {
-    li {
-      border-bottom: 1px dotted $brown-highlight;
-      font-size: em(12);
-      padding: em(6) 0;
-    }
+.footer-section-title {
+  @include border-top-radius(4px);
+  background-color: rgba(white, 0.1);
+  margin-bottom: 0;
+  padding: 0.25em 0.5em;
+}
+
+.footer-section-content {
+  background-color: rgba(white, 0.05);
+
+  li {
+    border-bottom: 1px dotted $brown-highlight;
+    font-size: em(12);
+    @include pad;
   }
+}
 
-  .logo, .recent-tweets, .recent-blog {
-    @include span-columns(4 of 12);
-    @include pad(default 0);
+.footer-logo, .footer-recent-tweets, .footer-recent-blog {
+  @include span-columns(4 of 12);
+  @include pad(default 0);
 
-    @include media($mobile) {
-      @include fill-parent;
-      display: none;
-    }
+  @include media($mobile) {
+    @include fill-parent;
+    display: none;
   }
+}
 
-  .logo {
-    padding-left: flex-gutter();
-  }
+.footer-logo {
+  padding-left: flex-gutter();
+}
 
-  .recent-blog {
-    @include omega;
-    padding-right: flex-gutter();
-  }
+.footer-recent-blog {
+  @include omega;
+  padding-right: flex-gutter();
+}
 
-  p.legal {
-    @include pad(1em default);
-    clear: both;
-    font-size: em(11);
-    margin-bottom: 0;
-  }
+.footer-legal {
+  @include pad(1em default);
+  clear: both;
+  font-size: em(11);
+  margin-bottom: 0;
 }
