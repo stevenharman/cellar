@@ -25,6 +25,7 @@ body {
 }
 
 .page-content {
+  padding-top: 10px;
   padding-bottom: $gutter;
 
   @include media($mobile) {

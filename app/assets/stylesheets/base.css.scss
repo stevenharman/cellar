@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-family: $header-font-family;
   font-size: em(44);
-  line-height: $base-line-height * 2;
+  line-height: $base-line-height * 1.63;
   margin: $base-line-height 0;
 }
 
