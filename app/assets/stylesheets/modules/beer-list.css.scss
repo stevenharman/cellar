@@ -25,6 +25,8 @@
   border: 1px solid $section-border-color;
   border-radius: 3px;
   margin-bottom: 1em;
+  font-size: .8em;
+  font-weight: bold;
 
   .beer-details {
     @include span-columns(3 of 9);
