@@ -9,7 +9,7 @@ section.marketing-section.marketing-section-signup
           ul.error_messages
             - for message in @user.errors.full_messages
               li= message
-    
+
         = f.input :username, input_html: { autofocus: true }
         = f.input :email
         = f.input :password, required: true
@@ -24,7 +24,7 @@ section.marketing-section.marketing-section-tracking
   .tracking-items
     p What if keeping track of your beers were as easy as drinking them? Saving one for later is easy. Remembering what you have is not. Sign up now to make cellaring as easy as drinking.
   = link_to(t('cellar.sign_up'), sign_up_path, class: 'btn btn-primary', title: t('cellar.sign_up_for_cellar'))
-  
+
 section.marketing-section.marketing-section-finding
   h1 easy to find
   = link_to(t('cellar.sign_up'), sign_up_path, class: 'btn btn-primary', title: t('cellar.sign_up_for_cellar'))
