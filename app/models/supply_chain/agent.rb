@@ -1,3 +1,15 @@
+require_relative 'log'
+require_relative 'brew_catalog_order'
+require_relative 'translator'
+require_relative 'brew_translation'
+require_relative 'brewery_translation'
+require_relative 'category_translation'
+require_relative 'style_translation'
+require_relative 'job/fetch_brew_catalog'
+require_relative '../brew'
+require_relative '../brewery'
+require_relative '../category'
+require_relative '../style'
 
 module SupplyChain
   class Agent

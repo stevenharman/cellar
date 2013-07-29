@@ -40,11 +40,13 @@ BrewdegaCellar::Application.routes.draw do
   resource :heartbeat, only: [:show]
   resources :webhooks, controller: :web_hooks, only: [:create]
 
-  namespace :staff, constraints: Constraint::Admin.new do
+  namespace :staff, constraints: Constraint::Staff.new do
     resource :style_guide, only: [:show]
 
     require 'sidekiq/web'
-    mount Sidekiq::Web => 'sidekiq'
+    mount Sidekiq::Web => 'sidekiq', as: :background_jobs
+
+    root to: 'dashboards#show'
   end
 
   get '/:username' => 'cellars#show', as: :cellar

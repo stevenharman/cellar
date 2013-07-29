@@ -1,6 +1,6 @@
-require 'constraint/admin'
+require 'constraint/staff'
 
-describe Constraint::Admin do
+describe Constraint::Staff do
   subject(:constraint) { described_class.new }
   let(:a_request) { double('Request', env: { 'warden' => warden }) }
   let(:warden) { double('Warden') }
@@ -17,13 +17,13 @@ describe Constraint::Admin do
       warden.stub(:user) { user }
     end
 
-    it 'denies a non-admin user' do
-      user.stub(:admin?) { false }
+    it 'denies a non-staff user' do
+      user.stub(:staff?) { false }
       expect(constraint.matches?(a_request)).to be_false
     end
 
-    it 'allows an admin user' do
-      user.stub(:admin?) { true }
+    it 'allows an staff user' do
+      user.stub(:staff?) { true }
       expect(constraint.matches?(a_request)).to be_true
     end
   end

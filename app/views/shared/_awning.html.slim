@@ -13,7 +13,11 @@
         li.my-cellar= link_to(cellar_path(current_user), tooltip(t('cellar.my_cellar'))) do
               i.icon-list
         li.my-settings= link_to(settings_profile_path, tooltip(t('cellar.settings'))) do
-              i.icon-cogs
+              i.icon-wrench
+        - if current_user.staff?
+          li.staff
+            = link_to(staff_root_path, tooltip(t('cellar.staff'))) do
+              i.icon-rocket
         li.sign-out= link_to(destroy_user_session_path, tooltip(t('cellar.sign_out'), method: :delete)) do
               i.icon-signout
       - else
@@ -25,7 +29,7 @@
           = link_to(t('cellar.sign_up'), sign_up_path)
 
     span.awning-search-box
-      = link_to(search_path, class: 'search-indicator', tabindex: 1) do
+      = link_to(search_path, class: 'awning-search-indicator', tabindex: 1) do
           i.icon-search.icon-large
           = t('.search.text')
       span.search-form-wrapper

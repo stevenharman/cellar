@@ -20,10 +20,6 @@ after_fork do |server, worker|
     puts 'Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT'
   end
 
-  Sidekiq.configure_client do |config|
-    config.redis = { url: ENV['REDISTOGO_URL'], namespace: 'brewdega-cellar', :size => 1 }
-  end
-
   defined?(ActiveRecord::Base) and
     ActiveRecord::Base.establish_connection
 end

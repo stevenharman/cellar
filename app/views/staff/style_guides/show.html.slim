@@ -33,7 +33,7 @@ fieldset.style-guide-section.forms
     = f.input :text
     = f.input :text_with_error
     = f.input :disabled_text, disabled: true
-    = f.input :textarea, as: :text
+    = f.input :textarea, as: :text, input_html: {rows: 10}
     = f.input :select_box, collection: Staff::StyleGuide::SELECT_OPTIONS
     = f.input :agree, as: :boolean
     = f.input :check_boxes, as: :check_boxes
