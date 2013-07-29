@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/thoughtbot/bourbon.git
+  revision: 331c5f71ce8648e22de2c688025750e839c9d7ea
+  specs:
+    bourbon (3.1.8)
+      sass (>= 3.2.0)
+      thor
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -37,9 +45,6 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bourbon (3.1.8)
-      sass (>= 3.2.0)
-      thor
     brewery_db (0.2.0)
       faraday (~> 0.8.0)
       faraday_middleware (~> 0.8)
@@ -293,7 +298,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
-  bourbon (~> 3.1)
+  bourbon!
   brewery_db (~> 0.2.0)
   capybara
   capybara-webkit

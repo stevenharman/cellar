@@ -1,8 +1,9 @@
 @import 'globals/all';
 
 body {
+  @include retina-image(bg-bottles, 567px 656px, $asset-pipeline: true);
+
   background-attachment: fixed;
-  background-image: image-url('bg-bottles.png');
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;

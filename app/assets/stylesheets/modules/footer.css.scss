@@ -35,6 +35,11 @@ footer {
 
 .footer-logo {
   padding-left: flex-gutter();
+
+  img {
+    height: 106px;
+    width: 177px;
+  }
 }
 
 .footer-recent-blog {

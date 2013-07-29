@@ -19,7 +19,7 @@ gem 'virtus'
 
 group :assets do
   gem 'sass-rails', '~> 3.1'
-  gem 'bourbon', '~> 3.1'
+  gem 'bourbon', git: 'https://github.com/thoughtbot/bourbon.git'
   gem 'neat', '~> 1.3' # Grid framework built upon Bourbon.
   gem 'font-awesome-rails', '~> 3.2'
   gem 'coffee-rails', '~> 3.2.2'

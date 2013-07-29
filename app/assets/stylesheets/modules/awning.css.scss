@@ -5,7 +5,9 @@
   $query-top-margin: -0.25 * $top-padding;
   $avatar-size: 32px;
 
-  background: transparent image-url('awning.png') repeat-x;
+  @include retina-image(awning, 68px 86px, $asset-pipeline: true);
+  background-color: transparent;
+  background-repeat: repeat-x;
   color: white;
   height: $awning-height;
   z-index: $awning-z-index;
