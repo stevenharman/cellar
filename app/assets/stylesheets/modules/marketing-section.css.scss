@@ -4,6 +4,7 @@
   h1 {
     text-transform: uppercase;
     font-size: 4em;
+    color: $orange;
   }
   padding: 2em 0;
   min-height: 420px;
@@ -23,12 +24,12 @@
   
   .intro-view-sidebar {
     @include span-columns(4 of 12);
+    @include omega();
   }
   
   h1 {
     font-size: 6em;
     line-height: .85em;
-    color: $orange;
   }
 }
 
@@ -76,16 +77,16 @@
 .marketing-section-tracking {
   text-align: center;
   background-color: #fff;
+}
+
+.marketing-section-finding {
+  text-align: center;
+  background: $section-background-color url('/assets/marketing-section-find-back.gif') no-repeat center;
   
   .tracking-items {
     @include span-columns(10);
       @include shift(1);
   }
-}
-
-.marketing-section-finding {
-  text-align: center;
-  background-color: $section-background-color;
 }
 
 .marketing-section-pricing {
