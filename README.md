@@ -114,11 +114,11 @@ The **TL;DR** is:
 We also have a style guide available right in the app. After [starting the
 app](#running-the-app), go to
 [http://localhost:5000/staff/style_guide](http://localhost:5000/staff/style_guide).
-You'll need to be an admin to see anything in the `staff/` route. You can make
-yourself an admin via Rails console:
+You'll need to be a marked as "staff" to see anything in the `staff/` route.
+You can make yourself staff via Rails console:
 
 ```ruby
-me = User.find_by_username('my_username_here'); me.admin = true; me.save!
+me = User.find_by_username('my_username_here'); me.staff = true; me.save!
 ```
 
 #### Resources for reference and learning:

@@ -18,6 +18,7 @@ describe SupplyChain::BreweryTranslation do
         subject.translate(raw_data)
       end
 
+      it { expect(brewery.brewery_db_status).to eql(raw_data.status) }
       it { expect(brewery.name).to eql(raw_data.name) }
       it { expect(brewery.description).to eql(raw_data.description) }
       it { expect(brewery.established).to eql(Date.new(2011))}
@@ -56,7 +57,7 @@ describe SupplyChain::BreweryTranslation do
         description: 'A beer collective',
         established: '2011', is_organic: 'Y',
         website: 'http://brewdega.com',
-        images: images
+        images: images, status: 'verified',
       )
     end
 
@@ -64,7 +65,8 @@ describe SupplyChain::BreweryTranslation do
       OpenStruct.new(
         name: 'A name', description: 'This too', established: Date.new(1999),
         organic: true, website: 'http://brewdega.com', icon: 'icon.png',
-        medium_image: 'medium.png', large_image: 'large.png'
+        medium_image: 'medium.png', large_image: 'large.png',
+        brewery_db_status: 'verified',
       )
     end
   end

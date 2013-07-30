@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '1.9.3'
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.14'
 gem 'jquery-rails'
 gem 'unicorn'
 gem 'brewery_db', '~> 0.2.0'
@@ -35,7 +35,7 @@ group :development, :test do
   gem 'heroku'
   gem 'pry-rails'
   gem 'pry-remote'
-  gem 'rspec-rails', '~> 2.12'
+  gem 'rspec-rails', '~> 2.14'
 end
 
 group :development do

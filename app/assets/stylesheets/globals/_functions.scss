@@ -1,0 +1,7 @@
+@function element-listify($elements...) {
+  $unquoted-element-list: ();
+  @each $element in $elements {
+    $unquoted-element-list: append($unquoted-element-list, unquote($element), comma);
+  }
+  @return $unquoted-element-list;
+}

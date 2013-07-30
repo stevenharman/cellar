@@ -12,6 +12,8 @@
   .beer-detail-name {
     font-size: em(12, 16);
   }
+
+  @include media($mobile) { display: none; }
 }
 
 .beer-list-beers {
@@ -25,8 +27,6 @@
   border: 1px solid $section-border-color;
   border-radius: 3px;
   margin-bottom: 1em;
-  font-size: .8em;
-  font-weight: bold;
 
   .beer-details {
     @include span-columns(3 of 9);
@@ -39,6 +39,8 @@
 
   .beer-detail-name {
     display: none;
+    line-height: 1em;
+    margin: 0;
   }
 
   .beer-statuses {
@@ -75,4 +77,34 @@
     }
     .stock-one-now { float: right; }
   }
+
+  @include media($mobile) {
+
+    .beer-details {
+      @include fill-parent;
+
+      .beer-detail {
+        margin-top: 0.25em;
+      }
+      .beer-detail-name { display: block; }
+    }
+
+    .beer-statuses {
+      @include fill-parent;
+
+      .btn-group {
+        line-height: $base-line-height;
+        margin: 0.25em 0;
+
+        #{$all-buttons} {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .beer-actions {
+      @include fill-parent;
+    }
+  }
 }
+

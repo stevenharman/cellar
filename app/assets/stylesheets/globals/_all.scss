@@ -1,9 +1,14 @@
 @import 'bourbon';
 @import './variables';
+@import './functions';
 @import './mixins';
 @import './buttons';
 @import './typeography';
 @import './grid_settings';
+
+$all-buttons: element-listify('button:not(.reset-style)',
+                              'input[type="submit"]:not(.reset-style)',
+                              '.btn');
 
 // disable this so Neat's grid/grid mixin doesn't drop the box-sizing rule dozens of times.
 $border-box-sizing: false;

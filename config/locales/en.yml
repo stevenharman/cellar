@@ -175,6 +175,11 @@ en:
       last: "<icon class='icon-double-angle-right'></i>"
       last_title: "Last"
 
+  layouts:
+    staff:
+      background_jobs: "Background Jobs"
+      style_guide: "Style Guide"
+
   shared:
     awning:
       search:
@@ -196,6 +201,7 @@ en:
     recent_tweets_alt: "Follow us on Twitter for more news."
     full_name: "%{name}'s Cellar"
     my_cellar: "My cellar"
+    staff: "Staff"
     brew:
       abv: "ABV"
       ibu: "IBU"

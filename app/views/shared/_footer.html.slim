@@ -1,18 +1,18 @@
 footer
-  .logo
+  .footer-section.footer-logo
     = image_tag('footer_logo.gif', alt: t('cellar.full_tagline'))
-  .recent-tweets.hidden-phone
-    h4= link_to('http://twitter.com/brewdega', title: t('cellar.recent_tweets_alt')) do
+  .footer-section.footer-recent-tweets
+    h4.footer-section-title= link_to('http://twitter.com/brewdega', title: t('cellar.recent_tweets_alt')) do
       i.icon-twitter
       =< t('cellar.recent_tweets')
-    ul
+    ul.footer-section-content
       li Toot 1
       li Toot 2
-  .recent-blog
-    h4= link_to('http://blog.brewdega.com/', title: t('cellar.recent_blog_alt')) do
+  .footer-section.footer-recent-blog
+    h4.footer-section-title= link_to('http://blog.brewdega.com/', title: t('cellar.recent_blog_alt')) do
       i.icon-bookmark
       =< t('cellar.recent_blog')
-    ul
+    ul.footer-section-content
       li Post 1
       li Post 2
-  p.legal Privacy | Legal | © 2013 Brewdega, LLC
+  p.footer-legal Privacy | Legal | © 2013 Brewdega, LLC

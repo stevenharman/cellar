@@ -1,0 +1,13 @@
+- content_for :content do
+
+  article.staff.split-view
+    nav.split-view-sidebar
+      ul.split-view-nav
+        li.style-guide class=(active_nav('style_guide'))
+          = link_to(t('.style_guide'), staff_style_guide_path)
+        li.background-jobs
+          = link_to(t('.background_jobs'), staff_background_jobs_path)
+    .staff-content.split-view-main
+      = yield
+
+= render template: 'layouts/application'

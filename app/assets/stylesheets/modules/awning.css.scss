@@ -23,10 +23,7 @@
     line-height: $avatar-size;
     margin-left: 1em;
     margin-top: $top-padding;
-    max-width: 20em;
-    width: 45%;
-
-    .search-form-wrapper { display: none; }
+    width: 40%;
 
     .search-form {
       @include inline-block;
@@ -38,13 +35,18 @@
         width: 100%;
       }
 
-      .search-button {
-        display: none;
-      }
+      .search-button { display: none; }
     }
   }
 
-  a.search-indicator {
+  .search-form-wrapper { display: none; }
+
+  &.is-search-active {
+    .awning-search-indicator { display: none; }
+    .search-form-wrapper { display: block; }
+  }
+
+  a.awning-search-indicator {
     @include transition-glow;
 
     color: white;
@@ -115,6 +117,15 @@
     .my-profile {
       border: none !important;
       padding-right: 0 !important;
+    }
+  }
+
+  @include media($mobile) {
+    &.is-search-active {
+      .awning-search-box {
+        width: 90%;
+      }
+      .current-user-links { display: none; }
     }
   }
 }

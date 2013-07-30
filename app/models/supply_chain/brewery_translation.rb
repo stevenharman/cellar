@@ -14,6 +14,7 @@ module SupplyChain
         b.established = WarehouseMap.year(raw_data.established)
         b.organic = WarehouseMap.boolean(raw_data.is_organic)
         b.website = raw_data.website
+        b.brewery_db_status = raw_data.status
 
         images = WarehouseMap.images(raw_data.images)
         b.icon = images.icon

@@ -15,7 +15,10 @@ describe SupplyChain::Agent, :vcr do
   it '#import_brewery loads the brewery', :slow do
     subject.import_brewery('Idm5Y5')
     expect(Brewery.count).to eq(1)
-    expect(Brewery.first.brewery_db_id).to eq('Idm5Y5')
+
+    brewery = Brewery.first
+    expect(brewery.brewery_db_id).to eq('Idm5Y5')
+    expect(brewery.brewery_db_status).to eq('verified')
   end
 
   describe '#import_brew' do
@@ -26,6 +29,7 @@ describe SupplyChain::Agent, :vcr do
       brew = subject.import_brew('aapeRv')
       expect(Brew.count).to eq(1)
       expect(brew.brewery_db_id).to eq('aapeRv')
+      expect(brew.brewery_db_status).to eq('verified')
       expect(brew.breweries).to eq([alpine, new_belgium])
       expect(alpine.brews).to eq([brew])
       expect(new_belgium.brews).to eq([brew])

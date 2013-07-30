@@ -1,14 +1,14 @@
 - content_for :content do
   = render 'shared/profile', profile: current_profile
 
-  article.settings
-    nav.settings-nav
-      ul
-        li.profile class=(activate_setting('profile'))
+  article.settings.split-view
+    nav.split-view-sidebar
+      ul.split-view-nav
+        li.profile class=(active_nav('profile'))
           = link_to(t('settings.profiles.link'), settings_profile_path)
-        li.password class=(activate_setting('password_change'))
+        li.password class=(active_nav('password_change'))
           = link_to(t('settings.password_changes.link'), settings_password_change_path)
-    .settings-content
+    .settings-content.split-view-main
       = yield
 
 = render template: 'layouts/application'

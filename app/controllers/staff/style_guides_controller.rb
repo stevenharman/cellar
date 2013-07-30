@@ -1,5 +1,6 @@
 module Staff
   class StyleGuidesController < ApplicationController
+    layout 'staff'
 
     def show
       flash.now[:success] = "Yay! This is what a :success looks like!"

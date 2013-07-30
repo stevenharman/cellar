@@ -12,21 +12,21 @@
 
 .marketing-section-signup {
   background-color: $section-background-color;
-  
+
   .intro-view {
   @include clearfix;
   }
-  
+
   .intro-view-main {
     @include span-columns(8 of 12);
     padding: 0 2em;
   }
-  
+
   .intro-view-sidebar {
     @include span-columns(4 of 12);
     @include omega();
   }
-  
+
   h1 {
     font-size: 6em;
     line-height: .85em;
@@ -52,9 +52,9 @@
     small {
       color: $brown-highlight;
       display: block;
+      font-family: $small-font-family;
       font-size: em(8, 16);
       line-height: 1em;
-      font-family: $small-font-family;
     }
 
     h2 {
@@ -70,19 +70,17 @@
 }
 
 .marketing-section-stocking {
+  background: $yellow image-url('marketing-section-stocking-back.gif') no-repeat center;
   text-align: center;
-  background: $yellow url('/assets/marketing-section-stocking-back.gif') no-repeat center;
 }
 
 .marketing-section-tracking {
-  text-align: center;
   background-color: #fff;
 }
 
 .marketing-section-finding {
   text-align: center;
-  background: $section-background-color url('/assets/marketing-section-find-back.gif') no-repeat center;
-  
+  background: $section-background-color image-url('marketing-section-find-back.gif') no-repeat center;
   .tracking-items {
     @include span-columns(10);
       @include shift(1);
@@ -90,9 +88,9 @@
 }
 
 .marketing-section-pricing {
-  text-align: center;
   background-color: $orange;
-  
+  text-align: center;
+
   h1 {
     color: #fff;
   }
