@@ -35,6 +35,11 @@
   <div class='container'>
     <%= render 'shared/awning' %>
     <div class='page-container'>
+      <% if mobile_browser? && prefer_desktop? %>
+        <%= link_to(url_for(mobile: 1), class: 'switch-to-mobile') do %>
+          <icon class='icon-mobile-phone'></icon><%= t('cellar.view_mobile') %>
+        <% end %>
+      <% end %>
       <div class='flashes'>
         <% flash.each do |key, value| %>
           <div class='flash <%= key %>'>

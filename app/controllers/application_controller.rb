@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+
+  before_filter :set_mobile_preference
+  before_filter :prepend_view_path_if_mobile
+
   rescue_from ActiveRecord::RecordNotFound, with: :render_404
 
   DEFAULT_PER_PAGE = 30
@@ -44,6 +48,16 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def mobile_browser?
+    user_agent = request.env['HTTP_USER_AGENT']
+    user_agent =~ /iPhone|Android.*Mobile|IEMobile/
+  end
+  helper_method :mobile_browser?
+
+  def mobile_request?
+    prefer_mobile? || (mobile_browser? && !prefer_desktop?)
+  end
+
   def paginate(collection, options = {})
     options = { per_page: DEFAULT_PER_PAGE }.merge(options)
     paged_collection = collection.page(options[:page]).per(options[:per_page])
@@ -51,8 +65,30 @@ class ApplicationController < ActionController::Base
     PaginatingDecorator.decorate(paged_collection)
   end
 
+  def prefer_desktop?
+    cookies[:mobile] == '0'
+  end
+  helper_method :prefer_desktop?
+
+  def prefer_mobile?
+    cookies[:mobile] == '1'
+  end
+
+  def prepend_view_path_if_mobile
+    prepend_view_path Rails.root.join('app/views/mobile') if mobile_request?
+  end
+
   def render_404(exception=nil)
     render template: 'errors/not_found', status: 404
+  end
+
+  def set_mobile_preference
+    mobile_override = params[:mobile]
+
+    if mobile_override
+      cookies.permanent[:mobile] = mobile_override
+      redirect_to params.except(:mobile)
+    end
   end
 
 end

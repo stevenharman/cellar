@@ -213,4 +213,6 @@ en:
     confirmations:
       resend_button: "Resend confirmation instructions"
     stock_one_now: "Stock one now!"
+    view_desktop: "Desktop version"
+    view_mobile: "Switch to mobile version"
 

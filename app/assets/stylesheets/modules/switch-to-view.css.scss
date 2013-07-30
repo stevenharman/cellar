@@ -1,0 +1,24 @@
+@import '../globals/all';
+
+.switch-to-desktop {
+  [class^="icon-"] { margin-right: 0.25em; }
+}
+
+.switch-to-mobile {
+  background-color: $dark-gray;
+  display: block;
+  font-family: $header-font-family;
+  font-size: 2rem;
+  padding: 0.25em 0;
+  text-align: center;
+
+  &:link, &:visited {
+    color: white;
+
+    &:hover, &:focus {
+      color: shade(white, 15%);
+    }
+  }
+
+  [class^="icon-"] { margin-right: 0.25em; }
+}
