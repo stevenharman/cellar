@@ -1,0 +1,8 @@
+footer.footer-mobile
+  = link_to(root_path, title: t('cellar.brewdega'), class: 'footer-brand') do
+    = image_tag('brewdega-icon-brown_2x.png')
+    span= t('cellar.brewdega')
+
+  = link_to(url_for(mobile: 0), class: 'switch-to-desktop') do
+    i.icon-desktop
+    = t('cellar.view_desktop')

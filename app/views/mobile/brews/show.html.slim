@@ -5,7 +5,3 @@ article.brew*{'data-id' => @brew.id}
   hgroup.brew-basics
     h1.name= @brew.name
     .brewery-name= render 'brews/breweries', brew: @brew
-
-= link_to(url_for(mobile: 0), class: 'switch-to-desktop') do
-  i.icon-desktop
-  = t('cellar.view_desktop')

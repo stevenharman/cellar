@@ -42,6 +42,22 @@ footer {
   }
 }
 
+
+.footer-mobile {
+  padding: 0.25em;
+
+  .footer-brand {
+    @include inline-block;
+
+    img {
+      height: 58px;
+      width: 49px;
+    }
+
+    span { display: none; }
+  }
+}
+
 .footer-recent-blog {
   @include omega;
   padding-right: flex-gutter();
