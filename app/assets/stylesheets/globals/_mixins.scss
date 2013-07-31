@@ -1,6 +1,15 @@
 // Ensures the hover state also has the correct color;
-@mixin clickable($color: $orange) {
- &:hover { color: $color; }
+@mixin clickable($color: $blue) {
+  color: $color;
+
+  &:link,
+  &:visited {
+    color: $color;
+
+    &:active,
+    &:focus,
+    &:hover { color: darken($color, 15%); }
+  }
 }
 
 // Text overflow

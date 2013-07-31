@@ -113,7 +113,7 @@ select {
   padding: 0.7em 1.5em;
 
   &.btn-primary {
-    @include button-flat($base-color: $orange);
+    @include button-flat($base-color: $blue);
   }
   &.btn-alt {
     @include button-flat($base-color: $brown);
@@ -122,7 +122,7 @@ select {
     @include button-flat($base-color: $green);
   }
   &.btn-warning {
-    @include button-flat($base-color: $orange);
+    @include button-flat($base-color: $brightorange);
   }
   &.btn-danger {
     @include button-flat($base-color: $red);

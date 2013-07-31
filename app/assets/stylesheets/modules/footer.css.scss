@@ -11,6 +11,10 @@ footer {
   background-color: rgba(white, 0.1);
   margin-bottom: 0;
   padding: 0.25em 0.5em;
+
+  a {
+    @include clickable($brightorange);
+  }
 }
 
 .footer-section-content {
@@ -41,7 +45,6 @@ footer {
     width: 177px;
   }
 }
-
 
 .footer-mobile {
   padding: 0.25em;

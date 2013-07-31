@@ -6,11 +6,6 @@
     color: $brown-highlight;
     font-family: $small-font-family;
     @include text-overflow;
-
-    a {
-      color: $brown;
-      @include clickable;
-    }
   }
 
   .details .style {

@@ -121,11 +121,7 @@
         padding-top: 0;
 
         a {
-          color: $brown;
           padding: 0.5em 0.5em 0;
-          @include clickable;
-
-          &:hover { text-decoration: none; }
         }
       }
     }
