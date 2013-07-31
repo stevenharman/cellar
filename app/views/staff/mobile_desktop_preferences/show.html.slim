@@ -1,0 +1,12 @@
+fieldset.mobile-desktop-preference
+  legend Set mobile/desktop preference
+
+  = link_to(url_for(mobile: 1), class: 'switch-to-mobile') do
+    i.icon-mobile-phone
+    |  Switch to mobile version
+  = link_to(url_for(mobile: 0), class: 'switch-to-desktop') do
+    i.icon-desktop
+    |  Switch to desktop version
+  = simple_form_for :reset_mobile, url: staff_mobile_desktop_preference_path,
+                     method: :delete, html: {class: 'reset-mobile'} do |f|
+    = f.submit 'Reset preferences', class: 'btn-primary'

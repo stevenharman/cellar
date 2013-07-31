@@ -179,6 +179,7 @@ en:
     staff:
       background_jobs: "Background Jobs"
       style_guide: "Style Guide"
+      mobile_desktop_preferences: "Mobile/Desktop View"
 
   shared:
     awning:
