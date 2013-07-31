@@ -57,6 +57,7 @@
 
       .name {
         font-family: $large-font-family;
+        line-height: 1em;
         margin: 0;
         text-transform: none;
 
@@ -70,7 +71,7 @@
     .details {
       font-family: $sans-serif;
       padding: 0;
-      margin: 0;
+      margin: 0.25em 0 0;
 
       li {
         @include inline-block;

@@ -122,7 +122,7 @@ select {
     @include button-flat($base-color: $green);
   }
   &.btn-warning {
-    @include button-flat($base-color: $brightorange);
+    @include button-flat($base-color: $yellow);
   }
   &.btn-danger {
     @include button-flat($base-color: $red);

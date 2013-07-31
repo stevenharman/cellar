@@ -15,14 +15,18 @@
   @include pad;
   border: 1px solid $base-border-color;
 
-  .switch-to-desktop {
+  .preference {
     display: block;
-    float: none;
+    font-family: $header-font-family;
+    font-size: 2rem;
+    margin-bottom: 0.5em;
     text-align: center;
   }
 
+  [class^="icon-"] { margin-right: 0.25em; }
+
   .reset-mobile {
-    margin-top: 1em;
+    margin-top: 2em;
     text-align: center;
   }
 }

@@ -5,6 +5,7 @@
   .breweries {
     color: $brown-highlight;
     font-family: $small-font-family;
+    line-height: 1.25em;
     @include text-overflow;
   }
 
@@ -13,5 +14,7 @@
     display: block;
     margin: 0;
     @include text-overflow;
+
+    [class^="icon-"] { margin-right: 0.25em; }
   }
 }
