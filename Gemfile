@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '1.9.3'
-gem 'rails', '3.2.14'
+gem 'rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'unicorn'
 gem 'brewery_db', '~> 0.2.0'
@@ -11,20 +11,18 @@ gem 'kaminari'
 gem 'newrelic_rpm'
 gem 'pg'
 gem 'pg_search'
-gem 'simple_form'
+gem 'simple_form', '~> 3.0.0.rc'
 gem 'slim', '~> 2.0'
 gem 'sinatra', require: false # for sidekiq monitoring
 gem 'sidekiq'
 gem 'virtus'
 
-group :assets do
-  gem 'sass-rails', '~> 3.1'
-  gem 'bourbon', git: 'https://github.com/thoughtbot/bourbon.git'
-  gem 'neat', '~> 1.3' # Grid framework built upon Bourbon.
-  gem 'font-awesome-rails', '~> 3.2'
-  gem 'coffee-rails', '~> 3.2.2'
-  gem 'uglifier', '>= 1.0.3'
-end
+gem 'sass-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'bourbon', git: 'https://github.com/thoughtbot/bourbon.git'
+gem 'neat', '~> 1.3' # Grid framework built upon Bourbon.
+gem 'font-awesome-rails', '~> 3.2'
 
 gem 'rack-timeout', group: :production
 
@@ -41,7 +39,7 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'mailcatcher'
+  gem 'mailcatcher', git: 'https://github.com/sj26/mailcatcher.git'
 end
 
 group :test do
@@ -53,3 +51,5 @@ group :test do
   gem 'vcr'
   gem 'webmock'
 end
+
+gem 'protected_attributes', '~> 1.0.1'

@@ -2,7 +2,7 @@ require 'active_model/errors'
 require 'url_validator'
 
 describe UrlValidator do
-  let(:validator) { described_class.new({:attributes => {}}) }
+  let(:validator) { described_class.new({:attributes => :url}) }
   let(:record) { double('Model', errors: ActiveModel::Errors.new(nil) ) }
 
   it 'catches invalid URIs' do

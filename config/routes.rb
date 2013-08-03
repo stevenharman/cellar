@@ -1,7 +1,7 @@
 BrewdegaCellar::Application.routes.draw do
 
-  match '/404', :to => 'errors#not_found'
-  match '/500', :to => 'errors#internal_server_error'
+  match '/404', :to => 'errors#not_found', via: :any
+  match '/500', :to => 'errors#internal_server_error', via: :any
 
   devise_for :user, skip: :all
   devise_scope :user do

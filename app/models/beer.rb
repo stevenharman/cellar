@@ -11,10 +11,10 @@ class Beer < ActiveRecord::Base
 
   attr_accessible :vintage, :best_by, :notes
 
-  scope :cellared, where(status: :cellared)
-  scope :drunk, where(status: :drunk)
-  scope :traded, where(status: :traded)
-  scope :skunked, where(status: :skunked)
+  scope :cellared, -> { where(status: :cellared) }
+  scope :drunk, -> { where(status: :drunk) }
+  scope :traded, -> { where(status: :traded) }
+  scope :skunked, -> { where(status: :skunked) }
 
   def cellared_by?(other_user)
     self.user == other_user
