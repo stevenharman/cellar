@@ -49,12 +49,12 @@ Other _optional_ ENV Vars you can set include:
   1.  Update the database schema:
 
       ```bash
-      bundle exec rake db:migrate test:prepare
+      bin/rake db:migrate test:prepare
       ```
   1.  _(Optional)_ Update your brewery/brew data from BreweryDB.com:
 
       ``` bash
-      bundle exec rake brewery_db:import
+      bin/rake brewery_db:import
       ```
 
       Alternatively, you could pull in the latest production data, as
@@ -72,6 +72,18 @@ foreman start
 ```
 
 You can shut everything down by hitting `^C` _(that's `Control` + `C`)_.
+
+### Running the tests
+
+It really is this easy:
+
+```bash
+# make sure your database is up to date:
+bin/rake db:test:prepare
+
+# run the full spec suite:
+bin/rspec
+```
 
 #### Development data
 
