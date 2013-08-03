@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
                   :username, :website
 
   has_many :beers, inverse_of: :user
-  has_many :brews, through: :beers, uniq: true
-  has_many :breweries, through: :brews, uniq: true
+  has_many :brews, -> { uniq }, through: :beers
+  has_many :breweries, -> { uniq }, through: :brews
 
   validates :email, uniqueness: true, presence: true, email: true
   validates :username, uniqueness: true, presence: true

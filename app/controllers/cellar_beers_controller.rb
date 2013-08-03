@@ -14,7 +14,7 @@ class CellarBeersController < ApplicationController
   def update
     @beer= find_beer(params[:id])
 
-    if @beer.update_attributes(beer_params)
+    if @beer.update(beer_params)
       flash[:success] = t('flash.cellar_beers.update.success', name: @beer.brew.name)
     else
       flash[:error] = t('flash.cellar_beers.update.error', name: @beer.brew.name)

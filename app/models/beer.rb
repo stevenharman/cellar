@@ -38,11 +38,11 @@ class Beer < ActiveRecord::Base
   end
 
   def self.by_brew(brew)
-    where('beers.brew_id = ?', brew)
+    where(brew_id: brew)
   end
 
   def self.cellared_by(keeper)
-    where('beers.user_id = ?', keeper)
+    where(user_id: keeper)
   end
 
 end

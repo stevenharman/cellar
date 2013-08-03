@@ -59,23 +59,19 @@ describe Beer do
       end
 
       it '.cellared only returns cellared beers' do
-        beers = Beer.cellared.all
-        beers.should have(1).beer
+        expect(Beer.cellared.to_a.size).to eq(1)
       end
 
       it '.drunk only returns drunk beers' do
-        beers = Beer.drunk.all
-        beers.should have(1).beer
+        expect(Beer.drunk.to_a.size).to eq(1)
       end
 
       it '.traded only returns traded beers' do
-        beers = Beer.traded.all
-        beers.should have(1).beer
+        expect(Beer.traded.to_a.size).to eq(1)
       end
 
       it '.skunked only returns skunked beers' do
-        beers = Beer.skunked.all
-        beers.should have(1).beer
+        expect(Beer.skunked.to_a.size).to eq(1)
       end
     end
 

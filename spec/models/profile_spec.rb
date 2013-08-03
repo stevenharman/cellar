@@ -22,7 +22,7 @@ describe Profile do
     let(:profile_params) { {website: 'http://me.co', bio: 'new bio'} }
 
     it 'updates the user' do
-      keeper.should_receive(:update_attributes).with(profile_params)
+      keeper.should_receive(:update).with(profile_params)
       profile.update(profile_params)
     end
   end

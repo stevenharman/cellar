@@ -6,7 +6,6 @@ class AnonymousUser
   end
 
   def cellared_beers(brew = nil)
-    # Rails 4: use Beer.none
-    Beer.where(id: nil).where("id IS NOT ?", nil)
+    Beer.none
   end
 end

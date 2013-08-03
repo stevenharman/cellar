@@ -8,7 +8,7 @@ class CellarList
 
   attr_reader :keepers
 
-  LIST_DEFAULTS = { keepers: User.scoped, page: 1, per_page: 25 }
+  LIST_DEFAULTS = { keepers: User.all, page: 1, per_page: 25 }
   PAGINATION_API = [:page, :per, :current_page, :limit_value, :total_pages]
   def_delegators :keepers, *PAGINATION_API
 

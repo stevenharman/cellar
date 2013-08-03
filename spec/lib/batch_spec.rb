@@ -14,7 +14,7 @@ describe Batch do
     turn_off_rspec_transactions
 
     batch.run do |b|
-      expect(ActiveRecord::Base.connection).not_to be_outside_transaction
+      expect(ActiveRecord::Base.connection.transaction_open?).to be_true
     end
   end
 
@@ -23,8 +23,8 @@ describe Batch do
   end
 
   def turn_off_rspec_transactions
-    expect(ActiveRecord::Base.connection).not_to be_outside_transaction
+    expect(ActiveRecord::Base.connection.transaction_open?).to be_true
     DatabaseCleaner.clean
-    expect(ActiveRecord::Base.connection).to be_outside_transaction
+    expect(ActiveRecord::Base.connection.transaction_open?).to be_false
   end
 end

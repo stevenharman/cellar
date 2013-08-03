@@ -22,7 +22,7 @@ class Profile
   # TODO: Ensure the user's #website is legit; URI.parse & check protocol & host.
 
   def update(profile_args)
-    user.update_attributes(profile_args)
+    user.update(profile_args)
   end
 
   def bio?
