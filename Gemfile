@@ -24,7 +24,10 @@ gem 'bourbon', git: 'https://github.com/thoughtbot/bourbon.git'
 gem 'neat', '~> 1.3' # Grid framework built upon Bourbon.
 gem 'font-awesome-rails', '~> 3.2'
 
-gem 'rack-timeout', group: :production
+group :production do
+  gem 'rails_12factor'
+  gem 'rack-timeout'
+end
 
 group :development, :test do
   gem 'factory_girl_rails'
