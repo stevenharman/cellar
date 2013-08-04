@@ -22,7 +22,7 @@ module Settings
     private
 
     def change_params
-      params[:settings_password_change].slice(:new, :current)
+      params.require(:settings_password_change).permit(:new, :current)
     end
   end
 end

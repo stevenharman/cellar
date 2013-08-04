@@ -11,7 +11,7 @@ describe DistributionOrdersController do
       let(:beer) { FactoryGirl.create(:beer, user: bob) }
 
       it 'allows keeper to order a distribution from his cellar' do
-        put :update, { cellar_id: bob.id, beer_id: beer.id, status: 'drunk' }
+        put :update, { cellar_id: bob.id, order: { beer_id: beer.id, status: 'drunk' } }
 
         expect(bob.cellared_beers).to be_empty
         expect(bob.beers.drunk).to have(1).beer
@@ -23,7 +23,7 @@ describe DistributionOrdersController do
       let(:beer) { FactoryGirl.create(:beer, user: alice) }
 
       it 'does not allow the user to order a distribution from anothers cellar' do
-        put :update, { cellar_id: alice.id, beer_id: beer.id, status: 'drunk' }
+        put :update, { cellar_id: alice.id, order: { beer_id: beer.id, status: 'drunk' } }
 
         expect(response).to be_not_found
       end

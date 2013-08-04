@@ -19,7 +19,7 @@ module Settings
     private
 
     def profile_params
-      params[:profile].slice(:bio, :location, :name, :website)
+      params.require(:profile).permit(:bio, :location, :name, :website)
     end
   end
 end

@@ -30,7 +30,7 @@ class CellarBeersController < ApplicationController
   end
 
   def beer_params
-    params[:beer].slice(:best_by, :vintage, :notes)
+    params.require(:beer).permit(:best_by, :vintage, :notes)
   end
 
   def find_beer(beer_id)

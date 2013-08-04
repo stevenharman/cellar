@@ -36,6 +36,8 @@ BrewdegaCellar::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  config.action_controller.action_on_unpermitted_parameters = :raise
+
   # Silence annoying asset logs
   require 'peaceful_assets_logger'
   config.middleware.insert_before Rails::Rack::Logger, PeacefulAssetsLogger

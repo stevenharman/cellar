@@ -20,7 +20,7 @@ class DistributionOrdersController < ApplicationController
   private
 
   def distribution_params
-    params.slice(:beer_id, :status)
+    params.require(:order).permit(:beer_id, :status)
   end
 
   def success_message(order)

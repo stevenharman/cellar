@@ -9,8 +9,6 @@ class Beer < ActiveRecord::Base
   validates :status, inclusion: ALLOWED_STATUSES
   validates :vintage, numericality: { allow_nil: true, only_integer: true }
 
-  attr_accessible :vintage, :best_by, :notes
-
   scope :cellared, -> { where(status: :cellared) }
   scope :drunk, -> { where(status: :drunk) }
   scope :traded, -> { where(status: :traded) }

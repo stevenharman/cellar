@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   before_filter :allow_params_authentication!, only: :create
 
   def new
-    @user = User.new(params[:user])
+    @user = User.new(sign_in_params)
   end
 
   def create
@@ -15,6 +15,12 @@ class SessionsController < ApplicationController
   def destroy
     sign_out
     redirect_to root_path, flash: { success: t('flash.sessions.destroy.success') }
+  end
+
+  private
+
+  def sign_in_params
+    params.permit(:username, :password, :remember_me)
   end
 
 end

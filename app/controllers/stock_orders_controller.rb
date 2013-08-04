@@ -25,7 +25,7 @@ class StockOrdersController < ApplicationController
   private
 
   def stock_order_params
-    params[:stock_order]
+    params.require(:stock_order).permit(:brew_id, :best_by, :count, :notes, :vintage)
   end
 
   def create_message(key, order)

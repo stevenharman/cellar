@@ -26,12 +26,12 @@
             = ldate(beer.best_by, format: :long)
 
         = simple_form_for beer, url: cellar_distribution_order_path(beer.user), html: {class: 'beer-statuses'} do
-          = hidden_field_tag :beer_id, beer.id, id: nil
+          = hidden_field_tag :beer_id, beer.id, name: 'order[beer_id]', id: nil
           .btn-group
-            = button_tag 'Drink', name: 'status', value: :drunk
-            = button_tag 'Trade', name: 'status', value: :traded
-            /= button_tag 'Share', name: 'status', value: :shared
-            = button_tag 'Skunk', name: 'status', value: :skunked
+            = button_tag 'Drink', name: 'order[status]', value: :drunk
+            = button_tag 'Trade', name: 'order[status]', value: :traded
+            /= button_tag 'Share', name: 'order[status]', value: :shared
+            = button_tag 'Skunk', name: 'order[status]', value: :skunked
 
         ul.beer-actions
           li.beer-action.beer-action-mark-for-trade

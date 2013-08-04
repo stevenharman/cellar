@@ -54,5 +54,3 @@ group :test do
   gem 'vcr'
   gem 'webmock'
 end
-
-gem 'protected_attributes', '~> 1.0.1'

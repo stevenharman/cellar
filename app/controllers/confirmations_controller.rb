@@ -34,7 +34,7 @@ class ConfirmationsController < ApplicationController
   private
 
   def user_params
-    params[:user]
+    params.require(:user)
   end
 end
 
