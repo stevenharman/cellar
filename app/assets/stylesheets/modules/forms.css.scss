@@ -10,7 +10,7 @@ $form-error-background-color: $error-color;
 $form-error-color: darken($form-error-background-color, 60%);
 $form-font-size: $base-font-size;
 $form-font-family: $sans-serif;
-$form-width: em(300);
+$form-width: 100%;
 
 fieldset {
   border: none;
@@ -49,16 +49,16 @@ label {
 
 textarea,
 #{$all-text-inputs} {
+  @include box-sizing(border-box);
+  @include transition(border-color);
   background-color: white;
   border: 1px solid $form-border-color;
   border-radius: $form-border-radius;
   box-shadow: $form-box-shadow;
-  @include box-sizing(border-box);
   font-family: $form-font-family;
   font-size: $form-font-size;
   margin-bottom: $base-line-height * .5;
   padding: ($base-line-height * .5) ($base-line-height * .5);
-  @include transition(border-color);
   width: $form-width;
 
   &:hover {
@@ -138,6 +138,49 @@ select {
 
     &:first-child { margin-left: 0; }
     &:last-child { margin-right: 0; }
+  }
+}
+
+.input-group {
+  border-collapse: separate;
+  display: table;
+  position: relative;
+  margin-bottom: $base-line-height * 0.25;
+
+  #{$all-text-inputs} {
+    display: table-cell;
+    margin-bottom: 0;
+
+    &:first-child {
+      @include border-right-radius(0);
+    }
+    &:last-child {
+      @include border-left-radius(0);
+    }
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+  }
+}
+
+.input-group-addon {
+  background-color: lighten($form-border-color, 25%);
+  border: 1px solid $form-border-color;
+  border-radius: $form-border-radius;
+  display: table-cell;
+  line-height: normal;
+  padding: 0 0.75em;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 1%;
+
+  &:first-child {
+    @include border-right-radius(0);
+    border-right: 0;
+  }
+  &:last-child {
+    @include border-left-radius(0);
+    border-left: 0;
   }
 }
 
