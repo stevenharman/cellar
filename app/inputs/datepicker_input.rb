@@ -4,9 +4,9 @@ class DatepickerInput < SimpleForm::Inputs::Base
     date_inputs = @builder.text_field(attribute_name, {type: 'date'}.merge(input_html_options))
 
     icon = template.content_tag(:i, '', class: 'icon-calendar')
-    date_inputs <<  template.content_tag(:span, icon, class: 'add-on')
+    date_inputs << template.content_tag(:span, icon, class: 'input-group-addon')
 
-    template.content_tag(:div, date_inputs, class: 'input-append date')
+    template.content_tag(:div, date_inputs, class: 'input-group date')
   end
 end
 

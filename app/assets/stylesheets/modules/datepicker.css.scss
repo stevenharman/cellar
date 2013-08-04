@@ -164,3 +164,7 @@ $datepickerGrey: #f7f7f7;
   background: #f4f4f4;
   color: #b4b3b3;
 }
+
+.input-group.date .input-group-addon {
+  @include clickable;
+}

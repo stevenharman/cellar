@@ -10,6 +10,10 @@
     &:focus,
     &:hover { color: darken($color, 15%); }
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 // Text overflow

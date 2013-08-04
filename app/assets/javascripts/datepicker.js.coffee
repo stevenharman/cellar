@@ -22,5 +22,5 @@ $ ->
         changeMonth: true
         changeYear: true
       )
-      $datepicker.siblings('.add-on').click ->
+      $datepicker.siblings('.input-group-addon').click ->
         $datepicker.datepicker('show')
