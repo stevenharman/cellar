@@ -7,8 +7,10 @@ require_relative 'category_translation'
 require_relative 'style_translation'
 require_relative 'job/fetch_brew_catalog'
 require_relative '../brew'
+require_relative '../brew_availability'
 require_relative '../brewery'
 require_relative '../category'
+require_relative '../size'
 require_relative '../style'
 
 module SupplyChain
@@ -34,6 +36,7 @@ module SupplyChain
     def import_reference_data
       import_categories
       import_styles
+      import_sizes
       import_brew_availabilities
     end
 
@@ -88,6 +91,13 @@ module SupplyChain
       @warehouse.brew_availabilities.map do |a|
         availability = Translator.new(BrewAvailabilityTranslation, ::BrewAvailability).translate(a)
         @log.record(availability)
+      end
+    end
+
+    def import_sizes
+      @warehouse.sizes.map do |s|
+        size = Translator.new(SizeTranslation, ::Size).translate(s)
+        @log.record(size)
       end
     end
   end

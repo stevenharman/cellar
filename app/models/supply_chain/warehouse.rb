@@ -26,6 +26,10 @@ module SupplyChain
       Array(@client.styles.all)
     end
 
+    def sizes
+      Array(@client.fluid_size.all)
+    end
+
     def brews_for_brewery(brewery_id)
       Array(@client.brewery(brewery_id).beers)
     end

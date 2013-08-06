@@ -21,11 +21,18 @@ describe SupplyChain::Warehouse do
       expect(styles.count).to eq(157)
     end
 
+    it 'fetches sizes from BreweryDB' do
+      sizes = warehouse.sizes
+      expect(sizes.first.id).to be_kind_of Fixnum
+      expect(sizes.each).to be_kind_of Enumerator
+      expect(sizes.count).to eq(17)
+    end
+
     it 'fetches brew availability from BreweryDB' do
-      styles = warehouse.brew_availabilities
-      expect(styles.first.id).to be_kind_of Fixnum
-      expect(styles.each).to be_kind_of Enumerator
-      expect(styles.count).to eq(8)
+      avails = warehouse.brew_availabilities
+      expect(avails.first.id).to be_kind_of Fixnum
+      expect(avails.each).to be_kind_of Enumerator
+      expect(avails.count).to eq(8)
     end
 
     it 'fetches breweries from BreweryDB', :slow do
@@ -65,6 +72,11 @@ describe SupplyChain::Warehouse do
     it 'fetchs an empty list of styles rather than nil' do
       client.stub_chain(:styles, :all) { nil }
       expect(warehouse.styles).to be_empty
+    end
+
+    it 'fetchs an empty list of sizes rather than nil' do
+      client.stub_chain(:fluid_size, :all) { nil }
+      expect(warehouse.sizes).to be_empty
     end
 
     it 'fetchs an empty list of beer availabilities rather than nil' do
