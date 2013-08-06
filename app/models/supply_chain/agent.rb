@@ -24,16 +24,17 @@ module SupplyChain
     end
 
     def import_full_inventory
-      import_styles_with_categories
+      import_reference_data
       import_breweries do |brewery|
         order = BrewCatalogOrder.new(brewery.brewery_db_id)
         Job::FetchBrewCatalog.fulfill(order)
       end
     end
 
-    def import_styles_with_categories
+    def import_reference_data
       import_categories
       import_styles
+      import_brew_availabilities
     end
 
     def import_breweries
@@ -80,6 +81,13 @@ module SupplyChain
       @warehouse.styles.map do |s|
         style = Translator.new(StyleTranslation, ::Style).translate(s)
         @log.record(style)
+      end
+    end
+
+    def import_brew_availabilities
+      @warehouse.brew_availabilities.map do |a|
+        availability = Translator.new(BrewAvailabilityTranslation, ::BrewAvailability).translate(a)
+        @log.record(availability)
       end
     end
   end

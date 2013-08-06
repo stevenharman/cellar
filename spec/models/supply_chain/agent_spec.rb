@@ -6,10 +6,11 @@ describe SupplyChain::Agent, :vcr do
   let(:log) { SupplyChain::Log::Noop.new }
   let(:raw_data) { double }
 
-  it '#import_styles_with_categories loads the all styles and their categories', :slow do
-    subject.import_styles_with_categories
+  it '#import_reference_data loads the all styles and their categories', :slow do
+    subject.import_reference_data
     expect(Style.count).to eq(157)
     expect(Category.count).to eq(12)
+    expect(BrewAvailability.count).to eq(8)
   end
 
   it '#import_brewery loads the brewery', :slow do

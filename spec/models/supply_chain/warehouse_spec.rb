@@ -2,7 +2,7 @@ require 'vcr_spec_helper'
 require 'models/supply_chain/warehouse'
 
 describe SupplyChain::Warehouse do
-  subject { described_class.new }
+  subject(:warehouse) { described_class.new }
 
   describe 'fetching from the API', :vcr do
 
@@ -21,11 +21,18 @@ describe SupplyChain::Warehouse do
       expect(styles.count).to eq(157)
     end
 
+    it 'fetches brew availability from BreweryDB' do
+      styles = warehouse.brew_availabilities
+      expect(styles.first.id).to be_kind_of Fixnum
+      expect(styles.each).to be_kind_of Enumerator
+      expect(styles.count).to eq(8)
+    end
+
     it 'fetches breweries from BreweryDB', :slow do
       breweries = subject.breweries
       expect(breweries.first.id).to be_kind_of String
       expect(breweries.each).to be_kind_of Enumerator
-      expect(breweries.count).to eq(4444)
+      expect(breweries.count).to eq(4567)
     end
 
     it 'fetches a single brewery' do
@@ -58,6 +65,11 @@ describe SupplyChain::Warehouse do
     it 'fetchs an empty list of styles rather than nil' do
       client.stub_chain(:styles, :all) { nil }
       expect(subject.styles).to be_empty
+    end
+
+    it 'fetchs an empty list of beer availabilities rather than nil' do
+      client.stub_chain(:menu, :beer_availability) { nil }
+      expect(warehouse.brew_availabilities).to be_empty
     end
 
     it 'fetchs an empty list of breweries rather than nil' do
