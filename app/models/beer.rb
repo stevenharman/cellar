@@ -1,5 +1,6 @@
 class Beer < ActiveRecord::Base
   belongs_to :brew, inverse_of: :beers
+  belongs_to :size, inverse_of: :beers
   belongs_to :user, inverse_of: :beers
 
   ALLOWED_STATUSES = %w(cellared drunk traded skunked).freeze

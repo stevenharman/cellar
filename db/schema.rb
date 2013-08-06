@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130806184944) do
+ActiveRecord::Schema.define(version: 20130806200302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,9 +25,11 @@ ActiveRecord::Schema.define(version: 20130806184944) do
     t.string   "status",     default: "cellared"
     t.text     "notes"
     t.integer  "vintage"
+    t.integer  "size_id"
   end
 
   add_index "beers", ["brew_id"], name: "index_beers_on_brew_id", using: :btree
+  add_index "beers", ["size_id"], name: "index_beers_on_size_id", using: :btree
   add_index "beers", ["status"], name: "index_beers_on_status", using: :btree
   add_index "beers", ["user_id"], name: "index_beers_on_user_id", using: :btree
 
@@ -107,6 +109,15 @@ ActiveRecord::Schema.define(version: 20130806184944) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "sizes", force: true do |t|
+    t.integer "brewery_db_id"
+    t.string  "measure",       null: false
+    t.string  "quantity",      null: false
+    t.string  "name"
+  end
+
+  add_index "sizes", ["brewery_db_id"], name: "index_sizes_on_brewery_db_id", using: :btree
 
   create_table "styles", force: true do |t|
     t.string   "name",          null: false
