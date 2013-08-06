@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - BreweryDB Ruby Gem 0.2.0
+      - BreweryDB Ruby Gem 0.2.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 22 Jul 2013 01:00:20 GMT
+      - Tue, 06 Aug 2013 19:39:11 GMT
       Server:
       - Apache/2.2.24 (Amazon)
       X-Powered-By:
@@ -57,5 +57,5 @@ http_interactions:
         friends, the consumer.","website":"http:\/\/www.foundersbrewing.com\/","established":"1997","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_5gYn8V-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_5gYn8V-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_5gYn8V-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:55","updateDate":"2012-09-11 19:30:21"},"status":"success"}'
     http_version: 
-  recorded_at: Mon, 22 Jul 2013 01:00:20 GMT
+  recorded_at: Tue, 06 Aug 2013 19:39:12 GMT
 recorded_with: VCR 2.5.0

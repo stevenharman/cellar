@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - BreweryDB Ruby Gem 0.2.0
+      - BreweryDB Ruby Gem 0.2.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 22 Jul 2013 00:59:31 GMT
+      - Tue, 06 Aug 2013 19:39:08 GMT
       Server:
       - Apache/2.2.24 (Amazon)
       X-Powered-By:
@@ -57,63 +57,5 @@ http_interactions:
         friends, the consumer.","website":"http:\/\/www.foundersbrewing.com\/","established":"1997","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_5gYn8V-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_5gYn8V-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_5gYn8V-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
         02:41:55","updateDate":"2012-09-11 19:30:21"},"status":"success"}'
     http_version: 
-  recorded_at: Mon, 22 Jul 2013 00:59:31 GMT
-- request:
-    method: get
-    uri: http://api.brewerydb.com/v2/brewery/Idm5Y5?key=API_KEY
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - BreweryDB Ruby Gem 0.2.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Mon, 22 Jul 2013 00:59:35 GMT
-      Server:
-      - Apache/2.2.24 (Amazon)
-      X-Powered-By:
-      - PHP/5.3.26
-      X-Ratelimit-Limit:
-      - Unlimited
-      X-Ratelimit-Remaining:
-      - Unlimited
-      Vary:
-      - Accept-Encoding
-      Content-Length:
-      - '731'
-      Content-Type:
-      - application/json
-    body:
-      encoding: UTF-8
-      string: '{"message":"READ ONLY MODE: Request Successful","data":{"id":"Idm5Y5","name":"Founders
-        Brewing Company","description":"Founders Brewing Company, founded by Mike
-        Stevens and Dave Engbers produced its first beer in November of 1997. Built
-        out of a dream and a passion for home brewing, what started out as a hobby
-        quickly became a thriving business.  As the years have passed, Founders has
-        built its brewery on the exploration of recipe development and brewing techniques.
-        We are not the standard micro-brewery, rather we have traveled a path that
-        breaks from the standard craft-brewer.\r\n\r\nCarving a niche out of the craft
-        industry, Founders Brewing Company has built its reputation on producing very
-        unique beers. Our focus is to offer our wholesalers, retailers and consumers
-        a product that stands alone on the shelf and offers a true drinking experience
-        to our friends, the consumer.  As the years have passed, Founders has built
-        its brewery on the exploration of recipe development and brewing techniques.
-        We are not the standard micro-brewery, rather we have traveled a path that
-        breaks from the standard craft-brewer. Carving a niche out of the craft industry,
-        Founders Brewing Company has built its reputation on producing very unique
-        beers. Our focus is to offer our wholesalers, retailers and consumers a product
-        that stands alone on the shelf and offers a true drinking experience to our
-        friends, the consumer.","website":"http:\/\/www.foundersbrewing.com\/","established":"1997","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_5gYn8V-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_5gYn8V-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_5gYn8V-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:41:55","updateDate":"2012-09-11 19:30:21"},"status":"success"}'
-    http_version: 
-  recorded_at: Mon, 22 Jul 2013 00:59:35 GMT
+  recorded_at: Tue, 06 Aug 2013 19:39:08 GMT
 recorded_with: VCR 2.5.0

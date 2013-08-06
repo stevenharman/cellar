@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - BreweryDB Ruby Gem 0.2.0
+      - BreweryDB Ruby Gem 0.2.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 22 Jul 2013 01:00:54 GMT
+      - Tue, 06 Aug 2013 19:39:44 GMT
       Server:
       - Apache/2.2.24 (Amazon)
       X-Powered-By:
@@ -75,5 +75,5 @@ http_interactions:
         STATES","displayName":"United States","isoThree":"USA","numberCode":840,"createDate":"2012-01-03
         02:41:33"}}]}]},"status":"success"}'
     http_version: 
-  recorded_at: Mon, 22 Jul 2013 01:00:54 GMT
+  recorded_at: Tue, 06 Aug 2013 19:39:44 GMT
 recorded_with: VCR 2.5.0

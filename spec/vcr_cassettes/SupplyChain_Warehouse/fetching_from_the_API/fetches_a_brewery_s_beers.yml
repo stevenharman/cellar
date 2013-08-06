@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - BreweryDB Ruby Gem 0.2.0
+      - BreweryDB Ruby Gem 0.2.2
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 22 Jul 2013 01:00:49 GMT
+      - Tue, 06 Aug 2013 19:39:12 GMT
       Server:
       - Apache/2.2.24 (Amazon)
       X-Powered-By:
@@ -31,7 +31,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '9943'
+      - '9945'
       Content-Type:
       - application/json
     body:
@@ -443,8 +443,8 @@ http_interactions:
         down a path all our own. Using only fresh raspberries, r\u00fcb\u00e6us translates
         into intense flavors combined with a no hesitation malt bill. In fermentation
         we add fresh raspberries at five separate stages to achieve the ultimate balance
-        between tartness and sweetness.","abv":"7","availableId":2,"styleId":119,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/m7IsWs\/upload_Envmj4-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/m7IsWs\/upload_Envmj4-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/m7IsWs\/upload_Envmj4-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:44:07","updateDate":"2012-03-22 13:05:01","available":{"id":2,"name":"Limited","description":"Limited
+        between tartness and sweetness.","abv":"5.7","availableId":2,"styleId":119,"isOrganic":"N","labels":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/m7IsWs\/upload_sJ1n7E-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/m7IsWs\/upload_sJ1n7E-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/beer\/m7IsWs\/upload_sJ1n7E-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
+        02:44:07","updateDate":"2013-07-23 09:04:41","available":{"id":2,"name":"Limited","description":"Limited
         availability."},"style":{"id":119,"categoryId":11,"category":{"id":11,"name":"Hybrid\/mixed
         Beer","createDate":"2012-03-21 20:06:46"},"name":"Fruit Beer","description":"Fruit
         beers are any beers using fruit or fruit extracts as an adjunct in either,
@@ -529,5 +529,5 @@ http_interactions:
         Chill haze is allowable at cold temperatures.","ibuMin":"60","ibuMax":"100","abvMin":"8.4","abvMax":"12","srmMin":"11","srmMax":"22","ogMin":"1.09","fgMin":"1.024","fgMax":"1.028","createDate":"2012-03-21
         20:06:46"}}],"status":"success"}'
     http_version: 
-  recorded_at: Mon, 22 Jul 2013 01:00:49 GMT
+  recorded_at: Tue, 06 Aug 2013 19:39:12 GMT
 recorded_with: VCR 2.5.0
