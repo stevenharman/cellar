@@ -26,6 +26,8 @@ module SupplyChain
     end
 
     def import_full_inventory
+      reset_warehouse_status
+
       import_reference_data
       import_breweries do |brewery|
         order = BrewCatalogOrder.new(brewery.brewery_db_id)
@@ -99,6 +101,11 @@ module SupplyChain
         size = Translator.new(SizeTranslation, ::Size).translate(s)
         @log.record(size)
       end
+    end
+
+    def reset_warehouse_status
+      ::Brewery.update_all(brewery_db_status: 'unknown')
+      ::Brew.update_all(brewery_db_status: 'unknown')
     end
   end
 end
