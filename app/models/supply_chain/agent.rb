@@ -53,22 +53,12 @@ module SupplyChain
 
     def import_brewery(id)
       raw_data = @warehouse.brewery(id)
-      unless(raw_data)
-        error_message = "--- BreweryDB ERROR: Requested Brewery #{id}.\nResponse: #{raw_data}"
-        @log.error(error_message)
-        fail error_message
-      end
       brewery = Translator.new(BreweryTranslation, ::Brewery).translate(raw_data)
       @log.record(brewery)
     end
 
     def import_brew(id)
       raw_data = @warehouse.brew(id)
-      unless(raw_data)
-        error_message = "--- BreweryDB ERROR: Requested Brew #{id}.\nResponse: #{raw_data}"
-        @log.error(error_message)
-        fail error_message
-      end
       brew = Translator.new(BrewTranslation, ::Brew).translate(raw_data)
       @log.record(brew)
     end

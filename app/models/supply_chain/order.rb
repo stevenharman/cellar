@@ -4,7 +4,7 @@ require 'service_keys'
 
 module SupplyChain
   class Order < SimpleDelegator
-    ACTIONS = [:insert, :edit, :delete]
+    ACTIONS = [:insert, :edit, :delete].freeze
 
     def initialize(params)
       webhook = brewery_db_webhook(params)
