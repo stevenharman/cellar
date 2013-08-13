@@ -3,6 +3,14 @@ require 'models/supply_chain/warehouse_map'
 describe SupplyChain::WarehouseMap do
   subject(:map) { described_class.new }
 
+  it 'finds an Availability by brewery_db_id' do
+    stub_const('Availability', double)
+    an_availability = double('a Availability')
+    Availability.stub(:find_by_brewery_db_id).with('bdb_id') { an_availability }
+
+    expect(map.find_availability('bdb_id')).to eq(an_availability)
+  end
+
   it 'finds a Category by brewery_db_id' do
     stub_const('Category', double)
     a_category = double('a Category')

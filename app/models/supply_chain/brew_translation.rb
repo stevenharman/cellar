@@ -14,6 +14,7 @@ module SupplyChain
     def translate(raw_data)
       brew.name = raw_data.name
       brew.description = raw_data.description
+      #TODO This is setting the BreweryDB id
       brew.base_brew_id = raw_data.beer_variation_id
       brew.organic = boolean(raw_data.is_organic)
       brew.year = year(raw_data.year)
@@ -21,6 +22,7 @@ module SupplyChain
       brew.ibu = decimal(raw_data.ibu)
       brew.original_gravity = decimal(raw_data.original_gravity)
       brew.style = find_style(raw_data.style_id)
+      brew.availability = find_availability(raw_data.available_id)
       brew.brewery_db_status = raw_data.status
 
       labels = images(raw_data.labels)
@@ -39,6 +41,10 @@ module SupplyChain
       ids = Array(breweries).map(&:id)
       all_breweries = find_breweries(ids)
       all_breweries - brew.breweries
+    end
+
+    def find_availability(id)
+      warehouse_map.find_availability(id)
     end
 
     def find_breweries(ids)

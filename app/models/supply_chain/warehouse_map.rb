@@ -1,6 +1,10 @@
 module SupplyChain
   class WarehouseMap
 
+    def find_availability(brewery_db_id)
+      ::Availability.find_by_brewery_db_id(brewery_db_id)
+    end
+
     def find_category(brewery_db_id)
       ::Category.find_by_brewery_db_id(brewery_db_id)
     end
