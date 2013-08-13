@@ -1,7 +1,7 @@
 @import '../globals/all';
 
 .flashes {
-  .error, .notice, .success, #flash_failure, #flash_success, #flash_notice {
+  .error, .notice, .success {
     border-radius: 3px;
     border-style: solid;
     border-width: 1px;
@@ -11,33 +11,26 @@
     padding: 0.5rem;
   }
 
-  .error, #flash_failure {
+  .error {
     background: $error-color;
     border-color: darken($error-color, 20%);
     color: darken($error-color, 60%);
   }
 
-  .error a, #flash_failure a {
-    color: darken($error-color, 60%);
+  // To account for Devise and the ilk...
+  .alert {
+    @extend .error;
   }
 
-  .notice, #flash_notice {
+  .notice {
     background: $notice-color;
     border-color: darken($notice-color, 20%);
     color: darken($notice-color, 60%);
   }
 
-  .notice a, #flash_notice a {
-    color: darken($notice-color, 60%);
-  }
-
-  .success, #flash_success {
+  .success {
     background: $success-color;
     border-color: darken($success-color, 20%);
-    color: darken($success-color, 50%);
-  }
-
-  .success a, #flash_success a {
     color: darken($success-color, 50%);
   }
 
