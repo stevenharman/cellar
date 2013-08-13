@@ -1,4 +1,4 @@
-class BrewAvailability < ActiveRecord::Base
+class Availability < ActiveRecord::Base
   has_many :brews, inverse_of: :availability
 
   validates :name, uniqueness: true, presence: true

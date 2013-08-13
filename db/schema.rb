@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130806225156) do
+ActiveRecord::Schema.define(version: 20130813023435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "availabilities", force: true do |t|
+    t.integer "brewery_db_id", null: false
+    t.string  "name",          null: false
+    t.string  "description"
+  end
+
+  add_index "availabilities", ["brewery_db_id"], name: "index_availabilities_on_brewery_db_id", unique: true, using: :btree
+  add_index "availabilities", ["name"], name: "index_availabilities_on_name", unique: true, using: :btree
 
   create_table "beers", force: true do |t|
     t.date     "best_by"
@@ -32,15 +41,6 @@ ActiveRecord::Schema.define(version: 20130806225156) do
   add_index "beers", ["size_id"], name: "index_beers_on_size_id", using: :btree
   add_index "beers", ["status"], name: "index_beers_on_status", using: :btree
   add_index "beers", ["user_id"], name: "index_beers_on_user_id", using: :btree
-
-  create_table "brew_availabilities", force: true do |t|
-    t.integer "brewery_db_id", null: false
-    t.string  "name",          null: false
-    t.string  "description"
-  end
-
-  add_index "brew_availabilities", ["brewery_db_id"], name: "index_brew_availabilities_on_brewery_db_id", unique: true, using: :btree
-  add_index "brew_availabilities", ["name"], name: "index_brew_availabilities_on_name", unique: true, using: :btree
 
   create_table "breweries", force: true do |t|
     t.string   "name"
@@ -84,10 +84,10 @@ ActiveRecord::Schema.define(version: 20130806225156) do
     t.decimal  "original_gravity"
     t.integer  "cellared_beers_count",                         default: 0,         null: false
     t.string   "brewery_db_status",                            default: "unknown", null: false
-    t.integer  "brew_availability_id"
+    t.integer  "availability_id"
   end
 
-  add_index "brews", ["brew_availability_id"], name: "index_brews_on_brew_availability_id", using: :btree
+  add_index "brews", ["availability_id"], name: "index_brews_on_availability_id", using: :btree
   add_index "brews", ["brewery_db_id"], name: "index_brews_on_brewery_db_id", unique: true, using: :btree
   add_index "brews", ["brewery_db_status"], name: "index_brews_on_brewery_db_status", using: :btree
   add_index "brews", ["style_id"], name: "index_brews_on_style_id", using: :btree

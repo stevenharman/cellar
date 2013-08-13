@@ -29,7 +29,7 @@ describe SupplyChain::Warehouse do
     end
 
     it 'fetches brew availability from BreweryDB' do
-      avails = warehouse.brew_availabilities
+      avails = warehouse.availabilities
       expect(avails.first.id).to be_kind_of Fixnum
       expect(avails.each).to be_kind_of Enumerator
       expect(avails.count).to eq(8)
@@ -81,7 +81,7 @@ describe SupplyChain::Warehouse do
 
     it 'fetchs an empty list of beer availabilities rather than nil' do
       client.stub_chain(:menu, :beer_availability) { nil }
-      expect(warehouse.brew_availabilities).to be_empty
+      expect(warehouse.availabilities).to be_empty
     end
 
     it 'fetchs an empty list of breweries rather than nil' do

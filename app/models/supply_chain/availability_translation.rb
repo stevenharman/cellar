@@ -1,5 +1,5 @@
 module SupplyChain
-  class BrewAvailabilityTranslation
+  class AvailabilityTranslation
 
     def initialize(availability)
       @availability = availability

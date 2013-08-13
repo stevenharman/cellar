@@ -38,7 +38,7 @@ module SupplyChain
       @client.beers.find(id, withBreweries: 'Y')
     end
 
-    def brew_availabilities
+    def availabilities
       Array(@client.menu.beer_availability)
     end
   end

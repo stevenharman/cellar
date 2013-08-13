@@ -10,7 +10,7 @@ describe SupplyChain::Agent, :vcr do
     subject.import_reference_data
     expect(Style.count).to eq(157)
     expect(Category.count).to eq(12)
-    expect(BrewAvailability.count).to eq(8)
+    expect(Availability.count).to eq(8)
     expect(Size.count).to eq(17)
   end
 
