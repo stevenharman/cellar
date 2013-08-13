@@ -24,7 +24,7 @@ article.split-view.brew*{'data-id' => @brew.id}
           = @brew.ibu
         li.detail.availability
           label Availability
-          | Fake Thing
+          = @brew.availability_name
 
 
     = render 'cellars/beer_list', cellar: current_cellar, brew: @brew
