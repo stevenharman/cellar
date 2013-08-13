@@ -118,7 +118,7 @@ en:
         error: "Whoops! There was a sending your confirmation instructions."
       show:
         success: >
-          Hello %{username}, your account was confirmed and you are now signed in.
+          Hello %{username}, your account was confirmed. Please sign in.
         error: "Whoops! There was a problem confirming your email."
 
     users:

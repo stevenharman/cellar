@@ -22,9 +22,8 @@ class ConfirmationsController < ApplicationController
     @user = User.confirm_by_token(params[:confirmation_token])
 
     if @user.valid?
-      sign_in(@user)
       flash[:success] = t('flash.confirmations.show.success', username: @user.username)
-      redirect_to after_sign_in_path_for(@user)
+      redirect_to new_user_session_path
     else
       flash.now[:error] = t('flash.confirmations.show.error')
       render :new
