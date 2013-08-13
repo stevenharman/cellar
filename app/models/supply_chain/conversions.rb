@@ -2,26 +2,26 @@ require 'bigdecimal'
 require 'date'
 
 module SupplyChain
-  module WarehouseMap
+  module Conversions
     EmptyImages = Struct.new(:icon, :medium, :large)
 
-    def self.boolean(raw)
+    def boolean(raw)
       return unless raw
 
       raw.to_s == 'Y'
     end
 
-    def self.decimal(raw)
+    def decimal(raw)
       return unless raw
 
       BigDecimal.new(raw)
     end
 
-    def self.images(raw)
+    def images(raw)
       raw || EmptyImages.new
     end
 
-    def self.year(raw)
+    def year(raw)
       year = raw.to_i
       return unless year > 0
 
