@@ -21,9 +21,8 @@ module FeatureTestHelpers
   end
 
   def sign_out(user)
-    within('.current-user-links') do
-      click_link 'Sign out'
-    end
+    sign_out_button = find('.current-user-links .sign-out a')
+    sign_out_button.click
   end
 
 end

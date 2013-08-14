@@ -2,6 +2,7 @@ require 'spec_helper'
 
 feature 'Password reset', :feature, :slow do
   include Features::PasswordHelpers
+  include Features::MailHelpers
 
   let(:bob) { FactoryGirl.create(:bob) }
 
@@ -21,9 +22,9 @@ feature 'Password reset', :feature, :slow do
     find('.request-password-reset').click
   end
 
-  def visit_reset_password_page(user)
-    reset_token = user.reload.reset_password_token
-    visit edit_settings_password_reset_url(reset_password_token: reset_token)
+  def visit_reset_password_page(_)
+    reset_token = extract_token_from_email(:reset_password)
+    visit edit_settings_password_reset_path(reset_password_token: reset_token)
   end
 
   def submit_new_password(new_password)

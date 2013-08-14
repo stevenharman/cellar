@@ -9,5 +9,6 @@ module Features
       expect(page).to have_content I18n.t('flash.sessions.create.success', name: user.username)
       expect(current_path).to eq(root_path)
     end
+
   end
 end

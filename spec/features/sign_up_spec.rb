@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 feature 'Signing up', :feature, :slow do
+  include Features::MailHelpers
+
   let(:bobs_email) { 'bob@brewdega.com' }
 
   scenario 'Sign up with valid username, email, and password' do
@@ -56,8 +58,8 @@ feature 'Signing up', :feature, :slow do
     page.find('.resend-confirmation').click
   end
 
-  def visit_confirmation_page(email)
-    user = User.find_by_email(email)
-    visit confirmation_path(confirmation_token: user.confirmation_token)
+  def visit_confirmation_page(_)
+    confirmation_token = extract_token_from_email(:confirmation)
+    visit confirmation_path(confirmation_token: confirmation_token)
   end
 end
