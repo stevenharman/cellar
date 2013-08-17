@@ -2,6 +2,8 @@ require_relative 'supply_chain/order'
 require_relative 'supply_chain/job'
 
 module SupplyChain
+  Error = Class.new(::StandardError)
+  BrewMissingError = Class.new(Error)
 
   def self.route(order)
     jobs.map do |job|

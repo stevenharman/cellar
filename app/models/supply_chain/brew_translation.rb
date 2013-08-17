@@ -14,15 +14,11 @@ module SupplyChain
     def translate(raw_data)
       brew.name = raw_data.name
       brew.description = raw_data.description
-      #TODO This is setting the BreweryDB id
-      brew.base_brew_id = raw_data.beer_variation_id
       brew.organic = boolean(raw_data.is_organic)
       brew.year = year(raw_data.year)
       brew.abv = decimal(raw_data.abv)
       brew.ibu = decimal(raw_data.ibu)
       brew.original_gravity = decimal(raw_data.original_gravity)
-      brew.style = find_style(raw_data.style_id)
-      brew.availability = find_availability(raw_data.available_id)
       brew.brewery_db_status = raw_data.status
 
       labels = images(raw_data.labels)
@@ -30,12 +26,24 @@ module SupplyChain
       brew.medium_image = labels.medium
       brew.large_image = labels.large
 
+      base_brew_id = raw_data.beer_variation_id
+      brew.base_brew = find_brew(base_brew_id)
+      ensure_base_brew(brew, base_brew_id)
+
+      brew.availability = find_availability(raw_data.available_id)
+      brew.style = find_style(raw_data.style_id)
+
       brew.breweries << new_breweries(raw_data.breweries)
+
       brew.save!
       brew
     end
 
     private
+
+    def ensure_base_brew(brew, base_brew_id)
+      fail BrewMissingError, base_brew_id if brew.base_brew.nil? && base_brew_id
+    end
 
     def new_breweries(breweries)
       ids = Array(breweries).map(&:id)
@@ -45,6 +53,10 @@ module SupplyChain
 
     def find_availability(id)
       warehouse_map.find_availability(id)
+    end
+
+    def find_brew(id)
+      warehouse_map.find_brew(id)
     end
 
     def find_breweries(ids)
