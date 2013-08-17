@@ -36,4 +36,12 @@ describe SupplyChain::WarehouseMap do
     expect(breweries).to eq([brewery_1, brewery_2])
   end
 
+  it 'finds a Brew by brewery_db_id' do
+    stub_const('Brew', double)
+    a_brew = double('a Brew')
+    Brew.stub(:find_by_brewery_db_id).with('bdb_id') { a_brew }
+
+    expect(map.find_brew('bdb_id')).to eq(a_brew)
+  end
+
 end
