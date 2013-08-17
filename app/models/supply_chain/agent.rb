@@ -43,59 +43,69 @@ module SupplyChain
     end
 
     def import_breweries
-      @warehouse.breweries.each do |b|
+      warehouse.breweries.each do |b|
         brewery = Translator.new(BreweryTranslation, ::Brewery).translate(b)
-        @log.record(brewery)
+        log(brewery)
         yield brewery if block_given?
         brewery
       end
     end
 
     def import_brewery(id)
-      raw_data = @warehouse.brewery(id)
+      raw_data = warehouse.brewery(id)
       brewery = Translator.new(BreweryTranslation, ::Brewery).translate(raw_data)
-      @log.record(brewery)
+      log(brewery)
+      brewery
     end
 
     def import_brew(id)
-      raw_data = @warehouse.brew(id)
+      raw_data = warehouse.brew(id)
       brew = Translator.new(BrewTranslation, ::Brew).translate(raw_data)
-      @log.record(brew)
+      log(brew)
+      brew
     end
 
     private
 
     def import_categories
-      @warehouse.categories.map do |c|
+      warehouse.categories.map do |c|
         category = Translator.new(CategoryTranslation, ::Category).translate(c)
-        @log.record(category)
+        log(category)
       end
     end
 
     def import_styles
-      @warehouse.styles.map do |s|
+      warehouse.styles.map do |s|
         style = Translator.new(StyleTranslation, ::Style).translate(s)
-        @log.record(style)
+        log(style)
       end
     end
 
     def import_availabilities
-      @warehouse.availabilities.map do |a|
+      warehouse.availabilities.map do |a|
         availability = Translator.new(AvailabilityTranslation, ::Availability).translate(a)
-        @log.record(availability)
+        log(availability)
       end
     end
 
     def import_sizes
-      @warehouse.sizes.map do |s|
+      warehouse.sizes.map do |s|
         size = Translator.new(SizeTranslation, ::Size).translate(s)
-        @log.record(size)
+        log(size)
       end
+    end
+
+    def log(imported_item)
+      @log.record(imported_item)
     end
 
     def reset_warehouse_status
       ::Brewery.update_all(brewery_db_status: 'unknown')
       ::Brew.update_all(brewery_db_status: 'unknown')
+    end
+
+    def warehouse
+      @warehouse
     end
   end
 end
