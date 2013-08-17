@@ -1,30 +1,24 @@
 require_relative 'conversions'
 
 module SupplyChain
-  class BreweryTranslation
+  class BreweryTranslation < Struct.new(:brewery)
     include SupplyChain::Conversions
 
-    def initialize(brewery)
-      @brewery = brewery
-    end
-
     def translate(raw_data)
-      @brewery.tap do |b|
-        b.name = raw_data.name
-        b.description = raw_data.description
-        b.established = year(raw_data.established)
-        b.organic = boolean(raw_data.is_organic)
-        b.website = raw_data.website
-        b.brewery_db_status = raw_data.status
+      brewery.name = raw_data.name
+      brewery.description = raw_data.description
+      brewery.established = year(raw_data.established)
+      brewery.organic = boolean(raw_data.is_organic)
+      brewery.website = raw_data.website
+      brewery.brewery_db_status = raw_data.status
 
-        images = images(raw_data.images)
-        b.icon = images.icon
-        b.medium_image = images.medium
-        b.large_image = images.large
-      end
+      images = images(raw_data.images)
+      brewery.icon = images.icon
+      brewery.medium_image = images.medium
+      brewery.large_image = images.large
 
-      @brewery.save
-      @brewery
+      brewery.save
+      brewery
     end
 
   end

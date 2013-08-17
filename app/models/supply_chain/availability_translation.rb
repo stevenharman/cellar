@@ -1,18 +1,13 @@
 module SupplyChain
-  class AvailabilityTranslation
-
-    def initialize(availability)
-      @availability = availability
-    end
+  class AvailabilityTranslation < Struct.new(:availability)
 
     def translate(raw_data)
-      @availability.tap do |a|
-        a.name = raw_data.name
-        a.description = raw_data.description
-      end
+      availability.name = raw_data.name
+      availability.description = raw_data.description
 
-      @availability.save!
-      @availability
+      availability.save!
+      availability
     end
+
   end
 end
