@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '~> 4.0.0'
 gem 'jquery-rails'
-gem 'unicorn'
+gem 'puma'
 gem 'brewery_db', '~> 0.2.0'
 gem 'devise', '3.1.0.rc'
 gem 'draper'
@@ -17,6 +17,7 @@ gem 'sinatra', require: false # for sidekiq monitoring
 gem 'sidekiq'
 gem 'virtus'
 
+# Assets
 gem 'sass-rails', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -26,7 +27,6 @@ gem 'font-awesome-rails', '~> 3.2'
 
 group :production do
   gem 'rails_12factor'
-  gem 'rack-timeout'
 end
 
 group :development, :test do

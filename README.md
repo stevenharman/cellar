@@ -34,10 +34,8 @@ Other _optional_ ENV Vars you can set include:
   - `DATABASE_URL`: set to mimic the behavior of setting the database
     connection on Heroku. _(Default to using `config/database.yml`)_
   - `REDISTOGO_URL`: Redis database to use. _(Default to localhost)_
-  - `UNICORN_BACKLOG`: [tune Unicorn, making Herkou retry other
-    dynos](ttm-unicorn) rather than timing out. _(Default = `200`)_
-  - `WEB_CONCURRENCY`: set the number of [Unicorn](unicorn) worker processes.
-    _(Default = `3`)_
+  - `WEB_CONCURRENCY`: set the number of [Puma](puma) threads. _(Default =
+    `16`)_
 
 ### Updating the app
 
@@ -152,10 +150,9 @@ me = User.find_by_username('my_username_here'); me.staff = true; me.save!
 [bourbon-neat]: http://neat.bourbon.io/ "A lightweight semantic grid framework for Sass and Bourbon"
 [bourbon]: http://bourbon.io/ "A simple and lightweight mixin library for Sass"
 [foreman]: https://devcenter.heroku.com/articles/procfile/
+[puma]: http://puma.io/
 [rdd]: http://tom.preston-werner.com/2010/08/23/readme-driven-development.html
 [sass]: http://sass-lang.com/ "Syntactically Awesome Style Sheets"
 [sidekiq]: https://github.com/mperham/sidekiq
 [smacss]: http://smacss.com/ "Scalable and Modular Architecture for CSS"
 [texticle]: https://tenderlove.github.com/texticle/
-[ttm-unicorn]: http://devblog.thinkthroughmath.com/blog/2013/02/27/managing-request-queuing-with-rails-on-heroku/
-[unicorn]: http://unicorn.bogomips.org/
