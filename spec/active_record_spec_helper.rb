@@ -5,8 +5,6 @@ connection_info = YAML.load(ERB.new(File.read('config/database.yml')).result)['t
 ActiveRecord::Base.establish_connection(connection_info)
 
 RSpec.configure do |config|
-  # Let DatabaseCleaner handle this
-  config.use_transactional_fixtures = false
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction

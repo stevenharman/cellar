@@ -13,6 +13,10 @@ require_relative 'active_record_spec_helper'
 Dir[Rails.root.join('spec/support/**/*.rb')].each {|f| require f}
 
 RSpec.configure do |config|
+
+  # Let DatabaseCleaner handle this
+  config.use_transactional_fixtures = false
+
   config.before(:each) do
     ActionMailer::Base.deliveries.clear
   end
