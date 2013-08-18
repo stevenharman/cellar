@@ -18,7 +18,7 @@ module SupplyChain
       def perform(brewery_id)
         @warehouse.brews_for_brewery(brewery_id).map do |b|
           b.breweries = [OpenStruct.new(id: brewery_id)]
-          brew = Translator.new(BrewTranslation, ::Brew).translate(b)
+          brew = Translator.new(::Brew).translate(b)
           @log.record(brew)
         end
       end

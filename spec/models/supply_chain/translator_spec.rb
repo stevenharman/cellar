@@ -1,9 +1,9 @@
 require 'models/supply_chain/translator'
 
 describe SupplyChain::Translator do
-  subject { described_class.new(translation_class, factory) }
-  let(:translation_class) { double }
-  let(:factory) { double }
+  subject { described_class.new(factory) }
+  let(:translation_class) { SupplyChain::FakeyTranslation }
+  let(:factory) { ::Fakey }
   let(:translation) { double('SupplyChain::Translation') }
   let(:item) { OpenStruct.new }
   let(:data) { double(id: 'abc123') }
@@ -26,5 +26,11 @@ describe SupplyChain::Translator do
     translation.should_receive(:translate).with(data)
     translated = subject.translate(data)
     expect(translated.brewery_db_id).to eq('abc123')
+  end
+
+  Fakey = Class.new
+
+  module SupplyChain
+    FakeyTranslation = Class.new
   end
 end

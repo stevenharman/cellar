@@ -44,7 +44,7 @@ module SupplyChain
 
     def import_breweries
       warehouse.breweries.each do |b|
-        brewery = Translator.new(BreweryTranslation, ::Brewery).translate(b)
+        brewery = Translator.new(::Brewery).translate(b)
         log(brewery)
         yield brewery if block_given?
         brewery
@@ -53,14 +53,14 @@ module SupplyChain
 
     def import_brewery(id)
       raw_data = warehouse.brewery(id)
-      brewery = Translator.new(BreweryTranslation, ::Brewery).translate(raw_data)
+      brewery = Translator.new(::Brewery).translate(raw_data)
       log(brewery)
       brewery
     end
 
     def import_brew(id)
       raw_data = warehouse.brew(id)
-      brew = Translator.new(BrewTranslation, ::Brew).translate(raw_data)
+      brew = Translator.new(::Brew).translate(raw_data)
       log(brew)
       brew
     end
@@ -69,28 +69,28 @@ module SupplyChain
 
     def import_categories
       warehouse.categories.map do |c|
-        category = Translator.new(CategoryTranslation, ::Category).translate(c)
+        category = Translator.new(::Category).translate(c)
         log(category)
       end
     end
 
     def import_styles
       warehouse.styles.map do |s|
-        style = Translator.new(StyleTranslation, ::Style).translate(s)
+        style = Translator.new(::Style).translate(s)
         log(style)
       end
     end
 
     def import_availabilities
       warehouse.availabilities.map do |a|
-        availability = Translator.new(AvailabilityTranslation, ::Availability).translate(a)
+        availability = Translator.new(::Availability).translate(a)
         log(availability)
       end
     end
 
     def import_sizes
       warehouse.sizes.map do |s|
-        size = Translator.new(SizeTranslation, ::Size).translate(s)
+        size = Translator.new(::Size).translate(s)
         log(size)
       end
     end

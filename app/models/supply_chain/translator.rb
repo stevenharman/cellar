@@ -1,9 +1,9 @@
 module SupplyChain
   class Translator
 
-    def initialize(translation, factory)
-      @translation = translation
+    def initialize(factory)
       @factory = factory
+      @translation = locate_translation(factory.to_s)
     end
 
     def translate(raw_data)
@@ -16,6 +16,10 @@ module SupplyChain
     def find_or_initialize(brewery_db_id)
       item = @factory.find_by_brewery_db_id(brewery_db_id)
       item || @factory.new.tap { |i| i.brewery_db_id = brewery_db_id }
+    end
+
+    def locate_translation(factory_name)
+      Module.nesting[1].const_get("#{factory_name}Translation")
     end
 
   end
