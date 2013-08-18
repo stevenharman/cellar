@@ -1,5 +1,11 @@
 module SupplyChain
-  class CategoryTranslation < Struct.new(:category)
+  class CategoryTranslation
+
+    attr_reader :category
+
+    def initialize(category)
+      @category = category
+    end
 
     def call(raw_data)
       category.name = raw_data.name

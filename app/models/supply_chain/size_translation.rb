@@ -1,5 +1,11 @@
 module SupplyChain
-  class SizeTranslation < Struct.new(:size)
+  class SizeTranslation
+
+    attr_reader :size
+
+    def initialize(size)
+      @size = size
+    end
 
     def call(raw_data)
       size.measure = raw_data.volume

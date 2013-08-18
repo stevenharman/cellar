@@ -1,8 +1,14 @@
 require_relative 'conversions'
 
 module SupplyChain
-  class BreweryTranslation < Struct.new(:brewery)
+  class BreweryTranslation
     include SupplyChain::Conversions
+
+    attr_reader :brewery
+
+    def initialize(brewery)
+      @brewery = brewery
+    end
 
     def call(raw_data)
       brewery.name = raw_data.name
