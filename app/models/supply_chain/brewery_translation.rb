@@ -4,7 +4,7 @@ module SupplyChain
   class BreweryTranslation < Struct.new(:brewery)
     include SupplyChain::Conversions
 
-    def translate(raw_data)
+    def call(raw_data)
       brewery.name = raw_data.name
       brewery.description = raw_data.description
       brewery.established = year(raw_data.established)

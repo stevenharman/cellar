@@ -11,7 +11,7 @@ module SupplyChain
       @warehouse_map = warehouse_map
     end
 
-    def translate(raw_data)
+    def call(raw_data)
       brew.name = raw_data.name
       brew.description = raw_data.description
       brew.organic = boolean(raw_data.is_organic)

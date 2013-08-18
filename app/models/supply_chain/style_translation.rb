@@ -8,7 +8,7 @@ module SupplyChain
       @warehouse_map = warehouse_map
     end
 
-    def translate(raw_data)
+    def call(raw_data)
       style.name = raw_data.name
       style.description = raw_data.description
       style.category = find_category(raw_data.category_id)

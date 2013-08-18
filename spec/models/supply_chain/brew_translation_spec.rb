@@ -17,14 +17,14 @@ describe SupplyChain::BrewTranslation do
     it 'loads the base beer' do
       allow(warehouse_map).to receive(:find_brew).with(base_id) { base_brew }
 
-      translated_brew = translation.translate(raw_data)
+      translated_brew = translation.call(raw_data)
       expect(translated_brew.base_brew).to be
     end
 
     it 'fails when the base beer is missing' do
       allow(warehouse_map).to receive(:find_brew).with(base_id) { nil }
 
-      expect { translation.translate(raw_data) }.
+      expect { translation.call(raw_data) }.
         to raise_error(SupplyChain::BrewMissingError, base_id)
     end
   end

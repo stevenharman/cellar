@@ -1,7 +1,7 @@
 module SupplyChain
   class AvailabilityTranslation < Struct.new(:availability)
 
-    def translate(raw_data)
+    def call(raw_data)
       availability.name = raw_data.name
       availability.description = raw_data.description
 

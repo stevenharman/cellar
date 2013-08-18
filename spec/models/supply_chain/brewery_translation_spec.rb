@@ -2,20 +2,20 @@ require 'models/supply_chain/brewery_translation'
 
 describe SupplyChain::BreweryTranslation do
 
-  describe '#translate' do
+  describe '#call' do
     subject { described_class.new(brewery) }
     let(:brewery) { OpenStruct.new(save: true)}
     let(:raw_data) { OpenStruct.new(id: 'abc123') }
 
     it 'saves the translated brewery' do
       brewery.should_receive(:save)
-      subject.translate(raw_data)
+      subject.call(raw_data)
     end
 
     describe 'maps in new data' do
       let(:raw_data) { fully_loaded_raw_data }
       before do
-        subject.translate(raw_data)
+        subject.call(raw_data)
       end
 
       it { expect(brewery.brewery_db_status).to eql(raw_data.status) }
@@ -33,7 +33,7 @@ describe SupplyChain::BreweryTranslation do
       let(:brewery) { fully_loaded_brewery }
       let(:raw_data) { OpenStruct.new }
       before do
-        subject.translate(raw_data)
+        subject.call(raw_data)
       end
 
       it { expect(brewery.name).to_not be }

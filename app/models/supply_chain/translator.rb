@@ -8,7 +8,7 @@ module SupplyChain
 
     def translate(raw_data)
       item = find_or_initialize(raw_data.id)
-      @translation.new(item).translate(raw_data)
+      @translation.new(item).call(raw_data)
     end
 
     private
