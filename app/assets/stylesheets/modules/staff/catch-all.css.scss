@@ -63,6 +63,9 @@
     .maintenance-task-details,
     .maintenance-task-action {
       @include fill-parent;
+      margin-bottom: 0.5em;
     }
+
+    .maintenance-task-run { width: 100%; }
   }
 }
