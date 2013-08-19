@@ -30,7 +30,7 @@ class CellarBeersController < ApplicationController
   end
 
   def beer_params
-    params.require(:beer).permit(:best_by, :vintage, :notes)
+    params.require(:beer).permit(:best_by, :size_id, :notes, :vintage)
   end
 
   def find_beer(beer_id)

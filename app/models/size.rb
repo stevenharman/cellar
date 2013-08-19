@@ -13,4 +13,8 @@ class Size < ActiveRecord::Base
     end
   end
 
+  def full_name
+    "#{quantity} #{name}"
+  end
+
 end

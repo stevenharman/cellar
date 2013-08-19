@@ -10,6 +10,7 @@ class StockOrder
 
   attribute :count, Integer, default: 1
   attribute :best_by, Date
+  attribute :size_id, Integer
   attribute :notes, String
   attribute :vintage, Integer
 
@@ -33,6 +34,7 @@ class StockOrder
     {
       best_by: best_by,
       notes: notes,
+      size_id: size_id,
       vintage: vintage,
     }
   end

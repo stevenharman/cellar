@@ -5,6 +5,7 @@ div
     = f.hidden_field :brew_id
     = f.input :vintage, as: :numeric, input_html: { min: 1970, autofocus: true }
     = f.input :best_by, as: :datepicker
+    = f.input :size_id, collection: Size.all.collect {|s| [s.full_name, s.id]}
     = f.input :notes, as: :text, input_html: { rows: 10 }
     = f.input :count, as: :numeric, input_html: { min: 1 }
 
