@@ -10,10 +10,10 @@
   margin-bottom: 1em;
 
   .avatar {
+    @include avatar(128px);
     border-radius: 3px;
     float: left;
     margin-right: 1em;
-    width: 128px;
   }
 
   .bio {
@@ -114,8 +114,8 @@
     $avatar-width: 80px;
 
     .avatar {
+      @include avatar($avatar-width);
       margin-right: 0.5em;
-      width: $avatar-width;
     }
 
     .username {

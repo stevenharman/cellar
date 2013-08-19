@@ -16,6 +16,12 @@
   }
 }
 
+@mixin avatar($size) {
+  background-image: url(asset_path('default-avatar.png'));
+  background-size: $size;
+  width: $size;
+}
+
 // Text overflow
 // Requires inline-block or block for proper styling
 @mixin text-overflow() {

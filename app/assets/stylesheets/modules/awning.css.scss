@@ -78,9 +78,9 @@
     }
 
     .avatar {
+      @include avatar($avatar-size);
       border-radius: 2px;
       vertical-align: middle;
-      width: $avatar-size;
     }
 
     .username { margin-left: 1em; }
