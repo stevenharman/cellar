@@ -4,7 +4,8 @@
 
 ### Getting up and Running
 
-Because installing dependencies is such a pain, we've bootstrapped this baby for you! Just run
+Because installing dependencies is such a pain, we've bootstrapped this baby
+for you! Just run
 
 ```bash
 bin/bootstrap
@@ -16,24 +17,20 @@ ready to go.
 
 #### ENV Vars
 
-You'll need a few environment variables set in order to start all of the
-processes. From terminal:
+You can set some _optional_ [ENV Vars][env-vars] to tweak the way the app runs,
+or simulate the app running on other platforms.
 
-```bash
-echo "SIDEKIQ_CONCURRENCY=25" > .env
-```
-
-Other _optional_ ENV Vars you can set include:
-
-  - `BREWERY_DB_API_KEY`: key to use to connect to BreweryDB.com. _(Default to
-    our dev key)_
-  - `DATABASE_POOL_SIZE`: set the size of the Sidekiq ActiveRecord connection
-    pool. _(Default = `SIDEKIQ_CONCURRENCY`)_
+  - `BREWERY_DB_API_KEY`: key to use to connect to [BreweryDB.com][brewerydb].
+    _(Default to our dev key)_
+  - `DATABASE_POOL_SIZE`: set the size of the [Sidekiq][sidekiq] ActiveRecord
+    connection pool. _(Default = `SIDEKIQ_CONCURRENCY`)_
   - `DATABASE_REAP_FREQ`: how often (in seconds) the database connection pool
     should be reaped. _(Default = `10`)_
   - `DATABASE_URL`: set to mimic the behavior of setting the database
     connection on Heroku. _(Default to using `config/database.yml`)_
-  - `REDISTOGO_URL`: Redis database to use. _(Default to localhost)_
+  - `REDISTOGO_URL`: Redis database to use. _(Default = localhost)_
+  - `SIDEKIQ_CONCURRENCY`: set the number of [Sidekiq][sidekiq] worker
+    processors to run.  _(Default = 25)_
   - `WEB_CONCURRENCY`: set the number of [Puma](puma) threads. _(Default =
     `16`)_
 
@@ -49,7 +46,8 @@ Other _optional_ ENV Vars you can set include:
       ```bash
       bin/rake db:migrate test:prepare
       ```
-  1.  _(Optional)_ Update your brewery/brew data from BreweryDB.com:
+  1.  _(Optional)_ Update your brewery/brew data from
+      [BreweryDB.com][brewerydb]:
 
       ``` bash
       bin/rake brewery_db:import
@@ -77,6 +75,14 @@ In development mode we use [MailCatcher][mailcatcher] to capture all emails
 sent from the app. You can access the MailCatcher UI from
 <http://localhost:1080>.
 
+#### Development data
+
+You can pull down a copy of production data by running
+
+```bash
+bin/import
+```
+
 ### Running the tests
 
 It really is this easy:
@@ -87,14 +93,6 @@ bin/rake db:test:prepare
 
 # run the full spec suite:
 bin/rspec
-```
-
-#### Development data
-
-You can pull down a copy of production data by running
-
-```bash
-bin/import
 ```
 
 ### CSS Structure
@@ -155,6 +153,8 @@ me = User.find_by_username('my_username_here'); me.staff = true; me.save!
 
 [bourbon-neat]: http://neat.bourbon.io/ "A lightweight semantic grid framework for Sass and Bourbon"
 [bourbon]: http://bourbon.io/ "A simple and lightweight mixin library for Sass"
+[brewerydb]: http://brewerydb.com/ "BreweryDB is your database of breweries, beers, beer events and guilds!"
+[env-vars]: https://devcenter.heroku.com/articles/config-vars "Configuration and Config Vars"
 [foreman]: https://devcenter.heroku.com/articles/procfile/
 [mailcatcher]: http://mailcatcher.me/ "Catches mail and serves it through a dream."
 [puma]: http://puma.io/ "A modern, concurrent web server for Ruby"
