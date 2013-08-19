@@ -2,7 +2,7 @@ article.brew*{'data-id' => brew.id}
   .content
     figure
       = link_to(brew, title: brew.name) do
-        = image_tag(brew.medium_image || 'no-label.png', alt: brew.name)
+        = image_tag(brew.medium_image, alt: brew.name)
     .specifics
       h3.name= link_to(brew.name, brew, title: brew.name)
       .breweries= render 'brews/breweries', brew: brew

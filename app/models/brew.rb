@@ -15,7 +15,8 @@ class Brew < ActiveRecord::Base
   validates :brewery_db_id, uniqueness: true, presence: true
 
   #TODO use `coder: JSON` in Rails 4, consider hstore field
-  store :labels, accessors: [:icon, :medium_image, :large_image]
+  LABELS = [:icon, :medium_image, :large_image].freeze
+  store :labels, accessors: LABELS
 
   scope :cellared, -> { all.merge(Beer.cellared) }
 
@@ -23,6 +24,12 @@ class Brew < ActiveRecord::Base
   # see: https://github.com/jenseng/hair_trigger
   include PgSearch
   multisearchable against: [:searchable_name]
+
+  LABELS.each do |label|
+    define_method(label) do
+      super() || 'no-label.png'
+    end
+  end
 
   def calculate_cellared_beers_count
     update_column(:cellared_beers_count, beers.cellared.count)
