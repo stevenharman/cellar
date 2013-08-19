@@ -23,6 +23,9 @@ module Staff
 
     def all_maintenance_tasks
       @all_maintenance_tasks ||= [
+        MaintenanceTask.new(job: SupplyChain::Job::ImportReferenceData,
+                            name: 'Import Reference Data',
+                            description: 'Sync BreweryDB.com style, category, and availability data into the Cellar.'),
         MaintenanceTask.new(job: SupplyChain::Job::ImportFullInventory,
                             name: 'Import Full Inventory',
                             description: 'Sync all BreweryDB.com data into the Cellar.'),
