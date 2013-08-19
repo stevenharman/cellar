@@ -43,6 +43,7 @@ BrewdegaCellar::Application.routes.draw do
   namespace :staff, constraints: Constraint::Staff.new do
     resource :style_guide, only: [:show]
     resource :mobile_desktop_preference, only: [:show, :destroy]
+    resources :maintenance_tasks, only: [:index, :create]
 
     require 'sidekiq/web'
     mount Sidekiq::Web => 'sidekiq', as: :background_jobs

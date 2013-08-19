@@ -36,3 +36,33 @@
     text-align: center;
   }
 }
+
+.maintenance-tasks{
+  .maintenance-task {
+    @include pad;
+    @include row;
+    border: 1px solid $section-border-color;
+    border-radius: 3px;
+    margin-bottom: 1em;
+  }
+
+  .maintenance-task-details {
+    @include span-columns(7 of 9);
+  }
+
+  .maintenance-task-description {
+    margin-bottom: 0;
+  }
+
+  .maintenance-task-action {
+    @include span-columns(2 of 9);
+    text-align: right;
+  }
+
+  @include media($mobile) {
+    .maintenance-task-details,
+    .maintenance-task-action {
+      @include fill-parent;
+    }
+  }
+}

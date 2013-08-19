@@ -178,6 +178,7 @@ en:
   layouts:
     staff:
       background_jobs: "Background Jobs"
+      maintenance_tasks: "Mainenance Tasks"
       mobile_desktop_preferences: "Mobile/Desktop View"
       style_guide: "Style Guide"
 

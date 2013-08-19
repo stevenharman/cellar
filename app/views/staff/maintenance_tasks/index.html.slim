@@ -1,0 +1,13 @@
+fieldset.maintenance-tasks
+  legend Run maintenance tasks
+
+  ul.maintenance-task-list
+    - for task in @maintenance_tasks do
+      li.maintenance-task
+        = simple_form_for :maintenance_task do |f|
+          = hidden_field_tag :job, task.job, id: nil
+          .maintenance-task-details
+            h5.maintenance-task-name= task.name
+            p.maintenance-task-description= task.description
+          .maintenance-task-action
+            = f.submit 'Run', class: 'maintenance-task-run btn-primary'
