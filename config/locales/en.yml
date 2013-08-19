@@ -50,7 +50,7 @@ en:
         this_cellar_cellared: "This cellar"
         your_cellared: "Your cellar"
     show:
-      similar-brews: "Similar Beers"
+      from-other-cellars: "From other cellars"
 
   searches:
     show:
