@@ -73,7 +73,7 @@ You can shut everything down by hitting `^C` _(that's `Control` + `C`)_.
 
 #### Email
 
-In development mode we use [MailCatcher](mailcatcher) to capture all emails
+In development mode we use [MailCatcher][mailcatcher] to capture all emails
 sent from the app. You can access the MailCatcher UI from
 <http://localhost:1080>.
 
