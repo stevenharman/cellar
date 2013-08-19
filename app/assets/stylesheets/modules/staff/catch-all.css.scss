@@ -1,9 +1,18 @@
 @import '../../globals/all';
 
-.style-guide-section {
-  @include pad;
-  border: 1px solid $base-border-color;
+.staff {
+  fieldset {
+    @include pad;
+    border: 1px solid $base-border-color;
+    margin-bottom: 1em;
 
+    legend {
+      padding: 0 0.25em;
+    }
+  }
+}
+
+.style-guide-section {
   &.buttons {
     button, .btn {
       margin: 0 1em 0.5em 0;
@@ -12,9 +21,6 @@
 }
 
 .mobile-desktop-preference {
-  @include pad;
-  border: 1px solid $base-border-color;
-
   .preference {
     display: block;
     font-family: $header-font-family;
