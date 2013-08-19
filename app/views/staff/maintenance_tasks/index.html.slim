@@ -4,8 +4,8 @@ fieldset.maintenance-tasks
   ul.maintenance-task-list
     - for task in @maintenance_tasks do
       li.maintenance-task
-        = simple_form_for :maintenance_task do |f|
-          = hidden_field_tag :job, task.job, id: nil
+        = simple_form_for task do |f|
+          = f.input :job_name, as: :hidden
           .maintenance-task-details
             h5.maintenance-task-name= task.name
             p.maintenance-task-description= task.description

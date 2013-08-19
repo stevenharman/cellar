@@ -140,6 +140,12 @@ en:
         success: "Huzzah! We added %{count} %{name} to your cellar."
         error: "Woops! There was a problem stocking those %{count} %{name}."
 
+    staff:
+      maintenance_tasks:
+        create:
+          success: "Huzzah! The %{task_name} task is queued up to run."
+          error: "Woops! The %{task_name} wasn't queued to run."
+
   # Views
 
   cellars:
