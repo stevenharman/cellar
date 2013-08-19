@@ -71,6 +71,12 @@ foreman start
 
 You can shut everything down by hitting `^C` _(that's `Control` + `C`)_.
 
+#### Email
+
+In development mode we use [MailCatcher](mailcatcher) to capture all emails
+sent from the app. You can access the MailCatcher UI from
+<http://localhost:1080>.
+
 ### Running the tests
 
 It really is this easy:
@@ -150,7 +156,8 @@ me = User.find_by_username('my_username_here'); me.staff = true; me.save!
 [bourbon-neat]: http://neat.bourbon.io/ "A lightweight semantic grid framework for Sass and Bourbon"
 [bourbon]: http://bourbon.io/ "A simple and lightweight mixin library for Sass"
 [foreman]: https://devcenter.heroku.com/articles/procfile/
-[puma]: http://puma.io/
+[mailcatcher]: http://mailcatcher.me/ "Catches mail and serves it through a dream."
+[puma]: http://puma.io/ "A modern, concurrent web server for Ruby"
 [rdd]: http://tom.preston-werner.com/2010/08/23/readme-driven-development.html
 [sass]: http://sass-lang.com/ "Syntactically Awesome Style Sheets"
 [sidekiq]: https://github.com/mperham/sidekiq
