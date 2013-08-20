@@ -6,7 +6,7 @@ article.brewery*{'data-id' => @brewery.id}
     h2= @brewery.name
 
   .row-fluid
-    = image_tag(@brewery.large_image || 'http://placehold.it/256x256', alt: @brewery.name, class: :span3)
+    = image_tag(@brewery.large_image || 'no-brewery.png', alt: @brewery.name, class: :span3)
     .span9
       ul.details
       - if @brewery.website?
