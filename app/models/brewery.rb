@@ -8,7 +8,8 @@ class Brewery < ActiveRecord::Base
   validates :brewery_db_id, uniqueness: true, presence: true
 
   #TODO use `coder: JSON` in Rails 4, consider hstore field
-  store :images, accessors: [:icon, :medium_image, :large_image]
+  IMAGES = [:icon, :medium_image, :large_image].freeze
+  store :images, accessors: IMAGES
 
   #TODO use tsvector columns w/triggers for updating.
   # see: https://github.com/jenseng/hair_trigger
@@ -19,5 +20,11 @@ class Brewery < ActiveRecord::Base
 
   def self.find_by_brewery_db_ids(ids)
     where(brewery_db_id: ids)
+  end
+
+  IMAGES.each do |image|
+    define_method(image) do
+      super() || 'no-brewery.png'
+    end
   end
 end

@@ -1,7 +1,7 @@
 li.search-result.search-result-brewery
   .basic-info
     h3.name
-      span.icon= image_tag(brewery.icon || 'no-brewery.png', alt: brewery.name)
+      span.icon= image_tag(brewery.icon, alt: brewery.name)
       = link_to brewery.name, brewery, title: brewery.name
   .more-info
     - if brewery.website
