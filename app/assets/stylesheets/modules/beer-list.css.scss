@@ -28,6 +28,8 @@
   border-radius: 3px;
   margin-bottom: 1em;
 
+  &:last-child { margin-bottom: 0; }
+
   .beer-details {
     @include span-columns(3 of 9);
   }

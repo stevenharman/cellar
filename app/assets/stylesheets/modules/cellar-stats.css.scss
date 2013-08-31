@@ -1,12 +1,20 @@
 @import '../globals/all';
 
 .cellar-stats {
-  border-top: 1px solid $base-border-color;
-  margin-top: 1em;
+  .full-ui & {
+    border-top: 1px solid $base-border-color;
+    margin-top: 1.5em;
+  }
+
+  .mobile-ui & {
+    margin: 0.5em 0;
+  }
 }
 
 .cellar-stats-legend {
-  margin-top: 1em;
+  .mobile-ui & {
+    display: none;
+  }
 }
 
 .cellar-stats-list {
@@ -16,10 +24,11 @@
   background-color: $section-background-color;
 
   .stat {
-    @include span-columns(2 of 9);
+    float: left;
+    margin-right: 1em;
     text-align: center;
 
-    &:last-child { @include omega; }
+    &:last-child { margin-right: 0; }
   }
 
   .stat-name {

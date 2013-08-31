@@ -1,13 +1,22 @@
 @import '../globals/all';
 
 .brew {
-  .add-to-cellar {
-    float: right;
-    margin-bottom: 1em;
+
+  .full-ui & {
+    .add-to-cellar {
+      float: right;
+      margin-bottom: 1em;
+    }
+
+    .brew-label {
+      margin-bottom: 1em;
+    }
   }
 
-  .brew-label {
-    margin-bottom: 1em;
+  .mobile-ui & {
+    .add-to-cellar {
+      display: block
+    }
   }
 }
 
