@@ -41,7 +41,8 @@ Sidekiq.configure_client do |config|
       config['pool'] = ENV['WEB_DB_POOL_SIZE'] || current_web_concurrency.call
       ActiveRecord::Base.establish_connection(config)
 
-      Rails.logger.info("Connection Pool size for web server is now: #{ActiveRecord::Base.connection.pool.instance_variable_get('@size')}")
+      # DB connection not available during slug compliation on Heroku
+      Rails.logger.info("Connection Pool size for web server is now: #{config['pool']}")
     end
   end
 end
