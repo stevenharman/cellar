@@ -59,6 +59,7 @@ class ApplicationController < ActionController::Base
   def mobile_request?
     prefer_mobile? || (mobile_browser? && !prefer_desktop?)
   end
+  helper_method :mobile_request?
 
   def paginate(collection, options = {})
     options = { per_page: DEFAULT_PER_PAGE }.merge(options)

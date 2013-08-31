@@ -1,5 +1,9 @@
 module ApplicationHelper
 
+  def mobile_ui_class
+    mobile_request? ? 'mobile-ui' : 'full-ui'
+  end
+
   def search_query
     @search_query ||= Search::Query.new
   end
