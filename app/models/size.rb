@@ -7,6 +7,9 @@ class Size < ActiveRecord::Base
   validates :quantity, presence: true, unless: ->(s) { s.case? }
   validates :brewery_db_id, uniqueness: true, presence: true
 
+  scope :for_cellar, -> { where(measure: %i(oz liter barrel)).by_quantity }
+  scope :by_quantity, -> { order('measure DESC, quantity') }
+
   ALLOWED_MEASURES.each do |m|
     define_method("#{m}?") do
       self.measure == m
