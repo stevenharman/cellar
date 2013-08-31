@@ -22,17 +22,19 @@ or simulate the app running on other platforms.
 
   - `BREWERY_DB_API_KEY`: key to use to connect to [BreweryDB.com][brewerydb].
     _(Default to our dev key)_
-  - `DATABASE_POOL_SIZE`: set the size of the [Sidekiq][sidekiq] ActiveRecord
-    connection pool. _(Default = `SIDEKIQ_CONCURRENCY`)_
   - `DATABASE_REAP_FREQ`: how often (in seconds) the database connection pool
     should be reaped. _(Default = `10`)_
   - `DATABASE_URL`: set to mimic the behavior of setting the database
     connection on Heroku. _(Default to using `config/database.yml`)_
   - `REDISTOGO_URL`: Redis database to use. _(Default = localhost)_
-  - `SIDEKIQ_CONCURRENCY`: set the number of [Sidekiq][sidekiq] worker
+  - `WORKER_CONCURRENCY`: set the number of [Sidekiq][sidekiq] worker
     processors to run.  _(Default = 25)_
+  - `WORKER_DB_POOL_SIZE`: set the size of the [Sidekiq][sidekiq] ActiveRecord
+    connection pool. _(Default = `WORKER_CONCURRENCY`)_
   - `WEB_CONCURRENCY`: set the number of [Puma](puma) threads. _(Default =
     `16`)_
+  - `WEB_DB_POOL_SIZE`: set the size of the ActiveRecord connection pool for
+    the web server. _(Default = `WEB_CONCURRENCY`)_
 
 ### Updating the app
 

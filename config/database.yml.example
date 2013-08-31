@@ -2,7 +2,7 @@ development: &development
   adapter: postgresql
   encoding: unicode
   database: cellar_development
-  pool: <%= ENV['SIDEKIQ_CONCURRENCY'] || 5 %>
+  pool: <%= ENV['WEB_DB_POOL_SIZE'] || ENV['WEB_CONCURRENCY'] || 5 %>
 
 test:
   <<: *development
