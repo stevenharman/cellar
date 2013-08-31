@@ -37,9 +37,9 @@ describe Cellar do
   end
 
   describe '#cellared_brews' do
-    it "gets currently cellared brews from the keeper's cellar" do
+    it "gets currently cellared brews, ordered by name, from the keeper's cellar" do
       cellared_brews = [double('Brew 1'), double('Brew 2')]
-      keeper.stub(:cellared_brews) { cellared_brews }
+      keeper.stub_chain(:cellared_brews, :by_name) { cellared_brews }
       expect(cellar.cellared_brews).to eq(cellared_brews)
     end
   end

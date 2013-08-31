@@ -19,6 +19,7 @@ class Brew < ActiveRecord::Base
   store :labels, accessors: LABELS
 
   scope :cellared, -> { all.merge(Beer.cellared) }
+  scope :by_name, -> { order(:name) }
 
   #TODO use tsvector columns w/triggers for updating.
   # see: https://github.com/jenseng/hair_trigger

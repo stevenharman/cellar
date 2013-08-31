@@ -36,7 +36,7 @@ class Cellar
   end
 
   def cellared_brews
-    keeper.cellared_brews
+    keeper.cellared_brews.by_name
   end
 
   def brews_count
