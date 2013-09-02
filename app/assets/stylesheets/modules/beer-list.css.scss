@@ -4,9 +4,6 @@
   @include clearfix;
 }
 
-.beer-list-beers {
-}
-
 .beer-list-beer {
   $action-width: 1.25rem;
   $item-height: 3em;
@@ -33,7 +30,13 @@
     @include clickable;
     @include transition-property(transform);
     @include transition-duration(0.4s);
+
   }
+
+  &.beer-drawer-open .see-more {
+    @include transform(rotate(180deg));
+  }
+
   .for-trade {
     color: $orange;
     float: left;
@@ -111,9 +114,5 @@
       }
     }
   }
-}
-
-.beer-drawer-open .see-more {
-  @include transform(rotate(180deg));
 }
 
