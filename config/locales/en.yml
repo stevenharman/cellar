@@ -5,9 +5,10 @@ en:
   date:
     formats:
       month_year: "%b %Y"
+      month_day_year: "%b %-d, %Y"
   time:
     formats:
-      month_day_year: "%b %d, %Y"
+      month_day_year: "%b %-d, %Y"
       month_year: "%b %Y"
 
   # ActiveModel
@@ -152,7 +153,10 @@ en:
     beer_list:
       best_by: "Best by"
       cellared_on: "Cellared"
+      edit: "Edit"
       empty: "Oh no, you don't have any %{brew_name} in your cellar."
+      notes: "Notes"
+      size: "Size"
       vintage: "Vintage"
     stats:
       title: "Cellar Stats"

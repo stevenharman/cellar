@@ -2,43 +2,43 @@
 - beer_list = cellar.beers_for(brew)
 
 .beer-list
-  ul.beer-list-legend
-    li
-      label.beer-detail-name= t('.cellared_on')
-    li
-      label.beer-detail-name= t('.vintage')
-    li
-      label.beer-detail-name= t('.best_by')
 
   ul.beer-list-beers
     - for beer in beer_list
       li.beer-list-beer*{'data-id' => beer.id} class="beer-status-#{beer.status}"
 
+        .for-trade
+          i.icon-gift
+        .see-more
+          i.icon-chevron-down
+
         ul.beer-details
-          li.beer-detail.beer-cellared-on
-            label.beer-detail-name= t('.cellared_on')
-            = ldate(beer.created_at, format: :month_year)
           li.beer-detail.beer-vintage
             label.beer-detail-name= t('.vintage')
             time= beer.vintage
           li.beer-detail.beer-best-by
             label.beer-detail-name= t('.best_by')
-            = ldate(beer.best_by, format: :long)
+            = ldate(beer.best_by, format: :month_day_year)
+          li.beer-detail.beer-size
+            label.beer-detail-name= t('.size')
+            = beer.size.full_name if beer.size
+          li.beer-detail.beer-cellared-on
+            label.beer-detail-name= t('.cellared_on')
+            = ldate(beer.created_at, format: :month_year)
+          li.beer-detail.beer-notes
+            = simple_format(beer.notes)
 
-        = simple_form_for beer, url: cellar_distribution_order_path(beer.user), html: {class: 'beer-statuses'} do
-          = hidden_field_tag :beer_id, beer.id, name: 'order[beer_id]', id: nil
-          .btn-group
-            = button_tag 'Drink', name: 'order[status]', value: :drunk
-            = button_tag 'Trade', name: 'order[status]', value: :traded
-            /= button_tag 'Share', name: 'order[status]', value: :shared
-            = button_tag 'Skunk', name: 'order[status]', value: :skunked
+        .beer-drawer
+          = simple_form_for beer, url: cellar_distribution_order_path(beer.user), html: {class: 'beer-statuses'} do
+            = hidden_field_tag :beer_id, beer.id, name: 'order[beer_id]', id: nil
+            .btn-group
+              = button_tag 'Drink', name: 'order[status]', value: :drunk
+              = button_tag 'Trade', name: 'order[status]', value: :traded
+              = button_tag 'Skunk', name: 'order[status]', value: :skunked
 
-        ul.beer-actions
-          li.beer-action.beer-action-mark-for-trade
-            = link_to('FT', '#', title: 'Mark for trade')
-          li.beer-action.beer-action-edit
-            = link_to(edit_cellar_beer_path(beer.user, beer)) do
-              i.icon-edit
+              = link_to(edit_cellar_beer_path(beer.user, beer), class: 'beer-action-edit btn') do
+                i.icon-edit
+                =< t('.edit')
 
     - if beer_list.empty?
       li.beer-list-beer.beer-list-empty
@@ -46,3 +46,4 @@
         = link_to(new_stock_order_path(brew: brew), class: 'stock-one-now btn') do
           span.icon-plus-sign
           =< t('cellar.stock_one_now')
+
