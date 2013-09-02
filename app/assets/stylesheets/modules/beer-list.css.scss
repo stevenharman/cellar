@@ -33,7 +33,7 @@
 
   }
 
-  &.beer-drawer-open .see-more {
+  &.active .see-more {
     @include transform(rotate(180deg));
   }
 

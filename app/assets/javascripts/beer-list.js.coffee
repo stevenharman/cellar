@@ -5,5 +5,5 @@ $ ->
 
     $beer = $(this)
     $beer.find('.beer-drawer').slideToggle()
-    $beer.toggleClass('beer-drawer-open')
+    $beer.toggleClass('active')
   )
