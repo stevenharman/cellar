@@ -67,7 +67,6 @@
       margin: 0 0.25em 0 0;
       vertical-align: text-top;
     }
-
   }
 
   .beer-notes {
@@ -90,16 +89,6 @@
     text-align: center;
   }
 
-  &.beer-list-empty {
-    @include pad;
-
-    .message {
-      @include inline-block;
-      line-height: 2.5em;
-    }
-    .stock-one-now { float: right; }
-  }
-
   @include media($mobile) {
 
     .beer-statuses {
@@ -116,3 +105,12 @@
   }
 }
 
+.beer-list-empty {
+  @include pad;
+
+  .message {
+    @include inline-block;
+    line-height: 2.5em;
+  }
+  .stock-one-now { float: right; }
+}
