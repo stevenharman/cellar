@@ -11,18 +11,19 @@
   @include row;
   border: 1px solid $section-border-color;
   border-radius: 3px;
-  //cursor: pointer;
   margin-bottom: 1em;
 
   &:last-child { margin-bottom: 0; }
+
+  .beer-list-beer-body {
+    @include clearfix;
+  }
 
   .see-more,
   .for-trade {
     line-height: $item-height;
     text-align: center;
     width: $action-width;
-
-    //i { font-size: $action-width; }
   }
 
   .see-more {
@@ -30,7 +31,6 @@
     @include clickable;
     @include transition-property(transform);
     @include transition-duration(0.4s);
-
   }
 
   &.active .see-more {
@@ -43,30 +43,24 @@
   }
 
   .beer-details {
-    height: $item-height;
+    @include transition-property(max-height);
+    @include transition-duration(0.4s);
     margin: 0 $action-width;
+    max-height: $item-height;
+    overflow: hidden;
     padding: 0;
   }
 
   .beer-detail {
     @include inline-block;
     width: 25%;
+  }
 
-    .mobile-ui & {
-      width: 50%;
-
-      &.beer-best-by,
-      &.beer-size { display: none; }
-
-      &.beer-cellared-on { text-align: right; }
-    }
-
-    .beer-detail-name {
-      display: inline;
-      line-height: 1em;
-      margin: 0 0.25em 0 0;
-      vertical-align: text-top;
-    }
+  .beer-detail-name {
+    display: inline;
+    line-height: 1em;
+    margin: 0 0.25em 0 0;
+    vertical-align: text-top;
   }
 
   .beer-notes {
@@ -82,14 +76,33 @@
     }
   }
 
+  &.active {
+    .beer-details { max-height: 100em; }
+    .beer-notes {
+      white-space: normal;
+
+      & > p { display: block; }
+    }
+  }
+
   .beer-drawer {
+    $drawer-color: $brown-accent;
     @include pad;
-    background-color: #eee;
+    background-color: $drawer-color;
     display: none;
     text-align: center;
+    box-shadow: inset 0 1px 5px darken($drawer-color, 70%);
   }
 
   @include media($mobile) {
+    .beer-detail {
+      width: 50%;
+
+      &.beer-best-by,
+      &.beer-size { display: none; }
+
+      &.beer-cellared-on { text-align: right; }
+    }
 
     .beer-statuses {
       .btn-group {

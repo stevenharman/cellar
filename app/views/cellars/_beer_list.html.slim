@@ -7,26 +7,28 @@
     - for beer in beer_list
       li.beer-list-beer*{'data-id' => beer.id} class="beer-status-#{beer.status}"
 
-        .for-trade
-          i.icon-gift
-        .see-more
-          i.icon-chevron-down
+        .beer-list-beer-body
 
-        ul.beer-details
-          li.beer-detail.beer-vintage
-            label.beer-detail-name= t('.vintage')
-            time= beer.vintage
-          li.beer-detail.beer-best-by
-            label.beer-detail-name= t('.best_by')
-            = ldate(beer.best_by, format: :month_day_year)
-          li.beer-detail.beer-size
-            label.beer-detail-name= t('.size')
-            = beer.size.full_name if beer.size
-          li.beer-detail.beer-cellared-on
-            label.beer-detail-name= t('.cellared_on')
-            = ldate(beer.created_at, format: :month_year)
-          li.beer-detail.beer-notes
-            = simple_format(beer.notes)
+          .for-trade
+            i.icon-gift
+          .see-more
+            i.icon-chevron-down
+
+          ul.beer-details
+            li.beer-detail.beer-vintage
+              label.beer-detail-name= t('.vintage')
+              time= beer.vintage
+            li.beer-detail.beer-best-by
+              label.beer-detail-name= t('.best_by')
+              = ldate(beer.best_by, format: :month_day_year)
+            li.beer-detail.beer-size
+              label.beer-detail-name= t('.size')
+              = beer.size.full_name if beer.size
+            li.beer-detail.beer-cellared-on
+              label.beer-detail-name= t('.cellared_on')
+              = ldate(beer.created_at, format: :month_year)
+            li.beer-detail.beer-notes
+              = simple_format(beer.notes)
 
         .beer-drawer
           = simple_form_for beer, url: cellar_distribution_order_path(beer.user), html: {class: 'beer-statuses'} do
