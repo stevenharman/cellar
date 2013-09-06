@@ -33,12 +33,12 @@ module BrewdegaCellar
     config.assets.initialize_on_precompile = false
 
     # Allow CORS requests for assets
-    config.middleware.use Rack::Cors, logger: Rails.logger do
+    config.middleware.insert 0, Rack::Cors, logger: Rails.logger do
       allow do
         origins '*'
         resource '/assets/*',
           headers: :any,
-          methods: [:get]
+          methods: [:get, :options]
       end
     end
   end
