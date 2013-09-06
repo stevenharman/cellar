@@ -71,8 +71,8 @@ GEM
     capybara-webkit (1.0.0)
       capybara (~> 2.0, >= 2.0.2)
       json
-    celluloid (0.14.1)
-      timers (>= 1.0.0)
+    celluloid (0.15.1)
+      timers (~> 1.1.0)
     coderay (1.0.9)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
@@ -88,7 +88,7 @@ GEM
     database_cleaner (1.1.1)
     debug_inspector (0.0.2)
     descendants_tracker (0.0.1)
-    devise (3.1.0.rc2)
+    devise (3.1.0)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -122,7 +122,7 @@ GEM
     haml (4.0.3)
       tilt
     hashie (2.0.5)
-    heroku (2.40.0)
+    heroku (2.40.1)
       heroku-api (~> 0.3.7)
       launchy (>= 0.3.2)
       netrc (~> 0.7.7)
