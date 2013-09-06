@@ -11,6 +11,7 @@ gem 'kaminari'
 gem 'newrelic_rpm'
 gem 'pg'
 gem 'pg_search'
+gem 'rack-cors'
 gem 'simple_form', '~> 3.0.0.rc'
 gem 'slim', '~> 2.0'
 gem 'sinatra', require: false # for sidekiq monitoring
