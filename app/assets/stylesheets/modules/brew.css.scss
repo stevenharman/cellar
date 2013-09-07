@@ -4,7 +4,6 @@
 
   .full-ui & {
     .add-to-cellar {
-      float: right;
       margin-bottom: 1em;
     }
 
@@ -13,10 +12,8 @@
     }
   }
 
-  .mobile-ui & {
-    .add-to-cellar {
-      display: block
-    }
+  .call-to-action {
+    text-align: center;
   }
 }
 

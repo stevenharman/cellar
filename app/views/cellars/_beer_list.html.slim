@@ -45,7 +45,5 @@
     - if beer_list.empty?
       li.beer-list-beer.beer-list-empty
         span.message= t('.empty', brew_name: brew.name)
-        = link_to(new_stock_order_path(brew: brew), class: 'stock-one-now btn') do
-          span.icon-plus-sign
-          =< t('cellar.stock_one_now')
+        = render 'brews/stock_one', brew: brew
 
