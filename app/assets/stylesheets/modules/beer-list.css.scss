@@ -53,6 +53,7 @@
 
   .beer-detail {
     @include inline-block;
+    white-space: nowrap;
     width: 25%;
   }
 
@@ -65,10 +66,10 @@
 
   .beer-notes {
     @include text-overflow;
-    display: block;
-    width: 100% ! important;
-    font-size: 0.8em;
     color: $base-font-color-light;
+    display: block;
+    font-size: 0.8em;
+    width: 100% ! important;
 
     & > p {
       font-size: inherit;
@@ -87,21 +88,28 @@
 
   .beer-drawer {
     $drawer-color: $brown-accent;
+
     @include pad;
     background-color: $drawer-color;
+    box-shadow: inset 0 1px 5px darken($drawer-color, 70%);
     display: none;
     text-align: center;
-    box-shadow: inset 0 1px 5px darken($drawer-color, 70%);
   }
 
-  @include media($mobile) {
+  @include media($tablet) {
     .beer-detail {
       width: 50%;
 
       &.beer-best-by,
       &.beer-size { display: none; }
 
+      &.beer-best-by,
       &.beer-cellared-on { text-align: right; }
+    }
+
+    &.active {
+      .beer-best-by,
+      .beer-size { display: inline-block; }
     }
 
     .beer-statuses {
@@ -114,6 +122,12 @@
           padding: 0.5em 0.7em;
         }
       }
+    }
+  }
+
+  @include media($mobile) {
+    .beer-detail {
+      font-size: 0.9em;
     }
   }
 }
