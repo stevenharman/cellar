@@ -6,6 +6,6 @@ article.brew*{'data-id' => @brew.id}
     h1.name= @brew.name
     .brewery-name= render 'brews/breweries', brew: @brew
 
-  = render 'brews/stock_one', brew: @brew
   = render 'cellars/stats', cellar: current_cellar, brew: @brew
+  = render 'brews/add_to_cellar', brew: @brew
   = render 'cellars/beer_list', cellar: current_cellar, brew: @brew

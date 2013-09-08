@@ -1,0 +1,10 @@
+@import '../globals/all';
+
+.add-to-cellar {
+  margin-bottom: 0.5em;
+  text-align: center;
+
+  .mobile-ui & {
+    & > .btn { width: 100%; }
+  }
+}

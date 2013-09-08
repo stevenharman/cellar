@@ -45,5 +45,5 @@
     - if beer_list.empty?
       li.beer-list-beer.beer-list-empty
         span.message= t('.empty', brew_name: brew.name)
-        = render 'brews/stock_one', brew: brew
+        = render 'brews/add_to_cellar', brew: brew
 

@@ -31,7 +31,7 @@ article.split-view.brew*{'data-id' => @brew.id}
     = render 'cellars/stats', cellar: current_cellar, brew: @brew
 
   .split-view-sidebar
-    = render 'brews/stock_one', brew: @brew
+    = render 'brews/add_to_cellar', brew: @brew
     = image_tag(@brew.large_image, alt: @brew.name, class: 'brew-label')
 
     .from-other-cellars
