@@ -6,12 +6,13 @@
 
 .beer-list-beer {
   $action-width: 1.25rem;
-  $item-height: 3em;
+  $item-height: 5em;
 
   @include row;
   border: 1px solid $section-border-color;
   border-radius: 3px;
   margin-bottom: 1em;
+  overflow: hidden;
 
   &:last-child { margin-bottom: 0; }
 
@@ -66,10 +67,12 @@
 
   .beer-notes {
     @include text-overflow;
+    border-top: 1px dotted $section-border-color;
     color: $base-font-color-light;
     display: block;
     font-size: 0.8em;
-    width: 100% ! important;
+    margin: 0.25em auto 0;
+    width: 94% ! important;
 
     & > p {
       font-size: inherit;
@@ -101,15 +104,7 @@
       width: 50%;
 
       &.beer-best-by,
-      &.beer-size { display: none; }
-
-      &.beer-best-by,
       &.beer-cellared-on { text-align: right; }
-    }
-
-    &.active {
-      .beer-best-by,
-      .beer-size { display: inline-block; }
     }
 
     .beer-statuses {
