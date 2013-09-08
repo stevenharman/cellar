@@ -1,19 +1,13 @@
 section.marketing-section.marketing-section-signup
-  .intro-view
-    .intro-view-main
-      h1 stock, track & find your beer with ease
-      p What if keeping track of your beers were as easy as drinking them? Saving one for later is easy. Remembering what you have is not. Sign up now to make cellaring as easy as drinking.
-    .intro-view-sidebar
-      = simple_form_for @user do |f|
-        - if @user.errors.any?
-          ul.error_messages
-            - for message in @user.errors.full_messages
-              li= message
-
-        = f.input :username, input_html: { autofocus: true }
-        = f.input :email
-        = f.input :password, required: true
-        = f.submit t('cellar.sign_up_for_cellar'), id: 'sign_up', class: 'btn-primary'
+  .intro-view-main
+    h1 stock, track & find your beer with ease
+    p What if keeping track of your beers were as easy as drinking them? Saving one for later is easy. Remembering what you have is not. Sign up now to make cellaring as easy as drinking.
+  .intro-view-sidebar
+    = simple_form_for @user do |f|
+      = f.input :username
+      = f.input :email
+      = f.input :password, required: true
+      = f.submit t('cellar.sign_up_for_cellar'), id: 'sign_up', class: 'btn-primary'
 
 section.marketing-section.marketing-section-stocking
   h1 easy to stock

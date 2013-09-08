@@ -1,69 +1,38 @@
 @import 'globals/all';
 
 .marketing-section {
+  @include clearfix;
+  @include pad;
+  min-height: 24em;
+
   h1 {
-    text-transform: uppercase;
     font-size: 4em;
+    line-height: 0.85em;
+    text-transform: uppercase;
   }
-  padding: 2em 0;
-  min-height: 420px;
 }
 
 .marketing-section-signup {
   background-color: $section-background-color;
 
-  .intro-view {
-  @include clearfix;
-  }
+  h1 { color: $orange; }
 
   .intro-view-main {
     @include span-columns(8 of 12);
-    padding: 0 2em;
   }
 
   .intro-view-sidebar {
     @include span-columns(4 of 12);
   }
 
-  h1 {
-    color: $orange;
-    font-size: 6em;
-    line-height: 0.85em;
+  @include media($desktop) {
+    h1 { font-size: 6em; }
   }
-}
 
-.marketing-section-junk {
-  .call-to-action {
-    background-color: $brown;
-    margin: 0;
-    text-transform: uppercase;
-
-    a {
-      color: white;
-      display: block;
-      padding: 0.5em 0 0.25em;
-
-      &:hover {
-        text-decoration: none;
-        color: darken(white, 15%);
-      }
-    }
-    small {
-      color: $brown-highlight;
-      display: block;
-      font-family: $small-font-family;
-      font-size: em(8, 16);
-      line-height: 1em;
-    }
-
-    h2 {
-      font-size: 2.5em;
-    }
-
-    li {
-      border-bottom: 1px dotted $brown-highlight;
-      margin: 0 1em;
-      &:last-child { border-bottom: none; }
+  @include media($tablet) {
+    .intro-view-main,
+    .intro-view-sidebar {
+      @include fill-parent;
     }
   }
 }
@@ -74,7 +43,7 @@
 }
 
 .marketing-section-tracking {
-  background-color: #fff;
+  background-color: white;
   text-align: center;
 
   .tracking-items {
@@ -92,7 +61,5 @@
   background-color: $orange;
   text-align: center;
 
-  h1 {
-    color: #fff;
-  }
+  h1 { color: white; }
 }
