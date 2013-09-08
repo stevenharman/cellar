@@ -6,5 +6,5 @@ article.brews
     h1 = t('.title')
 
   fieldset
-    == render 'brews/cards', brews: @brews, this_cellar: current_cellar, your_cellar: current_cellar
+    == render 'brews/cards', brews: @brews, requested_cellar: current_cellar, current_cellar: current_cellar
   = paginate @brews

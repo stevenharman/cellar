@@ -1,4 +1,4 @@
 ul.cards
   - for brew in brews
     li.card
-      == render 'brews/card', brew: brew, this_cellar: this_cellar, your_cellar: your_cellar
+      == render 'brews/card', brew: brew, requested_cellar: requested_cellar, current_cellar: current_cellar

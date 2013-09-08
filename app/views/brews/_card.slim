@@ -24,13 +24,13 @@ article.brew*{'data-id' => brew.id}
       li.actions
         = link_to(brew, title: t('.inventory.actions')) do
           i.icon-cog
-      - unless your_cellar == this_cellar
+      - unless current_cellar == requested_cellar
         li.this-cellar-cellared
-          = this_cellar.beers_count(brew)
+          = requested_cellar.beers_count(brew)
           label= t('.inventory.this_cellar_cellared')
-      - if your_cellar.active?
+      - if current_cellar.active?
         li.your-cellared
-          = your_cellar.beers_count(brew)
+          = current_cellar.beers_count(brew)
           label= t('.inventory.your_cellared')
       li.all-cellared
         = brew.cellared_beers_count

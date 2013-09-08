@@ -16,4 +16,4 @@ article.brewery*{'data-id' => @brewery.id}
 
   fieldset.brewery-brews.row-fluid
     legend= t('.legend')
-    == render 'brews/cards', brews: @brewery.brews, this_cellar: current_cellar, your_cellar: current_cellar
+    == render 'brews/cards', brews: @brewery.brews, requested_cellar: current_cellar, current_cellar: current_cellar
