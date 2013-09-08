@@ -1,10 +1,31 @@
 @import '../globals/all';
 
 .brew {
+  position: relative;
 
   .full-ui & {
     .brew-label {
       margin-bottom: 1em;
+    }
+  }
+
+  .mobile-ui & {
+    overflow: hidden;
+    padding: 0.5em 0;
+    z-index: 1;
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .brew-label {
+      position: absolute;
+      min-height: 100%;
+      min-width: 100%;
+      opacity: 0.25;
+      top: 0;
+      z-index: -1;
     }
   }
 }

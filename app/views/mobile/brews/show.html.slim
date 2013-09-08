@@ -2,6 +2,7 @@
   = @brew.name
 
 article.brew*{'data-id' => @brew.id}
+  = image_tag(@brew.large_image, alt: @brew.name, class: 'brew-label')
   hgroup.brew-basics
     h1.name= @brew.name
     .brewery-name= render 'brews/breweries', brew: @brew

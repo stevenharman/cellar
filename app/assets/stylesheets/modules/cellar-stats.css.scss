@@ -24,6 +24,10 @@
   border-radius: 4px;
   background-color: $section-background-color;
 
+  .mobile-ui & {
+    background-color: rgba($section-background-color, 0.9);
+  }
+
   .stat {
     float: left;
     margin-right: 1em;

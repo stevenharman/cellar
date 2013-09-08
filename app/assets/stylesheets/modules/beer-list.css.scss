@@ -9,6 +9,7 @@
   $item-height: 5em;
 
   @include row;
+  background-color: rgba(white, 0.9);
   border: 1px solid $section-border-color;
   border-radius: 3px;
   margin-bottom: 1em;
