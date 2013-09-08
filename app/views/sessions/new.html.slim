@@ -1,10 +1,11 @@
-= simple_form_for @user, url: new_user_session_path do |f|
-  = f.input :username, required: false, input_html: { autofocus: true }
-  = f.input :password
-  = f.input :remember_me, as: :boolean, label: false, inline_label: t('.remember_me')
-  = f.button :submit, t('cellar.sign_in'), class: 'btn-primary'
-  p
-    =' link_to(t('.forgot_password'), new_settings_password_reset_path)
-    =' t('.link_separator')
-    = link_to(t('.confirmation_instructions'), new_confirmation_path, class: 'resend-confirmation')
-p= t('.sign_up_html', link: link_to(t('cellar.sign_up'), sign_up_path))
+.full-page
+  = simple_form_for @user, url: new_user_session_path do |f|
+    = f.input :username, required: false, input_html: { autofocus: true }
+    = f.input :password
+    = f.input :remember_me, as: :boolean, label: false, inline_label: t('.remember_me')
+    = f.button :submit, t('cellar.sign_in'), class: 'btn-success'
+    p
+      =' link_to(t('.forgot_password'), new_settings_password_reset_path)
+      =' t('.link_separator')
+      = link_to(t('.confirmation_instructions'), new_confirmation_path, class: 'resend-confirmation')
+  p= t('.sign_up_html', link: link_to(t('cellar.sign_up'), sign_up_path))

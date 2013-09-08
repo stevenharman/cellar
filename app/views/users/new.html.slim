@@ -1,14 +1,15 @@
-h1 Sign up for the Brewdega Cellar.
+.full-page
+  h1 Sign up for the Brewdega Cellar.
 
-= simple_form_for @user do |f|
-  - if @user.errors.any?
-    ul.error_messages
-      - for message in @user.errors.full_messages
-        li= message
+  = simple_form_for @user do |f|
+    - if @user.errors.any?
+      ul.error_messages
+        - for message in @user.errors.full_messages
+          li= message
 
-  = f.input :username, input_html: { autofocus: true }
-  = f.input :email
-  = f.input :password, required: true
-  = f.submit t('cellar.sign_up_for_cellar'), id: 'sign_up', class: 'btn-primary'
+    = f.input :username, input_html: { autofocus: true }
+    = f.input :email
+    = f.input :password, required: true
+    = f.submit t('cellar.sign_up_for_cellar'), id: 'sign_up', class: 'btn-success'
 
-p Already have an account? #{link_to 'Sign in', new_user_session_path} now!
+  p Already have an account? #{link_to 'Sign in', new_user_session_path} now!

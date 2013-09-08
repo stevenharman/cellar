@@ -1,5 +1,6 @@
-h2 Resend confirmation instructions
+.full-page
+  h1 Resend confirmation instructions
 
-= simple_form_for(@user, :url => confirmation_path, method: :post) do |f|
-  =f.input :username, autofocus: true
-  =f.submit t('cellar.confirmations.resend_button'), class: 'resend-confirmation'
+  = simple_form_for(@user, :url => confirmation_path, method: :post) do |f|
+    =f.input :username, autofocus: true
+    =f.submit t('cellar.confirmations.resend_button'), class: 'resend-confirmation btn-success'

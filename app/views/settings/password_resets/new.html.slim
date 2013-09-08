@@ -1,5 +1,6 @@
-h3 Request a password reset
-= simple_form_for(@user, url: settings_password_reset_path, method: :post) do |f|
-  = f.input :username
-  = f.submit 'Reset password', class: 'request-password-reset btn-success'
+.full-page
+  h1 Request a password reset
 
+  = simple_form_for(@user, url: settings_password_reset_path, method: :post) do |f|
+    = f.input :username
+    = f.submit 'Reset password', class: 'request-password-reset btn-success'
