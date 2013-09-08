@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :redirect_if_already_signed_in, only: :new
+  before_filter :redirect_if_already_signed_in, only: [:create, :new]
 
   def new
     @user = User.new
