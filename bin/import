@@ -6,7 +6,7 @@ set -e
 heroku pgbackups:capture --expire
 
 # Download the backup
-curl -o /tmp/cellar.dump `heroku pgbackups:url`
+curl -# -o /tmp/cellar.dump `heroku pgbackups:url`
 
 # Restore the backup
 pg_restore --verbose --clean --no-acl --no-owner -h 127.0.0.1 -U `whoami` -d cellar_development /tmp/cellar.dump
