@@ -6,7 +6,7 @@
 
 .beer-list-beer {
   $action-width: 1.5rem;
-  $item-height: 5em;
+  $item-height: 3em;
 
   @include row;
   background-color: rgba(white, 0.9);
@@ -103,8 +103,14 @@
   }
 
   @include media($tablet) {
-    .beer-detail {
-      width: 50%;
+    $item-height: 5em;
+
+    .beer-details { max-height: $item-height; }
+    .beer-detail { width: 50%; }
+
+    .see-more,
+    .for-trade {
+      line-height: $item-height;
     }
 
     .beer-statuses {
