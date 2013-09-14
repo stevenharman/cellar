@@ -2,19 +2,11 @@
 
 .cellar-stats {
   .full-ui & {
-    border-top: 1px solid $base-border-color;
     margin-bottom: 0.5em;
-    margin-top: 1.5em;
   }
 
   .mobile-ui & {
     margin: 0.5em 0;
-  }
-}
-
-.cellar-stats-legend {
-  .mobile-ui & {
-    display: none;
   }
 }
 

@@ -162,7 +162,6 @@ en:
       size: "Size"
       vintage: "Vintage"
     stats:
-      title: "Cellar Stats"
       all_cellared: "All cellars"
       for_trade: "For trade"
       in_search_of: "In search of"
