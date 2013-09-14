@@ -20,7 +20,7 @@ $light-green: #E6EFC2;
 
 //  Font Colors
 $base-font-color: $brown;
-$base-font-color-light: lighten($base-font-color, 15%);
+$base-font-color-light: desaturate(lighten($base-font-color, 15%), 10%);
 $base-font-color-disabled: lighten($base-font-color, 25%);
 
 //  Text Link Colors
