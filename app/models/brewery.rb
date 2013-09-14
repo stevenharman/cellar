@@ -17,6 +17,7 @@ class Brewery < ActiveRecord::Base
   multisearchable against: [:name]
 
   scope :cellared, -> { all.merge(Beer.cellared) }
+  scope :neglected, -> { where(brewery_db_status: [:deleted, :unknown]) }
 
   def self.find_by_brewery_db_ids(ids)
     where(brewery_db_id: ids)

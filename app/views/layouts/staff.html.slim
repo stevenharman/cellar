@@ -3,14 +3,16 @@
   article.staff.split-view
     nav.split-view-sidebar
       ul.split-view-nav
-        li.style-guide class=(active_nav('style_guide'))
-          = link_to(t('.style_guide'), staff_style_guide_path)
         li.switch-view class=(active_nav('mobile_desktop_preference'))
           = link_to(t('.mobile_desktop_preferences'), staff_mobile_desktop_preference_path)
+        li.neglected-data class=(active_nav('neglected_data'))
+          = link_to(t('.neglected_data'), staff_neglected_data_path)
         li.maintenance-tasks class=(active_nav('maintenance_task'))
           = link_to(t('.maintenance_tasks'), staff_maintenance_tasks_path)
         li.background-jobs
           = link_to(t('.background_jobs'), staff_background_jobs_path)
+        li.style-guide class=(active_nav('style_guide'))
+          = link_to(t('.style_guide'), staff_style_guide_path)
     .staff-content.split-view-main
       = yield
 

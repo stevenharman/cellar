@@ -18,8 +18,9 @@ class Brew < ActiveRecord::Base
   LABELS = [:icon, :medium_image, :large_image].freeze
   store :labels, accessors: LABELS
 
-  scope :cellared, -> { all.merge(Beer.cellared) }
   scope :by_name, -> { order(:name) }
+  scope :cellared, -> { all.merge(Beer.cellared) }
+  scope :neglected, -> { where(brewery_db_status: [:deleted, :unknown]) }
 
   #TODO use tsvector columns w/triggers for updating.
   # see: https://github.com/jenseng/hair_trigger

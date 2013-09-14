@@ -193,6 +193,7 @@ en:
       background_jobs: "Background Jobs"
       maintenance_tasks: "Mainenance Tasks"
       mobile_desktop_preferences: "Mobile/Desktop View"
+      neglected_data: "Neglected Data"
       style_guide: "Style Guide"
 
   shared:

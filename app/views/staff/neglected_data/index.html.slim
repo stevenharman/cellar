@@ -1,0 +1,36 @@
+fieldset.neglected-data
+  legend Neglected Data
+
+  h3 Breweries
+  ul.neglected-data-list
+    - for brewery in @neglected_data.breweries do
+      li.neglected-item
+        .neglected-item-details
+          h5.neglected-item-name= brewery.name
+          p.neglected-item-description
+            | BreweryDB.com: #{link_to brewery.brewery_db_id, brewery_db_brewery_url(brewery)}
+              (#{brewery.brewery_db_status}).
+              Last Updated: #{ldate(brewery.updated_at, format: :long)}.
+
+    - if @neglected_data.breweries.empty?
+      li.neglected-item.empty
+        .neglected-item-details
+          h5 All is well!
+          p There don't appear to be any neglected Breweries.
+
+  h3 Brews
+  ul.neglected-data-list
+    - for brew in @neglected_data.brews do
+      li.neglected-item
+        .neglected-item-details
+          h5.neglected-item-name= brew.name
+          p.neglected-item-description
+            | BreweryDB.com: #{link_to brew.brewery_db_id, brewery_db_brew_url(brew)}
+              (#{brew.brewery_db_status}).
+              Last Updated: #{ldate(brew.updated_at, format: :long)}.
+
+    - if @neglected_data.brews.empty?
+      li.neglected-item.empty
+        .neglected-item-details
+          h5 All is well!
+          p There don't appear to be any neglected Brews.
