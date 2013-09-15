@@ -201,7 +201,7 @@ en:
         button: "Search"
         placeholder: "Find a beer or brewery..."
         text: "Search"
-    profile:
+    profile_box:
       joined_html: "Joined on %{date}"
 
   # App-wide

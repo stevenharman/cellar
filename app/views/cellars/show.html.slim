@@ -2,7 +2,7 @@
   = @cellar.full_name
 
 article.cellar
-  == render 'shared/profile', profile: @cellar.profile
+  == render 'shared/profile_box', profile: @cellar.profile
   fieldset.cellared-brews
     legend Cellared Beers
     == render 'brews/cards', brews: @cellar.cellared_brews, requested_cellar: @cellar, current_cellar: current_cellar
