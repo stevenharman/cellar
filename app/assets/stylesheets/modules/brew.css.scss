@@ -58,7 +58,6 @@
     line-height: 1.1em;
     font-size: em(12, 16);
 
-    //&.style { @include span-columns(3 of 9); }
     &:last-child { @include omega; }
 
     label {

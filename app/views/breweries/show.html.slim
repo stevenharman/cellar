@@ -1,19 +1,31 @@
 - content_for :title do
   = @brewery.name
 
-article.brewery*{'data-id' => @brewery.id}
-  hgroup
-    h2= @brewery.name
+article.split-view.brewery*{'data-id' => @brewery.id}
+  .split-view-main
+    hgroup.brewery-basics
+      h1.name= @brewery.name
 
-  .row-fluid
+    fieldset.brewery-brews
+      legend= t('.brews.legend')
+      == render 'brews/cards', brews: @brewery.brews, requested_cellar: current_cellar, current_cellar: current_cellar
+
+  .split-view-sidebar
     = image_tag(@brewery.large_image, alt: @brewery.name, class: :span3)
-    .span9
-      ul.details
+    = render 'breweries/stats', brewery: @brewery
+    ul.profile.brewery-details
       - if @brewery.website?
-        li.website
+        li.detail.website
           i.icon-external-link
           = link_to(@brewery.website_name, @brewery.website, title: @brewery.name)
+      - if @brewery.established?
+        li.detail.established
+          label
+            i.icon-time
+            |  Established
+          = ldate(@brewery.established, format: :year)
 
-  fieldset.brewery-brews.row-fluid
-    legend= t('.legend')
-    == render 'brews/cards', brews: @brewery.brews, requested_cellar: current_cellar, current_cellar: current_cellar
+      li.detail.description
+        label= t('.description')
+        = simple_format(@brewery.description)
+

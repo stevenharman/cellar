@@ -6,10 +6,12 @@ en:
     formats:
       month_year: "%b %Y"
       month_day_year: "%b %-d, %Y"
+      year: "%Y"
   time:
     formats:
       month_day_year: "%b %-d, %Y"
       month_year: "%b %Y"
+      year: "%Y"
 
   # ActiveModel
 
@@ -151,6 +153,12 @@ en:
           error: "Woops! The %{task_name} wasn't queued to run."
 
   # Views
+
+  breweries:
+    show:
+      description: "About"
+      brews:
+        legend: "Brews"
 
   cellars:
     beer_list:

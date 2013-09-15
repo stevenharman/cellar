@@ -3,6 +3,7 @@ require 'pg_search'
 class Brewery < ActiveRecord::Base
   has_many :brewery_brews, inverse_of: :brewery, dependent: :destroy
   has_many :brews, -> { uniq }, through: :brewery_brews
+  has_many :beers, through: :brews
 
   validates :name, presence: true
   validates :brewery_db_id, uniqueness: true, presence: true

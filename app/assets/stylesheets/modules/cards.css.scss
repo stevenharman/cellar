@@ -7,6 +7,12 @@
     @include media($desktop) {
       @include span-columns(4 of 12);
       @include omega(3n);
+
+      .split-view-main & {
+        @include omega-reset(3n);
+        @include span-columns(6 of 12);
+        @include omega(2n);
+      }
     }
 
     @include media($desktop-small) {
