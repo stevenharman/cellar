@@ -23,70 +23,6 @@ en:
             current:
               invalid: "does not match"
 
-
-  # Controllers
-
-  cellar_beers:
-    show:
-      edit_link: "Edit this beer"
-    edit:
-      cancel: "Nevermind"
-      update: "Update"
-
-  breweries:
-    show:
-      legend: "Brews"
-    index:
-      title: "Browse breweries"
-    card:
-      inventory:
-        actions: "See the beers"
-        brews_count: "Brews"
-
-  brews:
-    index:
-      title: "Browse brews"
-    card:
-      inventory:
-        actions: "See your cellared beers"
-        all_cellared: "All cellars"
-        this_cellar_cellared: "This cellar"
-        your_cellared: "Your cellar"
-    show:
-      from-other-cellars: "From other cellars"
-
-  searches:
-    show:
-      summary: "We found %{count} matches"
-    form:
-      button: "Search"
-      placeholder: "Find a beer or brewery..."
-
-  stock_orders:
-    new:
-      cancel: "Nevermind"
-      create: "Cellar it!"
-  sessions:
-    new:
-      confirmation_instructions: "Missing confirmation email?"
-      forgot_password: "Forgot your password?"
-      link_separator: "or"
-      remember_me: "Yes, remember me"
-      sign_up_html: "Don't have an account? %{link} for one now!"
-
-  settings:
-    password_changes:
-      link: "Change password"
-      new:
-        title: "Change your password"
-        button: "Make it so"
-
-    profiles:
-      link: "Edit profile"
-      title: "My profile"
-      edit:
-        update_button: "Update"
-
   # Flash messages
 
   flash:
@@ -159,6 +95,25 @@ en:
       description: "About"
       brews:
         legend: "Brews"
+      legend: "Brews"
+    index:
+      title: "Browse breweries"
+    card:
+      inventory:
+        actions: "See the beers"
+        brews_count: "Brews"
+
+  brews:
+    index:
+      title: "Browse brews"
+    card:
+      inventory:
+        actions: "See your cellared beers"
+        all_cellared: "All cellars"
+        this_cellar_cellared: "This cellar"
+        your_cellared: "Your cellar"
+    show:
+      from-other-cellars: "From other cellars"
 
   cellars:
     beer_list:
@@ -174,6 +129,13 @@ en:
       for_trade: "For trade"
       in_search_of: "In search of"
       your_cellared: "Your cellar"
+
+  cellar_beers:
+    show:
+      edit_link: "Edit this beer"
+    edit:
+      cancel: "Nevermind"
+      update: "Update"
 
   errors:
     internal_server_error:
@@ -203,6 +165,34 @@ en:
       neglected_data: "Neglected Data"
       style_guide: "Style Guide"
 
+  searches:
+    show:
+      summary: "We found %{count} matches"
+    form:
+      button: "Search"
+      placeholder: "Find a beer or brewery..."
+
+  sessions:
+    new:
+      confirmation_instructions: "Missing confirmation email?"
+      forgot_password: "Forgot your password?"
+      link_separator: "or"
+      remember_me: "Yes, remember me"
+      sign_up_html: "Don't have an account? %{link} for one now!"
+
+  settings:
+    password_changes:
+      link: "Change password"
+      new:
+        title: "Change your password"
+        button: "Make it so"
+
+    profiles:
+      link: "Edit profile"
+      title: "My profile"
+      edit:
+        update_button: "Update"
+
   shared:
     awning:
       search:
@@ -211,6 +201,11 @@ en:
         text: "Search"
     profile_box:
       joined_html: "Joined on %{date}"
+
+  stock_orders:
+    new:
+      cancel: "Nevermind"
+      create: "Cellar it!"
 
   # App-wide
 
