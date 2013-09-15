@@ -1,4 +1,4 @@
-.stats-box
+.stats-box.brewery-stats
   ul.stats-box-list
     = render('shared/stat', name: 'Brews', value: brewery.brews.count)
     = render('shared/stat', name: 'Cellared Beers', value: brewery.beers.cellared.count, wrapper: 'all-cellared')

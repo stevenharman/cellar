@@ -3,12 +3,6 @@
 .brew {
   position: relative;
 
-  .full-ui & {
-    .brew-label {
-      margin-bottom: 0.5em;
-    }
-  }
-
   .mobile-ui & {
     overflow: hidden;
     padding: 0.5em 0;

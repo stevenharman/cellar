@@ -1,10 +1,15 @@
 @import '../globals/all';
 
 .add-to-cellar {
-  margin-bottom: 0.5em;
   text-align: center;
 
   .mobile-ui & {
     & > .btn { width: 100%; }
+  }
+
+  .product-details & {
+    margin: 0.5em 0;
+
+    &:first-child { margin-top: 0; }
   }
 }

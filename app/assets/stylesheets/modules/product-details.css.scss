@@ -1,0 +1,23 @@
+@import '../globals/all';
+
+.product-details {
+}
+
+.product-details-image {
+  $border-radius: 4px;
+
+  margin-bottom: 0.5em;
+
+  img {
+    @include border-top-radius($border-radius);
+    background-color: white;
+    border: 1px solid $section-background-color;
+    display: block;
+    padding: $border-radius;
+  }
+
+  .stats-box-list {
+    border-radius: 0 0 $border-radius $border-radius;
+  }
+}
+

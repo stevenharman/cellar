@@ -1,13 +1,6 @@
 @import '../globals/all';
 
 .stats-box {
-  .full-ui & {
-    margin-bottom: 0.5em;
-  }
-
-  .mobile-ui & {
-    margin: 0.5em 0;
-  }
 }
 
 .stats-box-list {
@@ -39,12 +32,14 @@
   }
 
   .stat-name {
-    text-transform: uppercase;
     font-size: em(12, 16);
+    margin-bottom: 0;
+    text-transform: uppercase;
   }
+
   .stat-value {
-    font-size: em(24, 16);
-    font-family: $small-font-family;
     color: $brightorange;
+    font-family: $small-font-family;
+    font-size: em(24, 16);
   }
 }

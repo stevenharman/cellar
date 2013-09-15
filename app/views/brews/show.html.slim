@@ -29,10 +29,11 @@ article.split-view.brew*{'data-id' => @brew.id}
 
     = render 'cellars/beer_list', cellar: current_cellar, brew: @brew
 
-  .split-view-sidebar
+  .split-view-sidebar.product-details
     = render 'brews/add_to_cellar', brew: @brew
-    = image_tag(@brew.large_image, alt: @brew.name, class: 'brew-label')
-    = render 'cellars/stats', cellar: current_cellar, brew: @brew
+    .product-details-image
+      = image_tag(@brew.large_image, alt: @brew.name, class: 'brew-label')
+      = render 'cellars/stats', cellar: current_cellar, brew: @brew
 
     .from-other-cellars
       h6.from-other-cellars-legend= t('.from-other-cellars')

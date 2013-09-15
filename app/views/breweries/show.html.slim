@@ -10,10 +10,11 @@ article.split-view.brewery*{'data-id' => @brewery.id}
       legend= t('.brews.legend')
       == render 'brews/cards', brews: @brewery.brews, requested_cellar: current_cellar, current_cellar: current_cellar
 
-  .split-view-sidebar
-    = image_tag(@brewery.large_image, alt: @brewery.name, class: :span3)
-    = render 'breweries/stats', brewery: @brewery
-    ul.profile.brewery-details
+  .split-view-sidebar.product-details
+    .product-details-image
+      = image_tag(@brewery.large_image, alt: @brewery.name, class: 'brewery-label')
+      = render 'breweries/stats', brewery: @brewery
+    ul.brewery-details
       - if @brewery.website?
         li.detail.website
           i.icon-external-link
