@@ -1,6 +1,6 @@
 @import '../globals/all';
 
-.cellar-stats {
+.stats-box {
   .full-ui & {
     margin-bottom: 0.5em;
   }
@@ -10,7 +10,7 @@
   }
 }
 
-.cellar-stats-list {
+.stats-box-list {
   @include clearfix;
   @include pad;
   border-radius: 4px;
