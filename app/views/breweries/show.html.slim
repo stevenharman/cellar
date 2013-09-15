@@ -15,18 +15,15 @@ article.split-view.brewery*{'data-id' => @brewery.id}
       = image_tag(@brewery.large_image, alt: @brewery.name, class: 'brewery-label')
       = render 'breweries/stats', brewery: @brewery
     ul.brewery-details
-      - if @brewery.website?
-        li.detail.website
-          i.icon-external-link
-          = link_to(@brewery.website_name, @brewery.website, title: @brewery.name)
       - if @brewery.established?
-        li.detail.established
-          label
-            i.icon-time
-            |  Established
+        li.product-detail.established
+          label= t('.established')
           = ldate(@brewery.established, format: :year)
-
-      li.detail.description
+      - if @brewery.website?
+        li.product-detail.website
+          label= t('.website')
+          = link_to(@brewery.website_name, @brewery.website, title: @brewery.name)
+      li.product-detail.description
         label= t('.description')
         = simple_format(@brewery.description)
 

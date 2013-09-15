@@ -1,6 +1,19 @@
 @import '../globals/all';
 
 .product-details {
+  label {
+    margin-bottom: 0;
+  }
+
+  .product-detail {
+    color: $base-font-color-light;
+    line-height: 1.1em;
+    margin-bottom: 0.5em;
+
+    &.description p {
+      font-size: 0.9em;
+    }
+  }
 }
 
 .product-details-image {

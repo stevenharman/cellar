@@ -41,13 +41,13 @@
 }
 
 .brew-description {
-  margin-bottom: 34px;
+  margin-bottom: 1em;
 }
 
 .brew-details {
   @include clearfix;
 
-  .detail {
+  .brew-detail {
     @include span-columns(2 of 9);
     line-height: 1.1em;
     font-size: em(12, 16);

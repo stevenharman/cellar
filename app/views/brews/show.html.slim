@@ -12,17 +12,17 @@ article.split-view.brew*{'data-id' => @brew.id}
         = simple_format(@brew.description)
 
       ul.brew-details
-        li.detail.style
+        li.brew-detail.style
           label Style
           = @brew.style_name
-        li.detail.abv
+        li.brew-detail.abv
           label ABV
           = @brew.abv
           | %
-        li.detail.ibu
+        li.brew-detail.ibu
           label IBU
           = @brew.ibu
-        li.detail.availability
+        li.brew-detail.availability
           label Availability
           = @brew.availability_name
 

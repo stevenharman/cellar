@@ -93,6 +93,8 @@ en:
   breweries:
     show:
       description: "About"
+      established: "Established"
+      website: "Website"
       brews:
         legend: "Brews"
       legend: "Brews"
