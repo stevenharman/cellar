@@ -21,11 +21,21 @@
   }
 
   .stat {
-    float: left;
-    margin-right: 1em;
+    @include inline-block;
     text-align: center;
 
-    &:last-child { margin-right: 0; }
+    &:first-child {
+      &:nth-last-child(1) { width: 100%; }
+
+      &:nth-last-child(2),
+      &:nth-last-child(2) ~ .stat { width: 50%; }
+
+      &:nth-last-child(3),
+      &:nth-last-child(3) ~ .stat { width: 33%; }
+
+      &:nth-last-child(4),
+      &:nth-last-child(4) ~ .stat { width: 25%; }
+    }
   }
 
   .stat-name {
