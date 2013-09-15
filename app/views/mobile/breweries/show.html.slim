@@ -1,0 +1,23 @@
+- content_for :title do
+  = @brewery.name
+
+article.product.brewery*{'data-id' => @brewery.id}
+  = image_tag(@brewery.large_image, alt: @brewery.name, class: 'product-image brewery-label')
+  hgroup.brewery-basics
+    h1.name= @brewery.name
+
+  .product-details
+    ul.brewery-details
+      - if @brewery.established?
+        li.product-detail.established
+          label= t('.established')
+          = ldate(@brewery.established, format: :year)
+      - if @brewery.website?
+        li.product-detail.website
+          label= t('.website')
+          = link_to(@brewery.website_name, @brewery.website, title: @brewery.name)
+
+    = render 'breweries/stats', brewery: @brewery
+
+  fieldset.brewery-brews
+    == render 'brews/cards', brews: @brewery.brews, requested_cellar: current_cellar, current_cellar: current_cellar
