@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: https://github.com/thoughtbot/bourbon.git
-  revision: fb9e3ac3005a8ebc1d14f8886b3a4a00ce72e8be
+  revision: 92790008b2c9b3c1f4b93a5d1e877a85753c7fce
   specs:
     bourbon (3.1.8)
       sass (>= 3.2.0)
