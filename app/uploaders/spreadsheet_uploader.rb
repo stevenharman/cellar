@@ -17,8 +17,22 @@ class SpreadsheetUploader < CarrierWave::Uploader::Base
     %w(csv)
   end
 
+  def filename
+    "#{file.basename}-#{secure_token}.#{file.extension}" if original_filename.present?
+  end
+
   def store_dir
-    "import/#{mounted_as}/#{model.id}"
+    "uploads/#{mounted_as}"
+  end
+
+  private
+
+  def ledger
+    model
+  end
+
+  def secure_token
+    ledger.spreadsheet_secure_token
   end
 
 end

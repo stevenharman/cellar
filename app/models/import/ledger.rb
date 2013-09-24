@@ -4,5 +4,10 @@ module Import
     mount_uploader :spreadsheet, SpreadsheetUploader
 
     validates :user, presence: true
+
+    def spreadsheet_secure_token
+      @spreadsheet_secure_token ||= SecureRandom.uuid
+    end
+
   end
 end
