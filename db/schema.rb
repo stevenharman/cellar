@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130813023435) do
+ActiveRecord::Schema.define(version: 20130922181231) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,6 +101,15 @@ ActiveRecord::Schema.define(version: 20130813023435) do
 
   add_index "categories", ["brewery_db_id"], name: "index_categories_on_brewery_db_id", unique: true, using: :btree
   add_index "categories", ["name"], name: "index_categories_on_name", unique: true, using: :btree
+
+  create_table "import_ledgers", force: true do |t|
+    t.integer  "user_id"
+    t.string   "spreadsheet"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "import_ledgers", ["user_id"], name: "index_import_ledgers_on_user_id", using: :btree
 
   create_table "pg_search_documents", force: true do |t|
     t.text     "content"

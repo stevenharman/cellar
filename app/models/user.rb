@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   has_many :beers, inverse_of: :user
   has_many :brews, -> { uniq }, through: :beers
   has_many :breweries, -> { uniq }, through: :brews
+  has_one :import_ledger, inverse_of: :user, class_name: 'Import::Ledger'
 
   validates :email, uniqueness: true, presence: true, email: true
   validates :username, uniqueness: true, presence: true
