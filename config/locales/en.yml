@@ -42,6 +42,13 @@ en:
           %{errors}
         success: "That %{name} was %{status}."
 
+    imports:
+      create:
+        error: "Woops! There was a problem uploading that file."
+        success: "Your file has been uploaded and we're working on it..."
+      new:
+        notice: "Looks like you've already got an import pending..."
+
     password_change:
       create:
         error: "Whoops! There was a problem changing your password."
