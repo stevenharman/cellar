@@ -20,6 +20,8 @@ ready to go.
 You can set some _optional_ [ENV Vars][env-vars] to tweak the way the app runs,
 or simulate the app running on other platforms.
 
+  - `AWS_ACCESS_KEY_ID`: Amazon AWS Access Key. _(No default)_
+  - `AWS_SECRET_ACCESS_KEY`: Amazon AWS Secret Access Key. _(No default)_
   - `BREWERY_DB_API_KEY`: key to use to connect to [BreweryDB.com][brewerydb].
     _(Default to our dev key)_
   - `DATABASE_REAP_FREQ`: how often (in seconds) the database connection pool
