@@ -21,6 +21,9 @@ class ImportsController < ApplicationController
 
   def show
     @import_ledger = current_user.import_ledger
+
+    redirect_to(new_import_path) and return unless @import_ledger
+
     render text: @import_ledger.as_json
   end
 
