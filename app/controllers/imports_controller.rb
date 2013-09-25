@@ -1,12 +1,9 @@
 class ImportsController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :enforce_one_import_ledger_per_user, only: [:new, :create]
   respond_to :html
 
   def new
-    if current_user.import_ledger.present?
-      redirect_to import_path, notice: t('flash.imports.new.notice')
-    end
-
     @import_ledger = Import::Ledger.new(user: current_user)
   end
 
@@ -28,6 +25,12 @@ class ImportsController < ApplicationController
   end
 
   private
+
+  def enforce_one_import_ledger_per_user
+    if current_user.import_ledger.present?
+      redirect_to import_path, notice: t('flash.imports.new.notice')
+    end
+  end
 
   def spreadsheet_file
     params.fetch(:import_ledger, {})[:spreadsheet]
