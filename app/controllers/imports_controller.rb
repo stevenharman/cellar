@@ -8,7 +8,7 @@ class ImportsController < ApplicationController
   end
 
   def create
-    @import_ledger = Import::Ledger.new(user: current_user, spreadsheet: spreadsheet_file)
+    @import_ledger = Import::Ledger.new(user: current_user, spreadsheet: ledger_params[:spreadsheet])
 
     if @import_ledger.save
       flash[:success] = t('flash.imports.create.success')
@@ -32,8 +32,8 @@ class ImportsController < ApplicationController
     end
   end
 
-  def spreadsheet_file
-    params.fetch(:import_ledger, {})[:spreadsheet]
+  def ledger_params
+    params.fetch(:import_ledger, {})
   end
 
 end

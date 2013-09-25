@@ -1,7 +1,7 @@
 .full-page
   h1 Import a <code>csv</code> file
 
-  = simple_form_for(@import_ledger, url: import_path) do |f|
+  = simple_form_for(@import_ledger, url: import_path, html: {multipart: true}) do |f|
     = f.input :spreadsheet, as: :file
     = f.submit 'Upload file', class: 'btn-success'
 
