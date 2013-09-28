@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
   private
 
   def sign_in_params
-    params.permit(:username, :password, :remember_me)
+    params.fetch(:user, {}).permit(:username, :password, :remember_me)
   end
 
 end

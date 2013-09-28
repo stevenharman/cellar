@@ -64,7 +64,7 @@ en:
         success: >
           You will receive an email with instructions about how to confirm your
           account in a few minutes.
-        error: "Whoops! There was a sending your confirmation instructions."
+        error: "Whoops! There was a problem sending your confirmation instructions."
       show:
         success: >
           Hello %{username}, your account was confirmed. Please sign in.
