@@ -3,24 +3,26 @@ require 'csv'
 module Import
   class Ledger < ActiveRecord::Base
     belongs_to :user, inverse_of: :import_ledger
-    mount_uploader :spreadsheet, SpreadsheetUploader
+    mount_uploader :csv_file, CsvFileUploader
 
-    validates :spreadsheet, presence: true
+    validates :csv_file, presence: true
     validates :user, presence: true, uniqueness: true
-    validate :spreadsheet_headers_found
+    validate :csv_file_headers_found
 
-    def spreadsheet_secure_token
-      @spreadsheet_secure_token ||= SecureRandom.uuid
+    def csv_file_secure_token
+      @csv_file_secure_token ||= SecureRandom.uuid
     end
 
     private
 
-    def spreadsheet_headers_found
-      csv = CSV.new(open(spreadsheet.url), headers: :first_row, header_converters: :symbol)
+    def csv_file_headers_found
+      return unless csv_file.url
+
+      csv = CSV.new(open(csv_file.url), headers: :first_row, header_converters: :symbol)
       csv.readline
       missing_headers = (SUPPORTED_HEADERS - Array(csv.headers))
       unless missing_headers.empty?
-        errors.add(:spreadsheet, "missing headers: #{missing_headers.collect{|h| h.to_s.humanize }.join(', ')}")
+        errors.add(:csv_file, "missing headers: #{missing_headers.collect{|h| h.to_s.humanize }.join(', ')}")
       end
     end
 

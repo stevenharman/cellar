@@ -1,6 +1,6 @@
 require 'carrierwave/processing/mime_types'
 
-class SpreadsheetUploader < CarrierWave::Uploader::Base
+class CsvFileUploader < CarrierWave::Uploader::Base
   include CarrierWave::MimeTypes
   process :set_content_type
 
@@ -32,7 +32,7 @@ class SpreadsheetUploader < CarrierWave::Uploader::Base
   end
 
   def secure_token
-    ledger.spreadsheet_secure_token
+    ledger.csv_file_secure_token
   end
 
 end
