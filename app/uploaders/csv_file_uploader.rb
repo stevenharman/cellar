@@ -10,7 +10,7 @@ class CsvFileUploader < CarrierWave::Uploader::Base
   end
 
   def cache_dir
-    "#{Rails.root}/tmp/uploads"
+    "#{Rails.root}/tmp/uploads/#{Rails.env}/#{mounted_as}"
   end
 
   def extension_white_list
@@ -22,7 +22,7 @@ class CsvFileUploader < CarrierWave::Uploader::Base
   end
 
   def store_dir
-    "uploads/#{mounted_as}"
+    "uploads/#{Rails.env}/#{mounted_as}"
   end
 
   private

@@ -21,6 +21,14 @@ RSpec.configure do |config|
     ActionMailer::Base.deliveries.clear
   end
 
+  config.after(:suite) do
+    if Rails.env.test?
+      csv_uploader = CsvFileUploader.new
+      FileUtils.rm_rf(Dir.glob("#{Rails.root}/public/#{csv_uploader.store_dir}"))
+      FileUtils.rm_rf(Dir.glob("#{csv_uploader.cache_dir}"))
+    end
+  end
+
   config.include Devise::TestHelpers, type: :controller
   config.include ControllerTestHelpers, type: :controller
   config.include FeatureTestHelpers, type: :feature
