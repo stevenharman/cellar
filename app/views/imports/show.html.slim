@@ -16,3 +16,7 @@
     - for column in @import_ledger.extra_columns
       li.import-column class=column
         = column.to_s.humanize
+
+  h2 Import Beers from <code>csv</code> File
+  = simple_form_for(@import_work_order) do |f|
+    = f.submit 'Start Import', class: 'start-import'

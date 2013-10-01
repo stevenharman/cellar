@@ -9,6 +9,7 @@ feature 'Importing a CSV file', :file_upload_helpers do
     upload_file('founders-breakfast-stout.csv')
     expect_file_to_have_been_uploaded
     start_import
+    expect_import_to_be_underway
   end
 
   private
@@ -17,8 +18,11 @@ feature 'Importing a CSV file', :file_upload_helpers do
     expect(page).to have_text(I18n.t('flash.imports.create.success'))
   end
 
+  def expect_import_to_be_underway
+    expect(page).to have_text(I18n.t('flash.import.work_orders.create.success'))
+  end
+
   def start_import
-    pending('Driving out import')
     find('.start-import').click
   end
 

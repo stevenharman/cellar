@@ -36,6 +36,11 @@ BrewdegaCellar::Application.routes.draw do
   resources :stock_orders, only: [:new, :create]
 
   resource :import, only: [:new, :create, :show]
+  namespace :import do
+    resources :work_orders, only: [:create]
+    resource :progress, only: [:show]
+  end
+
   resource :search, only: [:show]
 
   resource :heartbeat, only: [:show]

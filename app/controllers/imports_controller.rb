@@ -24,6 +24,7 @@ class ImportsController < ApplicationController
 
     redirect_to(new_import_path) and return unless @import_ledger
 
+    @import_work_order = Import::WorkOrder.new
     respond_with @import_ledger
   end
 
