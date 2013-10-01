@@ -1,0 +1,18 @@
+.full-page
+  h1 Import a <code>csv</code> file
+
+  p
+    | We took a look at the file you uploaded and have tried to match its
+      columns to those used in Cellar. Here's what we found...
+
+  h3 Matched Columns
+  ul.import-columns.matched-columns
+    - for column in @import_ledger.matched_columns
+      li.import-column class=column
+        = column.to_s.humanize
+
+  h3 Extra Columns
+  ul.import-columns.extra-columns
+    - for column in @import_ledger.extra_columns
+      li.import-column class=column
+        = column.to_s.humanize

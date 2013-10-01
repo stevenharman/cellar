@@ -24,7 +24,7 @@ class ImportsController < ApplicationController
 
     redirect_to(new_import_path) and return unless @import_ledger
 
-    render text: @import_ledger.as_json
+    respond_with @import_ledger
   end
 
   private

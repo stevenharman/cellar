@@ -9,24 +9,47 @@ module Import
     validates :user, presence: true, uniqueness: true
     validate :csv_file_headers_found
 
+    SUPPORTED_HEADERS = [:brewery, :brew, :best_by, :count, :notes, :size, :vintage]
+
     def csv_file_secure_token
       @csv_file_secure_token ||= SecureRandom.uuid
+    end
+
+    def extra_columns
+      spreadsheet_headers - SUPPORTED_HEADERS
+    end
+
+    def matched_columns
+      spreadsheet_headers & SUPPORTED_HEADERS
+    end
+
+    def spreadsheet
+      @spreadsheet ||= load_spreadsheet_from(csv_file.read)
     end
 
     private
 
     def csv_file_headers_found
-      return unless csv_file.url
+      return unless csv_file.present?
 
-      csv = CSV.new(open(csv_file.url), headers: :first_row, header_converters: :symbol)
-      csv.readline
-      missing_headers = (SUPPORTED_HEADERS - Array(csv.headers))
-      unless missing_headers.empty?
-        errors.add(:csv_file, "missing headers: #{missing_headers.collect{|h| h.to_s.humanize }.join(', ')}")
+      unless missing_columns.empty?
+        errors.add(:csv_file, "missing headers: #{missing_columns.collect{|h| h.to_s.humanize }.join(', ')}")
       end
     end
 
-    SUPPORTED_HEADERS = [:brewery, :brew, :best_by, :count, :notes, :size, :vintage]
+    def load_spreadsheet_from(file_contents)
+      csv = CSV.new(file_contents, headers: :first_row, header_converters: :symbol)
+      csv.readline
+      csv
+    end
+
+    def missing_columns
+      SUPPORTED_HEADERS - spreadsheet_headers
+    end
+
+    def spreadsheet_headers
+      Array(spreadsheet.headers)
+    end
 
   end
 end
