@@ -3,5 +3,5 @@
 
   = simple_form_for(@import_ledger, url: import_path, html: {multipart: true}) do |f|
     = f.input :csv_file, as: :file
-    = f.submit 'Upload file', class: 'btn-success'
+    = f.submit 'Upload file', class: 'upload-file btn-success'
 
