@@ -17,6 +17,8 @@ RSpec.configure do |config|
   # Let DatabaseCleaner handle this
   config.use_transactional_fixtures = false
 
+  config.fixture_path = "#{Rails.root}/spec/support/fixtures"
+
   config.before(:each) do
     ActionMailer::Base.deliveries.clear
   end

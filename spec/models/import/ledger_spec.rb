@@ -8,7 +8,7 @@ describe Import::Ledger do
     let(:user) { User.new }
 
     context 'well-formed csv file' do
-      let(:csv_file) { fixture_file_upload('spec/support/file_fixtures/founders-breakfast-stout.csv') }
+      let(:csv_file) { fixture_file_upload('founders-breakfast-stout.csv') }
 
       it 'is valid if all headers are found' do
         expect(ledger).to be_valid
@@ -16,7 +16,7 @@ describe Import::Ledger do
     end
 
     context 'csv file missing headers' do
-      let(:csv_file) { fixture_file_upload('spec/support/file_fixtures/missing-brew-header.csv') }
+      let(:csv_file) { fixture_file_upload('missing-brew-header.csv') }
 
       it 'reports missing headers' do
         expect(ledger).not_to be_valid
