@@ -6,9 +6,9 @@ module ControllerTestHelpers
       #user.confirm! unless user.confirmed?
       super(user)
     else # likely a stub user, so stub Devise too.
-      controller.stub(:authenticate_user!) { user }
-      controller.stub(:current_user) { user }
-      user.stub(:username) { 'bob' } unless user.username
+      allow(controller).to receive(:authenticate_user!) { user }
+      allow(controller).to receive(:current_user) { user }
+      allow(user).to receive(:username) { 'bob' } unless user.respond_to?(:username) && user.username
     end
   end
 

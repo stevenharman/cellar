@@ -53,7 +53,7 @@ en:
     imports:
       create:
         error: "Woops! There was a problem uploading that file."
-        success: "Your file has been uploaded and we're working on it..."
+        success: "Your file has been uploaded. Please review the matched columns..."
       new:
         notice: "Looks like you've already got an import pending..."
 
