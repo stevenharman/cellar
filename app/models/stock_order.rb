@@ -3,7 +3,7 @@ require 'active_model'
 require 'virtus'
 
 class StockOrder
-  include Virtus
+  include Virtus.model
   extend ActiveModel::Naming
   include ActiveModel::Conversion
   include ActiveModel::Validations
