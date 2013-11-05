@@ -164,14 +164,14 @@ en:
 
   kaminari:
     pagination:
-      first: "<icon class='icon-double-angle-left'></i>"
+      first: "<icon class='fa fa-angle-double-left'></i>"
       first_title: "First"
-      previous: "<icon class='icon-angle-left'></i>"
+      previous: "<icon class='fa fa-angle-left'></i>"
       previous_title: "Previous"
       truncate: "&hellip;"
-      next: "<icon class='icon-angle-right'></i>"
+      next: "<icon class='fa fa-angle-right'></i>"
       next_title: "Next"
-      last: "<icon class='icon-double-angle-right'></i>"
+      last: "<icon class='fa fa-angle-double-right'></i>"
       last_title: "Last"
 
   layouts:

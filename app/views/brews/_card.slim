@@ -9,7 +9,7 @@ article.brew-card*{'data-id' => brew.id}
       ul.details
         - if brew.style_name.present?
           li.style
-            i.icon-beer
+            i.fa.fa-beer
             = brew.style_name
         - if brew.abv.present?
           li.abv
@@ -23,7 +23,7 @@ article.brew-card*{'data-id' => brew.id}
     ul.inventory
       li.actions
         = link_to(brew, title: t('.inventory.actions')) do
-          i.icon-ellipsis-horizontal
+          i.fa.fa-ellipsis-horizontal
       - unless current_cellar == requested_cellar
         li.this-cellar-cellared
           = requested_cellar.beers_count(brew)

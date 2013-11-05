@@ -10,9 +10,9 @@
         .beer-list-beer-body
 
           .for-trade
-            i.icon-gift
+            i.fa.fa-gift
           .see-more
-            i.icon-cog
+            i.fa.fa-cog
 
           ul.beer-details
             li.beer-detail.beer-vintage
@@ -39,7 +39,7 @@
               = button_tag 'Skunk', name: 'order[status]', value: :skunked
 
               = link_to(edit_cellar_beer_path(beer.user, beer), class: 'beer-action-edit btn') do
-                i.icon-edit
+                i.fa.fa-pencil-square-o
                 =< t('.edit')
 
     - if beer_list.empty?

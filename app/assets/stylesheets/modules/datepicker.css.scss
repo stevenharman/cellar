@@ -104,13 +104,13 @@ $datepickerGrey: #f7f7f7;
 .ui-datepicker-prev {
   float: left;
   &:before {
-    @extend .icon-arrow-left:before;
+    @extend .fa-arrow-left:before;
   }
 }
 .ui-datepicker-next {
   float: right;
   &:before {
-    @extend .icon-arrow-right:before;
+    @extend .fa-arrow-right:before;
   }
 }
 

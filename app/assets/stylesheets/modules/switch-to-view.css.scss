@@ -6,7 +6,7 @@
   font-size: 1.5rem;
   line-height: 58px; // MAGIC: Height of .footer-brand image
 
-  [class^="icon-"] { margin-right: 0.25em; }
+  [class^="fa fa-"] { margin-right: 0.25em; }
 }
 
 .switch-to-mobile {
@@ -25,5 +25,5 @@
     }
   }
 
-  [class^="icon-"] { margin-right: 0.25em; }
+  [class^="fa fa-"] { margin-right: 0.25em; }
 }

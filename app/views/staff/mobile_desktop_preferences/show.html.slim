@@ -2,10 +2,10 @@ fieldset.mobile-desktop-preference
   legend Set mobile/desktop preference
 
   = link_to(url_for(mobile: 1), class: 'preference preference-mobile') do
-    i.icon-mobile-phone
+    i.fa.fa-mobile
     | Switch to mobile version
   = link_to(url_for(mobile: 0), class: 'preference preference-desktop') do
-    i.icon-desktop
+    i.fa.fa-desktop
     | Switch to desktop version
   = simple_form_for :reset_mobile, url: staff_mobile_desktop_preference_path,
                      method: :delete, html: {class: 'reset-mobile'} do |f|

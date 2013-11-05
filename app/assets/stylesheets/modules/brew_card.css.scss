@@ -15,6 +15,6 @@
     margin: 0;
     @include text-overflow;
 
-    [class^="icon-"] { margin-right: 0.25em; }
+    [class^="fa fa-"] { margin-right: 0.25em; }
   }
 }

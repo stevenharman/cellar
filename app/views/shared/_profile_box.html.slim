@@ -6,14 +6,14 @@
   ul.demographics
     - if profile.location?
       li.location
-        i.icon-map-marker
+        i.fa.fa-map-marker
         = profile.location
     li.joined
-      i.icon-time
+      i.fa.fa-clock-o
       = t('.joined_html', date: ldate(profile.joined, format: :month_day_year))
     - if profile.website?
       li.website
-        i.icon-external-link
+        i.fa.fa-external-link
         = link_to(profile.website_name, profile.website)
   .stats
     dl.beers

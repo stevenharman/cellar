@@ -11,18 +11,18 @@
             = current_user.gravatar
             span.username= current_user.username
         li.my-cellar= link_to(cellar_path(current_user), tooltip(t('cellar.my_cellar'))) do
-              i.icon-list
+              i.fa.fa-list
         li.my-settings= link_to(settings_profile_path, tooltip(t('cellar.settings'))) do
-              i.icon-wrench
+              i.fa.fa-wrench
         - if current_user.staff?
           li.staff
             = link_to(staff_root_path, tooltip(t('cellar.staff'))) do
-              i.icon-rocket
+              i.fa.fa-rocket
         li.sign-out= link_to(destroy_user_session_path, tooltip(t('cellar.sign_out'), method: :delete)) do
-              i.icon-signout
+              i.fa.fa-sign-out
       - else
         li.sign-in= link_to(new_user_session_path) do
-          i.icon-signin
+          i.fa.fa-sign-in
           |  #{t('cellar.sign_in')}
         li.sign-up
           ' or
@@ -30,7 +30,7 @@
 
     span.awning-search-box
       = link_to(search_path, class: 'awning-search-indicator', tabindex: 1) do
-          i.icon-search.icon-large
+          i.fa.fa-search.fa-lg
           = t('.search.text')
       span.search-form-wrapper
         == render 'searches/form', search_query: search_query
