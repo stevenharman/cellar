@@ -49,7 +49,6 @@ en:
       work_orders:
         create:
           error: "Woops! There was a problem with your imported CSV file."
-          success: "We're importing your CSV file into Cellar. Refresh at will!"
     imports:
       create:
         error: "Woops! There was a problem uploading that file."
