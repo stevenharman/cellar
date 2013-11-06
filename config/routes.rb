@@ -39,6 +39,7 @@ BrewdegaCellar::Application.routes.draw do
   namespace :import do
     resources :work_orders, only: [:create]
     resource :upload_report, only: [:show]
+    resource :match_report, only: [:show]
   end
 
   resource :search, only: [:show]

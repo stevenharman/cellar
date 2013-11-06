@@ -46,6 +46,7 @@ en:
       upload_reports:
         show:
           notice: "We are working hard to import all of your beers. Keep refreshing..."
+          success: "We've finished processing your file. Please review the matches below."
       work_orders:
         create:
           error: "Woops! There was a problem with your imported CSV file."
