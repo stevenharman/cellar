@@ -14,7 +14,7 @@ describe Import::WorkOrdersController do
     it 'show the progress when work order is valid' do
       allow(work_order).to receive(:valid?) { true }
       post :create
-      expect(response).to redirect_to(import_progress_path)
+      expect(response).to redirect_to(import_upload_report_path)
     end
 
     it 'shows an error message when order cannot be created' do

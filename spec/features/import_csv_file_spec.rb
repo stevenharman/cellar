@@ -19,7 +19,7 @@ feature 'Importing a CSV file', :file_upload_helpers do
   end
 
   def expect_import_to_be_underway
-    expect(page).to have_text(I18n.t('flash.import.work_orders.create.success'))
+    expect(page).to have_text(I18n.t('flash.import.upload_reports.show.notice'))
   end
 
   def start_import
