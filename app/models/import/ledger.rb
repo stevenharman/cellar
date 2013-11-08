@@ -38,8 +38,8 @@ module Import
     end
 
     def load_spreadsheet_from(file_contents)
-      csv = CSV.new(file_contents, headers: :first_row, header_converters: :symbol)
-      csv.readline
+      csv = CSV.new(file_contents, headers: :first_row, return_headers: true, header_converters: :symbol)
+      csv.readline # read in the headers
       csv
     end
 
