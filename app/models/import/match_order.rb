@@ -4,6 +4,8 @@ module Import
   class MatchOrder
     include ActiveModel::Model
 
+    attr_reader :import_ledger
+
     def self.create(import_ledger)
       new(import_ledger)
     end
@@ -12,7 +14,8 @@ module Import
       @import_ledger = import_ledger
     end
 
-    def valid?
+    def pending?
+      !!import_ledger.match_job_id
     end
 
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130930232613) do
+ActiveRecord::Schema.define(version: 20131112023229) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -107,8 +107,10 @@ ActiveRecord::Schema.define(version: 20130930232613) do
     t.string   "csv_file"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "match_job_id"
   end
 
+  add_index "import_ledgers", ["match_job_id"], name: "index_import_ledgers_on_match_job_id", using: :btree
   add_index "import_ledgers", ["user_id"], name: "index_import_ledgers_on_user_id", unique: true, using: :btree
 
   create_table "pg_search_documents", force: true do |t|
