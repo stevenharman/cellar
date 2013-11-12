@@ -9,7 +9,6 @@ feature 'Importing a CSV file', :file_upload_helpers do
     upload_file('founders-breakfast-stout.csv')
     expect_file_to_have_been_uploaded
     continue_import
-    pending('need to queue up a job')
     expect_import_to_be_underway
   end
 

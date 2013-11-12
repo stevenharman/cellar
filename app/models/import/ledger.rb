@@ -11,6 +11,11 @@ module Import
 
     SUPPORTED_HEADERS = [:brewery, :brew, :best_by, :count, :notes, :size, :vintage]
 
+    def attach_job(job_id)
+      update(match_job_id: job_id)
+      match_job_id
+    end
+
     def csv_file_secure_token
       @csv_file_secure_token ||= SecureRandom.uuid
     end

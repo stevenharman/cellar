@@ -25,4 +25,14 @@ describe Import::Ledger do
       end
     end
   end
+
+  describe 'attaching a match job' do
+    subject(:ledger) { FactoryGirl.create(:import_ledger) }
+
+    it 'stores the job id with the ledger' do
+      jid = ledger.attach_job('abc123')
+      expect(jid).to eq('abc123')
+      expect(ledger.match_job_id).to eq(jid)
+    end
+  end
 end
