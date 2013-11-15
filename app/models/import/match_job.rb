@@ -6,9 +6,8 @@ module Import
 
     attr_reader :agent, :ledgers
 
-    def self.match(import_ledger)
-      jid = perform_async(import_ledger.id)
-      import_ledger.attach_job(jid)
+    def self.fulfill(match_order)
+      perform_async(match_order.ledger_id)
     end
 
     def initialize(ledgers: Ledger, agent: Agent)

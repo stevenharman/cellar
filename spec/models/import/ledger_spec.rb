@@ -26,13 +26,12 @@ describe Import::Ledger do
     end
   end
 
-  describe 'attaching a match job' do
+  describe 'updating related match order status' do
     subject(:ledger) { FactoryGirl.create(:import_ledger) }
 
     it 'stores the job id with the ledger' do
-      jid = ledger.attach_job('abc123')
-      expect(jid).to eq('abc123')
-      expect(ledger.match_job_id).to eq(jid)
+      ledger.update_match_order_status('new')
+      expect(ledger.match_order_status).to eq('new')
     end
   end
 end

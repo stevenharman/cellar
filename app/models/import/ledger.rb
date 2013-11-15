@@ -5,16 +5,13 @@ module Import
     belongs_to :user, inverse_of: :import_ledger
     mount_uploader :csv_file, CsvFileUploader
 
+    MATCH_ORDER_STATUSES = %w(none new pending done).freeze
+    SUPPORTED_HEADERS = [:brewery, :brew, :best_by, :count, :notes, :size, :vintage].freeze
+
     validates :csv_file, presence: true
-    validates :user, presence: true, uniqueness: true
     validate :csv_file_headers_found
-
-    SUPPORTED_HEADERS = [:brewery, :brew, :best_by, :count, :notes, :size, :vintage]
-
-    def attach_job(job_id)
-      update(match_job_id: job_id)
-      match_job_id
-    end
+    validates :match_order_status, inclusion: MATCH_ORDER_STATUSES
+    validates :user, presence: true, uniqueness: true
 
     def csv_file_secure_token
       @csv_file_secure_token ||= SecureRandom.uuid
@@ -30,6 +27,10 @@ module Import
 
     def spreadsheet
       @spreadsheet ||= load_spreadsheet_from(csv_file.read)
+    end
+
+    def update_match_order_status(status)
+      update(match_order_status: status.to_s)
     end
 
     private

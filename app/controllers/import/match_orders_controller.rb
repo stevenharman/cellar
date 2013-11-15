@@ -15,7 +15,7 @@ module Import
     end
 
     def show
-      @import_match_order = MatchOrder.for(current_user.import_ledger)
+      @import_match_order = MatchOrder.find_by(current_user.import_ledger)
       if @import_match_order.pending?
         flash.now[:notice] = t('flash.import.match_orders.show.notice')
       else

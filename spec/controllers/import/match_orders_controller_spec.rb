@@ -32,7 +32,7 @@ describe Import::MatchOrdersController do
     describe 'looking at an existing match order' do
 
       before do
-        allow(Import::MatchOrder).to receive(:for).with(import_ledger) { match_order }
+        allow(Import::MatchOrder).to receive(:find_by).with(import_ledger) { match_order }
       end
 
       it 'show the notice when still matching beers' do
