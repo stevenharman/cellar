@@ -29,7 +29,7 @@ module Import
     end
 
     def update_match_order_status(status)
-      update(match_order_status: status.to_s)
+      update!(match_order_status: status.to_s)
     end
 
     private
