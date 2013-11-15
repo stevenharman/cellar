@@ -28,4 +28,10 @@ describe Import::MatchOrder do
     expect(order).to be_pending
   end
 
+  it 'adds the match to the ledger' do
+    match = double('Import::Match')
+    expect(import_ledger).to receive(:add_brew_match).with(match)
+    order.add_to_ledger(match)
+  end
+
 end

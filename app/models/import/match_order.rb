@@ -27,12 +27,25 @@ module Import
       end
     end
 
+    def add_to_ledger(match)
+      import_ledger.add_brew_match(match)
+    end
+
     def accepted?
       pending? || done?
     end
 
+    def done
+      update_status(:done)
+      self
+    end
+
     def ledger_id
       import_ledger.id
+    end
+
+    def spreadsheet
+      import_ledger.spreadsheet
     end
 
     def submit
