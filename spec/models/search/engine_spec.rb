@@ -22,12 +22,33 @@ describe Search::Engine do
     expect(results).to include(red_rye)
   end
 
-  it 'pages the results' do
-    result = double('PGSearch Result')
-    PgSearch.stub_chain(:multisearch, :includes) { result }
-    result.should_receive(:page).with(42)
+  it 'filters results when a document type is given' do
+    bfast_stout = FactoryGirl.create(:brew, breweries: [founders], name: 'Kentucky Breakfast Stout')
+    stout_brewery = FactoryGirl.create(:brewery, name: 'Stout Founders Brewing')
+    query = Search::BrewQuery.new(terms: 'Founders Stout')
+    results = search_engine.search(query)
+
+    expect(results).to include(bfast_stout)
+    expect(results).not_to include(founders)
+    expect(results).not_to include(stout_brewery)
+  end
+
+  it 'pages the results when a paged query is used' do
+    results = double('PGSearch Result')
+    PgSearch.stub_chain(:multisearch, :includes) { results }
+    results.should_receive(:page).with(42)
 
     search_engine.search(Search::Query.new(terms: 'hi', page: 42))
+  end
+
+  it 'does not page results when non-paged query is used' do
+    results = double('PGSearch Result')
+    PgSearch.stub_chain(:multisearch, :includes) { results }
+    expect(results).not_to receive(:page)
+
+    query = Search::Query.new(terms: 'hi')
+    allow(query).to receive(:paged?) { false }
+    search_engine.search(query)
   end
 
   it 'does not search for an empty query' do

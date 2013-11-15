@@ -9,13 +9,23 @@ module Search
     attr_reader :terms, :page
     alias_method :q, :terms
 
-    def initialize(terms: nil, page: 1)
+    DEFAULT_PAGE = 1
+
+    def initialize(terms: nil, page: DEFAULT_PAGE)
       @terms = terms
-      @page = page
+      @page = (page || DEFAULT_PAGE)
     end
 
     def blank?
       terms.nil? || terms == ''
+    end
+
+    def document_scoped?
+      false
+    end
+
+    def paged?
+      !!page
     end
 
     def persisted?; false; end

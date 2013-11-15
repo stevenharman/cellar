@@ -8,15 +8,15 @@ describe Import::Agent do
   describe 'matching beers in a ledger' do
     let(:batch) { double('Batch').as_null_object }
     let(:match_1) { double('BrewMatch') }
-    let(:row_1) { Hash.new }
+    let(:row_1) { {brewery: 'Founders', brew: 'KBS'} }
 
     before do
       allow(Batch).to receive(:run).and_yield(batch)
-      allow(search_match).to receive(:find_brew).with(row_1) { match_1 }
+      allow(search_match).to receive(:find_brew).with('Founders KBS') { match_1 }
     end
 
     it 'addes a match to the ledger for each row in the spreadsheet' do
-      expect(match_order).to receive(:add_to_ledger).with(match_1)
+      expect(match_order).to receive(:add_to_ledger).with(match: match_1, import: row_1)
       agent.match
     end
 
