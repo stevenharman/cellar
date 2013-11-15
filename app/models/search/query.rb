@@ -9,7 +9,7 @@ module Search
     attr_reader :terms, :page
     alias_method :q, :terms
 
-    def initialize(terms = nil, page = 1)
+    def initialize(terms: nil, page: 1)
       @terms = terms
       @page = page
     end
