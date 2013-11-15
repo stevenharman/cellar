@@ -13,8 +13,8 @@ module Import
       new(import_ledger)
     end
 
-    def self.create(import_ledger)
-      find_by(import_ledger).submit
+    def self.submit(import_ledger)
+      new(import_ledger).submit
     end
 
     def initialize(import_ledger)

@@ -4,7 +4,7 @@ module Import
     respond_to :html
 
     def create
-      @import_match_order = MatchOrder.create(current_user.import_ledger)
+      @import_match_order = MatchOrder.submit(current_user.import_ledger)
       if @import_match_order.accepted?
         redirect_to import_match_order_path
       else

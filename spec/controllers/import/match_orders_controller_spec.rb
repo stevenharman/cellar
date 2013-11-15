@@ -12,7 +12,7 @@ describe Import::MatchOrdersController do
 
     describe 'creating a new match order' do
       before do
-        allow(Import::MatchOrder).to receive(:create).with(import_ledger) { match_order }
+        allow(Import::MatchOrder).to receive(:submit).with(import_ledger) { match_order }
       end
 
       it 'show the progress when work order was accepted' do
