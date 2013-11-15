@@ -5,7 +5,7 @@ module Import
 
     def create
       @import_match_order = MatchOrder.create(current_user.import_ledger)
-      if @import_match_order.pending?
+      if @import_match_order.accepted?
         redirect_to import_match_order_path
       else
         @import_ledger = @import_match_order.import_ledger

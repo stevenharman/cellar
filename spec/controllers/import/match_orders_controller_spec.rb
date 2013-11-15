@@ -15,14 +15,14 @@ describe Import::MatchOrdersController do
         allow(Import::MatchOrder).to receive(:create).with(import_ledger) { match_order }
       end
 
-      it 'show the progress when work order is pending' do
-        allow(match_order).to receive(:pending?) { true }
+      it 'show the progress when work order was accepted' do
+        allow(match_order).to receive(:accepted?) { true }
         post :create
         expect(response).to redirect_to(import_match_order_path)
       end
 
-      it 'shows an error message when order cannot be created' do
-        allow(match_order).to receive(:pending?) { false }
+      it 'shows an error message when order was not accepted' do
+        allow(match_order).to receive(:accepted?) { false }
         post :create
         expect(flash[:error]).to eq(I18n.t('flash.import.match_orders.create.error'))
         expect(response).to render_template('imports/new')

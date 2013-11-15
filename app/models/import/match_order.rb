@@ -5,6 +5,8 @@ module Import
   class MatchOrder
     include ActiveModel::Model
 
+    STATUSES = %w(new pending done).freeze
+
     attr_reader :import_ledger
 
     def self.find_by(import_ledger)
@@ -12,28 +14,31 @@ module Import
     end
 
     def self.create(import_ledger)
-      find_by(import_ledger).prepare do |order|
-        MatchJob.fulfill(order)
-      end
+      find_by(import_ledger).submit
     end
 
     def initialize(import_ledger)
       @import_ledger = import_ledger
     end
 
+    STATUSES.each do |s|
+      define_method("#{s}?") do
+        send(:status) == s
+      end
+    end
+
+    def accepted?
+      pending? || done?
+    end
+
     def ledger_id
       import_ledger.id
     end
 
-    def prepare(&block)
-      update_status(:new)
-      block.call(self)
+    def submit
       update_status(:pending)
+      update_status(:new) unless MatchJob.fulfill(self)
       self
-    end
-
-    def pending?
-      status == 'pending'
     end
 
     private
