@@ -6,9 +6,13 @@ module Import
 
     attr_reader :import_ledger
 
+    def self.for(import_ledger)
+      new(import_ledger)
+    end
+
     def self.create(import_ledger)
       MatchJob.match(import_ledger)
-      new(import_ledger)
+      self.for(import_ledger)
     end
 
     def initialize(import_ledger)

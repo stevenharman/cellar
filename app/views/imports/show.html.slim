@@ -18,5 +18,5 @@
         = column.to_s.humanize
 
   h2 Import Beers from <code>csv</code> File
-  = simple_form_for(@import_match_order) do |f|
+  = simple_form_for(@import_match_order, url: import_match_order_path) do |f|
     = f.submit 'Continue Import', class: 'continue-import'
