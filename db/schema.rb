@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131116000703) do
+ActiveRecord::Schema.define(version: 20131116001407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -102,6 +102,21 @@ ActiveRecord::Schema.define(version: 20131116000703) do
 
   add_index "categories", ["brewery_db_id"], name: "index_categories_on_brewery_db_id", unique: true, using: :btree
   add_index "categories", ["name"], name: "index_categories_on_name", unique: true, using: :btree
+
+  create_table "import_candidate_beers", force: true do |t|
+    t.integer "import_ledger_id"
+    t.integer "brew_id"
+    t.string  "confidence"
+    t.integer "count",            default: 1, null: false
+    t.date    "best_by"
+    t.integer "line_number",      default: 0, null: false
+    t.text    "notes"
+    t.integer "size_id"
+    t.integer "vintage"
+    t.hstore  "source_row"
+  end
+
+  add_index "import_candidate_beers", ["import_ledger_id"], name: "index_import_candidate_beers_on_import_ledger_id", using: :btree
 
   create_table "import_ledgers", force: true do |t|
     t.integer  "user_id"

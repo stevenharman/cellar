@@ -3,6 +3,7 @@ require 'csv'
 module Import
   class Ledger < ActiveRecord::Base
     belongs_to :user, inverse_of: :import_ledger
+    has_many :candidate_beers, inverse_of: :ledger, foreign_key: :import_ledger_id
     mount_uploader :csv_file, CsvFileUploader
 
     SUPPORTED_HEADERS = [:brewery, :brew, :best_by, :count, :notes, :size, :vintage].freeze
