@@ -7,6 +7,8 @@
 @import './grid_settings';
 
 $all-buttons: element-listify('button:not(.reset-style)',
+                              'input[type="button"]:not(.reset-style)',
+                              'input[type="reset"]:not(.reset-style)',
                               'input[type="submit"]:not(.reset-style)',
                               '.btn');
 
