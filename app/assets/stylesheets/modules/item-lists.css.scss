@@ -1,0 +1,15 @@
+@import '../globals/all';
+
+%item-list {
+  @include clearfix;
+
+  > li {
+    @include row;
+    border: 1px solid $section-border-color;
+    border-radius: 3px;
+    margin-bottom: 1em;
+
+    &:last-child { margin-bottom: 0; }
+  }
+}
+

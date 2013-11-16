@@ -1,19 +1,12 @@
-@import '../globals/all';
+@import 'item-lists';
 
 .beer-list {
-  @include clearfix;
+  @extend %item-list;
 }
 
 .beer-list-beer {
   $action-width: 1.25rem;
   $item-height: 3em;
-
-  @include row;
-  border: 1px solid $section-border-color;
-  border-radius: 3px;
-  margin-bottom: 1em;
-
-  &:last-child { margin-bottom: 0; }
 
   .beer-list-beer-body {
     @include clearfix;

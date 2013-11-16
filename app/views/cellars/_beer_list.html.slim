@@ -1,49 +1,47 @@
 / TODO: This means we need to model a brew page. #beer_list, #brew-info, etc.
 - beer_list = cellar.beers_for(brew)
 
-.beer-list
+ul.beer-list
+  - for beer in beer_list
+    li.beer-list-beer*{'data-id' => beer.id} class="beer-status-#{beer.status}"
 
-  ul.beer-list-beers
-    - for beer in beer_list
-      li.beer-list-beer*{'data-id' => beer.id} class="beer-status-#{beer.status}"
+      .beer-list-beer-body
 
-        .beer-list-beer-body
+        .for-trade
+          i.fa.fa-gift
+        .see-more
+          i.fa.fa-cog
 
-          .for-trade
-            i.fa.fa-gift
-          .see-more
-            i.fa.fa-cog
+        ul.beer-details
+          li.beer-detail.beer-vintage
+            label.beer-detail-name= t('.vintage')
+            time= beer.vintage
+          li.beer-detail.beer-best-by
+            label.beer-detail-name= t('.best_by')
+            = ldate(beer.best_by, format: :month_day_year)
+          li.beer-detail.beer-size
+            label.beer-detail-name= t('.size')
+            = beer.size.full_name if beer.size
+          li.beer-detail.beer-cellared-on
+            label.beer-detail-name= t('.cellared_on')
+            = ldate(beer.created_at, format: :month_year)
+          li.beer-detail.beer-notes
+            = simple_format(beer.notes)
 
-          ul.beer-details
-            li.beer-detail.beer-vintage
-              label.beer-detail-name= t('.vintage')
-              time= beer.vintage
-            li.beer-detail.beer-best-by
-              label.beer-detail-name= t('.best_by')
-              = ldate(beer.best_by, format: :month_day_year)
-            li.beer-detail.beer-size
-              label.beer-detail-name= t('.size')
-              = beer.size.full_name if beer.size
-            li.beer-detail.beer-cellared-on
-              label.beer-detail-name= t('.cellared_on')
-              = ldate(beer.created_at, format: :month_year)
-            li.beer-detail.beer-notes
-              = simple_format(beer.notes)
+      .beer-drawer
+        = simple_form_for beer, url: cellar_distribution_order_path(beer.user), html: {class: 'beer-statuses'} do
+          = hidden_field_tag :beer_id, beer.id, name: 'order[beer_id]', id: nil
+          .btn-group
+            = button_tag 'Drink', name: 'order[status]', value: :drunk
+            = button_tag 'Trade', name: 'order[status]', value: :traded
+            = button_tag 'Skunk', name: 'order[status]', value: :skunked
 
-        .beer-drawer
-          = simple_form_for beer, url: cellar_distribution_order_path(beer.user), html: {class: 'beer-statuses'} do
-            = hidden_field_tag :beer_id, beer.id, name: 'order[beer_id]', id: nil
-            .btn-group
-              = button_tag 'Drink', name: 'order[status]', value: :drunk
-              = button_tag 'Trade', name: 'order[status]', value: :traded
-              = button_tag 'Skunk', name: 'order[status]', value: :skunked
+            = link_to(edit_cellar_beer_path(beer.user, beer), class: 'beer-action-edit btn') do
+              i.fa.fa-pencil-square-o
+              =< t('.edit')
 
-              = link_to(edit_cellar_beer_path(beer.user, beer), class: 'beer-action-edit btn') do
-                i.fa.fa-pencil-square-o
-                =< t('.edit')
-
-    - if beer_list.empty?
-      li.beer-list-beer.beer-list-empty
-        span.message= t('.empty', brew_name: brew.name)
-        = render 'brews/add_to_cellar', brew: brew
+  - if beer_list.empty?
+    li.beer-list-beer.beer-list-empty
+      span.message= t('.empty', brew_name: brew.name)
+      = render 'brews/add_to_cellar', brew: brew
 
