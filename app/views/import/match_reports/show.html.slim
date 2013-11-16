@@ -1,0 +1,4 @@
+article.match-report
+  ul.match-list
+    - for candidate in @match_report.candidate_beers do
+      == render partial: 'match', locals: {candidate: candidate}

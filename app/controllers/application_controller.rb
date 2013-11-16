@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery
 
+  add_flash_types :error, :success
+
   before_filter :set_mobile_preference
   before_filter :prepend_view_path_if_mobile
 

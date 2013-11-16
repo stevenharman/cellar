@@ -11,7 +11,6 @@ feature 'Importing a CSV file', :file_upload_helpers do
     continue_import
     expect_matching_to_be_underway
     refresh_the_page
-    pending('match beers')
     expect_to_see_match_report
   end
 
