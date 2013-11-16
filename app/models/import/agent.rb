@@ -17,7 +17,7 @@ module Import
       Batch.run do |batch|
         spreadsheet_rows.each do |row|
           match = matches.find_brew(extract_terms(row))
-          batch.cancel unless match_order.add_to_ledger(match: match, import: row)
+          batch.cancel unless match_order.add_to_ledger(match: match, row: row)
         end
 
         match_order.done

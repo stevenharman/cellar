@@ -27,8 +27,8 @@ module Import
       end
     end
 
-    def add_to_ledger(match)
-      import_ledger.add_brew_match(match)
+    def add_to_ledger(match: match, row: row)
+      import_ledger.add_brew_match(match: match, row: row)
     end
 
     def accepted?

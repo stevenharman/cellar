@@ -16,7 +16,7 @@ describe Import::Agent do
     end
 
     it 'addes a match to the ledger for each row in the spreadsheet' do
-      expect(match_order).to receive(:add_to_ledger).with(match: match_1, import: row_1)
+      expect(match_order).to receive(:add_to_ledger).with(match: match_1, row: row_1)
       agent.match
     end
 
