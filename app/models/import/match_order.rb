@@ -7,7 +7,7 @@ module Import
 
     STATUSES = %w(new pending done).freeze
 
-    attr_reader :import_ledger
+    attr_reader :candidate_factory, :import_ledger
 
     def self.find_by(import_ledger)
       new(import_ledger)
@@ -17,8 +17,9 @@ module Import
       new(import_ledger).submit
     end
 
-    def initialize(import_ledger)
+    def initialize(import_ledger, candidate_factory: CandidateBeer)
       @import_ledger = import_ledger
+      @candidate_factory = candidate_factory
     end
 
     STATUSES.each do |s|
@@ -28,7 +29,8 @@ module Import
     end
 
     def add_to_ledger(match: match, row: row)
-      import_ledger.add_brew_match(match: match, row: row)
+      beer = candidate_factory.build(match: match, row: row)
+      import_ledger.add_candidate(beer)
     end
 
     def accepted?

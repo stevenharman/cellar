@@ -1,8 +1,9 @@
 require 'models/import/match_order'
 
 describe Import::MatchOrder do
-  subject(:order) { described_class.new(import_ledger) }
+  subject(:order) { described_class.new(import_ledger, candidate_factory: candidate_factory) }
   let(:import_ledger) { double('Import::Ledger') }
+  let(:candidate_factory) { double('Import::CandidateBeer') }
 
   describe 'submitting a new order' do
     it 'marks the order as pending when the MatchJob can be fulfilled' do
@@ -28,11 +29,15 @@ describe Import::MatchOrder do
     expect(order).to be_pending
   end
 
-  it 'adds the match to the ledger' do
-    match = double('Import::Match')
-    row = Hash.new
-    expect(import_ledger).to receive(:add_brew_match).with(match: match, row: row)
-    order.add_to_ledger(match: match, row: row)
-  end
+  describe 'adding a matching row to the order' do
+    let(:candiate_beer) { double('a CandidateBeer') }
+    let(:match) { double('Import::Match') }
+    let(:row) { Hash.new }
 
+    it 'adds a candidate beer to the ledger' do
+      allow(candidate_factory).to receive(:build).with(match: match, row: row) { candiate_beer }
+      expect(import_ledger).to receive(:add_candidate).with(candiate_beer)
+      order.add_to_ledger(match: match, row: row)
+    end
+  end
 end

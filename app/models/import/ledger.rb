@@ -13,6 +13,11 @@ module Import
     validates :match_order_status, inclusion: MatchOrder::STATUSES
     validates :user, presence: true, uniqueness: true
 
+    def add_candidate(candidate_beer)
+      candidate_beers << candidate_beer
+      candidate_beer
+    end
+
     def csv_file_secure_token
       @csv_file_secure_token ||= SecureRandom.uuid
     end
