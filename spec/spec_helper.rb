@@ -19,8 +19,13 @@ RSpec.configure do |config|
 
   config.fixture_path = "#{Rails.root}/spec/support/fixtures"
 
+  config.before(:suite) do
+    Sidekiq::Testing.fake!
+  end
+
   config.before(:each) do
     ActionMailer::Base.deliveries.clear
+    Sidekiq::Worker.clear_all
   end
 
   config.after(:suite) do
