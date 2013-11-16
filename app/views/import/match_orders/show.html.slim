@@ -1,0 +1,8 @@
+- content_for :title do
+  = t('.title')
+
+article.match-order-status.jumbotron
+  h1= t('.header')
+  p= t('.explaination')
+  = link_to(import_match_order_path, class: 'btn btn-primary') do
+    = fa_icon 'refresh', text: t('.refresh')
