@@ -1,12 +1,6 @@
-section.hero-unit
-  h1 Cellar Status
-  p
-    ' We are currently tracking
-    strong=' number_with_delimiter(@heartbeat.breweries)
-    ' breweries and
-    strong=' number_with_delimiter(@heartbeat.brews)
-    ' unique brews. Across
-    strong=' number_with_delimiter(@heartbeat.cellars)
-    ' cellars we are tracking
-    strong=' number_with_delimiter(@heartbeat.cellared_beers)
-    ' cellared beers.
+article.jumbotron
+  h1= t('.header')
+  p= t('.message_html', brewery_count: number_with_delimiter(@heartbeat.breweries),
+                   brew_count: number_with_delimiter(@heartbeat.brews),
+                   cellar_count: number_with_delimiter(@heartbeat.cellars),
+                   beer_count: number_with_delimiter(@heartbeat.cellared_beers))

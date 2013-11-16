@@ -161,6 +161,15 @@ en:
       message: "Oh Noes, 404es!"
       sub_message: "Gone missing?"
 
+  heartbeats:
+    show:
+      header: "Cellar Status"
+      message_html: >
+        We are currently tracking <strong>%{brewery_count}</strong> breweries
+        and <strong>%{brew_count}</strong> unique brews. Across
+        <strong>%{cellar_count}</strong> cellars we are tracking
+        <strong>%{beer_count}</strong> cellared beers.
+
   kaminari:
     pagination:
       first: "<icon class='fa fa-angle-double-left'></i>"
