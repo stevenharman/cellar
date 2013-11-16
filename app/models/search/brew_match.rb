@@ -12,10 +12,6 @@ module Search
       @candidate ||= results.first
     end
 
-    #def candidate?
-    #  !!candidate
-    #end
-
     def confidence
       CONFIDENCE_LEVELS.fetch(results.count) { :medium }
     end

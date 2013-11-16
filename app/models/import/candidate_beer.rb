@@ -16,5 +16,21 @@ module Import
         source_row[key.to_s]
       end
     end
+
+    def self.build(match: match, row: row)
+      row = row.to_hash if row.respond_to?(:to_hash)
+      row = row.to_h
+
+      new(
+        brew: match.candidate,
+        confidence: match.confidence,
+        best_by: row[:best_by],
+        count: row[:count],
+        notes: row[:notes],
+        #size: row[:size],
+        vintage: row[:vintage],
+        source_row: row.to_hash
+      )
+    end
   end
 end
