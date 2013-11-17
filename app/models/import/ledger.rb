@@ -6,8 +6,6 @@ module Import
     has_many :candidate_beers, inverse_of: :ledger, foreign_key: :import_ledger_id
     mount_uploader :csv_file, CsvFileUploader
 
-    SUPPORTED_HEADERS = [:brewery, :brew, :best_by, :count, :notes, :size, :vintage].freeze
-
     validates :csv_file, presence: true
     validate :csv_file_headers_found
     validates :match_order_status, inclusion: MatchOrder::STATUSES
@@ -23,11 +21,11 @@ module Import
     end
 
     def extra_columns
-      spreadsheet_headers - SUPPORTED_HEADERS
+      spreadsheet_headers - IMPORTABLE_ATTRIBUTES
     end
 
     def matched_columns
-      spreadsheet_headers & SUPPORTED_HEADERS
+      spreadsheet_headers & IMPORTABLE_ATTRIBUTES
     end
 
     def spreadsheet
@@ -55,7 +53,7 @@ module Import
     end
 
     def missing_columns
-      SUPPORTED_HEADERS - spreadsheet_headers
+      IMPORTABLE_ATTRIBUTES - spreadsheet_headers
     end
 
     def spreadsheet_headers
