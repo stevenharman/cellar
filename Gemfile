@@ -26,8 +26,8 @@ gem 'virtus'
 gem 'sass-rails', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'bourbon', '~> 3.1'
-gem 'neat', '~> 1.3' # Grid framework built upon Bourbon.
+gem 'bourbon', git: 'https://github.com/thoughtbot/bourbon.git' # Need ~> 3.2 for retina-image
+gem 'neat', git: 'https://github.com/thoughtbot/neat.git' # Need ~> 1.5' when changing above
 gem 'font-awesome-rails', '~> 4.0'
 
 group :production do
