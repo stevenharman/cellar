@@ -8,6 +8,7 @@
     border: 1px solid $section-border-color;
     border-radius: 3px;
     margin-bottom: 1em;
+    overflow: hidden;
 
     &:last-child { margin-bottom: 0; }
   }

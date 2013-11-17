@@ -72,8 +72,10 @@
 
   & > li {
     @include inline-block;
+    white-space: nowrap;
 
     label {
+      color: $base-font-color-light;
       display: inline;
       line-height: 1em;
       margin: 0 0.25em 0 0;
