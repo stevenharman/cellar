@@ -1,6 +1,7 @@
 @import 'item-lists';
 
 .match-report{
+  $figure-size: 3.5em;
 
   .matches {
     @extend %item-list;
@@ -17,8 +18,8 @@
 
     figure {
       float: left;
-      height: 3.5em;
-      width: 3.5em;
+      height: $figure-size;
+      width: $figure-size;
       margin-right: 0.5em;
     }
 
@@ -50,8 +51,18 @@
   }
 
   .confidence {
+    $badge-size: 1.5em;
+
     @include inline-block;
+    font-size: $badge-size;
+    margin-top: ($figure-size/2) - $badge-size;
+    text-align: center;
+    vertical-align: top;
     width: 10%;
+
+    &.high { color: $green; }
+    &.medium { color: $yellow; }
+    &.none { color: $red; }
   }
 
   @include media($tablet) {
@@ -62,6 +73,8 @@
     }
 
     .match-details {
+      border-top: 1px dotted $section-border-color;
+      margin-top: 0.25em;
       display: block;
       width: 100%;
     }
