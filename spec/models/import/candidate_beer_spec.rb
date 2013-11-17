@@ -18,15 +18,28 @@ describe Import::CandidateBeer do
     specify { expect(candidate.vintage).to eq(2011) }
 
     it 'keeps the original row' do
-      expect(candidate.source_row).to eq(source_row)
+      expect(candidate.source_row).to eq(source_row.with_indifferent_access)
     end
 
-    context 'a CSV row' do
+    context 'with a CSV row' do
       subject(:candidate) { described_class.build(match: brew_match, row: csv_row) }
       let(:csv_row) { CSV::Row.new(source_row.keys, source_row.values) }
 
       it 'keeps the csv row as a hash' do
-        expect(candidate.source_row).to eq(source_row)
+        expect(candidate.source_row).to eq(source_row.with_indifferent_access)
+      end
+    end
+
+    context 'no mathing Brew was found' do
+      subject(:candidate) { described_class.build(match: brew_match, row: source_row) }
+      let(:brew_match) { Search::BrewMatch.new([]) }
+
+      it 'uses an UnmatchedBrew for the brew' do
+        expect(candidate.brew).to be_a(Import::UnmatchedBrew)
+      end
+
+      it 'passes the source row on to the unmatched brew' do
+        expect(candidate.brew.brewery).to eq(source_row[:brewery])
       end
     end
   end

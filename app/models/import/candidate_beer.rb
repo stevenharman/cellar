@@ -1,3 +1,6 @@
+require 'active_support/core_ext/hash/indifferent_access'
+require_relative '../import'
+
 module Import
   class CandidateBeer < ActiveRecord::Base
     belongs_to :ledger, inverse_of: :candidate_beers, foreign_key: :import_ledger_id
@@ -18,7 +21,7 @@ module Import
 
     def self.build(match: match, row: row)
       row = row.to_hash if row.respond_to?(:to_hash)
-      row = row.to_h
+      row = row.to_h.with_indifferent_access
 
       new(
         brew: match.candidate,
