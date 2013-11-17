@@ -7,6 +7,7 @@
 
     .match {
       padding: 0.25em;
+      position: relative;
     }
   }
 
@@ -51,5 +52,26 @@
   .confidence {
     @include inline-block;
     width: 10%;
+  }
+
+  @include media($tablet) {
+    $primary-width: 75%;
+
+    .match-primary {
+      width: $primary-width;
+    }
+
+    .match-details {
+      display: block;
+      width: 100%;
+    }
+
+    .confidence {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100% - $primary-width;
+      text-align: center;
+    }
   }
 }
