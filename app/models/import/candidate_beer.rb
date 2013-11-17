@@ -34,5 +34,9 @@ module Import
         source_row: row.to_hash
       )
     end
+
+    def matched?
+      %w(medium high).include?(confidence.to_s)
+    end
   end
 end

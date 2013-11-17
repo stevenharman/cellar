@@ -42,5 +42,22 @@ describe Import::CandidateBeer do
         expect(candidate.brew.brewery).to eq(source_row[:brewery])
       end
     end
+
+    describe 'checking for a match' do
+      it 'is matched when confidence is high' do
+        candidate.confidence = :high
+        expect(candidate).to be_matched
+      end
+
+      it 'is matched when confidence is medium' do
+        candidate.confidence = 'medium'
+        expect(candidate).to be_matched
+      end
+
+      it 'is not matched when confidence none' do
+        candidate.confidence = :none
+        expect(candidate).not_to be_matched
+      end
+    end
   end
 end
