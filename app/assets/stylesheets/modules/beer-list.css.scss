@@ -38,23 +38,14 @@
   .beer-details {
     @include transition-property(max-height);
     @include transition-duration(0.4s);
-    margin: 0 $action-width;
+    @include inline-labeled-list;
+    margin-left: 0 $action-width;
+    margin-right: 0 $action-width;
     max-height: $item-height;
-    overflow: hidden;
-    padding: 0;
   }
 
-  .beer-detail {
-    @include inline-block;
-    width: 25%;
-  }
-
-  .beer-detail-name {
-    display: inline;
-    line-height: 1em;
-    margin: 0 0.25em 0 0;
-    vertical-align: text-top;
-  }
+  .beer-detail { width: 25%; }
+  .beer-detail-name { }
 
   .beer-notes {
     @include text-overflow;
