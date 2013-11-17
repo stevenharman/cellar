@@ -1,10 +1,9 @@
 li.match
   .match-primary
     figure
-      = link_to(match.brew, title: match.brew.name) do
-        = image_tag(match.brew.medium_image, alt: match.brew.name)
-    h4.brew= link_to(match.brew.name, match.brew, title: match.brew.name)
-    .breweries= render 'brews/breweries', brew: match.brew
+      = match.label_link
+    h4.brew= match.brew_link
+    .breweries= match.brewery_links
   ul.match-details
     li.vintage
       label Vintage
@@ -14,10 +13,8 @@ li.match
       = match.count
     li.size
       label Size
-      = match.size.full_name if match.size
+      = match.size
     li.notes
       = simple_format(match.notes)
 
-  .confidence
-    label Confidence
-    = match.confidence
+  = match.confidence_indicator(classes: 'confidence')
