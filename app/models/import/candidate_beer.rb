@@ -35,6 +35,10 @@ module Import
       )
     end
 
+    def brew
+      super || UnmatchedBrew.new(source_row)
+    end
+
     def matched?
       %w(medium high).include?(confidence.to_s)
     end
