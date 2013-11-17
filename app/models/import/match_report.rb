@@ -7,7 +7,7 @@ module Import
       @ledger = ledger
     end
 
-    def candidate_beers
+    def matches
       ledger.candidate_beers
     end
 

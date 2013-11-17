@@ -1,2 +1,23 @@
 li.match
-  = candidate.inspect
+  .match-primary
+    figure
+      = link_to(match.brew, title: match.brew.name) do
+        = image_tag(match.brew.medium_image, alt: match.brew.name)
+    h4.brew= link_to(match.brew.name, match.brew, title: match.brew.name)
+    .breweries= render 'brews/breweries', brew: match.brew
+  ul.match-details
+    li.vintage
+      label Vintage
+      = match.vintage
+    li.count
+      label Count
+      = match.count
+    li.size
+      label Size
+      = match.size.full_name if match.size
+    li.notes
+      = simple_format(match.notes)
+
+  .confidence
+    label Confidence
+    = match.confidence

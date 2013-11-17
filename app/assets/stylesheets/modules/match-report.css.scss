@@ -1,0 +1,55 @@
+@import 'item-lists';
+
+.match-report{
+
+  .matches {
+    @extend %item-list;
+
+    .match {
+      padding: 0.25em;
+    }
+  }
+
+  .match-primary {
+    @include inline-block;
+    width: 40%;
+
+    figure {
+      float: left;
+      height: 3.5em;
+      width: 3.5em;
+      margin-right: 0.5em;
+    }
+
+    .brew {
+      @include text-overflow;
+      margin: 0;
+    }
+
+    .breweries { @include text-overflow; }
+  }
+
+  .match-details {
+    @include inline-labeled-list;
+    @include inline-block;
+    vertical-align: top;
+    width: 50%;
+
+    & > li {
+      width: 33%;
+    }
+
+    .notes p {
+      @include text-overflow;
+      color: $base-font-color-light;
+      font-size: 0.8em;
+      margin: 0;
+      width: 100% !important;
+    }
+  }
+
+  .confidence {
+    @include inline-block;
+    width: 10%;
+  }
+}
