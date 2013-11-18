@@ -24,6 +24,16 @@ describe Import::Ledger do
         expect(ledger.errors_on(:csv_file)).to include('missing headers: Brew')
       end
     end
+
+    context 'csv file incorrectly encoded' do
+      let(:csv_file) { fixture_file_upload('invalid-encoding.csv') }
+
+      it 'reports incorrect formatting' do
+        expect(ledger).not_to be_valid
+        expect(ledger).to have(1).error_on(:csv_file)
+        expect(ledger.errors_on(:csv_file)).to include('invalid encoding: File must be UTF-8 encoded.')
+      end
+    end
   end
 
   describe 'updating related match order status' do

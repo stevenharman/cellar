@@ -25,6 +25,11 @@ class CsvFileUploader < CarrierWave::Uploader::Base
     "uploads/#{Rails.env}/#{mounted_as}"
   end
 
+  def encoded_with?(encoding)
+    content = read.dup
+    content.force_encoding(encoding).valid_encoding?
+  end
+
   private
 
   def ledger
