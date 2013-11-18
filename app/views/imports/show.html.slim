@@ -7,16 +7,19 @@
 
   h3 Matched Columns
   ul.import-columns.matched-columns
-    - for column in @import_ledger.matched_columns
+    - for column in @import_match_order.import_ledger.matched_columns
       li.import-column class=column
         = column.to_s.humanize
 
   h3 Extra Columns
   ul.import-columns.extra-columns
-    - for column in @import_ledger.extra_columns
+    - for column in @import_match_order.import_ledger.extra_columns
       li.import-column class=column
         = column.to_s.humanize
 
   h2 Import Beers from <code>csv</code> File
+
+  == render partial: 'import/destroy', locals: { ledger: @import_match_order.import_ledger }
+
   = simple_form_for(@import_match_order, url: import_match_order_path) do |f|
     = f.submit 'Continue Import', class: 'continue-import'

@@ -35,7 +35,7 @@ BrewdegaCellar::Application.routes.draw do
   resources :brews, only: [:index, :show]
   resources :stock_orders, only: [:new, :create]
 
-  resource :import, only: [:new, :create, :show]
+  resource :import, only: [:new, :create, :show, :destroy]
   namespace :import do
     resource :match_order, only: [:create, :show]
     resource :match_report, only: [:show]

@@ -20,12 +20,19 @@ class ImportsController < ApplicationController
   end
 
   def show
+    import_ledger = current_user.import_ledger
+
+    redirect_to(new_import_path) and return unless import_ledger
+
+    @import_match_order = Import::MatchOrder.new(import_ledger)
+    respond_with @import_match_order.import_ledger
+  end
+
+  def destroy
     @import_ledger = current_user.import_ledger
+    @import_ledger.destroy
 
-    redirect_to(new_import_path) and return unless @import_ledger
-
-    @import_match_order = Import::MatchOrder.new(@import_ledger)
-    respond_with @import_ledger
+    respond_with @import_ledger, location: new_import_path, success: 'BOOM'
   end
 
   private
