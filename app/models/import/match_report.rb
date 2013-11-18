@@ -8,7 +8,7 @@ module Import
     end
 
     def matches
-      ledger.candidate_beers
+      ledger.candidate_beers.includes(:brew)
     end
 
   end
