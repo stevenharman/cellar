@@ -3,7 +3,9 @@ module Search
 
     attr_reader :terms
 
-    def initialize(terms: nil)
+    def initialize(terms: '')
+      terms = terms.force_encoding('utf-8')
+      terms = terms.chars.select {|c| c.valid_encoding?}.join unless terms.valid_encoding?
       @terms = terms
     end
 
