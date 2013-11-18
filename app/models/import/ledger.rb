@@ -7,7 +7,7 @@ module Import
     mount_uploader :csv_file, CsvFileUploader
 
     validates :csv_file, presence: true
-    validate :csv_file_headers_found
+    validate :csv_file_headers_found, if: -> { csv_file.present? }
     validates :match_order_status, inclusion: MatchOrder::STATUSES
     validates :user, presence: true, uniqueness: true
 
@@ -39,8 +39,6 @@ module Import
     private
 
     def csv_file_headers_found
-      return unless csv_file.present?
-
       unless missing_columns.empty?
         errors.add(:csv_file, "missing headers: #{missing_columns.collect{|h| h.to_s.humanize }.join(', ')}")
       end
