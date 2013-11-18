@@ -12,6 +12,10 @@ describe Search::BrewQuery do
     expect(query.document_scope).to eq('Brew')
   end
 
+  it 'normalizes nil search terms' do
+    expect(described_class.new(terms: nil).terms).to eq('')
+  end
+
   it 'forces search terms to UTF-8' do
     binary_terms = "Fantôme Saison D'Erezée - Printemps".force_encoding('ASCII-8BIT')
     query = described_class.new(terms: binary_terms)
