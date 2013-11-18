@@ -3,7 +3,7 @@ require 'csv'
 module Import
   class Ledger < ActiveRecord::Base
     belongs_to :user, inverse_of: :import_ledger
-    has_many :candidate_beers, inverse_of: :ledger, foreign_key: :import_ledger_id
+    has_many :candidate_beers, inverse_of: :ledger, foreign_key: :import_ledger_id, dependent: :destroy
     mount_uploader :csv_file, CsvFileUploader
 
     validates :csv_file, presence: true

@@ -11,16 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131116001407) do
+ActiveRecord::Schema.define(version: 20131118050533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "hstore"
 
   create_table "availabilities", force: true do |t|
-    t.integer "brewery_db_id", null: false
-    t.string  "name",          null: false
-    t.string  "description"
+    t.integer  "brewery_db_id", null: false
+    t.string   "name",          null: false
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "availabilities", ["brewery_db_id"], name: "index_availabilities_on_brewery_db_id", unique: true, using: :btree
@@ -104,16 +106,18 @@ ActiveRecord::Schema.define(version: 20131116001407) do
   add_index "categories", ["name"], name: "index_categories_on_name", unique: true, using: :btree
 
   create_table "import_candidate_beers", force: true do |t|
-    t.integer "import_ledger_id"
-    t.integer "brew_id"
-    t.string  "confidence"
-    t.integer "count",            default: 1, null: false
-    t.date    "best_by"
-    t.integer "line_number",      default: 0, null: false
-    t.text    "notes"
-    t.integer "size_id"
-    t.integer "vintage"
-    t.hstore  "source_row"
+    t.integer  "import_ledger_id"
+    t.integer  "brew_id"
+    t.string   "confidence"
+    t.integer  "count",            default: 1, null: false
+    t.date     "best_by"
+    t.integer  "line_number",      default: 0, null: false
+    t.text     "notes"
+    t.integer  "size_id"
+    t.integer  "vintage"
+    t.hstore   "source_row"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "import_candidate_beers", ["import_ledger_id"], name: "index_import_candidate_beers_on_import_ledger_id", using: :btree
@@ -137,10 +141,12 @@ ActiveRecord::Schema.define(version: 20131116001407) do
   end
 
   create_table "sizes", force: true do |t|
-    t.integer "brewery_db_id"
-    t.string  "measure",       null: false
-    t.string  "quantity"
-    t.string  "name"
+    t.integer  "brewery_db_id"
+    t.string   "measure",       null: false
+    t.string   "quantity"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "sizes", ["brewery_db_id"], name: "index_sizes_on_brewery_db_id", using: :btree

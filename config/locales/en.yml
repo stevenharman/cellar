@@ -175,8 +175,8 @@ en:
       show:
         header: "Matching your beers..."
         explaination: >
-          Hold tight, we've put the cellar gremlins to work delving into our
-          known brews in search of the beers in your uploaded file.
+          Hold tight, we've put the cellar gremlins to work searching our
+          stocks for each of beers in your uploaded file.
         refresh: 'Refresh'
         title: 'Import: matching your beers...'
 
