@@ -1,10 +1,10 @@
 PgSearch.multisearch_options = {
   ignoring: :accents,
   using: {
+    #trigram: {},
     tsearch: {
-      #any_word: true,
       dictionary: 'english',
       prefix: true
-    }
+    },
   }
 }
