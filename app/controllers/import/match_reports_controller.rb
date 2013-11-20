@@ -1,5 +1,7 @@
 module Import
   class MatchReportsController < ApplicationController
+    before_filter :authenticate_user!
+    respond_to :html
     decorates_assigned :match_report, with: MatchReportDecorator
 
     def show
