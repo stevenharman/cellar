@@ -9,7 +9,10 @@ heroku pgbackups:capture --expire
 curl -# -o /tmp/cellar.dump `heroku pgbackups:url`
 
 # Restore the backup
-pg_restore --verbose --clean --no-acl --no-owner -h 127.0.0.1 -U `whoami` -d cellar_development /tmp/cellar.dump
+dropdb cellar_development
+createdb -T template0 cellar_development
+
+pg_restore --verbose --no-acl --no-owner -h 127.0.0.1 -U `whoami` -d cellar_development /tmp/cellar.dump
 
 # Clean up
 rm -f /tmp/cellar.dump

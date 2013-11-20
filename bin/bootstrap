@@ -22,13 +22,13 @@ add_git_remote_if_needed() {
 setup_database() {
   success=0
 
-  rake db:create:all
+  bin/rake db:drop:all
   let success=success+$?
 
-  rake db:reset
+  bin/rake db:setup
   let success=$?+success
 
-  RAILS_ENV=test rake db:reset
+  RAILS_ENV=test bin/rake db:schema:load
   let success=$?+success
 
   if [[ "$success" -ne "0" ]]; then
@@ -41,9 +41,9 @@ setup_database() {
     echo "1) Edit config/database.yml if a username or password is required"
     echo "   for your PostgreSQL installation."
     echo "2) Initialize databases with:"
-    echo "     rake db:create:all"
-    echo "     rake db:reset"
-    echo "     RAILS_ENV=test rake db:reset"
+    echo "     bin/rake db:drop:all"
+    echo "     bin/rake db:setup"
+    echo "     RAILS_ENV=test bin/rake db:schema:load"
     printf "\e[0m"
   fi
 }
