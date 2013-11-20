@@ -12,6 +12,10 @@ describe Search::BrewQuery do
     expect(query.document_scope).to eq('Brew')
   end
 
+  it 'does not use trigrams' do
+    expect(query.options).to eq(trigram: false)
+  end
+
   it 'normalizes nil search terms' do
     expect(described_class.new(terms: nil).terms).to eq('')
   end

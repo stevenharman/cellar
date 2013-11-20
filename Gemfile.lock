@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/Casecommons/pg_search.git
+  revision: 092dd202500a5f83a06b9da52205f2a7a4e51de9
+  specs:
+    pg_search (0.7.0)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
+
+GIT
   remote: https://github.com/sj26/mailcatcher.git
   revision: 61f0fdede36ed37de78369c595628a2bfffc94f0
   specs:
@@ -197,10 +206,6 @@ GEM
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
     pg (0.17.0)
-    pg_search (0.7.0)
-      activerecord (>= 3.1)
-      activesupport (>= 3.1)
-      arel
     polyglot (0.3.3)
     pry (0.9.12.3)
       coderay (~> 1.0)
@@ -374,7 +379,7 @@ DEPENDENCIES
   neat!
   newrelic_rpm
   pg
-  pg_search
+  pg_search!
   pry-rails
   pry-remote
   puma

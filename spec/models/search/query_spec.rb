@@ -18,6 +18,10 @@ describe Search::Query do
     expect(described_class.new(page: nil)).to be_paged
   end
 
+  it 'uses trigrams' do
+    expect(query.options).to eq(trigram: true)
+  end
+
   it 'is not scoped to a type of document' do
     expect(query).not_to be_document_scoped
   end

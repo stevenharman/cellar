@@ -13,7 +13,7 @@ gem 'fog', '~> 1.15'
 gem 'kaminari'
 gem 'newrelic_rpm'
 gem 'pg'
-gem 'pg_search'
+gem 'pg_search', git: 'https://github.com/Casecommons/pg_search.git' # need > 0.7.0 for https://github.com/Casecommons/pg_search/commit/1e42bdab619766c437d7660b22ce588640232021
 gem 'rack-cors', require: 'rack/cors'
 gem 'simple_form', '~> 3.0.0.rc'
 gem 'slim', '~> 2.0'

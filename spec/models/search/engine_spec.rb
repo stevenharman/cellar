@@ -64,4 +64,24 @@ describe Search::Engine do
     expect(results.total_count).to eq(0)
     expect(results.current_page).to eq(1)
   end
+
+  context 'beers with accents in their name' do
+    let(:fantome) { FactoryGirl.create(:brewery, name: 'Brasserie Fantôme') }
+    let!(:primtemps) { FactoryGirl.create(:brew, breweries: [fantome], name: "Saison D'Erezée - Printemps") }
+
+    it 'ignores accents in names' do
+      query = Search::Query.new(terms: 'Fantôme')
+      results = search_engine.search(query)
+
+      expect(results).to include(fantome)
+      expect(results).to include(primtemps)
+    end
+
+    it 'finds slightly-misspelled beers' do
+      query = Search::Query.new(terms: 'Fantôme Siaison Pintemps')
+      results = search_engine.search(query)
+
+      expect(results).to include(primtemps)
+    end
+  end
 end
