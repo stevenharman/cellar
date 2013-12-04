@@ -1,15 +1,6 @@
 GIT
-  remote: https://github.com/Casecommons/pg_search.git
-  revision: 092dd202500a5f83a06b9da52205f2a7a4e51de9
-  specs:
-    pg_search (0.7.0)
-      activerecord (>= 3.1)
-      activesupport (>= 3.1)
-      arel
-
-GIT
   remote: https://github.com/sj26/mailcatcher.git
-  revision: 61f0fdede36ed37de78369c595628a2bfffc94f0
+  revision: f93df8802123cdaf940c4308a45d4998d4f825ad
   specs:
     mailcatcher (0.5.12)
       activesupport (>= 3.0.0, < 4.1)
@@ -31,34 +22,34 @@ GIT
 
 GIT
   remote: https://github.com/thoughtbot/neat.git
-  revision: f3e2296b9148951eba5350052d972daa3b71dd68
+  revision: e41d2b88ed0219284ad7f813842c818b09906bde
   specs:
-    neat (1.5.0.pre)
+    neat (1.5.0)
       bourbon (>= 2.1)
       sass (>= 3.2)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (4.0.1)
-      actionpack (= 4.0.1)
+    actionmailer (4.0.2)
+      actionpack (= 4.0.2)
       mail (~> 2.5.4)
-    actionpack (4.0.1)
-      activesupport (= 4.0.1)
+    actionpack (4.0.2)
+      activesupport (= 4.0.2)
       builder (~> 3.1.0)
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    activemodel (4.0.1)
-      activesupport (= 4.0.1)
+    activemodel (4.0.2)
+      activesupport (= 4.0.2)
       builder (~> 3.1.0)
-    activerecord (4.0.1)
-      activemodel (= 4.0.1)
+    activerecord (4.0.2)
+      activemodel (= 4.0.2)
       activerecord-deprecated_finders (~> 1.0.2)
-      activesupport (= 4.0.1)
+      activesupport (= 4.0.2)
       arel (~> 4.0.0)
     activerecord-deprecated_finders (1.0.3)
-    activesupport (4.0.1)
+    activesupport (4.0.2)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
       multi_json (~> 1.3)
@@ -82,7 +73,7 @@ GEM
       faraday_middleware (~> 0.8)
       hashie (>= 1.1, < 3)
     builder (3.1.4)
-    capybara (2.1.0)
+    capybara (2.2.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
@@ -108,21 +99,21 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    connection_pool (1.1.0)
+    connection_pool (1.2.0)
     crack (0.4.1)
       safe_yaml (~> 0.9.0)
     daemons (1.1.9)
     database_cleaner (1.2.0)
     debug_inspector (0.0.2)
     descendants_tracker (0.0.3)
-    devise (3.2.1)
+    devise (3.2.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
-    docile (1.1.0)
+    docile (1.1.1)
     dotenv (0.9.0)
     dotenv-rails (0.9.0)
       dotenv (= 0.9.0)
@@ -131,7 +122,7 @@ GEM
       activemodel (>= 3.0)
       activesupport (>= 3.0)
       request_store (~> 1.0.3)
-    equalizer (0.0.7)
+    equalizer (0.0.8)
     erubis (2.7.0)
     eventmachine (1.0.3)
     excon (0.28.0)
@@ -172,27 +163,26 @@ GEM
       rest-client (~> 1.6.1)
       rubyzip
     hike (1.2.3)
-    i18n (0.6.5)
+    i18n (0.6.9)
     ice_nine (0.10.0)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
-    kaminari (0.14.1)
+    kaminari (0.15.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    launchy (2.4.0)
+    launchy (2.4.2)
       addressable (~> 2.3)
     listen (1.1.6)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
-    lockfile (2.1.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     method_source (0.8.2)
-    mime-types (1.25)
+    mime-types (1.25.1)
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.2)
@@ -206,8 +196,12 @@ GEM
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
     pg (0.17.0)
+    pg_search (0.7.2)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     polyglot (0.3.3)
-    pry (0.9.12.3)
+    pry (0.9.12.4)
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
@@ -216,7 +210,7 @@ GEM
     pry-remote (0.1.7)
       pry (~> 0.9)
       slop (~> 3.0)
-    puma (2.6.0)
+    puma (2.7.0)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-cors (0.2.9)
@@ -224,22 +218,22 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (4.0.1)
-      actionmailer (= 4.0.1)
-      actionpack (= 4.0.1)
-      activerecord (= 4.0.1)
-      activesupport (= 4.0.1)
+    rails (4.0.2)
+      actionmailer (= 4.0.2)
+      actionpack (= 4.0.2)
+      activerecord (= 4.0.2)
+      activesupport (= 4.0.2)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.0.1)
+      railties (= 4.0.2)
       sprockets-rails (~> 2.0.0)
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
     rails_serve_static_assets (0.0.1)
     rails_stdout_logging (0.0.3)
-    railties (4.0.1)
-      actionpack (= 4.0.1)
-      activesupport (= 4.0.1)
+    railties (4.0.2)
+      actionpack (= 4.0.2)
+      activesupport (= 4.0.2)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.1.0)
@@ -249,7 +243,7 @@ GEM
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
     redis (3.0.6)
-    redis-namespace (1.3.2)
+    redis-namespace (1.4.0)
       redis (~> 3.0.4)
     request_store (1.0.5)
     rest-client (1.6.7)
@@ -272,24 +266,23 @@ GEM
     ruby-hmac (0.4.0)
     rubyzip (1.1.0)
     safe_yaml (0.9.7)
-    sass (3.3.0.rc.1)
+    sass (3.3.0.rc.2)
       listen (~> 1.1.0)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
-    sidekiq (2.16.1)
+    sidekiq (2.17.0)
       celluloid (>= 0.15.2)
       connection_pool (>= 1.0.0)
       json
       redis (>= 3.0.4)
       redis-namespace (>= 1.3.1)
-    simple_form (3.0.0)
+    simple_form (3.0.1)
       actionpack (>= 4.0.0, < 4.1)
       activemodel (>= 4.0.0, < 4.1)
-    simplecov (0.8.1)
+    simplecov (0.8.2)
       docile (~> 1.1.0)
-      lockfile (>= 2.1.0)
       multi_json
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
@@ -304,7 +297,7 @@ GEM
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
     slop (3.4.7)
-    sprockets (2.10.0)
+    sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -328,13 +321,13 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.38)
-    uglifier (2.3.1)
+    uglifier (2.3.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unf (0.1.3)
       unf_ext
     unf_ext (0.0.6)
-    vcr (2.7.0)
+    vcr (2.8.0)
     virtus (1.0.0)
       axiom-types (~> 0.0.5)
       coercible (~> 0.2)
@@ -379,12 +372,12 @@ DEPENDENCIES
   neat!
   newrelic_rpm
   pg
-  pg_search!
+  pg_search (~> 0.7.2)
   pry-rails
   pry-remote
   puma
   rack-cors
-  rails (~> 4.0.0)
+  rails (~> 4.0.2)
   rails_12factor
   rspec-rails (~> 2.14)
   sass-rails (~> 4.0.0)
