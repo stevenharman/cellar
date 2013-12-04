@@ -1,4 +1,6 @@
 # encoding: binary
+require 'active_model/validator'
+
 class EmailValidator < ActiveModel::EachValidator
 
   EmailAddress = begin
@@ -20,7 +22,7 @@ class EmailValidator < ActiveModel::EachValidator
 
   def validate_each(record, attribute, value)
     unless value =~ EmailAddress
-      record.errors[attribute] << (options[:message] || "is not valid")
+      record.errors[attribute] << (options[:message] || 'is not valid')
     end
   end
 
