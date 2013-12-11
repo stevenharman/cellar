@@ -12,6 +12,11 @@
     }
   }
 
+  .source-data {
+    color: $base-font-color-light;
+    font-style: italic;
+  }
+
   .match-primary {
     @include inline-block;
     width: 40%;

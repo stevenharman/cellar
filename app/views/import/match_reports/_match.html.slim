@@ -2,8 +2,12 @@ li.match
   .match-primary
     figure
       = match.label_link
-    h4.brew= match.brew_link
-    .breweries= match.brewery_links
+    h4.brew
+      => match.brew_link
+      small.source-data= "(#{match.source_brew})"
+    .breweries
+      => match.brewery_links
+      small.source-data= "(#{match.source_brewery})"
   ul.match-details
     li.vintage
       label Vintage
@@ -13,7 +17,8 @@ li.match
       = match.count
     li.size
       label Size
-      = match.size
+      => match.size
+      small.source-data= "(#{match.source_size})"
     li.notes
       = simple_format(match.notes)
 
