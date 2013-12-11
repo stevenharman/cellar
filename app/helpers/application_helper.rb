@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def ldate(date, options = {})
-    if(date)
+    if date
       content_tag(:time, l(date, options), datetime: date.iso8601)
     end
   end
