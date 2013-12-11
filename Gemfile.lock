@@ -22,7 +22,7 @@ GIT
 
 GIT
   remote: https://github.com/thoughtbot/neat.git
-  revision: e41d2b88ed0219284ad7f813842c818b09906bde
+  revision: 587f3ebe19c4fd683b5cf68c55cefd2f96a1e032
   specs:
     neat (1.5.0)
       bourbon (>= 2.1)
@@ -61,7 +61,6 @@ GEM
     axiom-types (0.0.5)
       descendants_tracker (~> 0.0.1)
       ice_nine (~> 0.9)
-    backports (3.3.5)
     bcrypt-ruby (3.1.2)
     better_errors (1.0.1)
       coderay (>= 1.0.0)
@@ -79,7 +78,7 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    capybara-webkit (1.0.0)
+    capybara-webkit (1.1.0)
       capybara (~> 2.0, >= 2.0.2)
       json
     carrierwave (0.9.0)
@@ -89,8 +88,7 @@ GEM
     celluloid (0.15.2)
       timers (~> 1.1.0)
     coderay (1.1.0)
-    coercible (0.2.0)
-      backports (~> 3.0, >= 3.1.0)
+    coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -191,7 +189,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (2.7.0)
     netrc (0.7.7)
-    newrelic_rpm (3.6.9.171)
+    newrelic_rpm (3.7.0.177)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
@@ -210,7 +208,7 @@ GEM
     pry-remote (0.1.7)
       pry (~> 0.9)
       slop (~> 3.0)
-    puma (2.7.0)
+    puma (2.7.1)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-cors (0.2.9)
@@ -243,7 +241,7 @@ GEM
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
     redis (3.0.6)
-    redis-namespace (1.4.0)
+    redis-namespace (1.4.1)
       redis (~> 3.0.4)
     request_store (1.0.5)
     rest-client (1.6.7)
@@ -328,9 +326,9 @@ GEM
       unf_ext
     unf_ext (0.0.6)
     vcr (2.8.0)
-    virtus (1.0.0)
+    virtus (1.0.1)
       axiom-types (~> 0.0.5)
-      coercible (~> 0.2)
+      coercible (~> 1.0)
       descendants_tracker (~> 0.0.1)
       equalizer (~> 0.0.7)
     warden (1.2.3)
