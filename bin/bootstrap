@@ -65,6 +65,7 @@ fi
 
 # Heroku deployments
 add_git_remote_if_needed production git@heroku.com:brewdega-cellar.git
+add_git_remote_if_needed staging git@heroku.com:brewdega-cellar-staging.git
 
 # Gems
 bundle install
