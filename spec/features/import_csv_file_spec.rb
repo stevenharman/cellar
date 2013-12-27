@@ -39,7 +39,7 @@ feature 'Importing a CSV file', :file_upload_helpers do
 
   def upload_file(name)
     attach_file('import_ledger_csv_file', File.join(fixture_path, name))
-    find('input.upload-file').click
+    find('button.upload-file').click
   end
 
 end

@@ -3,5 +3,6 @@
 
   = simple_form_for(@import_ledger, url: import_path, html: {multipart: true}) do |f|
     = f.input :csv_file, as: :file
-    = f.submit 'Upload file', class: 'upload-file btn-success'
+    = f.button :button, class: 'upload-file btn-success' do
+      = fa_icon 'cloud-upload', text: 'Upload File'
 
