@@ -3,7 +3,7 @@
 
 article.match-order-status.jumbotron ng-app='importMatchOrder' ng-controller='importMatchOrderCtrl'
   h1
-    => fa_icon 'refresh', :'ng-class'=>'{"fa-spin": checking}'
+    <div data-brw-beacon pulse-event="checkingStatus"></div>
     = t('.header')
   p= t('.explaination')
   p= t('.progress-note')

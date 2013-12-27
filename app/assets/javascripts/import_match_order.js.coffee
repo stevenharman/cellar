@@ -1,4 +1,4 @@
-@importMatchOrder = angular.module('importMatchOrder', ['ngResource'])
+@importMatchOrder = angular.module('importMatchOrder', ['ngAnimate', 'ngResource', 'brwBeacon'])
 
 # HACK: Rails currently ignores Accept headers when they contain '*/*', so we
 # must send the xhr header to force it to respect the 'application/json' media

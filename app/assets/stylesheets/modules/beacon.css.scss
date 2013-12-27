@@ -1,0 +1,75 @@
+@import 'globals/all';
+
+.beacon {
+  display: inline-block;
+  height: 0.5em;
+  margin-right: 0.25em;
+  position: relative;
+  @include animation-duration(1s);
+
+  .dot {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: #80002d;
+    border-radius: 10px;
+    box-shadow: 0 0 9px #666;
+    border: 3px solid transparent;
+    z-index: 10;
+  }
+
+  .ring {
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    width: 0;
+    height: 0;
+    border-radius: 3px;
+    border: 3px solid #80002d;
+    z-index: 5;
+  }
+
+  &.pulse {
+    .dot {
+      @include animation(beacon-dot-pulse 1.0s ease-out);
+      @include animation-iteration-count(1);
+    }
+    .ring {
+      @include animation(beacon-ring-pulse 1.0s);
+      @include animation-iteration-count(1);
+    }
+  }
+}
+
+@include keyframes(beacon-dot-pulse) {
+  from {
+    background-color: #80002d;
+    box-shadow: 0 0 9px #666;
+  }
+  50% {
+    background-color: #c90047;
+    box-shadow: 0 0 18px #666;
+  }
+  to {
+    background-color: #80002d;
+    box-shadow: 0 0 9px #666;
+  }
+}
+
+@include keyframes(beacon-ring-pulse) {
+  0% {
+      opacity: 1;
+      transform: scale(0);
+  }
+  100% {
+      opacity: 0;
+      border-radius: 15px;
+      padding: 8px;
+      top: 0;
+      left: 5px;
+      transform: scale(1.5);
+  }
+}
+
