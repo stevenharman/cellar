@@ -34,7 +34,7 @@ feature 'Importing a CSV file', :file_upload_helpers do
 
   def refresh_the_page
     Import::MatchJob.drain
-    find('a.refresh').click
+    visit(current_path)
   end
 
   def upload_file(name)

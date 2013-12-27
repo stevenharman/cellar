@@ -1,8 +1,11 @@
 - content_for :title do
   = t('.title')
 
-article.match-order-status.jumbotron
-  h1= t('.header')
+article.match-order-status.jumbotron ng-app='importMatchOrder' ng-controller='importMatchOrderCtrl'
+  h1
+    => fa_icon 'refresh', :'ng-class'=>'{"fa-spin": checking}'
+    = t('.header')
   p= t('.explaination')
-  = link_to(import_match_order_path, class: 'refresh btn btn-primary') do
+  p= t('.progress-note')
+  /= link_to(import_match_order_path, class: 'refresh btn btn-primary {{status}}') do
     = fa_icon 'refresh', text: t('.refresh')

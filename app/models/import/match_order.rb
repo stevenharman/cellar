@@ -56,11 +56,11 @@ module Import
       self
     end
 
-    private
-
     def status
       import_ledger.match_order_status
     end
+
+    private
 
     def update_status(new_status)
       import_ledger.update_match_order_status(new_status)

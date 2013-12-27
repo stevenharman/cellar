@@ -177,6 +177,7 @@ en:
         explaination: >
           Hold tight, we've put the cellar gremlins to work searching our
           stocks for each of beers in your uploaded file.
+        progress-note: "We'll automatically check the progress every few seconds."
         refresh: 'Refresh'
         title: 'Import: matching your beers...'
 
