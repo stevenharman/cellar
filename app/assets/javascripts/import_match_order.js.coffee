@@ -5,3 +5,6 @@
 # type that AngularJS sends. See: # https://github.com/rails/rails/issues/9940
 @importMatchOrder.config ($httpProvider) ->
   $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+
+@importMatchOrder.config ($locationProvider) ->
+  $locationProvider.html5Mode(true)

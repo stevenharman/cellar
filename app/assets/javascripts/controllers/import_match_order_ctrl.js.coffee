@@ -1,14 +1,14 @@
-angular.module('importMatchOrder').controller 'importMatchOrderCtrl', ($scope, $interval, $window, ImportMatchOrder) ->
-  $scope.checkOrderStatus = ->
+angular.module('importMatchOrder').controller 'importMatchOrderCtrl', ($scope, $interval, $location, $window, ImportMatchOrder) ->
+  $scope.checkOrderStatus = (options = {})->
     $scope.checking = true
-    $scope.matchOrder = ImportMatchOrder.get({}, ->
-      $scope.status = $scope.matchOrder.status
-      console.log("staus: #{$scope.status}")
-      if $scope.status == 'done'
+    $scope.matchOrder = ImportMatchOrder.get(options, ->
+      status = $scope.matchOrder.status
+      if status == 'done'
         $window.location.href = $scope.matchOrder.links.report
       else
         $scope.checking = false
     )
 
-  $scope.checkOrderStatus()
-  poll = $interval($scope.checkOrderStatus, 5000)
+  poll = $interval(
+    -> $scope.checkOrderStatus($location.search())
+    5000)

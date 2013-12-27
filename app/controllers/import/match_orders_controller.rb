@@ -19,12 +19,12 @@ module Import
 
       respond_to do |format|
         format.json { render json: {
-            status: @import_match_order.status,
+            status: debug_status || @import_match_order.status,
             links: { report: import_match_report_url }
         }}
 
         format.html {
-          if @import_match_order.pending?
+          if @import_match_order.pending? || debug_status
             flash.now[:notice] = t('flash.import.match_orders.show.notice')
           else
             redirect_to import_match_report_path, success: t('flash.import.match_orders.show.success')
@@ -33,5 +33,10 @@ module Import
       end
     end
 
+    private
+
+    def debug_status
+      params[:debug_status]
+    end
   end
 end
