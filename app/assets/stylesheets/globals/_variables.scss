@@ -1,22 +1,21 @@
 // Colors
 ///////////////////////////////////////////////////////////////////////////////
-$orange: #F2664F;
-$brightorange: #F15929;
+$beige: #E2DEBE;
+$beige-light: #F0F0E1;
+$blue: #066C7F;
 $brown: #754D2E;
 $brown-accent: #574944;
 $brown-highlight: #C3A893;
-$beige: #E2DEBE;
-$light-beige: #F0F0E1;
+$gray-dark: #333;
+$gray-light: #A79D99;
 $green: #7db500;
-$yellow: #FEC846;
+$green-light: #E6EFC2;
+$orange: #F2664F;
+$orange-bright: #F15929;
 $red: #E54028;
-
-$blue: #066C7F;
-$dark-gray: #333;
-$light-gray: #A79D99;
-$light-red: #FBE3E4;
-$light-yellow: #FFF6BF;
-$light-green: #E6EFC2;
+$red-light: #FBE3E4;
+$yellow: #FEC846;
+$yellow-light: #FFF6BF;
 
 //  Font Colors
 $base-font-color: $brown;
@@ -28,20 +27,20 @@ $base-link-color: $blue;
 $hover-link-color: darken($base-link-color, 15%);
 
 // Border Colors
-$base-border-color: $light-gray;
+$base-border-color: $gray-light;
 $base-border-color-light: lighten($base-border-color, 15%);
 
 // Background Colors
 $base-background-color-disabled: lighten($base-font-color-disabled, 45%);
 
 // Section Colors (for cards, wells, callouts, etc.)
-$section-background-color: $light-beige;
+$section-background-color: $beige-light;
 $section-border-color: $beige;
 
 // Flash Colors
-$error-color: $light-red;
-$notice-color: $light-yellow;
-$success-color: $light-green;
+$error-color: $red-light;
+$notice-color: $yellow-light;
+$success-color: $green-light;
 
 $awning-height: 86px;
 

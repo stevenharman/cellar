@@ -13,7 +13,7 @@ footer {
   padding: 0.25em 0.5em;
 
   a {
-    @include clickable($brightorange);
+    @include clickable($orange-bright);
   }
 }
 
