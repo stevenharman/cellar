@@ -25,7 +25,7 @@ feature 'Importing a CSV file', :file_upload_helpers do
   end
 
   def expect_to_see_match_report
-    expect(page).to have_text(I18n.t('flash.import.match_orders.show.success'))
+    expect(page).to have_text(I18n.t('flash.import.match_reports.show.success'))
   end
 
   def continue_import

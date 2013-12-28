@@ -48,6 +48,8 @@ en:
           error: "Woops! There was a problem with your imported CSV file."
         show:
           notice: "We are working hard to find your beers. Keep refreshing..."
+      match_reports:
+        show:
           success: "We've finished processing your file. Please review the matches below."
     imports:
       create:

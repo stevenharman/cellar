@@ -27,7 +27,7 @@ module Import
           if @import_match_order.pending? || debug_status
             flash.now[:notice] = t('flash.import.match_orders.show.notice')
           else
-            redirect_to import_match_report_path, success: t('flash.import.match_orders.show.success')
+            redirect_to import_match_report_path
           end
         }
       end
