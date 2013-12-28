@@ -1,34 +1,43 @@
 @import 'globals/all';
 
+$beacon-active-color: saturate($orange-bright, 15%);
+$beacon-inactive-color: desaturate($orange-bright, 40%);
+
 .beacon {
-  display: inline-block;
-  height: 0.5em;
-  margin-right: 0.25em;
-  position: relative;
+  $container-size: 0.75em;
+  $dot-size: $container-size * 0.25;
+  $ring-size: $container-size;
+  $dot-offset: ($container-size - $dot-size) / 2;
+  $ring-offset: ($container-size - $ring-size) / 2;
+
   @include animation-duration(1s);
+  position: relative;
+  display: inline-block;
+  height: $container-size;
+  width: $container-size;
+  vertical-align: baseline;
 
   .dot {
     position: absolute;
-    top: 5px;
-    left: 10px;
-    width: 10px;
-    height: 10px;
-    background-color: #80002d;
-    border-radius: 10px;
+    top: $dot-offset;
+    left: $dot-offset;
+    height: $dot-size;
+    width: $dot-size;
+    border-radius: $dot-size;
+    background-color: $beacon-inactive-color;
     box-shadow: 0 0 9px #666;
     border: 3px solid transparent;
     z-index: 10;
   }
 
   .ring {
-    position: absolute;
-    top: 7px;
-    left: 12px;
-    width: 0;
-    height: 0;
-    border-radius: 3px;
-    border: 3px solid #80002d;
-    z-index: 5;
+    top: $ring-offset;
+    left: $ring-offset;
+    height: $ring-size;
+    width: $ring-size;
+    border-radius: $ring-size;
+    border: 3px solid $beacon-active-color;
+    opacity: 0;
   }
 
   &.pulse {
@@ -43,33 +52,32 @@
   }
 }
 
+// Must define at top-level so not nested under .beacon
 @include keyframes(beacon-dot-pulse) {
   from {
-    background-color: #80002d;
+    background-color: $beacon-inactive-color;
     box-shadow: 0 0 9px #666;
   }
   50% {
-    background-color: #c90047;
+    background-color: $beacon-active-color;
     box-shadow: 0 0 18px #666;
   }
   to {
-    background-color: #80002d;
+    background-color: $beacon-inactive-color;
     box-shadow: 0 0 9px #666;
   }
 }
 
 @include keyframes(beacon-ring-pulse) {
   0% {
-      opacity: 1;
-      transform: scale(0);
+    opacity: 1;
+    @include transform(scale(0.0));
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
-      opacity: 0;
-      border-radius: 15px;
-      padding: 8px;
-      top: 0;
-      left: 5px;
-      transform: scale(1.5);
+    opacity: 0;
+    @include transform(scale(1.0));
   }
 }
-
