@@ -3,9 +3,14 @@ require 'spec_helper'
 
 describe Import::CandidateBeer do
   describe 'a new candidate' do
+    subject(:candidate) { described_class.new }
+
     it 'has unknown confidence' do
-      candidate = described_class.new
       expect(candidate.confidence).to eq('unknown')
+    end
+
+    it 'is not confirmed' do
+      expect(candidate.confirmed?).not_to be(true)
     end
   end
 
@@ -21,7 +26,7 @@ describe Import::CandidateBeer do
     specify { expect(candidate.best_by).to eq(Date.new(2016, 10, 15)) }
     specify { expect(candidate.count).to eq(2) }
     specify { expect(candidate.notes).to eq('Booozy') }
-    specify { pending('Lookup sizes'); expect(candidate.size).to eq(Size.new) }
+    specify { pending('NOT IMPLEMENTED: Lookup sizes'); expect(candidate.size).to eq(Size.new) }
     specify { expect(candidate.vintage).to eq(2011) }
 
     it 'keeps the original row' do

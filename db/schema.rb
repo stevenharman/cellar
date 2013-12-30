@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131230191234) do
+ActiveRecord::Schema.define(version: 20131230192631) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -120,8 +120,10 @@ ActiveRecord::Schema.define(version: 20131230191234) do
     t.hstore   "source_row"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "confirmed",        default: false,     null: false
   end
 
+  add_index "import_candidate_beers", ["confirmed"], name: "index_import_candidate_beers_on_confirmed", using: :btree
   add_index "import_candidate_beers", ["import_ledger_id"], name: "index_import_candidate_beers_on_import_ledger_id", using: :btree
 
   create_table "import_ledgers", force: true do |t|
