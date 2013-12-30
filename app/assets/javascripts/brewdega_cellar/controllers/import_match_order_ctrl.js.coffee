@@ -1,4 +1,4 @@
-angular.module('importMatchOrder').controller 'importMatchOrderCtrl', ($scope, $interval, $location, $window, ImportMatchOrder) ->
+angular.module('brewdegaCellar').controller 'importMatchOrderCtrl', ($scope, $interval, $location, $window, ImportMatchOrder) ->
   $scope.checkOrderStatus = (options = {})->
     $scope.$broadcast('checkingStatus')
     $scope.matchOrder = ImportMatchOrder.get(options, ->

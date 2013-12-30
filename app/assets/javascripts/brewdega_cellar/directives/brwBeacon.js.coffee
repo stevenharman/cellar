@@ -1,4 +1,4 @@
-angular.module('brwBeacon', [])
+angular.module('brewdegaCellar')
   .directive 'brwBeacon', ($animate)->
     restrict: 'AE'
     replace: true
