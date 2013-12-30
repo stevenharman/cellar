@@ -1,9 +1,9 @@
 require 'models/import/agent'
 
 describe Import::Agent do
-  subject(:agent) { described_class.new(match_order, matches: search_match) }
+  subject(:agent) { described_class.new(match_order, match_maker: match_maker) }
   let(:match_order) { double('Import::MatchOrder', spreadsheet: [row_1], add_to_ledger: true, done: true) }
-  let(:search_match) { double('Search::Match') }
+  let(:match_maker) { double('Search::MatchMaker') }
 
   describe 'matching beers in a ledger' do
     let(:batch) { double('Batch').as_null_object }
@@ -12,7 +12,7 @@ describe Import::Agent do
 
     before do
       allow(Batch).to receive(:run).and_yield(batch)
-      allow(search_match).to receive(:find_brew).with('Founders KBS') { match_1 }
+      allow(match_maker).to receive(:find_brew).with('Founders KBS') { match_1 }
     end
 
     it 'addes a match to the ledger for each row in the spreadsheet' do

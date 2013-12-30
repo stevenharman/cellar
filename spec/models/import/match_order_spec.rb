@@ -31,7 +31,7 @@ describe Import::MatchOrder do
 
   describe 'adding a matching row to the order' do
     let(:candiate_beer) { double('a CandidateBeer') }
-    let(:match) { double('Import::Match') }
+    let(:match) { double('Import::BrewMatch') }
     let(:row) { Hash.new }
 
     it 'adds a candidate beer to the ledger' do

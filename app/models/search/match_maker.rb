@@ -3,7 +3,7 @@ require_relative 'brew_match'
 require_relative 'brew_query'
 
 module Search
-  class Match
+  class MatchMaker
 
     attr_reader :query_factory, :match_factory, :engine
 

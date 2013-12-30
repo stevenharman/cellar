@@ -2,21 +2,21 @@ require 'batch'
 
 module Import
   class Agent
-    attr_reader :match_order, :matches
+    attr_reader :match_order, :match_maker
 
     def self.match(match_order)
       new(match_order).match
     end
 
-    def initialize(match_order, matches: Search::Match)
+    def initialize(match_order, match_maker: Search::MatchMaker)
       @match_order = match_order
-      @matches = matches
+      @match_maker = match_maker
     end
 
     def match
       Batch.run do |batch|
         spreadsheet_rows.each do |row|
-          match = matches.find_brew(extract_terms(row))
+          match = match_maker.find_brew(extract_terms(row))
           batch.cancel unless match_order.add_to_ledger(match: match, row: row)
         end
 
