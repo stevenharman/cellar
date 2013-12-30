@@ -8,7 +8,7 @@ module Import
     belongs_to :size
 
     validates :ledger, presence: true
-    validates :confidence, inclusion: [:none, :medium, :high]
+    validates :confidence, inclusion: %i(unknown none medium high)
     validates :vintage, numericality: { allow_nil: true, only_integer: true }
 
     store_accessor :source_row

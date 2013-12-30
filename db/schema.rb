@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131119010935) do
+ActiveRecord::Schema.define(version: 20131230191234) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -110,10 +110,10 @@ ActiveRecord::Schema.define(version: 20131119010935) do
   create_table "import_candidate_beers", force: true do |t|
     t.integer  "import_ledger_id"
     t.integer  "brew_id"
-    t.string   "confidence"
-    t.integer  "count",            default: 1, null: false
+    t.string   "confidence",       default: "unknown", null: false
+    t.integer  "count",            default: 1,         null: false
     t.date     "best_by"
-    t.integer  "line_number",      default: 0, null: false
+    t.integer  "line_number",      default: 0,         null: false
     t.text     "notes"
     t.integer  "size_id"
     t.integer  "vintage"

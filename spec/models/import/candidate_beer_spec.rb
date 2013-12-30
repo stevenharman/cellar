@@ -2,6 +2,13 @@ require 'csv'
 require 'spec_helper'
 
 describe Import::CandidateBeer do
+  describe 'a new candidate' do
+    it 'has unknown confidence' do
+      candidate = described_class.new
+      expect(candidate.confidence).to eq('unknown')
+    end
+  end
+
   describe 'building a candidate from a brew match and source row' do
     subject(:candidate) { described_class.build(match: brew_match, row: source_row) }
     let(:brew_match) { Search::BrewMatch.new([matched_brew]) }
@@ -50,12 +57,17 @@ describe Import::CandidateBeer do
       end
 
       it 'is matched when confidence is medium' do
-        candidate.confidence = 'medium'
+        candidate.confidence = :medium
         expect(candidate).to be_matched
       end
 
       it 'is not matched when confidence none' do
         candidate.confidence = :none
+        expect(candidate).not_to be_matched
+      end
+
+      it 'is not matched when confidence unknown' do
+        candidate.confidence = :unknown
         expect(candidate).not_to be_matched
       end
     end
