@@ -3,6 +3,6 @@ class BrewerySerializer < ApplicationSerializer
 
   links do
     link :self, href: urls.brewery_url(object)
-    link :mediumImage, href: object.medium_image
+    link :mediumImage, href: object.medium_image if object.medium_image?
   end
 end

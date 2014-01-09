@@ -28,5 +28,9 @@ class Brewery < ActiveRecord::Base
     define_method(image) do
       super() || 'no-brewery.png'
     end
+
+    define_method("#{image}?") do
+      !!images[image]
+    end
   end
 end

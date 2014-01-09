@@ -3,7 +3,7 @@ li.match.ng-cloak ng-repeat='match in matchReport.matches'
   .match-primary ng-if='match.isMatched'
     figure
       a ng-href='{{match.brew.links.self}}' title='{{match.brew.name}}'
-        img ng-src='{{match.brew.links.mediumLabel}}' alt='{{match.brew.name}}'
+        img src=image_path('no-label.png') ng-src='{{match.brew.links.mediumLabel}}' alt='{{match.brew.name}}'
     h4.brew
       a ng-href='{{match.brew.links.self}}' title='{{match.brew.name}}'
         | {{match.brew.name}}

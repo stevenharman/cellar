@@ -31,6 +31,10 @@ class Brew < ActiveRecord::Base
     define_method(label) do
       super() || 'no-label.png'
     end
+
+    define_method("#{label}?") do
+      !!labels[label]
+    end
   end
 
   def calculate_cellared_beers_count
