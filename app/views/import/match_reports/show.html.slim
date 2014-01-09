@@ -1,5 +1,5 @@
-article.match-report
-  ol.matches
-    == render partial: 'match', collection: match_report.matches
+article.match-report ng-app='brewdegaCellar'
+  ol.matches ng-controller='importMatchReportCtrl'
+    == render partial: 'match'
 
   == render partial: 'import/destroy', locals: { ledger: match_report.ledger }

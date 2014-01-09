@@ -1,4 +1,5 @@
 module Import
+  # TODO: This is no longer used b/c of Angular. Kill it?
   class CandidateBeerDecorator < ApplicationDecorator
     delegate_all
 

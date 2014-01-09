@@ -1,5 +1,6 @@
 module Import
   class MatchReport
+    include ActiveModel::Model
 
     attr_reader :ledger
 

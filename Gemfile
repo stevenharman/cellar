@@ -8,10 +8,11 @@ gem 'dotenv-rails', '~> 0.9.0', groups: [:development, :test]
 
 gem 'puma'
 
+gem 'active_model_serializers', github: 'stevenharman/active_model_serializers', branch: 'make_url_generator_available'
 gem 'brewery_db', '~> 0.2.0'
 gem 'carrierwave', '~> 0.9.0'
 gem 'devise', '~> 3.1'
-gem 'draper'
+gem 'draper', github: 'stevenharman/draper', branch: 'compatibility_with_active_model_serializers_next'
 gem 'fog', '~> 1.15'
 gem 'jquery-rails'
 gem 'kaminari'

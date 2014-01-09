@@ -1,8 +1,10 @@
 require 'active_support/core_ext/hash/indifferent_access'
+require 'active_model/serializer_support'
 require_relative '../import'
 
 module Import
   class UnmatchedBrew
+    include ActiveModel::SerializerSupport
 
     IMPORTABLE_ATTRIBUTES.each do |attr|
       define_method("#{attr}") do
