@@ -1,5 +1,6 @@
 module Import
   class MatchReportSerializer < ApplicationSerializer
+    root :matchReport
     has_many :matches
 
     links do

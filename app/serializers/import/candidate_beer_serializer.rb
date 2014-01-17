@@ -1,10 +1,14 @@
 module Import
   class CandidateBeerSerializer < ApplicationSerializer
-    attributes :id, :confidence, :best_by, :count, :notes, :vintage,
+    attributes :id, :confidence, :bestBy, :count, :notes, :vintage,
       :source, :isMatched
 
     has_one :brew
     has_one :size
+
+    def bestBy
+      object.best_by
+    end
 
     def isMatched
       object.matched?
