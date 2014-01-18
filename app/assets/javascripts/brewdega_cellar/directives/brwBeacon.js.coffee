@@ -1,9 +1,9 @@
 angular.module('brewdegaCellar')
-  .directive 'brwBeacon', ($animate)->
+  .directive 'brwBeacon', ($animate, $templateCache)->
     restrict: 'AE'
     replace: true
     scope: { pulseEvent: '@' }
-    template: '<div class="beacon"><div class="dot"></div><div class="ring"></div></div>'
+    template: $templateCache.get('brwBeacon')
     link: (scope, element, attrs)->
       scope.pulseFinished = ->
         $animate.removeClass(element, 'pulse')
