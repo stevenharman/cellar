@@ -1,0 +1,44 @@
+ol.matches
+  li.match ng-repeat='match in matchReport.matches'
+
+    .match-primary ng-if='match.isMatched'
+      figure
+        a ng-href='{{match.brew.links.self}}' title='{{match.brew.name}}'
+          img src=image_path('no-label.png') ng-src='{{match.brew.links.mediumLabel}}' alt='{{match.brew.name}}'
+      h4.brew
+        a ng-href='{{match.brew.links.self}}' title='{{match.brew.name}}'
+          | {{match.brew.name}}
+        small.source-data= '({{match.source.brew}})'
+      .breweries
+        a ng-repeat='brewery in match.brew.breweries' ng-href='{{brewery.links.self}}'
+          | {{brewery.name}}
+        small.source-data= '({{match.source.brewery}})'
+
+    .match-primary ng-if='!match.isMatched'
+      figure
+        span title='{{match.brew.name}}'
+          img src=image_path('no-label.png') alt='{{match.brew.name}}'
+      h4.brew
+        .source-data= '{{match.source.brew}}'
+      .breweries
+        .source-data= '{{match.source.brewery}}'
+
+    ul.match-details
+      li.vintage
+        label Vintage
+        | {{match.vintage}}
+      li.count
+        label Count
+        | {{match.count}}
+      li.size
+        label Size
+        | {{match.size}}
+        small.source-data= '({{match.source.size}})'
+      li.notes
+        | {{match.notes}}
+
+    span.fa-stack.confidence class='{{match.confidence}}' ng-switch='match.confidence'
+      i.fa.fa-square.fa-stack-2x
+      i.fa.fa-inverse.fa-stack-1x.fa-flag ng-switch-when='high'
+      i.fa.fa-inverse.fa-stack-1x.fa-warning ng-switch-when='medium'
+      i.fa.fa-inverse.fa-stack-1x.fa-ban ng-switch-when='none'
