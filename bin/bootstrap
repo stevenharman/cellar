@@ -68,6 +68,7 @@ add_git_remote_if_needed production git@heroku.com:brewdega-cellar.git
 add_git_remote_if_needed staging git@heroku.com:brewdega-cellar-staging.git
 
 # Gems
+gem install mailcatcher --no-ri --no-rdoc # https://github.com/sj26/mailcatcher#bundler
 bundle install
 
 # Try to be helpful by setting up the database

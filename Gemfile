@@ -52,7 +52,6 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'mailcatcher', git: 'https://github.com/sj26/mailcatcher.git'
 end
 
 group :test do
