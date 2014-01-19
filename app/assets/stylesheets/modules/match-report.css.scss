@@ -2,6 +2,10 @@
 
 .match-report{
   $figure-size: 3.5em;
+  $confirmed-color: $green;
+  $high-color: $yellow;
+  $medium-color: $orange;
+  $none-color: $gray-light;
 
   .matches {
     @extend %item-list;
@@ -55,19 +59,35 @@
     }
   }
 
+  .match-actions {
+    @include inline-block;
+    vertical-align: top;
+    width: 10%;
+
+    .match-action {
+      text-align: center;
+    }
+
+    .edit-match {
+      text-transform: lowercase;
+    }
+
+    button {
+      padding: 0.25em 0.75em;
+    }
+  }
+
   .match-indicator {
     $badge-size: 0.75em;
 
     @include inline-block;
     font-size: $badge-size;
-    //margin-top: ($figure-size/2) - $badge-size;
-    vertical-align: top;
-    width: 10%;
+    margin-bottom: 0.5em;
 
-    &.confirmed { color: $green; }
-    &.high { color: $yellow; }
-    &.medium { color: $orange; }
-    &.none { color: $gray-light; }
+    &.confirmed { color: $confirmed-color; }
+    &.high { color: $high-color; }
+    &.medium { color: $medium-color; }
+    &.none { color: $none-color; }
   }
 
   @include media($tablet) {
@@ -79,8 +99,8 @@
 
     .match-details {
       border-top: 1px dotted $section-border-color;
-      margin-top: 0.25em;
       display: block;
+      margin-top: 0.25em;
       width: 100%;
     }
 
@@ -88,8 +108,8 @@
       position: absolute;
       right: 0;
       top: 0;
-      width: 100% - $primary-width;
       text-align: center;
+      width: 100% - $primary-width;
 
       .note {
         display: block;

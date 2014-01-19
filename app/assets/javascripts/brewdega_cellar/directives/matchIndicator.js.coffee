@@ -1,6 +1,6 @@
 angular.module('brewdegaCellar')
   .directive 'matchIndicator', ($templateCache)->
-    icons = {
+    indicators = {
       confirmed: { name: 'check', note: 'Confirmed' }
       high: { name: 'warning', note: 'One match' }
       medium: { name: 'question-circle', note: 'Many matches' }
@@ -13,5 +13,9 @@ angular.module('brewdegaCellar')
     template: $templateCache.get('matchIndicator')
     link: (scope, element, attrs)->
       match = scope.match
+
+      scope.id = match.id
       scope.confidence = match.confidence
-      scope.icon = icons[match.confidence]
+      scope.indicator = indicators[match.confidence]
+      scope.isMatched = match.isMatched
+      scope.isConfirmable = match.isMatched && !match.isConfirmed

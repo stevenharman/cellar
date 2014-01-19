@@ -1,5 +1,15 @@
-span.match-indicator class='{{confidence}}'
-  span.fa-stack
-    i.fa.fa-square.fa-stack-2x
-    i.fa.fa-inverse.fa-stack-1x class="fa-{{icon.name}}"
-  span.note= '{{icon.note}}'
+.match-actions
+  span.match-indicator class='{{confidence}}'
+    span.icon.fa-stack
+      i.fa.fa-square.fa-stack-2x
+      i.fa.fa-inverse.fa-stack-1x class="fa-{{indicator.name}}"
+    span.note= '{{indicator.note}}'
+
+  .match-action
+    button.confirm-match> title=I18n.t('import.match_reports.match.confirm') ng-show='isConfirmable'
+      i.fa.fa-check
+    a.edit-match href="edit/{{id}}" ng-show='isMatched'
+      = I18n.t('import.match_reports.match.edit')
+    button.find-match title=I18n.t('import.match_reports.match.find') ng-hide='isMatched'
+      i.fa.fa-search
+      =< I18n.t('import.match_reports.match.find')

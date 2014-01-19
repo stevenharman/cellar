@@ -182,6 +182,11 @@ en:
         progress-note: "We'll automatically check the progress every few seconds."
         refresh: 'Refresh'
         title: 'Import: matching your beers...'
+    match_reports:
+      match:
+        edit: "Edit"
+        find: "Find"
+        confirm: "Confirm"
 
   kaminari:
     pagination:
