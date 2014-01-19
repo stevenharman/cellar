@@ -7,8 +7,10 @@ module Import
     belongs_to :brew
     belongs_to :size
 
+    CONFIDENCES = %w(unknown none medium high confirmed).freeze
+
     validates :ledger, presence: true
-    validates :confidence, inclusion: %i(unknown none medium high)
+    validates :confidence, inclusion: CONFIDENCES
     validates :vintage, numericality: { allow_nil: true, only_integer: true }
 
     store_accessor :source_row
@@ -16,6 +18,12 @@ module Import
     IMPORTABLE_ATTRIBUTES.each do |key|
       define_method("source_#{key}") do
         source_row[key.to_s]
+      end
+    end
+
+    CONFIDENCES.each do |c|
+      define_method("#{c}?") do
+        self.confidence.to_s == c
       end
     end
 
@@ -40,7 +48,7 @@ module Import
     end
 
     def matched?
-      %w(medium high).include?(confidence.to_s)
+      confirmed? || high? || medium?
     end
   end
 end
