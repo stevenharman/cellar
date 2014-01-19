@@ -65,9 +65,9 @@
     vertical-align: top;
     width: 10%;
 
-    &.high { color: $green; }
-    &.medium { color: $yellow; }
-    &.none { color: $red; }
+    &.high { color: $yellow; }
+    &.medium { color: $red; }
+    &.none { color: $gray-light; }
   }
 
   @include media($tablet) {
