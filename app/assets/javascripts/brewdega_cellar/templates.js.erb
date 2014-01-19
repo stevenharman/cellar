@@ -7,8 +7,8 @@ angular.module('brewdegaCellar.templates', []).run([ '$templateCache', function(
     Dir.glob(templates).each do |f|
       depend_on(f)
       key = f.gsub(%r(^#{app_root}/templates/),'').split('.').first
-      content = escape_javascript(File.read(f))
+      content = environment.find_asset(f).body
   %>
-    $templateCache.put("<%= key %>", "<%= content %>" );
+    $templateCache.put("<%= key %>", "<%= escape_javascript(content) %>" );
 <% end %>
 }]);
