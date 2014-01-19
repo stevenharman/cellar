@@ -1,5 +1,5 @@
 ol.matches
-  li.match ng-repeat='match in matchReport.matches'
+  li.match ng-repeat='match in matchReport.matches' class='{{match.confidence}}'
 
     .match-primary ng-if='match.isMatched'
       figure

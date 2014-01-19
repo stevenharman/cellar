@@ -11,8 +11,15 @@
     @extend %item-list;
 
     .match {
+      border-right: 5px solid;
+      margin-bottom: 0.5em;
       padding: 0.25em;
       position: relative;
+
+      &.confirmed { border-right-color: $confirmed-color; }
+      &.high { border-right-color: $high-color; }
+      &.medium { border-right-color: $medium-color; }
+      &.none { border-right-color: $none-color; }
     }
   }
 
