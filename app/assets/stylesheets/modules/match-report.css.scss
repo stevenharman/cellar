@@ -55,18 +55,18 @@
     }
   }
 
-  .confidence {
-    $badge-size: 1.5em;
+  .match-indicator {
+    $badge-size: 0.75em;
 
     @include inline-block;
     font-size: $badge-size;
-    margin-top: ($figure-size/2) - $badge-size;
-    text-align: center;
+    //margin-top: ($figure-size/2) - $badge-size;
     vertical-align: top;
     width: 10%;
 
+    &.confirmed { color: $green; }
     &.high { color: $yellow; }
-    &.medium { color: $red; }
+    &.medium { color: $orange; }
     &.none { color: $gray-light; }
   }
 
@@ -84,12 +84,16 @@
       width: 100%;
     }
 
-    .confidence {
+    .match-indicator {
       position: absolute;
       right: 0;
       top: 0;
       width: 100% - $primary-width;
       text-align: center;
+
+      .note {
+        display: block;
+      }
     }
   }
 }
