@@ -6,10 +6,11 @@
     span.note= '{{indicator.note}}'
 
   .match-action
-    button.confirm-match> title=I18n.t('import.match_reports.match.confirm') ng-show='isConfirmable'
+    button.confirm-match>[ng-show='isConfirmable'
+      title=I18n.t('import.match_reports.match.confirm') ]
       i.fa.fa-check
-    a.edit-match href="edit/{{id}}" ng-show='isMatched'
+    a.edit-match[ng-href="#!/edit/{{id}}" ng-show='isMatched']
       = I18n.t('import.match_reports.match.edit')
-    button.find-match title=I18n.t('import.match_reports.match.find') ng-hide='isMatched'
+    button.find-match[title=I18n.t('import.match_reports.match.find') ng-hide='isMatched']
       i.fa.fa-search
       =< I18n.t('import.match_reports.match.find')

@@ -7,4 +7,4 @@
   $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
 
 @brewdegaCellar.config ($locationProvider) ->
-  $locationProvider.html5Mode(true)
+  $locationProvider.html5Mode(false).hashPrefix('!')
