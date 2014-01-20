@@ -58,5 +58,9 @@ module Import
     def matched?
       confirmed? || high? || medium?
     end
+
+    def source_row
+      Hash(super)
+    end
   end
 end
