@@ -47,6 +47,14 @@ module Import
       super || UnmatchedBrew.new(source_row)
     end
 
+    def confidence=(value)
+      write_attribute(:confidence, value.to_s)
+    end
+
+    def confirm
+      update(confidence: :confirmed)
+    end
+
     def matched?
       confirmed? || high? || medium?
     end

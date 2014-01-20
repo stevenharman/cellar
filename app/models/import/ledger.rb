@@ -25,6 +25,10 @@ module Import
       spreadsheet_headers - IMPORTABLE_ATTRIBUTES
     end
 
+    def find_candidate(id)
+      candidate_beers.find(id)
+    end
+
     def matched_columns
       spreadsheet_headers & IMPORTABLE_ATTRIBUTES
     end

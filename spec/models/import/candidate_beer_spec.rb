@@ -22,7 +22,7 @@ describe Import::CandidateBeer do
                          count: '2', notes: 'Booozy', size: '12oz', vintage: '2011'} }
 
     specify { expect(candidate.brew).to eq(matched_brew) }
-    specify { expect(candidate.confidence).to eq(:high) }
+    specify { expect(candidate.confidence).to eq('high') }
     specify { expect(candidate.best_by).to eq(Date.new(2016, 10, 15)) }
     specify { expect(candidate.count).to eq(2) }
     specify { expect(candidate.notes).to eq('Booozy') }
@@ -75,6 +75,18 @@ describe Import::CandidateBeer do
         candidate.confidence = :unknown
         expect(candidate).not_to be_matched
       end
+    end
+  end
+
+  describe 'confirming' do
+    subject(:candidate) { described_class.create(confidence: 'medium') }
+
+    it 'updates the confidence to confirmed' do
+      expect(candidate).not_to be_confirmed
+      candidate.confirm
+
+      expect(candidate).to be_confirmed
+      expect(candidate.confidence).to eq('confirmed')
     end
   end
 end
