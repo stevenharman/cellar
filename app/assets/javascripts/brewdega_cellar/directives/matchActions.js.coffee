@@ -9,13 +9,18 @@ angular.module('brewdegaCellar')
 
     restrict: 'AE'
     replace: true
-    scope: { match: '=matchActions' }
+    scope: {
+      confirm: '&'
+      match: '=matchActions'
+    }
     template: $templateCache.get('matchActions')
     link: (scope, element, attrs)->
       match = scope.match
-
       scope.id = match.id
-      scope.confidence = match.confidence
-      scope.indicator = indicators[match.confidence]
-      scope.isMatched = match.isMatched
-      scope.isConfirmable = match.isMatched && !match.isConfirmed
+
+      scope.$watch('match', ->
+        scope.confidence = match.confidence
+        scope.indicator = indicators[match.confidence]
+        scope.isMatched = match.isMatched
+        scope.isConfirmable = match.isMatched && !match.isConfirmed
+      , true)

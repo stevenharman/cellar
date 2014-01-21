@@ -6,7 +6,7 @@
     span.note= '{{indicator.note}}'
 
   .match-action
-    button.confirm-match>[ng-show='isConfirmable'
+    button.confirm-match>[ng-show='isConfirmable' ng-click='confirm()'
       title=I18n.t('import.match_reports.match.confirm') ]
       i.fa.fa-check
     a.edit-match[ng-href="#!/edit/{{id}}" ng-show='isMatched']

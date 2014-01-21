@@ -6,6 +6,10 @@ module Import
     has_one :brew
     has_one :size
 
+    links do
+      link :confirmation, href: urls.import_match_confirmation_url(object)
+    end
+
     def bestBy
       object.best_by
     end

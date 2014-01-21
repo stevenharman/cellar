@@ -13,7 +13,6 @@ feature 'Import: Confirming matched beers' do
     matches = ledger.candidate_beers
     expect_confidence(match, :medium)
     confirm(match)
-    pending('Need to update match confidence on via API')
     expect_confirmed(match)
   end
 

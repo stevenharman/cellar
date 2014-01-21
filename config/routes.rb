@@ -39,6 +39,9 @@ BrewdegaCellar::Application.routes.draw do
   namespace :import do
     resource :match_order, only: [:create, :show]
     resource :match_report, only: [:show]
+    resources :matches, only: [] do
+      resource :confirmation, controller: :match_confirmations, only: [:create]
+    end
   end
 
   resource :search, only: [:show]
