@@ -4,7 +4,10 @@
 # must send the xhr header to force it to respect the 'application/json' media
 # type that AngularJS sends. See: # https://github.com/rails/rails/issues/9940
 @brewdegaCellar.config ($httpProvider) ->
-  $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+  headers = $httpProvider.defaults.headers.common
+  token = angular.element('meta[name=csrf-token]').attr('content')
+  headers['X-CSRF-TOKEN'] = token
+  headers['X-Requested-With'] = 'XMLHttpRequest'
 
 @brewdegaCellar.config ($locationProvider) ->
   $locationProvider.html5Mode(false).hashPrefix('!')
