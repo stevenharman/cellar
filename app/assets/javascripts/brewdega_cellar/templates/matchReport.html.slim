@@ -3,14 +3,14 @@ ol.matches
 
     .match-primary ng-if='match.isMatched'
       figure
-        a ng-href='{{match.brew.links.self}}' title='{{match.brew.name}}'
+        a ng-href='{{match.brew.links.self}}' title='{{match.brew.name}}' target='_self'
           img src=image_path('no-label.png') ng-src='{{match.brew.links.mediumLabel}}' alt='{{match.brew.name}}'
       h4.brew
-        a ng-href='{{match.brew.links.self}}' title='{{match.brew.name}}'
+        a ng-href='{{match.brew.links.self}}' title='{{match.brew.name}}' target='_self'
           | {{match.brew.name}}
         small.source-data= '({{match.source.brew}})'
       .breweries
-        a ng-repeat='brewery in match.brew.breweries' ng-href='{{brewery.links.self}}'
+        a ng-repeat='brewery in match.brew.breweries' ng-href='{{brewery.links.self}}' target='_self'
           | {{brewery.name}}
         small.source-data= '({{match.source.brewery}})'
 

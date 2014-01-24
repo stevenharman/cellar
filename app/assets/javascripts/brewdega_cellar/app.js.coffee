@@ -10,4 +10,4 @@
   headers['X-Requested-With'] = 'XMLHttpRequest'
 
 @brewdegaCellar.config ($locationProvider) ->
-  $locationProvider.html5Mode(false).hashPrefix('!')
+  $locationProvider.html5Mode(true).hashPrefix('!')

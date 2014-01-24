@@ -9,7 +9,7 @@
     button.confirm-match>[ng-show='isConfirmable' ng-click='confirm()'
       title=I18n.t('import.match_reports.match.confirm') ]
       i.fa.fa-check
-    a.edit-match[ng-href="#!/edit/{{id}}" ng-show='isMatched']
+    a.edit-match[ng-href="matches/{{id}}/edit" ng-show='isMatched']
       = I18n.t('import.match_reports.match.edit')
     button.find-match[title=I18n.t('import.match_reports.match.find') ng-hide='isMatched']
       i.fa.fa-search
