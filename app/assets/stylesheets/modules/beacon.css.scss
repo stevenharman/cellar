@@ -11,33 +11,33 @@ $beacon-inactive-color: desaturate($orange-bright, 40%);
   $ring-offset: ($container-size - $ring-size) / 2;
 
   @include animation-duration(1s);
-  position: relative;
   display: inline-block;
   height: $container-size;
-  width: $container-size;
+  position: relative;
   vertical-align: baseline;
+  width: $container-size;
 
   .dot {
+    background-color: $beacon-inactive-color;
+    border-radius: $dot-size;
+    border: 3px solid transparent;
+    box-shadow: 0 0 9px #666;
     position: absolute;
-    top: $dot-offset;
     left: $dot-offset;
+    top: $dot-offset;
     height: $dot-size;
     width: $dot-size;
-    border-radius: $dot-size;
-    background-color: $beacon-inactive-color;
-    box-shadow: 0 0 9px #666;
-    border: 3px solid transparent;
     z-index: 10;
   }
 
   .ring {
-    top: $ring-offset;
-    left: $ring-offset;
-    height: $ring-size;
-    width: $ring-size;
     border-radius: $ring-size;
     border: 3px solid $beacon-active-color;
+    height: $ring-size;
+    left: $ring-offset;
+    top: $ring-offset;
     opacity: 0;
+    width: $ring-size;
   }
 
   &.pulse {
