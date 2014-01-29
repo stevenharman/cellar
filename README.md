@@ -33,7 +33,7 @@ or simulate the app running on other platforms.
     processors to run.  _(Default = 25)_
   - `WORKER_DB_POOL_SIZE`: set the size of the [Sidekiq][sidekiq] ActiveRecord
     connection pool. _(Default = `WORKER_CONCURRENCY`)_
-  - `WEB_CONCURRENCY`: set the number of [Puma](puma) threads. _(Default =
+  - `WEB_CONCURRENCY`: set the number of [Puma][puma] threads. _(Default =
     `16`)_
   - `WEB_DB_POOL_SIZE`: set the size of the ActiveRecord connection pool for
     the web server. _(Default = `WEB_CONCURRENCY`)_
@@ -102,8 +102,8 @@ bin/rspec
 ### CSS Structure
 
 Generally we follow [Scalable and Modular Architecture for CSS
-(SMACSS)](smacss) for structuring our CSS. We also rely on [Bourbon](bourbon)
-and [Bourbon Neat](bourbon-neat) as a [Sass](sass) mixin library and sensible
+(SMACSS)][smacss] for structuring our CSS. We also rely on [Bourbon][bourbon]
+and [Bourbon Neat][bourbon-neat] as a [Sass][sass] mixin library and sensible
 grid system, respectively.
 
 It is recommended to check out the references listed below to learn more about
