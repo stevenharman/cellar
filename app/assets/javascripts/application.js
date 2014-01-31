@@ -1,6 +1,6 @@
 //= require modernizr
 //= require jquery
-//= require jquery_ujs
+//= require jquery-ujs
 //= require jquery-ui.custom
 //= require jquery.tooltipster
 //

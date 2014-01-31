@@ -1,0 +1,23 @@
+{
+  "name": "BrewdegaCellar",
+  "version": "0.0.1",
+  "homepage": "https://github.com/stevenharman/cellar",
+  "authors": [
+    "Steven Harman <steven@brewdega.com>"
+  ],
+  "license": "BSD",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-ujs": "*",
+    "angular": "~1.2.10",
+    "angular-animate": "~1.2.10",
+    "angular-resource": "~1.2.10",
+  }
+}

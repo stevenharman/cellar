@@ -15,3 +15,5 @@ config/database.yml
 coverage
 public/assets
 public/uploads
+
+vendor/assets/components/**/*.min.*

@@ -31,6 +31,7 @@ module BrewdegaCellar
 
     # Don't initialize to apease Heroku's lack of DB connection during slug complilation.
     config.assets.initialize_on_precompile = false
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
 
     # Allow CORS requests for assets
     config.middleware.insert 0, Rack::Cors, logger: Rails.logger do
