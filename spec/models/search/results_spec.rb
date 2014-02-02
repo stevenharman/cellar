@@ -1,6 +1,6 @@
-require 'models/search/result'
+require 'models/search/results'
 
-describe Search::Result do
+describe Search::Results do
   subject(:result) { described_class.new([double(searchable: brewery), double(searchable: brew)]) }
   let(:brewery) { double('Brewery') }
   let(:brew) { double('Brew') }

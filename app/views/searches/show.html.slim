@@ -2,9 +2,9 @@ article.search-results
   .search-results-header
     == render 'searches/form', search_query: search_query, autofocus: true
 
-  .search-results-summary= t('searches.show.summary', count: number_with_delimiter(@search_result.total_count))
+  .search-results-summary= t('searches.show.summary', count: number_with_delimiter(@search_results.total_count))
   ul.search-results-list
-    - for result in @search_result do
+    - for result in @search_results do
       == render partial: result
 
-  == paginate @search_result
+  == paginate @search_results

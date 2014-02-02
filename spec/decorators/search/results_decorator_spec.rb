@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Search::ResultDecorator do
+describe Search::ResultsDecorator do
 
   it 'decorates breweries' do
     decorator = described_class.new([Brewery.new])

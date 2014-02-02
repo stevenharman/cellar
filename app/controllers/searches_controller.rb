@@ -1,12 +1,12 @@
 class SearchesController < ApplicationController
   def show
-    @search_result = decorate(Search::Engine.search(search_query))
+    @search_results = decorate(Search::Engine.search(search_query))
   end
 
   private
 
   def decorate(result)
-    Search::ResultDecorator.new(result)
+    Search::ResultsDecorator.new(result)
   end
 
   def search_query

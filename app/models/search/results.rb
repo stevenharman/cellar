@@ -1,7 +1,8 @@
 require 'kaminari'
+require 'kaminari/models/array_extension'
 
 module Search
-  class Result
+  class Results
     include Enumerable
     extend Forwardable
 

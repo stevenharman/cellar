@@ -3,7 +3,7 @@ require_relative 'brew_decorator'
 require_relative 'brewery_decorator'
 
 module Search
-  class ResultDecorator < SimpleDelegator
+  class ResultsDecorator < SimpleDelegator
     include Enumerable
 
     def initialize(search_result)
