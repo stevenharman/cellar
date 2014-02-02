@@ -1,0 +1,29 @@
+{
+  "name": "angucomplete",
+  "homepage": "http://darylrowland.github.io/angucomplete/",
+  "authors": [
+    "Daryl Rowland <daryl@cloudyclear.com>"
+  ],
+  "description": "Awesome Autocompleteness for AngularJS",
+  "keywords": [
+    "autocomplete",
+    "typeahead",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "main": "./angucomplete.js",
+  "ignore": [
+    "example",
+    "bower_components",
+    "node_modules"
+  ],
+  "_release": "4940ffb1ee",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "4940ffb1ee4afdfadbee54aa782b007364418f71"
+  },
+  "_source": "git://github.com/darylrowland/angucomplete.git",
+  "_target": "*",
+  "_originalSource": "angucomplete"
+}
