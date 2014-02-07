@@ -17,11 +17,11 @@
     "bower_components",
     "node_modules"
   ],
-  "_release": "4940ffb1ee",
+  "_release": "b8a75cb653",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "4940ffb1ee4afdfadbee54aa782b007364418f71"
+    "commit": "b8a75cb653804266c056fb3e776c756bb6b5d861"
   },
   "_source": "git://github.com/darylrowland/angucomplete.git",
   "_target": "*",
