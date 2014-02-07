@@ -8,7 +8,7 @@ module Search
       # see: http://blog.givegab.com/post/75043413459/using-enumerations-to-make-a-faster-activity-feed-in
       search = PgSearch.multisearch(query.terms, query.options).includes(:searchable)
       search = search.where(searchable_type: query.document_scope) if query.document_scoped?
-      search = search.page(query.page) if query.paged?
+      search = search.page(query.page)
 
       Results.new(search)
     end

@@ -1,17 +1,11 @@
+require_relative 'query'
+
 module Search
-  class BrewQuery
+  class BrewQuery < Query
 
-    attr_reader :terms, :options
-
-    def initialize(terms: '')
-      terms = String(terms).force_encoding('utf-8')
-      terms = terms.chars.select {|c| c.valid_encoding?}.join unless terms.valid_encoding?
-      @terms = terms
-      @options = { trigram: false }.freeze
-    end
-
-    def blank?
-      terms.nil? || terms == ''
+    def initialize(*)
+      super
+      @options = {trigram: false}.freeze
     end
 
     def document_scope
@@ -22,8 +16,5 @@ module Search
       true
     end
 
-    def paged?
-      false
-    end
   end
 end

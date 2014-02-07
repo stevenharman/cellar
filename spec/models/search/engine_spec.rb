@@ -41,16 +41,6 @@ describe Search::Engine do
     search_engine.search(Search::Query.new(terms: 'hi', page: 42))
   end
 
-  it 'does not page results when non-paged query is used' do
-    results = double('PGSearch Result')
-    PgSearch.stub_chain(:multisearch, :includes) { results }
-    expect(results).not_to receive(:page)
-
-    query = Search::Query.new(terms: 'hi')
-    allow(query).to receive(:paged?) { false }
-    search_engine.search(query)
-  end
-
   it 'does not search for an empty query' do
     PgSearch.should_not_receive(:multisearch)
     results = search_engine.search(Search::Query.new(terms: ''))

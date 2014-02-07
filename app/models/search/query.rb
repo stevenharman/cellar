@@ -12,6 +12,8 @@ module Search
     DEFAULT_PAGE = 1
 
     def initialize(terms: nil, page: DEFAULT_PAGE)
+      terms = String(terms).force_encoding('utf-8')
+      terms = terms.chars.select {|c| c.valid_encoding?}.join unless terms.valid_encoding?
       @terms = terms
       @page = (page || DEFAULT_PAGE)
       @options = {trigram: true}.freeze
@@ -23,10 +25,6 @@ module Search
 
     def document_scoped?
       false
-    end
-
-    def paged?
-      !!page
     end
 
     def persisted?; false; end
