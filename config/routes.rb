@@ -44,7 +44,9 @@ BrewdegaCellar::Application.routes.draw do
     end
   end
 
-  resource :search, only: [:show]
+  resource :search, only: [:show] do
+    get :brews
+  end
 
   resource :heartbeat, only: [:show]
   resources :webhooks, controller: :web_hooks, only: [:create]

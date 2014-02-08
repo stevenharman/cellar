@@ -1,8 +1,10 @@
+require 'active_model/serializer_support'
 require 'kaminari'
 require 'kaminari/models/array_extension'
 
 module Search
   class Results
+    include ActiveModel::SerializerSupport
     include Enumerable
     extend Forwardable
 
