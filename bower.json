@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
+    "underscore": "jashkenas/underscore#master",
     "jquery-ujs": "*",
     "angular": "~1.2.10",
     "angular-animate": "~1.2.10",

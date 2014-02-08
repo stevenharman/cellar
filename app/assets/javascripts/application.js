@@ -1,4 +1,5 @@
 //= require modernizr
+//= require underscore
 //= require jquery
 //= require jquery-ujs
 //= require jquery-ui.custom
