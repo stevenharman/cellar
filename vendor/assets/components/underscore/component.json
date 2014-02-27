@@ -4,7 +4,7 @@
   "keywords"      : ["util", "functional", "server", "client", "browser"],
   "repo"          : "jashkenas/underscore",
   "main"          : "underscore.js",
-  "scripts"       : ["underscore.js"],
-  "version"       : "1.5.2",
+  "scripts"       : ["underscore.js", "underscore-min.js"],
+  "version"       : "1.6.0",
   "license"       : "MIT"
 }

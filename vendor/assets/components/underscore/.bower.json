@@ -9,7 +9,6 @@
     "browser"
   ],
   "ignore": [
-    "underscore-min.js",
     "docs",
     "test",
     "*.yml",
@@ -20,11 +19,11 @@
     "CONTRIBUTING.md"
   ],
   "homepage": "https://github.com/jashkenas/underscore",
-  "_release": "ea5cde9756",
+  "_release": "22c742051a",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "ea5cde9756f822102a7cc88eebdcadf4778282ee"
+    "commit": "22c742051a3b1193d337a457850e6565c334e3fb"
   },
   "_source": "git://github.com/jashkenas/underscore.git",
   "_target": "master",

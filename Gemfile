@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
 
 ruby '2.0.0'
-gem 'rails', '~> 4.0.2'
+gem 'rails', '~> 4.0.3'
 
 # Must be early in Gemfile so it's loaded before libs that depend on ENV Vars
-gem 'dotenv-rails', '~> 0.9.0', groups: [:development, :test]
+gem 'dotenv-rails', '~> 0.10.0', groups: [:development, :test]
 
 gem 'puma'
 
 gem 'active_model_serializers', github: 'stevenharman/active_model_serializers', branch: 'make_url_generator_available'
 gem 'brewery_db', '~> 0.2.0'
-gem 'carrierwave', '~> 0.9.0'
+gem 'carrierwave', '~> 0.10.0'
 gem 'devise', '~> 3.1'
 gem 'draper', github: 'stevenharman/draper', branch: 'compatibility_with_active_model_serializers_next'
 gem 'fog', '~> 1.15'
