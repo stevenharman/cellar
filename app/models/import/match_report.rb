@@ -17,7 +17,13 @@ module Import
     end
 
     def matches
-      ledger.candidate_beers.includes(:brew).order(:created_at)
+      ledger.candidate_beer_matches
+    end
+
+    def update_brew(match_id, brew)
+      match = ledger.find_match(match_id)
+      match.update(brew: brew)
+      match
     end
 
   end

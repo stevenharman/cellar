@@ -17,8 +17,16 @@ module Import
       candidate_beer
     end
 
+    def candidate_beer_matches
+      candidate_beers.includes(:brew).order(:created_at)
+    end
+
     def csv_file_secure_token
       @csv_file_secure_token ||= SecureRandom.uuid
+    end
+
+    def find_match(match_id)
+      candidate_beer_matches.find(match_id)
     end
 
     def extra_columns

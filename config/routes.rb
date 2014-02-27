@@ -40,6 +40,7 @@ BrewdegaCellar::Application.routes.draw do
     resource :match_order, only: [:create, :show]
     resource :match_report, only: [:show]
     resources :matches, only: [] do
+      resource :brew, controller: :match_brews, only: [:update]
       resource :confirmation, controller: :match_confirmations, only: [:create]
     end
   end
