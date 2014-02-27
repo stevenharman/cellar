@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/stevenharman/active_model_serializers.git
-  revision: 13337ee5e7f92e502011847b964e3cc7b73ba542
+  revision: d3abcb435bb24a16c7f9aeaf05f788578c9c7fb2
   branch: make_url_generator_available
   specs:
     active_model_serializers (0.9.0.alpha1)

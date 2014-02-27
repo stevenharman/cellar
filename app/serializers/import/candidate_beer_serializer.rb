@@ -7,6 +7,7 @@ module Import
     has_one :size
 
     links do
+      link :brew, href: urls.import_match_brew_url(object)
       link :confirmation, href: urls.import_match_confirmation_url(object)
     end
 

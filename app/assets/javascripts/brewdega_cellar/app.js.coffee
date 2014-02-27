@@ -1,4 +1,9 @@
-@brewdegaCellar = angular.module('brewdegaCellar', ['ngAnimate', 'ngResource', 'brewdegaCellar.templates'])
+@brewdegaCellar = angular.module('brewdegaCellar', [
+  'ngAnimate',
+  'ngResource',
+  'brewdegaCellar.templates',
+  'angucomplete'
+])
 
 # HACK: Rails currently ignores Accept headers when they contain '*/*', so we
 # must send the xhr header to force it to respect the 'application/json' media

@@ -12,6 +12,7 @@ angular.module('angucomplete', [] )
             "id": "@id",
             "placeholder": "@placeholder",
             "selectedObject": "=selectedobject",
+            "onSelect": "&",
             "url": "@url",
             "dataField": "@datafield",
             "titleField": "@titlefield",
@@ -184,18 +185,21 @@ angular.module('angucomplete', [] )
                 if ($scope.matchClass) {
                     result.title = result.title.toString().replace(/(<([^>]+)>)/ig, '');
                 }
-                $scope.searchStr = result.title;
-                $scope.selectedObject = result;
+                $scope.searchStr = $scope.lastSearchTerm = result.title;
+                if (!!$scope.onSelect) {
+                    $scope.onSelect({result:result})
+                } else {
+                    $scope.selectedObject = result;
+                }
                 $scope.showDropdown = false;
                 $scope.results = [];
-                //$scope.$apply();
             }
         },
 
         link: function($scope, elem, attrs, ctrl) {
 
             elem.bind("keyup", function (event) {
-                if(event.which === 40) {
+                if(event.which === 40) { // down-arrow
                     if (($scope.currentIndex + 1) < $scope.results.length) {
                         $scope.currentIndex ++;
                         $scope.$apply();
@@ -204,7 +208,7 @@ angular.module('angucomplete', [] )
                     }
 
                     $scope.$apply();
-                } else if(event.which == 38) {
+                } else if(event.which == 38) { // up-arrow
                     if ($scope.currentIndex >= 1) {
                         $scope.currentIndex --;
                         $scope.$apply();
@@ -212,7 +216,7 @@ angular.module('angucomplete', [] )
                         event.stopPropagation();
                     }
 
-                } else if (event.which == 13) {
+                } else if (event.which == 13) { // enter
                     if ($scope.currentIndex >= 0 && $scope.currentIndex < $scope.results.length) {
                         $scope.selectResult($scope.results[$scope.currentIndex]);
                         $scope.$apply();
@@ -225,19 +229,19 @@ angular.module('angucomplete', [] )
                         event.stopPropagation();
                     }
 
-                } else if (event.which == 27) {
+                } else if (event.which == 27) { // esc
                     $scope.results = [];
                     $scope.showDropdown = false;
                     $scope.$apply();
-                } else if (event.which == 8) {
-                    $scope.selectedObject = null;
+                } else if (event.which == 8) { // backspace
+                    if (!!$scope.selectedObject) {
+                        $scope.selectedObject = null;
+                    }
                     $scope.$apply();
                 }
             });
 
-
         }
     };
 });
-
 

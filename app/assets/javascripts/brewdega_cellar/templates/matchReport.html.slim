@@ -4,7 +4,7 @@ ol.matches
     .match-primary ng-if='match.isMatched'
       figure
         a ng-href='{{match.brew.links.self}}' title='{{match.brew.name}}' target='_self'
-          img src=image_path('no-label.png') ng-src='{{match.brew.links.mediumLabel}}' alt='{{match.brew.name}}'
+          img ng-src='{{match.brew.links.mediumLabel || "#{image_path("no-label.png")}"}}' alt='{{match.brew.name}}'
       h4.brew
         a ng-href='{{match.brew.links.self}}' title='{{match.brew.name}}' target='_self'
           | {{match.brew.name}}
@@ -37,4 +37,10 @@ ol.matches
       li.notes
         | {{match.notes}}
 
-    <span match-actions='match' confirm='confirm(match)'></span>
+    <span match-actions='match' confirm='confirm(match)' edit='edit(match)'></span>
+
+    .match-editor ng-show='match.isEditing'
+      #brew_name[angucomplete placeholder='Search Beers' on-select='selectBrew(result, match)'
+        url='{{matchReport.links.brews}}?q=' datafield='results' titlefield='name'
+        descriptionfield='breweries[0].name' imagefield='links.mediumLabel'
+        pause='250']

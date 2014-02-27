@@ -10,6 +10,7 @@ angular.module('brewdegaCellar')
     restrict: 'AE'
     replace: true
     scope: {
+      edit: '&'
       confirm: '&'
       match: '=matchActions'
     }

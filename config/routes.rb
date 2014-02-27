@@ -42,6 +42,7 @@ BrewdegaCellar::Application.routes.draw do
     resources :matches, only: [] do
       resource :brew, controller: :match_brews, only: [:update]
       resource :confirmation, controller: :match_confirmations, only: [:create]
+      get '*path' => 'match_reports#show' # Catchall for Angular app
     end
   end
 
