@@ -3,19 +3,19 @@
 set -e
 
 # Create the backup on heroku
-heroku pgbackups:capture --expire
+heroku pgbackups:capture --expire -a brewdega-cellar
 
 # Download the backup
-curl -# -o /tmp/cellar.dump `heroku pgbackups:url`
+curl -# -o /tmp/brewdega-cellar.dump `heroku pgbackups:url -a brewdega-cellar`
 
 # Restore the backup
 dropdb cellar_development
 createdb -T template0 cellar_development
 
-pg_restore --verbose --no-acl --no-owner -h 127.0.0.1 -U `whoami` -d cellar_development /tmp/cellar.dump
+pg_restore --verbose --no-acl --no-owner -h 127.0.0.1 -U `whoami` -d cellar_development /tmp/brewdega-cellar.dump
 
 # Clean up
-rm -f /tmp/cellar.dump
+rm -f /tmp/brewdega-cellar.dump
 
 # Reindex PostgreSQL
 #rake pg_search:multisearch:rebuild_all
