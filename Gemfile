@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.1.1'
-gem 'rails', '~> 4.0.3'
+gem 'rails', '~> 4.0.4'
 
 # Must be early in Gemfile so it's loaded before libs that depend on ENV Vars
 gem 'dotenv-rails', '~> 0.10.0', groups: [:development, :test]
@@ -19,7 +19,7 @@ gem 'newrelic_rpm'
 gem 'pg'
 gem 'pg_search', '~> 0.7.2'
 gem 'rack-cors', require: 'rack/cors'
-gem 'simple_form', '~> 3.0.0.rc'
+gem 'simple_form', '~> 3.0'
 gem 'slim', '~> 2.0'
 gem 'sinatra', require: false # for sidekiq monitoring
 gem 'sidekiq'
@@ -34,6 +34,10 @@ gem 'bourbon', git: 'https://github.com/thoughtbot/bourbon.git' # Need ~> 3.2 fo
 gem 'neat', git: 'https://github.com/thoughtbot/neat.git' # Need ~> 1.5' when changing above
 gem 'font-awesome-rails', '~> 4.0'
 
+# Lock to SASS 3.3 compatible sprockets until sass-rails is fixed
+# See: https://github.com/rails/sass-rails/issues/191
+gem 'sprockets', '2.11.0'
+
 group :production do
   gem 'rails_12factor'
 end
@@ -42,7 +46,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'foreman'
   gem 'forgery'
-  gem 'heroku'
   gem 'pry-rails'
   gem 'pry-remote'
   gem 'rspec-rails', '~> 2.14'
