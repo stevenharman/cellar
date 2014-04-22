@@ -4,7 +4,7 @@ ruby '2.1.1'
 gem 'rails', '~> 4.0.4'
 
 # Must be early in Gemfile so it's loaded before libs that depend on ENV Vars
-gem 'dotenv-rails', '~> 0.10.0', groups: [:development, :test]
+gem 'dotenv-rails', '~> 0.11', groups: [:development, :test]
 
 gem 'puma'
 
@@ -30,8 +30,8 @@ gem 'virtus'
 gem 'sass-rails', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'bourbon', git: 'https://github.com/thoughtbot/bourbon.git' # Need ~> 3.2 for retina-image
-gem 'neat', git: 'https://github.com/thoughtbot/neat.git' # Need ~> 1.5' when changing above
+gem 'bourbon', '~> 4.0'
+gem 'neat', '~> 1.6'
 gem 'font-awesome-rails', '~> 4.0'
 
 # Lock to SASS 3.3 compatible sprockets until sass-rails is fixed
