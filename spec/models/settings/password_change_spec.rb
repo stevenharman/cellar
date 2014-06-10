@@ -12,32 +12,32 @@ describe Settings::PasswordChange do
 
     context 'current password is valid' do
       before do
-        user.stub(:valid_password?).with(current_password) { true }
-        user.stub(:update_password) { true }
+        allow(user).to receive(:valid_password?).with(current_password) { true }
+        allow(user).to receive(:update_password) { true }
       end
 
       it 'updates the user password' do
-        user.should_receive(:update_password).with(new_password)
+        expect(user).to receive(:update_password).with(new_password)
         password_change.call(change_params)
       end
 
       it 'reports the change was successful' do
-        expect(password_change.call(change_params)).to be_true
+        expect(password_change.call(change_params)).to be true
       end
     end
 
     context 'current password is invalid' do
       before do
-        user.stub(:valid_password?) { false }
+        allow(user).to receive(:valid_password?) { false }
       end
 
       it 'does not update the user password' do
-        user.should_not_receive(:update_password)
+        expect(user).not_to receive(:update_password)
         password_change.call(change_params)
       end
 
       it 'reports the change was not successful' do
-        expect(password_change.call(change_params)).to be_false
+        expect(password_change.call(change_params)).to be_falsey
       end
     end
   end

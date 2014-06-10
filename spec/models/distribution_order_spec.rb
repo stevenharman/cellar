@@ -42,7 +42,7 @@ describe DistributionOrder do
     end
 
     it 'is unsuccessful when the beer is invalid' do
-      beer.stub(:valid?) { false }
+      allow(beer).to receive(:valid?) { false }
       beer.errors.add(:base, 'It is broke')
 
       order = described_class.new(beer: beer, status: 'traded')

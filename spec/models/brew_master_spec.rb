@@ -7,12 +7,12 @@ describe BrewMaster do
     let(:brew) { double('Brew', name: 'Boont Amber Ale', id: 99) }
     before do
       stub_const('Beer', double)
-      Beer.stub(:make).with(order.to_hash, brew) { double('Beer') }
+      allow(Beer).to receive(:make).with(order.to_hash, brew) { double('Beer') }
     end
 
     it 'makes the specified number of beers' do
       beers = described_class.process(order)
-      expect(beers).to have(3).beers
+      expect(beers.size).to eq(3)
     end
   end
 

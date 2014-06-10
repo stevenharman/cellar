@@ -1,13 +1,13 @@
 require 'models/cellar'
 
-describe Cellar do
+describe Cellar, :type => :model do
   subject(:cellar) { described_class.new(keeper, stats) }
   let(:keeper) { double('User', beers: []) }
   let(:stats) { double('CellaredBeerStatistics') }
 
   describe '.find_by' do
     it 'loads the cellar with the keeper and statistics' do
-      CellaredBeerStatistics.stub(:analyze).with(keeper) { stats }
+      allow(CellaredBeerStatistics).to receive(:analyze).with(keeper) { stats }
 
       cellar = described_class.find_by(keeper)
       expect(cellar.beer_stats).to eq(stats)
@@ -27,11 +27,11 @@ describe Cellar do
     let(:beer) { double('Beer', id: 42) }
     let(:status) { 'drunk' }
     before do
-      keeper.stub(:find_beer).with(42) { beer }
+      allow(keeper).to receive(:find_beer).with(42) { beer }
     end
 
     it 'updates the beer status' do
-      beer.should_receive(:update_status).with(status)
+      expect(beer).to receive(:update_status).with(status)
       cellar.update(beer.id, status)
     end
   end
@@ -49,7 +49,7 @@ describe Cellar do
       let(:bobs_beer) { double('Beer') }
 
       it 'fetches the beer' do
-        keeper.stub(:find_beer).with(42).and_return(bobs_beer)
+        allow(keeper).to receive(:find_beer).with(42).and_return(bobs_beer)
         expect(cellar.find_beer(42)).to eq(bobs_beer)
       end
     end
@@ -60,7 +60,7 @@ describe Cellar do
     let(:bobs_beer) { double('Beer') }
 
     it 'gets the beers from the keeper' do
-      keeper.stub(:cellared_beers).with(brew) { [bobs_beer] }
+      allow(keeper).to receive(:cellared_beers).with(brew) { [bobs_beer] }
       expect(cellar.beers_for(brew)).to match_array([bobs_beer])
     end
   end
@@ -69,19 +69,19 @@ describe Cellar do
     let(:brew) { double('Brew') }
 
     it 'counts the cellared beers for the given brew' do
-      stats.stub(:beers_count).with(brew) { 2 }
+      allow(stats).to receive(:beers_count).with(brew) { 2 }
       expect(cellar.beers_count(brew)).to eq(2)
     end
   end
 
   describe '#active?' do
     it 'is active when the keeper is active' do
-      keeper.stub(:active?) { true }
+      allow(keeper).to receive(:active?) { true }
       expect(cellar).to be_active
     end
 
     it 'is inactive when the keeper is inactive' do
-      keeper.stub(:active?) { false }
+      allow(keeper).to receive(:active?) { false }
       expect(cellar).not_to be_active
     end
   end

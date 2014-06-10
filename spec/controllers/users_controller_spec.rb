@@ -12,7 +12,7 @@ describe UsersController do
       expect(user).not_to be_confirmed
     end
 
-    it { response.should redirect_to(root_path) }
+    it { expect(response).to redirect_to(root_path) }
   end
 
 end

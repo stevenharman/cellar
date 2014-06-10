@@ -12,8 +12,8 @@ describe Clerk do
   describe '#procure' do
     let(:a_batch) { double('Batch').as_null_object }
     before do
-      Batch.stub(:run).and_yield(a_batch)
-      brew_master.stub(:process).with(order) { [beer, beer] }
+      allow(Batch).to receive(:run).and_yield(a_batch)
+      allow(brew_master).to receive(:process).with(order) { [beer, beer] }
     end
 
     context 'with a valid order' do
@@ -31,7 +31,7 @@ describe Clerk do
       end
 
       it 'cancels the batch if any beer fails to be added' do
-        cellar.stub(:add).and_return(true, false)
+        allow(cellar).to receive(:add).and_return(true, false)
         expect(a_batch).to receive(:cancel)
         clerk.procure(order)
       end
@@ -52,7 +52,7 @@ describe Clerk do
   describe '#distribute' do
     let(:order) { DistributionOrder.new(beer_id: beer.id, status: 'traded') }
     before do
-      cellar.stub(:update).with(order.beer_id, order.status) { beer }
+      allow(cellar).to receive(:update).with(order.beer_id, order.status) { beer }
     end
 
     it 'reissues the order for the updated beer' do
@@ -61,7 +61,7 @@ describe Clerk do
     end
 
     it 'calculates the inventory for the cellar and brew' do
-      inventory_report.should_receive(:calculate).with(brew)
+      expect(inventory_report).to receive(:calculate).with(brew)
       clerk.distribute(order)
     end
   end

@@ -14,7 +14,7 @@ describe StockOrder do
     let(:args) { { brew_id: 42 } }
     let(:brew_factory) { double('Brew') }
     before do
-      brew_factory.stub(:find_by_id).with(42) { brew }
+      allow(brew_factory).to receive(:find_by_id).with(42) { brew }
     end
 
     it 'finds the brew for the order' do
@@ -31,7 +31,7 @@ describe StockOrder do
     it 'requires a miniumm of 1 beer to be ordered' do
       order = described_class.new(count: -1)
       expect(order).not_to be_valid
-      expect(order.errors[:count]).to have(1).error
+      expect(order.errors[:count].size).to eq(1)
     end
   end
 

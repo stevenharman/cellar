@@ -20,7 +20,7 @@ describe Import::Ledger do
 
       it 'reports missing headers' do
         expect(ledger).not_to be_valid
-        expect(ledger).to have(1).error_on(:csv_file)
+        expect(ledger.error_on(:csv_file).size).to eq(1)
         expect(ledger.errors_on(:csv_file)).to include('missing headers: Brew')
       end
     end
@@ -30,7 +30,7 @@ describe Import::Ledger do
 
       it 'reports incorrect formatting' do
         expect(ledger).not_to be_valid
-        expect(ledger).to have(1).error_on(:csv_file)
+        expect(ledger.error_on(:csv_file).size).to eq(1)
         expect(ledger.errors_on(:csv_file)).to include('invalid encoding: File must be UTF-8 encoded.')
       end
     end

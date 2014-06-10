@@ -14,7 +14,7 @@ describe DistributionOrdersController do
         put :update, { cellar_id: bob.id, order: { beer_id: beer.id, status: 'drunk' } }
 
         expect(bob.cellared_beers).to be_empty
-        expect(bob.beers.drunk).to have(1).beer
+        expect(bob.beers.drunk.size).to eq(1)
         expect(beer.brew.cellared_beers_count).to be_zero
       end
     end

@@ -21,7 +21,7 @@ describe SupplyChain do
 
     context 'order is for a brew' do
       it 'places an order to update the brew' do
-        SupplyChain::Job::FetchBrew.should_receive(:perform_async).with(order.attribute_id)
+        expect(SupplyChain::Job::FetchBrew).to receive(:perform_async).with(order.attribute_id)
         supply_chain.route(order)
       end
     end
@@ -30,7 +30,7 @@ describe SupplyChain do
       let(:attribute) { 'brewery' }
 
       it 'places an order to update the brewery' do
-        SupplyChain::Job::FetchBrewery.should_receive(:perform_async).with(order.attribute_id)
+        expect(SupplyChain::Job::FetchBrewery).to receive(:perform_async).with(order.attribute_id)
         supply_chain.route(order)
       end
     end

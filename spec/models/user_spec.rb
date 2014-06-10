@@ -3,7 +3,7 @@ require 'spec_helper'
 describe User do
 
   it 'requires password for new user' do
-    expect(User.new).to have(1).errors_on(:password)
+    expect(User.new.errors_on(:password).size).to eq(1)
   end
 
   describe 'an existing user' do
@@ -11,21 +11,21 @@ describe User do
 
     it 'does not require a password' do
       bob.password = nil
-      expect(bob).to have(0).errors_on(:password)
+      expect(bob.errors_on(:password).size).to eq(0)
     end
 
     it 'requires a minimum password length when password is being set' do
       bob.password = 'abc12345'
-      expect(bob).to have(0).errors_on(:password)
+      expect(bob.errors_on(:password).size).to eq(0)
       bob.password = 'abc1234'
-      expect(bob).to have(1).errors_on(:password)
+      expect(bob.errors_on(:password).size).to eq(1)
     end
   end
 
   describe '#active?' do
     let(:bob) { User.new }
     it 'is true when they exist in the system' do
-      bob.stub(:persisted?) { true }
+      allow(bob).to receive(:persisted?) { true }
       expect(bob).to be_active
     end
 
@@ -38,8 +38,8 @@ describe User do
     let(:bob) { FactoryGirl.create(:bob) }
     context 'a valid new password' do
       it 'persists the new password' do
-        expect(bob.update_password('sekret 123')).to be_true
-        expect(bob.reload.valid_password?('sekret 123')).to be_true
+        expect(bob.update_password('sekret 123')).to be true
+        expect(bob.reload.valid_password?('sekret 123')).to be true
       end
 
       it 'clears out the password' do
@@ -51,8 +51,8 @@ describe User do
 
     context 'an invalid new password' do
       it 'does not persist the new password' do
-        expect(bob.update_password('abc')).to be_false
-        expect(bob.reload.valid_password?('abc')).to be_false
+        expect(bob.update_password('abc')).to be false
+        expect(bob.reload.valid_password?('abc')).to be false
       end
 
       it 'clears out the password' do

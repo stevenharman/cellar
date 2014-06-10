@@ -18,24 +18,24 @@ feature "Viewing a user's cellar", :feature, :slow do
 
   scenario 'only show a summary of brews in the cellar' do
     visit cellar_path(bob)
-    find('.cellar .stats .beers').should have_content('3Total')
-    find('.cellar .stats .beers').should have_content('1Unique')
-    find('.cellar .stats .breweries').should have_content('1Total')
+    expect(find('.cellar .stats .beers')).to have_content('3Total')
+    expect(find('.cellar .stats .beers')).to have_content('1Unique')
+    expect(find('.cellar .stats .breweries')).to have_content('1Total')
   end
 
   scenario 'do not include brews with only drunk beers' do
     visit cellar_path(bob)
-    find('.cellar').should_not have_content('Drunk Brew')
+    expect(find('.cellar')).not_to have_content('Drunk Brew')
   end
 
   scenario 'do not include brews with only traded beers' do
     visit cellar_path(bob)
-    find('.cellar').should_not have_content('Traded Brew')
+    expect(find('.cellar')).not_to have_content('Traded Brew')
   end
 
   scenario 'do not include brews with only skunked beers' do
     visit cellar_path(bob)
-    find('.cellar').should_not have_content('Skunked Brew')
+    expect(find('.cellar')).not_to have_content('Skunked Brew')
   end
 end
 

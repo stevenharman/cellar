@@ -1,5 +1,4 @@
 require 'spec_helper'
-
 describe SupplyChain::Agent, :vcr do
   subject(:agent) { described_class.new(warehouse, log) }
   let(:warehouse) { SupplyChain::Warehouse.new }

@@ -6,25 +6,25 @@ describe Constraint::Staff do
   let(:warden) { double('Warden') }
 
   it 'denies an unauthenticated user' do
-    warden.stub(:authenticated?) { false }
-    expect(constraint.matches?(a_request)).to be_false
+    allow(warden).to receive(:authenticated?) { false }
+    expect(constraint.matches?(a_request)).to be false
   end
 
   context 'when authenticated' do
     let(:user) { double('User') }
     before do
-      warden.stub(:authenticated?) { true }
-      warden.stub(:user) { user }
+      allow(warden).to receive(:authenticated?) { true }
+      allow(warden).to receive(:user) { user }
     end
 
     it 'denies a non-staff user' do
-      user.stub(:staff?) { false }
-      expect(constraint.matches?(a_request)).to be_false
+      allow(user).to receive(:staff?) { false }
+      expect(constraint.matches?(a_request)).to be false
     end
 
     it 'allows an staff user' do
-      user.stub(:staff?) { true }
-      expect(constraint.matches?(a_request)).to be_true
+      allow(user).to receive(:staff?) { true }
+      expect(constraint.matches?(a_request)).to be true
     end
   end
 end

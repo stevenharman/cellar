@@ -5,22 +5,22 @@ describe SupplyChain::Log do
   let(:base_log) { double.as_null_object }
   let(:item) { double('Item').as_null_object }
   before do
-    item.stub(:valid?) { true }
+    allow(item).to receive(:valid?) { true }
   end
 
   it 'logs basic details for items in debug' do
-    base_log.should_receive(:debug)
+    expect(base_log).to receive(:debug)
     subject.record(item)
   end
 
   it 'logs an error for invalid items' do
-    item.stub(:valid?) { false }
-    base_log.should_receive(:error)
+    allow(item).to receive(:valid?) { false }
+    expect(base_log).to receive(:error)
     subject.record(item)
   end
 
   it 'does not log an error for valid items' do
-    base_log.should_not_receive(:error)
+    expect(base_log).not_to receive(:error)
     subject.record(item)
   end
 end

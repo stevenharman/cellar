@@ -36,20 +36,20 @@ describe Search::Engine do
   it 'pages the results when a paged query is used' do
     results = double('PGSearch Result')
     PgSearch.stub_chain(:multisearch, :includes) { results }
-    results.should_receive(:page).with(42)
+    expect(results).to receive(:page).with(42)
 
     search_engine.search(Search::Query.new(terms: 'hi', page: 42))
   end
 
   it 'does not search for an empty query' do
-    PgSearch.should_not_receive(:multisearch)
+    expect(PgSearch).not_to receive(:multisearch)
     results = search_engine.search(Search::Query.new(terms: ''))
     expect(results.total_count).to eq(0)
     expect(results.current_page).to eq(1)
   end
 
   it 'does not search for a nil query' do
-    PgSearch.should_not_receive(:multisearch)
+    expect(PgSearch).not_to receive(:multisearch)
     results = search_engine.search(Search::Query.new(terms: nil))
     expect(results.total_count).to eq(0)
     expect(results.current_page).to eq(1)

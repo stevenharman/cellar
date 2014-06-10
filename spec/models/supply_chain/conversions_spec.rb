@@ -9,11 +9,11 @@ describe SupplyChain::Conversions do
     end
 
     it 'is falsey for "N"' do
-      expect(conversions.boolean('N')).to be_false
+      expect(conversions.boolean('N')).to be_falsey
     end
 
     it 'is truthy for "Y"' do
-      expect(conversions.boolean('Y')).to be_true
+      expect(conversions.boolean('Y')).to be_truthy
     end
   end
 

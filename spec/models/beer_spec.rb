@@ -11,7 +11,7 @@ describe Beer do
 
     it 'makes a beer of the given brew' do
       beer = Beer.make(beer_stuff, brew)
-      beer.brew.should == brew
+      expect(beer.brew).to eq(brew)
     end
   end
 
@@ -22,13 +22,13 @@ describe Beer do
     context 'when Bob owns the beer' do
       before { beer.user = bob }
 
-      it { beer.should be_cellared_by(bob) }
+      it { expect(beer).to be_cellared_by(bob) }
     end
 
     context 'when Alice owns the beer' do
       before { beer.user = User.new }
 
-      it { beer.should_not be_cellared_by(bob) }
+      it { expect(beer).not_to be_cellared_by(bob) }
     end
   end
 
@@ -36,13 +36,13 @@ describe Beer do
 
     it 'is true when it succeeds' do
       beer = FactoryGirl.build(:beer, :cellared)
-      expect(beer.update_status('drunk')).to be_true
+      expect(beer.update_status('drunk')).to be true
       expect(beer).to be_drunk
     end
 
     it 'is false when it fails' do
       beer = FactoryGirl.create(:beer, :cellared)
-      expect(beer.update_status('no_such_status')).to be_false
+      expect(beer.update_status('no_such_status')).to be false
       expect(beer).not_to be_cellared
       expect(beer.reload).to be_cellared
     end
@@ -82,12 +82,12 @@ describe Beer do
 
       it 'includes only Backwoods Bastards' do
         beers = Beer.by_brew(backwoods)
-        beers.should have(2).beers
-        beers.should =~ bobs_backwoods
+        expect(beers.size).to eq(2)
+        expect(beers).to match_array(bobs_backwoods)
       end
 
       it 'can search using the brew id' do
-        Beer.by_brew(backwoods.id).should =~ bobs_backwoods
+        expect(Beer.by_brew(backwoods.id)).to match_array(bobs_backwoods)
       end
     end
 
@@ -97,7 +97,7 @@ describe Beer do
       let!(:other_beer) { FactoryGirl.create(:beer) }
 
       it "includes only Bob's beers" do
-        Beer.cellared_by(bob).should =~ [bobs_beer]
+        expect(Beer.cellared_by(bob)).to match_array([bobs_beer])
       end
     end
   end

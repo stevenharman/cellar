@@ -7,7 +7,7 @@ describe CellaredBeerStatistics do
     let(:raw_stats) { Hash.new }
 
     it 'loads the cellared beer stats for the keeper' do
-      CellaredBeerStatisticsQuery.stub(:query).with(keeper) { raw_stats }
+      allow(CellaredBeerStatisticsQuery).to receive(:query).with(keeper) { raw_stats }
       stats = described_class.analyze(keeper)
       expect(stats.to_hash).to eq(raw_stats)
     end

@@ -6,16 +6,16 @@ feature 'Signing in and out', :feature, :slow do
   scenario 'Signing in with valid credentials' do
     sign_in(bob)
 
-    page.should have_content 'Welcome back to the Cellar'
-    current_path.should == root_path
+    expect(page).to have_content 'Welcome back to the Cellar'
+    expect(current_path).to eq(root_path)
   end
 
   scenario 'Signing out a signed in user' do
     sign_in(bob)
     sign_out(bob)
 
-    page.should have_content 'signed out'
-    current_path.should == root_path
+    expect(page).to have_content 'signed out'
+    expect(current_path).to eq(root_path)
   end
 
 end

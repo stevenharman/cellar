@@ -8,20 +8,20 @@ describe SupplyChain::Translator do
   let(:item) { OpenStruct.new }
   let(:data) { double(id: 'abc123') }
   before do
-    translation_class.stub(:new).with(item) { translation }
-    translation.stub(:call) { item }
+    allow(translation_class).to receive(:new).with(item) { translation }
+    allow(translation).to receive(:call) { item }
   end
 
   it 'translates onto an existing item' do
-    factory.stub(:find_by_brewery_db_id).with(data.id) { item }
+    allow(factory).to receive(:find_by_brewery_db_id).with(data.id) { item }
 
     expect(translation).to receive(:call).with(data)
     subject.translate(data)
   end
 
   it 'translates onto a new item when one does not already exist' do
-    factory.stub(:find_by_brewery_db_id) { nil }
-    factory.stub(:new) { item }
+    allow(factory).to receive(:find_by_brewery_db_id) { nil }
+    allow(factory).to receive(:new) { item }
 
     expect(translation).to receive(:call).with(data)
     translated = subject.translate(data)

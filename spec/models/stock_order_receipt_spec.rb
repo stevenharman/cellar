@@ -7,7 +7,7 @@ describe StockOrderReceipt do
 
   context 'with valid order and valid beers' do
     it 'is valid' do
-      expect(receipt.valid?).to be_true
+      expect(receipt.valid?).to be true
     end
   end
 
@@ -15,7 +15,7 @@ describe StockOrderReceipt do
     let(:order) { double('StockOrder', valid?: false) }
 
     it 'is invalid' do
-      expect(receipt.valid?).to be_false
+      expect(receipt.valid?).to be false
     end
   end
 
@@ -23,7 +23,7 @@ describe StockOrderReceipt do
     let(:beers) { [double(valid?: true), double(valid?: false)] }
 
     it 'is invalid' do
-      expect(receipt.valid?).to be_false
+      expect(receipt.valid?).to be false
     end
   end
 

@@ -6,7 +6,7 @@ describe SupplyChain::Job do
   describe 'including into a job' do
     let(:fake_directory) { [] }
     before do
-      job_module.stub(:directory) { fake_directory }
+      allow(job_module).to receive(:directory) { fake_directory }
     end
 
     it 'registers the job with the directory' do

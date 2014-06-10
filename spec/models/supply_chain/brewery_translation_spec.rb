@@ -1,3 +1,4 @@
+require 'ostruct'
 require 'models/supply_chain/brewery_translation'
 
 describe SupplyChain::BreweryTranslation do
@@ -8,7 +9,7 @@ describe SupplyChain::BreweryTranslation do
     let(:raw_data) { OpenStruct.new(id: 'abc123') }
 
     it 'saves the translated brewery' do
-      brewery.should_receive(:save)
+      expect(brewery).to receive(:save)
       subject.call(raw_data)
     end
 
@@ -22,7 +23,7 @@ describe SupplyChain::BreweryTranslation do
       it { expect(brewery.name).to eql(raw_data.name) }
       it { expect(brewery.description).to eql(raw_data.description) }
       it { expect(brewery.established).to eql(Date.new(2011))}
-      it { expect(brewery.organic).to be_true }
+      it { expect(brewery.organic).to be true }
       it { expect(brewery.website).to eql(raw_data.website) }
       it { expect(brewery.icon).to eql(raw_data.images.icon) }
       it { expect(brewery.medium_image).to eql(raw_data.images.medium) }

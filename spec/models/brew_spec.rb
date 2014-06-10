@@ -18,16 +18,16 @@ describe Brew do
   describe 'labels' do
     it 'does has no images when the label does not exist' do
       brew = described_class.new
-      expect(brew.icon?).to be_false
-      expect(brew.medium_image?).to be_false
-      expect(brew.large_image?).to be_false
+      expect(brew.icon?).to be false
+      expect(brew.medium_image?).to be false
+      expect(brew.large_image?).to be false
     end
 
     it 'does has images when the label does not exist' do
       brew = described_class.new(labels: { icon: 'foo', medium_image: 'bar', large_image: 'zaa' })
-      expect(brew.icon?).to be_true
-      expect(brew.medium_image?).to be_true
-      expect(brew.large_image?).to be_true
+      expect(brew.icon?).to be true
+      expect(brew.medium_image?).to be true
+      expect(brew.large_image?).to be true
     end
   end
 
