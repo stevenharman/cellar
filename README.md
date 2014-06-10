@@ -1,4 +1,4 @@
-# Cellar at [Brewdega](http://brewdega.com)
+# Cellar at [Brewdega](http://cellar.brewdega.com)
 
 ## Development
 
@@ -142,14 +142,13 @@ me = User.find_by_username('my_username_here'); me.staff = true; me.save!
 
 #### Resources for reference and learning:
 
-  * [SMACSS and Rails: a Styleguide for the Asset
-    Pipeline](http://blog.55minutes.com/2013/01/smacss-and-rails/)
-  * [SMACSS website](smacss)
+  * [SMACSS and Rails: a Styleguide for the Asset Pipeline](http://blog.55minutes.com/2013/01/smacss-and-rails/)
+  * [SMACSS website][smacss]
   * [SMACSS intro videos](http://tv.adobe.com/search/?q=smacss)
   * [Bourbon Documentation](http://bourbon.io/docs/)
   * [Bourbon Neat Documentation](http://neat.bourbon.io/docs/)
   * [Bourbon Neat Examples](http://neat.bourbon.io/examples/)
-  * [Sass website](sass) also has pretty decent docs, and _a whole lot of useful functions_
+  * [Sass website][sass] also has pretty decent docs, and _a whole lot of useful functions_
 
 ## What's missing?
 
