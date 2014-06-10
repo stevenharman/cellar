@@ -18,12 +18,13 @@ ready to go.
 #### ENV Vars
 
 You can set some _optional_ [ENV Vars][env-vars] to tweak the way the app runs,
-or simulate the app running on other platforms.
+or simulate the app running on other platforms. In development and test, you
+should configure these via a [`.env` file][dotenv].
 
   - `AWS_ACCESS_KEY_ID`: Amazon AWS Access Key. _(No default)_
   - `AWS_SECRET_ACCESS_KEY`: Amazon AWS Secret Access Key. _(No default)_
   - `BREWERY_DB_API_KEY`: key to use to connect to [BreweryDB.com][brewerydb].
-    _(Default to our dev key)_
+    _(No default)_
   - `DATABASE_REAP_FREQ`: how often (in seconds) the database connection pool
     should be reaped. _(Default = `10`)_
   - `DATABASE_URL`: set to mimic the behavior of setting the database
@@ -158,6 +159,7 @@ me = User.find_by_username('my_username_here'); me.staff = true; me.save!
 [bourbon-neat]: http://neat.bourbon.io/ "A lightweight semantic grid framework for Sass and Bourbon"
 [bourbon]: http://bourbon.io/ "A simple and lightweight mixin library for Sass"
 [brewerydb]: http://brewerydb.com/ "BreweryDB is your database of breweries, beers, beer events and guilds!"
+[dotenv]: https://github.com/bkeepers/dotenv "Loads environment variables from `.env`"
 [env-vars]: https://devcenter.heroku.com/articles/config-vars "Configuration and Config Vars"
 [foreman]: https://devcenter.heroku.com/articles/procfile/
 [mailcatcher]: http://mailcatcher.me/ "Catches mail and serves it through a dream."
