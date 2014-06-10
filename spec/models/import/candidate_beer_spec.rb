@@ -26,7 +26,7 @@ describe Import::CandidateBeer do
     specify { expect(candidate.best_by).to eq(Date.new(2016, 10, 15)) }
     specify { expect(candidate.count).to eq(2) }
     specify { expect(candidate.notes).to eq('Booozy') }
-    specify { pending('NOT IMPLEMENTED: Lookup sizes'); expect(candidate.size).to eq(Size.new) }
+    specify { skip('NOT IMPLEMENTED: Lookup sizes'); expect(candidate.size).to eq(Size.new) }
     specify { expect(candidate.vintage).to eq(2011) }
 
     it 'keeps the original row' do

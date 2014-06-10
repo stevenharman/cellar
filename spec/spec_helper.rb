@@ -36,6 +36,7 @@ RSpec.configure do |config|
     end
   end
 
+  config.infer_spec_type_from_file_location!
   config.include Devise::TestHelpers, type: :controller
   config.include ControllerTestHelpers, type: :controller
   config.include FeatureTestHelpers, type: :feature
