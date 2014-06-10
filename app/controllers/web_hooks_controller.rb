@@ -1,4 +1,5 @@
 require 'rack/utils'
+require_relative '../models/supply_chain'
 
 class WebHooksController < ApplicationController
   skip_before_filter :verify_authenticity_token, only: [:create]

@@ -3,6 +3,10 @@ require 'spec_helper'
 describe 'Receiving a WebHook from BreweryDB' do
   let(:key) { 'c5fa4b6be8abbf18d20903cfd90c633b713bb3d7' }
   let(:nonce) { '576a8003ab8936d99fb104401141d613' }
+  before do
+    # Stub in an old API which is valid for the above key + nonce.
+    allow(ServiceKeys).to receive(:brewery_db) { '2a3e944b3fcc18c0617ea642c9edb5dd' }
+  end
 
   context 'brewery was added', :vcr do
     it 'fetches and creates the brewery' do
