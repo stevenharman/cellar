@@ -4,8 +4,8 @@ require 'brewery_db'
 module SupplyChain
   class Warehouse
 
-    def initialize(brewery_db_api_key = ServiceKeys.brewery_db)
-      @client = BreweryDB::Client.new do |c|
+    def initialize(brewery_db_api_key: ServiceKeys.brewery_db, client_factory: BreweryDB::Client)
+      @client = client_factory.new do |c|
         c.api_key = brewery_db_api_key
       end
     end

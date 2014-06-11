@@ -35,7 +35,7 @@ describe Search::Engine do
 
   it 'pages the results when a paged query is used' do
     results = double('PGSearch Result')
-    PgSearch.stub_chain(:multisearch, :includes) { results }
+    allow(PgSearch).to receive_message_chain(:multisearch, :includes) { results }
     expect(results).to receive(:page).with(42)
 
     search_engine.search(Search::Query.new(terms: 'hi', page: 42))

@@ -1,3 +1,6 @@
+ENV['RAILS_ENV'] ||= 'test'
+
+(require 'dotenv'; Dotenv.load) unless defined?(Dotenv)
 require 'service_keys'
 require 'vcr'
 

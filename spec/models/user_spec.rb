@@ -3,7 +3,9 @@ require 'spec_helper'
 describe User do
 
   it 'requires password for new user' do
-    expect(User.new.errors_on(:password).size).to eq(1)
+    user = User.new
+    expect(user).not_to be_valid
+    expect(user.errors[:password].size).to eq(1)
   end
 
   describe 'an existing user' do
@@ -11,14 +13,17 @@ describe User do
 
     it 'does not require a password' do
       bob.password = nil
-      expect(bob.errors_on(:password).size).to eq(0)
+      expect(bob).to be_valid
+      expect(bob.errors[:password].size).to eq(0)
     end
 
     it 'requires a minimum password length when password is being set' do
       bob.password = 'abc12345'
-      expect(bob.errors_on(:password).size).to eq(0)
+      expect(bob).to be_valid
+      expect(bob.errors[:password].size).to eq(0)
       bob.password = 'abc1234'
-      expect(bob.errors_on(:password).size).to eq(1)
+      expect(bob).not_to be_valid
+      expect(bob.errors[:password].size).to eq(1)
     end
   end
 

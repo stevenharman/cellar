@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/stevenharman/draper.git
-  revision: 3a59e1fca4c569773bf9bbe77d645e417f92c08a
+  revision: c43289a7c336c557ffb1d6cdbe0b7beef140ae84
   branch: compatibility_with_active_model_serializers_next
   specs:
     draper (1.3.0)
@@ -222,21 +222,22 @@ GEM
     redis-namespace (1.4.1)
       redis (~> 3.0.4)
     request_store (1.0.5)
-    rspec-collection_matchers (1.0.0)
-      rspec-expectations (>= 2.99.0.beta1)
-    rspec-core (2.99.0)
-    rspec-expectations (2.99.0)
-      diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.99.0)
-    rspec-rails (2.99.0)
+    rspec-core (3.0.0)
+      rspec-support (~> 3.0.0)
+    rspec-expectations (3.0.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.0.0)
+    rspec-mocks (3.0.1)
+      rspec-support (~> 3.0.0)
+    rspec-rails (3.0.1)
       actionpack (>= 3.0)
-      activemodel (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
-      rspec-collection_matchers
-      rspec-core (~> 2.99.0)
-      rspec-expectations (~> 2.99.0)
-      rspec-mocks (~> 2.99.0)
+      rspec-core (~> 3.0.0)
+      rspec-expectations (~> 3.0.0)
+      rspec-mocks (~> 3.0.0)
+      rspec-support (~> 3.0.0)
+    rspec-support (3.0.0)
     safe_yaml (1.0.3)
     sass (3.3.8)
     sass-rails (4.0.1)
@@ -338,7 +339,7 @@ DEPENDENCIES
   rack-cors
   rails (~> 4.0.4)
   rails_12factor
-  rspec-rails (~> 2.14)
+  rspec-rails (~> 3.0)
   sass-rails (~> 4.0.0)
   sidekiq
   simple_form (~> 3.0)

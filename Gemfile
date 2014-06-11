@@ -48,7 +48,7 @@ group :development, :test do
   gem 'forgery'
   gem 'pry-rails'
   gem 'pry-remote'
-  gem 'rspec-rails', '~> 2.14'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :development do

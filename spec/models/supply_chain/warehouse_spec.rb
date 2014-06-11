@@ -62,35 +62,37 @@ describe SupplyChain::Warehouse do
   end
 
   context 'no results from the server' do
-    let(:client) { BreweryDB::Client.any_instance }
+    subject(:warehouse) { described_class.new(client_factory: client_factory) }
+    let(:client_factory) { double('BreweryDB::Client', new: client) }
+    let(:client) { BreweryDB::Client.new }
 
     it 'fetchs an empty list of categories rather than nil' do
-      client.stub_chain(:categories, :all) { nil }
+      allow(client).to receive_message_chain(:categories, :all) { nil }
       expect(warehouse.categories).to be_empty
     end
 
     it 'fetchs an empty list of styles rather than nil' do
-      client.stub_chain(:styles, :all) { nil }
+      allow(client).to receive_message_chain(:styles, :all) { nil }
       expect(warehouse.styles).to be_empty
     end
 
     it 'fetchs an empty list of sizes rather than nil' do
-      client.stub_chain(:fluid_size, :all) { nil }
+      allow(client).to receive_message_chain(:fluid_size, :all) { nil }
       expect(warehouse.sizes).to be_empty
     end
 
     it 'fetchs an empty list of beer availabilities rather than nil' do
-      client.stub_chain(:menu, :beer_availability) { nil }
+      allow(client).to receive_message_chain(:menu, :beer_availability) { nil }
       expect(warehouse.availabilities).to be_empty
     end
 
     it 'fetchs an empty list of breweries rather than nil' do
-      client.stub_chain(:breweries, :all) { nil }
+      allow(client).to receive_message_chain(:breweries, :all) { nil }
       expect(warehouse.breweries).to be_empty
     end
 
     it 'fetches an empty list of beers rather than a nil' do
-      client.stub_chain(:brewery, :beers) { nil }
+      allow(client).to receive_message_chain(:brewery, :beers) { nil }
       expect(warehouse.brews_for_brewery('Idm5Y5')).to be_empty
     end
   end
