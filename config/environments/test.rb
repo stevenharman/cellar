@@ -1,4 +1,4 @@
-BrewdegaCellar::Application.configure do
+Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # The test environment is used exclusively to run your application's
@@ -42,6 +42,9 @@ BrewdegaCellar::Application.configure do
 
   # Allow pass debug_assets=true as a query parameter to load pages with unpackaged assets
   config.assets.allow_debugging = true
+
+  # Raises error for missing translations
+  # config.action_view.raise_on_missing_translations = true
 
   config.action_controller.action_on_unpermitted_parameters = :raise
 end

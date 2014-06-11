@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.1.2'
-gem 'rails', '~> 4.0.4'
+gem 'rails', '~> 4.1.1'
 
 # Must be early in Gemfile so it's loaded before libs that depend on ENV Vars
 gem 'dotenv-rails', '~> 0.11', groups: [:development, :test]
@@ -27,16 +27,13 @@ gem 'unf' # For unicode support on Fog/AWS
 gem 'virtus'
 
 # Assets
-gem 'sass-rails', '~> 4.0.0'
+# Needs SASS ~> 3.3, which requires sass-rails ~> 4.0.4 (currently unreleased)
+gem 'sass-rails', github: 'rails/sass-rails', branch: 'master'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'bourbon', '~> 4.0'
 gem 'neat', '~> 1.6'
 gem 'font-awesome-rails', '~> 4.0'
-
-# Lock to SASS 3.3 compatible sprockets until sass-rails is fixed
-# See: https://github.com/rails/sass-rails/issues/191
-gem 'sprockets', '2.11.0'
 
 group :production do
   gem 'rails_12factor'
