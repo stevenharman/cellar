@@ -19,12 +19,13 @@ Sidekiq.configure_server do |config|
     ActiveRecord::Base.connection_pool.disconnect!
 
     ActiveSupport.on_load(:active_record) do
-      config = Rails.application.config.database_configuration[Rails.env]
+      config = ActiveRecord::Base.configurations[Rails.env]
       config['reaping_frequency'] = ENV['DATABASE_REAP_FREQ'] || 10 # seconds
       config['pool'] = ENV['WORKER_DB_POOL_SIZE'] || Sidekiq.options[:concurrency]
       ActiveRecord::Base.establish_connection(config)
 
-      Rails.logger.info("Connection Pool size for Sidekiq Server is now: #{ActiveRecord::Base.connection.pool.instance_variable_get('@size')}")
+      pool_size = ActiveRecord::Base.connection.pool.instance_variable_get('@size')
+      Rails.logger.info("Connection Pool size for Sidekiq Server is now: #{pool_size}")
     end
   end
 end
@@ -36,13 +37,13 @@ Sidekiq.configure_client do |config|
     ActiveRecord::Base.connection_pool.disconnect!
 
     ActiveSupport.on_load(:active_record) do
-      config = Rails.application.config.database_configuration[Rails.env]
+      config = ActiveRecord::Base.configurations[Rails.env]
       config['reaping_frequency'] = ENV['DATABASE_REAP_FREQ'] || 10 # seconds
       config['pool'] = ENV['WEB_DB_POOL_SIZE'] || current_web_concurrency.call
       ActiveRecord::Base.establish_connection(config)
 
-      # DB connection not available during slug compliation on Heroku
-      Rails.logger.info("Connection Pool size for web server is now: #{config['pool']}")
+      pool_size = ActiveRecord::Base.connection.pool.instance_variable_get('@size')
+      Rails.logger.info("Connection Pool size for web server is now: #{pool_size}")
     end
   end
 end
