@@ -5,6 +5,11 @@ rvm:
 cache: bundler
 before_script:
   - cp ./config/database.yml.example ./config/database.yml
+script:
+  - RAILS_ENV=test bundle exec rake db:setup
+  - RAILS_ENV=test bundle exec rake db:schema:load
+  - bundle exec rspec
 addons:
   code_climate:
     repo_token: c94151dfd6c4fd28f3846fc595400381ed1d786d9ab2902ff12d5deeb7d0de75
+  postgresql: 9.3
