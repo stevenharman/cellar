@@ -43,4 +43,6 @@ RSpec.configure do |config|
   config.include RequestTestHelpers, type: :request
 
   Capybara.javascript_driver = :webkit
+
+  WebMock.disable_net_connect!(allow: 'codeclimate.com')
 end
