@@ -1,5 +1,10 @@
 # Cellar at [Brewdega](http://cellar.brewdega.com)
 
+[![Build Status](https://img.shields.io/travis/stevenharman/cellar.svg)](https://travis-ci.org/stevenharman/cellar)
+[![Code Climate](http://img.shields.io/codeclimate/github/stevenharman/cellar.svg)](https://codeclimate.com/github/stevenharman/cellar)
+[![Code Coverage](http://img.shields.io/codeclimate/coverage/github/stevenharman/cellar.svg)](https://codeclimate.com/github/stevenharman/cellar)
+[![Dependency Status](https://img.shields.io/gemnasium/stevenharman/cellar.svg)](https://gemnasium.com/stevenharman/cellar)
+
 ## Development
 
 ### Getting up and Running
