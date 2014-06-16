@@ -56,9 +56,13 @@ end
 group :test do
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'codeclimate-test-reporter', require: false
   gem 'database_cleaner'
-  gem 'with_model'
-  gem 'simplecov', require: false
   gem 'vcr'
   gem 'webmock'
+  gem 'with_model'
+
+  # Require Simplecov explicitly. Remove this explicit dependency when
+  # the following is fixed: https://github.com/colszowka/simplecov/issues/281
+  gem 'simplecov', require: false, github: 'colszowka/simplecov'
 end
