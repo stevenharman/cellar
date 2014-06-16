@@ -1,8 +1,10 @@
 language: ruby
+env: COVERAGE=true
 rvm:
   - 2.1.2
 cache: bundler
-env: COVERAGE=true
+before_script:
+  - cp ./config/database.yml.example ./config/database.yml
 addons:
   code_climate:
     repo_token: c94151dfd6c4fd28f3846fc595400381ed1d786d9ab2902ff12d5deeb7d0de75
