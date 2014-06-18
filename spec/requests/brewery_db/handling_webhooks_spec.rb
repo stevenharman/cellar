@@ -8,25 +8,21 @@ describe 'Receiving a WebHook from BreweryDB' do
     allow(ServiceKeys).to receive(:brewery_db) { '2a3e944b3fcc18c0617ea642c9edb5dd' }
   end
 
-  context 'brewery was added', :vcr do
-    it 'fetches and creates the brewery' do
-      expect(Brewery.count).to eq(0)
-
+  context 'brewery was added' do
+    it 'queues a job to fetch the brewery' do
       post webhooks_path(key: key, nonce: nonce), { attribute: 'brewery', attributeId: 'aaN9Np', action: 'insert' }
-      SupplyChain::Job::FetchBrewery.drain
-
-      expect(Brewery.count).to eq(1)
+      supply_chain_jobs = SupplyChain::Job::FetchBrewery.jobs
+      expect(supply_chain_jobs.size).to eq(1)
+      expect(supply_chain_jobs.first['args']).to contain_exactly('aaN9Np')
     end
   end
 
-  context 'beer was added', :vcr do
-    it 'fetches and creates the brew' do
-      expect(Brew.count).to eq(0)
-
+  context 'beer was added' do
+    it 'queues a job to fetch the brew' do
       post webhooks_path(key: key, nonce: nonce), { attribute: 'beer', attributeId: 'g7ABnw', action: 'insert' }
-      SupplyChain::Job::FetchBrew.drain
-
-      expect(Brew.count).to eq(1)
+      supply_chain_jobs = SupplyChain::Job::FetchBrew.jobs
+      expect(supply_chain_jobs.size).to eq(1)
+      expect(supply_chain_jobs.first['args']).to contain_exactly('g7ABnw')
     end
   end
 

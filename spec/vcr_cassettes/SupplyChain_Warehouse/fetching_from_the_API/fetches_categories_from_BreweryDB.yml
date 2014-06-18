@@ -8,32 +8,34 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - BreweryDB Ruby Gem 0.2.2
+      - BreweryDB Ruby Gem 0.2.4
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
+      Content-Type:
+      - application/json
       Date:
-      - Tue, 06 Aug 2013 19:39:39 GMT
+      - Wed, 18 Jun 2014 20:34:55 GMT
       Server:
-      - Apache/2.2.24 (Amazon)
+      - Apache/2.2.26 (Amazon)
+      Vary:
+      - Accept-Encoding
       X-Powered-By:
-      - PHP/5.3.26
+      - PHP/5.3.28
       X-Ratelimit-Limit:
       - Unlimited
       X-Ratelimit-Remaining:
       - Unlimited
-      Vary:
-      - Accept-Encoding
       Content-Length:
-      - '309'
-      Content-Type:
-      - application/json
+      - '330'
+      Connection:
+      - keep-alive
     body:
       encoding: UTF-8
       string: '{"message":"READ ONLY MODE: Request Successful","data":[{"id":1,"name":"British
@@ -47,7 +49,8 @@ http_interactions:
         20:06:46"},{"id":9,"name":"Other Lager","createDate":"2012-03-21 20:06:46"},{"id":10,"name":"International
         Styles","createDate":"2012-03-21 20:06:46"},{"id":11,"name":"Hybrid\/mixed
         Beer","createDate":"2012-03-21 20:06:46"},{"id":12,"name":"Mead, Cider, &
-        Perry","createDate":"2012-03-21 20:06:46"}],"status":"success"}'
+        Perry","createDate":"2012-03-21 20:06:46"},{"id":13,"name":"Other Origin","createDate":"2013-08-10
+        12:44:20"}],"status":"success"}'
     http_version: 
-  recorded_at: Tue, 06 Aug 2013 19:39:40 GMT
-recorded_with: VCR 2.5.0
+  recorded_at: Wed, 18 Jun 2014 20:34:55 GMT
+recorded_with: VCR 2.9.2

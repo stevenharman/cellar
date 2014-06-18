@@ -7,8 +7,8 @@ describe SupplyChain::Agent, :vcr do
 
   it '#import_reference_data loads the all styles, categories, availability, and sizes', :slow do
     agent.import_reference_data
-    expect(Style.count).to eq(157)
-    expect(Category.count).to eq(12)
+    expect(Style.count).to eq(160)
+    expect(Category.count).to eq(13)
     expect(Availability.count).to eq(8)
     expect(Size.count).to eq(17)
   end

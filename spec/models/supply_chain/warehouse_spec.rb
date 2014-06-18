@@ -10,7 +10,7 @@ describe SupplyChain::Warehouse do
       categories = warehouse.categories
       expect(categories.first.id).to be_kind_of Fixnum
       expect(categories.each).to be_kind_of Enumerator
-      expect(categories.count).to eq(12)
+      expect(categories.count).to eq(13)
     end
 
     it 'fetches styles from BreweryDB' do
@@ -18,14 +18,14 @@ describe SupplyChain::Warehouse do
       expect(styles.first.id).to be_kind_of Fixnum
       expect(styles.first.category_id).to be_kind_of Fixnum
       expect(styles.each).to be_kind_of Enumerator
-      expect(styles.count).to eq(157)
+      expect(styles.count).to eq(160)
     end
 
     it 'fetches sizes from BreweryDB' do
       sizes = warehouse.sizes
       expect(sizes.first.id).to be_kind_of Fixnum
       expect(sizes.each).to be_kind_of Enumerator
-      expect(sizes.count).to eq(17)
+      expect(sizes.count).to eq(19)
     end
 
     it 'fetches brew availability from BreweryDB' do
@@ -39,7 +39,7 @@ describe SupplyChain::Warehouse do
       breweries = warehouse.breweries
       expect(breweries.first.id).to be_kind_of String
       expect(breweries.each).to be_kind_of Enumerator
-      expect(breweries.count).to eq(4567)
+      expect(breweries.count).to eq(5224)
     end
 
     it 'fetches a single brewery' do
@@ -51,7 +51,7 @@ describe SupplyChain::Warehouse do
       brews = warehouse.brews_for_brewery('Idm5Y5')
       expect(brews.first.id).to be_kind_of String
       expect(brews.each).to be_kind_of Enumerator
-      expect(brews.count).to eq(25)
+      expect(brews.count).to eq(30)
     end
 
     it 'fetches a single brew' do

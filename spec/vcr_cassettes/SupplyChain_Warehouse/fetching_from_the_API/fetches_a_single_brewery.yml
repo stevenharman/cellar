@@ -8,32 +8,34 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - BreweryDB Ruby Gem 0.2.2
+      - BreweryDB Ruby Gem 0.2.4
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
+      Content-Type:
+      - application/json
       Date:
-      - Tue, 06 Aug 2013 19:39:11 GMT
+      - Wed, 18 Jun 2014 20:34:56 GMT
       Server:
-      - Apache/2.2.24 (Amazon)
+      - Apache/2.2.26 (Amazon)
+      Vary:
+      - Accept-Encoding
       X-Powered-By:
-      - PHP/5.3.26
+      - PHP/5.3.28
       X-Ratelimit-Limit:
       - Unlimited
       X-Ratelimit-Remaining:
       - Unlimited
-      Vary:
-      - Accept-Encoding
       Content-Length:
-      - '731'
-      Content-Type:
-      - application/json
+      - '732'
+      Connection:
+      - keep-alive
     body:
       encoding: UTF-8
       string: '{"message":"READ ONLY MODE: Request Successful","data":{"id":"Idm5Y5","name":"Founders
@@ -55,7 +57,7 @@ http_interactions:
         beers. Our focus is to offer our wholesalers, retailers and consumers a product
         that stands alone on the shelf and offers a true drinking experience to our
         friends, the consumer.","website":"http:\/\/www.foundersbrewing.com\/","established":"1997","isOrganic":"N","images":{"icon":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_5gYn8V-icon.png","medium":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_5gYn8V-medium.png","large":"https:\/\/s3.amazonaws.com\/brewerydbapi\/brewery\/Idm5Y5\/upload_5gYn8V-large.png"},"status":"verified","statusDisplay":"Verified","createDate":"2012-01-03
-        02:41:55","updateDate":"2012-09-11 19:30:21"},"status":"success"}'
+        02:41:55","updateDate":"2014-04-24 13:04:48"},"status":"success"}'
     http_version: 
-  recorded_at: Tue, 06 Aug 2013 19:39:12 GMT
-recorded_with: VCR 2.5.0
+  recorded_at: Wed, 18 Jun 2014 20:34:56 GMT
+recorded_with: VCR 2.9.2

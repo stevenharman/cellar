@@ -8,32 +8,34 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - BreweryDB Ruby Gem 0.2.2
+      - BreweryDB Ruby Gem 0.2.4
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
+      Content-Type:
+      - application/json
       Date:
-      - Tue, 06 Aug 2013 20:14:54 GMT
+      - Wed, 18 Jun 2014 20:34:57 GMT
       Server:
-      - Apache/2.2.24 (Amazon)
+      - Apache/2.2.26 (Amazon)
+      Vary:
+      - Accept-Encoding
       X-Powered-By:
-      - PHP/5.3.26
+      - PHP/5.3.28
       X-Ratelimit-Limit:
       - Unlimited
       X-Ratelimit-Remaining:
       - Unlimited
-      Vary:
-      - Accept-Encoding
       Content-Length:
-      - '382'
-      Content-Type:
-      - application/json
+      - '412'
+      Connection:
+      - keep-alive
     body:
       encoding: UTF-8
       string: '{"message":"READ ONLY MODE: Request Successful","data":[{"id":1,"volume":"oz","volumeDisplay":"Ounce
@@ -52,7 +54,9 @@ http_interactions:
         12\/22","createDate":"2012-09-09 14:49:35","updateDate":"2012-09-09 14:49:55"},{"id":15,"volume":"barrel","volumeDisplay":"Barrel","quantity":"1\/2","createDate":"2012-09-09
         14:51:14"},{"id":16,"volume":"barrel","volumeDisplay":"Barrel","quantity":"1\/6","createDate":"2012-09-09
         14:51:29"},{"id":17,"volume":"barrel","volumeDisplay":"Barrel","quantity":"1\/4","createDate":"2012-09-09
-        14:51:44"}],"status":"success"}'
+        14:51:44"},{"id":18,"volume":"oz","volumeDisplay":"Ounce (oz)","createDate":"2013-12-05
+        05:15:08"},{"id":19,"volume":"liter","volumeDisplay":"Liter","createDate":"2013-12-05
+        05:16:50"}],"status":"success"}'
     http_version: 
-  recorded_at: Tue, 06 Aug 2013 20:14:54 GMT
-recorded_with: VCR 2.5.0
+  recorded_at: Wed, 18 Jun 2014 20:34:57 GMT
+recorded_with: VCR 2.9.2
