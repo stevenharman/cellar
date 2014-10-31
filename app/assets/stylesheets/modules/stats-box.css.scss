@@ -14,7 +14,7 @@
   }
 
   .stat {
-    @include inline-block;
+    display: inline-block;
     text-align: center;
 
     &:first-child {

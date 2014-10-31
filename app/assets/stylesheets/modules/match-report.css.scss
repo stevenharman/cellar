@@ -29,7 +29,7 @@
   }
 
   .match-primary {
-    @include inline-block;
+    display: inline-block;
     width: 40%;
 
     figure {
@@ -49,7 +49,7 @@
 
   .match-details {
     @include inline-labeled-list;
-    @include inline-block;
+    display: inline-block;
     vertical-align: top;
     width: 50%;
 
@@ -67,7 +67,7 @@
   }
 
   .match-actions {
-    @include inline-block;
+    display: inline-block;
     vertical-align: top;
     width: 10%;
 
@@ -87,7 +87,7 @@
   .match-indicator {
     $badge-size: 0.75em;
 
-    @include inline-block;
+    display: inline-block;
     font-size: $badge-size;
     margin-bottom: 0.5em;
 

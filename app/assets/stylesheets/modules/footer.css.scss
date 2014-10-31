@@ -50,7 +50,7 @@ footer {
   padding: 0.25em;
 
   .footer-brand {
-    @include inline-block;
+    display: inline-block;
 
     img {
       height: 58px;

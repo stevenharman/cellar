@@ -53,8 +53,8 @@
     top: -0.5em;
 
     li {
-      @include inline-block;
       @include text-overflow;
+      display: inline-block;
       margin-right: 1em;
     }
 
@@ -69,7 +69,7 @@
     top: -0.25em;
 
     dl {
-      @include inline-block;
+      display: inline-block;
       color: $orange;
       margin-bottom: 0;
       margin-top: 0;
@@ -81,7 +81,7 @@
       margin-top: 0;
     }
     dd {
-      @include inline-block;
+      display: inline-block;
       background-color: $text-well-background-color;
       border-right: 1px solid $brown;
       color: $text-well-color;

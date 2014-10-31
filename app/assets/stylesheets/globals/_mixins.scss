@@ -56,11 +56,11 @@
 
 @mixin inline-definition-list {
   dt {
-    @include inline-block;
+    display: inline-block;
     margin-right: 0.5em;
   }
   dd {
-    @include inline-block;
+    display: inline-block;
     margin-right: 2em;
   }
 }
@@ -71,7 +71,7 @@
   padding: 0;
 
   & > li {
-    @include inline-block;
+    display: inline-block;
     white-space: nowrap;
 
     label {

@@ -13,7 +13,7 @@
   z-index: $awning-z-index;
 
   .brand {
-    @include inline-block;
+    display: inline-block;
     float: left;
 
     img { height: 80px; }
@@ -21,14 +21,14 @@
   }
 
   .awning-search-box {
-    @include inline-block;
+    display: inline-block;
     line-height: $avatar-size;
     margin-left: 1em;
     margin-top: $top-padding;
     width: 40%;
 
     .search-form {
-      @include inline-block;
+      display: inline-block;
       margin: 0;
       width: 100%;
 

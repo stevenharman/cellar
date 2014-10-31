@@ -119,7 +119,7 @@
   @include pad;
 
   .message {
-    @include inline-block;
+    display: inline-block;
     line-height: 2.5em;
   }
   .stock-one-now { float: right; }

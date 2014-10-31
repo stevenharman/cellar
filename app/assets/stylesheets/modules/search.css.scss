@@ -82,7 +82,7 @@
     }
 
     .icon {
-      @include inline-block;
+      display: inline-block;
       margin-right: 0.5em;
       min-width: $icon-width;
       width: $icon-width;
