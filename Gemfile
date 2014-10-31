@@ -4,7 +4,7 @@ ruby '2.1.3'
 gem 'rails', '~> 4.1.1'
 
 # Must be early in Gemfile so it's loaded before libs that depend on ENV Vars
-gem 'dotenv-rails', '~> 0.11', groups: [:development, :test]
+gem 'dotenv-rails', '~> 1.0', groups: [:development, :test]
 
 gem 'puma'
 
@@ -13,7 +13,7 @@ gem 'brewery_db', '~> 0.2.0'
 gem 'carrierwave', '~> 0.10.0'
 gem 'devise', '~> 3.1'
 gem 'draper', github: 'stevenharman/draper', branch: 'compatibility_with_active_model_serializers_next'
-gem 'fog', '~> 1.15'
+gem 'fog', '~> 1.24'
 gem 'kaminari'
 gem 'newrelic_rpm'
 gem 'pg'
@@ -29,6 +29,8 @@ gem 'virtus'
 # Assets
 # Needs SASS ~> 3.3, which requires sass-rails ~> 4.0.4 (currently unreleased)
 gem 'sass-rails', github: 'rails/sass-rails', branch: 'master'
+# Needs 3.4.7+ to fix "specificity" error; https://github.com/sass/sass/blob/stable/doc-src/SASS_CHANGELOG.md
+gem 'sass', '3.4.5'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'bourbon', '~> 4.0'
@@ -41,7 +43,6 @@ end
 
 group :development, :test do
   gem 'factory_girl_rails'
-  gem 'foreman'
   gem 'forgery'
   gem 'pry-rails'
   gem 'pry-remote'
