@@ -12,6 +12,7 @@ script:
   - RAILS_ENV=test bin/rake db:setup
   - RAILS_ENV=test bin/rake db:schema:load
   - bin/rspec
+sudo: false
 addons:
   code_climate:
     repo_token: c94151dfd6c4fd28f3846fc595400381ed1d786d9ab2902ff12d5deeb7d0de75
