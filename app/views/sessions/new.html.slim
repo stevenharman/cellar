@@ -5,7 +5,7 @@
     = f.input :remember_me, as: :boolean, label: false, inline_label: t('.remember_me')
     = f.button :submit, t('cellar.sign_in'), class: 'btn-success'
     p
-      =' link_to(t('.forgot_password'), new_settings_password_reset_path)
-      =' t('.link_separator')
+      => link_to(t('.forgot_password'), new_settings_password_reset_path)
+      => t('.link_separator')
       = link_to(t('.confirmation_instructions'), new_confirmation_path, class: 'resend-confirmation')
   p= t('.sign_up_html', link: link_to(t('cellar.sign_up'), sign_up_path))

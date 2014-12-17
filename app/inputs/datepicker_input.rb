@@ -1,7 +1,8 @@
 class DatepickerInput < SimpleForm::Inputs::Base
-  def input
+  def input(wrapper_options)
+    options = merge_wrapper_options(input_html_options, wrapper_options)
     # TODO: Use @builder#date_field when upgrading to Rails 4.
-    date_inputs = @builder.text_field(attribute_name, {type: 'date'}.merge(input_html_options))
+    date_inputs = @builder.text_field(attribute_name, {type: 'date'}.merge(options))
 
     icon = template.content_tag(:i, '', class: 'fa fa-calendar')
     date_inputs << template.content_tag(:span, icon, class: 'input-group-addon')

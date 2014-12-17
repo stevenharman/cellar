@@ -20,7 +20,7 @@ gem 'pg'
 gem 'pg_search', '~> 0.7.2'
 gem 'rack-cors', require: 'rack/cors'
 gem 'simple_form', '~> 3.0'
-gem 'slim', '~> 2.0'
+gem 'slim', '~> 3.0'
 gem 'sinatra', require: false # for sidekiq monitoring
 gem 'sidekiq'
 gem 'unf' # For unicode support on Fog/AWS
@@ -28,9 +28,9 @@ gem 'virtus'
 
 # Assets
 # Needs SASS ~> 3.3, which requires sass-rails ~> 4.0.4 (currently unreleased)
-gem 'sass-rails', github: 'rails/sass-rails', branch: 'master'
+gem 'sass-rails', '~> 5.0.0'
 # Needs 3.4.7+ to fix "specificity" error; https://github.com/sass/sass/blob/stable/doc-src/SASS_CHANGELOG.md
-gem 'sass', '3.4.5'
+gem 'sass', '~> 3.4.5'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'bourbon', '~> 4.0'
