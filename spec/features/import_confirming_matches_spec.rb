@@ -1,12 +1,15 @@
 require 'spec_helper'
 
 feature 'Import: Confirming matched beers' do
+  background do
+    page.driver.block_unknown_urls
+    page.driver.allow_url('use.typekit.com')
+    page.driver.allow_url('secure.gravatar.com')
+  end
+
   let!(:match) { FactoryGirl.create(:import_candidate_beer, :medium_confidence, ledger: ledger) }
   let(:ledger) { FactoryGirl.create(:import_ledger, user: bob) }
   let(:bob) { sign_in_new_user }
-
-  background do
-  end
 
   scenario 'confirm a potential match', :js, :slow do
     visit import_match_report_path

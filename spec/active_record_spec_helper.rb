@@ -5,7 +5,7 @@ require 'database_cleaner'
 
 connection_info = YAML.load(ERB.new(File.read('config/database.yml')).result)['test']
 ActiveRecord::Base.establish_connection(connection_info)
-ActiveRecord::Migration.check_pending!
+ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
 
