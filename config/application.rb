@@ -1,14 +1,10 @@
 require File.expand_path('../boot', __FILE__)
 
-# Pick the frameworks you want:
-require 'active_record/railtie'
-require 'action_controller/railtie'
-require 'action_mailer/railtie'
-require 'sprockets/railtie'
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(:default, Rails.env)
+Bundler.require(*Rails.groups)
 
 module BrewdegaCellar
   class Application < Rails::Application
@@ -29,18 +25,8 @@ module BrewdegaCellar
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    # Don't initialize to apease Heroku's lack of DB connection during slug complilation.
-    config.assets.initialize_on_precompile = false
-    config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
-
-    # Allow CORS requests for assets
-    config.middleware.insert 0, Rack::Cors, logger: Rails.logger do
-      allow do
-        origins '*'
-        resource '/assets/*',
-          headers: :any,
-          methods: [:get, :options]
-      end
+    # Do not swallow errors in after_commit/after_rollback callbacks.
+    config.active_record.raise_in_transactional_callbacks = true
     end
   end
 end

@@ -1,14 +1,13 @@
 require 'active_model'
 
 class Profile
-  extend Forwardable
   extend ActiveModel::Naming
   include ActiveModel::Conversion
 
   attr_reader :cellar, :user
-  delegate [:beers_count, :brews_count, :total_breweries] => :cellar
-  delegate [:bio, :gravatar, :joined, :location, :name, :username, :website] => :user
-  delegate [:valid?, :errors] => :user
+  delegate :beers_count, :brews_count, :total_breweries, to: :cellar
+  delegate :bio, :gravatar, :joined, :location, :name, :username, :website, to: :user
+  delegate :valid?, :errors, to: :user
 
   def self.for(cellar)
     new(cellar)

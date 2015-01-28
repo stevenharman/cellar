@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.2.0'
-gem 'rails', '~> 4.1.1'
+gem 'rails', '~> 4.2.0'
 
 # Must be early in Gemfile so it's loaded before libs that depend on ENV Vars
 gem 'dotenv-rails', '~> 1.0', groups: [:development, :test]
@@ -11,7 +11,7 @@ gem 'puma'
 gem 'active_model_serializers', github: 'stevenharman/active_model_serializers', branch: 'make_url_generator_available'
 gem 'brewery_db', '~> 0.2.0'
 gem 'carrierwave', '~> 0.10.0'
-gem 'devise', '~> 3.1'
+gem 'devise', '~> 3.4'
 gem 'draper', github: 'stevenharman/draper', branch: 'compatibility_with_active_model_serializers_next'
 gem 'fog', '~> 1.24'
 gem 'kaminari'
@@ -19,6 +19,7 @@ gem 'newrelic_rpm'
 gem 'pg'
 gem 'pg_search', '~> 0.7.2'
 gem 'rack-cors', require: 'rack/cors'
+gem 'responders', '~> 2.0'
 gem 'simple_form', '~> 3.0'
 gem 'slim', '~> 3.0'
 gem 'sinatra', require: false # for sidekiq monitoring
@@ -50,8 +51,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
+  gem 'web-console', '~> 2.0'
 end
 
 group :test do
