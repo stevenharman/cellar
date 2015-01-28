@@ -28,6 +28,11 @@ RSpec.configure do |config|
     Sidekiq::Worker.clear_all
   end
 
+  config.before(type: :feature, js: true) do
+    capy_server = Capybara.current_session.server
+    Rails.application.config.action_mailer.default_url_options[:host] = "#{capy_server.host}:#{capy_server.port}"
+  end
+
   config.after(:suite) do
     if Rails.env.test?
       csv_uploader = CsvFileUploader.new

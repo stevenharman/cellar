@@ -27,6 +27,12 @@ module BrewdegaCellar
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # ActiveModel::Serializes 0.9.* includes url_helpers, but the Routes aren't
+    # set up with the default_url_options from the controller, which gets its
+    # settings from the mailer. We'll just manually copy them over here.
+    config.after_initialize do
+      Rails.application.routes.default_url_options = config.action_mailer.default_url_options
     end
   end
 end
