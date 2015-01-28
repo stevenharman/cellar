@@ -8,7 +8,7 @@ class Website
 
   def initialize(raw)
     @uri = URI.parse(raw)
-    @uri = URI.parse("http://#{raw}") unless @uri.scheme
+    @uri = URI.parse("http://#{raw}") unless (@uri.scheme || @uri.path.empty?)
   rescue URI::InvalidURIError
     @uri = raw
   end
