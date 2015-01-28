@@ -8,7 +8,7 @@ gem 'dotenv-rails', '~> 1.0', groups: [:development, :test]
 
 gem 'puma'
 
-gem 'active_model_serializers', github: 'stevenharman/active_model_serializers', branch: 'make_url_generator_available'
+gem 'active_model_serializers', '~> 0.9.3'
 gem 'brewery_db', '~> 0.2.0'
 gem 'carrierwave', '~> 0.10.0'
 gem 'devise', '~> 3.4'
