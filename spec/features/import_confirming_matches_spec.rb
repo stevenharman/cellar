@@ -4,8 +4,6 @@ feature 'Import: Confirming matched beers' do
   background do
     if page.driver.respond_to?(:block_unknown_urls)
       page.driver.block_unknown_urls
-      page.driver.allow_url('use.typekit.com')
-      page.driver.allow_url('secure.gravatar.com')
     end
   end
 
