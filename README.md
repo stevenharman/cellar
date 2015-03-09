@@ -161,19 +161,8 @@ me = User.find_by_username('my_username_here'); me.staff = true; me.save!
 
 ## License
 
-This code was originally intended to be a product, owned and operated by
-Brewdega, as a for-pay service. Since then, other *free* alternatives have
-launched, making a for-pay service extremely hard - especailly in a community
-used to getting everything (except the beer) for free. As as result, we are
-sharing the code so that others might learn, but the rights, assets, service marks,
-and ownership are retained by [Steven Harman][stevenharman], and are licensed
-under the <a rel="license"
-href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
-Attribution-NonCommercial-ShareAlike 4.0 International License.</a>
+See the [LICENSE file](LICENSE.md).
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
-alt="Creative Commons License" style="border-width:0"
-src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
 
 [bourbon-neat]: http://neat.bourbon.io/ "A lightweight semantic grid framework for Sass and Bourbon"
 [bourbon]: http://bourbon.io/ "A simple and lightweight mixin library for Sass"
@@ -187,5 +176,4 @@ src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
 [sass]: http://sass-lang.com/ "Syntactically Awesome Style Sheets"
 [sidekiq]: https://github.com/mperham/sidekiq
 [smacss]: http://smacss.com/ "Scalable and Modular Architecture for CSS"
-[stevenharman]: http://stevenharman.net "Steven Harman: Maker & Breaker of Things"
 [texticle]: https://tenderlove.github.com/texticle/
