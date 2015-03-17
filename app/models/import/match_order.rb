@@ -28,7 +28,7 @@ module Import
       end
     end
 
-    def add_to_ledger(match: match, row: row)
+    def add_to_ledger(match:, row:)
       beer = candidate_factory.build(match: match, row: row)
       import_ledger.add_candidate(beer)
     end

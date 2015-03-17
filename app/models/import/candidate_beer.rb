@@ -27,7 +27,7 @@ module Import
       end
     end
 
-    def self.build(match: match, row: row)
+    def self.build(match:, row:)
       row = row.to_hash if row.respond_to?(:to_hash)
       row = row.to_h.with_indifferent_access
 
