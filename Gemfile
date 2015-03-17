@@ -4,7 +4,7 @@ ruby '2.2.1'
 gem 'rails', '~> 4.2.0'
 
 # Must be early in Gemfile so it's loaded before libs that depend on ENV Vars
-gem 'dotenv-rails', '~> 1.0', groups: [:development, :test]
+gem 'dotenv-rails', '~> 2.0', groups: [:development, :test]
 
 gem 'puma'
 
@@ -32,7 +32,7 @@ gem 'virtus'
 gem 'sass-rails', '~> 5.0.0'
 # Needs 3.4.7+ to fix "specificity" error; https://github.com/sass/sass/blob/stable/doc-src/SASS_CHANGELOG.md
 gem 'sass', '~> 3.4.5'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'bourbon', '~> 4.0'
 gem 'neat', '~> 1.6'
