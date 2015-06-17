@@ -3,10 +3,10 @@
 set -e
 
 # Create the backup on heroku
-heroku pgbackups:capture --expire -a brewdega-cellar
+heroku pg:backups capture -a brewdega-cellar
 
 # Download the backup
-curl -# -o /tmp/brewdega-cellar.dump `heroku pgbackups:url -a brewdega-cellar`
+curl -# -o /tmp/brewdega-cellar.dump `heroku pg:backups public-url -a brewdega-cellar | cat`
 
 # Restore the backup
 dropdb cellar_development
