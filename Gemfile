@@ -29,9 +29,9 @@ gem 'virtus'
 
 # Assets
 # Needs SASS ~> 3.3, which requires sass-rails ~> 4.0.4 (currently unreleased)
-gem 'sass-rails', '~> 5.0.0'
-# Needs 3.4.7+ to fix "specificity" error; https://github.com/sass/sass/blob/stable/doc-src/SASS_CHANGELOG.md
-gem 'sass', '~> 3.4.5'
+gem 'sass-rails', '~> 5.0'
+# Lock to sprockets < 3.0 as it seems to break template and/or SASS rendering?
+gem 'sprockets', '~> 2.12'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'bourbon', '~> 4.0'
