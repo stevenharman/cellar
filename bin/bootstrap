@@ -73,10 +73,10 @@ add_git_remote_if_needed production git@heroku.com:brewdega-cellar.git
 add_git_remote_if_needed staging git@heroku.com:brewdega-cellar-staging.git
 
 # Gems
-gem install bundler --no-ri --no-rdoc
-gem install foreman --no-ri --no-rdoc
-gem install mailcatcher --no-ri --no-rdoc # https://github.com/sj26/mailcatcher#bundler
-bundle install
+gem install bundler --no-ri --no-rdoc --conservative
+gem install foreman --no-ri --no-rdoc --conservative
+gem install mailcatcher --no-ri --no-rdoc --conservative # https://github.com/sj26/mailcatcher#bundler
+bundle check || bundle install
 
 # Bower and Bower-controlled JavaScript components
 npm install --global bower
