@@ -2,20 +2,54 @@
 
 set -e
 
-# Create the backup on heroku
-heroku pg:backups capture -a brewdega-cellar
+heroku_app=brewdega-cellar
+migrate=0
+sanitize=1
+target_db=cellar_development
 
-# Download the backup
-curl -# -o /tmp/brewdega-cellar.dump `heroku pg:backups public-url -a brewdega-cellar | cat`
+while getopts ":a:hmst:" opt; do
+  case $opt in
+    a)
+      heroku_app=$OPTARG
+      ;;
+    h)
+      echo "Usage: bin/import [-a HEROKU_APP] [-h] [-m] [-s] [-t TARGET_DATABASE]" >&2
+      echo "-a: HEROKU_APP from which to pull the DB. (Default: $heroku_app)" >&2
+      echo "-h: Halp?! Shows this help text." >&2
+      echo "-m: Migrate the DB via \`bin/rake db:migrate\`." >&2
+      echo "-s: Skip Sanitizing the imported DB records." >&2
+      echo "-t: TARGET_DATABASE on the local machine where the import will be restored. (Default: $target_db)" >&2
+      exit 0
+      ;;
+    m)
+      migrate=1
+      ;;
+    s)
+      sanitize=0
+      ;;
+    t)
+      target_db=$OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+  esac
+done
 
-# Restore the backup
-dropdb cellar_development
-createdb -T template0 cellar_development
 
-pg_restore --verbose --no-acl --no-owner -h 127.0.0.1 -U `whoami` -d cellar_development /tmp/brewdega-cellar.dump
+dropdb $target_db --if-exists
 
-# Clean up
-rm -f /tmp/brewdega-cellar.dump
+heroku pg:pull DATABASE_URL $target_db -a $heroku_app
+
+if [ "$migrate" -eq "1" ]; then
+  bin/rake db:migrate
+fi
+
+if [ "$sanitize" -eq "1" ]; then
+  echo "Add your own data:sanitize script, please."
+  #bin/rake data:sanitize
+fi
 
 # Reindex PostgreSQL
 #rake pg_search:multisearch:rebuild_all
