@@ -2,7 +2,7 @@ namespace :deploy do
 
   desc 'deploys to Production Heroku environment'
   task :production do
-    Bundler.clean_system 'heroku pgbackups:capture DATABASE_URL --expire -a brewdega-cellar'
+    Bundler.clean_system 'heroku pg:backups capture --app brewdega-cellar'
     puts `git push production master`
     Bundler.clean_system 'heroku run rake db:migrate -a brewdega-cellar'
     Bundler.clean_system 'heroku restart -a brewdega-cellar'
