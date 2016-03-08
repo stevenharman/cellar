@@ -1,12 +1,6 @@
 require 'spec_helper'
 
 feature 'Import: Confirming matched beers' do
-  background do
-    if page.driver.respond_to?(:block_unknown_urls)
-      page.driver.block_unknown_urls
-    end
-  end
-
   let!(:match) { FactoryGirl.create(:import_candidate_beer, :medium_confidence, ledger: ledger) }
   let(:ledger) { FactoryGirl.create(:import_ledger, user: bob) }
   let(:bob) { sign_in_new_user }

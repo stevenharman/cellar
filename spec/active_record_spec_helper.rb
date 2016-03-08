@@ -2,6 +2,7 @@ ENV['RAILS_ENV'] ||= 'test'
 
 require 'active_record'
 require 'database_cleaner'
+require 'yaml'
 
 connection_info = YAML.load(ERB.new(File.read('config/database.yml')).result)['test']
 ActiveRecord::Base.establish_connection(connection_info)
