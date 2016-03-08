@@ -24,6 +24,7 @@ gem 'simple_form', '~> 3.0'
 gem 'slim', '~> 3.0'
 gem 'sinatra', require: false # for sidekiq monitoring
 gem 'sidekiq'
+gem 'redis-namespace'
 gem 'unf' # For unicode support on Fog/AWS
 gem 'virtus'
 
