@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.3'
+ruby '2.2.5'
 gem 'rails', '~> 4.2.0'
 
 # Must be early in Gemfile so it's loaded before libs that depend on ENV Vars
