@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'Beers', :feature, :slow do
   include Features::CellarHelpers
   let!(:bob) { sign_in_new_user }
-  let(:brew) { FactoryGirl.create(:brew) }
+  let(:brew) { FactoryBot.create(:brew) }
 
   scenario 'Adding a beers to the cellar' do
     visit new_stock_order_path(brew: brew.id)
@@ -35,7 +35,7 @@ feature 'Beers', :feature, :slow do
   private
 
   def given_a_cellared_beer(args)
-    FactoryGirl.create(:beer, :cellared,
+    FactoryBot.create(:beer, :cellared,
                        user: args.fetch(:user),
                        brew: args.fetch(:brew))
   end

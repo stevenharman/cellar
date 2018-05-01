@@ -37,7 +37,7 @@ describe Import::Ledger do
   end
 
   describe 'updating related match order status' do
-    subject(:ledger) { FactoryGirl.create(:import_ledger) }
+    subject(:ledger) { FactoryBot.create(:import_ledger) }
 
     it 'stores the job id with the ledger' do
       ledger.update_match_order_status('new')

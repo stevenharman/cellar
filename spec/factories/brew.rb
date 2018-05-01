@@ -1,6 +1,6 @@
 require 'securerandom'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :brew do
     style
     brewery_db_id { SecureRandom.hex(3) }
@@ -12,6 +12,6 @@ FactoryGirl.define do
     year { Date.new(rand(2000..2012)) }
     organic { Forgery::Basic.boolean }
 
-    after(:build) { |brew| brew.breweries << FactoryGirl.create(:brewery) }
+    after(:build) { |brew| brew.breweries << FactoryBot.create(:brewery) }
   end
 end

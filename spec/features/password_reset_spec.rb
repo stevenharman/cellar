@@ -4,7 +4,7 @@ feature 'Password reset', :feature, :slow do
   include Features::PasswordHelpers
   include Features::MailHelpers
 
-  let(:bob) { FactoryGirl.create(:bob) }
+  let(:bob) { FactoryBot.create(:bob) }
 
   scenario 'User forgot password' do
     request_password_reset(bob)

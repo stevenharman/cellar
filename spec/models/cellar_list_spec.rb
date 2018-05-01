@@ -4,7 +4,7 @@ require 'models/cellar_list'
 describe CellarList do
 
   context 'building a list' do
-    let!(:users) { FactoryGirl.create_list(:user, 2) }
+    let!(:users) { FactoryBot.create_list(:user, 2) }
 
     it 'can be paginated' do
       list = described_class.new

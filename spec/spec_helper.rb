@@ -42,15 +42,10 @@ RSpec.configure do |config|
   end
 
   config.infer_spec_type_from_file_location!
-  config.include Devise::TestHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :controller
   config.include ControllerTestHelpers, type: :controller
   config.include FeatureTestHelpers, type: :feature
   config.include RequestTestHelpers, type: :request
-
-  Capybara.javascript_driver = :webkit
-  Capybara::Webkit.configure do |config|
-    config.block_unknown_urls
-  end
 
   WebMock.disable_net_connect!(allow: 'codeclimate.com')
 end

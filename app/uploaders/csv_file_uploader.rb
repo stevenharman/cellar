@@ -1,7 +1,4 @@
-require 'carrierwave/processing/mime_types'
-
 class CsvFileUploader < CarrierWave::Uploader::Base
-  include CarrierWave::MimeTypes
   process :set_content_type
 
   def initialize(*)
@@ -13,7 +10,7 @@ class CsvFileUploader < CarrierWave::Uploader::Base
     "#{Rails.root}/tmp/uploads/#{Rails.env}/#{mounted_as}"
   end
 
-  def extension_white_list
+  def extension_whitelist
     %w(csv)
   end
 

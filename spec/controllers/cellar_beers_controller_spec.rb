@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe CellarBeersController do
 
-  let(:bob) { FactoryGirl.create(:bob) }
-  let(:alice) { FactoryGirl.create(:alice) }
-  let(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
-  let(:alices_beer) { FactoryGirl.create(:beer, user: alice) }
+  let(:bob) { FactoryBot.create(:bob) }
+  let(:alice) { FactoryBot.create(:alice) }
+  let(:bobs_beer) { FactoryBot.create(:beer, user: bob) }
+  let(:alices_beer) { FactoryBot.create(:beer, user: alice) }
 
   context 'When Bob is signed in' do
     before { sign_in bob }

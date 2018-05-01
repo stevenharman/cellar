@@ -11,7 +11,7 @@ module Settings
       @password_change = PasswordChange.new(current_user)
       if @password_change.call(change_params)
         flash[:success] = t('flash.password_change.create.success')
-        sign_in(current_user, bypass: true)
+        bypass_sign_in(current_user)
       else
         flash.now[:error] = t('flash.password_change.create.error')
       end

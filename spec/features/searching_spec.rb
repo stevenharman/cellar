@@ -11,7 +11,7 @@ feature 'Searching', :feature, :slow do
   private
 
   def a_known_brewery
-    FactoryGirl.create(:brewery)
+    FactoryBot.create(:brewery)
   end
 
   def search_for(terms)

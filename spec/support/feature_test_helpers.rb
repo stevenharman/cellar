@@ -14,7 +14,7 @@ module FeatureTestHelpers
   end
 
   def sign_in_new_user(user_profile=:user)
-    user = FactoryGirl.create(user_profile, password: 'password' )
+    user = FactoryBot.create(user_profile, password: 'password' )
     user.password = 'password'
     sign_in(user)
     user

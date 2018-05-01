@@ -30,7 +30,7 @@ feature 'Updating settings', :feature, :slow do
       fill_in "profile_#{field}", with: value
     end
 
-    find(:input, '.update-profile').click
+    click_on('Update')
   end
 
   def expect_profile_to_include(info)

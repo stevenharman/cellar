@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe Search::Engine do
   subject(:search_engine) { described_class }
-  let(:founders) { FactoryGirl.create(:brewery, name: 'Founders Brewing Company') }
+  let(:founders) { FactoryBot.create(:brewery, name: 'Founders Brewing Company') }
 
   it 'finds both breweries and brews' do
-    founders_brew = FactoryGirl.create(:brew, breweries: [founders])
+    founders_brew = FactoryBot.create(:brew, breweries: [founders])
     query = Search::Query.new(terms: 'founders')
     results = search_engine.search(query)
 
@@ -14,7 +14,7 @@ describe Search::Engine do
   end
 
   it 'finds brews with matching names' do
-    red_rye = FactoryGirl.create(:brew, breweries: [founders], name: 'Red Rye Ale')
+    red_rye = FactoryBot.create(:brew, breweries: [founders], name: 'Red Rye Ale')
     query = Search::Query.new(terms: 'red rye')
     results = search_engine.search(query)
 
@@ -23,8 +23,8 @@ describe Search::Engine do
   end
 
   it 'filters results when a document type is given' do
-    bfast_stout = FactoryGirl.create(:brew, breweries: [founders], name: 'Kentucky Breakfast Stout')
-    stout_brewery = FactoryGirl.create(:brewery, name: 'Stout Founders Brewing')
+    bfast_stout = FactoryBot.create(:brew, breweries: [founders], name: 'Kentucky Breakfast Stout')
+    stout_brewery = FactoryBot.create(:brewery, name: 'Stout Founders Brewing')
     query = Search::BrewQuery.new(terms: 'Founders Stout')
     results = search_engine.search(query)
 
@@ -56,8 +56,8 @@ describe Search::Engine do
   end
 
   context 'beers with accents in their name' do
-    let(:fantome) { FactoryGirl.create(:brewery, name: 'Brasserie Fantôme') }
-    let!(:primtemps) { FactoryGirl.create(:brew, breweries: [fantome], name: "Saison D'Erezée - Printemps") }
+    let(:fantome) { FactoryBot.create(:brewery, name: 'Brasserie Fantôme') }
+    let!(:primtemps) { FactoryBot.create(:brew, breweries: [fantome], name: "Saison D'Erezée - Printemps") }
 
     it 'ignores accents in names' do
       query = Search::Query.new(terms: 'Fantôme')

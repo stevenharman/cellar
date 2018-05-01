@@ -7,7 +7,7 @@ describe AnonymousUser do
 
   context 'with cellared beers' do
     before do
-      FactoryGirl.create(:beer)
+      FactoryBot.create(:beer)
     end
 
     it { expect(user.cellared_beers).to be_empty }

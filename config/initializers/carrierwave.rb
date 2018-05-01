@@ -1,6 +1,7 @@
 CarrierWave.configure do |config|
   case Rails.env.to_sym
   when :production #, :development
+    config.fog_provider = 'fog/aws'
     config.fog_credentials = {
       provider:               'AWS',
       aws_access_key_id:      ENV['AWS_ACCESS_KEY_ID'],
@@ -13,6 +14,7 @@ CarrierWave.configure do |config|
     config.storage = :fog
 
   when :staging
+    config.fog_provider = 'fog/aws'
     config.fog_credentials = {
       provider:               'AWS',
       aws_access_key_id:      ENV['AWS_ACCESS_KEY_ID'],

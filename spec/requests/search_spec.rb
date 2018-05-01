@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'Searching for a brew' do
-  let!(:brew) { FactoryGirl.create(:brew, name: 'Brooklyn Monster Ale')}
+  let!(:brew) { FactoryBot.create(:brew, name: 'Brooklyn Monster Ale')}
   let(:pagination) { json[:meta][:pagination] }
 
   it 'lists matching brews' do

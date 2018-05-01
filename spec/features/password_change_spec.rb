@@ -2,7 +2,7 @@ require 'spec_helper'
 
 feature 'Password change', :feature, :slow do
   include Features::PasswordHelpers
-  let(:alice) { FactoryGirl.create(:alice) }
+  let(:alice) { FactoryBot.create(:alice) }
   let(:new_password) { 's3kr3t password' }
   before do
     sign_in(alice)

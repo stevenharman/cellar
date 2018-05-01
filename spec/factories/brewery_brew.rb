@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :brewery_brew do
     brewery
     brew

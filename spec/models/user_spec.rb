@@ -9,7 +9,7 @@ describe User do
   end
 
   describe 'an existing user' do
-    let(:bob) { FactoryGirl.create(:user) }
+    let(:bob) { FactoryBot.create(:user) }
 
     it 'does not require a password' do
       bob.password = nil
@@ -40,7 +40,7 @@ describe User do
   end
 
   describe '#update_password' do
-    let(:bob) { FactoryGirl.create(:bob) }
+    let(:bob) { FactoryBot.create(:bob) }
     context 'a valid new password' do
       it 'persists the new password' do
         expect(bob.update_password('sekret 123')).to be true
@@ -89,7 +89,7 @@ describe User do
 
   describe '.for_username!' do
     context 'with user whom exists' do
-      let!(:bob) { FactoryGirl.create(:bob) }
+      let!(:bob) { FactoryBot.create(:bob) }
 
       it 'finds him' do
         expect(User.for_username!('bob')).to eq(bob)
@@ -106,11 +106,11 @@ describe User do
   end
 
   describe 'finding beers' do
-    let(:bob) { FactoryGirl.create(:bob) }
+    let(:bob) { FactoryBot.create(:bob) }
 
     describe '#find_beer' do
       context "when the beer is in the user's cellar" do
-        let(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
+        let(:bobs_beer) { FactoryBot.create(:beer, user: bob) }
 
         it 'fetches the beer' do
           expect(bob.find_beer(bobs_beer.id)).to eq(bobs_beer)
@@ -123,10 +123,10 @@ describe User do
     end
 
     describe '#cellared_beers' do
-      let(:backwoods) { FactoryGirl.create(:brew) }
-      let!(:bobs_backwoods) { FactoryGirl.create_list(:beer, 2, brew: backwoods, user: bob) }
-      let!(:drunk_beer) { FactoryGirl.create(:beer, :drunk, brew: backwoods, user: bob) }
-      let!(:other_beer) { FactoryGirl.create(:beer, user: bob) }
+      let(:backwoods) { FactoryBot.create(:brew) }
+      let!(:bobs_backwoods) { FactoryBot.create_list(:beer, 2, brew: backwoods, user: bob) }
+      let!(:drunk_beer) { FactoryBot.create(:beer, :drunk, brew: backwoods, user: bob) }
+      let!(:other_beer) { FactoryBot.create(:beer, user: bob) }
 
       it "includes Bob's Backwoods, while excluding his unstocked Backwoods and his other brews" do
         expect(bob.cellared_beers(backwoods)).to match_array(bobs_backwoods)
@@ -141,16 +141,16 @@ describe User do
   end
 
   describe '#cellared_brews' do
-    let(:bob) { FactoryGirl.create(:user) }
-    let(:brew_1) { FactoryGirl.create(:brew) }
-    let(:brew_2) { FactoryGirl.create(:brew) }
-    let(:brew_3) { FactoryGirl.create(:brew) }
+    let(:bob) { FactoryBot.create(:user) }
+    let(:brew_1) { FactoryBot.create(:brew) }
+    let(:brew_2) { FactoryBot.create(:brew) }
+    let(:brew_3) { FactoryBot.create(:brew) }
 
     before do
-      FactoryGirl.create_list(:beer, 2,        brew: brew_1, user: bob)
-      FactoryGirl.create(     :beer,           brew: brew_2)
-      FactoryGirl.create(     :beer,           brew: brew_3, user: bob)
-      FactoryGirl.create(     :beer, :skunked, brew: brew_3, user:bob)
+      FactoryBot.create_list(:beer, 2,        brew: brew_1, user: bob)
+      FactoryBot.create(     :beer,           brew: brew_2)
+      FactoryBot.create(     :beer,           brew: brew_3, user: bob)
+      FactoryBot.create(     :beer, :skunked, brew: brew_3, user:bob)
     end
 
     it "includes only brews currently in bob's cellar" do

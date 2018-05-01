@@ -1,14 +1,14 @@
 require 'spec_helper'
 
 describe DistributionOrdersController do
-  let(:bob) { FactoryGirl.create(:bob) }
-  let(:alice) { FactoryGirl.create(:alice) }
+  let(:bob) { FactoryBot.create(:bob) }
+  let(:alice) { FactoryBot.create(:alice) }
   before { sign_in bob }
 
   describe 'PUT /:cellar_id/distribution_order' do
 
     context 'keeper updating their own cellar' do
-      let(:beer) { FactoryGirl.create(:beer, user: bob) }
+      let(:beer) { FactoryBot.create(:beer, user: bob) }
 
       it 'allows keeper to order a distribution from his cellar' do
         put :update, { cellar_id: bob.id, order: { beer_id: beer.id, status: 'drunk' } }
@@ -20,7 +20,7 @@ describe DistributionOrdersController do
     end
 
     context 'trying to update another users cellar' do
-      let(:beer) { FactoryGirl.create(:beer, user: alice) }
+      let(:beer) { FactoryBot.create(:beer, user: alice) }
 
       it 'does not allow the user to order a distribution from anothers cellar' do
         put :update, { cellar_id: alice.id, order: { beer_id: beer.id, status: 'drunk' } }

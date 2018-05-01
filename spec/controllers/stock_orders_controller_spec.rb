@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe StockOrdersController do
-  let(:bob) { FactoryGirl.create(:bob) }
-  let(:brew) { FactoryGirl.create(:brew) }
+  let(:bob) { FactoryBot.create(:bob) }
+  let(:brew) { FactoryBot.create(:brew) }
   before { sign_in bob }
 
   describe 'POST /stock_orders' do

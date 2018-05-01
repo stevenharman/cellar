@@ -1,19 +1,19 @@
 require 'spec_helper'
 
 feature "Viewing a user's cellar", :feature, :slow do
-  let(:bob) { FactoryGirl.create(:user) }
-  let!(:christmas_ale) { FactoryGirl.create(:brew, name: 'Christmas Ale') }
-  let!(:drunk_brew) { FactoryGirl.create(:brew, name: 'Drunk Brew') }
-  let!(:traded_brew) { FactoryGirl.create(:brew, name: 'Traded Brew') }
-  let!(:skunked_brew) { FactoryGirl.create(:brew, name: 'Skunked Brew') }
+  let(:bob) { FactoryBot.create(:user) }
+  let!(:christmas_ale) { FactoryBot.create(:brew, name: 'Christmas Ale') }
+  let!(:drunk_brew) { FactoryBot.create(:brew, name: 'Drunk Brew') }
+  let!(:traded_brew) { FactoryBot.create(:brew, name: 'Traded Brew') }
+  let!(:skunked_brew) { FactoryBot.create(:brew, name: 'Skunked Brew') }
 
   background do
-    FactoryGirl.create_list(:beer, 3, brew: christmas_ale, user: bob)
-    FactoryGirl.create(:beer, :drunk, brew: christmas_ale, user:bob)
+    FactoryBot.create_list(:beer, 3, brew: christmas_ale, user: bob)
+    FactoryBot.create(:beer, :drunk, brew: christmas_ale, user:bob)
 
-    FactoryGirl.create(:beer, :drunk, brew: drunk_brew, user:bob)
-    FactoryGirl.create(:beer, :traded, brew: traded_brew, user:bob)
-    FactoryGirl.create(:beer, :skunked, brew: skunked_brew, user:bob)
+    FactoryBot.create(:beer, :drunk, brew: drunk_brew, user:bob)
+    FactoryBot.create(:beer, :traded, brew: traded_brew, user:bob)
+    FactoryBot.create(:beer, :skunked, brew: skunked_brew, user:bob)
   end
 
   scenario 'only show a summary of brews in the cellar' do
@@ -42,7 +42,7 @@ end
 feature 'Viewing your own cellar', :feature, :slow do
   include Features::CellarHelpers
   let(:bob) { sign_in_new_user(:bob) }
-  let!(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
+  let!(:bobs_beer) { FactoryBot.create(:beer, user: bob) }
 
   scenario 'can get details about the bottles of a brew in your cellar' do
     visit cellar_path(bob)
@@ -55,7 +55,7 @@ end
 feature 'Removing a beer from the Cellar', :feature, :slow do
   include Features::CellarHelpers
   let(:bob) { sign_in_new_user(:bob) }
-  let!(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
+  let!(:bobs_beer) { FactoryBot.create(:beer, user: bob) }
   let(:brew) { bobs_beer.brew }
   background do
     bobs_beer.brew.calculate_cellared_beers_count

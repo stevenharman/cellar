@@ -6,8 +6,8 @@ describe Beer do
   end
 
   describe 'Making a beer' do
-    let(:brew) { FactoryGirl.create(:brew) }
-    let(:beer_stuff) { FactoryGirl.attributes_for(:beer) }
+    let(:brew) { FactoryBot.create(:brew) }
+    let(:beer_stuff) { FactoryBot.attributes_for(:beer) }
 
     it 'makes a beer of the given brew' do
       beer = Beer.make(beer_stuff, brew)
@@ -35,13 +35,13 @@ describe Beer do
   describe '#update_status' do
 
     it 'is true when it succeeds' do
-      beer = FactoryGirl.build(:beer, :cellared)
+      beer = FactoryBot.build(:beer, :cellared)
       expect(beer.update_status('drunk')).to be true
       expect(beer).to be_drunk
     end
 
     it 'is false when it fails' do
-      beer = FactoryGirl.create(:beer, :cellared)
+      beer = FactoryBot.create(:beer, :cellared)
       expect(beer.update_status('no_such_status')).to be false
       expect(beer).not_to be_cellared
       expect(beer.reload).to be_cellared
@@ -51,11 +51,11 @@ describe Beer do
   describe 'scopes' do
     describe 'for status' do
       before do
-        brew = FactoryGirl.create(:brew)
-        FactoryGirl.create(:beer, brew: brew)
-        FactoryGirl.create(:beer, :drunk, brew: brew)
-        FactoryGirl.create(:beer, :traded, brew: brew)
-        FactoryGirl.create(:beer, :skunked, brew: brew)
+        brew = FactoryBot.create(:brew)
+        FactoryBot.create(:beer, brew: brew)
+        FactoryBot.create(:beer, :drunk, brew: brew)
+        FactoryBot.create(:beer, :traded, brew: brew)
+        FactoryBot.create(:beer, :skunked, brew: brew)
       end
 
       it '.cellared only returns cellared beers' do
@@ -76,9 +76,9 @@ describe Beer do
     end
 
     describe '.by_brew' do
-      let(:backwoods) { FactoryGirl.create(:brew) }
-      let!(:bobs_backwoods) { FactoryGirl.create_list(:beer, 2, brew: backwoods) }
-      let!(:other_beer) { FactoryGirl.create(:beer) }
+      let(:backwoods) { FactoryBot.create(:brew) }
+      let!(:bobs_backwoods) { FactoryBot.create_list(:beer, 2, brew: backwoods) }
+      let!(:other_beer) { FactoryBot.create(:beer) }
 
       it 'includes only Backwoods Bastards' do
         beers = Beer.by_brew(backwoods)
@@ -92,9 +92,9 @@ describe Beer do
     end
 
     describe '.cellared_by' do
-      let(:bob) { FactoryGirl.create(:bob) }
-      let!(:bobs_beer) { FactoryGirl.create(:beer, user: bob) }
-      let!(:other_beer) { FactoryGirl.create(:beer) }
+      let(:bob) { FactoryBot.create(:bob) }
+      let!(:bobs_beer) { FactoryBot.create(:beer, user: bob) }
+      let!(:other_beer) { FactoryBot.create(:beer) }
 
       it "includes only Bob's beers" do
         expect(Beer.cellared_by(bob)).to match_array([bobs_beer])

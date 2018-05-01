@@ -1,28 +1,27 @@
 source 'https://rubygems.org'
 
-ruby '2.2.5'
+ruby '2.5.1'
 gem 'rails', '~> 4.2.0'
 
 # Must be early in Gemfile so it's loaded before libs that depend on ENV Vars
 gem 'dotenv-rails', '~> 2.0', groups: [:development, :test]
 
 gem 'puma'
+gem 'pg', '~> 0.21' # Cannot got to PG >= 1.0 until Rails 5.2
+gem 'pg_search', '~> 0.7.2'
 
 gem 'active_model_serializers', '~> 0.9.3'
 gem 'brewery_db', '~> 0.2.0'
-gem 'carrierwave', '~> 0.10.0'
-gem 'devise', '~> 3.4'
-gem 'draper', github: 'stevenharman/draper', branch: 'compatibility_with_active_model_serializers_next'
-gem 'fog', '~> 1.24'
+gem 'carrierwave', '~> 1.2'
+gem 'devise', '~> 4.4'
+gem 'draper', git: 'https://github.com/stevenharman/draper.git', branch: 'compatibility_with_active_model_serializers_next'
+gem 'fog-aws'
 gem 'kaminari'
 gem 'newrelic_rpm'
-gem 'pg'
-gem 'pg_search', '~> 0.7.2'
 gem 'rack-cors', require: 'rack/cors'
 gem 'responders', '~> 2.0'
 gem 'simple_form', '~> 3.0'
 gem 'slim', '~> 3.0'
-gem 'sinatra', require: false # for sidekiq monitoring
 gem 'sidekiq'
 gem 'redis-namespace'
 gem 'unf' # For unicode support on Fog/AWS
@@ -44,7 +43,7 @@ group :production do
 end
 
 group :development, :test do
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'forgery'
   gem 'pry-rails'
   gem 'pry-remote'
@@ -52,12 +51,11 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 3.0'
 end
 
 group :test do
   gem 'capybara'
-  gem 'capybara-webkit'
   gem 'codeclimate-test-reporter', require: false
   gem 'database_cleaner'
   gem 'vcr'

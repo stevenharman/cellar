@@ -5,7 +5,7 @@ describe SupplyChain::Job::FetchBrewCatalog do
     subject(:job) { described_class.new(warehouse, log) }
     let(:warehouse) { SupplyChain::Warehouse.new }
     let(:log) { SupplyChain::Log::Noop.new  }
-    let!(:brewery) { FactoryGirl.create(:brewery, brewery_db_id: 'Idm5Y5') }
+    let!(:brewery) { FactoryBot.create(:brewery, brewery_db_id: 'Idm5Y5') }
 
     it 'imports the brews from the brewery', :slow, vcr: { record: :once } do
       brews = job.perform('Idm5Y5')

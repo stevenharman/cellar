@@ -1,6 +1,6 @@
 require 'securerandom'
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :brewery do
     brewery_db_id { SecureRandom.hex(3) }
     name { Forgery::Name.company_name }

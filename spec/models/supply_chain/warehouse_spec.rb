@@ -8,29 +8,29 @@ describe SupplyChain::Warehouse do
 
     it 'fetches categories from BreweryDB' do
       categories = warehouse.categories
-      expect(categories.first.id).to be_kind_of Fixnum
+      expect(categories.first.id).to be_kind_of Integer
       expect(categories.each).to be_kind_of Enumerator
       expect(categories.count).to eq(13)
     end
 
     it 'fetches styles from BreweryDB' do
       styles = warehouse.styles
-      expect(styles.first.id).to be_kind_of Fixnum
-      expect(styles.first.category_id).to be_kind_of Fixnum
+      expect(styles.first.id).to be_kind_of Integer
+      expect(styles.first.category_id).to be_kind_of Integer
       expect(styles.each).to be_kind_of Enumerator
       expect(styles.count).to eq(160)
     end
 
     it 'fetches sizes from BreweryDB' do
       sizes = warehouse.sizes
-      expect(sizes.first.id).to be_kind_of Fixnum
+      expect(sizes.first.id).to be_kind_of Integer
       expect(sizes.each).to be_kind_of Enumerator
       expect(sizes.count).to eq(19)
     end
 
     it 'fetches brew availability from BreweryDB' do
       avails = warehouse.availabilities
-      expect(avails.first.id).to be_kind_of Fixnum
+      expect(avails.first.id).to be_kind_of Integer
       expect(avails.each).to be_kind_of Enumerator
       expect(avails.count).to eq(8)
     end
