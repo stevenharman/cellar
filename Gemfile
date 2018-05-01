@@ -56,8 +56,8 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'codeclimate-test-reporter', require: false
   gem 'database_cleaner'
+  gem 'simplecov', require: false
   gem 'vcr'
   gem 'webmock'
   gem 'with_model'

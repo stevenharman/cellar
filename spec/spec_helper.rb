@@ -1,7 +1,9 @@
 ENV['RAILS_ENV'] ||= 'test'
 
-require 'codeclimate-test-reporter'
-CodeClimate::TestReporter.start if ENV['COVERAGE']
+if ENV['COVERAGE']
+  require 'simplecov'
+  SimpleCov.start 'rails'
+end
 
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'

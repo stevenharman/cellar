@@ -1,5 +1,8 @@
 language: ruby
-env: COVERAGE=true
+env:
+  global:
+    - COVERAGE=true
+    - CC_TEST_REPORTER_ID=c94151dfd6c4fd28f3846fc595400381ed1d786d9ab2902ff12d5deeb7d0de75
 rvm:
   - 2.5.1
 cache: bundler
@@ -8,12 +11,15 @@ before_install:
   - gem install bundler
 before_script:
   - cp ./config/database.yml.example ./config/database.yml
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 script:
   - RAILS_ENV=test bin/rake db:setup
   - RAILS_ENV=test bin/rake db:schema:load
   - bin/rspec
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 sudo: false
 addons:
-  code_climate:
-    repo_token: c94151dfd6c4fd28f3846fc595400381ed1d786d9ab2902ff12d5deeb7d0de75
   postgresql: 9.3
