@@ -1,5 +1,7 @@
 language: ruby
 dist: xenial
+services:
+  - postgresql
 rvm:
   - 2.5.5
 cache: bundler
@@ -22,4 +24,4 @@ script:
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 addons:
-  postgresql: 9.3
+  postgresql: 9.6
