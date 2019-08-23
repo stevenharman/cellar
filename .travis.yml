@@ -1,11 +1,14 @@
 language: ruby
+dist: xenial
+services:
+  - postgresql
+rvm:
+  - 2.5.5
+cache: bundler
 env:
   global:
     - COVERAGE=true
     - CC_TEST_REPORTER_ID=c94151dfd6c4fd28f3846fc595400381ed1d786d9ab2902ff12d5deeb7d0de75
-rvm:
-  - 2.5.1
-cache: bundler
 before_install:
   - gem update --system --no-document
   - gem install bundler
@@ -20,6 +23,5 @@ script:
   - bin/rspec
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
-sudo: false
 addons:
-  postgresql: 9.3
+  postgresql: 9.6
