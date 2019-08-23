@@ -1,7 +1,7 @@
 language: ruby
 dist: xenial
 rvm:
-  - 2.6.3
+  - 2.5.5
 cache: bundler
 env:
   global:
