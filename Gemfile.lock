@@ -198,7 +198,7 @@ GEM
       pry (~> 0.9)
       slop (~> 3.0)
     public_suffix (3.0.2)
-    puma (3.11.4)
+    puma (3.12.4)
     rack (1.6.11)
     rack-cors (1.0.2)
     rack-protection (2.0.1)
