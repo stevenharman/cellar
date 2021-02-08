@@ -12,7 +12,7 @@ gem 'pg_search', '~> 0.7.2'
 
 gem 'active_model_serializers', '~> 0.9.3'
 gem 'brewery_db', '~> 0.2.0'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 gem 'devise', '~> 4.4'
 gem 'draper', git: 'https://github.com/stevenharman/draper.git', branch: 'compatibility_with_active_model_serializers_next'
 gem 'fog-aws'
